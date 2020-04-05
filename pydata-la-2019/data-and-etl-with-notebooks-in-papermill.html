@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Data and ETL with Notebooks in Papermill</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-la-2019.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-la-2019.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Data and ETL with Notebooks in Papermill" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pydata-la-2019/data-and-etl-with-notebooks-in-papermill.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/7ER9tqiNack/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/7ER9tqiNack/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pydata-la-2019/data-and-etl-with-notebooks-in-papermill.html" rel="bookmark"
+         title="Permalink to Data and ETL with Notebooks in Papermill">Data and ETL with Notebooks in Papermill
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2019-12-04T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Wed 04 December 2019
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/matthew-seal.html">Matthew Seal</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7ER9tqiNack" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Notebooks have traditionally been a tool for drafting code and avoiding
+repeated expensive computations while exploring solutions. However, with
+new tools like nteract's papermill and scrapbook libraries, this
+technology has been expanded to make a reusable and parameterizable
+template for execution. We'll look at how to make use of this pattern
+for Data and ETL processes.</p>
+<div class="section" id="intro">
+<h4>Intro</h4>
+<ul class="simple">
+<li>Myself, Netflix, and Why I'm here</li>
+<li>What does a Data Platform Team do?</li>
+<li>Projects and Open Source tools discussed in presentation Papermill,
+Jupyter, nteract, etc</li>
+</ul>
+<div class="section" id="notebooks">
+<h5>Notebooks</h5>
+</div>
+</div>
+<div class="section" id="what-are-jupyter-notebooks">
+<h4>What are Jupyter Notebooks?</h4>
+<p>We'll some visual examples and breakdowns of notebooks.</p>
+</div>
+<div class="section" id="how-notebook-work">
+<h4>How Notebook Work</h4>
+<p>A guide through how a notebook executes and the model it uses to run
+your code.</p>
+</div>
+<div class="section" id="traditional-use-cases">
+<h4>Traditional Use Cases</h4>
+<p>Around experimentation and code development.</p>
+</div>
+<div class="section" id="new-use-cases">
+<h4>New Use Cases</h4>
+<p>For production data and operations without full rewrites of Notebook
+code.</p>
+<div class="section" id="papermill">
+<h5>Papermill</h5>
+</div>
+</div>
+<div class="section" id="what-is-papermill">
+<h4>What is papermill?</h4>
+<p><a class="reference external" href="https://papermill.readthedocs.io/en/latest/">papermill</a> is a library
+for executing notebooks programmatically.</p>
+</div>
+<div class="section" id="how-do-you-use-it">
+<h4>How do you use it?</h4>
+<p>You'll see some examples in Python and with it's provided CLI.</p>
+</div>
+<div class="section" id="how-does-it-fit-into-the-notebook-model">
+<h4>How does it fit into the Notebook model?</h4>
+<p>We'll relate the execution back into original Notebook execution
+diagrams.</p>
+</div>
+<div class="section" id="how-to-extend-papermill">
+<h4>How to extend papermill</h4>
+<p>Quick pointer to the extensibility of the library and how to add new
+functionality.</p>
+<div class="section" id="using-papermill-in-production-data-pipelines">
+<h5>Using papermill in production data pipelines</h5>
+</div>
+</div>
+<div class="section" id="operationalizing-notebooks">
+<h4>Operationalizing Notebooks</h4>
+<p>Failure analysis, Productionalization, Sharing executions...</p>
+</div>
+<div class="section" id="dags-of-notebooks">
+<h4>Dags of Notebooks</h4>
+<p>Making a pipeline with Notebooks.</p>
+</div>
+<div class="section" id="integration-testing">
+<h4>Integration Testing</h4>
+<p>Good practices Where unittesting doesn't fit</p>
+<div class="section" id="netflix-usage">
+<h5>&#64; Netflix usage</h5>
+<p>Quick blip about adoption and usage at Netflix.</p>
+</div>
+<div class="section" id="related-libraries-time-pending">
+<h5>Related libraries (time pending)</h5>
+</div>
+</div>
+<div class="section" id="scrapbook">
+<h4>Scrapbook</h4>
+</div>
+<div class="section" id="commuter-nbviewer">
+<h4>Commuter / NBViewer</h4>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pydata-la-2019.html">PyData LA 2019</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=7ER9tqiNack" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pydata-la-2019/videos/matthew-seal-data-and-etl-with-notebooks-in-papermill-pydata-la-2019.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

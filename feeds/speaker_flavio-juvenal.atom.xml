@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_flavio-juvenal.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-10-04T00:00:00+00:00</updated><entry><title>Django + ElasticSearch without invalidation logic</title><link href="https://pyvideo.org/pygotham-2019/django-elasticsearch-without-invalidation-logic.html" rel="alternate"></link><published>2019-10-04T00:00:00+00:00</published><updated>2019-10-04T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2019-10-04:pygotham-2019/django-elasticsearch-without-invalidation-logic.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will teach you to finally integrate Django and Elasticsearch &amp;quot;like
+it's 2019&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Elasticsearch is a great addition to the Django developer's toolkit: it
+supports performant complex full-text queries and filters on huge datasets,
+where traditional relational database-only solutions fall short. But
+integrating Django with Elasticsearch usually is a pain: you need logic to
+keep database tables and Elasticsearch indexes in sync. Since data is stored
+in two places, it can become out-of-sync if care is not taken. Dirty index
+data will generate wrong search results, defeating the purpose of the
+integration.&lt;/p&gt;
+&lt;p&gt;A new alternative is [django-
+zombodb](&lt;a class="reference external" href="https://github.com/vintasoftware/django-zombodb"&gt;https://github.com/vintasoftware/django-zombodb&lt;/a&gt;), a Django app that
+uses a Postgres extension for syncing tables with Elasticsearch indexes at
+transaction time. With django-zombodb, developers can treat an ElasticSearch
+index just like an internal Postgres index. This means no code is needed to
+synchronize Postgres with Elasticsearch, you just need to run a Django
+migration that executes a CREATE INDEX in the database and you're done. Any
+new inserts, updates or deletes on that model will reflect on an
+Elasticsearch index at transaction time!&lt;/p&gt;
+&lt;p&gt;django-zombodb also offers a Pythonic/Djangonic API to make Elasticsearch
+queries over Django models using the ORM in a queryset-friendly way.
+Developers are able to compose Elasticsearch queries with regular ORM
+queries by just chaining queryset methods and composing Q-like objects. In
+this talk, you'll learn django-zombodb advantages over other solutions, how
+it works, how to use it, and even you can contribute to it.&lt;/p&gt;
+</summary></entry><entry><title>"Normalize until it hurts; denormalize until it works" in Django</title><link href="https://pyvideo.org/djangocon-us-2018/normalize-until-it-hurts-denormalize-until-it-works-in-django.html" rel="alternate"></link><published>2018-10-16T00:00:00+00:00</published><updated>2018-10-16T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2018-10-16:djangocon-us-2018/normalize-until-it-hurts-denormalize-until-it-works-in-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There’s a good practice that says “a database is a representer of
+facts”. If there’s more than one way to extract a single fact from the
+database, then there’s a redundancy in it. Every redundancy can cause
+different anomalies in the data, which in turn cause bugs in the
+application. To avoid that, there’s a process called normalization,
+which involves following sets of rules to restructure the database to
+remove redundancies without losing the original facts. The traditional
+set of normalization rules are the so-called Normal Forms: First Normal
+Form, Second, Third, etc. Unfortunately, those are frequently overlooked
+by developers due to their excessive formalism. But in fact, even the
+Normal Forms aren’t enough to avoid anomalies, since they’re concerned
+about redundancies only in a single table*. Since cross-table
+dependencies are very common in modern applications, we must go beyond
+normal forms to prevent problems.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll present normalization rules on a friendly language,
+going beyond normal forms. We’ll understand how the software
+requirements cause dependencies in database tables, both in-table and
+cross-tables. We’ll show real examples of non-trivial dependencies that
+happen on Django models. We’ll discuss how normalization prevents
+redundancies, inconsistencies, anomalies, and bugs. Knowing that
+normalization can cause slowdowns in queries, we’ll present how to
+increase performance with denormalization, which is not the same of not
+normalizing. Instead, denormalization means being able to represent data
+in multiple ways to speed up queries without introducing
+inconsistencies. We’ll discuss Django-related denormalization tools that
+use cronjobs, indexes, caching, materialized views and triggers, and
+NoSQL.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;em&gt;It’s common to ignore the fact that normal forms only discuss
+redundancies inside a single table/record/relval. More about this
+in`this article &amp;lt;http://www.bkent.net/Doc/simple5.htm#label6&amp;gt;`__
+reviewed by Codd, Fagin and Date, key figures of the relational
+model.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s the planned outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[1 minute ] Who am I.&lt;/li&gt;
+&lt;li&gt;[6 minutes] Explaining normalization without normal forms formalism:&lt;ul&gt;
+&lt;li&gt;Defining Normalization.&lt;/li&gt;
+&lt;li&gt;Normalization with only two concepts: Candidate Keys and
+Dependencies.&lt;/li&gt;
+&lt;li&gt;Normalization Rule: every field must provide a fact about the
+whole candidate key and nothing but the key.&lt;/li&gt;
+&lt;li&gt;Violating the Rule: denormalized example, along with anomalies it
+has.&lt;/li&gt;
+&lt;li&gt;Prevent anomalies with a solution based on the Rule.&lt;/li&gt;
+&lt;li&gt;Setting a Candidate Key in Django: unique_together. Concurrency
+issues without unique_together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[4 minutes] How that’s relevant for Django? Doesn’t modeling with the
+ORM kind of solves that?&lt;ul&gt;
+&lt;li&gt;Tricky case of field migration.&lt;/li&gt;
+&lt;li&gt;Tricky case of historical field.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[4 minutes] What about cross-table dependencies?&lt;ul&gt;
+&lt;li&gt;A good practice: “Database is Representer of Facts”. If there’s
+more than one way to extract a single fact from the database,
+there’s a redundancy. If it’s possible to compute a field value by
+looking only for other table fields, there’s a redundancy.&lt;/li&gt;
+&lt;li&gt;Solution: compute at DB-level and query-time using query
+expressions, conditional expressions and database functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[1 minutes] What about performance?&lt;ul&gt;
+&lt;li&gt;Certain facts are naturally expensive to compute.&lt;/li&gt;
+&lt;li&gt;But design can’t be thought a priori to solve them. Performance is
+easier to solve than imprecision.&lt;/li&gt;
+&lt;li&gt;Therefore: “Normalize until it hurts; denormalize until it works”.
+To denormalize you have first to normalize.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[3 minutes] How to denormalize?&lt;ul&gt;
+&lt;li&gt;Separate concerns: OLTP vs. OLAP. Transactional data vs.
+Analytical data.&lt;/li&gt;
+&lt;li&gt;Easy way: aggregation queries + extra denormalized models +
+cronjob.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[6 minutes] Other less trivial ways to denormalize:&lt;ul&gt;
+&lt;li&gt;Indexes&lt;/li&gt;
+&lt;li&gt;Caching&lt;/li&gt;
+&lt;li&gt;Materialized Views&lt;/li&gt;
+&lt;li&gt;Triggers&lt;/li&gt;
+&lt;li&gt;SQL + NoSQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>1 + 1 = 1 or Record Deduplication with Python</title><link href="https://pyvideo.org/pybay-2018/1-1-1-or-record-deduplication-with-python.html" rel="alternate"></link><published>2018-08-18T00:00:00+00:00</published><updated>2018-08-18T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2018-08-18:pybay-2018/1-1-1-or-record-deduplication-with-python.html</id><summary type="html"></summary></entry><entry><title>1 + 1 = 1 or Record Deduplication with Python</title><link href="https://pyvideo.org/pygotham-2018/1-1-1-or-record-deduplication-with-python.html" rel="alternate"></link><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2018-10-05:pygotham-2018/1-1-1-or-record-deduplication-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Record Deduplication, or more generally, Record Linkage is the task of finding which records refer to the same entity, like a person or a company. It's used mainly when there isn't a unique identifier in records like Social Security Number for US citizens. This means one can't trivially find duplicate records in a single dataset, neither easily link records from different datasets. Without an identifier, record linkage looks for matches by cleaning and comparing record attributes in a fuzzy way. Imagine you have two datasets with information about people, but without any unique identifier in the records. You have to compare attributes like name, date of birth, and address in a smart way to find which records from the two datasets refer to the same person. A similar approach must be used to dedupe records in a single dataset, so Record Deduplication is a kind of Record Linkage.&lt;/p&gt;
+&lt;p&gt;There are a number of important applications of data deduplication in government and business. For example, by deduping records from Census data, the Australian government was able to find there were 250,000 fewer people in the country than they previously thought. This reduction impacted the estimations of government agencies and even caused the revision economical projections. Similarly, businesses can use record linkage techniques to enrich their customers' data with publicly available datasets.&lt;/p&gt;
+&lt;p&gt;In this talk, you'll learn with Python examples the main concepts of Record Deduplication, what kinds of problems can be solved, what's the most common workflow for the process, what algorithms are involved, and which tools and libraries you can use. Although some of the discussed concepts are related to data mining, any intermediate-level Python developer will be able to learn the basics of how to dedupe data using Python.&lt;/p&gt;
+</summary></entry><entry><title>Prevenindo Dores de Cabeça com Linters e Checagens Automáticas</title><link href="https://pyvideo.org/python-brasil-2017/prevenindo-dores-de-cabeca-com-linters-e-checagens-automaticas.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Flavio Juvenal</name></author><id>tag:pyvideo.org,2017-10-06:python-brasil-2017/prevenindo-dores-de-cabeca-com-linters-e-checagens-automaticas.html</id><summary type="html"></summary></entry><entry><title>Preventing headaches with linters and automated checks</title><link href="https://pyvideo.org/pybay-2017/preventing-headaches-with-linters-and-automated-checks.html" rel="alternate"></link><published>2017-08-13T00:00:00+00:00</published><updated>2017-08-13T00:00:00+00:00</updated><author><name>Flavio Juvenal</name></author><id>tag:pyvideo.org,2017-08-13:pybay-2017/preventing-headaches-with-linters-and-automated-checks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will teach you how to use and extend tools for automated checks on Python projects. Are your imports a mess? No reasonable order, stdlib modules mixed with third-party ones? There's a tool to fix that. Tired of checking for security patches of the libs in your requirements.txt? Let a tool do this for you. We'll learn about many other tools and we'll also discuss how to build new ones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;While it's very common to enforce PEP8 code style with tools like pycodestyle or flake8, it's rare for Python projects to use other types of tools for automated checks. However, there are many common problems in readability, security, configuration, etc that could be avoided by using other linters and tools, for example:&lt;/p&gt;
+&lt;p&gt;Are your imports a complete mess, with third-party modules mixed with stdlib ones? You can use &amp;quot;isort&amp;quot; to organize and separate them.
+Tired of checking if your project requirements received security patches? Let &amp;quot;safety&amp;quot; do that for you.
+Hated when that fellow developer pushed a huge file that slowed your repository pulls forever? A &amp;quot;pre-commit&amp;quot; hook with a simple check could've prevented that.
+Is your code cluttered with unused legacy functions and classes? Check and prevent that with &amp;quot;vulture&amp;quot;.
+As we can see from the list above, many issues can be prevented at commit or CI time with automated tools. In this talk, we'll discuss how to configure and use those tools. Also, we'll learn the role of static analysis in those tools, which will enable us to extend them and build new ones.&lt;/p&gt;
+&lt;p&gt;Here is a non-exhaustive list of tools that will be presented:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;prospector: &lt;a class="reference external" href="https://github.com/landscapeio/prospector"&gt;https://github.com/landscapeio/prospector&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pylint: &lt;a class="reference external" href="https://github.com/PyCQA/pylint"&gt;https://github.com/PyCQA/pylint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;safety: &lt;a class="reference external" href="https://github.com/pyupio/safety"&gt;https://github.com/pyupio/safety&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;bandit: &lt;a class="reference external" href="https://github.com/openstack/bandit"&gt;https://github.com/openstack/bandit&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pre-commit: &lt;a class="reference external" href="http://pre-commit.com/"&gt;http://pre-commit.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;isort: &lt;a class="reference external" href="https://github.com/timothycrosley/isort"&gt;https://github.com/timothycrosley/isort&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;vulture: &lt;a class="reference external" href="https://github.com/jendrikseipp/vulture"&gt;https://github.com/jendrikseipp/vulture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pycycle: &lt;a class="reference external" href="https://github.com/bndr/pycycle"&gt;https://github.com/bndr/pycycle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;pyt: &lt;a class="reference external" href="https://github.com/python-security/pyt"&gt;https://github.com/python-security/pyt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Django System check framework: &lt;a class="reference external" href="https://docs.djangoproject.com/en/1.10/ref/checks/"&gt;https://docs.djangoproject.com/en/1.10/ref/checks/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Bio&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web developer from Brazil. Loves beautiful high-quality products, from UX to code, and will defend them against unreasonable deadlines and crazy features. Partner at Vinta (&lt;a class="reference external" href="https://www.vinta.com.br/"&gt;https://www.vinta.com.br/&lt;/a&gt;), a web consultancy specialized in building products with React and Django.&lt;/p&gt;
+</summary></entry><entry><title>Your Django app is a User Interface</title><link href="https://pyvideo.org/pybay-2017/your-django-app-is-a-user-interface.html" rel="alternate"></link><published>2017-08-12T00:00:00+00:00</published><updated>2017-08-12T00:00:00+00:00</updated><author><name>Flavio Juvenal</name></author><id>tag:pyvideo.org,2017-08-12:pybay-2017/your-django-app-is-a-user-interface.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Usability heuristics are a useful way to evaluate an interface. An often overlooked aspect of Django apps is they’re interfaces too, one that connects the developer with a reusable solution. In this talk, we’ll learn how to apply usability concepts to Django apps to make them better to (re)use.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Django docs say &amp;quot;Reusability is the way of life in Python. You only need to write the parts that make your project unique&amp;quot;. The Django way to write reusable code is Django apps, which are straightforward to write. The vast quantity of apps available in PyPI and Django Packages proves that.&lt;/p&gt;
+&lt;p&gt;However, there is one overlooked aspect of apps: they are an interface between the developer and a reusable solution for a problem. Therefore, as any interface, Usability Heuristics should be used to evaluate Django apps efficacy. In this talk, we'll learn how to apply Usability Heuristics to Django apps to make them better to (re)use.&lt;/p&gt;
+&lt;p&gt;Talk outline:&lt;/p&gt;
+&lt;p&gt;Unix Philosophy and Django apps concept
+Aesthetic and minimalist design
+How to design for the 90% use case
+Progressive disclosure and Affordance
+Docs first
+How to write beautiful app code with declarative programming
+How to write simple app code by minimizing state
+Consistency and Recognition rather than recall
+How common Django idioms increase recognition
+How existing Django abstractions help increase recognition
+How separating concerns with Django abstractions increase recognition
+Flexibility and efficiency of use
+How making the other 10% use case possible with an extensible granular API
+The concept of Integration Discontinuity
+How to break Django abstractions to increase extensibility
+How a granular API allows composition of apps
+Error prevention and recovery
+How to use Django system check framework to prevent errors and give tips
+How to fail-fast if an error occurs, preventing some unexpected state
+djangoappschecklist.com
+How the community can help define a good practices checklist&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bio&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Web developer from Brazil. Loves beautiful high-quality products, from UX to code, and will defend them against unreasonable deadlines and crazy features. Partner at Vinta (&lt;a class="reference external" href="https://www.vinta.com.br/"&gt;https://www.vinta.com.br/&lt;/a&gt;), a web consultancy specialized in building products with React and Django.&lt;/p&gt;
+</summary></entry><entry><title>How to make a good library API</title><link href="https://pyvideo.org/pycon-us-2017/how-to-make-a-good-library-api.html" rel="alternate"></link><published>2017-05-20T00:00:00+00:00</published><updated>2017-05-20T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2017-05-20:pycon-us-2017/how-to-make-a-good-library-api.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It's not easy to write libraries with great APIs. We're aware of that.
+However, it's not always clear how we can follow abstract ideals like
+elegance, simplicity, and extensibility to improve our APIs. That's why
+in this talk we'll discuss good and bad APIs with real-world examples.
+For each thing learned, we'll come up with a checklist to help us with
+practical advice for writing good APIs.&lt;/p&gt;
+</summary></entry></feed>

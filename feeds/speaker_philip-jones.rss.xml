@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 15 Jun 2019 00:00:00 +0000</lastBuildDate><item><title>An introduction to ASGI, Asynchronous Server Gateway Interface</title><link>https://pyvideo.org/pylondinium-2019/an-introduction-to-asgi-asynchronous-server-gateway-interface.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you develop web appliations in Python you will almost certainly be
+doing so using WSGI, with the most popular frameworks, Django and Flask,
+as well as the majority of others being based upon it. WSGI specifies
+the interface between servers and applications, simplified this
+interface is,&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;environ&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start_response&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;start_response&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;200 OK&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;text/plain&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello, World&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;with the &lt;tt class="docutils literal"&gt;application&lt;/tt&gt; called on each request. The request description
+and environment is specified in the &lt;tt class="docutils literal"&gt;environ&lt;/tt&gt; dict and the
+&lt;tt class="docutils literal"&gt;start_response&lt;/tt&gt; is called to send the response status code and
+headers before the body, which is returned by the &lt;tt class="docutils literal"&gt;application&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;ASGI also aims to specify the interface between servers and
+applications, only using the async/await syntax, the interface can be
+simplified to&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="k"&gt;async&lt;/span&gt; &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;application&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;scope&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;receive&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http.response.start&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;status&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;headers&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[(&lt;/span&gt;&lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Content-Type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;text/plain&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)]})&lt;/span&gt;
+    &lt;span class="k"&gt;await&lt;/span&gt; &lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;type&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;http.response.body&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;body&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="sa"&gt;b&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;with the &lt;tt class="docutils literal"&gt;application&lt;/tt&gt; awaited on each request and &lt;tt class="docutils literal"&gt;scope&lt;/tt&gt;
+fulfilling a similar role to &lt;tt class="docutils literal"&gt;environ&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;In this talk I'll explain the above and how it limits WSGI and why ASGI
+is the solution. I'll also introduce the current ASGI ecosystem and
+features.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to WSGI (basic code)&lt;/li&gt;
+&lt;li&gt;WSGI ecosystem servers (Gunicorn, uWSGI, mod_wsgi) and frameworks (Flask, Django)&lt;/li&gt;
+&lt;li&gt;WSGI limitations e.g. Websockets&lt;/li&gt;
+&lt;li&gt;ASGI Introduction (basic code)&lt;/li&gt;
+&lt;li&gt;ASGI development and history&lt;/li&gt;
+&lt;li&gt;ASGI features, websockets, HTTP/2&lt;/li&gt;
+&lt;li&gt;ASGI ecosystem servers (Hypercorn, Daphne, Uvicorn) and frameworks (Starlette, Django, Quart).&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Philip Jones</dc:creator><pubDate>Sat, 15 Jun 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-06-15:pylondinium-2019/an-introduction-to-asgi-asynchronous-server-gateway-interface.html</guid></item><item><title>Quart a asyncio alternative to Flask</title><link>https://pyvideo.org/europython-2018/quart-a-asyncio-alternative-to-flask.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Flask is a great web mirco-framework, that is best utilised with
+event-loop concurrency. Sadly with Flask the event-loop framework can’t
+be asyncio, although some extensions (Flask-Aiohttp) have tried. Quart
+is the solution as it shares the Flask API and is based on asyncio. In
+addition Quart goes beyond Flask adding HTTP/2 and websockets.&lt;/p&gt;
+&lt;p&gt;This talk will outline why event-loop concurrency is a good choice for
+web servers, why asyncio is a good choice and then give an overview of
+Quart, demonstrating features that go beyond the Flask framework.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Philip Jones</dc:creator><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-27:europython-2018/quart-a-asyncio-alternative-to-flask.html</guid></item></channel></rss>

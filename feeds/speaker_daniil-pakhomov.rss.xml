@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate><item><title>Fully Convolutional Networks for Image Segmentation</title><link>https://pyvideo.org/euroscipy-2017/fully-convolutional-networks-for-image-segmentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Recently, a considerable advancemet in the area of Image Segmentation
+was achieved after state-of-the-art methods based on Fully Convolutional
+Networks (FCNs) were developed. The objective of Image Segmentation
+problem is to label every pixel in the image with the class of its
+enclosing object or region. This problem is extremely challenging
+because the method should have strong classification and localization
+properties at the same time. While being very complicated, image
+segmentation is an important problem as it has many applications in
+medicine, autonomous driving and other fields. In our talk, we go
+through theory of the recent state-of-the-art methods for image
+segmentation based on FCNs and present our library which aims to provide
+a simplified way for users to apply these methods for their own
+problems.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="detailed-description"&gt;
+&lt;h4&gt;Detailed description&lt;/h4&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h5&gt;Background&lt;/h5&gt;
+&lt;p&gt;Methods based on Convolutional Neural Networks (CNNs) have pushed the
+performance on a broad array of problems, including image classification
+&lt;a class="reference external" href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"&gt;(1)&lt;/a&gt;
+and object detection
+&lt;a class="reference external" href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf"&gt;(2)&lt;/a&gt;.
+ImageNet Large Scale Visual Recognition Competition (ILSVRC) is a main
+image classification competition. The training data of ILSVRC contains
+1000 categories and approximately 1.2 million images and all successful
+approaches that perform well on this dataset are based on CNNs.
+Moreover, CNNs that were trained on this dataset act as a good
+initialization for other tasks as object detection, image segmentation
+and others
+&lt;a class="reference external" href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf"&gt;(2)&lt;/a&gt;
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, partial built-in invariance of CNNs to translations, rotations
+and other transformations made it hard to use pretrained CNNs for the
+task of image segmentation. While being beneficial for the task of image
+classification, invariance properties are not beneficial for the task of
+image segmentation where strong localization propoerties are required
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recent work introduced Fully Convolutional Networks
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;,
+an adaptation of image classification CNNs that enables to successfully
+use them for the task of image segmentation while reducing the negative
+effect of invariance properties. In our talk, we briefly describe basic
+building blocks of CNNs (convolutional layers, pooling layer, fully
+connected layers etc.), explain why they show superior performance
+according to recent papers, explain how these CNNs can be converted into
+FCNs in order to perform image segmentation. After that we conclude with
+demonstration of how our library can be used to train FCNs for image
+segmentation on a particular dataset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="talk-overview"&gt;
+&lt;h4&gt;Talk overview.&lt;/h4&gt;
+&lt;p&gt;We plan to structure our talk in the following way:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Basic building blocks of Convolutional Neural Networks (CNNs) based
+on &amp;quot;A guide to convolution arithmetic for deep learning&amp;quot; resource
+&lt;a class="reference external" href="https://arxiv.org/pdf/1603.07285.pdf"&gt;(4)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration on how these CNNs can be applied for image
+classification based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/10/30/image-classification-and-segmentation-using-tensorflow-and-tf-slim/"&gt;(5)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how CNNs can be converted into
+FCNs based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/10/30/image-classification-and-segmentation-using-tensorflow-and-tf-slim/"&gt;(5)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how interpolation can be
+reformulated in terms of convolution and being integrated into the
+network architecture based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/11/22/upsampling-and-image-segmentation-with-tensorflow-and-tf-slim/"&gt;(6)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how FCNs can be trained on the
+PASCAL VOC general image segmentation dataset based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2017/01/23/fully-convolutional-networks-(fcns)-for-image-segmentation/"&gt;(7)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Demonstration of how our library
+&lt;a class="reference external" href="https://github.com/warmspringwinds/tf-image-segmentation"&gt;(8)&lt;/a&gt;
+(implemented using Tensorflow library) was used to train these models
+for the task of segmentation of medical images based on our recent
+paper &lt;a class="reference external" href="https://arxiv.org/abs/1703.08580"&gt;(9)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Demonstration of the same library but ported to PyTorch and why it is
+easier to use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion-and-discussion"&gt;
+&lt;h4&gt;Conclusion and discussion&lt;/h4&gt;
+&lt;p&gt;In our talk, we introduced audience to the recent advancement in the
+field of image segmentation research, briefly covered the theory behind
+it and showed how some of the recent state-of-the-art image segmentation
+methods can be applied to a particular task using our library.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="biography-and-additional-information"&gt;
+&lt;h4&gt;Biography and additional information&lt;/h4&gt;
+&lt;p&gt;Daniil Pakhomov is a PhD student at Johns Hopkins University. His main
+research areas are general image segmentation and segmentation of
+medical images.&lt;/p&gt;
+&lt;p&gt;Contents of our blog posts were well-accepted by machine learning
+community. Some of them got promotional tweets from the official Kaggle
+account and others &lt;a class="reference external" href="https://twitter.com/warmspringwinds"&gt;(10)&lt;/a&gt;. The
+author previously gave a talk on EuroScipy 2016 conference
+&lt;a class="reference external" href="https://www.euroscipy.org/2016/schedule/sessions/13/"&gt;(11)&lt;/a&gt;. The
+author has contributed to &lt;tt class="docutils literal"&gt;tensorflow/models&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Theano&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-image&lt;/span&gt;&lt;/tt&gt; repositories. Similar talk by the author was accepted
+to be presented at Scipy 2017 and this talk is an extended and improved
+version of it since then.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniil Pakhomov</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/fully-convolutional-networks-for-image-segmentation.html</guid></item><item><title>Fully Convolutional Networks for Image Segmentation</title><link>https://pyvideo.org/scipy-2017/fully-convolutional-networks-for-image-segmentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recently, a considerable advancemet in the area of Image Segmentation was achieved after state-of-the-art methods based on Fully Convolutional Networks (FCNs) were developed. The objective of Image Segmentation problem is to label every pixel in the image with the class of its enclosing object or region. This problem is extremely challenging because the method should have strong classification and localization properties at the same time. While being very complicated, image segmentation is an important problem as it has many applications in medicine, autonomous driving and other fields. In our talk, we go through theory of the recent state-of-the-art methods for image segmentation based on FCNs and present our library which aims to provide a simplified way for users to apply these methods for their own problems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniil Pakhomov</dc:creator><pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-14:scipy-2017/fully-convolutional-networks-for-image-segmentation.html</guid></item></channel></rss>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_adam-witkowski.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-12-13T00:00:00+00:00</updated><entry><title>Predicting flight compensation - a case study</title><link href="https://pyvideo.org/pydata-warsaw-2019/predicting-flight-compensation-a-case-study.html" rel="alternate"></link><published>2019-12-13T00:00:00+00:00</published><updated>2019-12-13T00:00:00+00:00</updated><author><name>Adam Witkowski</name></author><id>tag:pyvideo.org,2019-12-13:pydata-warsaw-2019/predicting-flight-compensation-a-case-study.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Under EU law, airplane passengers have the right to be compensated if
+their flight is sufficiently delayed. GIVT helps passengers file such
+claims. Every claim needs to be verified as there are various conditions
+that can invalidate it: extreme weather, strikes, bird hit, etc. In this
+talk, I will describe a machine learning system which replaces manual
+verification of claims.&lt;/p&gt;
+&lt;p&gt;This talk describes the process of implementing a machine learning model
+in production. I will talk about various problems that we encountered
+and how we solved them.&lt;/p&gt;
+&lt;p&gt;First, I will describe the problem: verification if the airline should
+compensate the passenger for the flight. This depends on many factors,
+some of which are easy to define (is the flight delayed more than 180
+minutes? is the airline from EU?) and some are not (is the weather bad
+enough to invalidate the claim? is there a strike?). Of course, with
+perfect data, those questions would be very easy, but in practice we do
+not have the luxury of working with ideal data. For example, the weather
+reports are not available in real time and we know they are available
+for the airports, not the whole route of the flight. I will tell you
+what data we had and what features we extracted from it.&lt;/p&gt;
+&lt;p&gt;Then I will briefly describe the algorithms we used and why,
+unsurprisingly, we ended up using GBM. After the model was ready, we ran
+it in parallel to manual verification for several weeks so the
+predictions of the model could be compared to human work. One important
+aspect of running the model in production is explaining the model
+decisions to the verification team (and end users). I will talk about
+techniques that can be used to 'explain' the model's decision, for
+example, SHAP.&lt;/p&gt;
+&lt;p&gt;The main value of my talk will be practical lessons for solving a real
+business problem with machine learning.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Advanced asyncio: Solving Real-world Production Problems</title><link>https://pyvideo.org/europython-2019/advanced-asyncio-solving-real-world-production-problems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and profiling, and working with
+threaded code. We’ll learn how to approach asynchronous and concurrent
+programming with Python’s asyncio library, take away some best
+practices, and learn what pitfalls to avoid.&lt;/p&gt;
+&lt;p&gt;Outline:
+(40 minutes + 5 min Q&amp;amp;A, if unable to get 45 minutes, then 30 min slot
+with no time for Q&amp;amp;A)&lt;/p&gt;
+&lt;div class="section" id="intro-2m"&gt;
+&lt;h4&gt;Intro (2m)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Speaker/company intro&lt;/li&gt;
+&lt;li&gt;Setting the context/purpose of talk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="foundations-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Foundations (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Initial setup of an asyncio service (2m)&lt;ul&gt;
+&lt;li&gt;Required boilerplate code&lt;/li&gt;
+&lt;li&gt;Inspiration from official asyncio tutorial docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making a service &lt;em&gt;actually&lt;/em&gt; concurrent (5m)&lt;ul&gt;
+&lt;li&gt;non-blocking vs concurrent&lt;/li&gt;
+&lt;li&gt;when to be concurrent vs serial&lt;/li&gt;
+&lt;li&gt;using callbacks vs awaits vs scheduling tasks (create_task) vs
+asyncio.Events&lt;/li&gt;
+&lt;li&gt;Making synchronous code asyncio-friendly (2m)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intermediate-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Intermediate (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Graceful shutdowns (3m)&lt;ul&gt;
+&lt;li&gt;What a signal handler is, why it’s needed&lt;/li&gt;
+&lt;li&gt;What signals to listen to&lt;/li&gt;
+&lt;li&gt;Gotchas of cancelling tasks, asyncio.shield + shutdown behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exception handling (3m)&lt;ul&gt;
+&lt;li&gt;Difference between top-level exception handling and handling
+within other coroutines&lt;/li&gt;
+&lt;li&gt;Avoid mistakenly swallowing/missing raised exceptions&lt;/li&gt;
+&lt;li&gt;Making use of loop.set_exception_handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making threaded code asyncio-“friendly” (3m)&lt;ul&gt;
+&lt;li&gt;Calling threaded code from coroutines (aka running within a
+ThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Calling coroutines from from threaded code (aka
+run_coroutine_threadsafe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advanced-19m-trimmed-to-15m-for-30-min-slot"&gt;
+&lt;h4&gt;Advanced (19m - trimmed to 15m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Testing asyncio code (7m)&lt;ul&gt;
+&lt;li&gt;Benefits of debug mode&lt;/li&gt;
+&lt;li&gt;How to mock coroutines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debugging an asyncio service (5m)&lt;ul&gt;
+&lt;li&gt;Reinforce debug mode&lt;/li&gt;
+&lt;li&gt;Using “tricks&amp;quot; like &lt;tt class="docutils literal"&gt;asyncio.all_tasks&lt;/tt&gt; with logging,
+&lt;tt class="docutils literal"&gt;loop.slow_callback_duration&lt;/tt&gt;, adding context/stack trace in default
+exception handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Profiling (7m)&lt;ul&gt;
+&lt;li&gt;Basic profiling (cProfile, strace) - not that different from sync
+code&lt;/li&gt;
+&lt;li&gt;Continuous profiling with 3rd party tools, i.e. github.com/what-
+studio/profiling&lt;/li&gt;
+&lt;li&gt;PyCharm’s asyncio &amp;amp; thread profiler&lt;/li&gt;
+&lt;li&gt;How to properly trace a workflow/request (e.g. for the purpose of
+distributed tracing) (to be cut if not enough time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrap-up-review-1m"&gt;
+&lt;h4&gt;Wrap up/Review (1m)&lt;/h4&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lynn Root</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/advanced-asyncio-solving-real-world-production-problems.html</guid><category>ASYNC / Concurrency</category><category>Best Practice</category><category>Development</category></item><item><title>AsyncIO in production - War Stories</title><link>https://pyvideo.org/europython-2019/asyncio-in-production-war-stories.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My team has been running AsyncIO in production for over 2 years now and
+the only thing I can say about my experience with it is: &amp;quot;Oh boy, what a
+rollercoaster of feelings&amp;quot;. I've experienced laughs and tears, sweat and
+blood but also sang songs of glory. AsyncIO is currently the biggest
+buzzword in the Python world advertised as a silver bullet capable of
+solving all Python's shortcomings in the field of performance. However,
+it also brings a burden of being a completely new approach with a fresh
+implementation which is not often mentioned and taken into
+consideration. In some of my team's projects we've achieved a great
+success thanks to AsyncIO, but there's been a few where we decided to
+get rid of it and replace it with a more traditional fork-join
+architecture. I'd like to share my experience with AsyncIO, tell some
+War Stories and discuss which projects it suits perfectly and which ones
+should avoid it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michal Wysokinski</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/asyncio-in-production-war-stories.html</guid><category>ASYNC / Concurrency</category><category>Debugging</category><category>Python 3</category><category>Use Case</category></item><item><title>Downloading a Billion Files in Python</title><link>https://pyvideo.org/europython-2019/downloading-a-billion-files-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've been given a task. You need to download some files from a server
+to your local machine. The files are fairly small, and you can list and
+access these files from the remote server through a REST API. You'd like
+to download them as fast as possible. The catch? There's a billion of
+them. Yes, one billion files.&lt;/p&gt;
+&lt;p&gt;How would would you do this? Would you do this synchronously in a single
+for loop? Would you use a producer/consumer queue with threads?
+Multiprocessing? Asyncio?&lt;/p&gt;
+&lt;p&gt;In this talk, we'll examine 3 different mechanisms for concurrently
+downloading files: multithreading, multiprocessing, and asyncio.&lt;/p&gt;
+&lt;p&gt;For each of these mechanisms we'll look at design best practices, how to
+handle debugging and error handling, and of course the overall
+performance. By examining three different approaches using the same data
+set, we gain a better understanding of the tradeoffs of each approach so
+we can pick the right library for the job.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Saryerwinnie</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/downloading-a-billion-files-in-python.html</guid><category>ASYNC / Concurrency</category><category>Case Study</category><category>Multi-Processing</category><category>Multi-Threading</category><category>Performance</category></item><item><title>From HTTP to Kafka-based microservices</title><link>https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wojciech Rząsa</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/from-http-to-kafka-based-microservices.html</guid><category>ASYNC / Concurrency</category><category>Communication</category><category>Distributed Systems</category></item><item><title>Look Ma, No HTTP!</title><link>https://pyvideo.org/europython-2019/look-ma-no-http.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I'm going to live code a web application that is built
+exclusively on top of WebSocket, without using HTTP at all!&lt;/p&gt;
+&lt;p&gt;What's the benefit of using WebSocket over HTTP, you may ask? With
+WebSocket each client establishes a permanent connection to the server,
+so there is no request/response cycle and no need for the client to poll
+the server for data. Each side can freely send data to the other side at
+any time, so this is an ideal stack for building highly dynamic,
+event-driven applications.&lt;/p&gt;
+&lt;p&gt;For this live coding exercise I'm going to use the Socket.IO server for
+Python, and the Socket.IO client for JavaScript. No Flask, no Django, no
+HTTP!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miguel Grinberg</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/look-ma-no-http.html</guid><category>ASYNC / Concurrency</category><category>Web Protocols</category><category>Web Servers and MicroFWs</category></item><item><title>Running a Synchrotron on Open Source Python</title><link>https://pyvideo.org/europython-2019/running-a-synchrotron-on-open-source-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A synchrotron is a large research facility that has a large software
+stack to keep things running, fortunately a large chunk of the stack is
+Open Source and fair chunk of it is Python to boot. By the end of the
+talk attendees will understand the scale of the infrastructure (both
+physical and software) that is required, and have an idea of what sort
+of problems a synchrotron could help them solve.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Clinton Roy</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/running-a-synchrotron-on-open-source-python.html</guid><category>ASYNC / Concurrency</category><category>Architecture</category><category>Big Data</category><category>Engineering</category><category>Hardware/IoT</category></item><item><title>The Story of Features Coming in Python 3.8 and Beyond</title><link>https://pyvideo.org/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's coming in Python 3.8? You can learn it by yourself by reading an
+excellent document [What's New in Python 3.8][1]. I'm not going to
+retell this document. Instead I'll focus on things barely described
+there or not mentioned at all:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why will the new features appear in Python 3.8 and what's the story
+behind them?&lt;/li&gt;
+&lt;li&gt;What is being discussed and developed now, but won't appear in Python
+3.8?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll share the news I learned at PyCon 2019 from the talks and
+discussions with Python core developers. I'll mention the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New syntax: &lt;tt class="docutils literal"&gt;x := expr&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f(...,&lt;/span&gt; /, &lt;span class="pre"&gt;...)&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f'{expr=}'&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New types: &lt;tt class="docutils literal"&gt;Literal&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Final&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TypedDict&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Future features of typing and async/await&lt;/li&gt;
+&lt;li&gt;New approaches to optimizing Python: sub-interpreters, mypyc&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrey Vlasovskikh</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</guid><category>ASYNC / Concurrency</category><category>Compiler and Interpreters</category><category>New Features</category><category>Python 3</category><category>Type-Hinting</category></item><item><title>Is it me, or the GIL?</title><link>https://pyvideo.org/europython-2019/is-it-me-or-the-gil.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python's Global Interpreter Lock is a friend and rival at the same time.
+We, as developers, can focus on the design and implementation of
+applications without the hassle of memory management. On the other side,
+we complain about the GIL as the limiting factor of performance
+sensitive applications. Therefore, it is common to refactor parts of
+systems when the system doesn't perform or scale enough anymore. The
+refactoring often includes the switch of the used concurrency paradigms
+like replacing multithreading with multiprocessing or asyncio. Another
+option is moving logic of CPU-bound workload into C extensions or a full
+rewrite in a &amp;quot;GIL-free&amp;quot; language. But how do you know that the GIL is
+the actual performance bottleneck?&lt;/p&gt;
+&lt;p&gt;While scaling and developing performance sensitive components in Python,
+my colleagues and I often also assumed the GIL as cause of our
+performance problems because it is a common and simple answer for this
+usually complex and varied problems. Instead of starting a rewrite or
+major refactoring, we took a step back and tried to prove our
+assumption. With the result that analyzing the impact of the GIL
+contention on the overall performance is a very interesting problem
+without common practices or easy usable set of tools that support Python
+developers. Within this talk, I will share and explain the methods and
+tools, which we use to analyze the relevance of the GIL on our
+application performance and how it helped us to stay focused on the
+actual problematic areas of our applications that required improvements
+to meet our performance goals.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christoph Heer</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/is-it-me-or-the-gil.html</guid><category>ASYNC / Concurrency</category><category>Multi-Threading</category><category>Performance</category><category>Scaling</category><category>Tooling</category></item><item><title>Python's Parallel Programming Possibilities - 4 levels of concurrency</title><link>https://pyvideo.org/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall into along the way.&lt;/p&gt;
+&lt;p&gt;To do so, I'll give short examples in code of achieving each level:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- leveraging multiple hosts using RQ, and also the possibility of RPC
+with HTTP&lt;/div&gt;
+&lt;div class="line"&gt;- multiprocessing and threading using their respective modules from
+the python standard library&lt;/div&gt;
+&lt;div class="line"&gt;- asyncio demonstrated with AIOHTTP&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That sounds great, but there are &amp;quot;gotchas&amp;quot; you should know about before
+you get started, for example:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple machines can actually be multiple virtual machines on the
+same host&lt;/div&gt;
+&lt;div class="line"&gt;- effectively communicating between processes is hard, how can we go
+about making it easier?&lt;/div&gt;
+&lt;div class="line"&gt;- the limitations of threading and the GIL&lt;/div&gt;
+&lt;div class="line"&gt;- run_in_executor - do we ever really need to use multiprocessing or
+threading directly again&lt;/div&gt;
+&lt;div class="line"&gt;- use of asyncio when dealing with both networking between hosts and
+between processes - you end up using two different kinds of
+concurrency at the same time. That can be confusing, but also awesome.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I'll finish of by showcasing a library I built, arq which is a job
+queueing and RPC library for python which uses asyncio and Redis.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Samuel Colvin</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</guid><category>ASYNC / Concurrency</category><category>Messaging and Job Queues</category><category>Multi-Processing</category><category>Multi-Threading</category><category>python</category></item><item><title>The dos and don'ts of task queues</title><link>https://pyvideo.org/europython-2019/the-dos-and-donts-of-task-queues.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we’ll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it’s the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won’t talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we’ll present our current setup which can take upon any number of
+tasks*. How we orchestrate the app and continuously integrate and
+deploy and what fun things await ahead of us in the development.&lt;/p&gt;
+&lt;p&gt;*Conditions may apply.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Petr Stehlík</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/the-dos-and-donts-of-task-queues.html</guid><category>ASYNC / Concurrency</category><category>Architecture</category><category>Best Practice</category><category>Case Study</category><category>failures/mistakes</category></item></channel></rss>

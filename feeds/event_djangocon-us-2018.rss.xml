@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 17 Oct 2018 00:00:00 +0000</lastBuildDate><item><title>Anatomy of Open edX - a modern online learning platform serving over 35 million users</title><link>https://pyvideo.org/djangocon-us-2018/anatomy-of-open-edx-a-modern-online-learning-platform-serving-over-35-million-users.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What does it take to build a web application that can serve millions of
+concurrent users? This talk will dissect Open edX, the open source
+online learning platform that powers edX.org and hundreds of other sites
+around the world.&lt;/p&gt;
+&lt;p&gt;Open edX is written in Django but relies on a slew of other software to
+work at scale. We’ll break down the components of the entire software
+architecture, and explain how each component is used. This will give
+attendees some insights into how they might architect their web
+application if they’re building software to serve a large audience.&lt;/p&gt;
+&lt;p&gt;We’ll discuss how Open edX utilizes both MySQL and MongoDB as data
+stores and why it uses MySQL for student data and MongoDB for course
+data. We’ll describe the queing architecture of Celery and RabbitMQ to
+process background jobs, and Hadoop for processing terabytes of learner
+analytics data.&lt;/p&gt;
+&lt;p&gt;DevOps enthusiasts will not be disappointed as we’ll go into the use of
+Ansible and Terraform for deploying the entire suite of software in a
+consistent and repeatable way up to popular cloud providers such as AWS,
+Google Cloud and Azure.&lt;/p&gt;
+&lt;p&gt;What will attendees learn? The attendees will get a close look at a
+modern Django-based web application to see how it’s architected, and
+come away with a better understanding of design decisions when building
+a web application that needs to serve 35M users from every country in
+the world. Attendees will also be equipped with the knowledge to run
+Open edX on their laptop or in the cloud, if they want to explore the
+software further.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nate Aune</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/anatomy-of-open-edx-a-modern-online-learning-platform-serving-over-35-million-users.html</guid></item><item><title>Bespoke communication devices for kids with autism built with Django and Raspberry Pi</title><link>https://pyvideo.org/djangocon-us-2018/bespoke-communication-devices-for-kids-with-autism-built-with-django-and-raspberry-pi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will detail my experience building an Augmentative Alternative
+Communication (AAC) device for my son who has autism. I had to perform
+some troubleshooting to get Django to harmonize with the Raspbian OS and
+touchscreen drivers, but the result is easily replicable using the
+instructions I will cover from my project documentation on the Hackaday
+website bit.ly/TalkerHackaday&lt;/p&gt;
+&lt;p&gt;I want to give this talk to inspire other developers to try their hand
+at building bespoke assistive devices. Commercially available medical
+assistive devices are expensive partly because they try to be everything
+to everybody. What if instead, we made products that do one thing for
+one specific user very well?&lt;/p&gt;
+&lt;p&gt;This outline shows what I will cover in my talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Find a need and fill it&lt;/li&gt;
+&lt;li&gt;Django on Linux&lt;/li&gt;
+&lt;li&gt;Interface prototyping&lt;/li&gt;
+&lt;li&gt;Gesture recognition for touchscreen&lt;/li&gt;
+&lt;li&gt;Custom enclosures with NO 3D printing&lt;/li&gt;
+&lt;li&gt;Everyone needs to become an inventor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is for people who are curious about running Django in an
+embedded system (development server as the production environment).
+People who are interested in Debian Linux will also find this talk
+interesting. I would love to reach the autism community and people who
+want to build assistive technology. To get the most out of this talk,
+attendees should have a basic knowledge of how to perform a command line
+Django installation and what a raspberry pi is.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Muriel Green</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/bespoke-communication-devices-for-kids-with-autism-built-with-django-and-raspberry-pi.html</guid></item><item><title>Data internationalization in Django</title><link>https://pyvideo.org/djangocon-us-2018/data-internationalization-in-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There is a multitude of options to translate database data in Django,
+for example django-parler, django-modeltranslation, django-nece,
+django-hvad, and django-i18nfield (which is my own). The interesting
+thing is that these libraries are not multiple implementations of the
+same thing, but they are all radically different in their design and
+there are good reasons for every one of them. The sometimes subtle
+differences might not be obvious to a beginner in the Django world. This
+talk will help them navigate through different solutions and make an
+informed decision.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Raphael Michel</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/data-internationalization-in-django.html</guid></item><item><title>Django REST Framework: Moving Past the Tutorial to Production</title><link>https://pyvideo.org/djangocon-us-2018/django-rest-framework-moving-past-the-tutorial-to-production.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;So you’ve made your first attempt at creating a DRF API, but now you
+need to figure out how to put the hair on the proverbial pony. You want
+to make things easier on your client developers so they can get exactly
+what they need. I’ll walk through things that made our lives better
+developing a Django REST Framework API serving a React frontend.&lt;/p&gt;
+&lt;p&gt;I’ll include optimizations such as embedding related fields into
+serializers, using different serializers for different users and use
+cases (HTTP methods), and using DRF’s &lt;tt class="docutils literal"&gt;actions&lt;/tt&gt; decorator to provide
+easy access to related tasks. I’ll also touch on some third-party
+libraries that made life way easier, such as &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;rest-framework-filters&lt;/span&gt;&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-rest-swagger&lt;/span&gt;&lt;/tt&gt;, and &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-simple-&lt;/span&gt; history&lt;/tt&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Drew Winstel</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/django-rest-framework-moving-past-the-tutorial-to-production.html</guid></item><item><title>Don't Be a Robot; Build the Bot</title><link>https://pyvideo.org/djangocon-us-2018/dont-be-a-robot-build-the-bot.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Managing a large open source project like CPython is no easy task. Learn
+how the Python core team automated their GitHub workflow with bots,
+making it easier for maintainers and contributors to collaborate
+together. Even if you’re not managing a large project, you can still
+build your own bot! Hear some ideas on what you can automate on GitHub
+and personalize your bot based on your own workflow. All you need is
+Python. Don’t be a robot; build the bot.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mariatta Wijaya</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/dont-be-a-robot-build-the-bot.html</guid><category>keynote</category></item><item><title>Easier Classes: Python Classes Without All The Cruft</title><link>https://pyvideo.org/djangocon-us-2018/easier-classes-python-classes-without-all-the-cruft.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When bundling up data, sometimes tuples and dictionaries don’t quite cut
+it. Python’s classes are powerful tools for data storage and
+manipulation, but it can take quite a bit of boilerplate code to make a
+well-behaved Python class. In this talk we’re going to discuss how a
+well-behaved class should work and take a look at a number of helper
+libraries for creating well-behaved classes.&lt;/p&gt;
+&lt;p&gt;We’ll first see how to make classes with proper string representations,
+comparability, iterability, and immutability. Then we’ll dive into
+helper tools built-in to the standard library and available in
+third-party libraries and briefly discuss which of these tools makes
+sense to use with Django’s classes.&lt;/p&gt;
+&lt;p&gt;We’ll look at namedtuple, NamedTuple (not a typo), attrs, and the new
+Python 3.7 dataclasses.&lt;/p&gt;
+&lt;p&gt;Most of the libraries discussed in this talk are only available in
+Python 3, so if you’re not using Python 3, hopefully this talk will
+encourage you to upgrade.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Trey Hunner</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/easier-classes-python-classes-without-all-the-cruft.html</guid></item><item><title>How to give a damn, and stand out</title><link>https://pyvideo.org/djangocon-us-2018/how-to-give-a-damn-and-stand-out.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will give you some tips and techniques as well as some real
+(raw) examples of how I was able to start a company at 23 years old,
+lock in an investment, and beat out my competitors who were a lot older
+and more experienced than I. The talk will demonstrate different
+scenarios and solutions in which it takes to stand out, and be
+remembered in a saturated market, in whatever field you may be in.
+Whether you are a developer interviewing for your dream job, starting a
+business, or somewhere in between and just trying to make your way in
+the world. Implementing emotional awareness and intelligence in your
+life will change not just the way you interview but the way you are
+perceived by others in your work life, as well as your social life.&lt;/p&gt;
+&lt;p&gt;My friends call it the “Amber effect” but I call it, giving a damn.&lt;/p&gt;
+&lt;p&gt;In this talk we will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to leave a lasting impression, every time.&lt;/li&gt;
+&lt;li&gt;The importance of long term benefits vs instant gratification when it
+comes to building relationships&lt;/li&gt;
+&lt;li&gt;How to stand out as a potential job applicant&lt;/li&gt;
+&lt;li&gt;How to get the attention of a prospective client, including c-level
+executives.&lt;/li&gt;
+&lt;li&gt;How to identify opportunity and advantages out of unexpected
+circumstances (When things don’t go your way)&lt;/li&gt;
+&lt;li&gt;How to add value beyond scope of work&lt;/li&gt;
+&lt;li&gt;Genuinely giving a damn without expectation&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Amber Wanner</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/how-to-give-a-damn-and-stand-out.html</guid></item><item><title>Lightning Talks Day 3</title><link>https://pyvideo.org/djangocon-us-2018/lightning-talks-day-3.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various Speakers</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/lightning-talks-day-3.html</guid></item><item><title>ORM: The Sequel</title><link>https://pyvideo.org/djangocon-us-2018/orm-the-sequel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django tutorials often use the perspective of a complete newcomer to
+Python and web development, and while they provide a good practical
+on-ramp for brand new developers, they are often not quite right for
+developers from other backgrounds.&lt;/p&gt;
+&lt;p&gt;The common backbone of MVC development, no matter the base language, is
+the database and the language specifically for it’s manipulation:
+Structured Query Language (SQL). But Django hides this behind it’s
+amazing drawcard, the Object Relational Model (ORM).&lt;/p&gt;
+&lt;p&gt;But how can a developer already familiar with SQL get a handle on the
+ORM?&lt;/p&gt;
+&lt;p&gt;This talk endeavours to introduce the ORM using shared SQL and
+relational database concepts, showcasing the features the ORM uses to
+make database querying and manipulation a joy, rather than a burden, to
+the polyglot developer.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Katie McLaughlin</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/orm-the-sequel.html</guid></item><item><title>Pseu, Pseu, Pseudio. Pseudonymization in Django.</title><link>https://pyvideo.org/djangocon-us-2018/pseu-pseu-pseudio-pseudonymization-in-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The General Data Protection Regulation, better known as GDPR, is a
+regulation on data protection and privacy for all individuals within the
+European Union. GDPR went into effect on May 25, 2018 and was the cause
+of the “Great Privacy Policy Update” that occurred in the weeks prior.&lt;/p&gt;
+&lt;p&gt;This talk will cover what GDPR is and why you should care about it, but
+we won’t stop there. This is not going to be another talk on data
+protection policy. No.&lt;/p&gt;
+&lt;p&gt;In this talk, we’re going to jump right into discussing HOW to implement
+data patterns that comply with regulations like GDPR by examining a
+pattern known as pseudonymization.&lt;/p&gt;
+&lt;p&gt;Pseudonymization is a data de-identification procedure where fields of
+personally identifiable information (PII) within a data record are
+replaced by one or more artificial identifiers. These artificial
+identifiers are also called pseudonyms. Pseudonyms make a data record
+less identifiable without sacrificing data analysis and processing. GDPR
+requires that PII undergo either pseudonymization or complete data
+anonymization.&lt;/p&gt;
+&lt;p&gt;For the hands-on portion of this talk, we’ll construct a Django User
+Model where we apply pseudonyms to the data attributes which qualify as
+PII. We’ll explore a couple strategies for implementing a compliant
+pseudonymization pattern, examining their individual approaches and
+performance, and we’ll discuss limitations of pseudonymizing certain
+attributes and how to achieve compliance through consent.&lt;/p&gt;
+&lt;p&gt;GDPR sets a precedent for responsible data management. Whether your
+application serves citizens of the EU or not, the regulations serve as
+an encouragement for protecting your user’s identities. This talk is
+great for everyone from beginners to expert Django developers… and fans
+of Phil Collins :)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Frank Valcarcel</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/pseu-pseu-pseudio-pseudonymization-in-django.html</guid></item><item><title>Real Life Accessibility: Have you HEARD your site?</title><link>https://pyvideo.org/djangocon-us-2018/real-life-accessibility-have-you-heard-your-site.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the past it was simpler and easier to think of building websites
+exclusively for desktop monitors capable of showing 1024x768 pixels,
+sitting on the desk of a non-impaired, English-speaking person. But
+today we need to embrace a much broader range of users. And one part of
+this is designing sites for the visually impaired.&lt;/p&gt;
+&lt;p&gt;There are automatic checkers that you can use to assess your site’s
+accessibility. It will tell you that all your images need an alt tag,
+and that the H2 should come after the H1. This is a good start, but even
+if you dot all your i’s and cross all your t’s and get 100% pass, your
+site may be an unnavigable mess in practice.&lt;/p&gt;
+&lt;p&gt;In this talk we will look at and &lt;em&gt;listen to&lt;/em&gt; real world examples of
+websites that either pass or fail the accessibility test. We will hear
+anecdotes from actual visually impaired users and discover how they
+navigate the web. And we will see that even though frameworks like
+Django can set us up for success, it’s up to us as developers to follow
+through.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Herring</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/real-life-accessibility-have-you-heard-your-site.html</guid></item><item><title>"State of Django" Panel</title><link>https://pyvideo.org/djangocon-us-2018/state-of-django-panel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Join us for a panel on the State of Django: the state of the Django
+codebase, but also the state of the Django community as represented by
+organizations like the Django Software Foundation, Django Girls, and
+DEFNA.&lt;/p&gt;
+&lt;p&gt;Moderated by Simon Willison, our panelists will discuss:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how we can continue to grow the Django community and create a
+welcoming space for beginners&lt;/li&gt;
+&lt;li&gt;the priorities for the continued development and maturation of Django&lt;/li&gt;
+&lt;li&gt;ways to improve Django events and bring them to new regions worldwide&lt;/li&gt;
+&lt;li&gt;success stories from Django communities&lt;/li&gt;
+&lt;li&gt;concrete steps toward better and more effective diversity and
+inclusion efforts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and much more. It’s been a long time since we gathered leaders of the
+Django community on one stage to have an open-ended discussion about
+Django’s present and future, and we hope you’ll join us for this special
+event.&lt;/p&gt;
+&lt;div class="section" id="panelists"&gt;
+&lt;h4&gt;Panelists&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Andrew Godwin&lt;/li&gt;
+&lt;li&gt;Anna Makarudze&lt;/li&gt;
+&lt;li&gt;Frank Wiles&lt;/li&gt;
+&lt;li&gt;Jeff Triplett&lt;/li&gt;
+&lt;li&gt;Josue Balandrano Coronel&lt;/li&gt;
+&lt;li&gt;Katherine Michel&lt;/li&gt;
+&lt;li&gt;Kojo Idrissa&lt;/li&gt;
+&lt;li&gt;Rachell Calhoun&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Simon Willison</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/state-of-django-panel.html</guid></item><item><title>Strategies for Zero Down Time, Frequent Deployments</title><link>https://pyvideo.org/djangocon-us-2018/strategies-for-zero-down-time-frequent-deployments.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deployments can be stressful, but should’nt be. We all hear about big
+companies deploying several, if not thousands of times a day. In order
+to acheive this, you have to be able to deploy without impacting
+performance at all; you need to feel confident and comfortable when you
+deploy. Even a couple miliseconds of downtime is unacceptable in these
+environments. Whether you have to provide SLA’s to your customers or
+not, being able to deploy without any downtime, allows you to deploy
+more often, which leads to faster turnaround time on both bug fixes and
+features. Successfully deploying without and downtime, however, is
+non-trivial. Perhaps you have heard the term Blue/Green deployment, and
+wonder what that is. Come learn about some of the strategies used for
+deployments, as well as all the changes to your code and your process
+you will have to make in order for it to truly work, and make you feel
+more confident on every deploy to production.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nick Humrich</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/strategies-for-zero-down-time-frequent-deployments.html</guid></item><item><title>The Power of GeoDjango</title><link>https://pyvideo.org/djangocon-us-2018/the-power-of-geodjango.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GeoDjango is Django’s robust geographic Web framework to build GIS
+applications and handle geospatial data. It relies on PostGIS
+(PostgreSQL’s database for geospatial objects) and the Python library
+GDAL. This talk will discuss how GeoDjango uses these to extend Django
+models to handle complex geometries and geographic queries. This talk is
+intended for software developers and those interested in mapping
+location data. There will be a short demonstration on how GeoDjango
+works with popular mapping frameworks like Leaflet and OpenStreetMaps.
+We will create a GeoDjango model, seed our PostGIS database using raw
+location data, and make a simple route and view so we can actually
+visualize some data on a Leaflet map. We will also discuss the
+difference between raster and vector data, geos geometries and geojson,
+and spatial reference systems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anna Kiefer</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/the-power-of-geodjango.html</guid></item><item><title>Unique ways to Hack into a Python Web Service</title><link>https://pyvideo.org/djangocon-us-2018/unique-ways-to-hack-into-a-python-web-service.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python covers a significant portion of the present day Web services
+landscape because of frameworks like Django, Flask, CherryPy etc. Many
+Highly Scalable services are built on one or more of these frameworks.&lt;/p&gt;
+&lt;p&gt;However, there is a perception among developers that these frameworks
+protected all classes of Web attacks and the OWASP Top 10
+vulnerabilities. This is because of the inherent middleware that has
+battle-tested controls against some common vulnerabilities like CSRF,
+SQL Injection, and XSS. However, I have observed that many Python devs
+do not watch out for lesser- known vulnerabilities that seem to be rife
+in many Python Web Apps. For instance, in more recent security tests
+against Python Web Services that our team executes, I find that
+vulnerabilities like Insecure Deserialization, XML External Entities,
+Server-Side Template Injection and Authorization Flaws are quite
+prevalent.&lt;/p&gt;
+&lt;p&gt;As a developer (largely of Python Web Apps), I find that there are some
+simple steps that engineering teams can take towards finding and fixing
+such vulnerabilities with Python Web Services built on Django and Flask.
+My talk is meant to be a holistic perspective on finding and fixing some
+uncommon flaws in Python Web Apps. The talk will be replete with
+multiple demos, anecdotes, and examples of secure and insecure code in
+Python. I will also delve into SAST and DAST techniques (AST and ZAP
+Custom Scripts) to identify such flaws in python web applications.&lt;/p&gt;
+&lt;p&gt;The example repository will be available on GitHub for the community to
+use.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tilak T</dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-17:djangocon-us-2018/unique-ways-to-hack-into-a-python-web-service.html</guid></item><item><title>Building a Community for All People</title><link>https://pyvideo.org/djangocon-us-2018/building-a-community-for-all-people.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you having trouble getting beginners to stick around in your user
+group? What’s the best way to help people who are just getting started
+with Django and Python? Are you finding it difficult to attract and keep
+a diverse audience? Since I started PyLadies Boston in 2013, I’ve
+learned a few lessons about the best way to help out beginners and
+cultivate a welcoming community for marginalized folks. In this talk, I
+will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Starting a group with the intention to be beginner-friendly&lt;/li&gt;
+&lt;li&gt;Creating a welcoming environment&lt;/li&gt;
+&lt;li&gt;Beginner friendly meeting topics&lt;/li&gt;
+&lt;li&gt;Finding the best way to teach people to code&lt;/li&gt;
+&lt;li&gt;Being a good ally&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will benefit anyone who is currently running or thinking of
+starting a user group.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jennifer Konikowski</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/building-a-community-for-all-people.html</guid></item><item><title>Finally Understand Authentication in Django REST Framework</title><link>https://pyvideo.org/djangocon-us-2018/finally-understand-authentication-in-django-rest-framework.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Traditional Django handles user authentication for us. REST Framework?
+Not so much. The abundance of choice is overwhelming and typically THE
+biggest obstacle for newcomers.&lt;/p&gt;
+&lt;p&gt;This talk is a deep dive on authentication in Django REST Framework.
+We’ll start with an overview of HTTP and REST APIs before demonstrating
+how to implement the 4 built-in auth modes and their respective
+pros/cons. Special attention will be paid to common gotchas such as, Why
+do I need “both” TokenAuth and SessionAuth? What are JWTs?&lt;/p&gt;
+&lt;p&gt;Next we’ll implement a real-world REST auth setup that includes user
+registration, password reset/confirm, social auth, and endpoints for
+sign up, log in, and log out. The third-party packages
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;django-rest-auth&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;django- allauth&lt;/tt&gt; will be used .&lt;/p&gt;
+&lt;p&gt;By the end of the talk attendees will understand the basics of REST
+authentication, the tradeoffs involved, and walk away with a working
+implementation to jumpstart their future projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">William S. Vincent</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/finally-understand-authentication-in-django-rest-framework.html</guid></item><item><title>Fundamentals of Kubernetes for Django developers</title><link>https://pyvideo.org/djangocon-us-2018/fundamentals-of-kubernetes-for-django-developers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A hot topic in recent years is running applications in containers. Tools
+such as &lt;tt class="docutils literal"&gt;docker&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;rkt&lt;/tt&gt; have made deployment of applications
+using Linux containers easier, but they do not alone provide everything
+that is needed to easily manage many applications, or run containers at
+scale across a cluster of machines.&lt;/p&gt;
+&lt;p&gt;In this talk you will learn about the fundamental concepts and
+terminology of Kubernetes and why it is emerging as the de-facto
+standard for container orchestration and scheduling.&lt;/p&gt;
+&lt;p&gt;The talk will step through how to deploy to Kubernetes a Python web
+application, implemented using Django, as a way of seeing what happens
+under the covers when you do so.&lt;/p&gt;
+&lt;p&gt;Topics which will be covered to illustrate how Kubernetes works will
+include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What are containers and pods.&lt;/li&gt;
+&lt;li&gt;Accessing pods for an application via a service.&lt;/li&gt;
+&lt;li&gt;Scaling up applications to many instances.&lt;/li&gt;
+&lt;li&gt;Automatic recovery from application failure.&lt;/li&gt;
+&lt;li&gt;Exposing a web application to the public.&lt;/li&gt;
+&lt;li&gt;Building images targeting Kubernetes.&lt;/li&gt;
+&lt;li&gt;Application lifecycle management.&lt;/li&gt;
+&lt;li&gt;Monitoring health of an application.&lt;/li&gt;
+&lt;li&gt;Security and controlling access.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Kubernetes is a tool for IT operations. It implements what is regarded
+as a Container as a Service (CaaS). You can use it to host an
+application packaged up in a pre-existing application image, but does
+not help you with building that image. In some respects Kubernetes can
+be viewed as like the Linux kernel, you wouldn’t try and deploy it
+yourself from scratch, instead you would use a packaged distribution.&lt;/p&gt;
+&lt;p&gt;This talk will also touch on different Kubernetes distributions such as
+vendor distributions from Heptio, and OpenShift from Red Hat, as well as
+Kubernetes services such as Google Kubernetes Engine (GKE), Amazon
+Elastic Container Service (EKS) and Azure Kubernetes Service (AKS).
+Examples of how these distributions and service offerings around
+Kubernetes bundle in additional functionality, including integrated
+routing, metrics, logging and Platform as a Service (PaaS)
+functionality, in order to provide a better developer centric experience
+will also be discussed.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Graham Dumpleton</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/fundamentals-of-kubernetes-for-django-developers.html</guid></item><item><title>Here Come The Robots - Django and Machine Learning</title><link>https://pyvideo.org/djangocon-us-2018/here-come-the-robots-django-and-machine-learning.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine Learning is probably the most important development in our
+industry (and possibly our civilisation!). Previously restricted to math
+geniuses with access to supercomputers and massive data centres, machine
+learning tools are increasingly available as web services which are
+easily consumed from more traditional web applications. Python has
+become the lingua franca of machine learning, so Django developers are
+well placed to take advantage of the next wave of application
+development.&lt;/p&gt;
+&lt;p&gt;In this talk I’ll outline the various machine learning platforms and
+provide a set of practical examples that demonstrate how Django
+developers can start taking advantage of artificial intelligence in
+their own applications. These will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Image recognition - using Microsoft Azure Vision to automatically
+caption and label the images your users upload&lt;/li&gt;
+&lt;li&gt;Entity analysis - using the Google Cloud Natural Language API to tag
+news articles with people, locations and events&lt;/li&gt;
+&lt;li&gt;Predictions - using Amazon Machine Learning to build a ‘you may also
+like’ feature&lt;/li&gt;
+&lt;li&gt;Sentiment analysis - using IBM Watson to understand the tone of
+comments submitted to your site&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tom Dyson</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/here-come-the-robots-django-and-machine-learning.html</guid></item><item><title>Introduction to Django and GraphQL</title><link>https://pyvideo.org/djangocon-us-2018/introduction-to-django-and-graphql.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GraphQL has grown a lot overtime, but it seems to still be a new “thing”
+in the Python and Django World. This talk will be an introduction to
+GraphQL, explaining why it has been created and how you can use it in
+Python and Django.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Short speaker introduction&lt;/li&gt;
+&lt;li&gt;Small digression on how the “old” web used to be and how it has now
+evolved into the modern web&lt;/li&gt;
+&lt;li&gt;Really quick explanation of REST (just to make sure everyone is
+familiar with it)&lt;/li&gt;
+&lt;li&gt;What are some limitations of REST? What can we do about it?&lt;/li&gt;
+&lt;li&gt;Introduction to GraphQL, what it is, how’s using it and when has it
+been created?&lt;/li&gt;
+&lt;li&gt;GraphQL: query language syntax&lt;/li&gt;
+&lt;li&gt;GraphQL: types and introspection&lt;/li&gt;
+&lt;li&gt;GraphQL: operation, how to read data,update data and more&lt;/li&gt;
+&lt;li&gt;How to use Graphql with Python and Django&lt;/li&gt;
+&lt;li&gt;Let’s make a simple API&lt;/li&gt;
+&lt;li&gt;How to create queries&lt;/li&gt;
+&lt;li&gt;How to create mutations&lt;/li&gt;
+&lt;li&gt;Things to consider (security caching and performance)&lt;/li&gt;
+&lt;li&gt;Closing thoughts&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Patrick Arminio</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/introduction-to-django-and-graphql.html</guid></item><item><title>JavaScript for Python Developers</title><link>https://pyvideo.org/djangocon-us-2018/javascript-for-python-developers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Having a hard time keeping track of where the modern JavaScript is
+going? Are you familiar only with jQuery and you want to know more? Or
+maybe you’re not familiar with JavaScript at all and want to learn it
+but you don’t know where to start? Then this talk is for you!&lt;/p&gt;
+&lt;p&gt;You’ll learn about modern JavaScript from a perspective of a Python
+developer. By the end of the talk you’ll know everything you need to
+know about the language, its ecosystem, and different tools and
+frameworks. You’ll be able to start using JavaScript more confidently
+and be familiar with different tools that are at your disposal.&lt;/p&gt;
+&lt;p&gt;We’ll go over all the things I wish I’d known when I first got started
+with JavaScript.:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Basics of the language (types, operators, data structures, functions,
+modules, etc. as seen in ES6) and how they are similar to or
+different from Python.&lt;/li&gt;
+&lt;li&gt;Overview of the commonly used development and build tools.&lt;/li&gt;
+&lt;li&gt;Overview of the popular frontend frameworks.&lt;/li&gt;
+&lt;li&gt;A look into the newest features of ES6 and Typescript.&lt;/li&gt;
+&lt;li&gt;How to get started and make sense of everything with so much going
+on.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Žan Anderle</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/javascript-for-python-developers.html</guid></item><item><title>Lightning Talks Day 2</title><link>https://pyvideo.org/djangocon-us-2018/lightning-talks-day-2.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various Speakers</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/lightning-talks-day-2.html</guid></item><item><title>My Journey With Code</title><link>https://pyvideo.org/djangocon-us-2018/my-journey-with-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Anna’s keynote will dive into her journey with coding, what got her
+interested in programming and why she chose Python despite the language
+not being popular in her region. She will also talk about her journey
+learning to code in Python and how her involvement in the Python
+community as a beginner has helped her grow and develop her coding
+skills. She will share what mentorship means to her and how positive
+mentorship can impact the lives of many beginner coders.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anna Makarudze</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/my-journey-with-code.html</guid><category>keynote</category></item><item><title>"Normalize until it hurts; denormalize until it works" in Django</title><link>https://pyvideo.org/djangocon-us-2018/normalize-until-it-hurts-denormalize-until-it-works-in-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There’s a good practice that says “a database is a representer of
+facts”. If there’s more than one way to extract a single fact from the
+database, then there’s a redundancy in it. Every redundancy can cause
+different anomalies in the data, which in turn cause bugs in the
+application. To avoid that, there’s a process called normalization,
+which involves following sets of rules to restructure the database to
+remove redundancies without losing the original facts. The traditional
+set of normalization rules are the so-called Normal Forms: First Normal
+Form, Second, Third, etc. Unfortunately, those are frequently overlooked
+by developers due to their excessive formalism. But in fact, even the
+Normal Forms aren’t enough to avoid anomalies, since they’re concerned
+about redundancies only in a single table*. Since cross-table
+dependencies are very common in modern applications, we must go beyond
+normal forms to prevent problems.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll present normalization rules on a friendly language,
+going beyond normal forms. We’ll understand how the software
+requirements cause dependencies in database tables, both in-table and
+cross-tables. We’ll show real examples of non-trivial dependencies that
+happen on Django models. We’ll discuss how normalization prevents
+redundancies, inconsistencies, anomalies, and bugs. Knowing that
+normalization can cause slowdowns in queries, we’ll present how to
+increase performance with denormalization, which is not the same of not
+normalizing. Instead, denormalization means being able to represent data
+in multiple ways to speed up queries without introducing
+inconsistencies. We’ll discuss Django-related denormalization tools that
+use cronjobs, indexes, caching, materialized views and triggers, and
+NoSQL.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;em&gt;It’s common to ignore the fact that normal forms only discuss
+redundancies inside a single table/record/relval. More about this
+in`this article &amp;lt;http://www.bkent.net/Doc/simple5.htm#label6&amp;gt;`__
+reviewed by Codd, Fagin and Date, key figures of the relational
+model.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s the planned outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[1 minute ] Who am I.&lt;/li&gt;
+&lt;li&gt;[6 minutes] Explaining normalization without normal forms formalism:&lt;ul&gt;
+&lt;li&gt;Defining Normalization.&lt;/li&gt;
+&lt;li&gt;Normalization with only two concepts: Candidate Keys and
+Dependencies.&lt;/li&gt;
+&lt;li&gt;Normalization Rule: every field must provide a fact about the
+whole candidate key and nothing but the key.&lt;/li&gt;
+&lt;li&gt;Violating the Rule: denormalized example, along with anomalies it
+has.&lt;/li&gt;
+&lt;li&gt;Prevent anomalies with a solution based on the Rule.&lt;/li&gt;
+&lt;li&gt;Setting a Candidate Key in Django: unique_together. Concurrency
+issues without unique_together.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[4 minutes] How that’s relevant for Django? Doesn’t modeling with the
+ORM kind of solves that?&lt;ul&gt;
+&lt;li&gt;Tricky case of field migration.&lt;/li&gt;
+&lt;li&gt;Tricky case of historical field.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[4 minutes] What about cross-table dependencies?&lt;ul&gt;
+&lt;li&gt;A good practice: “Database is Representer of Facts”. If there’s
+more than one way to extract a single fact from the database,
+there’s a redundancy. If it’s possible to compute a field value by
+looking only for other table fields, there’s a redundancy.&lt;/li&gt;
+&lt;li&gt;Solution: compute at DB-level and query-time using query
+expressions, conditional expressions and database functions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[1 minutes] What about performance?&lt;ul&gt;
+&lt;li&gt;Certain facts are naturally expensive to compute.&lt;/li&gt;
+&lt;li&gt;But design can’t be thought a priori to solve them. Performance is
+easier to solve than imprecision.&lt;/li&gt;
+&lt;li&gt;Therefore: “Normalize until it hurts; denormalize until it works”.
+To denormalize you have first to normalize.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[3 minutes] How to denormalize?&lt;ul&gt;
+&lt;li&gt;Separate concerns: OLTP vs. OLAP. Transactional data vs.
+Analytical data.&lt;/li&gt;
+&lt;li&gt;Easy way: aggregation queries + extra denormalized models +
+cronjob.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;[6 minutes] Other less trivial ways to denormalize:&lt;ul&gt;
+&lt;li&gt;Indexes&lt;/li&gt;
+&lt;li&gt;Caching&lt;/li&gt;
+&lt;li&gt;Materialized Views&lt;/li&gt;
+&lt;li&gt;Triggers&lt;/li&gt;
+&lt;li&gt;SQL + NoSQL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Flávio Juvenal</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/normalize-until-it-hurts-denormalize-until-it-works-in-django.html</guid></item><item><title>One Engineer, an API, and an MVP: Or how I spent one hour improving hiring data at my company.</title><link>https://pyvideo.org/djangocon-us-2018/one-engineer-an-api-and-an-mvp-or-how-i-spent-one-hour-improving-hiring-data-at-my-company.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The fact that tech is struggling to hire or retain employees from
+diverse backgrounds has been written about and discussed thoroughly,
+particularly in the last few years. The economic, societal, and moral
+benefits of diversity are also well documented. Why is it hard, then,
+for well-intentioned organizations to shift their demographics? There
+are a number of reasons, but one that doesn’t appear to have been
+thoroughly discussed already is the challenge of gathering and
+responding to data about diversity within a company’s hiring pool and
+existing employees. One hack day, I was involved in too many projects
+and had only a token amount of time to devote to the one I was most
+interested in; seeing if we could determine whether we had sufficient
+diversity for any given role to start interviewing candidates, or if we
+needed to spend more efforts sourcing diverse candidates for the pool. I
+accomplished an MVP in approximately an hour, once I had an api key and
+permissions. It doesn’t necessarily require a huge effort to make a big
+difference.&lt;/p&gt;
+&lt;p&gt;In this talk, I’ll walk through the MVP indicating, for each role,
+whether there was “sufficient diversity”. I’ll also address gotchas,
+limitations, and What Now.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nicole Zuckerman</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/one-engineer-an-api-and-an-mvp-or-how-i-spent-one-hour-improving-hiring-data-at-my-company.html</guid></item><item><title>Python on your phone: Building mobile apps with Kivy</title><link>https://pyvideo.org/djangocon-us-2018/python-on-your-phone-building-mobile-apps-with-kivy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many Django developers are familiar with building APIs, but what about
+when you need to build a mobile client consume them? Wouldn’t it be
+great if you could build a mobile application using the same language as
+your backend?&lt;/p&gt;
+&lt;p&gt;Well, you can!&lt;/p&gt;
+&lt;p&gt;This talk will introduce Kivy, a framework for building multi-touch
+applications. We’ll cover all the basics, including…&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why you’d want to build mobile apps in Python, and what other options
+exist&lt;/li&gt;
+&lt;li&gt;How to install Kivy (It’s really easy!)&lt;/li&gt;
+&lt;li&gt;Basic examples of what a Kivy app looks like&lt;/li&gt;
+&lt;li&gt;The Kv Design language, a YAML-esque abstraction for rapidly building
+UI’s&lt;/li&gt;
+&lt;li&gt;How to access the hardware features of your device&lt;/li&gt;
+&lt;li&gt;How to package your app for the Google Play and iOS App stores&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’ll provide everything you need to know to get started building
+Python- powered phone apps with Kivy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Derek Payton</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/python-on-your-phone-building-mobile-apps-with-kivy.html</guid></item><item><title>Serverless Django with Zappa</title><link>https://pyvideo.org/djangocon-us-2018/serverless-django-with-zappa.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A common set of considerations when planning to release a new
+application are around hosting and resources:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Which platforms will support my app?&lt;/li&gt;
+&lt;li&gt;What OS should I use?&lt;/li&gt;
+&lt;li&gt;What WSGI server should I use?&lt;/li&gt;
+&lt;li&gt;How much memory and CPU do I need?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Zappa, a framework for running serverless WSGI applications on top of
+AWS Lambda, can help address these and other questions around
+application deployment. With some configuration (as code), Zappa can get
+you up and running quickly, letting you focus on developing the
+application instead of the infrastructure.&lt;/p&gt;
+&lt;p&gt;In this talk we’ll go through some of these kinds of questions to see
+how they might be answered in traditional solutions and then see how
+Zappa handles them. We’ll also talk about a few specific configuration
+options for handling SSL certificates and running Django commands on the
+Zappa-deployed application.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dane Hillard</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/serverless-django-with-zappa.html</guid></item><item><title>Simpl framework, big impact!</title><link>https://pyvideo.org/djangocon-us-2018/simpl-framework-big-impact.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Drawing upon decades of simulation and higher education experience, the
+Alfred West Jr. Learning Lab at the Wharton School set out to create
+it’s own in- house developed simulation platform to accelerate our
+simulation delivery capabilities. However, what began as a white
+boarding session two years ago, morphed into the first of its kind open
+source simulation platform. Simpl will not only fuel the next generation
+of simulations written at the Wharton School, but it is our hope it will
+serve the foundation for countless other simulations at other schools
+around the world. Our open source platform puts tools in the hands of
+any developer who has the curiosity to create a simulation, tools that
+were previously unobtainable due to cost. The Learning Lab partnered
+with RevSys, and relying upon Python/Django and a slew of other open
+source tools, we were able to deliver our first simulation written in
+Simpl in November of 2017.&lt;/p&gt;
+&lt;p&gt;Simpl‘s server side is built on Python/Django and open source WAMP
+technologies. On the front end, Simpl uses JavaScript frameworks
+including React, Redux, and Autobahn. Combined, these constitute a
+framework for developing single and multiplayer simulations.&lt;/p&gt;
+&lt;p&gt;In this talk you will learn about simulations in the higher education
+space, how we developed and implemented Simpl, a demo of our first Simpl
+simulation, and why we think this Python/Django fueled simulation
+platform will have a seismic impact on the burgeoning edtech field.&lt;/p&gt;
+&lt;p&gt;Tentative outline of talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;About the Learning Lab and simulations&lt;/li&gt;
+&lt;li&gt;The barrier to develop simulations&lt;/li&gt;
+&lt;li&gt;Why we chose to develop Simpl and make it open source&lt;/li&gt;
+&lt;li&gt;Simpl design process&lt;/li&gt;
+&lt;li&gt;Experience writing first Simpl simulation&lt;/li&gt;
+&lt;li&gt;Technical deep dive&lt;/li&gt;
+&lt;li&gt;Demo of first Simpl sim&lt;/li&gt;
+&lt;li&gt;Where we are, next steps&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joseph Lee</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/simpl-framework-big-impact.html</guid></item><item><title>We Are 3000 Years Behind: Let's Talk About Engineering Ethics</title><link>https://pyvideo.org/djangocon-us-2018/we-are-3000-years-behind-lets-talk-about-engineering-ethics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Your apartment building where you wake up. The water you drink. The car
+you drive. The road on which you drive.&lt;/p&gt;
+&lt;p&gt;In the first hour of your day, you rely on the work of several distinct
+branches of engineering, whose practitioners are licensed and
+accountable to the public.&lt;/p&gt;
+&lt;p&gt;In the second hour of your day, you may sit down at your desk to write
+code that dozens, hundreds, thousands, millions of people interact with
+in some way–but what do they know about you, your intentions, and your
+training?&lt;/p&gt;
+&lt;p&gt;A licensed Civil Engineer turned software developer will talk through
+how her former field approached ethics–something they have been
+iterating on for more than 3000 years. She will discuss how lessons
+learned from other engineering professions could apply to software, and
+where our industry may need a new approach to ethics.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hayley Denbraver</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/we-are-3000-years-behind-lets-talk-about-engineering-ethics.html</guid></item><item><title>What's in a Name? Your Guide to the Wacky World of DNS</title><link>https://pyvideo.org/djangocon-us-2018/whats-in-a-name-your-guide-to-the-wacky-world-of-dns.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;So, you built a Django application. That’s great! Now, how do you get
+the app connected to your fancy domain name for the world to see? During
+this talk, you’ll learn about the phone book of the internet, otherwise
+known as the Domain Name Systems (DNS). We’ll go over topics such as:
+why DNS was created, how it works, and why it’s important for developers
+have a good understanding of DNS.&lt;/p&gt;
+&lt;p&gt;As a web developer who has launched hundreds of websites, I’ll tell you
+stories of some of my own DNS disasters and odd quirks that I’ve ran
+into over the last 5 years. If you’ve ever wondered why you can see your
+newly launched website but your coworker can’t, or if you’re ready to
+launch your first client website, but not take down their email in the
+process, you won’t want to miss this talk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ashley Sullins</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/whats-in-a-name-your-guide-to-the-wacky-world-of-dns.html</guid></item><item><title>When your wetware has too many threads - Tips from an ADHDer on how to improve your focus</title><link>https://pyvideo.org/djangocon-us-2018/when-your-wetware-has-too-many-threads-tips-from-an-adhder-on-how-to-improve-your-focus.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Somewhere between 5% and 12% of adults have ADHD. Even if you do not
+have the disorder yourself you probably work, live or know someone who
+does. But the world is not designed for people with ADHD, so to be
+successful I’ve had to develop techniques to keep my concentration and
+procrastination in check.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll briefly look at what ADHD is and how it impairs not
+only concentration but also executive function. Then we’ll explore how
+changes in the workplace can benefit not just those with ADHD, but
+anyone whose work requires creativity or extended periods of focus.
+Next, we’ll look at some persistent myths about productivity, and what
+you can do personally to increase your concentration and output without
+burning out. Then I’ll present some techniques you can rollout within
+your team to remove distractions while improving the quality of
+communication.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aaron Bassett</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/when-your-wetware-has-too-many-threads-tips-from-an-adhder-on-how-to-improve-your-focus.html</guid></item><item><title>Your web framework needs you!</title><link>https://pyvideo.org/djangocon-us-2018/your-web-framework-needs-you.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django looks like it’s doing just fine: it’s a popular framework in a
+popular language. We have major releases every six months. We have
+Django Girls, a Foundation (and Fellows), super conferences in glamorous
+locations, and more.&lt;/p&gt;
+&lt;p&gt;But the code is old, there are 1300+ accepted open issues. There’s only
+the smallest number of people that regularly contribute code.&lt;/p&gt;
+&lt;p&gt;It’s fine now. But it won’t be. Your web framework needs you!&lt;/p&gt;
+&lt;p&gt;Contributing to open source is great, and it’s great for you.
+Historically we’ve not been that good at encouraging new and diverse
+contributors. We’re trying to change that, and we want to invite you to
+come and join-in.&lt;/p&gt;
+&lt;p&gt;I’m going to tell you quickly how to get involved, how to get support in
+that, and how to let us know if that’s failing.&lt;/p&gt;
+&lt;p&gt;You are qualified to contribute. More than that, your contribution is
+the future of Django. Come code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Carlton Gibson</dc:creator><pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-16:djangocon-us-2018/your-web-framework-needs-you.html</guid></item><item><title>A Bossy Sort of Voice: Uncovering gender bias in Harry Potter with Python</title><link>https://pyvideo.org/djangocon-us-2018/a-bossy-sort-of-voice-uncovering-gender-bias-in-harry-potter-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Harry Potter series is an incredibly popular franchise that shaped a
+generation, but it’s also been critiqued in the media and academics for
+its sometimes sexist portrayal of female characters. This talk uses
+Natural Language Processing techniques and Python to do the first
+quantitative analysis of gender bias in the language used to describe
+women and girls in the series, with a focus on Hermione Granger, the
+unsung hero of the story. Attendees will see techniques for reading and
+parsing large text files, leveraging grammatical rules to isolate the
+right words for the analysis, and data visualization techniques, using
+Python, the Natural Language Processing Toolkit (NLTK), and Matplotlib.
+After the talk, the audience will be able to get started on using the
+“magic” of programming to isolate biased language in any piece of text.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eleanor Stribling</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/a-bossy-sort-of-voice-uncovering-gender-bias-in-harry-potter-with-python.html</guid></item><item><title>A Python-Driven Web App Framework with Django, Channels, and React</title><link>https://pyvideo.org/djangocon-us-2018/a-python-driven-web-app-framework-with-django-channels-and-react.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At our company, we have faced a monumental task: designing a simple
+framework for data scientists to create powerful, dynamic web
+applications using only Python. In order to utilize the power of our
+machine-intelligence platform, we need to be able to quickly generate
+web applications to cater to different client solutions. We wanted to
+move standard data analysis workflows out of the command line, and into
+sleek, modern web apps that allow for dynamic construction of charts,
+tables, and other visualizations.&lt;/p&gt;
+&lt;p&gt;Our talk will focus on how we addressed this problem statement with the
+development of an application framework built on Django, Channels, and
+React. We picked these technologies for several reasons. Django is
+already an incredibly powerful web framework, and we realized very early
+on that we could use Django Models, Forms, and Form Validation to serve
+as the core of our backend. However, we opted to take a different
+approach than server-side rendering, and opted to utilize React on the
+frontend to display large trees of dynamically-generated components.&lt;/p&gt;
+&lt;p&gt;To connect these two segments, we decided to use websockets, via Django
+Channels. Our machine intelligence platform is incredibly powerful, and
+it allows us to perform tasks on big data with long-running jobs, such
+as topological modeling, auto-group generation, and feature selection.
+We use Channels as a way for the Django server to notify the React
+client on updates to these processes and to refresh different charts and
+tables.&lt;/p&gt;
+&lt;p&gt;Lastly, we designed our own Python SDK to allow data scientists to
+easily generate Python objects which are serialized and converted into
+React components. A developer using this framework doesn’t need to know
+Django, React, or Channels, but can utilize the power of all three in
+concert to quickly prototype powerful machine-learning applications with
+appealing user interfaces.&lt;/p&gt;
+&lt;p&gt;Throughout this talk, we will focus on how these technologies interact
+with one another, the benefits of these design-choices, and the
+challenges that we faced. The potential applications of this
+architecture extend far beyond our solutions, and it’s valuable for
+listeners to understand how Django can be used outside of traditional
+contexts. Hopefully this talk will inspire other Django developers to
+consider how their apps can utilize websockets, client- side rendering,
+and other web-development paradigms to address different and unique
+use-cases.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kendall Chuang</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/a-python-driven-web-app-framework-with-django-channels-and-react.html</guid></item><item><title>A very, very serious keynote</title><link>https://pyvideo.org/djangocon-us-2018/a-very-very-serious-keynote.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Chloe’s keynote will dive into why laughter, fun, and entertainment are
+valuable in the world of tech. Speaking from the experience of someone
+with a 4-year theatre degree who once played a talking crayon on stage
+(blue AND yellow – she has a wide range), she’ll dive into lessons
+learned from theatre applied to engineering.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chloe Condon</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/a-very-very-serious-keynote.html</guid><category>keynote</category></item><item><title>An Intro to Docker for Djangonauts</title><link>https://pyvideo.org/djangocon-us-2018/an-intro-to-docker-for-djangonauts.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you’ve never used it before, Docker can be a little overwhelming.
+There is new vocabulary to learn, new commands to memorize, and new
+files to add to each project. Most resources fall into one of two camps:
+they teach you the bare bones of Docker but still leave you with too
+many questions to comfortably try it on your own, or they throw you into
+the deep end by assuming you’re more familiar with Docker than you are.&lt;/p&gt;
+&lt;p&gt;In this talk, you will find that middle ground: a talk that doesn’t
+assume you’re familiar with Docker and so keeps everything simple, but
+leaves you with enough information that you can get started as soon as
+you leave the room. Together, we will step through the parts of a
+Dockerfile and learn what they do. Then, I’ll introduce you to Docker
+Compose and explain why using it to run multiple containers is helpful.
+Finally, you will learn to run commands and execute scripts from the
+command line using Docker, how to enter a container and why you might
+need to, and what to do before you go home for the day.&lt;/p&gt;
+&lt;p&gt;Audience: Djangonauts who are curious about Docker, need to learn to use
+it for work or personal projects, or who seek a better understanding of
+containers in general. Audience members might be beginners to
+Python/Django or not, but they are definitely beginners to
+containerizing all the things.&lt;/p&gt;
+&lt;p&gt;The audience should be familiar with basic Python concepts such as
+variables and running things from the command line. Some basic
+familiarity with Django would be helpful, but beginner Djangonauts will
+be able to follow along.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lacey Williams Henschel</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/an-intro-to-docker-for-djangonauts.html</guid></item><item><title>Auto-generating an API using PostgreSQL, Django, and Django REST Framework</title><link>https://pyvideo.org/djangocon-us-2018/auto-generating-an-api-using-postgresql-django-and-django-rest-framework.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We have an API whose database schema changes constantly with no need for
+changes to our code that exposes the data. This is an extremely powerful
+(but quite possibly a bad) idea. See how we do it!&lt;/p&gt;
+&lt;p&gt;In this talk I’ll go over:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introspecting the database&lt;/li&gt;
+&lt;li&gt;Dynamically generating Django models&lt;/li&gt;
+&lt;li&gt;Dynamically generating a DRF API&lt;/li&gt;
+&lt;li&gt;Testing against read-only databases&lt;/li&gt;
+&lt;li&gt;How it’s all a powerful (but maybe a bad) idea&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mjumbe Poe</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/auto-generating-an-api-using-postgresql-django-and-django-rest-framework.html</guid></item><item><title>Autonomous Vehicles, Intelligent Transportation Systems, and yes, Django!</title><link>https://pyvideo.org/djangocon-us-2018/autonomous-vehicles-intelligent-transportation-systems-and-yes-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What are the components in an autonomous vehicle? How do they work with
+other vehicles and an intelligent infrastructure? In this talk I will
+cover all the components involved in intelligent infrastructures and how
+Django is being used in current research.&lt;/p&gt;
+&lt;div class="section" id="topics-include"&gt;
+&lt;h4&gt;Topics include&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An overview of the infrastructure&lt;ul&gt;
+&lt;li&gt;Where are we right now?&lt;/li&gt;
+&lt;li&gt;What is the eventual goal?&lt;/li&gt;
+&lt;li&gt;How do we get there?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;OnBoard Units (OBUs)&lt;/li&gt;
+&lt;li&gt;Road-Side Units (RSUs)&lt;/li&gt;
+&lt;li&gt;Communications among components&lt;ul&gt;
+&lt;li&gt;Interoperability as a fundamental requirement&lt;/li&gt;
+&lt;li&gt;Message types&lt;/li&gt;
+&lt;li&gt;Communications standards&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Using Django&lt;ul&gt;
+&lt;li&gt;Upgrading equipment&lt;/li&gt;
+&lt;li&gt;Configuring equipment&lt;/li&gt;
+&lt;li&gt;Monitoring components&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ken Whitesell</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/autonomous-vehicles-intelligent-transportation-systems-and-yes-django.html</guid></item><item><title>BDD (Behavior Driven Development) Testing for Django Apps</title><link>https://pyvideo.org/djangocon-us-2018/bdd-behavior-driven-development-testing-for-django-apps.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Unit tests focus on classes and methods while integration tests focus on
+components and basic business logic. However, neither of these is
+executed against the full system environment nor take account of the
+system’s behaviors as a whole. Therefore, our app will not be assured to
+work properly in production environments if we limit our testing
+approach to only two types of tests. Incorporating BDD testing into our
+app’s testing plan addresses these limitations.&lt;/p&gt;
+&lt;p&gt;BDD is experiencing increasing industry adoption but can still prove
+daunting to implement from scratch. Our talk will describe how we
+implement a BDD framework stack by answering following questions:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;How do we design structured and reusable test code for BDD?&lt;/li&gt;
+&lt;li&gt;How do we integrate BDD tests with our CI/CD pipeline?&lt;/li&gt;
+&lt;li&gt;How do we speed up the execution of BDD automated tests?&lt;/li&gt;
+&lt;li&gt;How do we set up our BDD framework?&lt;/li&gt;
+&lt;li&gt;What are the limits of BDD testing?&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Le Xiao</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/bdd-behavior-driven-development-testing-for-django-apps.html</guid></item><item><title>Becoming a Multilingual SuperHero in Django</title><link>https://pyvideo.org/djangocon-us-2018/becoming-a-multilingual-superhero-in-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You have got this super awesome REST API served through Django/DRF based
+project and suddenly these requirements come in:&lt;/p&gt;
+&lt;p&gt;We need to have a local support for the Chinese language!&lt;/p&gt;
+&lt;p&gt;In case, you’ve not written your application with localization and
+internationalization in mind, then “Boy! You’re in danger! You should
+better start praying to almighty to give you strength and endurance to
+support yet another language in your app”.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll see how do we support localization and serve our app
+in different languages, based on what language the client wants to
+communicate in. As a backend, we should be language agnostic and allow
+all clients to communicate with us in one of the languages we support.&lt;/p&gt;
+&lt;p&gt;We’ll see how to support translation for static data (using makemessages
+/ compilemessages) and dynamic data, using various third-party services
+such as django-translations and transifex.&lt;/p&gt;
+&lt;p&gt;Here, static data is translations for all the fields, error messages
+etc. that the app already has and dynamic data is the custom data input
+by the user in the app.&lt;/p&gt;
+&lt;p&gt;This would enable you to have your admin panel, as well as RESTful APIs,
+served in different languages.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sanyam Khurana</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/becoming-a-multilingual-superhero-in-django.html</guid></item><item><title>Building Workflows With Celery</title><link>https://pyvideo.org/djangocon-us-2018/building-workflows-with-celery.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Task Queues is a topic which most developers will eventually have to
+dive into, specially in today’s web development world. The idea is
+really simple: whenever one has any functionality which might take too
+long to perform, one can spawn a process which will take care of this
+functionality without having to block the app’s main loop. A task queue
+will use worker processes to execute these long-running tasks and the
+user does not have to wait until the task is done. Instead, an
+acknowledged message is presented to de user while the task is executed
+in the background. This concept is really important when building web
+applications. HTTP Requests have timeout and making the user wait a long
+time for something to finish is not a good user experience practice.
+Usually, these tasks are used in groups creating a workflow where the
+work is distributed into smaller tasks.&lt;/p&gt;
+&lt;p&gt;Celery is usually the first project one encounters when searching for
+task queues and Django. I have been using Celery for over four years.
+The Celery project is one of the most robust task queues out there. It
+is certainly not the only task queue. And, it can be difficult planning
+the correct architecture for a specific workflow. This talk will explain
+enough of Celery’s basics to understand how to build workflows with
+Celery.&lt;/p&gt;
+&lt;p&gt;Building workflows with Celery is never straight forward. This is mainly
+because Celery offers the building blocks to build workflows but it
+tries to move out of the way. By not being too intrusive, Celery allows
+building complex workflows. I will explain common patters and tips to
+successfully use celery to build workflow of different complexities.&lt;/p&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h4&gt;Outline&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Introduction&lt;ol class="arabic"&gt;
+&lt;li&gt;Basics of Celery’s architecture&lt;/li&gt;
+&lt;li&gt;Caveats when using Celery&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Workflows&lt;ol class="arabic"&gt;
+&lt;li&gt;What are Workflows and why use them&lt;/li&gt;
+&lt;li&gt;Celery’s building blocks&lt;/li&gt;
+&lt;li&gt;Common workflows techniques&lt;/li&gt;
+&lt;li&gt;Real World Example&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Tips and Tricks&lt;ol class="arabic"&gt;
+&lt;li&gt;Caveats&lt;/li&gt;
+&lt;li&gt;Testing&lt;/li&gt;
+&lt;li&gt;Local development&lt;/li&gt;
+&lt;li&gt;Using Celery in production&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Josue Balandrano Coronel</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/building-workflows-with-celery.html</guid></item><item><title>Code Review Skills for Pythonistas</title><link>https://pyvideo.org/djangocon-us-2018/code-review-skills-for-pythonistas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As teams and projects grow, code review becomes increasingly important
+to support the maintainability of complex codebases. In this talk, I’ll
+cover guidelines for writing consistent python code beyond pep8, how to
+look out for common python gotchas, and what python tools are available
+to automate various parts of the review process. Most importantly, I’ll
+cover the human aspect of code reviews - how we can be better at
+approaching reviews with empathy and understanding from the perspective
+of both a reviewer and a submitter. Following these successful code
+review practices will lead to happier teams and healthier code bases.&lt;/p&gt;
+&lt;p&gt;This talk is useful for python developers with any amount of experience.
+No prerequisite knowledge is necessary.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;For those who are just starting out, it will be a great general
+overview.&lt;/li&gt;
+&lt;li&gt;Intermediate developers may not know about the wide variety of
+tooling that’s available.&lt;/li&gt;
+&lt;li&gt;Advanced developers will learn techniques for performing code reviews
+with empathy.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will enable you to have better code reviews on your teams at
+work, and a better approach to code reviews in open source projects.
+You’ll leave with 3 main takeaways:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Code Reviews are most effective when conducted with empathy. If you
+do reviews with growth and learning in mind, they become tools for
+sharing knowledge instead of an opportunity to bruise egos or show
+off esoteric knowledge.&lt;/li&gt;
+&lt;li&gt;Python has powerful tooling available for code reviews such as pep8
+as a style guide, pylint as a linter, coverage.py to identify test
+coverage, and vulture to identify dead code.&lt;/li&gt;
+&lt;li&gt;That python style guides beyond pep8 have clear benefits in terms of
+producing more consistent code that’s easier to review and easier to
+maintain.&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nina Zakharenko</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/code-review-skills-for-pythonistas.html</guid></item><item><title>Containerless Django: Deploying without Docker</title><link>https://pyvideo.org/djangocon-us-2018/containerless-django-deploying-without-docker.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Docker or more generally, containers, are great for lots of use cases,
+but they don’t come for free. Container runtimes, network
+virtualization, orchestration platforms, and registries are all added to
+the stack. Like all software, they bring their own bugs and operational
+burden with them. For most Django sites, containers are a heavyweight
+solution to a lightweight problem.&lt;/p&gt;
+&lt;p&gt;Despite the overhead, Docker gets a lot of things right. It makes it
+easy to generate an image of your application in a known state, test the
+image, pull the image down to your server, apply a specific
+configuration environment, and run it in a secure sandbox.&lt;/p&gt;
+&lt;p&gt;But guess what? We can do all that without Docker! Using mostly “boring”
+software that is already a part of your server or development
+environment. I’ll walk you through each step of the pipeline and show
+you how to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Generate immutable deployment artifacts&lt;/li&gt;
+&lt;li&gt;Test the artifact&lt;/li&gt;
+&lt;li&gt;Deploy the artifact&lt;/li&gt;
+&lt;li&gt;Sandbox your application to improve security&lt;/li&gt;
+&lt;li&gt;Quickly rollback to a previous version&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Baumgartner</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/containerless-django-deploying-without-docker.html</guid></item><item><title>Elasticsearch: Accelerating the Django Admin</title><link>https://pyvideo.org/djangocon-us-2018/elasticsearch-accelerating-the-django-admin.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Django Admin offers quick solutions and rapid feature development
+for new websites. But as your website expands, and datasets grow, it can
+become unwieldy and slow. Enter Elasticsearch: an easy way to quickly
+accelerate your Django administration tools and searches.&lt;/p&gt;
+&lt;p&gt;At Grove Collaborative, we’ve experimented with Elasticsearch technology
+and developed reusable patterns that brought new life to our aging
+Django administration system. This presentation will teach you how to
+leverage easy Elasticsearch wins while avoiding common pitfalls.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kate Kligman</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/elasticsearch-accelerating-the-django-admin.html</guid></item><item><title>Herding Cats with Django: Technical and social tools to incentivize participation</title><link>https://pyvideo.org/djangocon-us-2018/herding-cats-with-django-technical-and-social-tools-to-incentivize-participation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will provide a practical look at how Outreachy used a
+combination of technical and social tools to motivate participants to
+complete our internship application process. Web developers who work on
+websites that encourage people to complete tasks will benefit from
+understanding the social incentive tools presented in this talk. Parts
+of the talk will be suitable for Django beginners who have completed one
+Django tutorial and are familiar with the basic concepts of models,
+objects, views, and templates. Everyone will appreciate the cat photos.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sage Sharp</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/herding-cats-with-django-technical-and-social-tools-to-incentivize-participation.html</guid></item><item><title>It's about time</title><link>https://pyvideo.org/djangocon-us-2018/its-about-time.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Here’s a fun experiment: Mention timezones within earshot of any
+experienced programmer. Now wait until the profanity stops.&lt;/p&gt;
+&lt;p&gt;Handling dates and time is an incredibly common requirement in computer
+applications. That’s hardly surprising - we all use computers to record
+when we did old things, track how long things take, and to plan when
+we’re going to do things. So why is dealing with time so difficult?&lt;/p&gt;
+&lt;p&gt;Well, it’s because time has a very sordid history. What we even think of
+&lt;em&gt;as&lt;/em&gt; time has changed. In this talk, you’ll travel through time, and see
+the impact that two thousand years of history have had on our modern
+life. You’ll be shown how all this wibbly-wobbly, timey-wimey history
+stuff affects the data modelling and APIs we use on a daily basis.&lt;/p&gt;
+&lt;p&gt;This is going to take some… time.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Russell Keith-Magee</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/its-about-time.html</guid></item><item><title>Lightning Talks Day 1</title><link>https://pyvideo.org/djangocon-us-2018/lightning-talks-day-1.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various Speakers</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/lightning-talks-day-1.html</guid></item><item><title>Packaging Django Apps for Distribution on PyPI</title><link>https://pyvideo.org/djangocon-us-2018/packaging-django-apps-for-distribution-on-pypi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One of the strengths of Django is that it allows you to use apps created
+by other developers, so you don’t have to spend time rewriting something
+that someone else has already written. However, creating Python packages
+for distribution via the Python Package Index is a process that is
+unfamiliar to most developers. In this talk, you will learn about
+creating a reusable Django app. The talk will cover how a Django app
+differs from a package like requests, and how an app interacts with
+models and URLs in an existing project.&lt;/p&gt;
+&lt;p&gt;While the talk will include a discussion of how to upload a Django app
+to PyPI, the parts that discuss how to make reusable Django apps will be
+useful to developers who are working at organizations where they may not
+be able to open-source their code.&lt;/p&gt;
+&lt;p&gt;This talk is intended for Django developers who have some familiarity
+with how Django works, and an interest in code reuse and packaging.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction (3 min)&lt;ul&gt;
+&lt;li&gt;the difference between a Django app and a utility package (like
+Requests)&lt;/li&gt;
+&lt;li&gt;the relationship between a Django project and an app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How the packaging considerations for a Django app differ from a
+utility package (4 min)&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;requirements.txt&lt;/tt&gt; versus &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;: how they are different&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How a packaged Django app is structured (3 min)&lt;ul&gt;
+&lt;li&gt;including documentation in the package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Creating a Django app for packaging (10 min)&lt;ul&gt;
+&lt;li&gt;considerations for making reusable Django apps&lt;/li&gt;
+&lt;li&gt;interacting with existing models and data&lt;/li&gt;
+&lt;li&gt;interacting with URLs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Creating a source archive and wheel and uploading it with twine (5
+min)&lt;ul&gt;
+&lt;li&gt;use &lt;tt class="docutils literal"&gt;test.pypi.org&lt;/tt&gt; before uploading your package to
+&lt;tt class="docutils literal"&gt;pypi.org&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laura Hampton</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/packaging-django-apps-for-distribution-on-pypi.html</guid></item><item><title>Transfer those Skills! How to Identify, Communicate, and Sell your Transferable Skills when Switching Careers</title><link>https://pyvideo.org/djangocon-us-2018/transfer-those-skills-how-to-identify-communicate-and-sell-your-transferable-skills-when-switching-careers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tech industry giants are acknowledging that diversity in employee
+backgrounds is valuable for their organizations’ bottom lines. However,
+it’s still tough for job seekers to land a tech job without prior
+experience closely aligned with the job they’re applying for. This talk
+will focus on helping people who are looking for their next tech role:
+(1) understand themes of what hiring committees look for, (2) identify
+transferable skills from nontraditional experience they already have,
+(3) communicate the power of their unique set of past experiences, and
+(4) learn tools to demonstrate these skills in their resume and job
+interviews.&lt;/p&gt;
+&lt;p&gt;Attendees who are looking for their next role will leave with actionable
+ideas for improving job application materials, conveying transferable
+skills from non-technology-related jobs in interviews, and generally
+rocking any job interview with basic tips that many people miss.&lt;/p&gt;
+&lt;p&gt;The presenters, both of whom came to tech without a traditional CS
+background, will give a short introduction of their experience and
+expertise. They will discuss the aspects of their experience that they
+expected to be valuable from the start, and those (sometimes
+surprising!) skills whose value became apparent only after they got to
+technical positions. Both presenters have participated in hiring panels,
+one as a hiring manager.&lt;/p&gt;
+&lt;p&gt;They will share tips and tricks based on industry best practices and
+their experience reviewing resumes, cover letters, speaking with
+references, and interviewing job candidates. They will highlight common
+mistakes and things to consider when applying for, and then interviewing
+for, attendees’ next tech job.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Caroline Taylor</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/transfer-those-skills-how-to-identify-communicate-and-sell-your-transferable-skills-when-switching-careers.html</guid></item><item><title>Wagtail CMS - Making Django More User (and Developer) Friendly</title><link>https://pyvideo.org/djangocon-us-2018/wagtail-cms-making-django-more-user-and-developer-friendly.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django is a robust framework that can handle a lot of complex problems.
+However, if your goal is to get a simple marketing website up and
+running, it can be a little too complicated - especially for beginners
+who are new to frameworks. The admin itself can also appear clunky and
+confusing to users, and the path to creating a new type of page is paved
+with views, urls, templates and more!&lt;/p&gt;
+&lt;p&gt;Wouldn’t it be nice to have an intuitive UI for the admin, and a quick,
+templated way to create pages in just a few lines of code?&lt;/p&gt;
+&lt;p&gt;Enter Wagtail - a simple, yet elegant, content management system. With a
+beautiful admin (great for your clients), a Page class that abstracts
+things like url structures and views (great for beginners) and built-in
+WYSIWYG page models (great for on-the-fly content customization), you
+can focus on getting a flexible site up and running while still having
+the power of Django to solve complex problems (like querying) when you
+need it.&lt;/p&gt;
+&lt;p&gt;This talk will teach you the basics of how Wagtail can save you time and
+effort by not re-inventing the CMS wheel. It’s aimed at anyone who wants
+a more user-friendly, out-of-the-box CMS, whether you’re a beginner who
+is struggling to grasp the concepts of a framework or a seasoned
+developer looking to streamline this aspect of your project.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sara Heins</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/wagtail-cms-making-django-more-user-and-developer-friendly.html</guid></item></channel></rss>

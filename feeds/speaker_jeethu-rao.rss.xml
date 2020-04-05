@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 27 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>Faster Python startup</title><link>https://pyvideo.org/europython-2018/faster-python-startup.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The cPython’s startup speed generally quite fast compared to other
+similar dynamic language interpreters. Despite this, the interpreter’s
+startup time increases linearly with the number and size of imported
+python modules. Although interpreter startup speed isn’t a significant
+concern in long running servers, it does matter for the command line and
+other frequently launched applications.&lt;/p&gt;
+&lt;p&gt;One of the oldest tricks in the book, when it comes to performance
+optimizations is to perform frequent and expensive operations fewer
+times and reuse results from previous invocations. We noticed that the
+overhead of reading and un-marshalling .pyc files at startup can be
+eliminated if we could directly embed code objects and their associated
+object graph from .pyc files into the data segment of the cPython
+binary. This technique is quite similar to the approach taken by image
+based languages like Smalltalk in the past. Implementing this for
+cPython is made simpler because marshaled code objects in .pyc files
+contain a subset of the types of objects that marshal format supports.
+With this approach, loading a module included in the python binary is as
+cheap as dereferencing a pointer, albeit at the cost of increased binary
+size.&lt;/p&gt;
+&lt;p&gt;This talk will discuss the approach taken to implement the
+aforementioned idea for Python 3.6 and the challenges faced in
+implementing it. It will also talk about benchmark results from the
+improvements and possible future directions for this work. Although this
+talk delves into cPython internals, no prior experience with cPython
+internals is required to follow along.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jeethu Rao</dc:creator><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-27:europython-2018/faster-python-startup.html</guid></item></channel></rss>

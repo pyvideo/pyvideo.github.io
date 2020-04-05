@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 09 Jul 2015 00:00:00 +0000</lastBuildDate><item><title>Examining Malware with Python</title><link>https://pyvideo.org/scipy-2015/examining-malware-with-python.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Phil Roth</dc:creator><pubDate>Thu, 09 Jul 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-07-09:scipy-2015/examining-malware-with-python.html</guid></item><item><title>Time Series Analysis for Network Security</title><link>https://pyvideo.org/scipy-2014/time-series-analysis-network-security.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Endgame seeks to develop products that allow customers to gain
+visibility into their networks and discover anomalies. I will describe
+how Endgame brings together various Python packages (scipy, pandas,
+statsmodels, kairos, etc...) in order to collect, record, and then
+analyze time series that are collected from network security data feeds.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, I will describe how Endgame has brought together many
+different Python tools in order to solve the problem of detecting
+outliers in network security data.&lt;/p&gt;
+&lt;p&gt;The first step in this process is collecting and storing the metrics
+that will form a time series. Here, I will describe how Endgame plugs
+into the flow of network data and then stores that data. (Python
+packages: elasticsearch, pyspark, kairos)&lt;/p&gt;
+&lt;p&gt;The next step is applying a Fourier transform in order to classify time
+series that exhibit daily and weekly patterns. This information is
+especially useful in deciding how to characterize a time series's past
+behavior and thus judge how unusual new data is. (Python package: numpy)&lt;/p&gt;
+&lt;p&gt;Finally, exponentially weighted moving averages and standard deviations
+are calculated in different ways depending on how the time series was
+classified. For example, if strong daily patterns are present, the data
+is stacked by daily time bin and moving averages are calculated within
+each time bin. Corrections for weekend and weekday behavior are also
+applied if necessary. Autoregressive moving average models are also used
+and the performance of each algorithm is gauged and compared (Python
+packages: pandas, scikits.statsmodels).&lt;/p&gt;
+&lt;p&gt;The final result of this process is a list of outliers and their
+severity. Further algorithms will judge what outliers are serious enough
+to present to users.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Phil Roth</dc:creator><pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-10:scipy-2014/time-series-analysis-network-security.html</guid></item></channel></rss>

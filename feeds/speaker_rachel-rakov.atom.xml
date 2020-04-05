@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_rachel-rakov.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-08-16T00:00:00+00:00</updated><entry><title>Using Python for Sarcasm Detection in Speech</title><link href="https://pyvideo.org/pygotham-2015/using-python-for-sarcasm-detection-in-speech.html" rel="alternate"></link><published>2015-08-16T00:00:00+00:00</published><updated>2015-08-16T00:00:00+00:00</updated><author><name>Rachel Rakov</name></author><id>tag:pyvideo.org,2015-08-16:pygotham-2015/using-python-for-sarcasm-detection-in-speech.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, I discuss my work using Python to create a system for
+sarcasm detection in speech. My goal in this task is to determine
+whether human intonation alone can be modeled to predict sarcastic
+speech. I first extracted speech samples from the titular character of
+MTV’s late ‘90s hit TV show “Daria”. Using crowdsourcing techniques to
+get the speech labeled for sarcasm, I created a corpus of speech that is
+annotated for sarcasm and sincerity. I used several Python toolkits to
+extract a number of acoustic features from this speech that are
+indicative of sarcasm. The first tool I used was Snack Sound Toolkit, a
+library for Python that does basic sound handling and analysis. I used
+tools in Snack to extract a baseline of basic acoustic features that
+have been found to be helpful in human sarcasm identification. I then
+used NumPy, SciPy, and NLTK to model prosodic contours, and applied
+these contours to the task of automatic sarcasm detection. This approach
+applies sequential modeling to representations of pitch and intensity
+curves obtained via k-means clustering. Using machine learning
+(specifically Weka’s SimpleLogistic (LogitBoost) classifier), this
+system is able to predict sarcasm with 81.57% accuracy.&lt;/p&gt;
+</summary></entry></feed>

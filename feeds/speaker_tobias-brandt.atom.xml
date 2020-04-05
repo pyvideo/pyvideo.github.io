@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_tobias-brandt.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-05T00:00:00+00:00</updated><entry><title>Friday Lightning Talks</title><link href="https://pyvideo.org/pycon-za-2015/friday-lightning-talks.html" rel="alternate"></link><published>2015-10-02T00:00:00+00:00</published><updated>2015-10-02T00:00:00+00:00</updated><author><name>Adam Jorgensen</name></author><id>tag:pyvideo.org,2015-10-02:pycon-za-2015/friday-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://youtu.be/MNyOPWT8ncw?t=0h0m0s"&gt;(0:00:00)&lt;/a&gt; &lt;strong&gt;Using Odo to
+load data&lt;/strong&gt; by Tobias Brandt&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://youtu.be/MNyOPWT8ncw?t=0h5m23s"&gt;(0:05:23)&lt;/a&gt; &lt;strong&gt;Sh&lt;/strong&gt; by
+Adrianna Pińska&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://youtu.be/MNyOPWT8ncw?t=0h8m44s"&gt;(0:08:44)&lt;/a&gt; &lt;strong&gt;Pygame Zero&lt;/strong&gt;
+by Neil Muller&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://youtu.be/MNyOPWT8ncw?t=0h11m57s"&gt;(0:11:57)&lt;/a&gt; &lt;strong&gt;How not to
+hate Javascript&lt;/strong&gt; by Adam Jorgensen&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://youtu.be/MNyOPWT8ncw?t=0h16m28s"&gt;(0:16:28)&lt;/a&gt; &lt;strong&gt;Testing code
+examples from your slides&lt;/strong&gt; by Jeremy Thurgood&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category><category term="Room 215"></category></entry><entry><title>The Split-Apply-Combine Pattern for Data Science in Python</title><link href="https://pyvideo.org/pycon-za-2015/the-split-apply-combine-pattern-for-data-science.html" rel="alternate"></link><published>2015-10-01T00:00:00+00:00</published><updated>2015-10-01T00:00:00+00:00</updated><author><name>Tobias Brandt</name></author><id>tag:pyvideo.org,2015-10-01:pycon-za-2015/the-split-apply-combine-pattern-for-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many data science problems involve the application of a
+split-apply-combine pattern, where you break up a big dataset into
+independent pieces, operate on each piece in isolation and then put all
+the pieces back together. This crops up in all stages of a data
+analysis:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;During data preparation, when performing group-wise ranking,
+standardisation, or normalisation.&lt;/li&gt;
+&lt;li&gt;During modelling, when fitting separate models to each group.&lt;/li&gt;
+&lt;li&gt;During communication, when creating summaries or visualisations for
+display or analysis.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Python has many tools that make it easy to utilise this strategy when
+solving data science problems. These range from list and dictionary
+comprehensions in the language, the &lt;em&gt;map&lt;/em&gt; and &lt;em&gt;reduce&lt;/em&gt; functions and
+&lt;em&gt;itertools&lt;/em&gt; and &lt;em&gt;functools&lt;/em&gt; modules in the standard library to dedicated
+packages like &lt;em&gt;Pandas&lt;/em&gt;, &lt;em&gt;PyToolz&lt;/em&gt;, &lt;em&gt;Blaze&lt;/em&gt; and &lt;em&gt;Dask&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Explicit recognition of the applicability of the pattern allows one to
+reuse standard components for the bookkeeping code that handles the
+splitting and combining of the independent pieces. This allows one to
+concentrate on the data analysis code that is unique to the problem at
+hand. Since implicit in the pattern is the independence of the pieces,
+its applicability immediately implies a strategy for parallelisation
+which allows one to easily scale one's solution from single core to
+out-of-core computation on multiple machines, often with only very few
+changes to the code required.&lt;/p&gt;
+&lt;p&gt;This talk will introduce the pattern and how to recognise it by
+presenting some common code blocks. We will then look at some of the
+tools available, in particular &lt;em&gt;Pandas&lt;/em&gt; and &lt;em&gt;PyToolz&lt;/em&gt;, demonstrate their
+use, and discuss their strengths and weaknesses. Finally we'll show how
+to take a simple analysis and parallelise it to process a dataset that
+is too large to fit in memory.&lt;/p&gt;
+</summary><category term="Room 211"></category></entry><entry><title>Deep Learning in Python</title><link href="https://pyvideo.org/pycon-za-2016/deep-learning-in-python.html" rel="alternate"></link><published>2016-10-07T00:00:00+00:00</published><updated>2016-10-07T00:00:00+00:00</updated><author><name>Tobias Brandt</name></author><id>tag:pyvideo.org,2016-10-07:pycon-za-2016/deep-learning-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will give an introduction to Neural Networks and Deep Learning
+in Python. We will cover some of the history of Neural Networks and
+obstacles that were encountered in the 1990s. This will then lead onto
+the developments in 2006 and 2012 that lead to the resurgence of
+interest in Neural Networks and the rebranding of the field as Deep
+Learning. These developments will be illustrated by means of an extended
+example of building a classifier of hand written digits on the MNIST
+dataset. We will start with a simple Multi-Layer Perceptron and then
+build this up into a Stacked Denoising Autoencoder. All code will be
+developed using the Keras framework and TensorFlow and can be run on a
+simple laptop.&lt;/p&gt;
+</summary><category term="deep learning"></category><category term="keras"></category><category term="tensorflow"></category></entry><entry><title>You suck at shell scripting: building awesome command line tools in Python for fun and profit!</title><link href="https://pyvideo.org/pycon-za-2017/you-suck-at-shell-scripting-building-awesome-command-line-tools-in-python-for-fun-and-profit.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Tobias Brandt</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/you-suck-at-shell-scripting-building-awesome-command-line-tools-in-python-for-fun-and-profit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You do! You're aweful! You are as bad at shell scripting as Helen
+Zille is at Twitter. However clever that 140 character bash one liner
+seemed at the time, you know that you regretted it once it became an
+integral part of your production build pipeline. This talk will show
+you how to write maintainable Command Line Interfaces with click and
+pathlib that won't leave you trying to rewrite your git commit
+history after the next production system outage.&lt;/p&gt;
+&lt;p&gt;As a simple illustration I'll demonstrate command line application to
+download and analyse digital asset data (aka cryptocurrencies).&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_cython.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-10-31T00:00:00+00:00</updated><entry><title>Equip your performance toolbox - Cython vs Pybind11</title><link href="https://pyvideo.org/pycon-se-2019/equip-your-performance-toolbox-cython-vs-pybind11.html" rel="alternate"></link><published>2019-10-31T00:00:00+00:00</published><updated>2019-10-31T00:00:00+00:00</updated><author><name>Gavin Chan</name></author><id>tag:pyvideo.org,2019-10-31:pycon-se-2019/equip-your-performance-toolbox-cython-vs-pybind11.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Developing Python applications is handy and rapid, but its performance is always concerned, especially on the CPU bound problems. We will go through the common tricks and tips to archive the best performance on the Python level. Then the two reputable libraries, Cython and Pybind11, will be visited to archive the compiled language performance and compared with their implementation, flexibility and performance.&lt;/p&gt;
+</summary><category term="cython"></category><category term="pybind11"></category><category term="Performance"></category></entry><entry><title>Go(lang) to Python</title><link href="https://pyvideo.org/europython-2019/golang-to-python.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Stefan Baerisch</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/golang-to-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python and Go are a great combination. Like Python, Go is easy to learn,
+powerful to use and has many useful libraries. Go and Python work great
+together: Go has better performance and parallelism, while Python is
+more expressive. Wouldn't it be nice if you could combine the benefits
+of Go and Python in one program? This talk shows you how.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Why you may want to attend&lt;/div&gt;
+&lt;div class="line"&gt;Extension modules written in C/C++ or other languages are one of the
+major strength Python. Go is a useful language to extend Python. This
+talk explains to you how to implement extension modules in Go.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Content of the Talk&lt;/div&gt;
+&lt;div class="line"&gt;The talk shows how to use CGO to make Go code available as a C library
+and then to use Cython to make this library available as a Python
+extension module.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;We start by building a wrapper for simple Go code that adds some
+numbers and returns the results. This program is our end-to-end
+example to demonstrate the steps necessary to create a Python
+extension module in Go.&lt;/div&gt;
+&lt;div class="line"&gt;Next, we move to more complex use cases. We look at different ways to
+share complex data and to use Python callbacks from Go.&lt;/div&gt;
+&lt;div class="line"&gt;Then, we see how to how to handle Go's Garbage Collector when exposing
+with Go Objects.&lt;/div&gt;
+&lt;div class="line"&gt;Finally, the talk goes into the advantages and disadvantages of Go as
+an extension language for Python. We also look at some of the
+alternative ways to make Go code available in Python.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Recommended Prerequisites&lt;/div&gt;
+&lt;div class="line"&gt;To get the most out of the talk, you should know about the difference
+between native Python modules and extension modules written in other
+languages. Some background on concepts like garbage collection, stack
+and heap, and dynamic/shared libraries are beneficial. Knowledge of
+the Python C API is not required.&lt;/div&gt;
+&lt;div class="line"&gt;You do not need to know how to write Go code to follow the talk - the
+talk explains all the required Go.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Cython"></category><category term="Go-Lang"></category><category term="Tooling"></category></entry><entry><title>Get up to speed with Cython 3.0</title><link href="https://pyvideo.org/europython-2019/get-up-to-speed-with-cython-30.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/get-up-to-speed-with-cython-30.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing lots of data, in need of more speed, or struggling to make
+use of native code? The Cython compiler for Python solves all of these
+problems in a pythonic way, by compiling Python code to optimised C
+code.&lt;/p&gt;
+&lt;p&gt;Cython [1] has a very long history of faithfully helping users to solve
+their Python performance problems and integrating native code into
+Python in production critical settings, while stimulating somewhat less
+confidence with its 0.x versioning scheme. For the next Cython version,
+a stable 3.0 release, we are planning to clean up several historically
+grown issues in the language to make the Cython compiler more friendly
+for modern Python users to work with.&lt;/p&gt;
+&lt;p&gt;In this talk, I will show how Cython can be used for compiling and
+speeding up Python code, using fast native data structures and
+libraries. I will then give an overview of the changes that are on their
+way for the 3.0 release and how they will affect the user experience.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://cython.org"&gt;https://cython.org&lt;/a&gt;&lt;/p&gt;
+</summary><category term="C-Languages"></category><category term="Compiler and Interpreters"></category><category term="Cython"></category><category term="Performance"></category><category term="Programming"></category></entry><entry><title>Never get in a battle of bits without ammunition.</title><link href="https://pyvideo.org/europython-2013/never-get-in-a-battle-of-bits-without-ammunition.html" rel="alternate"></link><published>2013-07-04T00:00:00+00:00</published><updated>2013-07-04T00:00:00+00:00</updated><author><name>Enrico Franchi</name></author><id>tag:pyvideo.org,2013-07-04:europython-2013/never-get-in-a-battle-of-bits-without-ammunition.html</id><summary type="html"></summary><category term="cython"></category><category term="C/C++"></category><category term="nosql"></category><category term="mongodb"></category><category term="numeric"></category><category term="iPython"></category><category term="optimization"></category><category term="Algorithms"></category><category term="data-analysis"></category><category term="hpc"></category><category term="performance"></category><category term="scientific-computing"></category><category term="numpy"></category></entry><entry><title>Lift your Speed Limits with Cython</title><link href="https://pyvideo.org/fosdem-2018/lift-your-speed-limits-with-cython.html" rel="alternate"></link><published>2018-02-03T00:00:00+00:00</published><updated>2018-02-03T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2018-02-03:fosdem-2018/lift-your-speed-limits-with-cython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fast native code for Python&lt;/p&gt;
+&lt;p&gt;The Cython compiler is the most widely used static compiler for Python. It is used to speed up Python code and to extend the CPython runtime with fast native extension modules that process huge amounts of data all around the world. This talk by one of the core developers gives a quick intro into the compiler, the language, and some of its main applications in the Python big-data ecosystem.&lt;/p&gt;
+&lt;p&gt;Cython is not just a Python compiler or a native code wrapping tool, but also a programming language in its own right that mixes the Python language with C and C++ data types. The fact that you can simply drop Python code into it and compile it gives a very low entry level into performance optimisation by statically compiling your critical code and then tuning it into fast C to make it run faster.&lt;/p&gt;
+&lt;p&gt;In this talk, I will guide you through some examples where the compilation of regular Python code leads to faster execution, and present ways how to make the code run much faster.&lt;/p&gt;
+</summary><category term="cython"></category></entry><entry><title>Lift your Speed Limits with Cython</title><link href="https://pyvideo.org/pycon-de-2017/lift-your-speed-limits-with-cython.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Sefan Behnel</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/lift-your-speed-limits-with-cython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Sefan Behnel&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Stefan has been using Python since the beginning of the century and is probably best known as core developer of Cython and lxml. He spends his time joyfully writing Python and Cython code and teaching people like you how to make the best out of these tools.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Think you can benefit from making your Python application run faster? Then come along and learn how to tune your code with Cython.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cython is not just a Python compiler or a native code wrapping tool, but also a programming language in its own right that mixes Python with C and C++. The fact that you can simply drop Python code into it and compile it gives a very low entry level into performance optimisation by statically compiling your critical code and then tuning it into fast C to make it run faster.&lt;/p&gt;
+&lt;p&gt;In this talk, I will show a few use cases where the compilation of regular Python code leads to faster execution, and present ways how to make the code run much faster.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="compilation"></category><category term="optimisation"></category><category term="cython"></category><category term="performance"></category></entry><entry><title>The BorgBackup Project</title><link href="https://pyvideo.org/pycon-de-2017/the-borgbackup-project.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Thomas Waldmann</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/the-borgbackup-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Thomas Waldmann&lt;/strong&gt; (&amp;#64;ThomasJWaldmann)&lt;/p&gt;
+&lt;p&gt;Doing Python since 2001, Linux, FOSS.&lt;/p&gt;
+&lt;p&gt;Projects: MoinMoin Wiki, nsupdate.info, bepasty, BorgBackup&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BorgBackup is a modern, deduplicating backup software written in Python 3.4+, Cython and C.&lt;/p&gt;
+&lt;p&gt;The talk will start with a quick presentation about the software and why you may want to use it for your backups.&lt;/p&gt;
+&lt;p&gt;Then, I will show how we run the software project: Tools, Services, Best Practices.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Homepage: &lt;a class="reference external" href="https://www.borgbackup.org/"&gt;https://www.borgbackup.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;About the software:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Feature set&lt;/li&gt;
+&lt;li&gt;Code&lt;/li&gt;
+&lt;li&gt;Security&lt;/li&gt;
+&lt;li&gt;Safety&lt;/li&gt;
+&lt;li&gt;Crypto&lt;/li&gt;
+&lt;li&gt;Compression&lt;/li&gt;
+&lt;li&gt;Deduplication&lt;/li&gt;
+&lt;li&gt;The Fork from attic-backup project (and what happened afterwards)&lt;/li&gt;
+&lt;li&gt;Now and Future&lt;/li&gt;
+&lt;li&gt;How you can help&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;About the project:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Github&lt;/li&gt;
+&lt;li&gt;Sphinx and ReadTheDocs&lt;/li&gt;
+&lt;li&gt;Asciinema&lt;/li&gt;
+&lt;li&gt;Mailing list on python.org, IRC on freenode&lt;/li&gt;
+&lt;li&gt;Testing: pytest, tox, travis-ci, vagrant, pyenv&lt;/li&gt;
+&lt;li&gt;&amp;quot;binary&amp;quot; Releases with PyInstaller&lt;/li&gt;
+&lt;li&gt;Automatic versioning: setuptools_scm&lt;/li&gt;
+&lt;li&gt;Secure releasing with gpg signature&lt;/li&gt;
+&lt;li&gt;Python / Cython / C - when to use what&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="bestpractices"></category><category term="crypto"></category><category term="backup"></category><category term="c"></category><category term="cython"></category><category term="python"></category><category term="borgbackup"></category></entry><entry><title>Intro to Cython</title><link href="https://pyvideo.org/euroscipy-2017/intro-to-cython.html" rel="alternate"></link><published>2017-08-31T00:00:00+00:00</published><updated>2017-08-31T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2017-08-31:euroscipy-2017/intro-to-cython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've probably heard of Cython as a tool for fast data processing. Well, it's more than that. Over the years, the Cython compiler has become a major pillar in the Python ecosystem, helping Python users all over the world to crunch their data, write fast and portable native code, and integrate native libraries into their Python workflow. Several excellent projects from the scientific Python world chose Cython to allow &amp;quot;normal people&amp;quot; to write and maintain efficient code for complex scientific algorithms, whenever Python itself comes to its limits.&lt;/p&gt;
+&lt;p&gt;In this tutorial, I will present the Cython compiler and quickly show how to speed up code with it, how to talk to native code, and a couple of more things that you might want to try out with it.&lt;/p&gt;
+</summary><category term="Cython"></category></entry><entry><title>Cython for Data, Scientists, and Data Scientists</title><link href="https://pyvideo.org/scipy-2017/cython-for-data-scientists-and-data-scientists.html" rel="alternate"></link><published>2017-07-12T00:00:00+00:00</published><updated>2017-07-12T00:00:00+00:00</updated><author><name>Dillon Niederhut</name></author><id>tag:pyvideo.org,2017-07-12:scipy-2017/cython-for-data-scientists-and-data-scientists.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tutorial materials found here: &lt;a class="reference external" href="https://scipy2017.scipy.org/ehome/220975/493423/"&gt;https://scipy2017.scipy.org/ehome/220975/493423/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cython is a foundational technology behind many packages you use everyday, including NumPy, SciPy, Pandas, Scikit-Learn, Scikit-Image, PyTables, and h5py. Developers, data scientists, and researchers use Cython to accelerate Python, access NumPy efficiently at the C level, and interface Python with C or C++. Cython's expressivity, its stability and maturity, and its gradual typing approach make it a uniquely flexible tool that has become a critical component for many projects.&lt;/p&gt;
+&lt;p&gt;This tutorial will be fast paced, and is geared towards data scientists and Python users looking to take their Python performance to the next level. Basic familiarity with C or C++ is assumed.&lt;/p&gt;
+</summary><category term="tutorial"></category><category term="cython"></category></entry><entry><title>Making your code faster: Cython and parallel processing in the Jupyter Notebook</title><link href="https://pyvideo.org/pydata-dc-2016/making-your-code-faster-cython-and-parallel-processing-in-the-jupyter-notebook.html" rel="alternate"></link><published>2016-10-09T00:00:00+00:00</published><updated>2016-10-09T00:00:00+00:00</updated><author><name>Gustavo Patino</name></author><id>tag:pyvideo.org,2016-10-09:pydata-dc-2016/making-your-code-faster-cython-and-parallel-processing-in-the-jupyter-notebook.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;Github: &lt;a class="reference external" href="https://github.com/gapatino/Making-Your-Code-Faster-Cython-and-parallel-processing-in-the-Jupyter-Notebook"&gt;https://github.com/gapatino/Making-Your-Code-Faster-Cython-and-parallel-processing-in-the-Jupyter-Notebook&lt;/a&gt;
+Slides: &lt;a class="reference external" href="http://www.slideshare.net/PyData/making-your-code-faster-cython-and-parallel-processing-in-the-jupyter-notebook"&gt;http://www.slideshare.net/PyData/making-your-code-faster-cython-and-parallel-processing-in-the-jupyter-notebook&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As the complexity and scope of applications grow, it is very common to run into slow performance issues. In Python, it is possible to improve the speed of execution with the use of parallel processing and the Cython compiler. The Jupyter Notebook makes the implementation of both of them a relatively simple task, which will be the focus of this session.&lt;/p&gt;
+</summary><category term="code"></category><category term="Cython"></category><category term="jupyter"></category><category term="jupyter notebook"></category><category term="notebook"></category><category term="parallel"></category><category term="processing"></category></entry><entry><title>Speed without drag</title><link href="https://pyvideo.org/pycon-es-2014/speed-without-drag.html" rel="alternate"></link><published>2015-04-06T00:00:00+00:00</published><updated>2015-04-06T00:00:00+00:00</updated><author><name>Saul Díez Guerra</name></author><id>tag:pyvideo.org,2015-04-06:pycon-es-2014/speed-without-drag.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recorrido práctico a través de las opciones que Python ofrece para la optimización de código númerico de baja fricción (esto es, sin dejar de escribir Python), incluyendo: agotando CPython, NumPy, Numba, Parakeet, Cython, Theano, PyPy/NumPyPy, Pyston y Blaze.&lt;/p&gt;
+</summary><category term="NumPy"></category><category term="Numba"></category><category term="Parakeet"></category><category term="Cython"></category><category term="Theano"></category><category term="PyPy"></category><category term="NumPyPy"></category><category term="Pyston"></category><category term="Blaze"></category></entry><entry><title>Boosting NumPy with Numexpr and Cython</title><link href="https://pyvideo.org/pydata/boosting-numpy-with-numexpr-and-cython.html" rel="alternate"></link><published>2012-03-02T00:00:00+00:00</published><updated>2012-03-02T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2012-03-02:pydata/boosting-numpy-with-numexpr-and-cython.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this video from the 2012 PyData Workshop Francesc Alted from
+Continuum Analytics is going to show you how you can boost NumPy with
+Numexpr and Cython.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Topics covered include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The era of Big Data&lt;/li&gt;
+&lt;li&gt;NumPy and its ecosystem&lt;/li&gt;
+&lt;li&gt;Numexpr&lt;/li&gt;
+&lt;li&gt;Cython&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cython"></category><category term="numexpr"></category><category term="numpy"></category></entry><entry><title>PyOhio 2011: Commercial GUI Development with Python &amp; PySide</title><link href="https://pyvideo.org/pyohio-2011/pyohio-2011--commercial-gui-development-with-pyth.html" rel="alternate"></link><published>2011-07-30T00:00:00+00:00</published><updated>2011-07-30T00:00:00+00:00</updated><author><name>James Bonanno</name></author><id>tag:pyvideo.org,2011-07-30:pyohio-2011/pyohio-2011--commercial-gui-development-with-pyth.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Commercial GUI Development with Python and PySide&lt;/p&gt;
+&lt;p&gt;Presented by James Bonanno&lt;/p&gt;
+&lt;p&gt;Commercial Desktop GUIs need to be secure, flexible, reliable, and easy
+to maintain. A rapid application development framework, called PyRad, is
+introduced, that uses PySide and Cython. Together with Python, this
+development framework has allowed the authors to create numerous GUIs in
+a short time period, with a consistent look and feel.&lt;/p&gt;
+</summary><category term="cython"></category><category term="gui"></category><category term="pyohio"></category><category term="pyohio2011"></category><category term="pyrad"></category><category term="pyside"></category></entry><entry><title>Experiences making CPU-bound tasks run much faster</title><link href="https://pyvideo.org/europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html" rel="alternate"></link><published>2011-07-18T00:00:00+00:00</published><updated>2011-07-18T00:00:00+00:00</updated><author><name>Ian Ozsvald</name></author><id>tag:pyvideo.org,2011-07-18:europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Ian Ozsvald - 22 June 2011 in &amp;quot;Training Pizza
+Margherita &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;UPDATE - post-event I've created a &lt;a class="reference external" href="http://ianozsvald.com/2011/06/29/high-performance-python-tutorial-v0-1%20-from-my-4-hour-tutorial-at-europython-2011/"&gt;49 page PDF write-
+up&lt;/a&gt;
+which summarises the 4 hour tutorial&lt;/p&gt;
+&lt;p&gt;As a long-time R&amp;amp;D consultant I'm often working to make slow,
+experimental code run faster for tasks like physics simulation, flood
+modeling and natural language processing. Python allows a smooth
+progression from rough-and-ready (but slow) algorithms through to finely
+tuned tasks that efficiently use as much CPU power as you can bring to
+bear. Speed-ups of 10-500* can be expected for the Mandelbrot code
+we'll use.&lt;/p&gt;
+&lt;p&gt;In this talk I'll cover a set of libraries that make CPU-bound tasks run
+much faster. We'll begin with a look at profiling using RunSnakeRun and
+line_profiler to identify our bottleneck. We'll take a look at slow
+algorithms in Python and how they can run faster using numpy and
+numexpr.&lt;/p&gt;
+&lt;p&gt;Next we'll cover the use of multiprocessing to utilise multiple CPU
+cores along with Cython or ShedSkin to easily use C code in a friendly
+Python wrapper. Multiprocessing on a quad-core system can often provide
+a 4* speed-up for the right tasks. Next parallelpython will let us run
+our code on a network of machines.&lt;/p&gt;
+&lt;p&gt;Finally we'll look at pyCUDA to utilise an NVIDIA GPU. CUDA can give the
+best improvements for mathematical problems (over 100* on the right
+tasks) but works on a narrower set of problems.&lt;/p&gt;
+&lt;p&gt;How it'll work: The tutorial will be hands on, you'll be converting
+example files from normal Python to faster variants using the tools
+below. All of it is optional, you'll get the most benefit by having
+everything installed. We'll work in groups and open discussion is
+encouraged.&lt;/p&gt;
+&lt;p&gt;NOTE - you are expected to have all these tools installed &lt;em&gt;before&lt;/em&gt; the
+tutorial (if you don't, you might find it hard to follow what's going
+on!).&lt;/p&gt;
+&lt;p&gt;I'll be using Python 2.7.1 on a Macbook (Snow Leopard). All of these
+tools run on Windows and Linux, as long as your versions are fairly
+recent everything should run just fine.&lt;/p&gt;
+&lt;p&gt;My versions (roughly ordered by importance):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python 2.7.1&lt;/li&gt;
+&lt;li&gt;RunSnakeRun 2.0.1b6 (with wxPython 2.8.12.0 Unicode)&lt;/li&gt;
+&lt;li&gt;line_profiler (1.0b2)&lt;/li&gt;
+&lt;li&gt;Cython 0.14.1&lt;/li&gt;
+&lt;li&gt;ShedSkin 0.7.1&lt;/li&gt;
+&lt;li&gt;numpy 1.5.1&lt;/li&gt;
+&lt;li&gt;numexpr 1.4.2&lt;/li&gt;
+&lt;li&gt;ParallelPython 1.6.1&lt;/li&gt;
+&lt;li&gt;pyCUDA HEAD from git as of 14th June 2011 (with CUDA 4.0 drivers)&lt;/li&gt;
+&lt;li&gt;PyPy 1.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some background reading:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/"&gt;http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/"&gt;http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cython"></category><category term="git"></category><category term="multiprocessing"></category><category term="network"></category><category term="numpy"></category><category term="nvidia"></category><category term="profiling"></category><category term="pycuda"></category><category term="runsnakerun"></category><category term="tutorial"></category><category term="windows"></category><category term="wxpython"></category></entry><entry><title>PyPy in production</title><link href="https://pyvideo.org/europython-2011/pypy-in-production.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/pypy-in-production.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 23 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The PyPy project has recently gathered a lot of attention for its
+progress in speeding up the Python language - it is the fastest Python
+interpreter, and the most compatible and most stable 'alternative´ one.
+No longer merely a research project, PyPy is now suitable for production
+use. We are working on improvements on calling into C libraries and
+generally integrating with the existing Python extensions ecosystem.&lt;/p&gt;
+&lt;p&gt;We will give an overview on how the tracing Just-in-Time compiler works
+in PyPy. From there, we will then focus on what the PyPy project has
+achieved, particularly in the past two years:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;most Python benchmarks run much faster than with CPython or Psyco&lt;/li&gt;
+&lt;li&gt;the real-world PyPy compiler toolchain itself (200 KLocs) runs twice
+as fast&lt;/li&gt;
+&lt;li&gt;already supports 32 and 64bit x86 and is in the process of supporting
+ARM&lt;/li&gt;
+&lt;li&gt;full compatibility with CPython (more than Jython/IronPython)&lt;/li&gt;
+&lt;li&gt;full (and JIT-ed) ctypes support to call C libraries from Python&lt;/li&gt;
+&lt;li&gt;supports Stackless Python (in-progress)&lt;/li&gt;
+&lt;li&gt;new &amp;quot;cpyext&amp;quot; layer which integrates existing CPython C extensions&lt;/li&gt;
+&lt;li&gt;an experimental super-fast JIT-compilation of calls to C++ libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We want to reserve time for discussing potential future work like SWIG
+and/or Cython compatibility and other areas brought up by the audience.
+There are many interesting details that can be explored further; we will
+focus on the points the audience is most interested in.&lt;/p&gt;
+&lt;p&gt;For more info:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/"&gt;http://pypy.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Our blog: &lt;a class="reference external" href="http://morepypy.blogspot.com/"&gt;http://morepypy.blogspot.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eureka program: &lt;a class="reference external" href="http://www.eurostars-eureka.eu/"&gt;http://www.eurostars-eureka.eu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Eurostars Eureka is our funding source since 2009. It is a
+cross-European funding collaboration that targets small firms which
+produce research.&lt;/em&gt;&lt;/p&gt;
+</summary><category term="cpython"></category><category term="ctypes"></category><category term="cython"></category><category term="extensions"></category><category term="pypy"></category><category term="stackless"></category></entry><entry><title>Cython für schnelleren Python-Code</title><link href="https://pyvideo.org/pycon-de-2013/cython-fur-schnelleren-python-code.html" rel="alternate"></link><published>2013-10-15T00:00:00+00:00</published><updated>2013-10-15T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2013-10-15:pycon-de-2013/cython-fur-schnelleren-python-code.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der &lt;a class="reference external" href="http://cython.org"&gt;Cython-Compiler&lt;/a&gt; ist mehr als nur ein Weg,
+Erweiterungsmodule for CPython zu schreiben. Durch die statische
+Übersetzung von reinem Python-Code öffnen sich neue Möglichkeiten, den
+Code vielfach zu beschleunigen. Anhand einiger Beispiele wird gezeigt,
+wie durch Profiling und gezielte manuelle Optimierung auch reiner
+Python-Code von statischer Kompilierung profitieren kann, ohne dabei das
+Ökosystem der CPython-Laufzeitumgebung verlassen zu müssen.&lt;/p&gt;
+</summary><category term="compiler"></category><category term="cython"></category><category term="optimierung"></category></entry><entry><title>Sunday Morning Lightning Talks</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--sunday-morning-lightning-talks.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--sunday-morning-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sunday morning lightning talks&lt;/p&gt;
+&lt;p&gt;(00:20) Tim Cooper - Lightning sound bytes&lt;/p&gt;
+&lt;p&gt;(01:05) Gregg Lind, Dan Callahan - Python spring cleanup, contributing
+to FLOSS projects&lt;/p&gt;
+&lt;p&gt;(05:30) Natalia Bidart, MatÃ­as Bordese, Facundo Batista - PyAr&lt;/p&gt;
+&lt;p&gt;(10:40) D Huggins - You got your Cython in my NumPy&lt;/p&gt;
+&lt;p&gt;(16:05) Ken Elkabany - PiCloud&lt;/p&gt;
+&lt;p&gt;(21:20) Tim Fernando - Mobile web in Django&lt;/p&gt;
+&lt;p&gt;(26:40) ? - Running a standard webapp on stackless; monkeypatching&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="contributing"></category><category term="cython"></category><category term="floss"></category><category term="pyar"></category><category term="pycloud"></category><category term="pycon"></category><category term="pycon2010"></category><category term="stackless"></category></entry><entry><title>The Ring of Python (#189)</title><link href="https://pyvideo.org/pycon-us-2010/the-ring-of-python-189.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/the-ring-of-python-189.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Ring of Python&lt;/p&gt;
+&lt;p&gt;Presented by holger krekel (merlinux gmbh)&lt;/p&gt;
+&lt;p&gt;CPython 2.5/2.6/3.1, Jython, IronPython, PyPy, StacklessPython,
+UnladenSwallow, Cython ... what do we make of all these cool interpreter
+projects and versions? Where does competition help and where does it
+hamper?&lt;/p&gt;
+&lt;p&gt;In this interactive talk I'll highlight the main strengths of each of
+the Python interpreters. Furthermore, I'll discuss ways to leverage
+Python interpreters in a co-operative way, discuss challenges, projects
+and issues ahead and also briefly highlight 'execnet', one my own
+projects for bridging (Any) Python to (Any) Python. This is also the
+first time i am going to try out a new and funvisual presentation
+technique after several years of having done mostly text-based ones&lt;/p&gt;
+</summary><category term="cpython"></category><category term="cython"></category><category term="ironpython"></category><category term="jython"></category><category term="pycon"></category><category term="pycon2010"></category><category term="pypy"></category><category term="stackless"></category><category term="unladenswallow"></category></entry></feed>

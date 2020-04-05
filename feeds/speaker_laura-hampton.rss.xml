@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate><item><title>Packaging Django Apps for Distribution on PyPI</title><link>https://pyvideo.org/north-bay-python-2018/packaging-django-apps-for-distribution-on-pypi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django lets you to use apps installed with pip, but have you ever wanted
+to package and distribute your own apps? In this talk, you will learn
+about creating a Django app and packaging it for distribution on
+Warehouse (the new PyPI). The talk will also discuss some best practices
+for packaging.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laura Hampton</dc:creator><pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-11-03:north-bay-python-2018/packaging-django-apps-for-distribution-on-pypi.html</guid></item><item><title>Packaging Django Apps for Distribution on PyPI</title><link>https://pyvideo.org/djangocon-us-2018/packaging-django-apps-for-distribution-on-pypi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One of the strengths of Django is that it allows you to use apps created
+by other developers, so you don’t have to spend time rewriting something
+that someone else has already written. However, creating Python packages
+for distribution via the Python Package Index is a process that is
+unfamiliar to most developers. In this talk, you will learn about
+creating a reusable Django app. The talk will cover how a Django app
+differs from a package like requests, and how an app interacts with
+models and URLs in an existing project.&lt;/p&gt;
+&lt;p&gt;While the talk will include a discussion of how to upload a Django app
+to PyPI, the parts that discuss how to make reusable Django apps will be
+useful to developers who are working at organizations where they may not
+be able to open-source their code.&lt;/p&gt;
+&lt;p&gt;This talk is intended for Django developers who have some familiarity
+with how Django works, and an interest in code reuse and packaging.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction (3 min)&lt;ul&gt;
+&lt;li&gt;the difference between a Django app and a utility package (like
+Requests)&lt;/li&gt;
+&lt;li&gt;the relationship between a Django project and an app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How the packaging considerations for a Django app differ from a
+utility package (4 min)&lt;ul&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;requirements.txt&lt;/tt&gt; versus &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;: how they are different&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How a packaged Django app is structured (3 min)&lt;ul&gt;
+&lt;li&gt;including documentation in the package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Creating a Django app for packaging (10 min)&lt;ul&gt;
+&lt;li&gt;considerations for making reusable Django apps&lt;/li&gt;
+&lt;li&gt;interacting with existing models and data&lt;/li&gt;
+&lt;li&gt;interacting with URLs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Creating a source archive and wheel and uploading it with twine (5
+min)&lt;ul&gt;
+&lt;li&gt;use &lt;tt class="docutils literal"&gt;test.pypi.org&lt;/tt&gt; before uploading your package to
+&lt;tt class="docutils literal"&gt;pypi.org&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laura Hampton</dc:creator><pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-15:djangocon-us-2018/packaging-django-apps-for-distribution-on-pypi.html</guid></item><item><title>How Unreliable Computers Can Usually Agree (Sort Of): A Brief Tour of the Raft Algorithm</title><link>https://pyvideo.org/north-bay-python-2017/how-unreliable-computers-can-usually-agree-sort-of-a-brief-tour-of-the-raft-algorithm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Every day, the amount of data we store increases dramatically. Users demand high availability and low latency from the machines where it is stored. Single machines are prone to failure, and in many cases can't cope with high traffic demands. Distributed systems have become an increasingly common solution for these problems. They offer fault tolerance and resilience while allowing users to interact with what appears to be a single machine.&lt;/p&gt;
+&lt;p&gt;The talk is intended for people who are curious about distributed systems and who would like a better understanding of how they work. Attendees will come away with an understanding of the problem of consensus, what problems consensus algorithms solve, and how the Raft algorithm works.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laura Hampton</dc:creator><pubDate>Sat, 02 Dec 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-12-02:north-bay-python-2017/how-unreliable-computers-can-usually-agree-sort-of-a-brief-tour-of-the-raft-algorithm.html</guid></item><item><title>An Introduction to the Raft Distributed Consensus Algorithm</title><link>https://pyvideo.org/pygotham-2017/an-introduction-to-the-raft-distributed-consensus-algorithm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Individual computers are prone to failure, and are often unable to cope with  demands for high availability, low latency, and ability to handle large volumes of data and traffic. These demands will only increase in the future. Systems in which a consensus algorithm orchestrates a coherent group of replicated state machines have emerged as a way to meet these demands. These systems offer fault tolerance and resilience while allowing users to interact with what appears to be a single machine.&lt;/p&gt;
+&lt;p&gt;This talk will offer a brief discussion of distributed systems and an introduction to the Raft distributed consensus algorithm, implemented in Python. Raft is used by MongoDB and Docker Swarm, among other technologies. In this talk, you will learn how Raft works, and how it solves the problems presented by replicating data across multiple machines.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laura Hampton</dc:creator><pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-06:pygotham-2017/an-introduction-to-the-raft-distributed-consensus-algorithm.html</guid></item><item><title>Lightning talks May 21th, 2017 Morning session</title><link>https://pyvideo.org/pycon-us-2017/lightning-talks-may-21th-2017-morning-session.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks 2017-05-21 Morning&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="12%" /&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="65%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head" rowspan="2"&gt;Start&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Speakers&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Subject&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;0:45&lt;/td&gt;
+&lt;td rowspan="4"&gt;Pan and  C. Lin&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;ZulipBot - Improving GitHub Workflow&lt;/strong&gt;
+- Add Issue Assignment, better Notifications, and
+other improvements to GitHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="5"&gt;6:15&lt;/td&gt;
+&lt;td rowspan="5"&gt;Lennart&lt;/td&gt;
+&lt;td rowspan="5"&gt;&lt;strong&gt;Your Keyboard:  Your Most Important Tool&lt;/strong&gt;
+- Eliminating angle issues and space problems with
+angled, tenkeyless keyboards, stretches, and more
+keyboard geekery.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;11:30&lt;/td&gt;
+&lt;td rowspan="4"&gt;Hugh Herter&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Live code reloading in Python&lt;/strong&gt;
+- Using the module autoreload to watch and reload
+during debugging.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;16:00&lt;/td&gt;
+&lt;td rowspan="4"&gt;Don Goodman-Wilson&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Pascal's Wager and You&lt;/strong&gt;
+- Pascal's Wager on the Existence of God is equivalent
+to wagering about a debilitating hack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;20:15&lt;/td&gt;
+&lt;td rowspan="4"&gt;Paul Ganssle&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Time Zone Tools&lt;/strong&gt;
+- Looking at datettime, tzinfo, dateutil and pytz,
+common errors, and timezone geekery.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="3"&gt;25:30&lt;/td&gt;
+&lt;td rowspan="3"&gt;Paul &amp;amp; Laura&lt;/td&gt;
+&lt;td rowspan="3"&gt;&lt;strong&gt;State of PyVideo.org&lt;/strong&gt;
+- Current website, traffic, and users.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joshua Pan</dc:creator><pubDate>Sun, 21 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-21:pycon-us-2017/lightning-talks-may-21th-2017-morning-session.html</guid><category>lightning talks</category></item><item><title>Lightning Talks Day 3</title><link>https://pyvideo.org/djangocon-us-2017/lightning-talks-day-3.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DjangoCon US 2017 - Lightning Talks Day 3 by Various Speakers&lt;/p&gt;
+&lt;p&gt;00:00 Kelsey Hawley
+05:20 Eric Holscher
+10:26 Laura Hampton
+12:40 Jeremy Gatens
+18:10 Buddy Lindsey
+23:08 Nicholle James
+28:30 Wayne Merry
+33:16 Mike Hansen
+38:12  Kenneth Reitz&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kelsey Hawley</dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-14:djangocon-us-2017/lightning-talks-day-3.html</guid></item></channel></rss>

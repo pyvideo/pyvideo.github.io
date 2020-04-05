@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_floris-bruynooghe.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-07-13T00:00:00+00:00</updated><entry><title>Taming greenlets using eventlet</title><link href="https://pyvideo.org/europython-2013/taming-greenlets-using-eventlet.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/taming-greenlets-using-eventlet.html</id><summary type="html"></summary><category term="async"></category><category term="eventlet"></category><category term="greenlet"></category><category term="socket"></category><category term="networking"></category></entry><entry><title>Cloud Native Python in Kubernetes</title><link href="https://pyvideo.org/europython-2017/cloud-native-python-in-kubernetes.html" rel="alternate"></link><published>2017-07-13T00:00:00+00:00</published><updated>2017-07-13T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2017-07-13:europython-2017/cloud-native-python-in-kubernetes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Serverside applications are more and more likely to need to run in
+dynamic cloud environments where they can automatically scale as
+required.  One rightfully popular approach is to run the application
+as a Docker container inside a Kubernetes cluster, giving you a lot of
+operational benefits thanks to the Kubernetes folks.&lt;/p&gt;
+&lt;p&gt;For the most part it is rather easy to make your Python application
+work inside a Docker container.  But there are a number of common
+patterns one can follow to save time by delegating more things to the
+runtime environment.  Furthermore you can start adding a few simple
+non-intrusive features to your application which will help improve the
+application live-cycle in the cluster, ensuring smooth hand-over when
+migrating the container to different nodes or scaling it up or down.&lt;/p&gt;
+&lt;p&gt;This talk will quickly cover the basics of Kubernetes and will then
+start from a simple program and will discuss the steps to take to make
+it behave well in this environment.  Starting with the basics steps
+you can rely on the runtime for, covering logging and all the way to
+supporting the service life-cycle, health checking and monitoring in a
+Kubernetes environment.  You will see that building a cloud-native
+application is not very hard and something you can gradually
+introduce.&lt;/p&gt;
+</summary></entry><entry><title>Cloud Native PythonThe road to being a first-class Kubernetes application</title><link href="https://pyvideo.org/fosdem-2017/cloud-native-pythonthe-road-to-being-a-first-class-kubernetes-application.html" rel="alternate"></link><published>2017-02-05T00:00:00+00:00</published><updated>2017-02-05T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2017-02-05:fosdem-2017/cloud-native-pythonthe-road-to-being-a-first-class-kubernetes-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Serverside applications are more and more likely to need to run indynamic cloud environments where they can automatically scale asrequired.  One rightfully popular approach is to run the applicationas a Docker container inside a Kubernetes cluster, giving you a lot ofoperational benefits thanks to the Kubernetes folks.For the most part it is rather easy to make your Python applicationwork inside a Docker container.  But there are a number of commonpatterns one can follow to save time by delegating more things to theruntime environment.  Furthermore you can start adding a few simplenon-intrusive features to your application which will help improve theapplication live-cycle in the cluster, ensuring smooth hand-over whenmigrating the container to different nodes or scaling it up or down.This talk will discuss how to write a Python application which willbehave well in this environment, starting with the basics steps youcan rely on the runtime for, covering logging and all the way tosupporting the service life-cycle, health checking and monitoring in aKubernetes environment.  You will see that building a cloud-nativeapplication is not very hard and something you can graduallyintroduce.&lt;/p&gt;
+</summary></entry><entry><title>Shipping your application using Conda</title><link href="https://pyvideo.org/pycon-uk-2015/shipping-your-application-using-conda.html" rel="alternate"></link><published>2015-09-19T00:00:00+00:00</published><updated>2015-09-19T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2015-09-19:pycon-uk-2015/shipping-your-application-using-conda.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shipping your Python application to customers has always been an
+interesting challenge. Many Operating Systems ship with a Python
+version, but they only ship that to support their applications and it
+will probably miss dependencies you need or be the wrong version. So you
+need to build and ship your own Python environment, but one which can
+work on all these different platforms. This is never easy.&lt;/p&gt;
+&lt;p&gt;Recently Continiuum Analytics have released their Conda package manager
+as open source, which is very well suited to address this problem. It
+has support for building and distributing binary packages and is capable
+of creating a stand-alone environment for your application with no or
+minimal dependencies on the host OS. But even starting from a good tool
+there are still a lot of tricks to building a good Python distribution.
+This talk will concentrate on UNIX platforms and dive into the details
+of what needs to be done to create a portable distribution. It will then
+discuss how to fully bootstrap such a distribution using Conda.&lt;/p&gt;
+</summary></entry><entry><title>The hook-based plugin architecture of py.test</title><link href="https://pyvideo.org/europython-2015/the-hook-based-plugin-architecture-of-pytest.html" rel="alternate"></link><published>2015-08-02T00:00:00+00:00</published><updated>2015-08-02T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2015-08-02:europython-2015/the-hook-based-plugin-architecture-of-pytest.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Floris Bruynooghe - The hook-based plugin architecture of py.test
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The hook-based plugin system used by py.test and being made available
+as a stand alone package allows easy extensibility based on defined
+extension points which can be implemented using hook functions in the
+plugins.  Plugins can themselves call these hooks as well as define
+future extension points allowing for a very flexible design.&lt;/p&gt;
+&lt;p&gt;py.test itself uses this plugin system from the ground up with the
+entire application being implemented by built-in plugins.  This
+architecture has proven powerful and flexible over the years, on both
+command line tools as well as long running daemons.  This talks will
+describe how the plugin system works and how it deals with passing
+arguments and return values 1:N hook calls. It will also describe how
+to design an application consisting entirely of plugins.  While not
+specifically talking about py.test it will also give a solid
+understanding on how plugins work in py.test.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://devork.be/talks/pluggy/pluggy.html"&gt;http://devork.be/talks/pluggy/pluggy.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Org-mode source: &lt;a class="reference external" href="http://devork.be/talks/pluggy/pluggy.org"&gt;http://devork.be/talks/pluggy/pluggy.org&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Build your Microservices with ZeroMQ</title><link href="https://pyvideo.org/europython-2016/build-your-microservices-with-zeromq.html" rel="alternate"></link><published>2016-08-04T00:00:00+00:00</published><updated>2016-08-04T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2016-08-04:europython-2016/build-your-microservices-with-zeromq.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Floris Bruynooghe - Build your Microservices with ZeroMQ
+[EuroPython 2016]
+[21 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/build-your-microservices-with-zeromq"&gt;https://ep2016.europython.eu//conference/talks/build-your-microservices-with-zeromq&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;While microservices are rather commonly implemented using JSON over
+HTTP this is merely an implementation choice.  This talk will cover
+the reasons why you might want to choose ZeroMQ as communication
+transport between your microservices instead.  It will show how ZeroMQ
+is used from within Python and the common patterns which can simplify
+the overal architecture while at the same time providing reliable and
+low-latency communications between your services.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Microservices is the popular term for the trend to build backend
+architectures as a number of smaller independent processes.  As an
+evolution from the Service Oriented Architecture the core aims are to
+create independent services which are easy to operate and even replace
+while all of them together compose into providing the business logic
+required for your application.&lt;/p&gt;
+&lt;p&gt;While it is rather common for microservices to choose JSON over HTTP
+to communicate with each other, this is purely an implementation
+choice.  HTTP is a protocol using a strict request-response format,
+this can become a little burdensome when needing to deal with
+asynchronous requests and forces some architectural descisions to be
+not as ideal as they could be.  ZeroMQ has more flexible communication
+patterns allowing for easier mapping of real-life interactions between
+services.  Coupled with an easy to use asynchronous user-level API and
+very fast underlying communication on persistent TCP connections
+ZeroMQ is a rather attractive transport to build your microservices
+based applications in.&lt;/p&gt;
+&lt;p&gt;This talk will show how to use ZeroMQ within Python to build your
+microservices.  It will show the benefits of ZeroMQ's asynchronous
+API, common usage patterns and how to handle backpressure.
+Furthermore different communication patterns will be explored and the
+impact this has on how to simplify the overall architecture using
+these patterns.&lt;/p&gt;
+</summary></entry><entry><title>Exploring CPython's bytecode</title><link href="https://pyvideo.org/europython-2011/exploring-cpythons-bytecode.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/exploring-cpythons-bytecode.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Floris Bruynooghe - 22 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The CPython interpreter always compiles your source code to bytecode,
+usually stored in .pyc files. This bytecode is then loaded and executed
+in the CPython virtual machine.&lt;/p&gt;
+&lt;p&gt;This talk will explore the bytecode from the outside in. Starting with
+how to read a .pyc file, following the steps the interpreter takes to
+arrive and a usable python module. It then dives into the structure of
+the bytecode itself and the principles of the virtual machine, detailing
+how the VM executes this bytecode to do useful work.&lt;/p&gt;
+&lt;p&gt;Having seen all these details you should have a good idea of the various
+innards of CPython and how to manipulate these to create weird,
+wonderful, dangerous and occasional useful hacks.&lt;/p&gt;
+</summary><category term="bytecode"></category><category term="cpython"></category><category term="vm"></category></entry><entry><title>Advanced Uses of py.test Fixtures</title><link href="https://pyvideo.org/europython-2014/advanced-uses-of-pytest-fixtures.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/advanced-uses-of-pytest-fixtures.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;One unique and powerful feature of py.test is the dependency injection
+of test fixtures using function arguments. This talk aims to walk
+through py.test's fixture mechanism gradually introducing more complex
+uses and features. This should lead to an understanding of the power of
+the fixture system and how to build complex but easily-managed test
+suites using them.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talks will assume some basic familiarity with the py.test testing
+framework and explore only the fixture mechanism. It will build up more
+complex examples which will lead up to touching on other plugin features
+of py.test. It is expected people will be familiar with python features
+like functions as first-class objects, closures etc.&lt;/p&gt;
+</summary></entry></feed>

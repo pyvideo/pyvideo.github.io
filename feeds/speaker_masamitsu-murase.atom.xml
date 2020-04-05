@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_masamitsu-murase.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-09-22T00:00:00+00:00</updated><entry><title>Pausable Unittest on EFI Stackless Python</title><link href="https://pyvideo.org/pycon-japan-2016/pausable-unittest-on-efi-stackless-python.html" rel="alternate"></link><published>2016-09-22T00:00:00+00:00</published><updated>2016-09-22T00:00:00+00:00</updated><author><name>Masamitsu Murase</name></author><id>tag:pyvideo.org,2016-09-22:pycon-japan-2016/pausable-unittest-on-efi-stackless-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;組込み機器などのテストでは「再起動を繰り返しながらテストを実行する」ことが多くあります。今回開発したPausable Unittestライブラリを使うと、標準ライブラリのunittestのようにテストを記述でき、かつ、「Pythonインタプリタを一度終了し、再起動後に続きを実行する」場合のテストも、簡単に記述できます。実例をEFI上に移植したStackless Pythonを用いて説明します。&lt;/p&gt;
+&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;div class="section" id="pausable-unittest-on-efi-stackless-python"&gt;
+&lt;h5&gt;Pausable Unittest on EFI Stackless Python&lt;/h5&gt;
+&lt;p&gt;家電機器などの組込みデバイスやPCなどのテストでは、「システムの再起動を途中にはさみながら、テストを継続する」ことが多くあります。 こういった場合、Python でテストスクリプトを書こうとすると、再起動によって Python インタプリタが終了してしまうので、再起動後に続きからテストを実行するのは困難です。 しかし、例えば下記のテストスクリプトのように、 (*1) でレジスタの値を読み、 (*2) でシステムを再起動し、再起動後に (*3) から実行してくれると便利です。 また、再起動後の (*4) では、再起動前に (*1) で保存した変数も、特別にセーブ/ロードしなくても参照できると便利です。&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;read_register&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;   &lt;span class="c1"&gt;# (*1)&lt;/span&gt;
+    &lt;span class="n"&gt;reboot&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;              &lt;span class="c1"&gt;# (*2)&lt;/span&gt;
+    &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;read_register&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;   &lt;span class="c1"&gt;# (*3)&lt;/span&gt;
+    &lt;span class="n"&gt;assertEqual&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;     &lt;span class="c1"&gt;# (*4)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;Pausable Unittest ライブラリは、 Stackless Python もしくは PyPy の機能を活用することで、このようなテストスクリプトの記述を可能とします。&lt;/p&gt;
+&lt;p&gt;発表では、EFI 仕様に準拠した最近の PC で起動できる「EFI Shell」環境に移植した Stackless Python の説明とともに、実際の挙動を含め、下記について説明します。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;「再起動を途中にはさみながらテストを継続する」際の問題点
+変数の退避と復旧、関数を途中から実行させることの必要性について、説明します。&lt;/li&gt;
+&lt;li&gt;Stackless Python の tasklet と、PyPy の continulet でできること
+それぞれを使ってできる「関数の途中状態の保存と復旧」について、説明します。&lt;/li&gt;
+&lt;li&gt;Pausable Unittest が可能とすること
+再起動にまつわるテストの問題点を解決する Pausable Unittest について、説明します。
+特に、 unittest の pickle 対応について説明します。&lt;/li&gt;
+&lt;li&gt;Stackless Python の EFI Shell 上への移植
+実際の適用例として用いた、PC の Pre-OS 環境である EFI Shell 上への Stackless Python の移植について、説明します。
+移植するうえで一部アセンブラの知識が必要な個所についても簡単に触れる予定です。&lt;/li&gt;
+&lt;li&gt;上記を用いた実例
+実際に VirtualBox/VMWare 上で実挙動を実演します。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h5&gt;サンプルデモ&lt;/h5&gt;
+&lt;p&gt;なお、 EFI Shell 上で、「3回の再起動を行い、起動速度を測定し、それが 8秒未満かをテストする」という (やや恣意的な) シナリオの場合、下記のようにテストスクリプトを書くことができます。
+下記のスクリプトでは、 (*1) のループの中で、 (*2) で再起動を行い、平均を求めて一回の再起動にかかる時間を測定しています。
+動作の様子は &lt;a class="reference external" href="https://youtu.be/gb7-UKnkjrM"&gt;YouTube&lt;/a&gt; で見ることができます。&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pausable_unittest&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pausable_unittest.efipauser&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pausable_unittest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TestCase&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;test_reboot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;reboot_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;                      &lt;span class="c1"&gt;# (*1)&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Reboot &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s2"&gt;...&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+            &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reboot&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;                       &lt;span class="c1"&gt;# (*2)&lt;/span&gt;
+            &lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+            &lt;span class="n"&gt;reboot_time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;end&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+        &lt;span class="n"&gt;avg_time&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reboot_time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;reboot_time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;assertLess&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;avg_time&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;pausable_unittest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pausable_unittest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;efipauser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pauser&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pausable-unittest-efi-stackless-python"&gt;
+&lt;h5&gt;Pausable Unittest と EFI Stackless Python の入手先&lt;/h5&gt;
+&lt;p&gt;現在開発中の Pausable Unittest は以下の URL で公開しています。 &lt;a class="reference external" href="https://github.com/masamitsu-murase/pausable_unittest"&gt;https://github.com/masamitsu-murase/pausable_unittest&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;日本語の README は以下にあります。 &lt;a class="reference external" href="https://github.com/masamitsu-murase/pausable_unittest/blob/master/README.ja.md"&gt;https://github.com/masamitsu-murase/pausable_unittest/blob/master/README.ja.md&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;また、EFI Shell 上に移植した Stackless Python は、以下のブランチにあります。 &lt;a class="reference external" href="https://github.com/masamitsu-murase/edk2formruby/tree/stacklesspython279release"&gt;https://github.com/masamitsu-murase/edk2formruby/tree/stacklesspython279release&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry></feed>

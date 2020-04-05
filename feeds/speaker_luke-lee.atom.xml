@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_luke-lee.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-24T00:00:00+00:00</updated><entry><title>Script, Library, or Executable: You can have it all!</title><link href="https://pyvideo.org/pycon-de-2018/script-library-or-executable-you-can-have-it-all.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/script-library-or-executable-you-can-have-it-all.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I will describe one possible way to achieve this using the following
+features:&lt;/p&gt;
+&lt;p&gt;We want to create a package layout that can support a CLI interface, an
+importable library, and a GUI all while sharing as much code as
+possible.&lt;/p&gt;
+&lt;p&gt;Although text and graphical interfaces are very different we can provide
+a consistent API with careful consideration. This way users can easily
+use our library or either interface without starting all over again.&lt;/p&gt;
+&lt;p&gt;First we will layout a single-file CLI script using argparse similar to
+the Unix &lt;tt class="docutils literal"&gt;wc&lt;/tt&gt; tool that takes a text file and outputs the following
+information:&lt;/p&gt;
+&lt;p&gt;We'll discuss the &lt;tt class="docutils literal"&gt;__name__ == __main__&lt;/tt&gt; Python idiom, separating the
+argument parsing from the main function, and why keeping as little as
+possible in &lt;tt class="docutils literal"&gt;__main__&lt;/tt&gt; is better for reusability.&lt;/p&gt;
+&lt;p&gt;There are several pros and cons to providing others with a single-file
+script. It's easy to develop and simple to read, but it requires any
+user to have the correct version of Python installed. It's also
+difficult for other developers to reuse the code in their own projects
+or deploy to PyPI.&lt;/p&gt;
+&lt;p&gt;Next we'll take our single-file script and expand it into a basic Python
+package using a main folder, &lt;strong&gt;init&lt;/strong&gt;.py, and a cli.py script to expose
+the same CLI as before.&lt;/p&gt;
+&lt;p&gt;We'll discuss how to restructure the main and parsing functions from
+step 1 into an public API defined by the &lt;strong&gt;init&lt;/strong&gt;.py that exposes the
+same CLI functionality as a library.&lt;/p&gt;
+&lt;p&gt;We won't dive into setup.py at all, but there will be links and a brief
+description on the various tools to layout a package such as
+cookiecutter and setup.py.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://github.com/chriskiehl/Gooey"&gt;Gooey&lt;/a&gt; project can easily
+expose a CLI as GUI with a few decorators. We'll discuss briefly how to
+use Gooey and some of the extra functionality it provides to create more
+advanced GUIs.&lt;/p&gt;
+&lt;p&gt;We'll also give a simple mental model for how it maps argparse argument
+types to GUI widgets.&lt;/p&gt;
+&lt;p&gt;Until step 3 all we required of users was a working Python 3
+installation. However, adding Gooey requires users to have a working
+Python installer, the Gooey library, and wxPython. Typically GUIs are
+meant for higher-level users so asking them to install all of this to
+benefit from our little app is too much.&lt;/p&gt;
+&lt;p&gt;Instead we'll see how we run PyInstaller on our entry script to package
+up all our dependencies &lt;strong&gt;including&lt;/strong&gt; Python itself into a simple
+executable. We'll briefly discuss the build and dist output folders from
+PyInstaller along with the ability to use it to package all sorts of
+complicated Python applications using Qt, Numpy, etc.&lt;/p&gt;
+&lt;p&gt;End-users in management don't even have to know we used Python!&lt;/p&gt;
+</summary><category term="Programming"></category><category term="Python"></category></entry><entry><title>Dunder what? Python's object model explained.</title><link href="https://pyvideo.org/pytexas-2012/dunder-what-pythons-object-model-explained.html" rel="alternate"></link><published>2012-09-15T00:00:00+00:00</published><updated>2012-09-15T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2012-09-15:pytexas-2012/dunder-what-pythons-object-model-explained.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Luke Lee is a full-time Python developer writing desktop GUI and scientific computing applications in the oil and gas industry. He is a regular member of the Houston Python and Django groups. After several years of writing embedded software in C for Solid State Disks, Luke jumped head first into the Python ecosystem. He came to Python for the whitespace and stuck with it for the community.&lt;/p&gt;
+&lt;p&gt;Python's more advanced features like descriptors, context managers, and meta-programming can be more easily understood by investigating the object model and dunder methods. This talk will explore what dunder methods are, why their useful, and how they contribute to the overall design of a fully Pythonic object.&lt;/p&gt;
+</summary></entry><entry><title>Bugs: Can't code without them, so code against them!</title><link href="https://pyvideo.org/pytexas-2013/bugs-cant-code-without-them-so-code-against-them.html" rel="alternate"></link><published>2013-08-16T00:00:00+00:00</published><updated>2013-08-16T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2013-08-16:pytexas-2013/bugs-cant-code-without-them-so-code-against-them.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the last 10 years, Luke Lee has professionally written software for applications ranging from Python desktop and web applications to embedded C drivers for Solid State Disks. Currently, he writes scientific Python applications for Blueback Reservoir in Houston, TX. His enthusiasm for Python is emphasized throughout his presentations at several Python related conferences including Pycon, PyTexas, and PyArkansas. He is also an active member of the Houston Django and Python user groups.&lt;/p&gt;
+&lt;p&gt;There are a lot of approaches and philosophies to prevent bugs in software, but
+the truth is they are unavoidable in complex, modern systems. So, what's a
+developer to do? Code in a style that tries to alert and test for the bugs
+when they happen instead of feeling like a failure when you can't prevent the
+unavoidable.&lt;/p&gt;
+&lt;p&gt;Wikipedia defines this style of programming as 'defensive programming,' and the
+idea is code in a way that expects software to be misused and have bugs. This
+talk will explore this general concept and how to add bits of this style of
+development to you Python code with the following:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Asserts&lt;/li&gt;
+&lt;li&gt;Logging&lt;/li&gt;
+&lt;li&gt;Unit tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</summary></entry><entry><title>Building full-stack scientific applications in Python</title><link href="https://pyvideo.org/pytexas-2013/building-full-stack-scientific-applications-in-python.html" rel="alternate"></link><published>2013-08-16T00:00:00+00:00</published><updated>2013-08-16T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2013-08-16:pytexas-2013/building-full-stack-scientific-applications-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the last 10 years, Luke Lee has professionally written software for applications ranging from Python desktop and web applications to embedded C drivers for Solid State Disks. Currently, he writes scientific Python applications for Blueback Reservoir in Houston, TX. His enthusiasm for Python is emphasized throughout his presentations at several Python related conferences including Pycon, PyTexas, and PyArkansas. He is also an active member of the Houston Django and Python user groups.&lt;/p&gt;
+&lt;p&gt;Python has a large collection of tools for scientific computing. However, finding the right pieces and assembling them into a fast and scale-able app can be a daunting task. This talk will explore common requirements of scientific apps and how to fulfill those from the Python ecosystem. It will also provide a blueprint for building apps using tools like PyQt, PyQwt, numpy, and HDF5.&lt;/p&gt;
+</summary></entry><entry><title>How to write dumber tests</title><link href="https://pyvideo.org/pytexas-2014/how-to-write-dumber-tests.html" rel="alternate"></link><published>2014-10-05T00:00:00+00:00</published><updated>2014-10-05T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2014-10-05:pytexas-2014/how-to-write-dumber-tests.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing and debugging code is hard, but testing shouldn't be. This talk
+will discuss common techniques for writing simpler tests that still
+exercise your production code while preventing you from spending time
+debugging test code.&lt;/p&gt;
+</summary></entry><entry><title>Building full-stack scientific applications in Python</title><link href="https://pyvideo.org/pycon-us-2013/building-full-stack-scientific-applications-in-py.html" rel="alternate"></link><published>2013-03-16T00:00:00+00:00</published><updated>2013-03-16T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2013-03-16:pycon-us-2013/building-full-stack-scientific-applications-in-py.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python has a large collection of tools for scientific computing.
+However, finding the right pieces and assembling them into a fast and
+scale-able app can be a daunting task. This talk will explore common
+requirements of scientific apps and how to fulfill those from the Python
+ecosystem. It will also provide a blueprint for building apps using
+tools like PyQt, PyQwt, numpy, and HDF5.&lt;/p&gt;
+</summary><category term="talk"></category></entry></feed>

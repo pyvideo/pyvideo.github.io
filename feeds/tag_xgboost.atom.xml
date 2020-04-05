@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_xgboost.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-05-20T12:45:00+02:00</updated><entry><title>Feature Importance and Ensemble Methods : a new perspective</title><link href="https://pyvideo.org/pydata-barcelona-2017/feature-importance-and-ensemble-methods-a-new-perspective.html" rel="alternate"></link><published>2017-05-20T12:45:00+02:00</published><updated>2017-05-20T12:45:00+02:00</updated><author><name>Constant Bridon</name></author><id>tag:pyvideo.org,2017-05-20:pydata-barcelona-2017/feature-importance-and-ensemble-methods-a-new-perspective.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ensemble methods are extremely performant in terms of prediction, but lack easy interpretation. Feature importance is not only counting up how many times a feature has been used in a weak learner, but also by how much this feature contributes to the result. Detailed example and implementation are provided in a jupyter notebook in python for the library &amp;quot;xgboost&amp;quot; of extreme gradient boosting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I - Feature importance in ensemble algorithms - state of the art&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Feature importance in sklearn/xgboost: basically counts the occurrences of a feature in all the weak learners&lt;/li&gt;
+&lt;li&gt;Construction of the trees in xgboost: if the trees are deep enough, every feature is going to be used&lt;/li&gt;
+&lt;li&gt;Global feature importance is a misleading: a given feature might be critical for a given subpopulation but completely irrelevant for another (ex : multi-class classification)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;II - Xgboost real feature importance&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Prediction influence: first splits influence the prediction more than last splits, so the importance of a feature must be weighted by the discrimination it provides&lt;/li&gt;
+&lt;li&gt;Point-to-point feature importance: following the path of a given prediction, it is possible to weigh the importance of every used feature&lt;/li&gt;
+&lt;li&gt;A relevant assessment of feature importance: explanation of a given prediction, and aggregation on a set of data points&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;III - Implementation and examples&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Point-to-point feature importance illustration and implementation explanation&lt;/li&gt;
+&lt;li&gt;Evolution of feature importance with respect to learning iterations&lt;/li&gt;
+&lt;li&gt;Noisy variables cancellation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;IV - Limits and ways forward&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;A word on correlated variables&lt;/li&gt;
+&lt;li&gt;Is there a compromise performance/interpretation ?&lt;/li&gt;
+&lt;/ol&gt;
+</summary><category term="xgboost"></category></entry></feed>

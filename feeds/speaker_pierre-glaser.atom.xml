@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_pierre-glaser.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-05T00:00:00+00:00</updated><entry><title>Recent advances in python parallel computing</title><link href="https://pyvideo.org/euroscipy-2019/recent-advances-in-python-parallel-computing.html" rel="alternate"></link><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><author><name>Pierre Glaser</name></author><id>tag:pyvideo.org,2019-09-05:euroscipy-2019/recent-advances-in-python-parallel-computing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Modern hardware is multi-core&lt;/em&gt;. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the &lt;a class="reference external" href="https://scikit-learn.org/stable/"&gt;scikit-learn&lt;/a&gt; machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures,&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://joblib.readthedocs.io/en/latest/"&gt;joblib&lt;/a&gt; and&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://loky.readthedocs.io/en/latest/"&gt;loky&lt;/a&gt; (used by&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://dask.org/"&gt;dask&lt;/a&gt; and &lt;a class="reference external" href="https://dask.org/"&gt;scikit-learn&lt;/a&gt;)
+These&lt;/div&gt;
+&lt;div class="line"&gt;libraries make it easy for Python programmers to use safe and reliable&lt;/div&gt;
+&lt;div class="line"&gt;parallelism in their code. They can even work in more exotic
+situations, such&lt;/div&gt;
+&lt;div class="line"&gt;as interactive sessions, in which Python’s native multiprocessing
+support tends&lt;/div&gt;
+&lt;div class="line"&gt;to fail. I will describe their purpose as well as the canonical
+use-cases they&lt;/div&gt;
+&lt;div class="line"&gt;address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a &lt;a class="reference external" href="https://docs.python.org/3.8/library/multiprocessing.shared_memory.html"&gt;new
+API&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;for shared-memory management between different Python processes, and&lt;/div&gt;
+&lt;div class="line"&gt;performance improvements for the serialization of large Python objects
+(&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0574/"&gt;PEP
+574&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/cloudpipe/cloudpickle"&gt;pickle
+extensions&lt;/a&gt;). These
+performance&lt;/div&gt;
+&lt;div class="line"&gt;improvements will be leveraged by distributed data science frameworks
+such as&lt;/div&gt;
+&lt;div class="line"&gt;dask, &lt;a class="reference external" href="https://ray.readthedocs.io/en/latest/"&gt;ray&lt;/a&gt; and&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://spark.apache.org/docs/latest/api/python/index.html"&gt;pyspark&lt;/a&gt;.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Modern hardware is multi-core&lt;/em&gt;. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;efficient parallelism. This talk exposes the current state and
+advances&lt;/div&gt;
+&lt;div class="line"&gt;in Python parallelism, in order to help practitioners and developers
+take&lt;/div&gt;
+&lt;div class="line"&gt;better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Parallel computing in Python: Current state and recent advances</title><link href="https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Pierre Glaser</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Distributed Systems"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry></feed>

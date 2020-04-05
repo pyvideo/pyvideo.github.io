@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Testing Microservices: fast and with confidence</title><link>https://pyvideo.org/europython-2019/testing-microservices-fast-and-with-confidence.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A main advantage of microservices is improved developer velocity. One
+roadblock to achieving it is giving developers the confidence that their
+changes are correct and safe, which is a challenging problem in such a
+distributed architecture. Typical approaches involve relying on
+automated end- to-end testing, which is costly to set up, develop tests
+for and run.&lt;/p&gt;
+&lt;p&gt;In this talk I will explore an approach to testing that does not require
+the presence of any external dependencies (not even &amp;quot;fake&amp;quot; or &amp;quot;test
+double&amp;quot; implementations of them), but provides many of the benefits of
+an end-to-end test. Come by to learn about how we can use a downstream
+service's API specification to make sure the system under test interacts
+with it in the correct way (&amp;quot;contract testing&amp;quot;) - a key ingredient
+missing from most unit or integration test setups. We'll then go even
+further to cover testing scenarios that previously could only be covered
+with end-to-end tests: how to maintain and validate state of your
+downstream dependencies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/testing-microservices-fast-and-with-confidence.html</guid><category>Distributed Systems</category><category>Microservices</category><category>Testing</category><category>python</category></item><item><title>Type annotations with larger codebases</title><link>https://pyvideo.org/europython-2018/type-annotations-with-larger-codebases.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You’ve heard about type annotations, you know they help reduce bugs and
+improve documentation especially for large codebases, and you’ve
+attended an introductory talk or read a tutorial about using them. But
+how do you get started using them with your big, existing codebase? How
+do you make sure your colleagues will be annotating new code they write
+- or existing code they’re changing? And how do you get around some of
+the issues you might run into when using the still-beta type checker
+mypy on your codebase?&lt;/p&gt;
+&lt;p&gt;This talk will start where the typical introductory Python type
+annotation talks end and discuss the real-world challenges when starting
+to annotate types with an existing codebase of tens or hundreds of
+thousands of lines of code. I’ll walk you through best practices learned
+from doing just that at Yelp, telling you about some of the roadblocks
+we hit (and how we got past them).&lt;/p&gt;
+&lt;p&gt;We’ll also take a look at: - how you can get the most out of type
+annotations even with non-annotated third-party libraries - how to deal
+with code patterns that currently don’t always work well with
+annotations - when the only way to get proper type checking is through
+refactoring your code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:europython-2018/type-annotations-with-larger-codebases.html</guid></item><item><title>Type annotations with large(r) codebases</title><link>https://pyvideo.org/pycon-russia-2018/type-annotations-with-larger-codebases.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Stephan Jaensch&lt;/strong&gt; , Yelp&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pycon.ru/2018/en/program/content/Jaensch/"&gt;**Type annotations with large(r)
+codebases**&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You've heard about type annotations, you know they help reduce bugs and
+improve documentation especially for large codebases, and you've
+attended an introductory talk or read a tutorial about using them. But
+how do you get started using them with your big, existing codebase? How
+do you make sure your colleagues will be annotating new code they write
+- or existing code they're changing? And how do you get around some of
+the issues you might run into when using the still-beta type checker
+mypy on your codebase?&lt;/p&gt;
+&lt;p&gt;This talk will start where the typical introductory Python type
+annotation talks end and discuss the real-world challenges when starting
+to annotate types with an existing codebase of tens or hundreds of
+thousands of lines of code. I'll walk you through best practices learned
+from doing just that at Yelp, telling you about some of the roadblocks
+we hit (and how we got past them). We'll also take a look at:&lt;/p&gt;
+&lt;p&gt;— how you can get the most out of type annotations even with
+non-annotated third-party libraries&lt;/p&gt;
+&lt;p&gt;— how to deal with decorators and other things that currently don't
+always work well with annotations&lt;/p&gt;
+&lt;p&gt;— when the only way to get proper type checking is through refactoring
+your code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Fri, 22 Jun 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-06-22:pycon-russia-2018/type-annotations-with-larger-codebases.html</guid></item><item><title>Fixture factories for faster end-to-end tests</title><link>https://pyvideo.org/europython-2017/fixture-factories-for-faster-end-to-end-tests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When developing and maintaining many different services, unit testing
+is not enough to make sure your code works in production. By now,
+many teams doing SOA (service-oriented architectures) have a set of
+end-to-end tests that cover critical workflows to make sure these
+work. For these tests, all of the utilized services need to have the
+proper test fixture data in their datastores. This often leads to
+developers having to deal with raw datastore data (like JSON or SQL)
+for these tests, making the authoring of those tests very slow,
+tedious, and error-prone.&lt;/p&gt;
+&lt;p&gt;This talk is going to discuss several approaches we tried at Yelp to
+generating these fixture data in a quicker, developer-friendly and
+more correct way.&lt;/p&gt;
+&lt;p&gt;The main part of the talk will be a deep-dive into what fixture
+factories are, how to implement them and how to integrate them with
+pytest, the leading Python testing framework. I'll show you several
+other benefits this approach has over writing raw fixture data and
+how this leads to more maintainable and easier to adapt code. We'll
+also explore how you can then run your tests in parallel, cutting
+down runtime drastically.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-13:europython-2017/fixture-factories-for-faster-end-to-end-tests.html</guid></item><item><title>Building mobile APIs with services at Yelp</title><link>https://pyvideo.org/europython-2015/building-mobile-apis-with-services-at-yelp.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stephan Jaensch - Building mobile APIs with services at Yelp
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;At Yelp, we ship code multiple times a day and have maintained this
+pace as our team has grown to 300+ and our codebase to several million
+lines of Python code. This talk explores the pain points we
+experienced along the ways, how our service-oriented architecture
+alleviates them, and the infrastructure we built to develop, test, and
+deploy in this highly-distributed environment. As a case study, we’ll
+be looking at the backend powering the new Yelp Business Owner Android
+and iOS apps.&lt;/p&gt;
+&lt;p&gt;At the start, most of the development at Yelp occurred in a single,
+monolithic web application, creatively named “yelp-main” (naming is
+hard!). As the company grew, our developers were spending increasing
+amounts of time trying to ship code. After recognizing this pain
+point, we started experimenting with a service oriented architecture
+to scale the development process, and so far it’s been a resounding
+success. Over the course of the last three years, we’ve gone from
+writing our first service to having over seventy production services.
+Along the way, we’ve dabbled with Docker containers, Pyramid,
+SQLAlchemy, uWSGI, gevent, and virtualenv in an effort to build the
+next-generation service platform for our engineers.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Thu, 06 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-06:europython-2015/building-mobile-apis-with-services-at-yelp.html</guid></item><item><title>Building Service interfaces with OpenAPI / Swagger</title><link>https://pyvideo.org/europython-2016/building-service-interfaces-with-openapi-swagger.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stephan Jaensch - Building Service interfaces with OpenAPI / Swagger
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/building-service-interfaces-using-OpenAPI"&gt;https://ep2016.europython.eu//conference/talks/building-service-interfaces-using-OpenAPI&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Ever wondered how to keep track of all of your services and their
+APIs? I'm going to explore how to build your Python services with
+OpenAPI/Swagger and how it helps you solve problems like communication
+between services, request and response validation, and documentation
+of your API. I'll also discuss some challenges you might face when
+running Swagger in production, gathered from over a year of heavy
+usage at Yelp.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Implementing a service-oriented architecture (SOA) is a proven way to
+split up large monolithic codebases and to scale development when your
+organization grows to hundreds or thousands of engineers. I'm going to
+explore how to build and document your services with OpenAPI (formerly
+known as Swagger). I’ll discuss the benefits, how to generate a
+beautiful HTML documentation for your API, and how you can
+effortlessly make calls to your services. In the second part of the
+talk I'll discuss and tell you how to overcome challenges you might
+face when running OpenAPI in production, gathered from over a year of
+heavy usage at Yelp for hundreds of services.&lt;/p&gt;
+&lt;p&gt;The OpenAPI initiative is a cross-vendor consortium focused on
+creating, evolving and promoting a vendor neutral description format.
+As an open governance structure under the Linux Foundation, its
+members include Google, IBM, Atlassian and PayPal.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-05:europython-2016/building-service-interfaces-with-openapi-swagger.html</guid></item></channel></rss>

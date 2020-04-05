@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate><item><title>Hora de sacar la basura: garbage collector</title><link>https://pyvideo.org/pycon-es-2018/hora-de-sacar-la-basura-garbage-collector.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Uno de los motivos por los que programar en Python es cómodo y sencillo es que no tenemos que preocuparnos por el tiempo de vida de nuestros objetos. Es decir, una vez que deja de ser necesaria, una variable desaparece de la memoria “magicamente”. Esto puede —erróneamente— llevarnos a creer que no es necesario preocuparnos por lo que ocurre entre bastidores.&lt;/p&gt;
+&lt;p&gt;Nada más alejado de la realidad: conocer cómo Python gestiona la memoria es fundamental en ciertos escenarios, y desconocer qué está ocurriendo puede tener consecuencias tan importantes como desagradables. Por ejemplo, si nuestros programas gestionan una gran cantidad de datos al mismo tiempo o lanzan múltiples processos en paralelo esto deja de ser una cuestión teórica y convierte en algo que a nosotros, mentes pragmáticas, también nos importa.&lt;/p&gt;
+&lt;p&gt;Python utiliza para manejar la memoria una estrategia combinada consistente en dos intimidantes términos: (1) conteo de referencias y (2) colector de basura generacional. Entender cómo ambos sistemas trabajan juntos y cuáles son las limitaciones de cada uno nos ayudará a entender aspectos específicos de nuestra programación del día a día. Ejemplos: (a) qué ocurre con la memoria exactamente cuando hay multiples hilos o procesos, (b) qué pasa si nuestras estructuras de datos se contienen a si mismas, un escenario posible al trabajar con grafos, o (c) qué hace Python con los valores temporales que se producen, sin ir más lejos, al sumar dos números o dos arrays de NumPy.&lt;/p&gt;
+&lt;p&gt;Aunque estos conceptos suelen considerarse avanzados y difíciles de entender, veremos que no es así. Éste no es un asunto meramente teórico ni es difícil encontrar sus aplicaciones prácticas. En esta charla explicaremos por qué es algo que debe importarnos y hablaremos de cómo aplicar los conocimientos que hemos adquirido a problemas específicos.&lt;/p&gt;
+&lt;p&gt;Resumen esquemático de la charla:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Repaso express: qué son las variables en Python&lt;ol class="arabic"&gt;
+&lt;li&gt;Variables como etiquetas&lt;/li&gt;
+&lt;li&gt;Variables vs objetos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Qué es la recoleción de basura.&lt;/li&gt;
+&lt;li&gt;Conteo por referencias&lt;ol class="arabic"&gt;
+&lt;li&gt;Qué problema resuelve.&lt;/li&gt;
+&lt;li&gt;Problemas del conteo por referencia.&lt;ol class="arabic"&gt;
+&lt;li&gt;Hilos&lt;/li&gt;
+&lt;li&gt;Ciclos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Recolector de basura para ciclos&lt;ol class="arabic"&gt;
+&lt;li&gt;Las tres generaciones.&lt;/li&gt;
+&lt;li&gt;El algoritmo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Aplicaciones prácticas y conocimiento útil.&lt;ol class="arabic"&gt;
+&lt;li&gt;Que ocurre al implementar &lt;tt class="docutils literal"&gt;__del__()&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Copy-on-write.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;__slots__&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Hilos versus procesos.&lt;/li&gt;
+&lt;li&gt;Extras&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo</dc:creator><pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-07:pycon-es-2018/hora-de-sacar-la-basura-garbage-collector.html</guid></item><item><title>Python Heaps-ters</title><link>https://pyvideo.org/pycon-es-2018/python-heaps-ters.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La documentación de Python del &lt;a class="reference external" href="https://docs.python.org/3/library/heapq.html"&gt;módulo heaqp&lt;/a&gt; nos da el ejemplo de que
+pueden usarse para implementar colas de prioridad. Más allá de eso
+encontramos escasa información acerca de sus aplicaciones prácticas y
+—quizá— demasiados detalles acerca de invariantes y &lt;a class="reference external" href="https://docs.python.org/3/library/heapq.html#theory"&gt;la teoría&lt;/a&gt; detrás
+de esa estructura de datos llamada &lt;em&gt;heap&lt;/em&gt;. Es fácil echar un vistazo
+superficial y encogerse de hombros, sin haber entendido mucho y con la
+sensación de que éste no es un módulo que vayamos a necesitar algún día.&lt;/p&gt;
+&lt;p&gt;Pero no es así. Las heaps importan, y mucho: del mismo modo que es
+razonable afirmar que las &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Hash_table"&gt;tablas hash&lt;/a&gt; (conocidas en Python como
+diccionarios) son la estructura de datos más importante conocida por la
+humanidad, la &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Binary_heap"&gt;heap&lt;/a&gt; se encuentra fácilmente entre las tres más
+importantes. Nos permiten acceder en todo momento al mayor (o menor)
+elemento en tiempo constante, O(1), mientras que insertar elementos
+ocurre en tiempo logarítmico, O(log n). Las ramificaciones de estas
+propiedades son inmensas, y —sin ir más lejos— es lo que subyace en el
+algoritmo de ordenación &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Heapsort"&gt;heapsort&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Problemas que de otra forma serían intratables (ejemplo: “¿cuáles son
+los &lt;em&gt;n&lt;/em&gt; menores elementos de este fichero con diez billones de
+enteros?”) tienen una solución elegante y de apenas unas líneas de
+código cuando podemos usar una heap. En esta charla vamos a incorporar
+esta estructura de datos a nuestro arsenal, entender cómo funciona y
+aprender a reconocer cuándo es la herramienta adecuada para enfrentarnos
+a nuestro problema.&lt;/p&gt;
+&lt;p&gt;Resumen esquemático de la charla:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Qué es una heap:&lt;ul&gt;
+&lt;li&gt;Inserción: O(log n)&lt;/li&gt;
+&lt;li&gt;Consultar la raíz: O(1)&lt;/li&gt;
+&lt;li&gt;Borrado: O(log n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Por qué importan y qué problema resuelven.&lt;/li&gt;
+&lt;li&gt;Aplicaciones de una heap:&lt;ul&gt;
+&lt;li&gt;Los &lt;em&gt;n&lt;/em&gt; menores elementos de un conjunto.&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Heapsort"&gt;Heapsort&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Medianas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Reconocer cuándo hemos de usar una heap.&lt;/li&gt;
+&lt;li&gt;Dos opciones para la implementación:&lt;ul&gt;
+&lt;li&gt;Árbol binario.&lt;/li&gt;
+&lt;li&gt;Vector.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Heaps en Python: el módulo &lt;a class="reference external" href="https://docs.python.org/3/library/heapq.html"&gt;heapq&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Idea: encapsularlo en nuestra propia clase.&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víctor Terrón</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:pycon-es-2018/python-heaps-ters.html</guid></item><item><title>Metaclases: exactamente qué y (sobre todo) por qué</title><link>https://pyvideo.org/pycon-es-2017/metaclases-exactamente-que-y-sobre-todo-por-que.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;El objetivo de estar charla es abordar un problema que parece ser desafortunadamente común entre el material disponible sobre las metaclases: por más que nos lo expliquen nos sigue sin quedar claro qué son las metaclases… o lo olvidamos a los diez minutos. Los ejemplos que se usan para ilustrar esa cosa tan arcana son casi inevitablemente crípticos, solucionando de forma compleja problemas demasiado rebuscados y que no nos hemos encontrado jamás en nuestro día a día. ¿Tienen realmente alguna utilidad práctica, o son sólo una excusa usada por ponentes para parecer r/iamverysmart? ¿Por qué deberían importarme a mí, con mi nivel medio de Python?&lt;/p&gt;
+&lt;p&gt;Lo que vamos a hacer en esta charla es empezar describiendo un problema: queremos implementar el mismo comportamiento (por ejemplo, logging) en todos los métodos de mi clase. Para ello tenemos varias opciones, en creciente orden de complejidad: (a) copiar y pegar la misma línea de código en todos los métodos, (b) usar un decorador en cada método y (c) usar un decorador de clase. Pero ninguna solución es ideal, y la falta de elegancia provoca lamentos y lágrimas. Es ante un problema así cuando las metaclases tienen una función, y agradeceremos que se encuentren en nuestro repertorio de habilidades de Python.&lt;/p&gt;
+&lt;p&gt;Entendiendo por qué nos hacen falta, procedereremos a explicar cómo crear una: primero repasando brevemente la función de __new__() e __init__() para clases normales, y a continuación mostrando cómo hacer lo mismo con las metaclases. Ilustraremos esto con varios ejemplos, usando metaclases para añadir funcionalidad de auto-logging o compilación just-in-time, como hace Numba, a nuestro código. Por último, y a modo de curiosidad, continuaremos hacia mayores niveles de abstracción, aprendiendo qué son los hooks de metaclases y para qué son útiles los ficheros .pth.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Sat, 23 Sep 2017 17:00:00 +0200</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-09-23:pycon-es-2017/metaclases-exactamente-que-y-sobre-todo-por-que.html</guid><category>metaclass</category></item><item><title>Los closures que emocionaron a Spielberg</title><link>https://pyvideo.org/pycon-es-2016/los-closures-que-emocionaron-a-spielberg.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;De los creadores de «Los titulares sensacionalistas que emocionaron a Spielberg», esta charla tiene como objetivo que la audiencia se familiarice con el casi eternamente esquivo concepto de los «closures» (o «cierres»). Éste es un término con el que en ocasiones nos cruzamos en charlas o por Internet y ante el cual nuestro primer impulso es, aterrados, cerrar la pestaña de nuestro navegador. Pero, quizás muy a nuestro pesar, los «cierres» forman parte de nuestro día a día, y merece la pena aprender a desenvolvernos con ellos aunque sólo sea para —por fin— entender qué es exactamente ese error de UnboundLocalError que nos hemos encontrado a veces… aunque la variable existe.&lt;/p&gt;
+&lt;p&gt;Para ello, seguiremos un itinerario que va progresivamente desde lo más fácil y familiar a lo más difícil y específico. Empezaremos por introducir algunos problemas sencillos que se suelen presentar en escenarios de programación comunes, entendiendo cuál es su relación con ese arcano y misterioso ente que son los closures . Una vez hayamos comprendido su definición, pasaremos a dar algunos ejemplos prácticos que nos ayuden a asentar el concepto permanente e irreversiblemente en nuestras mentes. También explicaremos su relación con otros componentes del ecosistema Python, incluyendo decoradores y el módulo functools. Por último, mostraremos algunos ejemplos ignotos en los que los primigenios usaron closures para optimizar parte del código de la librería estándar.&lt;/p&gt;
+&lt;p&gt;Resumen esquemático de la charla:&lt;/p&gt;
+&lt;p&gt;Scope de las variables vars() / locals() / globals() Qué es una closure Motivación: por qué se usan Ejemplos practicos Decoradores Closures y functools Optimizacion de codigo.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://2016.es.pycon.org/"&gt;http://2016.es.pycon.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo</dc:creator><pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-09:pycon-es-2016/los-closures-que-emocionaron-a-spielberg.html</guid></item><item><title>Cuarenta características de Python que quizás no conoces</title><link>https://pyvideo.org/pycon-es-2013/cuarenta-caracteristicas-de-python-que-quizas-no-conoces.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Autor: Víctor Terrón&lt;/p&gt;
+&lt;p&gt;Track: Produban (Básico)&lt;/p&gt;
+&lt;p&gt;Esta charla presenta cuarenta aspectos interesantes de Python que con los años he ido descubriendo que mucha gente, incluso programadores veteranos, no conoce — detalles como la mejor forma de intercambiar variables u ordenar una lista, el operador ternario, relanzamiento de excepciones, joyas ocultas en módulos como collections o functools, o por qué 0.1 + 0.2 == 0.3 es False. La mayoría son muy prácticos y otros curiosidades de escasa o nula utilidad en el día a día, pero todos son conceptos sencillos de entender y que merece la pena tener presente.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víctor Terrón</dc:creator><pubDate>Wed, 29 Jan 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-01-29:pycon-es-2013/cuarenta-caracteristicas-de-python-que-quizas-no-conoces.html</guid></item><item><title>Clases en Python: Lo estas haciendo mal</title><link>https://pyvideo.org/pycon-es-2014/clases-en-python-lo-estas-haciendo-mal.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Esta charla explora diferentes conceptos y técnicas fundamentales para hacer idiomáticas y elegantes nuestras clases programadas en Python. La mayoría de nosotros utiliza la orientación a objetos, pero desconocer qué hace exactamente el método mágico &lt;cite&gt;__new__()&lt;/cite&gt; o lo útil que resulta la función &lt;cite&gt;collections.namedtuple()&lt;/cite&gt; puede hacer que nuestro código sea innecesariamente feo o complejo. También aprenderemos detalles que pueden evitarnos más de un bug, como por ejemplo a no delegar en &lt;cite&gt;__del__()&lt;/cite&gt; la liberación de recursos, cuando esta es una tarea que debería confiarse a with, o cómo implementar correctamente &lt;cite&gt;__hash__()&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Hay también tiempo para discutir asuntos casi filosóficos, como por qué quizás deberíamos llamar a &lt;cite&gt;__init__()&lt;/cite&gt; inicializador en vez de constructor (ya que es &lt;cite&gt;__new__()&lt;/cite&gt; quien realmente crea el nuevo objeto) o cuál es en la práctica la diferencia entre &lt;cite&gt;__str__()&lt;/cite&gt; y &lt;cite&gt;__repr__()&lt;/cite&gt;, a menudo usados indistintamente.&lt;/p&gt;
+&lt;p&gt;Algunos conceptos avanzados, como qué son los descriptores o una introducción a las metaclases (esas grandes desconocidas) se exponen en la recta final, antes de cerrar con algunos ejemplos rápidos bastante útiles — como, por ejemplo, cómo podemos aplicar lo aprendido para heredar de un array de NumPy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Terrón</dc:creator><pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-06:pycon-es-2014/clases-en-python-lo-estas-haciendo-mal.html</guid></item><item><title>Lightning talks 2014-11-08 19:30</title><link>https://pyvideo.org/pycon-es-2014/lightning-talks-2014-11-08-1930.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="36%" /&gt;
+&lt;col width="64%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;Jaime Gil&lt;/td&gt;
+&lt;td&gt;Continuous Delivery para proyectos Python open source&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Victor Terrón&lt;/td&gt;
+&lt;td&gt;Usuarios finales y GitHub: evitando versiones obsoletas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Kiko Correoso&lt;/td&gt;
+&lt;td&gt;Brythonmagic&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;Miguel Camprodon, Israel Saeta&lt;/td&gt;
+&lt;td&gt;Lead Ratings&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jaime Gil</dc:creator><pubDate>Mon, 06 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-06:pycon-es-2014/lightning-talks-2014-11-08-1930.html</guid><category>lightning talks</category></item><item><title>Dijkstra es mi pastor, nada me falta</title><link>https://pyvideo.org/pycon-es-2015/dijkstra-es-mi-pastor-nada-me-falta.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;¡Python es genial! Lo escuchamos una y otra vez en cada PyCon, pero ¿por qué es tan increíble Python? A menudo se oyen argumentos como que &amp;quot;hay librerías para todo&amp;quot; o &amp;quot;las listas por comprensión&amp;quot;, pero nada de esto es específico de Python y podría aplicarse a muchos otros lenguajes de programación. En esta charla planteo que, en el fondo y como propugnaba Edsger W.Dijkstra, todo se reduce a una cuestión de elegancia y sencillez. Y, como demostración, vamos a ver una implementación del algoritmo de Dijkstra: comenzando con el críptico código que suele encontrarse por Internet y mejorándolo poco a poco, haciéndolo más Pythónico a cada paso hasta reducir el algoritmo a su más pura esencia. ¡Eso de encontrar el camino más corto en un grafo suena difícil, pero desde 1956 no lo es!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víctor Terrón</dc:creator><pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-02-02:pycon-es-2015/dijkstra-es-mi-pastor-nada-me-falta.html</guid><category>Charla Clausura</category></item><item><title>Kung Fu al amanecer con itertools</title><link>https://pyvideo.org/europython-2016/kung-fu-al-amanecer-con-itertools.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Víctor Terrón - Kung Fu al amanecer con itertools
+[EuroPython 2016]
+[19 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/kung-fu-al-amanecer-con-itertools"&gt;https://ep2016.europython.eu//conference/talks/kung-fu-al-amanecer-con-itertools&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;El módulo itertools es una de las piedras angulares de la programación
+avanzada en Python. Esta charla proporciona consejos prácticos del
+álgebra de iteradores que pueden aplicarse de forma inmediata.
+Descubrir el módulo itertools supone arrancar el velo de nuestros
+ojos, y una vez usadas funciones como &lt;cite&gt;repeat()&lt;/cite&gt;, &lt;cite&gt;takewhile()&lt;/cite&gt;,
+&lt;cite&gt;dropwhile()&lt;/cite&gt; o &lt;cite&gt;product()&lt;/cite&gt; no hay marcha atrás — es imposible volver
+al mundo de los meros mortales donde las soluciones son más complejas
+y necesitan más memoria.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;El módulo itertools es una de las piedras angulares de la programación
+avanzada en Python. Parte de la biblioteca estándar, nos ofrece un
+álgebra de iteradores que permite encadenar abstracciones de forma
+elegante, haciendo posibles soluciones sencillas a la par que más
+eficientes en su consumo de memoria.&lt;/p&gt;
+&lt;p&gt;El objetivo de esta charla es el de, ante todo, proporcionar consejos
+y lecciones claras que puedan aplicarse de forma inmediata.
+Ilustrándolo con numerosos ejemplos, los asistentes abandonarán la
+charla habiendo asimilado como mínimo varios conceptos que mejorarán
+indiscutible e irremediablemente su código. El énfasis se hará en
+mostrar casos específicos en los que una solución tradicional puede
+ser mejorada una y otra vez con funciones del módulo itertools.&lt;/p&gt;
+&lt;p&gt;Supongamos, por ejemplo, que queremos alternar indefinidamente entre
+dos valores: -1 y 1. El recién iniciado utilizaría una variable cuyo
+valor iría modificando a cada paso y el usuario medio quizás optaría
+por un generador infinito. Ambas soluciones dignas y honorables, pero
+que palidecen ante la maestría del artista marcial que que tan sólo
+necesita &lt;cite&gt;itertools.cycle()&lt;/cite&gt;. Porque el módulo itertools es así: una
+vez caído el velo de nuestros ojos y descubiertas funciones como
+&lt;cite&gt;repeat()&lt;/cite&gt;, &lt;cite&gt;takewhile()&lt;/cite&gt;, &lt;cite&gt;dropwhile()&lt;/cite&gt; o &lt;cite&gt;product()&lt;/cite&gt;, no hay marcha
+atrás. En esta charla vamos a aprender a reconocer cuándo pueden ser
+usadas, proporcionándonos en una única línea lo que para los meros
+mortales supone mucho más trabajo.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víctor Terrón</dc:creator><pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-05:europython-2016/kung-fu-al-amanecer-con-itertools.html</guid></item><item><title>Kung Fu at Dawn with Itertools</title><link>https://pyvideo.org/europython-2016/kung-fu-at-dawn-with-itertools.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Víctor Terrón - Kung Fu at Dawn with Itertools
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/kung-fu-at-dawn-with-itertools"&gt;https://ep2016.europython.eu//conference/talks/kung-fu-at-dawn-with-itertools&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The itertools module is one of the cornerstones of advanced
+programming in Python. This talk offers practical advice about
+iterator algebra that can be put into practice immediately.
+Discovering the itertools module means taking the veil from our eyes,
+and once we use functions such as repeat(), takewhile(), dropwhile()
+or product(), there is no return — it is impossible to come back to
+the world of the mere mortals, where solutions are more complex and
+need more memory.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;The itertools module is one of the cornerstones of advanced
+programming in Python. Part of the standard library, it provides an
+iterator algebra that allows us to elegantly chain abstractions,
+enabling solutions that are both simpler and more memory efficient.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to offer practical advice and clear lessons
+that can be immediately put into practice. Illustrating it with
+numerous examples, attendees will leave having assimilated at least
+several concepts that will improve their code undeniably and
+irremediably. Emphasis will be on showing specific cases where a
+traditional solution can be overhauled over and over with functions
+from the itertools module.&lt;/p&gt;
+&lt;p&gt;Let’s say, for example, that we want to alternate indefinitely between
+two values: -1 and 1. The novice would use a variable, updating its
+value at each step, and the average user would maybe opt for an
+endless generator. Both are worthy and honorable solutions, but they
+pale before the mastery of the martial artist who only needs
+itertools.cycle(). Because that is the nature of the itertools module:
+once the veil falls from our eyes and we come across functions such as
+repeat(), takewhile(), dropwhile() or product(), there is no return.
+In this talk we will learn to identify when they can be used,
+accomplishing with a single line of code what for the mere mortals
+takes much more effort.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víctor Terrón</dc:creator><pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-28:europython-2016/kung-fu-at-dawn-with-itertools.html</guid></item></channel></rss>

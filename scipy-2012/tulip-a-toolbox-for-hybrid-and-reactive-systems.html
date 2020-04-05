@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; TuLiP: a toolbox for hybrid and reactive systems research</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2012.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2012.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="TuLiP: a toolbox for hybrid and reactive systems research" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2012/tulip-a-toolbox-for-hybrid-and-reactive-systems.html" />
+    <meta property="og:image" content="https://i2.ytimg.com/vi/AprLua-TIXs/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i2.ytimg.com/vi/AprLua-TIXs/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="General" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2012/tulip-a-toolbox-for-hybrid-and-reactive-systems.html" rel="bookmark"
+         title="Permalink to TuLiP: a toolbox for hybrid and reactive systems research">TuLiP: a toolbox for hybrid and reactive systems research
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2012-07-19T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 19 July 2012
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/richard-m-murray.html">Richard M. Murray</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/scott-c-livingston.html">Scott C. Livingston</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+    <li class="" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://s3.us.archive.org/nextdayvideo/enthought/scipy_2012/TuLiP_a_toolbox_for_hybrid_and.mp4?Signature=jHwzNH0JYM75lVn8tBMA7WgqM%2FM%3D&Expires=1346383122&AWSAccessKeyId=FEWGReWX3QbNk0h3" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AprLua-TIXs" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>We present a toolbox for the creation and study of controllers for
+hybrid systems. It contains modules for</p>
+<blockquote>
+<ul class="simple">
+<li>working with n-dimensional polytopes,</li>
+<li>refining continuous state space partitions to satisfy
+reachability properties,</li>
+<li>synthesizing, manipulating, and visualizing finite automata as
+winning strategies for a class of temporal logic-based games,</li>
+<li>simulating hybrid executions, and</li>
+<li>reading and writing problem solutions to an XML format.</li>
+</ul>
+</blockquote>
+<p>The toolbox is named TuLiP (for &quot;Temporal Logic Planning&quot;) and written
+almost entirely in Python, making critical use of NumPy, SciPy, CVXOPT,
+and matplotlib. While software for hybrid systems research is commonly
+written in Matlab scripts or otherwise requires the end-user to build
+from source for her particular platform, TuLiP requires neither. For a
+standard scientific Python environment, the only additional library may
+be CVXOPT. Code (re)use and experimentation are easy, and because of
+this, TuLiP has provided a natural basis for further research and
+development.</p>
+<p>Source code and documentation are currently available at <a class="reference external" href="http://tulip-control.sourceforge.net">http://tulip-
+control.sourceforge.net</a></p>
+<p>In this talk we will describe the problem domain addressed by TuLiP,
+various use cases, and lessons learning in the Python implementation. We
+shall include a full example making use of all components and show ways
+that individual modules are useful more broadly. Major items of the talk
+will be</p>
+<blockquote>
+<ol class="arabic simple">
+<li>related work, and the paucity of Python use in hybrid control
+research, which we argue is a matter of inheritance rather than
+best practices;</li>
+<li>overview of the type of hybrid systems represented in TuLiP and
+relevance to other fields;</li>
+<li>summary of the major steps going from problem statement to
+solution;</li>
+<li>using only the &quot;polytope computations&quot; module;</li>
+<li>using only &quot;discrete reactive synthesis&quot; related modules, with a
+brief description about temporal logic synthesis to provide
+background for those not working on computer aided verification;</li>
+<li>snippets about recent research using and building on TuLiP; and</li>
+<li>discussion about the Python-based implementation and lessons
+learned.</li>
+</ol>
+</blockquote>
+<p>For the last item, we will describe challenges faced while developing
+TuLiP, given its role of &quot;stitching together&quot; several external tools,
+e.g., Gephi &lt;<a class="reference external" href="http://gephi.org/">http://gephi.org/</a>&gt; for large graph visualization and gr1c
+&lt;<a class="reference external" href="http://scottman.net/2012/gr1c">http://scottman.net/2012/gr1c</a>&gt; for game solving. We will also touch
+on liberation from a Matlab-only tool (Mult- Parametric Toolbox; see
+<a class="reference external" href="http://control.ee.ethz.ch/~mpt/">http://control.ee.ethz.ch/~mpt/</a>), achieved by creating our own Python
+module for working with polytopes, using NumPy and CVXOPT for
+computations and matplotlib for visualization.</p>
+<p>A tool paper describing an earlier version of TuLiP was presented at the
+conference Hybrid Systems: Computation and Control (HSCC) in April 2011.
+There have since been substantial additions and improvements.
+Furthermore, a broader audience can be reached at SciPy 2012, with new
+opportunity to address designs issues likely shared by other scientific
+Python developers.</p>
+<p>Development of TuLiP has been supported in part by the AFOSR through the
+MURI program, the Multiscale Systems Center (MuSyC) and the Boeing
+Company.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2012.html">SciPy 2012</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="http://s3.us.archive.org/nextdayvideo/enthought/scipy_2012/TuLiP_a_toolbox_for_hybrid_and.mp4?Signature=jHwzNH0JYM75lVn8tBMA7WgqM%2FM%3D&Expires=1346383122&AWSAccessKeyId=FEWGReWX3QbNk0h3" rel="external">MP4</a>, <a href="http://youtube.com/watch?v=AprLua-TIXs" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/general/">General</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://control.ee.ethz.ch/">
+http://control.ee.ethz.ch/                </a></li><li><a href="http://gephi.org/\">
+http://gephi.org/\                </a></li><li><a href="http://scottman.net/2012/gr1c\">
+http://scottman.net/2012/gr1c\                </a></li><li><a href="http://tulip-">
+http://tulip-                </a></li><li><a href="http://tulip-control.sourceforge.net">
+http://tulip-control.sourceforge.net                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2012/videos/tulip-a-toolbox-for-hybrid-and-reactive-systems.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

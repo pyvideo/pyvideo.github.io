@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_nfs.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-04-08T00:00:00+00:00</updated><entry><title>PostgreSQL su NFS: miti e verità</title><link href="https://pyvideo.org/pycon-italia-2017/postgresql-su-nfs-miti-e-verita.html" rel="alternate"></link><published>2017-04-08T00:00:00+00:00</published><updated>2017-04-08T00:00:00+00:00</updated><author><name>Jonathan Battiato</name></author><id>tag:pyvideo.org,2017-04-08:pycon-italia-2017/postgresql-su-nfs-miti-e-verita.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abbiamo avuto l’occasione di lavorare alla richiesta di un cliente, di
+valutare in maniera obiettiva la possibilità di basare un database
+PostgreSQL su Network File System. Sono stati scritti molti articoli a
+riguardo, ma quando si ha l’opportunità di mettere in pratica questa
+configurazione in prima persona, ci si rende conto che ancora molto non
+è stato documentato. Le prestazioni di NFS possono essere molto buone,
+ma si abbassano notevolmente quando si inseriscono vincoli di
+affidabilità. Una soluzione può essere quella di basare PostreSQL su 2
+partizioni NFS, una per i dati e una per gli xlog, in modo distinguere
+una configurazione per un rapido accesso ai dati e una con maggiore
+affidabilità per le scritture consistenti dei WAL. In questo talk vorrei
+sottoporre la mia personale esperienza esponendo quali sono stati i test
+effettuati per considerare PostgreSQL su NFS un’opzione molto
+interessante, sfatando miti e constatando fatti.&lt;/p&gt;
+</summary><category term="nfs"></category><category term="postgresql"></category></entry></feed>

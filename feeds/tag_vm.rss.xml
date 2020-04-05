@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 05 Jul 2013 00:00:00 +0000</lastBuildDate><item><title>All-Singing All-Dancing Python Bytecode - Part 2</title><link>https://pyvideo.org/europython-2013/all-singing-all-dancing-python-bytecode-part-2.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Larry Hastings</dc:creator><pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-05:europython-2013/all-singing-all-dancing-python-bytecode-part-2.html</guid><category>interpreter</category><category>bytecode</category><category>vm</category></item><item><title>All-Singing All-Dancing Python Bytecode - Part 1</title><link>https://pyvideo.org/europython-2013/all-singing-all-dancing-python-bytecode-part-1.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Larry Hastings</dc:creator><pubDate>Wed, 03 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-03:europython-2013/all-singing-all-dancing-python-bytecode-part-1.html</guid><category>interpreter</category><category>bytecode</category><category>vm</category></item><item><title>Exploring CPython's bytecode</title><link>https://pyvideo.org/europython-2011/exploring-cpythons-bytecode.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Floris Bruynooghe - 22 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The CPython interpreter always compiles your source code to bytecode,
+usually stored in .pyc files. This bytecode is then loaded and executed
+in the CPython virtual machine.&lt;/p&gt;
+&lt;p&gt;This talk will explore the bytecode from the outside in. Starting with
+how to read a .pyc file, following the steps the interpreter takes to
+arrive and a usable python module. It then dives into the structure of
+the bytecode itself and the principles of the virtual machine, detailing
+how the VM executes this bytecode to do useful work.&lt;/p&gt;
+&lt;p&gt;Having seen all these details you should have a good idea of the various
+innards of CPython and how to manipulate these to create weird,
+wonderful, dangerous and occasional useful hacks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Floris Bruynooghe</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/exploring-cpythons-bytecode.html</guid><category>bytecode</category><category>cpython</category><category>vm</category></item><item><title>Making CPython Fast Using Trace-based Optimisations</title><link>https://pyvideo.org/europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Mark Shannon - 24 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CPython can be made faster by implementing the sort of optimizations
+used in the PyPy VM, and in my HotPy VM. All the necessary changes can
+be made without modifying the language or the API.&lt;/p&gt;
+&lt;p&gt;The CPython VM can be modified to support optimizations by adding an
+effective garbage collector and by separating the virtual-machine state
+from the real- machine state (like Stackless).&lt;/p&gt;
+&lt;p&gt;Optimizations can be implemented incrementally. Since almost all of the
+optimizations are implemented in the interpreter, all hardware platforms
+can benefit. JIT compiler(s) can then be added for common platforms
+(intel, ARM, etc.).&lt;/p&gt;
+&lt;p&gt;For more information see &lt;a class="reference external" href="http://hotpy.blogspot.com/"&gt;http://hotpy.blogspot.com/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</guid><category>cpython</category><category>jit</category><category>pypy</category><category>vm</category></item><item><title>Why is Python slow and how PyPy can help?</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--why-is-python-slow-and-how-pypy-can-h.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Why is Python slow and how PyPy can help?&lt;/p&gt;
+&lt;p&gt;Presented by Maciej Fijalkowski and Alex Gaynor&lt;/p&gt;
+&lt;p&gt;PyPy is a virtual machine for Python, featuring an advanced just in time
+compiler, which can deliver exceptional performance. This talk is going
+to be a deep dive into what exactly makes Python such a hard language to
+optimize, how PyPy is organized, and what optimizations our JIT can do
+(and what it can't do) for your code.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The talk will detail how a python interpreter works internally and why
+some operations are costly. We'll go through several python features,
+how they work, why they're slow in CPython and how we're fixing it.&lt;/p&gt;
+&lt;p&gt;The list of mentioned features is not exhaustive, however we will try to
+focus at least on the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Dynamic language - In Python code we have no known types, like a
+statically typed language. Even operations like &amp;quot;a + b&amp;quot; can do
+anything, unless we know more about the code, and the types it is
+operating on.&lt;/li&gt;
+&lt;li&gt;Frame introspection - Frame objects need to be allocated for every
+function call, and all local variables are stored on the frame, and
+must be accessible from further down the call stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PyPy uses a novel approach called &amp;quot;virtualizables&amp;quot; which makes it
+possible to avoid frame allocation in most common cases.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Object model - All user defined Python objects have a dictionary
+which stores their attributes, as does every type. When Python does
+an attribute lookup this requires at least two dictionary lookups.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In PyPy we use an approach similar to the one used by V8 with hidden
+classes (except more PyPy specific) called map dictionaries and other
+optimizations.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;FFI calls - Calling C from Python is costly and hard to optimize. In
+PyPy we expose C APIs to Python code via ctypes. This part explains
+how we can optimize ctypes calls.&lt;/li&gt;
+&lt;li&gt;array module - Users of CPython's array module probably know it can
+save them quite a bit of memory, however it's also slower than using
+a list, due to the overhead of boxing and unboxing on every
+operations. Here we will tie everything together and describe how the
+array module is much faster with PyPy's JIT, combining our
+optimizations to: unbox values, remove the dynamicism within traces,
+and deliver great performance.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Gaynor</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--why-is-python-slow-and-how-pypy-can-h.html</guid><category>jit</category><category>pycon</category><category>pycon2011</category><category>pypy</category><category>vm</category></item></channel></rss>

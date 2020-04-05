@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>From HTTP to Kafka-based microservices</title><link>https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wojciech Rząsa</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/from-http-to-kafka-based-microservices.html</guid><category>ASYNC / Concurrency</category><category>Communication</category><category>Distributed Systems</category></item><item><title>Software patterns for productive teams</title><link>https://pyvideo.org/europython-2019/software-patterns-for-productive-teams.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Software development is a team game.&lt;/p&gt;
+&lt;p&gt;When we want to deliver more work, one of the variables that we can
+change is the team size. But as we all know, increasing the team size
+does not automatically translate into increased productivity &amp;amp; more
+features shipped.&lt;/p&gt;
+&lt;p&gt;If things are left unmanaged, people can step on each other toes, block
+each other &amp;amp; generally decrease the overall productivity of a given
+software project.&lt;/p&gt;
+&lt;p&gt;In this talk we'll identify different problems teams can face &amp;amp; see how
+we can solve them using different strategies &amp;amp; patterns.&lt;/p&gt;
+&lt;p&gt;In the end, we want to enable the team to perform better &amp;amp; ship features
+with high confidence. We want enable the team &amp;amp; put its potential into
+building good software.&lt;/p&gt;
+&lt;p&gt;Problems we are going to cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Constant merge conflicts / working in the same files&lt;/li&gt;
+&lt;li&gt;Blocking each other on different features / Feature deadlock&lt;/li&gt;
+&lt;li&gt;Constantly switching between bugfixing &amp;amp; feature development&lt;/li&gt;
+&lt;li&gt;Constant regressions and things breaking down&lt;/li&gt;
+&lt;li&gt;Fighting with local setup &amp;amp; not being able to properly test things,
+especially when working with 3rd parties&lt;/li&gt;
+&lt;li&gt;Merge strategies &amp;amp; improving the work with git &amp;amp; GitHub&lt;/li&gt;
+&lt;li&gt;Communication between team members &amp;amp; ego fights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For each problem, we are going to propose different solutions with
+provided real-life examples from our experience &amp;amp; projects.&lt;/p&gt;
+&lt;p&gt;The examples show are going to be in the context of large Python /
+Django projects.&lt;/p&gt;
+&lt;p&gt;This talk is the natural sequel of the following talks from previous
+EuroPythons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;EuroPython 2017 - Practical Debugging - Tips, Tricks and Ways to
+think - &lt;a class="reference external" href="https://www.youtube.com/watch?v=9Ys4gCUtTh8"&gt;https://www.youtube.com/watch?v=9Ys4gCUtTh8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EuroPython 2018 - Django structure for scale and longevity -
+&lt;a class="reference external" href="https://www.youtube.com/watch?v=yG3ZdxBb1oo"&gt;https://www.youtube.com/watch?v=yG3ZdxBb1oo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radoslav Georgiev</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/software-patterns-for-productive-teams.html</guid><category>Abstractions</category><category>Best Practice</category><category>Communication</category><category>Django Projects</category><category>Management</category></item><item><title>How To Build a Python Microservice Without Losing a Job</title><link>https://pyvideo.org/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarcastic talk, sharing real-life experience on both technical and
+social aspects of doing an architecture migration to microservices
+without losing a job.&lt;/p&gt;
+&lt;p&gt;Any change in software architecture is a significant time investment.
+Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;I would like to share typical pitfalls of choosing a framework stack,
+communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</guid><category>Architecture</category><category>Best Practice</category><category>Communication</category><category>Distributed Systems</category><category>Microservices</category></item><item><title>Opt Out of Online Sexism – Open Source Activism</title><link>https://pyvideo.org/europython-2019/opt-out-of-online-sexism-open-source-activism.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;Although people of all genders can experience violence and abuse
+online, the abuse experienced by women is often sexist or misogynistic
+in nature, and online threats of violence against women are often
+sexualized and include specific references to women’s bodies. &amp;quot; -
+Amnesty International. This abuse pushes women offline, affecting their
+social well-being, representation and economic potential.&lt;/p&gt;
+&lt;p&gt;In this talk I will discuss how we plan to help resolve this with our
+browser extension, Opt Out. I will discuss the online global tragedy
+that is online sexual harassment, our idea and where we’re at with
+current implementation. I will also talk about what it’s like to build
+an open source activism project, one which aims to be lead by the
+community it’s trying to protect.&lt;/p&gt;
+&lt;p&gt;We will cover current research and results from our own engagement with
+the community, where the idea came from and challenges we have faced and
+plan to face in the future. I will also dive into the intricate world of
+natural language processing (NLP) for online harassment and talk about
+balancing state-of-the-art data science with web development in an open
+source community, one being managed by someone relatively new to tech.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Teresa Ingram</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/opt-out-of-online-sexism-open-source-activism.html</guid><category>Communication</category><category>Data Science</category><category>Open-Source</category><category>TDD</category><category>Web</category></item><item><title>Communicating Between Microservices</title><link>https://pyvideo.org/pycon-italia-2019/communicating-between-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Microservices are not just a bunch of little apps, it’s a connected
+ecosystem.&lt;/p&gt;
+&lt;p&gt;Within a monolith, code modules invoke each other simply by using
+language- level function calls, but in a microservice architecture,
+communication between components does not come for free anymore.
+Choosing not just a protocol, but a paradigm for communication between
+endpoints is considered the most tricky issue of microservice approach.&lt;/p&gt;
+&lt;p&gt;Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;Having a bunch of smooth as well as tricky microservice migrations in
+the past, I would like to share typical pitfalls of choosing a framework
+stack, communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1638"&gt;https://python.it/feedback-1638&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-04:pycon-italia-2019/communicating-between-microservices.html</guid><category>MessageQueues</category><category>microservices</category><category>HTTP</category><category>communication</category><category>architecture</category><category>websockets</category></item><item><title>Efficient Python development with small teams</title><link>https://pyvideo.org/europython-2013/efficient-python-development-with-small-teams.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marc-André Lemburg</dc:creator><pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-05:europython-2013/efficient-python-development-with-small-teams.html</guid><category>quality-assurance</category><category>project-management</category><category>business</category><category>communication</category><category>testing</category><category>principles</category><category>application-design</category><category>design</category><category>software-engineering</category><category>strategies</category><category>best-practices</category><category>architecture</category></item></channel></rss>

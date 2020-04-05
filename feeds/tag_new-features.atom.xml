@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_new-features.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>The Story of Features Coming in Python 3.8 and Beyond</title><link href="https://pyvideo.org/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Andrey Vlasovskikh</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's coming in Python 3.8? You can learn it by yourself by reading an
+excellent document [What's New in Python 3.8][1]. I'm not going to
+retell this document. Instead I'll focus on things barely described
+there or not mentioned at all:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why will the new features appear in Python 3.8 and what's the story
+behind them?&lt;/li&gt;
+&lt;li&gt;What is being discussed and developed now, but won't appear in Python
+3.8?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll share the news I learned at PyCon 2019 from the talks and
+discussions with Python core developers. I'll mention the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New syntax: &lt;tt class="docutils literal"&gt;x := expr&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f(...,&lt;/span&gt; /, &lt;span class="pre"&gt;...)&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f'{expr=}'&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New types: &lt;tt class="docutils literal"&gt;Literal&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Final&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TypedDict&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Future features of typing and async/await&lt;/li&gt;
+&lt;li&gt;New approaches to optimizing Python: sub-interpreters, mypyc&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Compiler and Interpreters"></category><category term="New Features"></category><category term="Python 3"></category><category term="Type-Hinting"></category></entry><entry><title>Dissecting tf.function to discover AutoGraph strengths and subtleties</title><link href="https://pyvideo.org/europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Paolo Galeone</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AutoGraph is one of the most exciting new features of Tensorflow 2.0: it
+allows transforming a subset of Python syntax into its portable, high-
+performance and language agnostic graph representation bridging the gap
+between Tensorflow 1.x and the 2.0 release based on eager execution.&lt;/p&gt;
+&lt;p&gt;Using AutoGraph with the &lt;tt class="docutils literal"&gt;&amp;#64;tf.fuction&lt;/tt&gt; decorator seems easy, but in
+practice, writing efficient and correctly graph-convertible code
+requires to know in detail how AutoGraph and tf.function work.&lt;/p&gt;
+&lt;p&gt;In particular, knowing how:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- A graph is created and when it is re-used;&lt;/div&gt;
+&lt;div class="line"&gt;- To deal with functions that create a state;&lt;/div&gt;
+&lt;div class="line"&gt;- To correctly use the Tensorflow &lt;tt class="docutils literal"&gt;tf.Tensor&lt;/tt&gt; object instead of
+using the Python native types to speed-up the computation;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;defines the minimum skill-set required to write correct
+graph-accelerable code.&lt;/p&gt;
+&lt;p&gt;The talk will guide you trough AutoGraph and &lt;tt class="docutils literal"&gt;tf.function&lt;/tt&gt;
+highlighting all the peculiarities that are worth knowing to build the
+right skill-set.&lt;/p&gt;
+</summary><category term="Data-Structures"></category><category term="Machine-Learning"></category><category term="New Features"></category><category term="Software Design"></category></entry></feed>

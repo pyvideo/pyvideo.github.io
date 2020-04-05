@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_daniel-b-allan.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-14T00:00:00+00:00</updated><entry><title>Multi Purpose Particle Tracking</title><link href="https://pyvideo.org/scipy-2014/multi-purpose-particle-tracking.html" rel="alternate"></link><published>2014-07-14T00:00:00+00:00</published><updated>2014-07-14T00:00:00+00:00</updated><author><name>Daniel B. Allan</name></author><id>tag:pyvideo.org,2014-07-14:scipy-2014/multi-purpose-particle-tracking.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In many scientific contexts it is necessary to identify and track
+features in video. Several labs with separate projects and priorities
+collaborated to develop a common, novice-accessible package of standard
+algorithms. The package manages optional high-performance components,
+such as numba, and interactive tools to tackle challenging data, while
+prioritizing testing and easy adoption by novices.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tracking the motion of many particles is an established technique
+[&lt;a class="reference external" href="http://dx.doi.org/10.1006/jcis.1996.0217"&gt;Crocker, J.C., Grier,
+D.G.&lt;/a&gt;], but many
+physicists, biologists, and chemical engineers still (make their
+undergraduates) do it by hand.
+&lt;a class="reference external" href="https://github.com/soft-matter/trackpy"&gt;Trackpy&lt;/a&gt;, is a flexible,
+high-performance implementation of these algorithms in Python using the
+scientific stack -- including pandas, numba, the IPython notebook, and
+mpld3 -- which scales well to track, filter, and analyze tens of
+thousands of feature trajectories. It was developed collaboratively by
+research groups at U. Chicago, U. Penn, Johns Hopkins, and others.&lt;/p&gt;
+&lt;p&gt;Researchers with very different requirements for performance and
+precision collaborate on the same package. Some original &amp;quot;magic&amp;quot; manages
+high-performance components, including numba, using them if they are
+available and beneficial; however, the package is still fully functional
+without these features. Accessibility to new programmers is a high
+priority.&lt;/p&gt;
+&lt;p&gt;Biological data and video with significant background variation can
+confound standard feature identification algorithms, and manual curation
+is unavoidable. Here, the high-performance group operations in pandas
+and the cutting-edge notebook ecosystem, in particular the interactive
+IPython tools and mpld3, enable detailed examination and discrimination.&lt;/p&gt;
+&lt;p&gt;The infrastructure developed for this project can be applied to other
+work. Large video data sets can be processed frame by frame, out of
+core. Image sequences and video are managed through an abstract class
+that treats all formats alike through a handy, idiomatic interface in a
+companion project dubbed &lt;a class="reference external" href="https://github.com/soft-matter/pims"&gt;PIMS&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A suite of over 150 unit tests with automated continuous integration
+testing has ensured stability and accuracy during the collaborative
+process. In our experience, this is an unusual but worthwhile level of
+testing for a niche codebase from an academic lab.&lt;/p&gt;
+&lt;p&gt;In general, we have lessons to share from developing shared tools for
+researchers with separate priorities and varied levels of programming
+skill and interest.&lt;/p&gt;
+</summary></entry></feed>

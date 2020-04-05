@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate><item><title>Fitting Many Dimensions into One: The Promise of Hierarchical Indices for Data Beyond Two Dimensions</title><link>https://pyvideo.org/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent versions of Pandas have warned users of the imminent deprecation
+of the Panel, Panda’s name-sake data structure for storing
+three-dimensional data. This talk will examine the tradeoffs in
+performance and interface between two types of Panel alternatives: using
+hierarchical indices in Pandas and StaticFrame, or using true
+n-dimensional arrays in NumPy or xarray.&lt;/p&gt;
+&lt;p&gt;This talk will aid those working in data science and related fields by
+examining the tradeoffs between working with data in true
+multidimensional data structures (i.e., NumPy and xarray) versus working
+with hierarchical index implementations on one- or two-dimensional data.&lt;/p&gt;
+&lt;p&gt;The immediate point of departure is Pandas imminent deprecation of the
+Panel: for Pandas users who have used the Panel, this talk will
+illustrate how to transition away from the Panel and the tradeoffs in
+Panel alternatives.&lt;/p&gt;
+&lt;p&gt;This talk will explain how hierarchical indices work by comparing two
+implementations: the Pandas MultiIndex and the StaticFrame
+IndexHierarchy. The StaticFream IndexHierarchy offers a new, independent
+implementation of hierarchical indices that deviates from Pandas in
+significant ways: the index is literally composed of other index
+objects, permitting usage of specialized index types (such as datetime
+indices), efficient memory usage of shared immutable objects, and the
+enforcement of a strict tree graph.&lt;/p&gt;
+&lt;p&gt;After demonstrating how hierarchical indices can support higher
+dimensional data in one or two-dimensional arrays, the power and
+flexibility of selecting and slicing data with hierarchical indices will
+be demonstrated.&lt;/p&gt;
+&lt;p&gt;The talk will close with performance analysis, isolating the overhead of
+using hierarchical indices over true multi-dimensional array
+representations, and comparing the performance of selection, slicing,
+grouping, and function application of hierarchical data in NumPy,
+xarray, Pandas and StaticFrame.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at both beginners, new to hierarchical indices, and
+more advanced users interested in interface design and performance
+tradeoffs. Basic familiarity with NumPy and Pandas is expected. Audience
+members will leave with a better understanding of how hierarchical
+indices work, and what tradeoffs are made when using them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-12-05:pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</guid></item><item><title>StaticFrame: An Immutable Alternative to Pandas</title><link>https://pyvideo.org/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;StaticFrame provides Pandas-like data structures that enforce
+immutability. StaticFrame narrows and refines Pandas-style interfaces,
+which, when combined with immutability, reduces opportunities for error.
+In addition, StaticFrame offers a range of new and powerful iterators
+for function application with built-in concurrency.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-23:pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</guid></item></channel></rss>

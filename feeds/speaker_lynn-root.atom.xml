@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_lynn-root.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-08T00:00:00+00:00</updated><entry><title>Advanced asyncio: Solving Real-World Production Problems</title><link href="https://pyvideo.org/pycolorado-2019/advanced-asyncio-solving-real-world-production-problems.html" rel="alternate"></link><published>2019-09-08T00:00:00+00:00</published><updated>2019-09-08T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2019-09-08:pycolorado-2019/advanced-asyncio-solving-real-world-production-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Everyone’s talking about it. Everyone’s using it. But most likely, they’re doing it wrong, just like we did. By building a simplified chaos monkey service, we will walk through how to create a good foundation for an asyncio-based service, including graceful shutdowns, proper exception handling, and testing asynchronous code. We’ll get into the hairier topics as well, covering topics like working with synchronous code, debugging and profiling, and working with threaded code. We’ll learn how to approach asynchronous and concurrent programming with Python’s asyncio library, take away some best practices, and learn what pitfalls to avoid.&lt;/p&gt;
+</summary></entry><entry><title>Advanced asyncio: Solving Real-world Production Problems</title><link href="https://pyvideo.org/europython-2019/advanced-asyncio-solving-real-world-production-problems.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/advanced-asyncio-solving-real-world-production-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and profiling, and working with
+threaded code. We’ll learn how to approach asynchronous and concurrent
+programming with Python’s asyncio library, take away some best
+practices, and learn what pitfalls to avoid.&lt;/p&gt;
+&lt;p&gt;Outline:
+(40 minutes + 5 min Q&amp;amp;A, if unable to get 45 minutes, then 30 min slot
+with no time for Q&amp;amp;A)&lt;/p&gt;
+&lt;div class="section" id="intro-2m"&gt;
+&lt;h4&gt;Intro (2m)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Speaker/company intro&lt;/li&gt;
+&lt;li&gt;Setting the context/purpose of talk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="foundations-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Foundations (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Initial setup of an asyncio service (2m)&lt;ul&gt;
+&lt;li&gt;Required boilerplate code&lt;/li&gt;
+&lt;li&gt;Inspiration from official asyncio tutorial docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making a service &lt;em&gt;actually&lt;/em&gt; concurrent (5m)&lt;ul&gt;
+&lt;li&gt;non-blocking vs concurrent&lt;/li&gt;
+&lt;li&gt;when to be concurrent vs serial&lt;/li&gt;
+&lt;li&gt;using callbacks vs awaits vs scheduling tasks (create_task) vs
+asyncio.Events&lt;/li&gt;
+&lt;li&gt;Making synchronous code asyncio-friendly (2m)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intermediate-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Intermediate (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Graceful shutdowns (3m)&lt;ul&gt;
+&lt;li&gt;What a signal handler is, why it’s needed&lt;/li&gt;
+&lt;li&gt;What signals to listen to&lt;/li&gt;
+&lt;li&gt;Gotchas of cancelling tasks, asyncio.shield + shutdown behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exception handling (3m)&lt;ul&gt;
+&lt;li&gt;Difference between top-level exception handling and handling
+within other coroutines&lt;/li&gt;
+&lt;li&gt;Avoid mistakenly swallowing/missing raised exceptions&lt;/li&gt;
+&lt;li&gt;Making use of loop.set_exception_handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making threaded code asyncio-“friendly” (3m)&lt;ul&gt;
+&lt;li&gt;Calling threaded code from coroutines (aka running within a
+ThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Calling coroutines from from threaded code (aka
+run_coroutine_threadsafe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advanced-19m-trimmed-to-15m-for-30-min-slot"&gt;
+&lt;h4&gt;Advanced (19m - trimmed to 15m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Testing asyncio code (7m)&lt;ul&gt;
+&lt;li&gt;Benefits of debug mode&lt;/li&gt;
+&lt;li&gt;How to mock coroutines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debugging an asyncio service (5m)&lt;ul&gt;
+&lt;li&gt;Reinforce debug mode&lt;/li&gt;
+&lt;li&gt;Using “tricks&amp;quot; like &lt;tt class="docutils literal"&gt;asyncio.all_tasks&lt;/tt&gt; with logging,
+&lt;tt class="docutils literal"&gt;loop.slow_callback_duration&lt;/tt&gt;, adding context/stack trace in default
+exception handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Profiling (7m)&lt;ul&gt;
+&lt;li&gt;Basic profiling (cProfile, strace) - not that different from sync
+code&lt;/li&gt;
+&lt;li&gt;Continuous profiling with 3rd party tools, i.e. github.com/what-
+studio/profiling&lt;/li&gt;
+&lt;li&gt;PyCharm’s asyncio &amp;amp; thread profiler&lt;/li&gt;
+&lt;li&gt;How to properly trace a workflow/request (e.g. for the purpose of
+distributed tracing) (to be cut if not enough time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrap-up-review-1m"&gt;
+&lt;h4&gt;Wrap up/Review (1m)&lt;/h4&gt;
+&lt;/div&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Best Practice"></category><category term="Development"></category></entry><entry><title>Advanced asyncio: Solving Real-world Production Problems</title><link href="https://pyvideo.org/pycon-us-2019/advanced-asyncio-solving-real-world-production-problems.html" rel="alternate"></link><published>2019-05-04T12:10:00+00:00</published><updated>2019-05-04T12:10:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2019-05-04:pycon-us-2019/advanced-asyncio-solving-real-world-production-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Everyone’s talking about it. Everyone’s using it. But most likely,
+they’re doing it wrong, just like we did.&lt;/p&gt;
+&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and profiling, and working with
+threaded code. We’ll learn how to approach asynchronous and concurrent
+programming with Python’s &lt;tt class="docutils literal"&gt;asyncio&lt;/tt&gt; library, take away some best
+practices, and learn what pitfalls to avoid.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>Introduce Django to your old friends</title><link href="https://pyvideo.org/europython-2013/introduce-django-to-your-old-friends.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/introduce-django-to-your-old-friends.html</id><summary type="html"></summary><category term="ldap"></category><category term="kerberos"></category><category term="integration"></category><category term="django"></category></entry><entry><title>Sink or swim: 5 life jackets to throw to New Coders</title><link href="https://pyvideo.org/europython-2013/sink-or-swim-5-life-jackets-to-throw-to-new-coders.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/sink-or-swim-5-life-jackets-to-throw-to-new-coders.html</id><summary type="html"></summary><category term="tutorial"></category></entry><entry><title>Getting more developer girls using python</title><link href="https://pyvideo.org/europython-2013/getting-more-developer-girls-using-python.html" rel="alternate"></link><published>2013-07-01T00:00:00+00:00</published><updated>2013-07-01T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-07-01:europython-2013/getting-more-developer-girls-using-python.html</id><summary type="html"></summary><category term="women"></category></entry><entry><title>asyncio in Practice: We Did It Wrong</title><link href="https://pyvideo.org/europython-2018/asyncio-in-practice-we-did-it-wrong.html" rel="alternate"></link><published>2018-07-26T00:00:00+00:00</published><updated>2018-07-26T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2018-07-26:europython-2018/asyncio-in-practice-we-did-it-wrong.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is aimed at those that have at least intermediate experience
+in Python and have played around with asynchronous Python using asyncio
+or other libraries. I want the audience to learn from my mistakes! For
+instance, how easy it is to get into “callback hell” (and how to
+avoid/get out of it), how to screw up thread safety and deadlock
+yourself, and making code async but not actually concurrent.&lt;/p&gt;
+&lt;p&gt;I’ll talk through some anti-patterns and best practices that I learned
+the hard way. This includes proper concurrency, calling coroutines from
+synchronous code, working with threads and threadsafety, properly
+shutting down an async programs, and hidden “gotchas”.&lt;/p&gt;
+</summary></entry><entry><title>The Five Eyes (Sunday Morning Keynote)</title><link href="https://pyvideo.org/pycon-ca-2017/the-five-eyes-sunday-morning-keynote.html" rel="alternate"></link><published>2017-11-19T00:00:00+00:00</published><updated>2017-11-19T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2017-11-19:pycon-ca-2017/the-five-eyes-sunday-morning-keynote.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lynn Root is a Site Reliability Engineer at Spotify; but in reality, she tends to break things rather than make them more reliable. Lynn is also a global leader of PyLadies, and the founder &amp;amp; former leader of the San Francisco PyLadies. When her hands are not on a keyboard, they are usually holding a pair of knitting needles.&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Opening Keynote</title><link href="https://pyvideo.org/pycon-singapore-2015/opening-keynote.html" rel="alternate"></link><published>2015-06-18T00:00:00+00:00</published><updated>2015-06-18T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2015-06-18:pycon-singapore-2015/opening-keynote.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An insomniac software engineer for Spotify, founder of the San Francisco Chapter of PyLadies, board member of the Python Software Foundation, and member of the Django Software Foundation.&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Keynote - How To Spy With Python</title><link href="https://pyvideo.org/kiwi-pycon-2017/keynote-how-to-spy-with-python.html" rel="alternate"></link><published>2017-12-02T09:20:00+13:00</published><updated>2017-12-02T09:20:00+13:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2017-12-02:kiwi-pycon-2017/keynote-how-to-spy-with-python.html</id><summary type="html"></summary><category term="keynote"></category></entry><entry><title>Tracing, Fast and Slow: Digging into &amp; improving your web service’s performance</title><link href="https://pyvideo.org/europython-2017/tracing-fast-and-slow-digging-into-improving-your-web-services-performance.html" rel="alternate"></link><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2017-07-11:europython-2017/tracing-fast-and-slow-digging-into-improving-your-web-services-performance.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you maintain a Rube Goldberg like service?
+&lt;a class="reference external" href="https://s-media-cache-ak0.pinimg.com/564x/92/27/a6/9227a66f6028bd19d418c4fb3a55b379.jpg"&gt;https://s-media-cache-ak0.pinimg.com/564x/92/27/a6/9227a66f6028bd19d418c4fb3a55b379.jpg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Perhaps it’s highly distributed? Or you recently walked onto a team
+with an unfamiliar codebase? Have you noticed your service responds
+slower than molasses? This talk will walk you through how to pinpoint
+bottlenecks, approaches and tools to make improvements, and make you
+seem like the hero! All in a day’s work.&lt;/p&gt;
+&lt;p&gt;The talk will describe various types of tracing a web service,
+including black &amp;amp; white box tracing, tracing distributed systems,
+as well as various tools and external services available to measure
+performance. I’ll also present a few different rabbit holes to dive
+into when trying to improve your service’s performance.&lt;/p&gt;
+</summary></entry><entry><title>Tracing, Fast and Slow: Digging into and improving your web service’s performance</title><link href="https://pyvideo.org/pycon-us-2017/tracing-fast-and-slow-digging-into-and-improving-your-web-services-performance.html" rel="alternate"></link><published>2017-05-20T00:00:00+00:00</published><updated>2017-05-20T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2017-05-20:pycon-us-2017/tracing-fast-and-slow-digging-into-and-improving-your-web-services-performance.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you maintain a &lt;a class="reference external" href="https://s-media-cache-ak0.pinimg.com/564x/92/27/a6/9227a66f6028bd19d418c4fb3a55b379.jpg"&gt;Rube
+Goldberg&lt;/a&gt;-like
+service? Perhaps it’s highly distributed? Or you recently walked onto a
+team with an unfamiliar codebase? Have you noticed your service responds
+slower than molasses? This talk will walk you through how to pinpoint
+bottlenecks, approaches and tools to make improvements, and make you
+seem like the hero! All in a day’s work.&lt;/p&gt;
+&lt;p&gt;The talk will describe various types of tracing a web service, including
+black &amp;amp; white box tracing, tracing distributed systems, as well as
+various tools and external services available to measure performance.
+I’ll also present a few different rabbit holes to dive into when trying
+to improve your service’s performance.&lt;/p&gt;
+</summary></entry><entry><title>DjangoCon EU 2013: Lynn Root - Introduce Django to your old friends</title><link href="https://pyvideo.org/djangocon-europe-2013/djangocon-eu-2013-lynn-root-introduce-django-to-your-old-friends.html" rel="alternate"></link><published>2013-05-15T00:00:00+00:00</published><updated>2013-05-15T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-05-15:djangocon-europe-2013/djangocon-eu-2013-lynn-root-introduce-django-to-your-old-friends.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Videos from DjangoCon Europe 2013 are kindly provided by Heroku, a cloud application platform -- a new way of building and deploying web apps: &lt;a class="reference external" href="http://heroku.com/"&gt;http://heroku.com/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>How to spy with Python (Keynote PyConES 2013)</title><link href="https://pyvideo.org/pycon-es-2013/how-to-spy-with-python-keynote-pycones-2013.html" rel="alternate"></link><published>2014-01-02T00:00:00+00:00</published><updated>2014-01-02T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2014-01-02:pycon-es-2013/how-to-spy-with-python-keynote-pycones-2013.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Autora: Lynn Root&lt;/p&gt;
+</summary></entry><entry><title>Diversity: We are not done yet</title><link href="https://pyvideo.org/europython-2015/diversity-we-are-not-done-yet.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/diversity-we-are-not-done-yet.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lynn Root - Diversity: We are not done yet
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;The past few years, we have made large strides to welcome more diverse
+people into our community.  You see better gender ratios in attendance
+numbers at Python conferences, the billed speakers, the amount of
+women-centric programs.  We can see the benefits of outreach.  But
+we're not done yet.&lt;/p&gt;
+&lt;p&gt;While a lot of the Python community embraces the importance of being
+diverse, we haven't taken that mindset to our workplace.  From
+recruiting, we still hear, &amp;quot;sure, we wanted to recruit women, but we
+couldn't find them&amp;quot; and &amp;quot;we only focus on quality here, not gender!&amp;quot;
+Within company cultures, we hear &amp;quot;gender equality isn't a problem
+here!&amp;quot; or &amp;quot;women don't ask for a higher salary&amp;quot; and to &amp;quot;just lean in!&amp;quot;&lt;/p&gt;
+&lt;p&gt;This talk will recount the diversity efforts of the past few years and
+quantify the effects on the Python community.  But this talk will also
+address the not-so-low-hanging fruit; the  deeper-rooted problems that
+still plague the community from inside where we work.  And it will
+talk the audience through actionable items to improve one's work place
+that welcomes more diversity.&lt;/p&gt;
+</summary></entry><entry><title>Metrics-driven development</title><link href="https://pyvideo.org/europython-2015/metrics-driven-development.html" rel="alternate"></link><published>2015-08-03T00:00:00+00:00</published><updated>2015-08-03T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2015-08-03:europython-2015/metrics-driven-development.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lynn Root - Metrics-driven development
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;At Spotify, my team struggled to be awesome.  We had a very loose
+understanding of what product/service our squad was responsible for,
+and even less so of the expectations our internal and external
+customers had for those services.  Other than “does our Facebook login
+work?”, we had no understanding of how our services we’re responsible
+for were doing.  How many users actually sign up or log in with
+Facebook? How many users have connected their Spotify account with
+their Uber account?  Do folks even use Spotify with Uber?&lt;/p&gt;
+&lt;p&gt;With a 2-month challenge period, my squad and I focused inward to
+establish those unanswered questions and to establish feedback loops
+and always-on dashboards.  This talk will tell the story of how we
+chose which metrics are important for us to focus on, what
+technologies we have used and are using, and how we’ve iterated over
+our feedback loops to fine-tune what metrics we care about.&lt;/p&gt;
+</summary></entry><entry><title>Why can't we be friends: do corporations and FOSS really mix?</title><link href="https://pyvideo.org/pycon-us-2016/lynn-root-noa-resare-why-cant-we-be-friends-do-corporations-and-foss-really-mix-pycon-2016.html" rel="alternate"></link><published>2016-05-31T00:00:00+00:00</published><updated>2016-05-31T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2016-05-31:pycon-us-2016/lynn-root-noa-resare-why-cant-we-be-friends-do-corporations-and-foss-really-mix-pycon-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speakers: Lynn Root, Noa Resare&lt;/p&gt;
+&lt;p&gt;Many folks in the Python community appreciate and contribute to Free and Open Source Software. But sometimes, your employer may not be on your side. We will present the current problem space that both community members and companies have for using and supporting FOSS. We will then walk you through arguments and solutions to help increase your company's engagement with the community.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>How to Spy with Python</title><link href="https://pyvideo.org/pydata-berlin-2014/how-to-spy-with-python.html" rel="alternate"></link><published>2014-07-26T00:00:00+00:00</published><updated>2014-07-26T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2014-07-26:pydata-berlin-2014/how-to-spy-with-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk will walk through what the US government has done in terms of
+spying on US citizens and foreigners with their PRISM program, then walk
+through how to do exactly that with Python.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: "Diversity: We're Not Done Yet"</title><link href="https://pyvideo.org/djangocon-us-2015/keynote-diversity-were-not-done-yet-by-lynn-root.html" rel="alternate"></link><published>2015-09-16T00:00:00+00:00</published><updated>2015-09-16T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2015-09-16:djangocon-us-2015/keynote-diversity-were-not-done-yet-by-lynn-root.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Keynote: &amp;quot;Diversity: We're Not Done Yet&amp;quot; by Lynn Root&lt;/p&gt;
+&lt;p&gt;Help us caption &amp;amp; translate this video!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://amara.org/v/HGQ1/"&gt;http://amara.org/v/HGQ1/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Increasing women engagement in the Python community</title><link href="https://pyvideo.org/europython-2012/increasing-women-engagement-in-the-python-communi.html" rel="alternate"></link><published>2012-07-06T00:00:00+00:00</published><updated>2012-07-06T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2012-07-06:europython-2012/increasing-women-engagement-in-the-python-communi.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] L Root - 5 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you a woman wanting to break into the engineering field? Or do you
+know any women wanting to learn how to code, but don’t know how to help
+them? Perhaps our nerdy ladies are a bit shy to ask for help. That’s
+okay! I’ll give you some tools to nudge you in the right direction. In
+this session, Iâ??ll be talking about how I increased womenâ??s
+engagement in the Python community though demonstrating how versatile
+the language is with practical projects, by creating a safe space for
+women to learn and to fail, and by encouraging involvement beyond the
+classroom.&lt;/p&gt;
+</summary></entry><entry><title>For lack of a better name(server): DNS Explained</title><link href="https://pyvideo.org/europython-2014/for-lack-of-a-better-nameserver-dns-explained-0.html" rel="alternate"></link><published>2014-07-23T00:00:00+00:00</published><updated>2014-07-23T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2014-07-23:europython-2014/for-lack-of-a-better-nameserver-dns-explained-0.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;You've deployed! But your friends can't see it - what's wrong? I'm
+betting DNS. Maybe you've fixed a couple of entries, point some records
+to hostnames, waited patiently for new domains to resolve only to notice
+your nameservers are incorrect. But what actually goes on with DNS? Come
+to this talk to find out how DNS works, and how to interact and create a
+DNS with Python.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Following instructions of what entries to create where is easy enough
+when using a PaaS.&lt;/p&gt;
+&lt;p&gt;But DNS is hard – deployment issues always seem to come down to DNS.&lt;/p&gt;
+&lt;p&gt;A solid understanding of DNS will not only help with deploying your
+applications, but will also give a greater understanding of how the
+internet works, and more generally, distributed systems.&lt;/p&gt;
+&lt;p&gt;In this talk, you will learn what DNS is, how it works and how to
+communicate with it, and how Python can make both interacting and
+spinning up your own DNS server simple (I swear!).&lt;/p&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Intro (1-2m)&lt;/li&gt;
+&lt;li&gt;What DNS is (5 min)&lt;ul&gt;
+&lt;li&gt;URL -&amp;gt; IP addr, e.g. &amp;quot;phonebook&amp;quot; lookup (obligatory pun: Call me,
+Maybe?)&lt;/li&gt;
+&lt;li&gt;hierarchical system &amp;amp; resolution sequence (local DNS
+cache/resolver, ISP resolver, recursive DNS search)&lt;/li&gt;
+&lt;li&gt;popular types (primary, secondary/slave, forwarding, authoritative
+only, etc)&lt;/li&gt;
+&lt;li&gt;System components: what makes a DNS?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;How to communicate with DNS (3 min)&lt;ul&gt;
+&lt;li&gt;Protocol: UDP&lt;/li&gt;
+&lt;li&gt;Operations: CRUD&lt;/li&gt;
+&lt;li&gt;Resource records (A, AAAA, CNAME, SOA, SRV, etc)&lt;/li&gt;
+&lt;li&gt;tools: dig/nsupdate/nslookup&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Security overview (3min) (disclaimer: NOT a DNS security expert, not
+planning to get into the details here)&lt;ul&gt;
+&lt;li&gt;Server-Server, DynDNS: TSIG/GSS-TSIG&lt;/li&gt;
+&lt;li&gt;Server-Client: DNSSEC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Python + DNS (10 min)&lt;ul&gt;
+&lt;li&gt;plain UDP query in Python (no 3rd-party libraries/no magic)&lt;/li&gt;
+&lt;li&gt;Interacting with a DNS w/ Python (dnspython.py)&lt;/li&gt;
+&lt;li&gt;Sample DNS server with Twisted&lt;/li&gt;
+&lt;li&gt;&amp;quot;fake&amp;quot; demo (either local or pre-recorded screen cast) of
+querying/updating/etc of the Twisted DNS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Wrap up - resources page, github links, etc (1min)&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A - ~5 min&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>PRISM-AS-A-SERVICE: Not Subject to American Law</title><link href="https://pyvideo.org/pycon-ca-2013/prism-as-a-service-not-subject-to-american-law.html" rel="alternate"></link><published>2013-08-10T00:00:00+00:00</published><updated>2013-08-10T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-08-10:pycon-ca-2013/prism-as-a-service-not-subject-to-american-law.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;X-as-a-Service products are integral in the U.S. tech industry with
+their ability to take the pain out of server configuration, maintenance,
+provisioning, data storage and other aspects of running a server. With
+the recent outing of PRISM, a clandestine national security electronic
+surveillance program, the next desirable IT feature is &amp;quot;not subject to
+American law.&amp;quot; How can we leverage cloud-based software while
+maintaining privacy?&lt;/p&gt;
+&lt;p&gt;This talk is a look at what exactly PRISM is, how PRISM affects cloud
+services, and how best to approach securing data and preserving privacy
+within the cloud.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>Sink or swim: 5 life jackets to throw to New Coders</title><link href="https://pyvideo.org/pycon-us-2013/sink-or-swim-5-life-jackets-to-throw-to-new-code.html" rel="alternate"></link><published>2013-03-16T00:00:00+00:00</published><updated>2013-03-16T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2013-03-16:pycon-us-2013/sink-or-swim-5-life-jackets-to-throw-to-new-code.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Many want to learn to code, and many choose Python as a first language.
+You direct them to Learn Python the Hard Way, or Dive into Python.
+Great! But now what? I will present 5 digestible projects to gradually
+progress the Python learner from near drowning to a decent swimmer. The
+goal is to have new coders feeling accomplished and to continuing
+learning.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>For Lack of a Better Name(server): DNS Explained.</title><link href="https://pyvideo.org/pycon-us-2014/for-lack-of-a-better-nameserver-dns-explained.html" rel="alternate"></link><published>2014-04-12T00:00:00+00:00</published><updated>2014-04-12T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2014-04-12:pycon-us-2014/for-lack-of-a-better-nameserver-dns-explained.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;You've deployed! But your friends can't see it - what's wrong? I'm
+betting DNS. Maybe you've fixed a couple of entries, point some records
+to hostnames, waited patiently for new domains to resolve only to notice
+your nameservers are incorrect. But what actually goes on with DNS? Come
+to this talk to find out how DNS works, and how to interact and create a
+DNS with Python.&lt;/p&gt;
+</summary></entry></feed>

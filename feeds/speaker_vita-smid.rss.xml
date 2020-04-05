@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Static typing: beyond the basics of def foo(x: int) -&gt; str:</title><link>https://pyvideo.org/europython-2019/static-typing-beyond-the-basics-of-def-foox-int-str.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python community has been warming up to static typing for a few
+years now. You may have seen talks that did a great job of introducing
+the basic concepts, mypy, and high-level strategies to cover existing
+code bases.&lt;/p&gt;
+&lt;p&gt;We need to go deeper.&lt;/p&gt;
+&lt;p&gt;Let’s talk about the challenges you inevitably encounter when you try to
+type- check a large code base. One full of many moving parts, complex
+architectures, metaprogramming tricks, and interfaces with a dozen other
+packages.&lt;/p&gt;
+&lt;p&gt;Static type checking is very powerful – when you use it to maximum
+advantage and explain your code to the typechecker accurately. We will
+cover a few tools at your disposal: generics, signature overloads,
+protocols, custom mypy plug- ins, and more.&lt;/p&gt;
+&lt;p&gt;There is more than just tools, though. Behind them all are universal
+concepts valid in any language. I hope to convince you that thinking in
+terms of the type system helps you write better code…&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vita Smid</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/static-typing-beyond-the-basics-of-def-foox-int-str.html</guid><category>Static Analysis</category><category>Type-Hinting</category></item><item><title>Algorithmic trading with asyncio</title><link>https://pyvideo.org/pycon-cz-2016/algorithmic-trading-with-asyncio.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My team and I have been building a Python 3 stock trading platform
+for the past 2.5 years. We are powering a trading fund that runs a
+range of manual and automated strategies. This is a story of what we
+have learned about Asyncio, profiling, optimization, debugging, and
+operations... in a fast-moving environment where bugs actually cost
+money.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vita Smid</dc:creator><pubDate>Sat, 29 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-29:pycon-cz-2016/algorithmic-trading-with-asyncio.html</guid></item><item><title>Building an algorithmic trading platform in Python 3</title><link>https://pyvideo.org/pycon-cz-2017/building-an-algorithmic-trading-platform-in-python-3.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For the past three years, my colleagues and I have been developing
+and operating a Python system that trades in the stock market.&lt;/p&gt;
+&lt;p&gt;I am going to tell you a story of how we developed and scaled this
+platform. We made some rather good decisions, as well as many
+mistakes that everyone can learn from. Some of our code is open
+source and you can use it in your own projects.&lt;/p&gt;
+&lt;p&gt;We started with a small event-driven application built with asyncio.
+As our trading expanded, our application has grown into a multi-agent
+monolith: hundreds of modules operating in a single asyncio-managed
+process. Today, we are moving to a more distributed approach. Some
+parts of the platform run in isolated processes and communicate
+asynchronously.&lt;/p&gt;
+&lt;p&gt;I am going to show you a few challenges we have faced on this
+journey, and what they taught us about Python, asyncio, distributed
+systems, debugging, and making painful compromises. You don't need to
+know anything about trading. In fact, it turns out that these are
+mostly quite fundamental computer science problems that pop up over
+and over again, regardless of what you're building…&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Víťa travels the world, writes software and ponders on philosophy.&lt;/p&gt;
+&lt;p&gt;He likes to solve hard problems, preferably involving mathematics,
+finance and lots of data. Python has been his language of choice for
+many years and lately he's very much into latest developments like
+asyncio and type hints.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Víťa Šmíd</dc:creator><pubDate>Fri, 09 Jun 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-06-09:pycon-cz-2017/building-an-algorithmic-trading-platform-in-python-3.html</guid></item><item><title>Lightning Talks 2017-07-13</title><link>https://pyvideo.org/europython-2017/lightning-talks-2017-07-13.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks
+EuroPython 2017 - 2017-07-13 - Anfiteatro 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vitalii Vokhmin</dc:creator><pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-13:europython-2017/lightning-talks-2017-07-13.html</guid><category>lightning talks</category></item><item><title>Feeding a real-time user interface</title><link>https://pyvideo.org/europython-2017/feeding-a-real-time-user-interface.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine you have some streaming computations running on a server.
+Client programs subscribe to real-time updates, so that they may
+visualise the computations for end users.&lt;/p&gt;
+&lt;p&gt;How do you share this constantly changing server state with all
+connected clients? Sending an entire snapshot after each change is
+very inefficient, so you must implement some sort of incremental
+updates – diffs.&lt;/p&gt;
+&lt;p&gt;But how do you generate these diffs on the server? And how do you
+represent them so the clients know how to apply them to update their
+own state?&lt;/p&gt;
+&lt;p&gt;We have been working on these problems for a long time while building
+a stock trading platform in Python. I'd like to show you a couple of
+open source libraries that we developed for this purpose, and share
+our experience with tracking state and propagating it to user
+interfaces running in other processes.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vita Smid</dc:creator><pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-11:europython-2017/feeding-a-real-time-user-interface.html</guid></item></channel></rss>

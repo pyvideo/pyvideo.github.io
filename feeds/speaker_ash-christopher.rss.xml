@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 03 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>Database Sharding with Django</title><link>https://pyvideo.org/djangocon-us-2013/database-sharding-with-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Database Sharding with Django&lt;/p&gt;
+&lt;p&gt;Wednesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Django works great for single database webapps, but did you know they
+give us the tools to create webapps with sharded data right out of the
+box? This talk will go over how we leveraged Django's features to add
+sharding to our webapp infrastructure. Abstract&lt;/p&gt;
+&lt;p&gt;Topics to cover:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Why do you need to shard your data? lots of data lots of writes&lt;/li&gt;
+&lt;li&gt;What should you do before sharding?
+Scale up - throw money at it. Feature partitioning - split feature data on different databases
+Sharded databases.&lt;/li&gt;
+&lt;li&gt;How to set up multiple databases in Django tools that we used at Wave. Talk about what Django gives us right out of the box (DB Routers) How database routers work. Gotchas when using South for DB migrations.&lt;/li&gt;
+&lt;li&gt;The downsides of multi-database systems. what we lose (ForeignKeys, Transactions management, select_related(), prefetch_related())&lt;/li&gt;
+&lt;li&gt;Scaling the database via sharding. what does this mean? how do I pick a key to shard on? what makes a good and bad sharding key?&lt;/li&gt;
+&lt;li&gt;Database routers for sharding.&lt;/li&gt;
+&lt;li&gt;New tooling that needs to be written to deal with database migrations. deal with database migrations&lt;/li&gt;
+&lt;li&gt;How to interact with your data through the ORM when it's sharded.&lt;/li&gt;
+&lt;li&gt;Need to start using Globally Unique PK's go over a few different strategies used by other companies. strategy for unique ID generation in Python.&lt;/li&gt;
+&lt;li&gt;Transactions + Sharded data. transactions are only useful on same-shard&lt;/li&gt;
+&lt;li&gt;Balancing sharded data across servers we chose multiple DB's per node. make db migration a DevOps task. downsides (limited db connections).&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ash Christopher</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/database-sharding-with-django.html</guid></item><item><title>Horizontally Scaling Your Database with Django</title><link>https://pyvideo.org/pycon-ca-2012/horizontally-scaling-your-database-with-django.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;When web apps reach a certain size, often their data footprint will
+outgrow what can reasonably be stored on a single database. Scaling your
+database horizontally by adding more servers is the dream but it can be
+a daunting task. This talk outlines the process I used to add horizontal
+scaling to Wave Accounting's infrastructure.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ash Christopher</dc:creator><pubDate>Sun, 11 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-11:pycon-ca-2012/horizontally-scaling-your-database-with-django.html</guid></item><item><title>Testing Django Projects at Scale</title><link>https://pyvideo.org/pycon-ca-2013/testing-django-projects-at-scale.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tests are extremely useful to developers, but as projects get larger,
+tests can begin to get in the way of a smooth delivery pipeline. In this
+talk I present some issues I have experienced, and offer 10 pragmatic
+guidelines that may help developers maximize their test usefulness.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ash Christopher</dc:creator><pubDate>Sun, 11 Aug 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-08-11:pycon-ca-2013/testing-django-projects-at-scale.html</guid><category>talk</category></item></channel></rss>

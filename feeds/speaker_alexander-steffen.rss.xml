@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 10 Jul 2017 00:00:00 +0000</lastBuildDate><item><title>Testing microcontroller firmware with Python</title><link>https://pyvideo.org/europython-2017/testing-microcontroller-firmware-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Last year's talk (&lt;a class="reference external" href="https://ep2016.europython.eu/conference/talks/writing-unit-tests-for-c-code-in-python"&gt;https://ep2016.europython.eu/conference/talks/writing-unit-tests-for-c-code-in-python&lt;/a&gt;)
+showed you how to use CFFI (&lt;a class="reference external" href="https://cffi.readthedocs.io/"&gt;https://cffi.readthedocs.io/&lt;/a&gt;) to write unit
+tests for C code in Python. This year we will take the concept one step
+further and create integration tests covering (almost) the whole firmware
+of a microcontroller, again leveraging the power of CFFI.&lt;/p&gt;
+&lt;p&gt;But instead of running the firmware on the controller, it will be executed
+on the development machine (that is, a standard x86 architecture),
+allowing for much faster test execution, without requiring the target
+hardware. For this to work, all the hardware-dependent parts of the
+firmware code need to be replaced by Python code simulating the hardware
+functionality, so that all the firmware above this hardware abstraction
+layer can be executed unmodified.&lt;/p&gt;
+&lt;p&gt;In addition, this allows to use advanced security testing tools like
+AddressSanitizer (&lt;a class="reference external" href="https://github.com/google/sanitizers/wiki/AddressSanitizer"&gt;https://github.com/google/sanitizers/wiki/AddressSanitizer&lt;/a&gt;)
+and american fuzzy lop (&lt;a class="reference external" href="http://lcamtuf.coredump.cx/afl/"&gt;http://lcamtuf.coredump.cx/afl/&lt;/a&gt;)
+that would not be able to run directly on the microcontroller.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexander Steffen</dc:creator><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-10:europython-2017/testing-microcontroller-firmware-with-python.html</guid></item><item><title>Writing unit tests for C code in Python</title><link>https://pyvideo.org/europython-2016/writing-unit-tests-for-c-code-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alexander Steffen - Writing unit tests for C code in Python
+[EuroPython 2016]
+[21 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/writing-unit-tests-for-c-code-in-python"&gt;https://ep2016.europython.eu//conference/talks/writing-unit-tests-for-c-code-in-python&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;There are many unit testing frameworks for C out there, but most of
+them require you to write your tests in C (or C++). While there might
+be good reasons to keep your implementation in C, those hardly apply
+to the tests. So wouldn't it be nice to use all the power of Python
+and its unit testing capabilities also for your C code? This talk will
+show you how.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;There are many unit testing frameworks for C out there, but most of
+them require you to write your tests in C (or C++). While there might
+be good reasons to keep your implementation in C (for example
+execution speed or resource consumption), those hardly apply to the
+tests. So wouldn't it be nice to use all the power of Python and its
+unit testing capabilities also for your C code?&lt;/p&gt;
+&lt;p&gt;This talk will show you how to combine CFFI and pycparser to easily
+create Python unit tests for C code, without a single line of C
+anywhere in the test cases. It will also cover creating mock functions
+in Python, that can be used by the C code under test to hide external
+dependencies. Finally, we will look at some of the challenges you
+might face when trying to mix Python and C and what to do about them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexander Steffen</dc:creator><pubDate>Thu, 04 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-04:europython-2016/writing-unit-tests-for-c-code-in-python.html</guid></item></channel></rss>

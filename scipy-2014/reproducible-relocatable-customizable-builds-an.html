@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Reproducible, Relocatable, Customizable Builds and Packaging with HashDist Part1</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2014.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2014.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Reproducible, Relocatable, Customizable Builds and Packaging with HashDist Part1" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2014/reproducible-relocatable-customizable-builds-an.html" />
+    <meta property="og:image" content="https://i1.ytimg.com/vi/wviHkzk0AkY/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i1.ytimg.com/vi/wviHkzk0AkY/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="packaging" />
+    <meta name="tags" content="reproducible research" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2014/reproducible-relocatable-customizable-builds-an.html" rel="bookmark"
+         title="Permalink to Reproducible, Relocatable, Customizable Builds and Packaging with HashDist Part1">Reproducible, Relocatable, Customizable Builds and Packaging with HashDist Part1
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2014-07-09T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Wed 09 July 2014
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/andy-terrel.html">Andy Terrel</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/aron-ahmadia.html">Aron Ahmadia</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/chris-kees.html">Chris Kees</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/dag-sverre-seljebotn.html">Dag Sverre Seljebotn</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/ondrej-certik.html">Ondrej Certik</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wviHkzk0AkY" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>This talk introduces HashDist, a critical component of the scientific
+software development workflow. HashDist enables highly customizable,
+source-driven, and reproducible builds for scientific software stacks.
+HashDist builds can be made relocatable, allowing the easy
+redistribution of binaries on all three major operating systems as well
+as cloud and supercomputing platforms.</p>
+<h3>Description</h3><p>Developing scientific software is a continuous balance between not
+reinventing the wheel and getting fragile codes to interoperate with one
+another. Binary software distributions such as Anaconda provide a robust
+starting point for many scientific software packages, but this solution
+alone is insufficient for many scientific software developers. HashDist
+provides a critical component of the development workflow, enabling
+highly customizable, source-driven, and reproducible builds for
+scientific software stacks, available from both the IPython Notebook and
+the command line.</p>
+<p>To address these issues, the Coastal and Hydraulics Laboratory at the US
+Army Engineer Research and Development Center has funded the development
+of HashDist in collaboration with Simula Research Laboratories and the
+University of Texas at Austin. HashDist is motivated by a functional
+approach to package build management, and features intelligent caching
+of sources and builds, parametrized build specifications, and the
+ability to interoperate with system compilers and packages. HashDist
+enables the easy specification of &quot;software stacks&quot;, which allow both
+the novice user to install a default environment and the advanced user
+to configure every aspect of their build in a modular fashion. As an
+advanced feature, HashDist builds can be made relocatable, allowing the
+easy redistribution of binaries on all three major operating systems as
+well as cloud, and supercomputing platforms. As a final benefit, all
+HashDist builds are reproducible, with a build hash specifying exactly
+how each component of the software stack was installed.</p>
+<p>This talk will feature an introduction to the problem of packaging
+Python-based scientific software, a discussion of the basic tools
+available to scientific Python developers, and a detailed discussion and
+demonstration of the HashDist package build manager.</p>
+<p>The HashDist documentation is available from:
+<a class="reference external" href="http://hashdist.readthedocs.org/en/latest/">http://hashdist.readthedocs.org/en/latest/</a> HashDist is currently hosted
+at: <a class="reference external" href="https://github.com/hashdist/hashdist">https://github.com/hashdist/hashdist</a></p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2014.html">SciPy 2014</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=wviHkzk0AkY" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/packaging/">packaging</a>, <a href="https://pyvideo.org/tag/reproducible-research/">reproducible research</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://hashdist.readthedocs.org/en/latest/">
+http://hashdist.readthedocs.org/en/latest/                </a></li><li><a href="https://github.com/hashdist/hashdist">
+https://github.com/hashdist/hashdist                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2014/videos/reproducible-relocatable-customizable-builds-an.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

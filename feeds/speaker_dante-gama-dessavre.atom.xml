@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_dante-gama-dessavre.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-12-05T00:00:00+00:00</updated><entry><title>Open Source is Better Together: GPU Python Libraries Unite</title><link href="https://pyvideo.org/pydata-la-2019/open-source-is-better-together-gpu-python-libraries-unite.html" rel="alternate"></link><published>2019-12-05T00:00:00+00:00</published><updated>2019-12-05T00:00:00+00:00</updated><author><name>Dante Gama Dessavre</name></author><id>tag:pyvideo.org,2019-12-05:pydata-la-2019/open-source-is-better-together-gpu-python-libraries-unite.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Today, the computational limits of CPUs are being realized, and GPUs are
+being utilized to satisfy the compute demands of users. In the past,
+this has meant low level programming in C/C++, but today there is a rich
+ecosystem of open source software with Python APIs and interfaces. This
+talk will highlight the journey of developing open source software on
+top of and integrating with this ecosystem.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;PyData Ecosystem&lt;ul&gt;
+&lt;li&gt;Pandas, Numpy, SciPy, SKLearn, Dask, Cython, etc.&lt;/li&gt;
+&lt;li&gt;Highly interoperable with everything standardizing around Numpy /
+Pandas&lt;/li&gt;
+&lt;li&gt;Highly productive&lt;/li&gt;
+&lt;li&gt;Compute limited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Apache Big Data Ecosystem&lt;ul&gt;
+&lt;li&gt;Spark, Beam, Flink, Hive, Impala, etc.&lt;/li&gt;
+&lt;li&gt;Semi interoperable but very technology dependent&lt;/li&gt;
+&lt;li&gt;Semi productive&lt;/li&gt;
+&lt;li&gt;Still compute limited&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;GPUs&lt;ul&gt;
+&lt;li&gt;Thrust, CUB, NCCL, OpenUCX, etc.&lt;/li&gt;
+&lt;li&gt;Not very interoperable&lt;/li&gt;
+&lt;li&gt;Not productive&lt;/li&gt;
+&lt;li&gt;Not compute limited!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Apache Arrow&lt;ul&gt;
+&lt;li&gt;Standards for memory layouts&lt;/li&gt;
+&lt;li&gt;Cross language compatible&lt;/li&gt;
+&lt;li&gt;Potential to bridge the PyData, Apache Big Data, and GPU
+ecosystems!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;RAPIDS&lt;ul&gt;
+&lt;li&gt;Combining the compute of GPUs with the productivity of the PyData
+ecosystem with the integration and interoperability of Apache
+Arrow&lt;/li&gt;
+&lt;li&gt;Built on top of OSS C/C++ GPU Ecosystem: Thrust, CUB, NCCL,
+OpenUCX&lt;/li&gt;
+&lt;li&gt;Integrated with OSS Python GPU Ecosystem: Numba, CuPy, PyTorch&lt;/li&gt;
+&lt;li&gt;Built on top of and integrated with OSS PyData Ecosystem: Pandas,
+Numpy, Dask, Cython&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Ecosystem Interoperability&lt;ul&gt;
+&lt;li&gt;Standards / Protocols&lt;/li&gt;
+&lt;li&gt;Numpy &lt;tt class="docutils literal"&gt;__array_function__&lt;/tt&gt; protocol&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;__cuda_array_interface__&lt;/tt&gt; protocol&lt;/li&gt;
+&lt;li&gt;DLPack&lt;/li&gt;
+&lt;li&gt;User Experience&lt;/li&gt;
+&lt;li&gt;Follow the same Python APIs that users are comfortable,
+productive, and happy with&lt;/li&gt;
+&lt;li&gt;Performance&lt;/li&gt;
+&lt;li&gt;Deliver 10-1000x the performance with nearly zero code change&lt;/li&gt;
+&lt;li&gt;Scaling&lt;/li&gt;
+&lt;li&gt;Scale the same way as existing PyData ecosystem with Dask&lt;/li&gt;
+&lt;li&gt;Improve Dask for everyone with lower level communication
+acceleration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Struggles&lt;ul&gt;
+&lt;li&gt;CI&lt;/li&gt;
+&lt;li&gt;Travis-CI doesn’t cut it for GPUs and no easy to use off the shelf
+alternative&lt;/li&gt;
+&lt;li&gt;Programming Paradigm Mindset&lt;/li&gt;
+&lt;li&gt;Thinking in terms of vectorized operations instead of loops /
+iterations&lt;/li&gt;
+&lt;li&gt;Amdahl’s Law&lt;/li&gt;
+&lt;li&gt;New bottlenecks that we didn’t previously worry about&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conclusion&lt;/li&gt;
+&lt;li&gt;Q/A&lt;/li&gt;
+&lt;/ol&gt;
+</summary></entry><entry><title>RAPIDS: Open GPU Data Science</title><link href="https://pyvideo.org/scipy-2019/rapids-open-gpu-data-science.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Anthony Scopatz</name></author><id>tag:pyvideo.org,2019-07-10:scipy-2019/rapids-open-gpu-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science pipelines entirely on GPUs. RAPIDS is incubated by NVIDIA® based on years of accelerated data science experience. RAPIDS relies on NVIDIA CUDA® primitives for low-level compute optimization, GPU parallelism, and high-bandwidth memory speed through user-friendly Python interfaces. This tutorial will teach you how to use the RAPIDS software stack from Python, including cuDF (a DataFrame library interoperable with Pandas), dask-cudf (for distributing DataFrame work over many GPUs), and cuML (a machine learning library that provides GPU-accelerated versions of the algorithms in scikit-learn).&lt;/p&gt;
+</summary><category term="tutorial"></category></entry></feed>

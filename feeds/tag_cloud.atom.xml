@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_cloud.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-05-03T00:00:00+00:00</updated><entry><title>Genropy e lo storage di file in cloud</title><link href="https://pyvideo.org/pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Francesco Porcari</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Con la transizione dagli applicativi su server proprietari agli
+applicativi in cloud nasce l’esigenza di separare i dati dal loro
+storage fisico sul server dove risiede l’applicazione.&lt;/p&gt;
+&lt;p&gt;Per soddisfare questa esigenza abbiamo provveduto a implementare in
+Genropy delle API per rendere trasparente l’accesso al filesystem e
+consentire quindi di scrivere procedure che possano funzionare
+indifferentemente appoggiandosi in locale o in cloud
+(&lt;a class="reference external" href="https://aws.amazon.com/it/s3/"&gt;S3&lt;/a&gt; o simili)&lt;/p&gt;
+&lt;p&gt;Esamineremo brevemente la gestione dei servizi di Genropy e parleremo in
+particolare del servizio di Storage che consente di astrarre delle
+directory logiche su cui operare nell’applicativo, potendo decidere
+durante l’istallazione la corrispondenza con una directory locale o nel
+cloud.&lt;/p&gt;
+&lt;p&gt;Nel talk vedremo come rimpiazzare tutte le chiamate al FileSystem con le
+corrispondenti chiamate alle API del servizio di Storage. Ci
+soffermeremo sulla classe StorageNode che implementa sia i metodi
+necessari per le operazioni di scrittura, lettura e cancellazione di
+File e Directory indipendentemente dalla loro collocazione locale o in
+cloud sia un metodo che fornisce l’URL da servire per vedere o scaricare
+il contenuto statico.&lt;/p&gt;
+&lt;p&gt;Nel caso di servizi S3 o simili viene gestita automaticamente la
+gestione di un token di autorizzazione temporaneo basato sui privilegi
+dell’utente che effettua la richiesta. Questo consente di servire
+direttamente i file statici direttamente dal cloud invece di farli
+transitare dal server applicativo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1761"&gt;https://python.it/feedback-1761&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="S3"></category><category term="genropy"></category><category term="cloud"></category><category term="deploy"></category></entry><entry><title>Porting your Python web app to serverless in 30 minutes</title><link href="https://pyvideo.org/pycon-italia-2019/porting-your-python-web-app-to-serverless-in-30-minutes.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alex Casalboni</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/porting-your-python-web-app-to-serverless-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This live-coding session will guide you through the process of migrating
+an existing Flask application to AWS Lambda.&lt;/p&gt;
+&lt;p&gt;We will analyze the existing application, decompose it into individual
+microservices, adapt authentication, frontend, tests, and data model,
+and finally deploy it to the Cloud.&lt;/p&gt;
+&lt;p&gt;Throughout this step-by-step process, you will learn the benefits of
+serverless and how it will change the way you think of scalability,
+availability, security, infrastructure management, and cost
+optimization.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1620"&gt;https://python.it/feedback-1620&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="web"></category><category term="flask"></category><category term="aws"></category><category term="live-coding"></category><category term="cloud"></category></entry><entry><title>PostgreSQL on the kube</title><link href="https://pyvideo.org/pycon-italia-2019/postgresql-on-the-kube.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Marco Nenciarini</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/postgresql-on-the-kube.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kubernetes è un sistema di orchestrazione di container che permette di
+gestire il deploy, lo scaling e l’aggiornamento di una applicazione e di
+tutti i suoi componenti.&lt;/p&gt;
+&lt;p&gt;In questo talk parleremo di quali strumenti sono a disposizione per
+effettuare un deploy di un database PostgreSQL in un cluster Kubernetes.
+Inoltre vedremo come sia implementabile l’alta disponibilità e la
+disaster recovery, in maniera da avere i propri dati al sicuro e sempre
+accessibili.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1784"&gt;https://python.it/feedback-1784&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="postgresql"></category><category term="postgres"></category><category term="kubernetes"></category><category term="storage"></category><category term="containers"></category><category term="docker"></category><category term="k8s"></category><category term="cloud"></category></entry><entry><title>Python &amp; Serverless: Refactor your monolith piece by piece</title><link href="https://pyvideo.org/pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Giuseppe Vallarelli</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python &amp;amp; Serverless: Refactor your monolith piece by piece&lt;/p&gt;
+&lt;p&gt;The introduction of the Function as a Service (Serverless) technologies
+is facilitating the adoption of a microservices based architecture. In
+this talk we will discuss why this might be useful (scalability / cost
+opportunities / choosing the right tool for the job) and what strategies
+we can follow to either extract independent services or add new
+capabilities using an event driven architecture style to a django web
+application. We will end up our discussion talking about testing and
+monitoring of our freshly baked services.&lt;/p&gt;
+&lt;p&gt;In this talk we will see:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Serverless/FaaS concepts brief intro&lt;/li&gt;
+&lt;li&gt;Breaking up the monolith rationale&lt;/li&gt;
+&lt;li&gt;Extracting some modules into independent services&lt;/li&gt;
+&lt;li&gt;Adding more capabilities using events as a trigger for our FaaS&lt;/li&gt;
+&lt;li&gt;Testing &amp;amp; Monitoring&lt;/li&gt;
+&lt;li&gt;References&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The intended audience should be familiar with the concepts related to
+web applications, web apis and a smattering of serverless concepts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1591"&gt;https://python.it/feedback-1591&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="microservices"></category><category term="pyweb"></category><category term="aws"></category><category term="devops"></category><category term="django"></category><category term="lambda-functions"></category><category term="event-driven-architecture"></category><category term="cloud"></category><category term="faas"></category></entry><entry><title>Get up to speed with OpenStack! - Part 2</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-2.html" rel="alternate"></link><published>2013-07-05T00:00:00+00:00</published><updated>2013-07-05T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-05:europython-2013/get-up-to-speed-with-openstack-part-2.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>Get up to speed with OpenStack! - Part 3</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-3.html" rel="alternate"></link><published>2013-07-05T00:00:00+00:00</published><updated>2013-07-05T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-05:europython-2013/get-up-to-speed-with-openstack-part-3.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>Python in the cloud with PaaS - Part 1</title><link href="https://pyvideo.org/europython-2013/python-in-the-cloud-with-paas-part-1.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Steven Citron-Pousty</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/python-in-the-cloud-with-paas-part-1.html</id><summary type="html"></summary><category term="flask"></category><category term="mongodb"></category><category term="geospatial"></category><category term="postgresql"></category><category term="cloud"></category></entry><entry><title>Python in the cloud with PaaS - Part 2</title><link href="https://pyvideo.org/europython-2013/python-in-the-cloud-with-paas-part-2.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Steven Citron-Pousty</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/python-in-the-cloud-with-paas-part-2.html</id><summary type="html"></summary><category term="flask"></category><category term="mongodb"></category><category term="geospatial"></category><category term="postgresql"></category><category term="cloud"></category></entry><entry><title>Get up to speed with OpenStack! - Part 1</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-1.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/get-up-to-speed-with-openstack-part-1.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>I see OpenStack in your future!</title><link href="https://pyvideo.org/europython-2013/i-see-openstack-in-your-future.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/i-see-openstack-in-your-future.html</id><summary type="html"></summary><category term="cloud"></category></entry><entry><title>Marconi: Queuing and Notification service for OpenStack</title><link href="https://pyvideo.org/europython-2013/marconi-queuing-and-notification-service-for-openstack.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/marconi-queuing-and-notification-service-for-openstack.html</id><summary type="html"></summary><category term="MessageQueues"></category><category term="WSGI"></category><category term="mongodb"></category><category term="REST"></category><category term="tdd"></category><category term="application-design"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>OpenStack: A python based IaaS provider</title><link href="https://pyvideo.org/europython-2013/openstack-a-python-based-iaas-provider.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/openstack-a-python-based-iaas-provider.html</id><summary type="html"></summary><category term="scm"></category><category term="cloud"></category><category term="gerrit"></category><category term="community"></category></entry><entry><title>Serverless Computing con Python e AWS: Redux</title><link href="https://pyvideo.org/pycon-italia-2018/serverless-computing-con-python-e-aws-redux.html" rel="alternate"></link><published>2018-04-22T00:00:00+00:00</published><updated>2018-04-22T00:00:00+00:00</updated><author><name>Federico Caboni</name></author><id>tag:pyvideo.org,2018-04-22:pycon-italia-2018/serverless-computing-con-python-e-aws-redux.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Le innovazioni portate dal paradigma serverless sono ormai
+un’alternativa concreta allo sviluppo di servizi monolitici. L’idea è
+quella di poter pubblicare, nel Cloud, funzioni e pezzi di codice che
+vengono invocati automaticamente al verificarsi di certi eventi, con
+scalabilità orizzontale e senza doversi preoccupare della gestione dello
+stack tecnologico sottostante.&lt;/p&gt;
+&lt;p&gt;Nel corso di questo talk vedremo:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;la più breve introduzione al Cloud Computing del mondo;&lt;/li&gt;
+&lt;li&gt;cosa sono i microservizi e come funzione il paradigma serverless;&lt;/li&gt;
+&lt;li&gt;quali sono i casi d’uso che beneficiano di più da questo paradigma;&lt;/li&gt;
+&lt;li&gt;come costruire un’applicazione serverless in Python con i componenti
+di Amazon Web Services (Lambda, API Gateway, DynamoDB, S3…);&lt;/li&gt;
+&lt;li&gt;come coordinare l’esecuzione del nostro codice Python (AWS Step
+Functions);&lt;/li&gt;
+&lt;li&gt;come rendere tutto ancora più semplice e ripetibile con l’uso di
+framework specifici (Chalice, Serverless)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 14:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="microservices"></category><category term="CloudComputing"></category><category term="aws"></category><category term="Amazon"></category><category term="cloud"></category></entry><entry><title>Serverless SQL queries from Python with AWS Athena...or power to Data Scientists!</title><link href="https://pyvideo.org/pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html" rel="alternate"></link><published>2018-04-22T00:00:00+00:00</published><updated>2018-04-22T00:00:00+00:00</updated><author><name>Daniela Scardi</name></author><id>tag:pyvideo.org,2018-04-22:pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience&lt;/strong&gt; : beginner&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt; The goal of this talk is to explain how Athena, a
+serverless sql-like query service provided by Amazon’s AWS, combined
+with a Python library called PyAthena, made it possible to store and
+query as much data as needed with low costs, high performances and in a
+Pythonesque way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt; We found ourselves in a sticky situation: for monitoring
+and debugging reasons we had the need to store a large amount of data
+(around 200 million rows), trying not to spend the entire year’s budget
+but still managing to efficiently query the data in an interactive
+setting. With such Big Data, we could not simply resort to Data Science
+tools like Pandas and hope for the best. Our first idea was to just
+shove it all in our Postgres DB: since both data and database were
+stored on Amazon’s AWS infrastructure, all we had to do was to write
+ad-hoc import and update queries. Sadly, our poor Postgres machine took
+the hit, and was not able to respond to our requirements without greatly
+increasing our costs. Then we found out about Athena: a serverless,
+Presto-based, sql compliant database, that reads directly from S3
+folders and creates a virtual table on which you can run sql queries.
+Using Python’s Athena library (PyAthena) our query execution time
+dropped from hours to seconds, we simplified the infrastructure and
+decreased our costs, without the need to pay and maintain a dedicated
+server. In this talk we will show why Athena was the right solution for
+our use case and present its Python library with its functionalities.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 15:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Python"></category><category term="aws"></category><category term="storage"></category><category term="cloud"></category><category term="sql"></category></entry><entry><title>Writing and deploying serverless Python applications</title><link href="https://pyvideo.org/pycon-italia-2018/writing-and-deploying-serverless-python-applications.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Cesar Cardenas Desales</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/writing-and-deploying-serverless-python-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Short summary:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In this talk you’ll learn how to implement and deploy a basic serverless
+Python application.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Long summary:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Serverless is a concept that has recently raised to popularity, boosted
+by the drive to financially optimize usage of computing power in cloud
+environments while reducing maintenance efforts.&lt;/p&gt;
+&lt;p&gt;The following topics will be covered in this talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What is a serverless application?&lt;/li&gt;
+&lt;li&gt;What are the benefits of the serverless execution model?&lt;/li&gt;
+&lt;li&gt;What is AWS Lambda&lt;/li&gt;
+&lt;li&gt;How to implement a basic Python serverless application with AWS
+Lambda?&lt;/li&gt;
+&lt;li&gt;How to implement a serverless Python based Webservice using Zappa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although no live coding or deployments will be performed, the examples
+in this talk are very easy to repeat on one’s own computer.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Target audience:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Programmers of all experience levels willing to know what serverless is,
+and how to use it.&lt;/p&gt;
+&lt;p&gt;Some knowledge of Backend development would be beneficial to fully grasp
+the problem serverless architectures attempt to solve.&lt;/p&gt;
+&lt;div class="section" id="there-is-also-a-teaser-video"&gt;
+&lt;h4&gt;There is also a teaser video.&lt;/h4&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 12:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="serverless"></category><category term="aws"></category><category term="cloud"></category><category term="faas"></category></entry><entry><title>Scaling your Data infrastructure</title><link href="https://pyvideo.org/pycon-italia-2018/scaling-your-data-infrastructure.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Christian Barra</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/scaling-your-data-infrastructure.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;This talk aims to answer a few questions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What do you do when you need to move your model from your laptop to
+production?&lt;/li&gt;
+&lt;li&gt;Is &lt;tt class="docutils literal"&gt;big data == I need to use JVM&lt;/tt&gt; the right assumption?&lt;/li&gt;
+&lt;li&gt;How can I put my jupyter notebook in production?&lt;/li&gt;
+&lt;li&gt;How do you apply the best software engineering practices (testing and
+ci for example) inside your data science process?&lt;/li&gt;
+&lt;li&gt;How do you “decouple” your data scientists, developers and devops
+teams?&lt;/li&gt;
+&lt;li&gt;How do you guarantee the reproducibility of your models?&lt;/li&gt;
+&lt;li&gt;How do you scale your training process when does not fit in memory
+anymore?&lt;/li&gt;
+&lt;li&gt;How do you serve your models and provide an easy rollback system?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Agenda:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The Data Science workflow&lt;/li&gt;
+&lt;li&gt;Scaling is not just a matter of the size of your Data&lt;/li&gt;
+&lt;li&gt;Scaling when the size of your Data matters&lt;/li&gt;
+&lt;li&gt;DDS, Dockerized Data Science&lt;/li&gt;
+&lt;li&gt;Cassiny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll share my experience highlighting some of the challenges I faced and
+the solutions I came up to answer these questions.&lt;/p&gt;
+&lt;p&gt;During this presentation I will mention libraries like jupyter, atom,
+scikit- learn, dask, ray, parquet, arrow and many others.&lt;/p&gt;
+&lt;p&gt;The principles and best practices I will share are something that you
+can apply, more or less easily, if you are running or in the process to
+run a production system based on the Python stack.&lt;/p&gt;
+&lt;p&gt;This talk will focus on (my) best practices to run the Python Data stack
+together and I will also talk about Cassiny, an open source project I
+started, that aims to simplify your life if you want to use a completely
+Python based solution in your data science workflow.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 20 April&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Jupyter"></category><category term="CloudComputing"></category><category term="pydata"></category><category term="#lessonslearned"></category><category term="Big-Data"></category><category term="S3"></category><category term="Data-Scientist"></category><category term="#amicodialessia"></category><category term="java"></category><category term="docker"></category><category term="cloud"></category></entry><entry><title>Just one Shade of OpenStack</title><link href="https://pyvideo.org/pycon-italia-2017/just-one-shade-of-openstack.html" rel="alternate"></link><published>2017-04-09T00:00:00+00:00</published><updated>2017-04-09T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2017-04-09:pycon-italia-2017/just-one-shade-of-openstack.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Want to start using openstack? Come to this talk and meet shade! Shade
+is a python library that wraps the many OpenStack clients.&lt;/p&gt;
+&lt;p&gt;This introductory talk presents:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;an overview of openstack&lt;/li&gt;
+&lt;li&gt;connecting to openstack with shade&lt;/li&gt;
+&lt;li&gt;creating and listing machines, networks &amp;amp; co&lt;/li&gt;
+&lt;li&gt;shade usage in ansible modules&lt;/li&gt;
+&lt;li&gt;contributing to shade (tox, git review, …)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="OpenStack"></category><category term="OpenSource"></category><category term="cloud"></category></entry><entry><title>Serverless computing con Python e AWS</title><link href="https://pyvideo.org/pycon-italia-2017/serverless-computing-con-python-e-aws.html" rel="alternate"></link><published>2017-04-08T00:00:00+00:00</published><updated>2017-04-08T00:00:00+00:00</updated><author><name>Federico Caboni</name></author><id>tag:pyvideo.org,2017-04-08:pycon-italia-2017/serverless-computing-con-python-e-aws.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il paradigma serverless è una delle innovazioni più recenti e
+interessanti negli ultimi anni: l’idea di base è quella di poter
+pubblicare, nel Cloud, funzioni e pezzi di codice che vengono invocati
+automaticamente al verificarsi di certi eventi, con scalabilità
+potenzialmente infinita e senza doversi preoccupare della gestione dello
+stack tecnologico sottostante.&lt;/p&gt;
+&lt;p&gt;Nel corso di questo talk vi mostrerò:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;la più breve introduzione al Cloud Computing del mondo;&lt;/li&gt;
+&lt;li&gt;cosa sono i microservizi e come funzione il paradigma serverless;&lt;/li&gt;
+&lt;li&gt;quali sono i casi d’uso che beneficiano di più da questo paradigma;&lt;/li&gt;
+&lt;li&gt;come costruire un’applicazione serverless in Python con i componenti
+di Amazon Web Services (Lambda, API Gateway, DynamoDB, S3…);&lt;/li&gt;
+&lt;li&gt;come coordinare l’esecuzione del nostro codice Python (AWS Step
+Functions);&lt;/li&gt;
+&lt;li&gt;come rendere tutto ancora più semplice con l’uso di framework
+specifici (Chalice, Serverless)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;e, se avanza tempo:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;il senso della vita.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="serverless"></category><category term="microservices"></category><category term="CloudComputing"></category><category term="aws"></category><category term="chalice"></category><category term="Amazon"></category><category term="cloud"></category></entry><entry><title>Building Serverless Machine Learning Models in the Cloud</title><link href="https://pyvideo.org/pydata-dc-2016/building-serverless-machine-learning-models-in-the-cloud.html" rel="alternate"></link><published>2016-10-08T00:00:00+00:00</published><updated>2016-10-08T00:00:00+00:00</updated><author><name>Alex Casalboni</name></author><id>tag:pyvideo.org,2016-10-08:pydata-dc-2016/building-serverless-machine-learning-models-in-the-cloud.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;You’ll learn how to efficiently design and train machine learning models in Python and deploy them to the cloud. This process reduces the development &amp;amp; operational efforts required to make your prototypes production-ready.&lt;/p&gt;
+&lt;p&gt;We will describe the main challenges faced by data scientists involved in deploying machine learning models into real production environments with specific references, examples of Python libraries, and multi-model systems requiring advanced features such as A/B testing and high scalability &amp;amp; availability.&lt;/p&gt;
+&lt;p&gt;While discussing the advantages and limitations of multiple deployment strategies in the cloud, we will focus on serverless computing (i.e. AWS Lambda) as a solution for simplifying your development &amp;amp; deployment workflows.&lt;/p&gt;
+</summary><category term="Cloud"></category><category term="learning"></category><category term="machine learning"></category><category term="models"></category><category term="serverless"></category></entry><entry><title>Creating Python Data Pipelines in the Cloud</title><link href="https://pyvideo.org/pydata-dc-2016/creating-python-data-pipelines-in-the-cloud.html" rel="alternate"></link><published>2016-10-08T00:00:00+00:00</published><updated>2016-10-08T00:00:00+00:00</updated><author><name>Femi Anthony</name></author><id>tag:pyvideo.org,2016-10-08:pydata-dc-2016/creating-python-data-pipelines-in-the-cloud.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;My talk will be an analysis of the various approaches to creating data pipelines the public cloud using Python.I will compare and contrast using various Python libraries such as Luigi, Airflow and native cloud frameworks such as Cloud Dataflow (Google), AWS Data Pipeline to create a real world data pipeline in Amazon AWS and Google Compute Engine.&lt;/p&gt;
+</summary><category term="Cloud"></category><category term="Data"></category></entry><entry><title>When Dependencies between Test Cases are Inevitable</title><link href="https://pyvideo.org/pycon-israel-2016/when-dependencies-between-test-cases-are-inevitable.html" rel="alternate"></link><published>2016-09-21T00:00:00+00:00</published><updated>2016-09-21T00:00:00+00:00</updated><author><name>Irina Gulina</name></author><id>tag:pyvideo.org,2016-09-21:pycon-israel-2016/when-dependencies-between-test-cases-are-inevitable.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You need to test your images on various instance types in the cloud, but which tools do you use? How to run dozens of thousands of test cases on hundreds of machines in the cloud in parallel? Is it OK to have dependencies between test cases to make this task less expensive?&lt;/p&gt;
+&lt;p&gt;Dva is an open source validation tool which is applicable to various images and instance types. Using your image, it will launch instances of different types in defined regions and will execute test cases in parallel. How?&lt;/p&gt;
+&lt;p&gt;All test cases are represented as a Directed Acyclic Graph structure – parents and children. Then these test cases are assigned to workers by a modified BFS algorithm that allows processing of sibling test cases in parallel. It includes test result processing tools such as a Bugzilla module to report bugs for you. 3rd-party test case modules are supported too.&lt;/p&gt;
+&lt;p&gt;This tool is used by Red Hat QE for RHEL image release sanity testing in EC2, however Fedora images and OpenStack cloud are supported too. To test a RHEL release, Dva launches hundreds of machines of various types in all EC2 regions and executes a set of nearly 70 test cases with dependencies on every machine in parallel.&lt;/p&gt;
+&lt;p&gt;Source Code/Home page: &lt;a class="reference external" href="https://github.com/RedHatQE/dva/"&gt;https://github.com/RedHatQE/dva/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Topics: Open Source, Cloud, QA/QE, Automation, Python&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://il.pycon.org/2016/static/sessions/irina-igulina.pdf"&gt;http://il.pycon.org/2016/static/sessions/irina-igulina.pdf&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Open Source"></category><category term="Cloud"></category><category term="QA/QE"></category><category term="Automation"></category></entry><entry><title>Lightning Talks - Thursday morning</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--lightning-talks---thursday-mornin.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Jason Boyer</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--lightning-talks---thursday-mornin.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks - Thursday morning&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;00:00 - Jason Boyer: Multi DB Routing&lt;/li&gt;
+&lt;li&gt;05:20 - Vicky Tuite: &lt;a class="reference external" href="http://pystar.org/"&gt;PyStar&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;08:55 - Katie Cunningham: &lt;a class="reference external" href="https://github.com/kcunning/android-django"&gt;Django
+Explorer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;11:45 - Shawn Milo: You Should Contribute to Django&lt;/li&gt;
+&lt;li&gt;16:00 - Graham King: Psychology for your web app&lt;/li&gt;
+&lt;li&gt;21:30 - Tobias McNulty: &lt;a class="reference external" href="http://bit.ly/fabulaws"&gt;FabulAWS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;27:00 - Harris Lapiroff:
+&lt;a class="reference external" href="http://github.com/melinath/django-pipetter"&gt;Pipetter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;31:05 - Tim White: &lt;a class="reference external" href="http://wtfawd.com/"&gt;wtfawd?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;33:50 - Matt Lauber: Multiforms: A simple tool for managing multiple
+forms&lt;/li&gt;
+&lt;li&gt;38:55 - Kenneth Love: The dumb and lazy guide to class-based views&lt;/li&gt;
+&lt;li&gt;42:30 - Todd Davies: Let's talk about &amp;quot;control by users&amp;quot;&lt;/li&gt;
+&lt;li&gt;47:40 - Sebastian Serrano: backbone.js with django and tastypie&lt;/li&gt;
+&lt;li&gt;51:15 - ?: &lt;a class="reference external" href="http://www.activestate.com/cloud"&gt;Stackato&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;56:00 - Steve Ivy: &lt;a class="reference external" href="https://github.com/justquick/django-activity-stream"&gt;Activity
+streams&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;59:15 - Kenneth Love and Chris Jones: There's always money in the
+Banana(-py) Stand!
+(&lt;a class="reference external" href="https://github.com/kennethlove/Banana-Py"&gt;Banana-Py&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;1:00:46 - Brian Davis: Static analysis in Emacs
+(&lt;a class="reference external" href="http://bit.ly/emacs-psa"&gt;emacs-psa&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;1:03:55 - ?: Sitting on your butt and letting your ideas happen
+without you&lt;/li&gt;
+&lt;li&gt;1:06:35 - Mjumbe Poe:
+&lt;a class="reference external" href="https://github.com/mjumbewu/django-model-blocks"&gt;django-model-blocks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category><category term="activitystreams"></category><category term="backbone.js"></category><category term="banana-py"></category><category term="cloud"></category><category term="contribute"></category><category term="djangocon"></category><category term="djangocon2011"></category><category term="djangoexplorer"></category><category term="django-model-blocks"></category><category term="eamcs"></category><category term="fabulaws"></category><category term="multidb"></category><category term="multiforms"></category><category term="pep8"></category><category term="pipetter"></category><category term="psychology"></category><category term="pyflakes"></category><category term="pylint"></category><category term="pystar"></category><category term="stackato"></category><category term="tastypie"></category><category term="views"></category><category term="wtfawd"></category></entry><entry><title>Deploying web applications to the cloud with Python</title><link href="https://pyvideo.org/europython-2011/deploying-web-applications-to-the-cloud-with-pyth.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Nate Aune</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/deploying-web-applications-to-the-cloud-with-pyth.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Nate Aune - 23 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How can Python help you deploy web applications to the cloud? Amazon EC2
+provides virtual machines on demand but as a developer you still have to
+configure these machines and push your code to them. Fabric is a Python
+library that lets you execute commands on a remote machine, and Boto is
+a Python library for interfacing with Amazon web services. By using
+Fabric and Boto, you can easily create repeatable deployments and
+provision new resources as needed with minimal effort.&lt;/p&gt;
+&lt;p&gt;This talk will introduce Amazon Web Services and how to launch new
+machines using simple Boto scripts, and how to get started making your
+own repeatable deployments using Fabric scripts.&lt;/p&gt;
+</summary><category term="boto"></category><category term="cloud"></category><category term="deploy"></category><category term="ec2"></category><category term="fabric"></category><category term="web"></category></entry><entry><title>Snakes on a cloud: the OpenStack project</title><link href="https://pyvideo.org/europython-2011/snakes-on-a-cloud-the-openstack-project.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Thierry Carrez</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/snakes-on-a-cloud-the-openstack-project.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Thierry Carrez - 23 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;OpenStack is an innovative open source project written in Python, backed
+by Rackspace Hosting and NASA, building a massively-scalable and
+reliable cloud computing platform.&lt;/p&gt;
+&lt;p&gt;The first part of this talk will clarify the place of OpenStack in the
+general &amp;quot;cloud&amp;quot; landscape and explain why a fully open cloud
+infrastructure stack is necessary to avoid vendor lock-in. We'll then
+focus on the OpenStack project goals, its developer community, its open
+design and release processes, and the developer tools it chose.&lt;/p&gt;
+&lt;p&gt;The second part of the talk will present into more technical details the
+different components of OpenStack: Nova (compute) and Swift (storage),
+including the Python libraries that are used (libvirt, SQLAlchemy,
+eventlet…). A Q&amp;amp;A session at the end of the talk will give the audience
+a chance to clear any remaining dark area.&lt;/p&gt;
+</summary><category term="cloud"></category><category term="design"></category><category term="hosting"></category><category term="infrastructure"></category><category term="openstack"></category><category term="python,"></category></entry><entry><title>What is Google App Engine?</title><link href="https://pyvideo.org/europython-2011/what-is-google-app-engine.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Wesley J. Chun</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/what-is-google-app-engine.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] wesley chun - 23 June 2011 in &amp;quot;Track Tagliatelle&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Google App Engine is a unique hosting platform that lets you build
+applications and run them in Google's data centers using the massive
+global infrastructure built to run the Internet's most powerful company.
+App Engine offers a development environment that uses familiar
+technologies (Java and Python) and provides a powerful and robust set of
+APIs to users while maintaining security and independence from other
+apps running in the cloud. It is always free to get started so you can
+try it out with no risk, and if you need additional computing resources,
+you can purchase additional computing resources beyond the free quota
+limits. (If you enable billing and trust us with your credit card, we
+will extend your free quotas even further; you won't get charged until
+you exceed those &lt;em&gt;extended&lt;/em&gt; quotas.) Scale your application to millions
+of users and pay only for what you use at competitive market pricing.&lt;/p&gt;
+&lt;p&gt;In this session, we provide an update of the newest features found in
+the most recent releases of the App Engine platform. We also share some
+suggestions for best practices to existing App Engine developers.&lt;/p&gt;
+&lt;p&gt;Beginners to the App Engine platform will be interested in the
+introductory workshop which may be offered (see description below).&lt;/p&gt;
+&lt;p&gt;Google App Engine workshop&lt;/p&gt;
+&lt;p&gt;In this tutorial, we'll give you a comprehensive introduction to the
+platform in two/three components:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1-hour Introduction to Cloud computing and Google App Engine seminar&lt;/li&gt;
+&lt;li&gt;3-hour App Engine hands-on workshop/codelab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the first hour, we review Cloud Computing as an industry and where
+Google App Engine fits into the picture. Specifically, we discuss App
+Engine as a PaaS solution because of the inherent challenges of building
+web and other applications. We'll outline the architecture of App
+Engine, what it's major components are, introduce its features and APIs,
+discuss the service and how it works (including information on the free
+quotas), present some information about current users and usage,
+including integration with Google Apps, and finally, give an overview of
+its enterprise edition called Google App Engine for Business.&lt;/p&gt;
+&lt;p&gt;After the approximately one-hour lecture, we'll show you how to create
+applications that run on App Engine by building a simple but real web
+application from the ground up via a hands-on coding laboratory.
+Although based on the online tutorial, this codelab goes up and beyond
+what's in the documentation: you will get a more detailed step-by-step
+instructions to replicate that example as well as have the opportunity
+to extend your application with some of the newer APIs that come with
+App Engine. The codelab will cover the Users service, non-relational
+Datastore, and Memcache APIs. Time-permitting, we'll also discuss some
+of the newest features found in recent App Engine releases.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="cloud"></category><category term="google"></category><category term="hosting"></category><category term="infrastructure"></category><category term="memcache"></category><category term="security"></category><category term="web"></category></entry><entry><title>Managing the cloud with libcloud</title><link href="https://pyvideo.org/europython-2011/managing-the-cloud-with-libcloud.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Tomaž Muraus</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/managing-the-cloud-with-libcloud.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Tomaž Muraus - 22 June 2011 in &amp;quot;Track Ravioli &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;libcloud is an open-source client library for interacting with different
+cloud providers.&lt;/p&gt;
+&lt;p&gt;The primary goal of the library is to abstract all the provider
+differences away and expose common functionality in a nice, clean and
+concise API.&lt;/p&gt;
+&lt;p&gt;This talk will address the following topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why a library like this was built in the first place&lt;/li&gt;
+&lt;li&gt;Different problems we have encountered while building it (not all the
+providers always play nice)&lt;/li&gt;
+&lt;li&gt;An introduction to the library API (compute, storage and
+load-balancer part)&lt;/li&gt;
+&lt;li&gt;How to use it to build something useful and fun&lt;/li&gt;
+&lt;li&gt;How to participate and contribute&lt;/li&gt;
+&lt;li&gt;Roadmap and plans for the future&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="api"></category><category term="cloud"></category></entry><entry><title>Best Practices for Python in the Cloud</title><link href="https://pyvideo.org/europython-2011/best-practices-for-python-in-the-cloud.html" rel="alternate"></link><published>2011-07-18T00:00:00+00:00</published><updated>2011-07-18T00:00:00+00:00</updated><author><name>Gisle Aas</name></author><id>tag:pyvideo.org,2011-07-18:europython-2011/best-practices-for-python-in-the-cloud.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Gisle Aas - 21 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abstract: Whether you’re an independent developer or development manager
+in a large company, “the cloud” is on everyone’s mind. But just because
+it’s in the cloud, doesn’t mean development and deployment is
+effortless. The cloud presents infrastructure and development challenges
+in a new way.&lt;/p&gt;
+&lt;p&gt;In this presentation, ActiveState's Gisle Aas will share best practices
+in building and deploying a Python-centric LAMP stack(s) on the cloud
+for a range of web-based applications from simple Django site to HPC GPU
+Clusters.&lt;/p&gt;
+&lt;p&gt;Based on ActiveState’s experiences, Gisle will discuss the challenges
+faced and lessons learned in building an infrastructure to deploy web
+applications to the cloud with Python.&lt;/p&gt;
+&lt;p&gt;You will learn about:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Which packages are critical for a secure, Python-centric LAMP stack
+(and what it takes to build them)!&lt;/li&gt;
+&lt;li&gt;Tips for developing, deploying, and scaling Python applicaitons in
+the cloud&lt;/li&gt;
+&lt;li&gt;How to use Python to connect and build infrastructure to support and
+manage your deployment&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cloud"></category><category term="deploy"></category><category term="deployment"></category><category term="django"></category><category term="gpu"></category><category term="hpc"></category><category term="infrastructure"></category><category term="lamp"></category><category term="packages"></category><category term="scaling"></category><category term="web"></category></entry><entry><title>Leveraging an instant messaging protocol to build a scalable cloud architecture</title><link href="https://pyvideo.org/europython-2011/leveraging-an-instant-messaging-protocol-to-build.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Achiel van der Mandele</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/leveraging-an-instant-messaging-protocol-to-build.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Achiel van der Mandele - 24 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;XMPP is an open technology for real-time communication. Although
+primarily known for its application in the IM service &amp;quot;Jabber&amp;quot; (and,
+subsequently, gchat/gtalk), it has numerous applications and creates new
+opportunities for inter-system communication.&lt;/p&gt;
+&lt;p&gt;While researching for an alternative to webservices at Mendix, we came
+across XMPP and realized it solved many of the shortcomings of
+webservices. It is currently being used to handle all inter-system and
+inter-process communication in the Mendix cloud hosting environment.&lt;/p&gt;
+&lt;p&gt;The talk will give a general overview of what XMPP is, an introduction
+to the sleekxmpp python library and how the core features of xmpp can
+help an architecture scale well horizontally.&lt;/p&gt;
+&lt;p&gt;Required knowledge: basic understanding of hosting environments.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="cloud"></category><category term="hosting"></category><category term="real-time"></category><category term="scalable"></category><category term="technology"></category></entry><entry><title>Schlangenhochzeit in der Wolke</title><link href="https://pyvideo.org/pycon-de-2013/schlangenhochzeit-in-der-wolke.html" rel="alternate"></link><published>2013-10-16T00:00:00+00:00</published><updated>2013-10-16T00:00:00+00:00</updated><author><name>Jens Klein</name></author><id>tag:pyvideo.org,2013-10-16:pycon-de-2013/schlangenhochzeit-in-der-wolke.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Googles Appengine steht für hochskalierbare Anwendungen in der Cloud.
+Locandy ist unser Startup für mobile Location based Games.&lt;/p&gt;
+&lt;p&gt;Auf der Cloud-Platform mit ihrer sehr restriktiven Python-Umgebung haben
+wir das Portal für Spieler, Autoren und Business Kunden umgesetzt.
+Browser, Mobile-App und PDF-Server werden damit bedient.&lt;/p&gt;
+&lt;p&gt;Dabei ist nicht alles so rund gelaufen, wie wir es gerne gehabt hätten.
+Die Probleme wurden gelöst - dank Python mit seinem starken
+Werkzeugkasten.&lt;/p&gt;
+&lt;p&gt;Der Vortrag geht kurz auf die Anforderungen ein, zeigt auf welche
+Probleme es gab und wie wir sie gelöst haben. In einem Github Repository
+stelle ich ein Buildout inkl. kleiner Beispielapplikation mit den
+meisten dieser Lösungen zur Verfügung.&lt;/p&gt;
+</summary><category term="appengine"></category><category term="buildout"></category><category term="cloud"></category><category term="gruntjs"></category><category term="mobile"></category><category term="plone.testing"></category><category term="pyramid"></category><category term="testlayers"></category><category term="velruse"></category><category term="WebTest"></category></entry></feed>

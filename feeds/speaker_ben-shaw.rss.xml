@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 11 Sep 2016 00:00:00 +0000</lastBuildDate><item><title>Middle-Out Python Development</title><link>https://pyvideo.org/kiwi-pycon-2016/middle-out-python-development.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ben Shaw
+&lt;a class="reference external" href="https://kiwi.pycon.org/schedule/presentation/116/"&gt;https://kiwi.pycon.org/schedule/presentation/116/&lt;/a&gt;
+Too often when developing Python web apps we first choose a framework and database, then code to their rules and restrictions. It's only later that we start thinking about our application's business logic. If we reverse the order and work on our logic first it can make code easier to test, and let us make more informed decisions of what frameworks and data-stores best suit our project.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Shaw</dc:creator><pubDate>Sun, 11 Sep 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-09-11:kiwi-pycon-2016/middle-out-python-development.html</guid></item><item><title>An introduction to Helio</title><link>https://pyvideo.org/kiwi-pycon-2013/an-introduction-to-helio.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;At Yellow, we love building web-applications that leverage the best
+parts of client and server side languages, so we created the open-source
+Helio. Its modular design lets us compose Python, Javascript, HTML and
+CSS in harmony, allowing each to perform in the area it excels. This
+talk is about Helio's creation, and how it integrates with your favorite
+Python web framework(s) in your next project.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;#64; Kiwi PyCon 2013 - Saturday, 07 Sep 2013 - Track 1&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Audience level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://speakerdeck.com/nzpug/ben-shaw-an-introduction-to-helio"&gt;https://speakerdeck.com/nzpug/ben-shaw-an-introduction-to-helio&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Shaw</dc:creator><pubDate>Tue, 17 Sep 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-09-17:kiwi-pycon-2013/an-introduction-to-helio.html</guid></item><item><title>Python is slow, make it faster with C</title><link>https://pyvideo.org/kiwi-pycon-2014/python-is-slow-make-it-faster-with-c.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Most people have heard that it's possible to integrate Python with C to
+give performance boosts to computationally heavy code, but because it
+seems daunting they've never given it a try. It's actually not as hard
+as you think. This talk covers some of the different methods of speeding
+up your code with C, and compares the results to those you can get from
+other methods, like using PyPy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Introduction&lt;/p&gt;
+&lt;p&gt;As developers, we like to work with Python because it's forgiving, quick
+to develop for and allows our code to be very dynamic. Unfortunately the
+trade-off for this magic is lower performance than compiled languages.
+Python can be sped up by offloading heavy algorithms to compiled C,
+using specially built C modules utilising the C Python API, or by
+integrating existing C libraries with using the python ctypes module. It
+is also possible to speed up Python using alternative interpreters, like
+PyPy, which uses a JIT compiler.&lt;/p&gt;
+&lt;p&gt;Pure Python Implementation&lt;/p&gt;
+&lt;p&gt;First we will take a look at a CPU bound algorithm written purely in
+Python, and see how it performs. The program reads data and prints
+results. The time it takes to run this will be considered the worst case
+scenario.&lt;/p&gt;
+&lt;p&gt;Pure C Implementation&lt;/p&gt;
+&lt;p&gt;The same program will be re-written in C, including the input and output
+logic, and we will compare the time it takes to run against the Python
+implementation. The results of the C implementation will be considered
+the best case scenario.&lt;/p&gt;
+&lt;p&gt;Custom Python Module with C Implementation&lt;/p&gt;
+&lt;p&gt;Python provides an API, C development headers and special C types, to
+allow the creation of a specially built bridges between Python and C
+code. In this example, the algorithm will be written in C, and bridged
+to Python with a custom Python/C module. Input and output takes place
+within Python, with C only performing the computation. With this method
+we can achieve near best-case speeds, at the cost of some additional
+(and sometimes complicated) C coding.&lt;/p&gt;
+&lt;p&gt;Bridging To C with ctypes&lt;/p&gt;
+&lt;p&gt;Introduced in Python 2.5, ctypes allows Python to integrate with
+pre-built C libraries without custom C code. This approach has the
+advantage over the custom Python/C Module of not needing to write a lot
+of boilerplate and bridging code in C. As with the Py/C implementation,
+C is used only to execute the algorithm, and Python takes care of input
+and output. Again, performance is close to best-case speeds, but the
+work to integrate with C is much less.&lt;/p&gt;
+&lt;p&gt;Alternative Python Implementations&lt;/p&gt;
+&lt;p&gt;PyPy uses a JIT compiler to offer impressive performance gains. The
+original Python code will be run through PyPy, and although the results
+might not be as quite as good as using compiled C, they come close, and
+the effort-to-gain ratio certainly makes it attractive option.&lt;/p&gt;
+&lt;p&gt;Conclusion&lt;/p&gt;
+&lt;p&gt;Each performance boosting option has its pros and cons, and when it's so
+easy to just use PyPy and get good results, why would you still use C?
+We'll look at some example use cases for each of the methods presented
+and why you would choose one over the others.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://speakerdeck.com/nzpug/ben-shaw-python-is-slow-make-it-faster-with-c"&gt;https://speakerdeck.com/nzpug/ben-shaw-python-is-slow-make-it-faster-with-c&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Shaw</dc:creator><pubDate>Sat, 13 Sep 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-09-13:kiwi-pycon-2014/python-is-slow-make-it-faster-with-c.html</guid><category>talk</category></item><item><title>Micro-Services: Is HTTP the only way?</title><link>https://pyvideo.org/kiwi-pycon-2015/micro-services-is-http-the-only-way.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Over the past few years, micro-services have been gaining popularity due
+to their advantages over traditional monolithic architectures. It
+becomes easier to horizontally scale the heavier portions of an
+application; you're not tied to the same OS or programming language for
+the entire application, meaning you can easily slot in the best tool for
+the job; and finally, you can quickly build the entire application in
+dynamic yet less performant languages, then rebuild any bottlenecks with
+faster (but slower to develop) languages.&lt;/p&gt;
+&lt;p&gt;As a basic example, rather than directly communicating with a database
+for user authentication, a web front-end would make an HTTP request to
+another lightweight REST service to check credentials.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="an-example-application"&gt;
+&lt;h4&gt;An Example Application&lt;/h4&gt;
+&lt;p&gt;In order to elucidate the difference between monolithic and
+micro-services, we will use a simple Social-Network web application that
+allows users to post 141 character messages. A user must first sign up,
+then log in with a username and password, then they can post their
+messages publicly. A user can then follow any other user, and receive
+real time updates when that user posts. While the behaviour is simple,
+there are a number of different concepts that are explored: template
+rendering, user signup and authentication, data storage and notification
+delegation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-monolithic-version"&gt;
+&lt;h4&gt;A Monolithic Version&lt;/h4&gt;
+&lt;p&gt;The first version of the will be a single Django application. The talk
+does not go into detail on the source code, instead briefly discusses
+the views, databases (tables and queries) and overall architecture at a
+high level.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-http-micro-service-version"&gt;
+&lt;h4&gt;The HTTP Micro-Service Version&lt;/h4&gt;
+&lt;p&gt;In order to deconstruct the monolith into micro-services, we look at
+different functions of the application: message viewing, user signup and
+authentication, data storage and search, and user notification. Django
+is kept as the front-end, but the databases for authentication, data
+storage and searching and user-follows are each transformed into their
+own micro-service. Flask is used as the HTTP framework for these
+services, with SQLAlchemy for database as necessary. Some source code is
+discussed (mostly in terms of standard Django database access c.f. HTTP)
+but this is also quite high level. The talk will also cover what HTTP
+comes with &amp;quot;out of the box&amp;quot;, in terms of authentication, deployment and
+scalability.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="alternative-transports"&gt;
+&lt;h4&gt;Alternative Transports&lt;/h4&gt;
+&lt;p&gt;After the micro-services have been split, we can start to think about
+different transports that might be more appropriate (or at least more
+interesting) in some circumstances.&lt;/p&gt;
+&lt;div class="section" id="introducing-a-message-queue"&gt;
+&lt;h5&gt;Introducing a Message Queue&lt;/h5&gt;
+&lt;p&gt;From a user perspective, HTTP is a synchronous protocol, so making other
+synchronous HTTP calls inside an HTTP handler doesn't introduce much
+complexity. Message queues, on the other hand, are asynchronous by
+nature. We look at using message queues for delegating user
+notifications (which don't require a response, and are easy to handle),
+then for authentication, data storage and searching – each requiring a
+slightly different &amp;quot;level&amp;quot; of &amp;quot;synchronicity&amp;quot; and a need to be
+shoehorned into HTTP differently. We'll look at code for message
+producing and consuming and discuss architecture again.&lt;/p&gt;
+&lt;p&gt;Message queues are already widely used for handling intensive background
+tasks, so we'll look at how they compare to HTTP in this application
+(for security and deployment), and briefly also talk about
+cross-platform compatibility.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lower-down-the-stack-raw-sockets"&gt;
+&lt;h5&gt;Lower Down the Stack - Raw Sockets&lt;/h5&gt;
+&lt;p&gt;If, for some reason, the overhead of HTTP or a message queue is too
+high, direct socket communication might be better. We'll look at a
+Python TCP server for user authentication, and a UDP server for handling
+user notifications, and example code for both. Also discussed are the
+security implications (it's DIY all the way), performance, and how you
+might scale these.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h4&gt;Conclusion&lt;/h4&gt;
+&lt;p&gt;Finally we'll look at a comparison overview for all these different
+methods and summarise with the pros and cons of each.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Shaw</dc:creator><pubDate>Sat, 05 Sep 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-09-05:kiwi-pycon-2015/micro-services-is-http-the-only-way.html</guid></item></channel></rss>

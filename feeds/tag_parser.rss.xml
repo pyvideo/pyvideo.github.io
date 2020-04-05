@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 13 May 2018 00:00:00 +0000</lastBuildDate><item><title>Reinventing the Parser Generator</title><link>https://pyvideo.org/pycon-us-2018/reinventing-the-parser-generator.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing lexers and parsers is a complex problem that often involves the use of special tools and domain specific languages (e.g., the lex/yacc tools on Unix).  In 2001, I wrote Python versions of these tools which can be found in the PLY project.  PLY predates a huge number of modern Python features including the iteration protocol, generators, decorators, metaclasses, and more.  As such, it relied on a variety of clever hacks to layer a domain specific parser specification language on top of Python itself.&lt;/p&gt;
+&lt;p&gt;In this talk, I discuss a modernization of the PLY project that abandons its past and freely abuses modern Python features including advanced metaclasses, guaranteed dictionary ordering, class decorators, type hints, and more.   The result of this work can be found in the SLY project.  However, this talk isn't so much about SLY as it is focused on how far you can push Python metaprogramming features to create domain-specific languages.   Prepare to be horrified--and to write code that will break your IDE.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Beazley</dc:creator><pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-13:pycon-us-2018/reinventing-the-parser-generator.html</guid><category>ply</category><category>sly</category><category>parser</category></item><item><title>Python is Weird</title><link>https://pyvideo.org/pycon-de-2017/python-is-weird.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Dave Halter&lt;/strong&gt; (&amp;#64;jedidjah_ch)&lt;/p&gt;
+&lt;p&gt;I'm an engineer for cloudscale.ch. We are serving cloud services (mostly IaaS) with a focus on simplicity. In my free time I work a lot on parsers/type inference for the Python world. Jedi is probably the project people would know me for.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A lot of people think that Python is a really simple and straightforward language. Python hides a lot of peculiarities very well, but for the sake of this talk we will try to uncover them.&lt;/p&gt;
+&lt;p&gt;Is ++4; valid Python? And what does it do? Let me give you an introduction into tokenizers/parsers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A lot of people think that Python is a really simple and straightforward language. Python hides a lot of peculiarities very well, but for the sake of this talk we will try to uncover them.&lt;/p&gt;
+&lt;p&gt;I will be explaining how the whole process of tokenizing - parsing - ast creation - bytecode works and will use odd Python code to give you an insight on the internals. Do you think ++4; is valid Python? Or how about 0jif.1else-2? There are no spaces in it. Go figure! &amp;quot;Edge cases&amp;quot; will help us understand the inner workings of Python. These two cases are possible, because of the tokenizer. Other &amp;quot;weird&amp;quot; Python code is waiting as soon as you start looking at the grammar file. Have you for example heard about lambda generators?&lt;/p&gt;
+&lt;p&gt;We will be looking into how modules, classes and instances are really just fancy dictionaries and how importing is really nothing else than storing a module into a dictionary (sys.modules).&lt;/p&gt;
+&lt;p&gt;There are a lot of things we can learn from diving deep into the details of our beloved languages. This talk will give you a very small introduction in how languages are built and explain how Python itself is defined by its parser, tokenizer and bytecode generation. Knowing how those abstractions work makes you a better Python programmer, because you will know better how the language behaves.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dave Halter</dc:creator><pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-25:pycon-de-2017/python-is-weird.html</guid><category>tokenizer</category><category>parser</category><category>python</category></item><item><title>PyOhio 2011: Python, Parsing and You</title><link>https://pyvideo.org/pyohio-2011/pyohio-2011--python--parsing-and-you.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python, Parsing, and You&lt;/p&gt;
+&lt;p&gt;Presented by Tim Henderson&lt;/p&gt;
+&lt;p&gt;Tim Henderson Python is a fantastic language to write text processing
+tools in, including full fledged parsers. In this tutorial I will
+briefly cover Recursive Descent, Top Down Predictive and LALR Parsing.
+The tools used will include PLY and a Top Down Predictive Parsing
+framework of my own construction. I will expect the audience to be
+familiar with the following concepts: Context Free Grammars, Regular
+Expressions, ...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tim Henderson</dc:creator><pubDate>Sat, 30 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-30:pyohio-2011/pyohio-2011--python--parsing-and-you.html</guid><category>lalr</category><category>parser</category><category>ply</category><category>pyohio</category><category>pyohio2011</category></item><item><title>plac: more than just another command-line arguments parser</title><link>https://pyvideo.org/europython-2011/plac-more-than-just-another-command-line-argumen.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Michele Simionato - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;plac is general purpose tool than can be used to define command-oriented
+domain specific languages (DSLs). In its simplest form it can be used as
+a command-line arguments parser with an easier-to-use API than argparse.
+It can also be used to replace the cmd module in the standard library.
+Moreover it can be used to automatize functional tests and for much
+more. The talk will touch upon many use cases where plac can make your
+life as a developer simpler and better. Technically Plac is a wrapper
+over argparse and works in all versions of Python starting from Python
+2.3 up to Python 3.2. In Python 3.X it takes advantage of function
+annotations to define the parser in a declarative way, instead of the
+imperative way of argparse. In Python 2.X it uses decorators instead, to
+reach the same goal. The talk is a hands-on interactive demonstration of
+plac capabilities.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michele Simionato</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/plac-more-than-just-another-command-line-argumen.html</guid><category>api</category><category>argparse</category><category>cmd</category><category>decorators</category><category>parser</category></item></channel></rss>

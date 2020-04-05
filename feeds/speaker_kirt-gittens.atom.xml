@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_kirt-gittens.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-10T00:00:00+00:00</updated><entry><title>Solving Problems With Django Forms</title><link href="https://pyvideo.org/djangocon-us-2016/solving-problems-with-django-forms.html" rel="alternate"></link><published>2016-08-10T00:00:00+00:00</published><updated>2016-08-10T00:00:00+00:00</updated><author><name>Kirt Gittens</name></author><id>tag:pyvideo.org,2016-08-10:djangocon-us-2016/solving-problems-with-django-forms.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DjangoCon US 2016 - Solving Problems With Django Forms by Kirt Gittens&lt;/p&gt;
+&lt;p&gt;We'll look at a few core problems that we were able to solve with Django forms.&lt;/p&gt;
+&lt;p&gt;Dynamic Field Creation: What if you don't know what fields should be present on a Django form until runtime?. Solutions:&lt;/p&gt;
+&lt;p&gt;Viewing a form's fields as a data structure (convert a field definition to a dictionary) Manipulate self.fields on a form to dynamically add / remove forms from a field.&lt;/p&gt;
+&lt;p&gt;Pitfalls:&lt;/p&gt;
+&lt;p&gt;A fields validated attributes can't be manipulated dynamically because of Validators within the forms API. Dynamic form layouts become difficult to manage, crispyforms does not scale as a solution!&lt;/p&gt;
+&lt;p&gt;Validate a form via an API: How can external validations behave the same as internal errors? Solutions:&lt;/p&gt;
+&lt;p&gt;form.clean() can be used for form wide errors, and form.add_error can be used to integrate those external validation errors into your existing form so that calls like is_valid() still work as expected with your external validations.&lt;/p&gt;
+&lt;p&gt;Adding fields at runtime: How can the user add fields to a form after it has been rendered?&lt;/p&gt;
+&lt;p&gt;Solutions:&lt;/p&gt;
+&lt;p&gt;Javascript can be used for the UI, and if the fields are properly named, the same validations will work as long as the fields are part of the form.&lt;/p&gt;
+&lt;p&gt;Pitfalls: Creating a solution that creates a dynamic field that is validated, but doesn't render can cause issues with your layout solution (crispyforms fails again here)&lt;/p&gt;
+</summary></entry></feed>

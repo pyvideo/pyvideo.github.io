@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_alberto-berti.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-07-11T00:00:00+00:00</updated><entry><title>Get over the boundaries between client and server in web app development</title><link href="https://pyvideo.org/europython-2017/get-over-the-boundaries-between-client-and-server-in-web-app-development.html" rel="alternate"></link><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><author><name>Alberto Berti</name></author><id>tag:pyvideo.org,2017-07-11:europython-2017/get-over-the-boundaries-between-client-and-server-in-web-app-development.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The practice in the development of advanced web applications is
+to break it into two main areas where the effort on the server,
+with the typical WSGI environments, focuses on data access configuration
+whereas the application logic is delegated mostly to the client through
+the use of JavaScript frameworks.&lt;/p&gt;
+&lt;p&gt;The reason for this separation into two roles lies in the need to use
+JavaScript on the browser and the fact that the communication
+channel (HTTP) and the way in which the application state is handled
+on the server side is still that thought to serve full web pages.&lt;/p&gt;
+&lt;p&gt;In this talk I'll show a framework and an application where the line
+between the two worlds is blurred and where it is possible to think
+of the application in terms of unity, with the two components that
+cooperate equally and communicate without thinking in terms of URLs
+or HTTP verbs .&lt;/p&gt;
+&lt;p&gt;This is made possible by the asynchronous/reactive management
+of the processing from the database driver to the user interaction,
+the use of websocket for communication and the use of Python (optional)
+for the development of the client part.&lt;/p&gt;
+&lt;p&gt;Some technologies used are: PostgreSQL, the &amp;quot;asyncpg&amp;quot; driver, the
+&amp;quot;aiohttp&amp;quot; web server, Crossbar (&lt;a class="reference external" href="http://crossbar.io"&gt;http://crossbar.io&lt;/a&gt;) for the websocket
+comms, pkg &amp;quot;metapensiero.sphinx.patchdb&amp;quot; for schema upgrades,
+the package &amp;quot;metapensiero.reactive&amp;quot; and &amp;quot;metapensiero.signal&amp;quot;
+for the management of reactive event streams,
+the package &amp;quot;Javascripthon&amp;quot; for Py3 to ES6 JS transpiling.&lt;/p&gt;
+</summary></entry></feed>

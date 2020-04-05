@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>A Python implementation in Rust?</title><link>https://pyvideo.org/europython-2018/a-python-implementation-in-rust.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Rust is a fairly new programming language aimed as a competitor of C.
+There are already attempts to write extension modules in rust and load
+them into CPython. A whole new approach would be to re-implement the
+Python language in rust.&lt;/p&gt;
+&lt;p&gt;This is what the rspython project is about: implementing a python
+interpreter in rust. Rust already has many features such as vectors,
+hashmaps and strings as unicode. There also exist already modules for
+regular expressions and dealing with files, so a lot can be re-used in
+this area.&lt;/p&gt;
+&lt;p&gt;During this talk we will dive into rust and python and the design of the
+rspython. We will present some challenges and opportunities. Also we
+will show the current state of this project in a demo.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Windel Bouwman</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:europython-2018/a-python-implementation-in-rust.html</guid></item><item><title>Introduction into the ppci project</title><link>https://pyvideo.org/euroscipy-2017/introduction-into-the-ppci-project.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The ppci project was started by the need for a better system level
+programming language then C. The compiler is implemented in python, and
+hence is not very fast. On the other hand, the compiler is portable and
+is easier to develop due to being implemented into a higher level
+language. Currently it supports msp430, x86, xtensa, avr, arm, open risc
+and stm8 computer architectures, in various levels of maturity. The
+supported languages are C3 and brainfuck. Language support for C is a
+work in progress.&lt;/p&gt;
+&lt;p&gt;The C3 language was the starting point for the compiler, aiming at being
+a better version of C. It has no header files, but features a more
+modular approach like C# and java. Furthermore its syntax is context
+free, making it easier to parse using standard compiler tools.&lt;/p&gt;
+&lt;p&gt;The backend of the compiler consists of a code generator featuring both
+instruction selection and register coloring algorithms. The output of
+the compiler is an instruction stream, which can be serialized as text
+or in binary form.&lt;/p&gt;
+&lt;p&gt;Possible uses of this library are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Compile code and include it into the currently running python
+instance&lt;/li&gt;
+&lt;li&gt;Create ctypes bindings for C code by making use of the C parser
+frontend&lt;/li&gt;
+&lt;li&gt;Create a programming language using ply/textx and generate machine
+code from it using ppci&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During this session, we will explore the various parts of the ppci
+library and have a good overview what it is capable of.&lt;/p&gt;
+&lt;p&gt;Further documentation is &lt;a class="reference external" href="http://ppci.readthedocs.io/en/latest/"&gt;located
+here&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Windel Bouwman</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/introduction-into-the-ppci-project.html</guid><category>ppci</category></item></channel></rss>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>Understanding and Applying CQRS</title><link>https://pyvideo.org/europython-2018/understanding-and-applying-cqrs.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creating scalable applications has a number of complex variables and one
+of them is to work with scalability and performance in the database
+layer. Command Query Responsibility Segregation (CQRS) is a design
+pattern that helps produce more performance and resilience in
+applications where data access is intense. In this talk, we will
+understand when to use and the problems that CQRS solves. We will also
+apply CQRS in a Python application using the Nameko framework.&lt;/p&gt;
+&lt;p&gt;The outline talk is: ○ (4 minutes) - Present a real problem of a web
+application, when creating new instances is not a solution, because the
+database receives an overwrite of writing and unfeasible to read the
+data, collapsing the application. ○ (6 minutes) - Present the CQRS
+pattern conceptually and how this design pattern solves this type of
+problem using the structure of Command Stack and Query Stack ○ (3
+minutes) - Show Nameko as an interesting tool to apply the CQRS. It will
+demonstrate the use of HTTP, RPC and the possibility of applying
+pub/sub. ○ (6 minutes) - Create (live code) the Command Stack layer
+using Nameko on a Postgresql database. ○ (5 minutes) - Create (live
+code) the Query Stack layer using Nameko over a MongoDB database. ○ (3
+minutes) - Explain common myths and mistakes about CQRS (3 minutes) - Q
+&amp;amp; A Session&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinicius Pacheco</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:europython-2018/understanding-and-applying-cqrs.html</guid></item><item><title>Green threads in Python</title><link>https://pyvideo.org/europython-2017/green-threads-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is for general public with problems to scale. The good
+background for this talk is people with minimal knowledge about
+threads. After this talk I expect that the audience can be enable to
+understand multiprocessing, when use and which tools and methods are
+appropriate for each case.&lt;/p&gt;
+&lt;p&gt;Understanding threads&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;It's the first moment on the talk. Here I'll speak about the thread theory and what happen when we use threads on the OS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Threads and multiprocess API&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I'll give simple examples about what python give us to use threads and multiprocessing perhaps with two APIs&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/threading.html"&gt;https://docs.python.org/3/library/threading.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.python.org/3.5/library/multiprocessing.html"&gt;https://docs.python.org/3.5/library/multiprocessing.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Understanding Green threads&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Here I'll speak about green threads theory and what happen when we use green threads on our OS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Green thread Patterns and tools&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Here I'll show few examples with keep alive patterns, discuss about a few tools and show gevent and asyncio examples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Parallelism x asynchronism&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I'll show the diference between parallelism and asynchronism discussing about the two theories&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Why, when and how&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;It's is the last talk moment and I'll explain the how complex is work with multiprocess showing cases like queues consume and APIs consume&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinicius Pacheco</dc:creator><pubDate>Wed, 12 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-12:europython-2017/green-threads-in-python.html</guid></item><item><title>APIs and Microservices With Go</title><link>https://pyvideo.org/europython-2016/apis-and-microservices-with-go.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vinicius Pacheco - APIs and Microservices With Go
+[EuroPython 2016]
+[19 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/apis-and-microservices-with-go"&gt;https://ep2016.europython.eu//conference/talks/apis-and-microservices-with-go&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;In this talk we show how the Go language helped us get a high
+performance in a concise and simple API. Everything will be
+exemplified using the backdrop of a real case of Globo.com: API
+registrations. We will see how we went from 200 to 19,000 records per
+second to the impacts of this rapid growth and the consequences of Go
+of use. We also show how our microservices architecture was used in
+the project.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;This talk is about Go, software architecture and parallelism. How we
+went from legacy, complex and slow software to new, speed, resilient
+and maintainable software.
+I'll start the talk showing the problemas and the challenges that my
+team had received. After that, I'll show the tests, tests of
+performance and the options that we did considering technologies and
+strategies of development. The difficulties and problems also will be
+show. Also I talk about:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Goroutines&lt;/li&gt;
+&lt;li&gt;Resilient patterns&lt;/li&gt;
+&lt;li&gt;Go tools&lt;/li&gt;
+&lt;li&gt;Architecture&lt;/li&gt;
+&lt;li&gt;Web performance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;How we leave of the Java ecosystem to new free ecosystem with
+microservices and how Go help us.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinicius Pacheco</dc:creator><pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-31:europython-2016/apis-and-microservices-with-go.html</guid></item></channel></rss>

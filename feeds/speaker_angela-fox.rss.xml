@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 06 Oct 2017 00:00:00 +0000</lastBuildDate><item><title>Create Single Python Executables for Easy Deployment</title><link>https://pyvideo.org/pygotham-2017/create-single-python-executables-for-easy-deployment.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="background"&gt;
+&lt;h4&gt;Background&lt;/h4&gt;
+&lt;p&gt;Given Python's scripting design, developers struggle with putting Python into a concise structure (wrangling messy files everywhere, etc.). I work as a software engineer and product owner at a small, early stage startup called FINDMINE  that uses machine learning to scale the currently manual and tedious process of product curation. We develop and maintain five large scale Python applications which make up the FINDMINE product, as well as two open source Python libraries. As you can imagine, as FINDMINE has continued to grow as a company and serve more clients, the engineering team has faced some very familiar startup growing pains as we scale our software and our development team.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problem-1-wrangling-third-party-dependencies"&gt;
+&lt;h4&gt;Problem 1: Wrangling Third Party Dependencies&lt;/h4&gt;
+&lt;p&gt;All of our applications at FINDMINE are written in Python 3.5 and 3.6. As many developers and maintainers of large scale software systems in Python can attest, organizing your source code in a concise structure can be a struggle because of Python’s scripting design. Furthermore, it’s often important to have a Python package deployment strategy, because deployment can be complicated by your code’s reliance on third party dependencies.&lt;/p&gt;
+&lt;p&gt;I know many people can relate to the frustration of running a python application, only to have it crash because the machine you’re using happens to be missing some arbitrary list of dependencies. Suddenly you’re piping pip freeze into files and wrangling them all over the place!&lt;/p&gt;
+&lt;p&gt;So we were looking for a solution that would give us a two  things. First, the ability to deploy our applications as a single executable. Second, we wanted a way to package all the application’s dependencies into that single executable, so that it could run on any machine without any problems.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="problem-2-lacking-a-replicable-environment-for-development-and-testing"&gt;
+&lt;h4&gt;Problem 2: Lacking a Replicable Environment for Development and Testing&lt;/h4&gt;
+&lt;p&gt;Our second problem was one that will be very familiar to anyone who has worked in a small startup environment - we didn’t have a replicable environment for development and testing. Our five applications share configurations and modules, including an communication protocol that defines how the applications would communicate certain information with one another. Making changes to any of these shared components meant that we encountered many development coordination and versioning issues.&lt;/p&gt;
+&lt;p&gt;We wanted to mature our development process and create a build process that would ensure a consistent environment for developing, testing and running our software. We also recognized that we needed to start using a continuous integration development practice, and needed an automated build and test functionality to detect integration errors.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-solution"&gt;
+&lt;h4&gt;The Solution&lt;/h4&gt;
+&lt;p&gt;To solve these two problems we came up with a unique way to use Pex, a packaging utility, and Bazel, a build tool, together. Over the course of my presentation, I'm going to introduce both of these tools for those who are unfamiliar with them. Then, I’m going to walk through our cool way of using Pex and Bazel together, but rather than describing our actual FINDMINE build structure - I’m going to use a super simple Sample Application for demo purposes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-you-should-attend"&gt;
+&lt;h4&gt;Why you should attend&lt;/h4&gt;
+&lt;p&gt;Anybody who develops software in Python, regardless of their level, could benefit from learning about Pex and Bazel and how to leverage them to speed up developing, building, testing and deploying Python applications. I'll discuss our methodology, show a demo in action, and show you where to go to replicate this for your own applications. Finally, I'll discuss the learnings and insights we discovered while struggling through the muck in coming to this solution.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Angela Fox</dc:creator><pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-06:pygotham-2017/create-single-python-executables-for-easy-deployment.html</guid></item></channel></rss>

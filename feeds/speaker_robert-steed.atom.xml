@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_robert-steed.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-08-31T00:00:00+00:00</updated><entry><title>Real-time Crowd-sourced Detection of Earthquakes</title><link href="https://pyvideo.org/euroscipy-2017/real-time-crowd-sourced-detection-of-earthquakes.html" rel="alternate"></link><published>2017-08-31T00:00:00+00:00</published><updated>2017-08-31T00:00:00+00:00</updated><author><name>Robert Steed</name></author><id>tag:pyvideo.org,2017-08-31:euroscipy-2017/real-time-crowd-sourced-detection-of-earthquakes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The European-Mediterranean Seismological Centre publishes up to date
+earthquake information from around the world. However, for several
+years, we have been able to detect many important earthquakes earlier
+than the seismic networks! After an earthquake, people affected often
+rapidly arrive on our website or use our app, this causes a peak in
+internet traffic that our customised traffic monitoring system detects.&lt;/p&gt;
+&lt;p&gt;When a peak is detected, our website and app respond by requesting our
+users to complete a questionnaire if they have felt an earthquake. Each
+peak is also analyzed to estimate its epicentre and start time,
+whereupon the system starts trying to associate the peak with a
+seismically detected earthquake. If an association is obtained, this
+earthquake is given special status by our website since we can be sure
+that it has been felt by the public (most earthquakes are only felt by a
+few people). This system helps us improve our site’s responsivity and
+hence our connection with the public.&lt;/p&gt;
+&lt;p&gt;The system consists of a collection of python processes linked via
+&lt;a class="reference external" href="https://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt;. RabbitMQ is a messaging server
+that creates a queue of messages for each process to consume. We use the
+&lt;a class="reference external" href="https://github.com/pika/pika"&gt;pika&lt;/a&gt; library to interact with
+RabbitMQ from python, each process is an actor in the RMQ network.&lt;/p&gt;
+&lt;p&gt;Users are localized via their IP or mobile phone geolocation. Peaks are
+localized using a clustering algorithm. This allows us to create maps of
+activity, which is done using &lt;a class="reference external" href="http://gmt.soest.hawaii.edu/"&gt;GMT&lt;/a&gt;
+(via &lt;a class="reference external" href="http://emolch.github.io/gmtpy/"&gt;gmtpy&lt;/a&gt; - GMT is a mapping
+software popular in the seismic community).&lt;/p&gt;
+&lt;p&gt;Data and results are also persisted to a
+&lt;a class="reference external" href="https://www.postgresql.org"&gt;postgresql&lt;/a&gt; database using the
+&lt;a class="reference external" href="https://www.sqlalchemy.org"&gt;sqlalchemy&lt;/a&gt; toolkit. A realtime display
+of the postgresql data is accomplished using
+&lt;a class="reference external" href="https://grafana.com/"&gt;Grafana&lt;/a&gt; via a customization of the
+&lt;a class="reference external" href="https://graphite-api.readthedocs.io/en/latest/"&gt;graphite-api&lt;/a&gt;
+application.&lt;/p&gt;
+&lt;p&gt;This talk will give an overview of our system’s operation and details on
+its technical implementation.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_simulation.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-04-08T00:00:00+00:00</updated><entry><title>Validazione e decodifica di file XML con Python</title><link href="https://pyvideo.org/pycon-italia-2017/validazione-e-decodifica-di-file-xml-con-python.html" rel="alternate"></link><published>2017-04-08T00:00:00+00:00</published><updated>2017-04-08T00:00:00+00:00</updated><author><name>Davide Brunato</name></author><id>tag:pyvideo.org,2017-04-08:pycon-italia-2017/validazione-e-decodifica-di-file-xml-con-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Per la schematizzazione di documenti XML sono disponibili diversi
+standard, tra questi XML Schema. La prima problematica è quella di poter
+validare file XML secondo il loro rispettivo schema. Un’altra esigenza è
+la conversione dell’XML in strutture dati in cui siano valorizzati i
+tipi base definiti nello schema e la struttura nidificata in cui sono
+inseriti, similmente a quello che è già reso disponibile per JSON.&lt;/p&gt;
+&lt;p&gt;In ambito scientifico, nell’ambito delle attività del progetto europeo
+MaX (Materials design at the Exascale), per semplificare l’interscambio
+di dati dati XML tra diversi software di simulazione, si è deciso di
+adottare un approccio unitario e sistematico alla validazione e alla
+decodifica dei dati XML prodotti.&lt;/p&gt;
+&lt;p&gt;Pertanto è in fase di sviluppo una nuova libreria (xmlschema), basata
+sulla libreria standard ElementTree di Python, che permette di validare
+e decodificare dati XML con schemi XSD. La decodifica di un documento
+XML produce un dizionario nidificato con i valori terminali appartenenti
+ai corrispondenti tipi elementari.&lt;/p&gt;
+&lt;p&gt;Nella presentazione parlerei delle problematiche degli schemi XSD,
+dell’ambito scientifico in cui è stata sviluppata la libreria e della
+struttura della libreria stessa, illustrando e magari raccogliendo
+qualche idea per migliorarla.&lt;/p&gt;
+</summary><category term="xml"></category><category term="mathematical-modelling"></category><category term="encoding"></category><category term="Python"></category><category term="simulation"></category><category term="validation"></category><category term="physics"></category><category term="metadata"></category></entry><entry><title>PyOhio 2010: Implementation of a Numerical Simulation in Python</title><link href="https://pyvideo.org/pyohio-2010/pyohio-2010--implementation-of-a-numerical-simula.html" rel="alternate"></link><published>2010-07-31T00:00:00+00:00</published><updated>2010-07-31T00:00:00+00:00</updated><author><name>Jeffrey Armstrong</name></author><id>tag:pyvideo.org,2010-07-31:pyohio-2010/pyohio-2010--implementation-of-a-numerical-simula.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Implementation of a Numerical Simulation in Python&lt;/p&gt;
+&lt;p&gt;Presented by Jeffrey B. Armstrong&lt;/p&gt;
+&lt;p&gt;The Python programming language is well suited for numerical computation
+under a variety of circumstances. Python offers advantages over
+competing free and commercial technologies, including price,
+functionality, and maintainability. Specifically, the combination of
+mature numerical libraries and liberal licensing allow complex
+simulations to be coded with ease and to be made available to nearly all
+interested parties. !NumPy/!SciPy, database access, networking, and
+optimization techniques are examined in detail with respect to numerical
+computation. A practical example involving an aerothermal commercial
+turbofan aircraft engine simulation showcases these advantages. An
+aircraft engine is broken down into discrete stages, including
+compressors, turbines, and other flow-related components. Commonalities
+between components, such as rotation and the presence of inlet and exit
+conditions, map cleanly to the object-oriented nature of Python. Based
+on simulation needs and hardware availability, Python allows for the
+parallel computation of simulations without the expense and complexity
+of commercial parallelization packages.&lt;/p&gt;
+</summary><category term="database"></category><category term="networking"></category><category term="numpy"></category><category term="optimization"></category><category term="pyohio"></category><category term="pyohio2010"></category><category term="scipy"></category><category term="simulation"></category></entry><entry><title>Multibody Dynamics and Control with Python part 1</title><link href="https://pyvideo.org/scipy-2014/multibody-dynamics-and-control-with-python-part-1.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Jason K. Moore</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/multibody-dynamics-and-control-with-python-part-1.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this tutorial, attendees will learn how to derive, simulate, and
+visualize the motion of a multibody dynamic system with Python tools.
+These methods and techniques play an important role in the design and
+understanding of robots, vehicles, spacecraft, manufacturing machines,
+human motion, etc. Attendees will develop code to simulate the motion of
+a human or humanoid robot.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this tutorial, attendees will learn how to derive, simulate, and
+visualize the motion of a multibody dynamic system with Python tools.
+The tutorial will demonstrate an advanced symbolic and numeric pipeline
+for a typical multibody simulation problem. These methods and techniques
+play an important role in the design and understanding of robots,
+vehicles, spacecraft, manufacturing machines, human motion, etc. At the
+end, the attendees will have developed code to simulate the uncontrolled
+and controlled motion of a human or humanoid robot.&lt;/p&gt;
+&lt;p&gt;We will highlight the derivation of realistic models of motion with the
+SymPy Mechanics package. We will walk through the derivation of the
+equations of motion of a multibody system (i.e. the model or the plant),
+simulating and visualizing the free motion of the system, and finally we
+will addfeedback controllers to control the plants that we derive.&lt;/p&gt;
+&lt;p&gt;It is best if the attendees have some background with calculus-based
+college level physics. They should also be familiar with the SciPy
+Stack, in particular IPython, SymPy, NumPy, and SciPy. Our goal is that
+attendees will come away with the ability to model basic multibody
+systems, simulate and visualize the motion, and apply feedback
+controllers all in a Python framework.&lt;/p&gt;
+&lt;p&gt;The tutorial materials including an outline can be viewed here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pydy/pydy-tutorial-pycon-2014"&gt;https://github.com/pydy/pydy-tutorial-pycon-2014&lt;/a&gt;&lt;/p&gt;
+</summary><category term="robots"></category><category term="simulation"></category><category term="sympy"></category></entry><entry><title>Multibody Dynamics and Control with Python part 2</title><link href="https://pyvideo.org/scipy-2014/multibody-dynamics-and-control-with-python-part-2.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Jason K. Moore</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/multibody-dynamics-and-control-with-python-part-2.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this tutorial, attendees will learn how to derive, simulate, and
+visualize the motion of a multibody dynamic system with Python tools.
+These methods and techniques play an important role in the design and
+understanding of robots, vehicles, spacecraft, manufacturing machines,
+human motion, etc. Attendees will develop code to simulate the motion of
+a human or humanoid robot.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this tutorial, attendees will learn how to derive, simulate, and
+visualize the motion of a multibody dynamic system with Python tools.
+The tutorial will demonstrate an advanced symbolic and numeric pipeline
+for a typical multibody simulation problem. These methods and techniques
+play an important role in the design and understanding of robots,
+vehicles, spacecraft, manufacturing machines, human motion, etc. At the
+end, the attendees will have developed code to simulate the uncontrolled
+and controlled motion of a human or humanoid robot.&lt;/p&gt;
+&lt;p&gt;We will highlight the derivation of realistic models of motion with the
+SymPy Mechanics package. We will walk through the derivation of the
+equations of motion of a multibody system (i.e. the model or the plant),
+simulating and visualizing the free motion of the system, and finally we
+will addfeedback controllers to control the plants that we derive.&lt;/p&gt;
+&lt;p&gt;It is best if the attendees have some background with calculus-based
+college level physics. They should also be familiar with the SciPy
+Stack, in particular IPython, SymPy, NumPy, and SciPy. Our goal is that
+attendees will come away with the ability to model basic multibody
+systems, simulate and visualize the motion, and apply feedback
+controllers all in a Python framework.&lt;/p&gt;
+&lt;p&gt;The tutorial materials including an outline can be viewed here:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/pydy/pydy-tutorial-pycon-2014"&gt;https://github.com/pydy/pydy-tutorial-pycon-2014&lt;/a&gt;&lt;/p&gt;
+</summary><category term="robots"></category><category term="simulation"></category><category term="sympy"></category></entry><entry><title>Derivatives Analytics with Python &amp; Numpy</title><link href="https://pyvideo.org/europython-2011/derivatives-analytics-with-python-numpy.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Dr. Yves J. Hilpisch</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/derivatives-analytics-with-python-numpy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Yves Hilpisch - 24 June 2011 in &amp;quot;Track Ravioli &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In financial engineering and derivatives analytics, C/C++/Java/VBA and
+other languages are still dominating. Visixion has developed with
+&lt;a class="reference external" href="http://www.dexision.com"&gt;DEXISION&lt;/a&gt; the first full fledged
+derivatives analytics suite with Python as core language.&lt;/p&gt;
+&lt;p&gt;DEXISION is an On Demand application that is completely Open Source
+based (LAMP). For derivatives valuation, it uses Monte Carlo simulation
+- an approach known to be computationally demanding. However, Numpy
+provides the performance and functionality needed to implement financial
+simulation algorithms in a fast and compact manner.&lt;/p&gt;
+&lt;p&gt;The talk illustrates the architecture of our analytics suite and
+demonstrates how to implement fast and compact simulation algorithms
+with Python and Numpy. The talk shows that the Python/Numpy combination
+reaches sufficient speed for productive financial applications -
+something still widely doubted.&lt;/p&gt;
+&lt;p&gt;[No prerequisites.]&lt;/p&gt;
+</summary><category term="architecture"></category><category term="engineering"></category><category term="numpy"></category><category term="performance"></category><category term="simulation"></category></entry><entry><title>DEXISION -- Moderne Finanztheorie und -praxis mit Python</title><link href="https://pyvideo.org/pycon-de-2012/dexision-moderne-finanztheorie-und-praxis-mit.html" rel="alternate"></link><published>2012-10-30T00:00:00+00:00</published><updated>2012-10-30T00:00:00+00:00</updated><author><name>Dr. Yves J. Hilpisch</name></author><id>tag:pyvideo.org,2012-10-30:pycon-de-2012/dexision-moderne-finanztheorie-und-praxis-mit.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;DEXISION ist eine kommerzielle Bewertungslösung für Finanzderivate. Sie
+wurde durch die Visixion GmbH im Wesentlichen auf Basis von Python
+entwickelt. Der Vortrag zeigt, wie moderne, Web-basierte Finanzlösungen
+mittels Python zu implementieren sind. Aspekte wie Effizienz in der
+Entwicklung, Performance, Erweiterbarkeit, Wartbarkeit und Sicherheit
+sind dabei von besonderer Bedeutung.&lt;/p&gt;
+&lt;p&gt;Die Architektur von DEXISION fußt auf einem LAMP-Stack und es kommen
+dabei nur Open Source-Komponenten zum Einsatz. Unseres Wissens nach ist
+DEXISION nach wie vor die einzige kommerzielle Finanzlösung dieser Art,
+die in allen Bereichn -- auch bei rechenintensiven Simulationsaufgaben
+-- voll auf Python setzt.&lt;/p&gt;
+</summary><category term="bewertung von derivaten"></category><category term="dexision"></category><category term="finanzen"></category><category term="on demand"></category><category term="scientific python"></category><category term="simulation"></category></entry><entry><title>Ereignis-diskrete Simulation mit SimPy</title><link href="https://pyvideo.org/pycon-de-2013/ereignis-diskrete-simulation-mit-simpy.html" rel="alternate"></link><published>2013-10-16T00:00:00+00:00</published><updated>2013-10-16T00:00:00+00:00</updated><author><name>Stefan Scherfke</name></author><id>tag:pyvideo.org,2013-10-16:pycon-de-2013/ereignis-diskrete-simulation-mit-simpy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Simulationen kommen immer dann zum Einsatz, wenn Experimente an realen
+Systemen mit hohen Risiken bzw. Kosten verbunden oder gar nicht erst
+möglich sind. Zudem erlauben Simulationen es, Vorgänge, die in der
+realität lange Zeiträume beanspruchen, in zumeist wesentlich kürzerer
+Zeit nachzuvollziehen.&lt;/p&gt;
+&lt;p&gt;Nach einer kurzen Einführung in das Thema zeigt dieser Vortrag anhand
+einfacher Beispiele, wie sich Ereignis-diskrete Simulationen mit SimPy
+umsetzen lassen und welche Funktionen SimPy zur Umsetzung komplexerer
+Simulationen bietet.&lt;/p&gt;
+</summary><category term="ereignis-diskret"></category><category term="generators"></category><category term="simpy"></category><category term="simulation"></category><category term="zeit-diskret"></category></entry><entry><title>Using Python to Create Robotic Simulations for Planetary Exploration (#159)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--using-python-to-create-robotic-simula.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Dr. Jonathan M Cameron</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--using-python-to-create-robotic-simula.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using Python to Create Robotic Simulations for Planetary Exploration
+(#159)&lt;/p&gt;
+&lt;p&gt;Presented by Dr. Jonathan M Cameron (Jet Propulsion Laboratory (NASA))&lt;/p&gt;
+&lt;p&gt;The primary activity of the Dartslab (&lt;a class="reference external" href="http://dartslab.jpl.nasa.gov"&gt;http://dartslab.jpl.nasa.gov&lt;/a&gt;) at
+Jet Propulsion Laboratory (JPL) is to create simulations of robotic
+vehicles for planetary exploration. We have created simulations of a
+wide variety of robotic vehicles such as spacecraft, rovers, and
+airships. We have been using Python in a variety of ways to build our
+simulations. In this talk we will outline how we use Python to set up a
+runtime environment for our simulations and to tie together
+computationally intense C++ code modules at runtime. We will also
+discuss how we have been using Python to help prototype and design C++
+code.&lt;/p&gt;
+</summary><category term="nasa"></category><category term="pycon"></category><category term="pycon2010"></category><category term="robotics"></category><category term="simulation"></category></entry></feed>

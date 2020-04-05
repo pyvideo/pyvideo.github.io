@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 30 Aug 2015 00:00:00 +0000</lastBuildDate><item><title>Building a Scalable Python gRPC Service using Kubernetes</title><link>https://pyvideo.org/pycon-korea-2015/building-a-scalable-python-grpc-service-using-kubernetes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;gRPC is a new high performance, open source, general RPC framework that
+uses the HTTP/2 standard. The gRPC framework allows you to create small
+scalable services that fit well into a service oriented architecture.
+Kubernetes is a cluster manager that allows you to create services that
+can be scaled easily. Service oriented architecture is a key part of how
+many companies, like Google, operate their infrastructure to provide
+robust, and highly available services that operate at a consistently
+high level of performance for end users.&lt;/p&gt;
+&lt;p&gt;In this talk I will talk about how to use Python to create a scalable
+gRPC service and then how to actually manage and scale it using the
+Kubernetes cluster manager. Using Python allows you to make use of the
+extensive set of Python libraries publicly available. Python is a
+flexible language that can be very efficient when tuned properly.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ian Lewis</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/building-a-scalable-python-grpc-service-using-kubernetes.html</guid></item><item><title>Celery의 빛과 그림자</title><link>https://pyvideo.org/pycon-korea-2015/celeryyi-bicgwa-geurimja.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;서비스를 만들면서 피할 수 없는 주제 중 한가지가 바로 비동기 처리입니다.
+무겁고 오래 걸리는 일에 대한 처리뿐 아니라, 주기적으로 수행해야 하는
+일까지 대부분 서비스에 반드시 라고 할 만큼 겪게 되는 문제죠. Python을
+쓰는 우리에게는 물론 싱싱하고 훌륭한 해법인 Celery가 있습니다. 요구되는
+거의 모든 기능을 제공할 뿐만 아니라, 유연하게 설계되어 있고 관리툴 같은
+부가 기능까지, 비동기에 관련된 모든 부분을 책임져주죠.&lt;/p&gt;
+&lt;p&gt;하지만 Celery에 이런 빛과 같은 아름다움만 존재하는 것은 아닙니다. 싱싱한
+채소를 맛있게 먹기 위해서는 몇 가지 공부가 필요한 것처럼, 때로는
+Celery의 의아스러운 점을 잘 다루고, 우리의 서비스에 맞게 이용하기
+위해서는 몇 가지 알아야 할 점이 있습니다. 지난 1년여간 최대 1만 건/초의
+요청을 Celery로 처리하면서 제가 얻은 경험을 나누고자 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">정민영</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/celeryyi-bicgwa-geurimja.html</guid></item><item><title>Django In Production</title><link>https://pyvideo.org/pycon-korea-2015/django-in-production.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;하나의 거대한 프로젝트로 개발할 것인가?&lt;/div&gt;
+&lt;div class="line"&gt;여러 개의 프로젝트와 앱으로 쪼개서 개발할 것인가?&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;서버를 직접 조립해서 IDC에 입고하고, 회선을 계약해서 서비스할 것인가?&lt;/div&gt;
+&lt;div class="line"&gt;IaaS / PaaS 등 클라우드 서비스를 이용하여 서비스할 것인가?&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;5년간 Django 기반의 모바일 서비스를 운영하며 겪은 각종 실패 사례를
+공유해 봅니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hyun-woo Park</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/django-in-production.html</guid></item><item><title>도도와 파이썬: 좋은 선택과 나쁜 선택</title><link>https://pyvideo.org/pycon-korea-2015/dodowa-paisseon-joheun-seontaeggwa-nabbeun-seontaeg.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://dodopoint.com/"&gt;도도 포인트&lt;/a&gt;는 태블릿 기반 매장 멤버십
+서비스로, 태블릿에 전화번호를 입력하는 것만으로 간편히 포인트 적립을
+하고 다양한 리워드를 받을 수 있습니다. 현재 2,500여개 매장에서 400만명의
+사용자가 도도 포인트를 이용중이며, 최근 누적 적립 횟수가 1,000만건을
+돌파하며 빠르게 성장중입니다.&lt;/p&gt;
+&lt;p&gt;도도 포인트는 처음부터 파이썬 기반으로 제작하였습니다.
+&lt;a class="reference external" href="http://flask.pocoo.org/"&gt;Flask&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;SQLAlchemy&lt;/a&gt; 조합을 기반으로
+프로토타입부터 지금까지 개발을 이어가고 있으며 현재 약 20여명의 개발자가
+도도 포인트 개발에 참여하고 있습니다.&lt;/p&gt;
+&lt;p&gt;본 발표에서는 3년 이상의 기간동안 도도 포인트를 개발하면서 했던 많은
+기술적인 선택들을 회고합니다. 어떤 선택은 적합한 타이밍이었으며, 어떤
+선택은 너무 이른 선택이었고, 어떤 선택은 아예 잘못된 결정이었습니다.
+특히 저희에게 큰 영향을 끼친 대표적인 선택들을 공유함으로써, 다음과 같은
+주제에 관심있는 분들께 좋은 참고가 될 것으로 기대합니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;새로운 스타트업을 준비하며 파이썬 채택을 고민중이신 분&lt;/li&gt;
+&lt;li&gt;불확실한 미래, 빠듯한 일정사이에서 끊임 없이 기술 빚의 규모를
+계산중이신 분&lt;/li&gt;
+&lt;li&gt;5명팀, 1개의 프로젝트에서 24명팀, 6개의 상호작용하는 프로젝트로의
+발전과정이 궁금하신 분&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">김재석</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/dodowa-paisseon-joheun-seontaeggwa-nabbeun-seontaeg.html</guid></item><item><title>Functional Testing</title><link>https://pyvideo.org/pycon-korea-2015/functional-testing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;파이썬에서 테스트가 필요한 이유, 테스트 방법 그리고 TDD 에 대하여
+이야기합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kwon-Han Bae</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/functional-testing.html</guid></item><item><title>Introduction to Kivy</title><link>https://pyvideo.org/pycon-korea-2015/introduction-to-kivy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kivy는 OpenGL기반으로 만들어진 파이썬 NUI 프레임워크입니다. Kivy는 빠른
+프로토타이핑과 크로스 플랫폼 애플리케이션 개발을 가능하게 합니다.&lt;/p&gt;
+&lt;p&gt;본 세션에서는 1.9.x로 버전업 하면서 더욱 쓸만해진 Kivy를 소개하고 간단한
+앱을 만들어 보면서 Kivy 애플리케이션의 구성과 kv language 부터
+패키징까지 다루어보고자 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">이창욱</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/introduction-to-kivy.html</guid></item><item><title>Load testing</title><link>https://pyvideo.org/pycon-korea-2015/load-testing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Load testing using Locust.io will teach you how to start load testing
+using simple examples and give you the reasons and possible
+optimizations for your application.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Robert Jerovsek</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/load-testing.html</guid></item><item><title>네티 13년</title><link>https://pyvideo.org/pycon-korea-2015/neti-13nyeon.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;네티 프로젝트가 2001년 12월 16일 첫 릴리즈된 이후 무려 13년이
+지났습니다. 그간 있었던 여러 일들을 회고하며 오픈 소스 프로젝트가 성장해
+나아간다는 것은 무엇인지, 또 그것이 프로젝트 참여자에게 어떤 의미를
+갖는지 보여드리고자 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">이희승</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/neti-13nyeon.html</guid></item><item><title>오늘 당장 딥러닝 실험하기</title><link>https://pyvideo.org/pycon-korea-2015/oneul-dangjang-dibreoning-silheomhagi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;최근 IT업계에서는 딥러닝에 대한 큰 활약이 이슈화 되고 있습니다.&lt;/p&gt;
+&lt;p&gt;이와 같은 트렌드에 따라가고 싶지만 선형대수 등의 수학적 배경지식
+습득부터 시작하여, 딥러닝의 원리와 주요 개념들을 이해 후에 실험을
+시도하기에는 많은 시간과 노력이 필요합니다.&lt;/p&gt;
+&lt;p&gt;그러나 기존의 유용한 딥러닝 오픈소스를 활용한다면 어렵지 않게 딥러닝을
+맛볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;본 발표는 수학적인 설명을 최대한 배제하고, 오픈소스 툴인 theano,
+pylearn2를 활용한 예제에 대해 설명하려고 합니다. 추가로 필요할 코드들도
+소개하려고 합니다.&lt;/p&gt;
+&lt;p&gt;그리고 word2vec 를 활용하여, 자연어 처리에 딥러닝을 적용하는 사례를
+다루려고 합니다.&lt;/p&gt;
+&lt;p&gt;주제가 학문적이고 이론적이기 때문에 발표가 부담되지만, 최대한 개념적으로
+설명하여 실험을 쉽게 따라 할 수 있도록 돕고자 합니다.&lt;/p&gt;
+&lt;p&gt;오픈소스 툴들의 문서화가 잘 되어있지만, 저 또한 처음 접했을 때는
+어려움이 있었기 때문에 딥러닝을 시작해보려는 분들에게 도움이 될
+듯합니다.&lt;/p&gt;
+&lt;p&gt;컴퓨터가 딥러닝하는 동안 틈틈이 이론공부 하시면 좋겠네요.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">김현호</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/oneul-dangjang-dibreoning-silheomhagi.html</guid></item><item><title>Opening 2015-08-30</title><link>https://pyvideo.org/pycon-korea-2015/opening-2015-08-30.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Younggun Kim</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/opening-2015-08-30.html</guid></item><item><title>파이썬을 이용한 새 프로그래밍 언어 "약속"의 개발</title><link>https://pyvideo.org/pycon-korea-2015/paisseoneul-iyonghan-sae-peurogeuraeming-eoneo-yagsogyi-gaebal.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;파이썬을 이용한 새 프로그래밍 언어 &lt;a class="reference external" href="http://www.yaksok.org"&gt;약속&lt;/a&gt;의
+개발&lt;/p&gt;
+&lt;p&gt;요즘 프로그래머가 아닌 사람들을 위한 프로그래밍 교육에 대한 관심이
+높아지고 있습니다. 주로 스크래치를 이용한 간단한 퍼즐을 해결하는 것이나
+아두이노를 연계하는 등 여러 가지 방식이 제안되고 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;약속&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;언어는&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;한글 프로그래밍 언어&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;로, 처음 프로그래밍을 접하는 사람이 큰 어려움 없이 프로그래밍에 적응하고
+간단한 도구들을 만들어 쓸 수 있도록 쉽게 디자인된 언어입니다.&lt;/p&gt;
+&lt;p&gt;이 발표에서는&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;약속 언어를 소개하고,&lt;/li&gt;
+&lt;li&gt;디자인 결정에 대해 설명하며,&lt;/li&gt;
+&lt;li&gt;실제로 파이썬 (및 다른 도구)을 이용하여 어떻게 구현하였는지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;설명합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">하재승</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/paisseoneul-iyonghan-sae-peurogeuraeming-eoneo-yagsogyi-gaebal.html</guid></item><item><title>Pay-thon: 2015 파이썬 사용자 조사 결과 분석</title><link>https://pyvideo.org/pycon-korea-2015/pay-thon-2015-paisseon-sayongja-josa-gyeolgwa-bunseog.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;facebook에서 실시간으로 받은 사용자 조사 결과를 발표합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">유재명</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/pay-thon-2015-paisseon-sayongja-josa-gyeolgwa-bunseog.html</guid></item><item><title>PyCon Korea 2015 Lightning Talks 2nd day</title><link>https://pyvideo.org/pycon-korea-2015/pycon-korea-2015-lightning-talks-2nd-day.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;ol class="arabic simple"&gt;
+&lt;li&gt;차영호 - &lt;a class="reference external" href="https://docs.google.com/presentation/d/1hDRB1ZMf63lsLWXQxxPTnVYldytcUpgxtakUHR1ipYk/present?slide=id.p"&gt;clang 과 javaparser와 python을 이용한 소스변경사항 고객용
+리포트
+자동생성하기&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;서지혁 - 네이버 블로그를 백업해주는 도구인 exitnaver와, exitnaver&lt;/li&gt;
+&lt;li&gt;박조은 - &lt;a class="reference external" href="http://www.slideshare.net/zzonee/pyconkr-2015-2"&gt;어느 여자개발자의 육아휴직
+2년&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;임재수 - &lt;a class="reference external" href="https://github.com/krikit/ctypes_tutorial"&gt;built-in 모듈인 ctypes에 대해 소개할까
+합니다.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;김영근 - PyCon의 철학과 다양한 파이콘 참석 후기.&lt;/li&gt;
+&lt;li&gt;이비오 -&lt;a class="reference external" href="https://docs.google.com/presentation/d/1xnmdBi3jpvqYcdyAeTDGWdUkusoS_fr4vpsR_IsRqa4/present?slide=id.p"&gt;가제 : 우리는 이래도
+되는가?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;서정민 - &lt;a class="reference external" href="https://speakerdeck.com/alotofsec/gaebabmeoggi-keomyuniti-gaebalgwa-unyeong"&gt;개밥먹기 : 커뮤니티의 개발과
+운영&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;김대현 - C++에서 닷넷으로 그리고 자바, 파이썬. 파이썬이 내게 가져다
+준 것들.&lt;/li&gt;
+&lt;li&gt;이지호 - &lt;a class="reference external" href="http://www.slideshare.net/JiHoLee4/2015-52202803"&gt;기술 서적을 집필하기 위해 필요한 동기와 자잘한
+기술&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;강대성 - &lt;a class="reference external" href="http://www.slideshare.net/daesung7kang/raspberry-pi-python-52363367"&gt;엔지니어의 삶 - Raspberry Pi 와 Python 으로 에어컨
+제어&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;박현우 -&lt;a class="reference external" href="http://www.slideshare.net/lqez/2015-52276621"&gt;4.5cm ~
+8.5m&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/pycon-korea-2015-lightning-talks-2nd-day.html</guid><category>lightning talks</category></item><item><title>PyPy/RPython으로 20배 빨라지는 JIT 아희 인터프리터</title><link>https://pyvideo.org/pycon-korea-2015/pypyrpythoneuro-20bae-bbalrajineun-jit-ahyi-inteopeuriteo.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy/RPython으로 20배 빨라지는 JIT 아희 인터프리터&lt;/p&gt;
+&lt;p&gt;PyPy가 CPython보다 몇 배씩이나 빠르다는 이야기, 써보며 체감하는 분도
+많고 소문은 더 많이 나 있습니다. PyPy에서 인터프리터를 구현하기 위해
+사용하는 기술을 살펴보고, 같은 방법으로 아희 인터프리터를 구현해 보며 그
+편리함과 뛰어난 성능을 살펴 봅시다.&lt;/p&gt;
+&lt;p&gt;세 부분으로 나누어 다룰 예정입니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;주제: 아희는 어떤 언어인가요? (5분)&lt;/li&gt;
+&lt;li&gt;기술: PyPy, RPython, 메타 실행추적 JIT (15분)&lt;/li&gt;
+&lt;li&gt;구현: 알파희(RPython으로 만든 아희)의 전략과 효과 분석 (15분)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">정윤원</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/pypyrpythoneuro-20bae-bbalrajineun-jit-ahyi-inteopeuriteo.html</guid></item><item><title>Python 개발을 위한 최상의 무료 개발 도구 Visual Studio와 Visual Studio Code</title><link>https://pyvideo.org/pycon-korea-2015/python-gaebaleul-wihan-coesangyi-muryo-gaebal-dogu-visual-studiowa-visual-studio-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;마이크로소프트의 Visual Studio는 자타가 공헌하는 세계 최고의
+개발도구입니다. Python 개발자는 이제 Python Tools for Visual
+Studio(PTVS)를 설치하여 Visual Studio를 최고의 Python 개발도구로 확장 할
+수 있습니다. PTVS는 CPython, IronPython을 가리지 않고, 편집, 브라우징,
+인털레센스 기능을 제공하고, Python/C++이 혼재되어 있는 환경이나 Linux,
+Mac OS 환경에서도 디버깅을 할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;본 세션에서는 PTVS의 설치로부터 고급 디버깅 시나리오까지를 살펴보고,
+Windows/Linux/Mac OS를 모두 지원하는 Cross Platform 편집도구인 Visual
+Studio Code에 대해서도 간략하 살펴봅니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Myung Shin Kim</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/python-gaebaleul-wihan-coesangyi-muryo-gaebal-dogu-visual-studiowa-visual-studio-code.html</guid></item><item><title>Python의 계산성능 향상을 위해 Fortran, C, CUDA-C, OpenCL-C 와 연동하기</title><link>https://pyvideo.org/pycon-korea-2015/pythonyi-gyesanseongneung-hyangsangeul-wihae-fortran-c-cuda-c-opencl-c-wa-yeondonghagi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python은 과학 계산 분야에서도 이미 널리 사용되고 있습니다. numpy와 scipy
+기반으로 만들어진 많은 모듈들이 휼륭한 생태계를 이루고 있기 때문입니다.
+그러나 극한의 계산 성능을 요구하는 분야(HPC, High Performance
+Computing)에서는 여전히 C와 Fortran으로만으로 짜여진 코드들이 선호되고
+있습니다. 이런 분야에서 Python에 대한 일반적인 견해는 전처리/후처리에는
+유용하지만 메인 코드에 적용하기에는 느리다라는 것입니다.&lt;/p&gt;
+&lt;p&gt;이번 발표에서는 HPC 분야에서도 Python의 유용함을 보여줍니다. 계산이
+집중된 부분만을 Fortran, C로 구현하여 Python 메인 코드에 접합하면,
+Python의 장점은 충분히 활용하면서도 계산 성능에 큰 손해는 보지 않을 수
+있습니다. 게다가 CUDA-C, OpenCL-C와 연동하면 GPU, MIC와 같은 가속
+프로세서들도 비교적 쉽게 활용할 수 있습니다. 이번 발표에서는 간단한
+시뮬레이션 코드를 예제로 사용하여 Python 코드로부터 시작하여 Fortran, C,
+CUDA-C, OpenCL-C 등을 단계적으로 접합해 나가는 것을 보여줄 것입니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">김기환</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/pythonyi-gyesanseongneung-hyangsangeul-wihae-fortran-c-cuda-c-opencl-c-wa-yeondonghagi.html</guid></item><item><title>R vs. Python: 누가, 언제, 왜</title><link>https://pyvideo.org/pycon-korea-2015/r-vs-python-nuga-eonje-wae.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;데이터 분석에 쓰이는 대표적인 프로그래밍 언어로 R과 Python이 있습니다.
+이 발표에서는 두 언어의 장단점을 비교해보고 Python이 더 나은 선택일 수
+있는 조건과 상황을 소개합니다. 또한 Python을 이용한 데이터 분석을 할 때
+알아두어야 할 점들을 살펴봅니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">유재명</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/r-vs-python-nuga-eonje-wae.html</guid></item><item><title>탐색적으로 큰 데이터 분석하기: 파이프라인, 병렬화, 압축, 인덱싱 등에 대해</title><link>https://pyvideo.org/pycon-korea-2015/tamsaegjeogeuro-keun-deiteo-bunseoghagi-paipeurain-byeongryeolhwa-abcug-indegsing-deunge-daehae.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;어떤 정보가 숨어있는지 알 수 없는 큰 데이터를 분석할 때는 미리 생각할 수
+없는 시나리오로 진행되는 경우가 많다. 이렇게 데이터 처리의 윤곽이
+잡혀있지 않을 때엔 빨리 만들어 빨리 쓰고 버리는 일회용 스크립팅과, 어떤
+경우에도 쉽게 적응할 수 있는 일반화된 프레임워크가 필요하다. 또한,
+결과가 빨리 나오지 않으면 다음 분석 작업이 늦어지기 때문에, 적은
+노력으로 속도를 끌어올릴 수 있는 병렬화 환경이 있어야 한다.&lt;/p&gt;
+&lt;p&gt;이 발표에서는 분자생물학에서 많이 사용되는 데이터 분석 도구들을 예로
+들어, 빠른 반복주기가 필요한 대규모 탐색적 데이터 분석 방법을 소개한다.
+워크플로우 자동화 도구 snakemake 의 기본적인 설계 개념을 알아본 뒤,
+snakemake를 이용한 병렬화, 여러 텍스트 파일 병렬처리, 인덱싱 도구들의
+기본적인 개념과 장단점, Julia로 계산이 많이 필요한 부분 가속하기 등을
+예시를 통해 둘러보기로 한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">장혜식</dc:creator><pubDate>Sun, 30 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-30:pycon-korea-2015/tamsaegjeogeuro-keun-deiteo-bunseoghagi-paipeurain-byeongryeolhwa-abcug-indegsing-deunge-daehae.html</guid></item><item><title>Character Encoding in Python</title><link>https://pyvideo.org/pycon-korea-2015/character-encoding-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;이 발표는 Character Encoding 개념을 소개하고, Python을 사용하면서
+경험했던 인코딩 사례들을 공유하는 내용으로 진행합니다. 또한 Encoding
+문제를 피하기 위한 방법을 제시합니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Character Encoding 개념&lt;/li&gt;
+&lt;li&gt;Unicode와 관련 Encoding 소개&lt;/li&gt;
+&lt;li&gt;Python에서 Encoding처리 방법&lt;/li&gt;
+&lt;li&gt;Encoding 문제를 해결한 사례&lt;/li&gt;
+&lt;li&gt;Encoding 문제를 피하기 위한 Tip&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daesung Kang</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/character-encoding-in-python.html</guid></item><item><title>추천시스템이 word2vec을 만났을때</title><link>https://pyvideo.org/pycon-korea-2015/cuceonsiseutemi-word2veceul-mannasseulddae.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;제가 추천 시스템을 알아 가면서 많이 공감을 하는 말이 있습니다.&lt;/p&gt;
+&lt;p&gt;&amp;quot;&lt;strong&gt;Reasonable&lt;/strong&gt; Recommendation은 만들기는 어렵지 않으나 &lt;strong&gt;Great&lt;/strong&gt;
+Recommendation으로 개선하는것을 정말 어렵다. 이 &lt;strong&gt;Reasonable&lt;/strong&gt;과
+&lt;strong&gt;Great&lt;/strong&gt;의 차이는 비지니스적으로 엄청나다.” Netflix Prize가 끝난 직후
+Netflix의 엔지니어가 한 말인데 계속 맘에 맴돌고 있습니다.&lt;/p&gt;
+&lt;p&gt;그럼 여기서 Great한 추천 시스템에 대하여 이야기를 하느냐? 아닙니다. !!!
+저도 Great한 추천시스템이 무엇인지 모릅니다.&lt;/p&gt;
+&lt;p&gt;하지만 Reasonable한 추천 시스템(Collaboration Filtering)부터 Word2vec을
+이용한 색다른 추천 시스템이 구현되는 과정을 살펴 봄으로써, Great한
+추천시스템을 만들기 위해 함께 고민하는 자리가 되었으면 합니다.&lt;/p&gt;
+&lt;p&gt;주요 내용은 다음과 같습니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;협업 필터링 기법으로 영화 별점 예측하기&lt;/li&gt;
+&lt;li&gt;흥미 진진했던 Netflix Prize 이야기&lt;/li&gt;
+&lt;li&gt;Word2vec에 대하여 알아 보자&lt;/li&gt;
+&lt;li&gt;Word2vec으로 영화 추천 시스템 만들어 보기&lt;/li&gt;
+&lt;li&gt;Netflix처럼 Word2vec으로 micro-genre를 만들기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;참고로 추천시스템에 관하여 처음 접해 보시는 분은 &lt;a class="reference external" href="http://www.slideshare.net/ssuser2fe594/deview2014-live-broadcasting"&gt;Live Broadcasting
+추천시스템&lt;/a&gt;
+자료를 한번 보고 오시길 추천 드립니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">최규민</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/cuceonsiseutemi-word2veceul-mannasseulddae.html</guid></item><item><title>Designing a Python-based Data Analysis / Online Coding Platform for Researchers and Educators</title><link>https://pyvideo.org/pycon-korea-2015/designing-a-python-based-data-analysis-online-coding-platform-for-researchers-and-educators.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In modern science and engineering, it is essential to use data analysis
+and calculation using computers. However, large-scale computing is
+labor-intensive to achieve extensibility and manageability of computing
+resources. We are designing and implementing a cloud platform that
+standardizes development, running, and sharing of the data processing
+tasks using cloud technologies and Python 3. We are also adding
+research/education services on top of it.&lt;/p&gt;
+&lt;p&gt;In this talk, we are going to share what we have learned during 2 months
+of development experiences. In particular, it will include the
+architecture of our platform, experiences in the design and
+implementation process, and common caveats to care when you do a similar
+work. We hope to share our motivation that allowed our pathway over such
+a mine field with you.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Modern science and Python&lt;ul&gt;
+&lt;li&gt;Online programming playground for researchers and educators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Technical challenges&lt;ul&gt;
+&lt;li&gt;Sandboxing!&lt;/li&gt;
+&lt;li&gt;Resource consolidation&lt;/li&gt;
+&lt;li&gt;Fast uploads/downloads of data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choice of tech stack&lt;ul&gt;
+&lt;li&gt;Advantages and disadvantages of Python&lt;/li&gt;
+&lt;li&gt;It's time to go Python 3&lt;/li&gt;
+&lt;li&gt;On-premise vs. Hosting vs. Cloud (AWS / Azure / GCE)&lt;/li&gt;
+&lt;li&gt;Docker containers 와 kubernetes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;quot;Shoveling&amp;quot;&lt;ul&gt;
+&lt;li&gt;Warring states of Javascript frameworks + UI frontends&lt;/li&gt;
+&lt;li&gt;Entangling Waltz of Polymer, webcomponents, and Django&lt;/li&gt;
+&lt;li&gt;Backends: Mad-max around Docker&lt;/li&gt;
+&lt;li&gt;Security holes in ipython/Jupyter in the perspective of developer
+and hacker&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">신정규</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/designing-a-python-based-data-analysis-online-coding-platform-for-researchers-and-educators.html</guid></item><item><title>업무에서 빠르게 만들어 사용하는 PyQt 프로그래밍</title><link>https://pyvideo.org/pycon-korea-2015/eobmueseo-bbareuge-mandeuleo-sayonghaneun-pyqt-peurogeuraeming.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyQt는 C++의 크로스 플랫폼 프레임웍인 Qt를 Python에서 사용할 수 있도록
+하는 프로젝트입니다.&lt;/p&gt;
+&lt;p&gt;이런 경우에 PyQt사용을 추천해 드리는 바입니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;자동화 처리를 위한 간단한 프로그램 작성시&lt;/li&gt;
+&lt;li&gt;본 제품을 만들기 전, 프로토타입이 필요한 경우&lt;/li&gt;
+&lt;li&gt;Python을 갓 배운 분들이 GUI 프로그래밍을 배우는 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;발표 내용은 PyQt를 처음 접하시는 분들이 어려움 없이 시작하시기 위한 개념
+정리 및 예제등을 준비하였으며, 평소에 이미 사용하고 계신 분들을 위해
+발표자인 제가 겪고 고찰하며 해결한 부분을 같이 공유할 수 있는 시간이 될
+수 있도록 준비 하였습니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">임덕규</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/eobmueseo-bbareuge-mandeuleo-sayonghaneun-pyqt-peurogeuraeming.html</guid></item><item><title>NetworkX를 이용한 네트워크 링크 예측</title><link>https://pyvideo.org/pycon-korea-2015/networkxreul-iyonghan-neteuweokeu-ringkeu-yeceug.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;이번 발표는 NetworkX의 기초적인 내용을 알고 계신 것을 가정하고 진행하는
+&lt;strong&gt;네트워크 분석 중급편&lt;/strong&gt;입니다. 지난 발표에서 건의해 주셨던 내용에
+대한 피드백을 먼저 말씀드리고, 네트워크의 링크를 예측하기 위해 Numpy,
+Pandas 등을 이용한 데이터 전처리 과정, 네트워크의 링크를 예측한다는 건
+무엇인지, 네트워크를 ipython에서 자유롭게 그리기 위해 d3.js를 사용하는
+데모 등을 소개해 드립니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;네트워크 분석 초급편&lt;/strong&gt; : NetworkX를 이용한 네트워크 분석(
+&lt;a class="reference external" href="http://www.pycon.kr/2014/program/7"&gt;www.pycon.kr/2014/program/7&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PyCon 2014 피드백&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;K-means Algorithm을 이용한 예제 (scikit-learn)&lt;/li&gt;
+&lt;li&gt;얼마나 큰 행렬을 다룰 수 있나요?&lt;/li&gt;
+&lt;li&gt;네트워크 공부를 위한 기본서적&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;링크를 예측하기 위한 준비 운동&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Numpy&lt;/li&gt;
+&lt;li&gt;Pandas&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;링크 예측&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;네트워크 링크 예측이란?&lt;/li&gt;
+&lt;li&gt;네트워크 링크 예측의 매력&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;데모&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;ipython과 d3.js&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kyunghoon Kim</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/networkxreul-iyonghan-neteuweokeu-ringkeu-yeceug.html</guid></item><item><title>Opening 2015-08-29</title><link>https://pyvideo.org/pycon-korea-2015/opening-2015-08-29.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kwon-Han Bae</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/opening-2015-08-29.html</guid></item><item><title>파이썬 기반의 대규모 알고리즘 트레이딩 시스템 소개</title><link>https://pyvideo.org/pycon-korea-2015/paisseon-gibanyi-daegyumo-algorijeum-teureiding-siseutem-sogae.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;본 발표에서는 증권사 업무 자동화 시스템 중의 하나인 최적 집행 알고리즘
+매매 시스템(Optimal Execution Algorithmic Trading System)을 소개하고
+파이썬을 이용한 구현 경험을 공유합니다.&lt;/p&gt;
+&lt;p&gt;최적 집행 알고리즘 매매란 펀드, 연금과 같은 기관 투자가의 대규모 주문을
+특정한 알고리즘에 따라 나누어 실행시키는 매매 방법을 말합니다. 최적 집행
+알고리즘은 주어진 주문량을 정해진 시간 내에 체결시키면서 시장충격을
+최소화하거나 전체 평균 매매가격이 미리 설정된 벤치마크 가격을 추종하는
+것을 목표로 구현됩니다.&lt;/p&gt;
+&lt;p&gt;최적 집행 알고리즘 매매 시스템은 대량의 주식을 대상으로 다수의
+기관투자가의 주문을 실시간으로 수행하기 때문에 필연적으로 대규모 실시간
+시스템이 됩니다. 본 발표에서는 주로 다양한 스케일의 대규모 데이터 처리와
+구현 방법에 관해 이야기 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">김도형</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/paisseon-gibanyi-daegyumo-algorijeum-teureiding-siseutem-sogae.html</guid></item><item><title>파이썬 메모리 이모저모</title><link>https://pyvideo.org/pycon-korea-2015/paisseon-memori-imojeomo.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;다른 언어에 비해 메모리에 대해 신경 쓸 부분이 없다시피 한 파이썬이지만,
+가끔씩 내부 메모리 처리에 대한 사전 지식이 없어 쉬운 길을 멀리
+돌아가거나 예상치 못한 버그를 마주할 때가 있습니다. 이 발표에서는
+파이썬이 내부적으로 메모리를 어떻게 관리하고 객체들이 메모리에 실제로
+어떻게 저장되는지, GC는 어떻게 동작하는지, 파이썬에 객체와 메모리에
+관련된 함수들과 모듈들은 어떤게 있는지, monkey patch 등의 코딩을 한층
+쉽게 만들어주는 메모리 관련 트릭들은 대표적으로 어떤 것들이 있는지
+설명합니다.&lt;/p&gt;
+&lt;p&gt;파이썬을 이제 막 시작한 초보자들과 어느정도 할 줄 아는 중급자들을
+대상으로 합니다. 이미 파이썬을 잘 하시는 고급 사용자분들께는 발표가
+지루하고 심심하실 수도 있으니 참고해주세요. C/C++ 프로그래밍을 해 보신
+경험이 있으시면 이해가 더 쉬울 수도 있습니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">배준현</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/paisseon-memori-imojeomo.html</guid></item><item><title>파이썬: 내다보기</title><link>https://pyvideo.org/pycon-korea-2015/paisseon-naedabogi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;프로그래밍 언어는 프로그래머와 컴퓨터 사이의 사용자 인터페이스로
+기능합니다. 사용자 인터페이스로서의 파이썬 프로그래밍 언어의 미래를
+고민해 봅니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">서상현</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/paisseon-naedabogi.html</guid></item><item><title>Profiling - 실시간 대화식 프로파일러</title><link>https://pyvideo.org/pycon-korea-2015/profiling-silsigan-daehwasig-peuropailreo.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;게임서버의 성능을 개선하기 위해 실시간 프로파일러와 대화식 인터페이스를
+만들었습니다. 새로운 프로파일러를 만들기 전 검토했던 다른 프로파일러들을
+소개하고, 왜, 그리고 어떻게 새로운 프로파일러를 만들게 되었는지, 또
+사용법과 향후 개발 계획은 어떻게 되는지 공유합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Heungsub Lee</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/profiling-silsigan-daehwasig-peuropailreo.html</guid></item><item><title>PyCon Korea 2015 Lightning Talks 1st day</title><link>https://pyvideo.org/pycon-korea-2015/pycon-korea-2015-lightning-talks-1st-day.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;ol class="arabic simple"&gt;
+&lt;li&gt;변수민 - &lt;a class="reference external" href="http://www.slideshare.net/suminb/ss-52208323"&gt;프로그래머가 이사하는
+법&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;김승호 - &lt;a class="reference external" href="http://www.slideshare.net/raccoonyy/ss-52197750"&gt;서버 개발자가 되기 전에 알았으면 좋았을
+것들&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;이광춘 - 한국에서 소프트웨어 카펜트리 1년&lt;/li&gt;
+&lt;li&gt;김태웅 - JWT(Json Web Token) 간단한 소개&lt;/li&gt;
+&lt;li&gt;김성준 - &lt;a class="reference external" href="http://www.slideshare.net/kimsjoon/pycon5min-speech"&gt;Python Package중 AllPairs 2.0.1사용 경험 및
+공유.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;송승호 - 융합 기술(IoT+Mobile+Cloud)의 트렌드로 발전되는 이유&lt;/li&gt;
+&lt;li&gt;장형욱 - &lt;a class="reference external" href="http://www.slideshare.net/jangdennis/parallel-ssh-tool-with-python"&gt;Parallel SSH Tool with
+python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;채문창 - 2008년 파이썬을 시작할 수 밖에 없었던 동기와 Embeded system
+부터 서버까지 하나의 프레임워크로서의 파이썬&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/pycon-korea-2015-lightning-talks-1st-day.html</guid><category>lightning talks</category></item><item><title>Python on Azure</title><link>https://pyvideo.org/pycon-korea-2015/python-on-azure.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;이&lt;/p&gt;
+&lt;p&gt;세션에서는&lt;/p&gt;
+&lt;p&gt;퍼블릭 클라우드로서의&lt;/p&gt;
+&lt;p&gt;Azure의 활용도를&lt;/p&gt;
+&lt;p&gt;알아보고,&lt;/p&gt;
+&lt;p&gt;Python 을 Azure&lt;/p&gt;
+&lt;p&gt;에서 사용하는 방법을 살펴봅니다&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;인프라스트럭처 뿐만 아니라&lt;/p&gt;
+&lt;p&gt;플랫폼 기반의&lt;/p&gt;
+&lt;p&gt;클라우드&lt;/p&gt;
+&lt;p&gt;환경에&lt;/p&gt;
+&lt;p&gt;Python 과 Django를&lt;/p&gt;
+&lt;p&gt;이용하여&lt;/p&gt;
+&lt;p&gt;만든&lt;/p&gt;
+&lt;p&gt;웹&lt;/p&gt;
+&lt;p&gt;사이트를&lt;/p&gt;
+&lt;p&gt;배포하는&lt;/p&gt;
+&lt;p&gt;방법과&lt;/p&gt;
+&lt;p&gt;Python으로 활용할 수 있는 Azure 서비스 들에&lt;/p&gt;
+&lt;p&gt;대해서도&lt;/p&gt;
+&lt;p&gt;알아 봅니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">박중석</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/python-on-azure.html</guid></item><item><title>Python 테스트 시작하기</title><link>https://pyvideo.org/pycon-korea-2015/python-teseuteu-sijaghagi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;개발자들은 항상 테스트를 작성합니다. (그렇지 않다면 해야 합니다.) 하지만
+좋은 테스트를 작성하는 것 뿐 아니라 프로젝트의 완료까지 테스트를
+지속하는 것도 쉽지 않은 일입니다. 다음 내용들을 소개해 테스트에 익숙하지
+않은 초보 개발자분들께 가이드라인을 제시하고자 합니다.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;테스트가 왜 필요할까요? 어떤 테스트가 필요할까요?&lt;/li&gt;
+&lt;li&gt;좋은 테스트란 무엇인가요?&lt;/li&gt;
+&lt;li&gt;unittest 소개 및 활용&lt;/li&gt;
+&lt;li&gt;테스트 관련 툴 소개&lt;/li&gt;
+&lt;li&gt;제가 하고 있는 테스팅 과정 소개&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위 내용들을 신입 후배와 페어 프로그래밍을 하는 기분으로 소개하려 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">이호성</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/python-teseuteu-sijaghagi.html</guid></item><item><title>Simulation on Optical Image Stabilizer using Python</title><link>https://pyvideo.org/pycon-korea-2015/simulation-on-optical-image-stabilizer-using-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;본 세션에서는 Python의 control library를 이용하여 모바일 카메라에
+탑재되는 광학식 손떨림 보정기능(OIS)을 구현해 봅니다. 손떨림 보정의 동작
+원리에 대하여 간단히 설명한 후, 전달 함수의 설계, 딜레이 설정, 게인 및
+각종 필터 설계, 피드백 연결을 통하여 시스템을 만듭니다. OIS는 비교적
+기초적인 구조의 feedback system이며, 대부분 라이브러리화 되있기에
+python으로 쉽게 구현 할 수 있습니다. 완성된 시뮬레이션 기능을 이용한
+현업에서의 활용 방안과, 구현에 있어서 시행착오들을 공유하려 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">HyungKwan Kim</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/simulation-on-optical-image-stabilizer-using-python.html</guid></item><item><title>Sphinx autodoc: automated API documentation</title><link>https://pyvideo.org/pycon-korea-2015/sphinx-autodoc-automated-api-documentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sphinx can extract paragraphs from sphinx document and store them into
+gettext format translation catalog files.&lt;/p&gt;
+&lt;p&gt;Gettext format translation catalog is easy to translate from one
+language to other languages.&lt;/p&gt;
+&lt;p&gt;Also Sphinx support internationalization by using such catalog files.&lt;/p&gt;
+&lt;p&gt;You can use your favorite editors or services to translate your sphinx
+docs.&lt;/p&gt;
+&lt;p&gt;In this session, I'll explain 3 things; (1) entire process to translate
+sphinx docs. (2) automation mechanism for the process. (3) tips, tricks
+and traps for writing docs and translating.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/sphinx-autodoc-automated-api-documentation.html</guid><category>sphinx</category></item><item><title>Writing fast code</title><link>https://pyvideo.org/pycon-korea-2015/writing-fast-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you want to make your code run faster, it is important to
+understanding how computers (and also Python!) do work under the hood.
+By understanding this and having knowledge of good profiler, you can
+make your code run faster.&lt;/p&gt;
+&lt;p&gt;This talk will introduce nice tools for the job. Using &lt;tt class="docutils literal"&gt;dis&lt;/tt&gt; module,
+you can understand the workflow of Python code. Using various profiler
+(such as, &lt;tt class="docutils literal"&gt;cProfile&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;line_profiler&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;profiling&lt;/tt&gt;), you can find
+bottlenecks in your code easily.&lt;/p&gt;
+&lt;p&gt;After that, you can write fast code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Younggun Kim</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/writing-fast-code.html</guid></item><item><title>유연한 모바일 게임 운영을 위한 Git 기반 패치 시스템</title><link>https://pyvideo.org/pycon-korea-2015/yuyeonhan-mobail-geim-unyeongeul-wihan-git-giban-paeci-siseutem.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;2년이 넘는 기간 동안 많은 사랑을 받아온 모바일 게임 쿠키런.&lt;/p&gt;
+&lt;p&gt;그 오랜 기간의 운영 뒤에는 게임 리소스의 관리, 테스트 및 배포 단계에
+이르기까지&lt;/p&gt;
+&lt;p&gt;전 과정을 아우르는 유연한 패치 시스템이 중요한 역할을 하였습니다.&lt;/p&gt;
+&lt;p&gt;모바일 게임 패치 시스템에는 중요한 요구사항들이 있습니다.&lt;/p&gt;
+&lt;p&gt;우선, 모바일 기기의 한정적인 자원으로 게임 리소스를 효율적으로 받아야
+합니다.&lt;/p&gt;
+&lt;p&gt;또한, 리소스의 관리 및 라이브로의 배포 프로세스가 편리해야 합니다.&lt;/p&gt;
+&lt;p&gt;쿠키런의 게임 패치 시스템은 파이썬으로 작성되었으며, bottle, pygit2 등을
+이용하고 있습니다.&lt;/p&gt;
+&lt;p&gt;상기 요구사항들을 만족시키기 위해 현재의 시스템을 어떻게 구성했는지와
+함께,&lt;/p&gt;
+&lt;p&gt;시스템 구축 및 실제 서비스 과정에서의 경험을 공유하고자 합니다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">오영택</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/yuyeonhan-mobail-geim-unyeongeul-wihan-git-giban-paeci-siseutem.html</guid></item></channel></rss>

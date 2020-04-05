@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_monkey-patching.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-11-01T00:00:00+00:00</updated><entry><title>Tiffany - Multipage-Tiff Lesen und Schreiben mit PIL ohne PIL</title><link href="https://pyvideo.org/pycon-de-2012/tiffany-multipage-tiff-lesen-und-schreiben-mit.html" rel="alternate"></link><published>2012-11-01T00:00:00+00:00</published><updated>2012-11-01T00:00:00+00:00</updated><author><name>Christian Tismer</name></author><id>tag:pyvideo.org,2012-11-01:pycon-de-2012/tiffany-multipage-tiff-lesen-und-schreiben-mit.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tiffany steht für beliebiges Tiff. Das kleine Modul löst eine grosse
+Menge&lt;/p&gt;
+&lt;p&gt;von Problemen, hat keine Abhängigkeiten, keine Binaries und läuft&lt;/p&gt;
+&lt;p&gt;überall wo Python läuft.&lt;/p&gt;
+&lt;p&gt;Bei der Entwicklung von Pydica (Distributed Document Capture) wurden wir&lt;/p&gt;
+&lt;p&gt;mit dem Problem konfrontiert, mehrseitige Tiff-Dateien anzuzeigen. Das&lt;/p&gt;
+&lt;p&gt;GUI-Toolkit PySide (Qt) unterstützt zwar Tiff, zeigt jedoch nur die
+erste Seite.&lt;/p&gt;
+&lt;p&gt;Zudem behandeln wir Fax-komprimierte Dateien, was Qt aber unterstützt.&lt;/p&gt;
+&lt;p&gt;PIL verfügt über eine Bereinigung der Tiff-Tags, kommt aber nicht mit
+der&lt;/p&gt;
+&lt;p&gt;Fax-Kompression zurecht. Es gibt seit langem einen Patch dafür, jedoch
+ist&lt;/p&gt;
+&lt;p&gt;der Build-Prozess erschwert und zieht mit libtiff eine Kette von
+Abhängigkeiten&lt;/p&gt;
+&lt;p&gt;nach sich.&lt;/p&gt;
+&lt;p&gt;Daher benutzt Tiffany einige wenige Dateien aus PIL ohne diese zu
+verändern und täuscht&lt;/p&gt;
+&lt;p&gt;vor, die Tiff-Dateien zu entpacken, tut es aber nicht. Es werden
+lediglich die&lt;/p&gt;
+&lt;p&gt;Tiff-Tags ordentlich aufbereitet. Die komprimierten Daten werden so
+übernommen&lt;/p&gt;
+&lt;p&gt;wie sie sind. Beim Schreiben von Dateien werden daher lediglich die
+vorhandenen&lt;/p&gt;
+&lt;p&gt;Daten in anderer Reihenfolge wieder zusammengesetzt.&lt;/p&gt;
+&lt;p&gt;Im Vortrag werde ich die Implementierung vorstellen sowie weitere
+Alternativen,&lt;/p&gt;
+&lt;p&gt;die Zukunft von PIL sowie auf weitere Tips und Kniffe in unserem Projekt
+eingehen.&lt;/p&gt;
+</summary><category term="distributed document capture"></category><category term="monkey-patching"></category><category term="multipage-tiff"></category><category term="pil"></category></entry></feed>

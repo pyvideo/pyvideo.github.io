@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_andrew-haefner.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-13T00:00:00+00:00</updated><entry><title>A Python Framework for 3D Gamma Ray Imaging</title><link href="https://pyvideo.org/scipy-2014/a-python-framework-for-3d-gamma-ray-imaging.html" rel="alternate"></link><published>2014-07-13T00:00:00+00:00</published><updated>2014-07-13T00:00:00+00:00</updated><author><name>Andrew Haefner</name></author><id>tag:pyvideo.org,2014-07-13:scipy-2014/a-python-framework-for-3d-gamma-ray-imaging.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A system capable of imaging gamma rays in 3D in near real time has been
+developed. A flexible software framework has been developed using Python
+to acquire, analyze, and finally visualize data from multiple sensors,
+including novel gamma ray imaging detectors and a Microsoft Kinect.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Introduction and Motivation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gamma-rays are photons with energies typically thousands to millions of
+times greater than the energy of visible light photons. The vastly
+higher energies of gamma-rays means that they interact differently with
+matter, necessitating new sensors and imaging methods to localize gamma
+ray sources. Many sensors and imaging approaches have been developed to
+image gamma-rays in 2D, as in a conventional camera, with applications
+in astronomy, medical imaging, and nuclear security. We have developed a
+mobile gamma-ray imaging system that merges data from both visual and
+gamma-ray imaging sensors to generate a visualization of the 3D
+gamma-ray distribution in real-time. This creates 3D maps of the
+physical environment and correlates that with the objects emitting
+gamma-rays. We have used Python to develop a flexible software framework
+for acquiring data from the multiple sensors, analyzing and merging data
+streams, and finally visualizing the resulting 3D gamma-ray maps.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Methods&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The system consists of a cart that contains a state-of-the art gamma-ray
+imaging system, called a Compton Imager, coupled with an RGB-D imaging
+system, a Microsoft Kinect. The software package has three main tasks:
+gamma-ray acquisition and processing, visual data processing, and
+finally the merger of these two streams. The gamma-ray data processing
+pipeline involves many computationally intensive tasks, thus a threaded
+structure built with multiprocessing forms the basis of the gamma-ray
+imaging framework. Furthermore, many other Pythonic tools have been used
+to meet our real-time goal; including numexpr, cython, and even the
+Python/C API. Several GUI frontends, built with TraitsUI or PySide for
+example, are used to monitor and control how the acquired data is
+processed in real-time, while a suite of real-time diagnostics are
+displayed with matplotlib. The visual pipeline is based on an
+open-source implementation of RGBDSLAM (&lt;a class="reference external" href="http://wiki.ros.org/rgbdslam"&gt;http://wiki.ros.org/rgbdslam&lt;/a&gt;),
+which is built on the Robot Operating System (ROS) framework. Finally,
+these two data streams are sent to a laptop computer via pyzmq, where
+the final merger and imaging (by solving a statistical inversion problem
+constrained by the visual data) is accomplished. The results are then
+displayed as they are produced by the imaging algorithm using mayavi.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Link to Video: &lt;a class="reference external" href="https://www.dropbox.com/s/1w5yrqwepjcbpt1/Moving%20Cart%203D%20scene.mov"&gt;Moving Cart 3D
+scene&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This system has been used to demonstrate real-time volumetric gamma ray
+imaging for the first time [1]. The results from a typical run are shown
+in the above video. The red line indicates the movement of the system
+through the environment, while the blue arrows represent an aspect of
+the gamma-ray data. The 3D point-cloud provided by RGBDSLAM appear
+incrementally as the system traverses the environment. In the end, the
+location of a small gamma-ray emitting source is correctly identified
+with the hotspot in the image.&lt;/p&gt;
+&lt;p&gt;[1]
+[&lt;a class="reference external" href="https://www.nss-mic.org/2013/ConferenceRecord/Details.asp?PID=N25-4"&gt;https://www.nss-mic.org/2013/ConferenceRecord/Details.asp?PID=N25-4&lt;/a&gt;]&lt;/p&gt;
+</summary></entry></feed>

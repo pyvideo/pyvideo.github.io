@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_luke-sneeringer.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-05-29T00:00:00+00:00</updated><entry><title>Ansible 101</title><link href="https://pyvideo.org/pycon-us-2016/luke-sneeringer-ansible-101-pycon-2016.html" rel="alternate"></link><published>2016-05-29T00:00:00+00:00</published><updated>2016-05-29T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2016-05-29:pycon-us-2016/luke-sneeringer-ansible-101-pycon-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Luke Sneeringer&lt;/p&gt;
+&lt;p&gt;Ansible has become one of the most popular tools available for deploying applications and otherwise managing large numbers of servers. Its agentless nature means that the only thing you need on a server to be able to orchestrate it is SSH. This tutorial will get you started with Ansible, first by covering the concepts, and then by deploying a non-trivial application together.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Django: Pitfalls I Encountered and How to Avoid Them</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--django--pitfalls-i-encountered-and-ho.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--django--pitfalls-i-encountered-and-ho.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django: Pitfalls I Encountered and How to Avoid Them&lt;/p&gt;
+&lt;p&gt;Presented by Luke Sneeringer&lt;/p&gt;
+&lt;p&gt;Are you starting a moderate to large sized Django project? Do you need
+to plan ahead and build an application that will react to unanticipated
+needs? This talk covers some techniques and pitfalls I encountered in
+writing my first reasonably large Django site, and what I did
+differently the second time I started a project.&lt;/p&gt;
+&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;When working on a company product, especially one where developers don't
+always have full control over the scope and needs of the application,
+it's important to plan ahead for unanticipated needs.&lt;/p&gt;
+&lt;p&gt;This talk will cover simple tricks and methods that are a small amount
+of work up front, but can save you lots of time later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pycon-talk-outline"&gt;
+&lt;h4&gt;PyCon Talk Outline&lt;/h4&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;Introduction (5m)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Me!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Making Mistakes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;It happens. &amp;quot;Code quality can be measured by the number of WTFs
+per minute in the code review.&amp;quot;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;When dealing with a big, expansive framework like Django,
+sometimes you just don't know that something is there. Good docs
+don't completely solve this...there's always going to be the thing
+you don't find. Similarly, sometimes you don't realize how to
+leverage something that you do know about until much later.&lt;/p&gt;
+&lt;p&gt;My regrets with my current project aren't sweeping architectural issues. I did most of the big stuff right. My regrets are mostly small things that, because it was my first big project, there was this piece or that piece that I didn't see or didn't fully appreciate, and so now I have little blocks of code that are tougher to maintain than they need to be. End of the world? No. Worth thinking through for next time? Yes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Some trivial things (10m)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;Preface: Yeah, some of these are dumb.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Beginning at the beginning: Project Setup&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I had sys.path pointing to the directory above the project root, like the tutorial does. I wish I hadn't done that.&lt;/li&gt;
+&lt;li&gt;Need to run two instances on the same box that don't share the actual codebase (e.g. a staging server)? You still can, but it's more awkward. Better to set sys.path at your project root.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Dude, where's my Media class?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;How did I do it? First I had a magic template variable. Then I&lt;/dt&gt;
+&lt;dd&gt;copied Form.Media&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;Then, on a later project, I realized a block works just fine.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;My boss wants ____ available on every page!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How did I do it? I had a method we called everywhere that took
+arbitrary keyword arguments...&lt;/li&gt;
+&lt;li&gt;Oh, there's TEMPLATE_CONTEXT_PROCESSORS...&lt;ul&gt;
+&lt;li&gt;...if you manually use RequestContext every time! So, just do
+that. Always. Even if you don't need it.&lt;/li&gt;
+&lt;li&gt;I want .select_related('something') every time!&lt;/li&gt;
+&lt;li&gt;...so I typed it! A lot.&lt;/li&gt;
+&lt;li&gt;Oh, that can be done by overriding def queryset on the manager
+class? That's easier to maintain...&lt;ul&gt;
+&lt;li&gt;...but make sure you set the flag to use it on related fields!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;We need sample data for so-and-so, such-and-such...&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Disclaimer: This one actually isn't mine; my boss did it. But,
+it's amusing, and worth mentioning.&lt;/li&gt;
+&lt;li&gt;We needed sample data so my boss could preview themes...so he set
+up a second database, put in fake data, and hard-coded it in the
+app-wide (not server-specific) settings.py.&lt;ul&gt;
+&lt;li&gt;Copied the entire DB structure...at the time. But it changes.&lt;/li&gt;
+&lt;li&gt;Oh, and the unit testing framework didn't appreciate it,
+either.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Fixtures are the right way (and sooner or later I'll get this
+fixed...it's still there).&lt;ul&gt;
+&lt;li&gt;(space reserved for my stumbling upon something else silly, and
+hopefully humorous, that I did wrong)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;How to avoid missing trivial things?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Read the documentation. Over and over.&lt;/li&gt;
+&lt;li&gt;Become familiar with the Django code.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;A non-trivial thing: Forms (10m)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django forms can do anything...given sufficient shenanigans.
+Always do it the Django forms way; your life will be easier.&lt;/li&gt;
+&lt;li&gt;Forms and ModelForms are static, and I needed dynamic choices on a
+form...&lt;ul&gt;
+&lt;li&gt;...so I just ditched newforms&lt;/li&gt;
+&lt;li&gt;But wait, this is Python. A trivial function that calls the
+metaclass can solve this problem!&lt;ul&gt;
+&lt;li&gt;This looks complicated, but it's not. Walk through how to do
+it.&lt;/li&gt;
+&lt;li&gt;It's quite maintainable, and you get all the other bells and
+whistles.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Questions? (5m)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</summary><category term="pycon"></category><category term="pycon2011"></category></entry><entry><title>Sharing is Caring: Posting to the Python Package Index</title><link href="https://pyvideo.org/pycon-us-2012/sharing-is-caring-posting-to-the-python-package.html" rel="alternate"></link><published>2012-03-10T00:00:00+00:00</published><updated>2012-03-10T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2012-03-10:pycon-us-2012/sharing-is-caring-posting-to-the-python-package.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Due to its robust namespacing, Python uniquely equips developers to
+write and distribute reusable code. The Python community has a tool for
+this: the Python Package Index. PyPI is a massive repository of code,
+and in this talk you'll learn how to take code that you've written it
+and register and distribute it for use by others.&lt;/p&gt;
+</summary></entry><entry><title>Introduction to Metaclasses</title><link href="https://pyvideo.org/pycon-us-2012/introduction-to-metaclasses.html" rel="alternate"></link><published>2012-03-09T00:00:00+00:00</published><updated>2012-03-09T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2012-03-09:pycon-us-2012/introduction-to-metaclasses.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python's metaclasses grant the Python OOP ecosystem all the power of
+more complex object inheritance systems in other languages, while
+retaining for most uses the simplicity of the straightforward class
+structures most developers learn when being introduced to
+object-oriented programming. This talk is an explanation of metaclasses:
+first, what they are, and second, how to use them.&lt;/p&gt;
+</summary></entry><entry><title>Logical Failures</title><link href="https://pyvideo.org/pycon-us-2013/logical-failures.html" rel="alternate"></link><published>2013-03-16T00:00:00+00:00</published><updated>2013-03-16T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2013-03-16:pycon-us-2013/logical-failures.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Programmers are, by the nature of their work, logicians. However, logic
+can be more challenging than we sometimes think, and it's easy for us to
+make logical mistakes, especially when they're to justify a proposition
+we already believe. This is, at its core, what makes us not very good at
+testing our own stuff, and what makes architecting a technical system so
+challenging.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>Make More Responsive Web Applications with SocketIO and gevent</title><link href="https://pyvideo.org/pycon-us-2013/make-more-responsive-web-applications-with-socket.html" rel="alternate"></link><published>2013-03-15T00:00:00+00:00</published><updated>2013-03-15T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2013-03-15:pycon-us-2013/make-more-responsive-web-applications-with-socket.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;An explanation of how to implement a socket.io server in Python to serve
+websocket requests from browsers.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>Introduction to Regular Expressions</title><link href="https://pyvideo.org/pycon-us-2014/introduction-to-regular-expressions.html" rel="alternate"></link><published>2014-04-12T00:00:00+00:00</published><updated>2014-04-12T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2014-04-12:pycon-us-2014/introduction-to-regular-expressions.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Many developers, including quite a few experienced developers, are
+absolutely confounded by regular expressions. However, regular
+expressions aren't as difficult as many believe. In this talk, I will
+teach regular expressions by starting with the simple and moving toward
+the complex, so that you too can read and write regular expressions like
+a hero.&lt;/p&gt;
+</summary></entry><entry><title>Improve your development environments with virtualization</title><link href="https://pyvideo.org/pycon-us-2015/improve-your-development-environments-with-virtua.html" rel="alternate"></link><published>2015-04-12T00:00:00+00:00</published><updated>2015-04-12T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2015-04-12:pycon-us-2015/improve-your-development-environments-with-virtua.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A talk on how to employ virtualization to make development easier, more
+portable, and have it more closely adhere to production environments.&lt;/p&gt;
+</summary></entry><entry><title>Ansible 101</title><link href="https://pyvideo.org/pycon-us-2015/ansible-101.html" rel="alternate"></link><published>2015-04-10T00:00:00+00:00</published><updated>2015-04-10T00:00:00+00:00</updated><author><name>Luke Sneeringer</name></author><id>tag:pyvideo.org,2015-04-10:pycon-us-2015/ansible-101.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Interested in Ansible, or in server orchestration and configuration
+generally? This tutorial will teach the basics -- and a few of the
+not-so-basics -- of orchestrating machines with Ansible.&lt;/p&gt;
+</summary></entry></feed>

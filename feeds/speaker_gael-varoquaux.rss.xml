@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Machine learning on non curated data</title><link>https://pyvideo.org/europython-2019/machine-learning-on-non-curated-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;According to industry surveys [1], the number one hassle of data
+scientists is cleaning the data to analyze it. Textbook statistical
+modeling is sufficient for noisy signals, but errors of a discrete
+nature break standard tools of machine learning. I will discuss how to
+easily run machine learning on data tables with two common dirty-data
+problems: missing values and non-normalized entries. On both problems, I
+will show how to run standard machine-learning tools such as
+scikit-learn in the presence of such errors. The talk will be didactic
+and will discuss simple software solutions. It will build on the latest
+improvements to scikit-learn for missing values and the DirtyCat package
+[2] for non normalized entries. I will also summarize theoretical
+analyses in recent machine learning publications.&lt;/p&gt;
+&lt;p&gt;This talk targets data practitioners. Its goal are to help data
+scientists to be more efficient analysing data with such errors and
+understanding their impacts.&lt;/p&gt;
+&lt;p&gt;With missing values, I will use simple arguments and examples to outline
+how to obtain asymptotically good predictions [3]. Two components are
+key: imputation and adding an indicator of missingness. I will explain
+theoretical guidelines for these, and I will show how to implement these
+ideas in practice, with scikit-learn as a learner, or as a preprocesser.&lt;/p&gt;
+&lt;p&gt;For non-normalized categories, I will show that using their string
+representations to “vectorize” them, creating vectorial representations
+gives a simple but powerful solution that can be plugged in standard
+statistical analysis tools [4].&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[1] Kaggle, the state of ML and data science 2017
+&lt;a class="reference external" href="https://www.kaggle.com/surveys/2017"&gt;https://www.kaggle.com/surveys/2017&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[2] &lt;a class="reference external" href="https://dirty-cat.github.io/stable/"&gt;https://dirty-cat.github.io/stable/&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[3] Josse Julie, Prost Nicolas, Scornet Erwan, and Varoquaux Gaël
+(2019). “On the consistency of supervised learning with missing
+values”. &lt;a class="reference external" href="https://arxiv.org/abs/1902.06931"&gt;https://arxiv.org/abs/1902.06931&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[4] Cerda Patricio, Varoquaux Gaël, and Kégl Balázs. &amp;quot;Similarity
+encoding for learning with dirty categorical variables.&amp;quot; Machine
+Learning 107.8-10 (2018): 1477 &lt;a class="reference external" href="https://arxiv.org/abs/1806.00979"&gt;https://arxiv.org/abs/1806.00979&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gael Varoquaux</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/machine-learning-on-non-curated-data.html</guid><category>Big Data</category><category>Data</category><category>Data Science</category><category>Machine-Learning</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category></item><item><title>From numerics to data science in Python</title><link>https://pyvideo.org/pycon-belarus-2018/from-numerics-to-data-science-in-python.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gael Varoquaux</dc:creator><pubDate>Sat, 24 Feb 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-02-24:pycon-belarus-2018/from-numerics-to-data-science-in-python.html</guid></item><item><title>Scikit-learn: news on making even better machine learning</title><link>https://pyvideo.org/pyparis-2018/scikit-learn-news-on-making-even-better-machine-learning.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gael Varoquaux</dc:creator><pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-11-14:pyparis-2018/scikit-learn-news-on-making-even-better-machine-learning.html</guid></item><item><title>Understanding and diagnosing your machine-learning models</title><link>https://pyvideo.org/pydata-london-2018/understanding-and-diagnosing-your-machine-learning-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Given a predictive model, questions immediately arise: How to improve
+this prediction? What drives it? Can we operate changes to the system
+based on the predictions? All these questions require understanding how
+good is the model prediction, and how do the model predict.&lt;/p&gt;
+&lt;p&gt;This tutorial will focus on statistics and interpretation rather than
+improving prediction.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Fri, 27 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-27:pydata-london-2018/understanding-and-diagnosing-your-machine-learning-models.html</guid></item><item><title>Writing Code for Science and Data</title><link>https://pyvideo.org/swiss-python-summit-2017/writing-code-for-science-and-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scientific research or data science need rapid experimentation and building intuitions from data. Yet, in academia or in the industry, the code must live on to be useful for future enquiries or in production. Always experimenting yet writing production-ready robust code may seem a conundrum. However it shares a lot with agile or extreme programming techniques. It is an interesting test bed of programming practices.&lt;/p&gt;
+&lt;p&gt;I will explore simple, and less simple, practices that I have encountered in my research for fast turn around and consolidation of code. I will discuss how these considerations led to the design of scikit-learn, that enables easy machine learning, yet is used in production. Finally, I will mention some scikit-learn gems, new or forgotten.&lt;/p&gt;
+&lt;p&gt;Talk recorded at the Swiss Python Summit on February 17th, 2017.&lt;/p&gt;
+&lt;p&gt;Licensed as Creative Commons Attribution 4.0 International&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:swiss-python-summit-2017/writing-code-for-science-and-data.html</guid><category>keynote</category></item><item><title>SciPy</title><link>https://pyvideo.org/euroscipy-2017/scipy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presenter: Gaël Varoquaux&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/scipy.html</guid></item><item><title>Keynote - Coding for Science and Innovation</title><link>https://pyvideo.org/scipy-2017/keynote-coding-for-science-and-innovation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Computing has been driving forward a revolution in how science and technology can solve new problems. Python has grown to be a central player in this game, from computational physics to data science. I would  like to explore some lessons learned doing science with Python as well as doing Python libraries for science. What are the ingredients that the scientists need? What technical and project-management choices drove the success of projects I've been involved with? How do these demands and offers shape our ecosystem?&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-14:scipy-2017/keynote-coding-for-science-and-innovation.html</guid><category>keynote</category></item><item><title>Building a cutting-edge data processing environment on a budget</title><link>https://pyvideo.org/pycon-russia-2015/building-a-cutting-edge-data-processing-environment-on-a-budget.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As a penniless academic I wanted to do &amp;quot;big data&amp;quot; for science. Open
+source, Python, and simple patterns were the way forward. Staying on top
+of todays growing datasets is an arm race. Data analytics machinery
+—clusters, NOSQL, visualization, Hadoop, machine learning, ...— can
+spread a team's resources thin. Focusing on simple patterns, lightweight
+technologies, and a good understanding of the applications gets us most
+of the way for a fraction of the cost. These patterns appear underline
+the design of Mayavi, for interactive 3D visualization, scikit-learn, for
+easy machine learning, and joblib for out-of-core and parallel computing.&lt;/p&gt;
+&lt;p&gt;I will present a personal perspective on ten years of scientific data
+processing with Python. What are the emerging patterns in data
+processing? How can modern data-mining ideas be used without a big
+engineering team? What constraints and design trade-offs govern software
+projects like scikit-learn, Mayavi, or joblib? How can we make the most
+out of distributed hardware with simple framework-less code?&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gael Varoquaux</dc:creator><pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-09-18:pycon-russia-2015/building-a-cutting-edge-data-processing-environment-on-a-budget.html</guid></item><item><title>Statistics in Python</title><link>https://pyvideo.org/euroscipy-2015/statistics-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This tutorial will focus on inferential and exploratory statistics in Python: modelling statistical relationship between variables. It will give an introduction to pandas for consistent manipulation of heterogeneous set of variables (for example gender and age) and to statsmodel to estimate a test statistical models.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Mon, 05 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-05:euroscipy-2015/statistics-in-python.html</guid></item><item><title>Scientist meets web dev: how Python became the language of data</title><link>https://pyvideo.org/europython-2016/scientist-meets-web-dev-how-python-became-the-language-of-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gaël Varoquaux - Scientist meets web dev: how Python became the language of data
+[EuroPython 2016]
+[22 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/keynote-science-web-dev"&gt;https://ep2016.europython.eu//conference/talks/keynote-science-web-dev&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Data science is a hot topic and  Python has emerged as an ideal language for it.
+Its strength for data analysis come from the cultural mix between the scientific Python community, and more conventional software usage, such as web development or system administration. I'll show how and why Python is a easy and powerful tool for data science.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Python started as a scripting language, but now it is the new trend everywhere and in particular for data science, the latest rage of computing. It didn't get there by chance: tools and concepts built by nerdy scientists and geek sysadmins provide foundations for what is said to be the sexiest job: data scientist.&lt;/p&gt;
+&lt;p&gt;In my talk I'll give a personal perspective, historical and technical, on the progress of the scientific Python ecosystem, from numerical physics to data mining. What made Python suitable for science; How could scipy grow to challenge commercial giants such as Matlab; Why the cultural gap between scientific Python and the broader Python community turned out to be a gold mine; How scikit-learn was born, what technical decisions enabled it to grow; And last but not least, how we are addressing a wider and wider public, lowering the bar and empowering people.&lt;/p&gt;
+&lt;p&gt;The talk will discuss low-level technical aspects, such as how the Python world makes it easy to move large chunks of number across code. It will touch upon current exciting developments in scikit-learn and joblib. But it will also talk about softer topics, such as project dynamics or documentation, as software's success is determined by people.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Sun, 07 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-07:europython-2016/scientist-meets-web-dev-how-python-became-the-language-of-data.html</guid></item><item><title>Opening Keynote - Gaël Varoquaux, Inria</title><link>https://pyvideo.org/pydata-paris-2015/opening-keynote-gael-varoquaux-inria.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gaël Varoquaux is an INRIA faculty researcher working on computational
+science for brain imaging in the Neurospin brain research institute
+(Paris, France). His research focuses on modeling and mining brain
+activity in relation to cognition. Years before the NSA, he was hoping
+to make bleeding-edge data processing available across new fields, and
+he has been working on a mastermind plan building easy-to-use
+open-source software in Python. He is a core developer of scikit-learn,
+joblib, and Mayavi, a nominated member of the PSF, and often teaches
+scientific computing with Python using
+&lt;a class="reference external" href="http://scipy-lectures.github.com/"&gt;http://scipy-lectures.github.com/&lt;/a&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-09:pydata-paris-2015/opening-keynote-gael-varoquaux-inria.html</guid></item></channel></rss>

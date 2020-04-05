@@ -1,0 +1,1270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pydata-london-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-06-21T00:00:00+00:00</updated><entry><title>A Beginner's Guide to Building Data Pipelines with Luigi</title><link href="https://pyvideo.org/pydata-london-2015/a-beginners-guide-to-building-data-pipelines-with-luigi.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Dylan Barth</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/a-beginners-guide-to-building-data-pipelines-with-luigi.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;An introduction to Luigi with real life case studies showing how you
+can break large, multi-step data processing task into a graph of
+smaller sub-tasks that are aware of the state of their
+interdependencies.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Growth Intelligence tracks the performance and activity of all the
+companies in the UK economy using their data ‘footprint’. This involves
+tracking numerous unstructured data points from multiple sources in a
+variety of formats and transforming them into a standardised feature set
+we can use for building predictive models for our clients.&lt;/p&gt;
+&lt;p&gt;In the past, this data was collected by in a somewhat haphazard fashion:
+combining manual effort, ad hoc scripting and processing which was
+difficult to maintain. In order to streamline the data flows, we’re
+using an open-source Python framework from Spotify called Luigi. Luigi
+was created for managing task dependencies, monitoring the progress of
+the data pipeline and providing frameworks for common batch processing
+tasks.&lt;/p&gt;
+</summary></entry><entry><title>A Fast, Offline Reverse Geocoder in Python</title><link href="https://pyvideo.org/pydata-london-2015/a-fast-offline-reverse-geocoder-in-python.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Ajay Thampi</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/a-fast-offline-reverse-geocoder-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A fast, offline reverse geocoder in Python. This implementation uses
+a parallelised K-D tree and the details of this implementation will
+be presented. The key feature is speed; 10 million coordinates can be
+geocoded in less than 30 seconds. The library is released under the
+LGPL license and is available at
+&lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder"&gt;https://github.com/thampiman/reverse-geocoder&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Reverse geocoding using online web services such as Google Maps is
+incredibly slow and is also restrictive in terms of the number of
+requests that can be made per day. Offline reverse geocoders have been
+built for PostGIS databases and also Python but are either complicated
+or slow. In this talk, I will be presenting a fast, offline reverse
+geocoder in Python. The basic outline of the talk is presented below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-library"&gt;
+&lt;h4&gt;The Library&lt;/h4&gt;
+&lt;p&gt;The library improves on an existing one built by Richard Penman in the
+following ways:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;It supports Python 2 and 3.&lt;/li&gt;
+&lt;li&gt;It geocodes a lot more location information. Besides the place name,
+city and country, the library returns the administrative regions (1 &amp;amp;
+2) and the nearest latitude and longitude.&lt;/li&gt;
+&lt;li&gt;But the key enhancement is performance. The library extends the K-D
+tree class in the scipy package and implements a parallelised version
+of it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This reverse geocoder is released under the LGPL license and is
+available &lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementation"&gt;
+&lt;h4&gt;Implementation&lt;/h4&gt;
+&lt;p&gt;The first time the library is called, information on places with a
+population greater than 1000 is downloaded from the
+&lt;a class="reference external" href="http://download.geonames.org/export/dump/"&gt;Geonames&lt;/a&gt; database, and
+it is stored locally. The GPS coordinates of these places are populated
+in a K-D tree and the nearest neighbour (NN) algorithm is then used to
+find the place closest to the input GPS coordinate. The scipy package
+provides a &lt;a class="reference external" href="http://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.spatial.KDTree.html%20%22cKDTree%22"&gt;K-D tree
+class&lt;/a&gt;
+and this is extended to implement a multi-process version. In this talk,
+I will be presenting details of this implementation. A basic background
+in Python, numpy, multi-processing and shared memory is assumed. The K-D
+tree class in the scipy package supports only the Minkowski p-norm
+distance for the NN algorithm. Although this has not been released
+publicly, I will also be presenting a version of the library using the
+haversine formula for much more accurate geocoding.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="performance-study"&gt;
+&lt;h4&gt;Performance Study&lt;/h4&gt;
+&lt;p&gt;The library supports two modes:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Single-process mode (Mode 1)&lt;/li&gt;
+&lt;li&gt;Multi-process mode (Mode 2): The default mode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A performance comparison of the two modes on a quad-core Macbook Pro is
+shown below. &lt;img alt="Performance Comparison" src="https://raw.githubusercontent.com/thampiman/reverse-%20geocoder/master/performance.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Mode 2 runs 2x faster especially for large inputs, i.e. 10M coordinates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="applications"&gt;
+&lt;h4&gt;Applications&lt;/h4&gt;
+&lt;p&gt;In this part of the talk, I will discuss how the library is being used
+at &lt;a class="reference external" href="http://opensignal.com/"&gt;OpenSignal&lt;/a&gt;, where I work as a data
+scientist. The main purpose for building the library was to be able to
+geocode terabytes of data (approx. 500M coordinates). Speed was
+therefore crucial. I will discuss methods on geocoding at this scale in
+real-time and also offline. I will also talk about how this open-source
+library is being used by the community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="contributions-by-the-community"&gt;
+&lt;h4&gt;Contributions by the Community&lt;/h4&gt;
+&lt;p&gt;Since its release on Github on 27-Mar-2015, the open-source community
+has also been instrumental in testing, fixing bugs and implementing
+additional features. In this part of the talk, I will given an overview
+of the following two major changes made by other developers:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Python 3 support, and&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder/tree/master/c++"&gt;C++
+wrapper&lt;/a&gt;
+for the Python library.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>A practical guide to conquering social network data</title><link href="https://pyvideo.org/pydata-london-2015/a-practical-guide-to-conquering-social-network-data.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Benjamin Chamberlain</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/a-practical-guide-to-conquering-social-network-data.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A Python stack for social network analytics. The pipeline connects
+data acquisition through API calls to community detection and
+labelling. Several major Python libraries are discussed. There are 4
+sections: data acquisition with Twisted, data formatting and network
+construction with Pandas, Data compression with Numpy and Cython and
+Data Enrichment with Scikit-learn.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Starcount has been developing automated methods to understand the
+community structure of online society and the influencers within these
+communities. This helps marketers go beyond individually targeted
+adverts, identifying better ways for them to engage with relevant
+communities and allowing them to make positive contributions and offer
+services and products of real value. With billions of people using
+social media across the world, pinpointing the right communities to
+target is a challenging problem. We use Python to develop software that
+is able to search for influencers, the communities who connect with
+them, and the passions they share. Ultimately we hope to make social
+media spam a thing of the past, replacing it with useful information,
+and positive contributions to engaged communities.&lt;/p&gt;
+&lt;p&gt;In this talk we will describe an end-to-end Python stack that goes from
+data acquisition through API calls to social networks all the way to
+community detection and labelling and show how several major Python
+libraries are meshed together to achieve these ends.&lt;/p&gt;
+&lt;p&gt;We break the pipeline down into 4 major components: data acquisition
+with Twisted, data formatting and network construction with Pandas, Data
+compression with Numpy and Cython and Data Enrichment with Scikit-learn.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data Extraction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We have developed a client/server program that enables us to download
+user profile, connections and user post data from various social
+networks, including: Twitter, Facebook and Instagram. The server is
+started with a list of network IDs to perform an operation against and
+access tokens to validate the operations. Once started it manages access
+rate limits and the distribution of work across a network of client
+applications. The clients perform the actual requests to the external
+APIs using asynchronous HTTPS requests. The Twisted event-driven network
+engine is used to provide features such as an event loop and
+asynchronous network calls as well as a simple custom client server
+capability.&lt;/p&gt;
+&lt;p&gt;Our core hypothesis is that social networks can be understood, at least
+for commercial purposes, in terms of the interactions surrounding the
+major influencers. Due to API limits, restricting the amount of data
+that can be gathered, managing the size of your network is an important
+consideration. The final product of our data extraction process is a
+directory populated with the following file data:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Follower Metadata&lt;/li&gt;
+&lt;li&gt;Influencer Metadata&lt;/li&gt;
+&lt;li&gt;Follower-influencer Relationships&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Network Construction&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We believe that the best way to summarise the interests of social media
+users is to understand what they follow and so we store links between
+influencers and their followers. Our graph model differs from the
+standard network graph as it has two distinct types of nodes,
+influencers and followers, which are treated differently. The
+relationships between followers and influencers are key to understanding
+a network's user base.&lt;/p&gt;
+&lt;p&gt;Several of our processes require a full linear scan of the
+follower-influencer connection database. This can be a time-consuming
+task. We store each of the follower-influencer files in a numpy binary
+format to enable very fast reads over the data. We have used Cython to
+speed up this core processing significantly from our starting point of a
+pure Python implementation. We store each of these files in 1% percent
+samples, each of which contains roughly 7 million rows and parallelise
+execution using the multiprocessing and joblib libraries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Compression&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;We wish to detect communities of influencers and so we need a way of
+determining relationship strengths between them. Our method is based on
+the number of shared followers. The networks are too large and dynamic
+for it to be practical to store all pairs of similarities and so instead
+we compress each influencer in a form that allows similarities to be
+quickly calculated when needed. This compression takes the form of
+minhash signatures. While using the signatures is very quick, generating
+them is an expensive operation that must iterate through billions of
+follower-influencer connections, incrementally updating the signatures.
+Our original implementation of this algorithm took six days to run.&lt;/p&gt;
+&lt;p&gt;We were able to make some improvements by profiling the code using
+cProfiler and line_profiler to remove bottlenecks. Really significant
+improvements were achieved by pre-processing our input data into a more
+suitable format (binary numpy memmap) and using a Cython main loop. In
+this specific case we managed to improve on the speed of numpy matrix
+operations (with broadcasting) by writing c-code which created less
+intermediate variables and hence made less calls to create new objects
+on the heap. The cython annotation tool proved useful in identifying
+when cPython was actually creating Python objects, especially when these
+were non-obvious like views on a numpy array. In total these
+optimisations reduce runtime from six days to three hours.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Enrichment&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The final stage of our process uses machine learning algorithms to infer
+user attributes. These may include demographics data such as country,
+age and gender; or more advanced features such as robot detection - is
+the user a person, Twitter bot or company.&lt;/p&gt;
+&lt;p&gt;We used the scikit-learn package which contains tools to develop machine
+learning projects quickly. We typically progress by splitting the data
+into different sets for cross-validation before training a
+classification model such as a support vector machine or random forest.
+The initial model would be tuned using scikit-learn’s grid search and
+finally evaluated using validation and learning curves. Like many other
+features, scikit-learn’s support vector machine is implemented using
+fast and highly optimised C libraries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In this talk we have described how a stack compose entirely from Python
+components can take raw data directly from social network APIs and
+manipulate it into a form that allows brand managers to interactively
+understand the communities and influencers that exist around their
+products and marketplaces.&lt;/p&gt;
+</summary></entry><entry><title>Collect and Visualise Metrics With InfluxDB and Grafana</title><link href="https://pyvideo.org/pydata-london-2015/collect-and-visualise-metrics-with-influxdb-and-grafana.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Marek Mroz</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/collect-and-visualise-metrics-with-influxdb-and-grafana.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Metrics gathering and visualization is a standard practice for
+systems and operations engineers. While not as commonly used in the
+data science world, metric collection tools and techniques can be
+useful for scientific computing projects. In this talk I will show
+how to instrument an application to collect metrics, and create a
+dashboard view to monitor and explore the collected data.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;InfluxDB is an open-source distributed time series database that is easy
+to set up and to get started with. Grafana is a dashboarding tool that
+works with InfluxDB and other time series back-ends. In this talk I will
+present how to integrate an application with InfluxDB, and explore the
+visualization capabilities that Grafana brings to the table.&lt;/p&gt;
+&lt;p&gt;&amp;quot;Log everything&amp;quot; is a great piece of advice for any project, especially
+when going from exploratory phase of research to deploying a system to
+production. Logs are invaluable for debugging and investigating specific
+issues. However, individual logs are only snapshots of application runs
+in time, and as the project grows and begins to incorporate multiple
+services, data processing pipelines, and compute resources, the value
+that can be immediately derived from bare logs diminishes. Logs also
+tend to be wordy, and the more you log, the harder it is to find the
+relevant information.&lt;/p&gt;
+&lt;p&gt;Traditionally time series databases were used to collect system metrics,
+but they can be equally useful in gathering application specific
+metrics. Logs can be complemented by metric gathering tools, which
+collect the data that you care about and expose it in an easy to query
+and to present manner. In conjunction with intuitive visualization and
+dashboarding provided by Grafana, InfluxDB can give great insight into
+inner workings of a system, and bring together all the disparate
+information into an interface that makes metric data exploration
+convenient. The two tools can help analyze performance bottlenecks,
+algorithm deficiencies, and resource constraints.&lt;/p&gt;
+</summary></entry><entry><title>Constructing protein structural features for Machine Learning.</title><link href="https://pyvideo.org/pydata-london-2015/constructing-protein-structural-features-for-machine-learning.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Ricardo Corral Corral</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/constructing-protein-structural-features-for-machine-learning.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;An introduction to combinatorial construction of features for protein
+structures and some practical applications and state of the art
+results on task like structural and functional classification, decoy
+identification, and fast finding of neighboring structures.&lt;/p&gt;
+&lt;p&gt;Slides available here:http://162.243.152.57:7000/PyDataLDN2015f.pdf&lt;/p&gt;
+&lt;p&gt;Code and quick tutorial: &lt;a class="reference external" href="https://github.com/RicardoCorralC/rccPyDataLondon2015"&gt;https://github.com/RicardoCorralC/rccPyDataLondon2015&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Proteins are the most abundant macromolecules on cells. They perform a
+wide range of biological activities due to its adopted three dimensional
+structures. First requirement to make use of Machine Learning
+technologies on this context, is to construct an informative set of
+features for representing protein structures. We make use of the Residue
+Cluster Class System, a labeled Sperner Family arising from atomic
+positions, giving a total set of 26 features. Practical applications are
+presented for various classical computational biology tasks. Entire code
+base is implemented on Python as an API and ready to use final user
+programs.&lt;/p&gt;
+</summary></entry><entry><title>Defining Degrees of Separation in Data Classifications Using Predictive Modelling</title><link href="https://pyvideo.org/pydata-london-2015/defining-degrees-of-separation-in-data-classifications-using-predictive-modelling.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Yiannis Pavlosoglou</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/defining-degrees-of-separation-in-data-classifications-using-predictive-modelling.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A talk about techniques to classify what data we share and with whom.
+In the corporate and government world, there is a plethora of
+security models that determines who has access to what and who knows
+about it. In this presentation, we define the novel concept of
+degrees of separation in data classification security models and use
+machine learning techniques to infer non public data.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We all use techniques to classify what data we share and with whom. In
+this presentation we look at a novel of combining the aggregate public
+data available to retrieve non public information about users. We define
+the way to infer private data with a certain probability from public
+data as a degree of separation on that data.&lt;/p&gt;
+&lt;p&gt;We use machine learning techniques to first do feature extraction from
+this combined public data and utilise predictive models to infer non
+public data. We present an analysis starting with public twitter feeds
+from data scientists and then define three degrees of separation for
+that data.&lt;/p&gt;
+&lt;p&gt;In conclusion, we show a model that combines the heuristics of feature
+selection with the security model of data classification to define the
+degrees of separation.&lt;/p&gt;
+</summary></entry><entry><title>Deploying a Model to Production</title><link href="https://pyvideo.org/pydata-london-2015/deploying-a-model-to-production.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Alex Chamberlain</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/deploying-a-model-to-production.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you used to running your models on a laptop? Do you want to know how
+to run it in a production environment? Prepare yourself for a whirlwind
+tour of what it takes to run a model 24/7. We'll be looking at
+Bloomberg's infrastructure for running utility market models. By the
+end, you'll have a good idea what it takes to achieve this without being
+woken up at 5am more than a couple of times.&lt;/p&gt;
+</summary></entry><entry><title>Hacking Human Language</title><link href="https://pyvideo.org/pydata-london-2015/hacking-human-language.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Hendrik Heuer</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/hacking-human-language.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;If you convert words into vectors, you can do interesting things with
+them. You can compare the topics in a book, make better translations
+and tell if a sentence is positive or negative. Python libraries like
+gensim and spaCy make it easy to play with this for fun, profit or
+social science.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk introduces Computational Social Science as a new research
+discipline, gives a brief introduction to Natural Language Processing
+and explains how Word Vector Representations are computed and how to use
+them in Python. Word Vector Representations like word2vec encode
+semantic relationships like gender and &amp;quot;is the capital city of&amp;quot;. This
+makes it easy to find similar words and compare them visually. To
+illustrate this, I am using the gensim and scikit-learn Python libraries
+to compare my own Google searches from 2011 and 2014. I will also
+explain how to use this to compare the topics in books and book
+summaries.&lt;/p&gt;
+</summary></entry><entry><title>Hierarchical Data Clustering in Python</title><link href="https://pyvideo.org/pydata-london-2015/hierarchical-data-clustering-in-python.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Frank Kelly</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/hierarchical-data-clustering-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Clustering of data is an increasingly important task for many data
+scientists. This talk will explore the challenge of hierarchical
+clustering of text data for summarisation purposes. We'll take a look
+at some great solutions now available to Python users including the
+relevant Scikit Learn libraries, via Elasticsearch (with the carrot2
+plugin), and check out visualisations from both approaches.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Background: methods for clustering text data and the challenge of
+data summarisation&lt;/li&gt;
+&lt;li&gt;Hierarchical clustering: agglomerative vs divisive&lt;/li&gt;
+&lt;li&gt;sklearn.cluster and metrics modules&lt;/li&gt;
+&lt;li&gt;Elasticsearch + carrot2 plugin&lt;/li&gt;
+&lt;li&gt;Performance comparisons, assessment of ease of scalability and use&lt;/li&gt;
+&lt;li&gt;Static visualisation using Matplotlib, interactive using Foamtree&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Information Surprise or How to Find Data</title><link href="https://pyvideo.org/pydata-london-2015/information-surprise-or-how-to-find-data.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Oleksandr Pryymak</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/information-surprise-or-how-to-find-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What is our curiosity? How can we measure and model surprise of
+discovery? Philosophical questions, which have been pondered from
+different angles, also found definitions in Bayesian framework. I'll
+touch basics, review ideas, and illustrate on Twitter data how
+entropic measures can be efficiently used to detect events and
+summarise them.&lt;/p&gt;
+</summary></entry><entry><title>Integration with the Vernacular</title><link href="https://pyvideo.org/pydata-london-2015/integration-with-the-vernacular.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>James Powell</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/integration-with-the-vernacular.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The numpy model of computation in Python has proven to be one of the
+most successful ways to integrate high-performance computational code
+into an application. This talk offers a foundational
+conceptualization for this approach and discusses its strengths and
+limitations.&lt;/p&gt;
+</summary></entry><entry><title>Jointly Embedding knowledge from large graph databases with textual data using deep learning</title><link href="https://pyvideo.org/pydata-london-2015/jointly-embedding-knowledge-from-large-graph-databases-with-textual-data-using-deep-learning.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Armando Vieira</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/jointly-embedding-knowledge-from-large-graph-databases-with-textual-data-using-deep-learning.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Recent advances in combining structured graph data with textual data
+using embedding word representations from a large corpus of
+unlabelled data. This allows to expand the knowledge base graph and
+extract complex semantic relationships.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Targeting knowledge graphs completion is a recent paradigm that allow
+extraction of new relations (facts) from existing knowledge graphs like
+Freebase or GeneOntology. Word embeddings represents each entity into a
+low dimensional space and the relationships as vectorial transformations
+which has the advantage of making the search space continuous. This
+allows to encode the entities and transformations with global
+information from the entire graph. On the other hand, word embedding
+approaches, like word2vec, extracted from unlabeled text allows
+representations of words as vectors, although it doesn't allow to
+extract relationships . By careful alignment of entities from free text
+with a knowledge graph it is possible to combine both approaches and
+jointly extract new knowledge through relationships between entities and
+words / phrases. We will show results from applying this technology to
+biomedical data.&lt;/p&gt;
+</summary></entry><entry><title>Jupyter (IPython): how a notebook is changing science</title><link href="https://pyvideo.org/pydata-london-2015/jupyter-ipython-how-a-notebook-is-changing-science.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Juan Luis Cano</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/jupyter-ipython-how-a-notebook-is-changing-science.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;IPython was born as an Interactive Python shell on steroids 14 years
+ago, but its notebook tool is shaping the way scientists, developers
+and even journalists communicate and explore science. After its
+rebirth as the Jupyter project, we will examine its importance and
+future in Open Science and scientific publishing now that Nature
+highlighted its awesome features!&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is both a shortened version of the recent history of the
+Jupyter project (previously IPython) and a case for reproducibility in
+science. We will glance at the recent milestones of the project, address
+some common myths still heard in business environments regarding open
+source, show the possibilities of Jupyter as an environment for several
+different languages (specially Julia and R) and talk about possible
+future developments.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: CRISP-DM: The Dominant Process for Data Mining</title><link href="https://pyvideo.org/pydata-london-2015/keynote-crisp-dm-the-dominant-process-for-data-mining.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Meta S. Brown</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/keynote-crisp-dm-the-dominant-process-for-data-mining.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CRISP-DM stands for Cross-Industry Standard Process for Data Mining,
+is an industry-proven way to guide your data mining efforts. This
+talk covers this dominant process, what it is, how it is developed,
+where it is today and why it's time for you to get involved.&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Lightning Talks</title><link href="https://pyvideo.org/pydata-london-2015/lightning-talks.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Philip Nye</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning talks! 5 minutes! GO!&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why would a journalist want to learn Python? —&amp;nbsp;Philip Nye&lt;/li&gt;
+&lt;li&gt;Story detection using LDAs —&amp;nbsp;Hendrik Heuer&lt;/li&gt;
+&lt;li&gt;A model may be right, but irrelevant — Maria Koroliuk&lt;/li&gt;
+&lt;li&gt;Why I love the days I get to optimise things —&amp;nbsp;Gemma Hentsch&lt;/li&gt;
+&lt;li&gt;Ethics? &amp;amp; Data Science ... —&amp;nbsp;Roelof Pieters&lt;/li&gt;
+&lt;li&gt;Love letter to Russel Winder —&amp;nbsp;Tony Simpson&lt;/li&gt;
+&lt;li&gt;Let's go to Mars — Juan Luis Cano&lt;/li&gt;
+&lt;li&gt;Testing with Hypothesis —&amp;nbsp;David McGiver&lt;/li&gt;
+&lt;li&gt;Introducing (Plotly) Widgets —&amp;nbsp;Carole Griffiths&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;... DONE!&lt;/p&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>Localising Organs of the Fetus in MRI Data Using Python</title><link href="https://pyvideo.org/pydata-london-2015/localising-organs-of-the-fetus-in-mri-data-using-python.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Kevin Keraudren</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/localising-organs-of-the-fetus-in-mri-data-using-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;What if medical scanners could localise organs in 3D data in the same
+way as your camera automatically detects faces? The task is even more
+challenging for a fetus, whose orientation is arbitrary! In this
+talk, I will present how scikit-learn's Random Forest and the Python
+ecosystem can be used to solve this problem, wrapping a medical
+imaging C++ library with Cython along the way.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="imaging-the-developing-fetus"&gt;
+&lt;h4&gt;Imaging the developing fetus&lt;/h4&gt;
+&lt;p&gt;The main challenge when imaging the fetus using Magnetic Resonance
+Imaging (MRI) is fetal movement. Acquiring MR images requires time,
+during which the fetus is unlikely to stay still. To address this
+problem, images are acquired as stacks of 2D slices that freeze in-plane
+motion and motion that occurred between slices is corrected
+retrospectively. Several stacks of 2D slices acquired in orthogonal
+directions are used to reconstruct a high resolution volume of the
+fetus. The automated detection of the fetal organs can help this problem
+by selecting a region of interest around parts of the fetal body that
+move as a rigid body. In this talk, I will present the pipeline I
+developed to localise the brain, heart, lungs and liver of the fetus in
+MR images, which can be used as pre-processing step for motion
+correction.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="localising-the-brain-of-the-fetus"&gt;
+&lt;h4&gt;Localising the brain of the fetus&lt;/h4&gt;
+&lt;p&gt;The brain is first detected in each 2D slice using a Bag-of-Words
+approach with SIFT features, before accumulating the detection results
+with RANSAC in order to position a 3D bounding box around the brain.
+This bounding box is later refined into a segmentation, which is used
+for motion correction. The code, an example dataset and the associated
+publications can be found online [1].&lt;/p&gt;
+&lt;p&gt;The OpenCV Python wrapper is used for feature extraction, while an SVM
+from scikit-learn takes care of the machine learning aspect of the
+Bag-of-Words. Scikit-learn's Random Forests, trained with patches from
+the central region of the brain bounding box and patches outside the
+bounding box, are used to refine the box detection into a segmentation.
+Medical images combine voxel data with scanner coordinates, which are
+used to align successive scans to each other. In order to correctly
+handle these coordinates throughout the Python code, as well as easily
+access medical image processing functionalities, a wrapper for the IRTK
+library [2] was developed using Cython. An image object is a subclass of
+numpy arrays. In particular, the function &lt;tt class="docutils literal"&gt;__getitem__&lt;/tt&gt; is overloaded
+in order to update the scanner coordinates each time the image is
+cropped or sliced.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="localising-the-heart-lungs-and-liver-of-the-fetus"&gt;
+&lt;h4&gt;Localising the heart, lungs and liver of the fetus&lt;/h4&gt;
+&lt;p&gt;The location of the brain can be used to guide the search for other
+organs of the fetus. The heart, lungs and liver are detected using a
+two-step Random Forest approach: a first classification step assigns
+each voxel to an organ, and during a subsequent regression step, voxels
+vote for the position of the organ center. Steerable cube features,
+which can be efficiently computed using integral images, are used as
+input for the Random Forests. While all fetuses are aligned at training
+time, at test time image features are extracted in a coordinate system
+estimated as organs are detected: first the brain, which fixes a point,
+then the heart, which fixes an axis, and finally the liver and both
+lungs.&lt;/p&gt;
+&lt;p&gt;Scikit-learn's Random Forests are not designed for parsing images. They
+can however be used in a research prototype by precomputing features for
+batches of voxels. This approach allows the researcher to focus on the
+detection pipeline and the feature extraction step. Example localisation
+results are presented in an online video [3].&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[1] &lt;a class="reference external" href="https://github.com/kevin-keraudren/example-motion-correction"&gt;https://github.com/kevin-keraudren/example-motion-correction&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[2] &lt;a class="reference external" href="https://github.com/BioMedIA/python-irtk"&gt;https://github.com/BioMedIA/python-irtk&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[3] &lt;a class="reference external" href="http://www.doc.ic.ac.uk/~kpk09/MICCAI2015.mp4"&gt;http://www.doc.ic.ac.uk/~kpk09/MICCAI2015.mp4&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Machine Learning with Imbalanced Data Sets</title><link href="https://pyvideo.org/pydata-london-2015/machine-learning-with-imbalanced-data-sets.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Natalie Hockham</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/machine-learning-with-imbalanced-data-sets.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Classification algorithms tend to perform poorly when data is skewed
+towards one class, as is often the case when tackling real-world
+problems such as fraud detection or medical diagnosis. A range of
+methods exist for addressing this problem, including re-sampling,
+one-class learning and cost-sensitive learning. This talk looks at
+these different approaches in the context of fraud detection.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Classification algorithms tend to perform poorly when data is skewed
+towards one class. Real-world examples include fraud detection, medical
+diagnosis and oil spill detection, where the class of interest is
+generally the minority class. A key assumption built into many
+classification algorithms is that maximising accuracy is the goal;
+however, when positive instances account for only 1% of the data set in
+question, an accuracy of 99% doesn’t quite cut it.&lt;/p&gt;
+&lt;p&gt;A common practice to address the problem with imbalanced data sets is to
+rebalance them artificially using a range of sampling techniques.
+However, one-class learning and cost-sensitive learning algorithms are
+growing in popularity. This talk looks at different approaches to
+tackling the problem of imbalanced classes in the context of fraud
+detection, as have recently been explored by the GoCardless data team.&lt;/p&gt;
+</summary></entry><entry><title>NLP on a Billion Documents: Scalable machine learning with spark</title><link href="https://pyvideo.org/pydata-london-2015/nlp-on-a-billion-documents-scalable-machine-learning-with-spark.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Martin Goodson</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/nlp-on-a-billion-documents-scalable-machine-learning-with-spark.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Apache Spark is becoming the new lingua franca for distributed
+computing. In this talk I'll show how many machine learning tasks can
+be scaled up almost trivially using Spark. For instance, we'll see
+how a semi-supervised NLP algorithm can be trained on a billion
+training examples using a Spark cluster.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Apache Spark is becoming the new lingua franca for distributed
+computing. In this talk I'll show how many machine learning tasks can be
+scaled up almost trivially using Spark.&lt;/p&gt;
+&lt;p&gt;After introducing the Spark computational model I'll detail some useful
+design principles for running Spark programs on large datasets. I'll
+also give some tips for effective configuration of a PySpark cluster.&lt;/p&gt;
+&lt;p&gt;The talk will include a step-by-step walk through of the scaling-up of
+several NLP algorithms. For instance, we'll see how a semi-supervised
+NLP algorithm can be trained on a billion training examples using a
+PySpark cluster.&lt;/p&gt;
+</summary></entry><entry><title>Our Data, Ourselves</title><link href="https://pyvideo.org/pydata-london-2015/our-data-ourselves.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Giles Greenway</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/our-data-ourselves.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;20 young coders with smartphones pre-loaded with an app that gathered
+data on the network activity of the other apps they used. Their data
+was captured using the Python-based data portal CKAN, analysed with
+SciKit-Learn, then returned to them using Docker and the Ipython
+Notebook. Python also played a role in the reverse-engineering of
+some of the more interesting apps we discovered.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The &amp;quot;&lt;a class="reference external" href="http://big-social-data.net/"&gt;Our Data, Ourselves&lt;/a&gt;&amp;quot; project
+seeks to explore the possibility of making the data-trails of smartphone
+users available ethically in a &amp;quot;social data commons&amp;quot;. We issued 20 young
+coders from &lt;a class="reference external" href="http://www.yrs.io/"&gt;Young Rewired State&lt;/a&gt; with Android
+smartphones pre- loaded with an
+&lt;a class="reference external" href="http://kingsbsd.github.io/MobileMiner/"&gt;app&lt;/a&gt; that tracked their
+other apps' network usage and recorded commonly captured data. This was
+collected using the Python-based data portal
+&lt;a class="reference external" href="http://ckan.org/"&gt;CKAN&lt;/a&gt;, the advantages and pitfalls of which will
+be discussed. Users' GSM cell-tower locations from the
+&lt;a class="reference external" href="http://opencellid.org/"&gt;OpenCellId&lt;/a&gt; database were clustered using
+k-means via SciKit-Learn. Careful feature-vector selection yielded deep
+insights into their everyday lives. This helped provoke discussions with
+the participants about their understanding of privacy related to their
+mobile app usage. We held a hack-day to return their data to them using
+a Docker container wrapping a copy of the CKAN instance that could be
+queried through an Ipython Notebook. Further details about the users'
+apps were obtained by scraping the Google PlayStore, which presented
+some challenges. Apps with particularly interesting patterns of network
+usage were reverse-engineered and their network traffic captured. We
+have run a &amp;quot;masterclass&amp;quot; on Android app reversal supported by
+&lt;a class="reference external" href="http://kingsbsd.github.io/DroidDestructionKit/"&gt;distributing software
+tools&lt;/a&gt; in another
+Docker container, many of them Python-based. The final phase of our
+project will be conducted in conjunction with the &lt;a class="reference external" href="http://opendatainstitute.org/"&gt;Open Data
+Institute&lt;/a&gt;, integrating our app with
+M.I.T's &lt;a class="reference external" href="http://openpds.media.mit.edu/"&gt;Open Personal Data Store&lt;/a&gt;,
+also written in Python, to give its users greater granularity of control
+as to how their data is used.&lt;/p&gt;
+</summary></entry><entry><title>Performance Pandas</title><link href="https://pyvideo.org/pydata-london-2015/performance-pandas.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Jeff Reback</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/performance-pandas.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Discuss and illustrate a few tips and tricks to get the most out of
+pandas. Will focus on idioms, computational efficiency, and memory
+optimization.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas Performance&lt;/p&gt;
+&lt;p&gt;Discuss and illustrate some useful tips and techniques in pandas. We
+will be addressing questions such as these:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to optimize performance.&lt;/li&gt;
+&lt;li&gt;How to reduce memory usage in memory and permanent storage.&lt;/li&gt;
+&lt;li&gt;Groupby Idioms&lt;/li&gt;
+&lt;li&gt;MultiIndex Slicing&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Python for Image and Text Understanding: One Model to rule them all!</title><link href="https://pyvideo.org/pydata-london-2015/python-for-image-and-text-understanding-one-model-to-rule-them-all.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Roelof Pieters</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/python-for-image-and-text-understanding-one-model-to-rule-them-all.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Deep Learning is an exciting trend in machine learning, where neural
+networks of many layers “deep” can automatically learn features from
+large volumes of data, setting new standards for image, audio and
+language understanding. In this interactive session we will go over
+some of the most popular python libraries for deep learning and will
+train an actual deep neural nets end to end.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://www.slideshare.net/roelofp/python-for-image-understanding-deep-learning-with-convolutional-neural-nets"&gt;http://www.slideshare.net/roelofp/python-for-image-understanding-deep-learning-with-convolutional-neural-nets&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deep Learning is an exciting trend in machine learning, where neural
+networks of many layers “deep” can automatically learn features from
+large volumes of data, in turn setting new standards for audio, image,
+and language understanding, machine translation, object and face
+recognition, etc.&lt;/p&gt;
+&lt;p&gt;The talk will start with a short overview of Deep Learning, both the
+deserved praise, as well as some of its criticisms, and explain some of
+the ways in which both text and vision data can be represented within a
+single united model. Such a single model has not only amazingly accurate
+results for existing language and vision tasks, but also offers new
+possibilities for business and society at large.&lt;/p&gt;
+&lt;p&gt;In the second portion of the talk I will tell a bit about how one would
+go about training a deep neural net for the first time, and what are
+some of the established practices to follow. We will go over one or more
+of the most widely used python packages (theano, pylearn, caffe) which
+enable machine learning enthusiasts to easily prototype and run deep
+architectures. Aided by iPython notebook(s) we will do some live coding
+to create and run a deep neural net, and see how it performs in the wild
+on a language or vision task.&lt;/p&gt;
+</summary></entry><entry><title>Ship It!</title><link href="https://pyvideo.org/pydata-london-2015/ship-it.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Ian Ozsvald</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/ship-it.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Building and shipping working data science products is hard - learn
+from 10 years of Ian's experience to find efficient ways through the
+mess of bad data, difficult team communication and poorly maintained
+code through to successfully deployed projects.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Building and shipping working data science products is hard - learn from
+10 years of Ian's experience to find efficient ways through the mess of
+bad data, difficult team communication and poorly maintained code
+through to successfully deployed projects. The talk will include ways of
+getting data, cleaning and debugging it, approaches to deployment and
+various tips I've picked up along the way that'll save you time. If you
+frequently start new projects or you're involved in deploying working
+systems then this talk should have something for you.&lt;/p&gt;
+</summary></entry><entry><title>Sudo Make me a (London) Map</title><link href="https://pyvideo.org/pydata-london-2015/sudo-make-me-a-london-map.html" rel="alternate"></link><published>2015-06-21T00:00:00+00:00</published><updated>2015-06-21T00:00:00+00:00</updated><author><name>Linda Uruchurtu</name></author><id>tag:pyvideo.org,2015-06-21:pydata-london-2015/sudo-make-me-a-london-map.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A review of Python and R libraries that allow users to easily work
+with shapefiles and geographic data, and create thematic maps . We
+will comment on ease of use and advantages/disadvantages of each
+ecosystem when it comes to novice users.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are many specialised tools to visualise geographic data. However,
+they are often expensive and have a significant learning curve. Free
+libraries in Python and R, enable users to not only work with shapefiles
+but also perform a variety of exploratory analyses and visualisations.
+In this talk we will look at London road works data and we use a variety
+of libraries in Python and R to analyse and create thematic maps. We
+will comment on ease of use and advantages/disadvantages of each
+ecosystem when it comes to novice users.&lt;/p&gt;
+</summary></entry><entry><title>A Tube Story: How can Python help us understand London's most important transportation network?</title><link href="https://pyvideo.org/pydata-london-2015/a-tube-story-how-can-python-help-us-understand-londons-most-important-transportation-network.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Camilla Montonen</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/a-tube-story-how-can-python-help-us-understand-londons-most-important-transportation-network.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;If you work in London, you have certainly experienced the joys and
+frustrations of commuting on the Tube. There are the very good mornings
+(lo and behold! An empty seat on the Northern Line) and then there are
+the very bad mornings (there is more space in a sardine can than on the
+Piccadilly). Using graph-tool, Bokeh and SimPy, we unravel some of the
+fascinating features of the London Tube.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The daily commute in London is an adventure that keeps surprising, in
+good ways and in bad. Some mornings things go smoothly: for once there
+is an empty seat on the Northern Line and you only need to wait ten
+minutes before reaching the escalator at Bank. On other days, a signal
+failure at Moorgate and all Piccadilly line travellers will become
+intimately acquainted with the sweet fragrance of a fellow commuter's
+toothpaste. After a few months, the more or less frustrated commuter
+will begin to notice some interesting patterns and ask questions. Why is
+it that a suspended Circle line can wreak havoc on commuters on the
+Central line? Can delays at Victoria lead to overcrowding of the Jubilee
+platform at London Bridge? What is the fastest way to visit all stations
+in the Tube network?&lt;/p&gt;
+&lt;p&gt;The London Tube can be modelled as a graph with vertices representing
+the stations and edges representing the connecting Tube lines. Using
+intuition and daily experience, we can guess that there are certain
+vertices in the Tube network that are vital to the overall health of the
+network. Pythonic graph analysis libraries such as graph-tool and
+interactive visualizations with Bokeh can corroborate that suspending
+stations – for example Baker Street, which lies at the intersection of 5
+Tube lines- can cause congestion even at remote stations throughout the
+network.&lt;/p&gt;
+&lt;p&gt;In addition to studying the static properties of the London Tube, we
+will leverage the power of SimPy to create various simulations. This
+will allow us to explore how the Tube network evolves when key
+parameters such as commuter numbers, train speeds and the frequency of
+signal failures are introduced on and off peak times.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at novice Python users. The attendees will hopefully
+come away with a basic understanding of how to use the graph-tool
+library to create graphs and store meta-information about them, how to
+use Bokeh to stream information to an interactive browser visualization
+and how to use SimPy to create simple simulations. While it will not be
+technically challenging, it will hopefully inspire beginner Pythonistas
+to seek interesting problems and apply libraries in the Python data
+analysis ecosystem to pose questions about data and then figure out the
+answers!&lt;/p&gt;
+</summary></entry><entry><title>Agent-Based Modelling, the London riots, and Python</title><link href="https://pyvideo.org/pydata-london-2015/agent-based-modelling-the-london-riots-and-python.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Thomas French</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/agent-based-modelling-the-london-riots-and-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;An introduction to Agent-Based Modelling (ABM) using Python and the
+PyData stack. As an example we’ll present on-going work modelling the
+2011 London riots, investigating how riots spread and in particular
+focussing on police response.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk we will give an introduction to Agent-Based Modelling (ABM)
+using Python. ABM is a technique used to build simulated populations of
+heterogeneous individuals that are governed by rules of behaviour. These
+individuals, or agents, interact in simulated environments in which we
+study their emergent behaviour. We build agent-based models in order to
+try explain why people do what they do. In this talk, we'll briefly show
+how we develop and validate agent populations. We will then present
+on-going work modelling the 2011 London riots, investigating how riots
+spread and in particular focussing on police response. Finally, we’ll
+discuss why we use Python and the PyData stack to develop models, and
+mention how we are starting to use machine learning (scikit-learn) for
+learning rules of behaviour.&lt;/p&gt;
+</summary></entry><entry><title>Data-visualisation with Python and Javascript: crafting a data-viz toolchain for the web</title><link href="https://pyvideo.org/pydata-london-2015/data-visualisation-with-python-and-javascript-crafting-a-data-viz-toolchain-for-the-web.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Kyran Dale</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/data-visualisation-with-python-and-javascript-crafting-a-data-viz-toolchain-for-the-web.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;While Python is fast becoming the goto language for
+data-processing/science, the visual fruits of that labour hit the
+wall of the web, where there is only one first-class language,
+Javascript. To develop a data-viz toolchain for the modern world,
+where web-presentation is increasingly mandated, making Python and
+Javascript play nicely is fundamental. This talk aims to show how to
+easily do that.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;To accompany an upcoming O'Reilly book 'Data-visualisation with Python
+and Javascript: crafting a dataviz toolchain for the web' (see
+&lt;a class="reference external" href="http://kyrandale.com/blog/data-visualization-python-javascript/"&gt;here&lt;/a&gt;)
+this talk aims to sketch out the toolchain by transforming some dry
+Wikipedia data (Nobel prize-winners) into a far more engaging and
+insightful web- visualisation. This transformative cycle uses Python
+big-hitters such as Scrapy, Pandas and Flask, the latter delivering data
+to Javascript's D3. These are the industrial lathes of the toolchain but
+Python's fantastic standard library and all those first class
+data-munging libraries are involved, the spanners, hammers and
+screwdrivers of the toolchain.&lt;/p&gt;
+&lt;p&gt;While Python is fast becoming the goto language for
+data-processing/science, the visual fruits of that labour hit the wall
+of the web, where there is only one first-class language, Javascript. To
+develop a data-viz toolchain for the modern world, where
+web-presentation is increasingly mandated, making Python and Javascript
+play nicely is fundamental. This talk aims to show that the perceived
+wall between the two languages is actually a thin, permeable membrane
+and that, with a bare minimum of web-dev, one can get on with
+programming seamlessly in both.&lt;/p&gt;
+</summary></entry><entry><title>Financial Risk Management: Analytics and Aggregation with the PyData stack</title><link href="https://pyvideo.org/pydata-london-2015/financial-risk-management-analytics-and-aggregation-with-the-pydata-stack.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Miguel Vaz</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/financial-risk-management-analytics-and-aggregation-with-the-pydata-stack.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Using Bokeh, Pandas and a bit of Apache Spark to address the
+flexibility, performance / data volume requirements of standard
+financial risk management processes. Examples in the talk illustrate
+the model calibration and backtesting processes of a market risk
+model (VaR Filtered Historical Simulation), which quantifies possible
+future losses arising from market price movements.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Financial institutions regularly estimate possible portfolio losses
+arising from (future) changes in the market values of their assets, e.g.
+using the Value at Risk (VaR) metric. We show a VaR model using Filtered
+Historical Simulation and illustrate some of the usual processes for
+calibrating, validating and analysing these models, such as calibration
+and backtesting. Although the model is relatively simple, the challenges
+posed by their different requirements - flexibility, data volume,
+performance - inevitably lead to many shortcuts and complexity. With the
+ultimate goal of managing this complexity, we explore and evaluate, with
+concrete coded examples, the PyData (e.g. Pandas, Bokeh) and Apache
+Spark frameworks from a practitioner's point of view.&lt;/p&gt;
+</summary></entry><entry><title>Getting Meaning from Scientific Articles</title><link href="https://pyvideo.org/pydata-london-2015/getting-meaning-from-scientific-articles.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Éléonore Mayola</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/getting-meaning-from-scientific-articles.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The bibliography process means every scientist regularly has to go
+through a lot of published articles in parallel to her/his research. The
+aim is to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;know what other researchers are doing: they might be ahead
+of you, they might have proven your project is a dead end.&lt;/li&gt;
+&lt;li&gt;get some context to interpret your research results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using specialised search engines can be inefficient if you don't use
+the &amp;quot;right&amp;quot; keywords. Researcher also tend to find bibliography
+boring so it would be interesting to automate part of the process!&lt;/p&gt;
+&lt;p&gt;In my talk I'll answer the following question:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;can Python machine learning libraries (nltk, scikit-learn) be used
+to determine whether a research article is worth reading?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll use the TF-IDF measure to identify frequent topics appearing in
+specific scientific articles and train a classifier to distinguish
+between relevant and non-relevant articles depending and someone's
+interests.&lt;/p&gt;
+</summary></entry><entry><title>How DataKind UK helped Citizens Advice get more from their data</title><link href="https://pyvideo.org/pydata-london-2015/how-datakind-uk-helped-citizens-advice-get-more-from-their-data.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Emma Prest</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/how-datakind-uk-helped-citizens-advice-get-more-from-their-data.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;At least 30% of people seeking support at a Citizens Advice office
+are repeat visitors. If we better understand the relationships
+between these problems, would it be possible to offer preventive
+advice, and thereby reduce cost and provide a better service?
+DataKind UK worked with Citizens Advice to find out.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DataKind UK works with charities across the country to help them harness
+the power of data science. We recently ran a year-long project with
+Citizens Advice. As you probably know, Citizens Advice offers
+confidential, impartial advice and support on a number of day-to-day
+issues ranging from claiming benefits to faulty goods. DataKind UK
+helped the organisation pull together and understand their disparate
+data sets to get a better picture of the emerging social problems that
+people in the UK face. Here is one small part of that project...&lt;/p&gt;
+&lt;p&gt;On average, 5,700 people walk into their local Citizens Advice Bureau
+every single day. Of these people, at least 30% are repeat visitors.
+They come in seeking advice with one problem, and return months later
+with a different problem. If we could better understand the
+relationships between these problems, could Citizens Advice offer
+preventive advice, and thereby reduce cost and provide a better service?
+That's what we sought to find out. Using Python, Scipy, Networkx, Spyre
+and D3.js, Billy Wong, a DataKind UK volunteer worked to tackle this
+problem. Come to our talk to see the result!&lt;/p&gt;
+</summary></entry><entry><title>If It Weighs the Same as a Duck: Detecting Fraud with Python and Machine Learning</title><link href="https://pyvideo.org/pydata-london-2015/if-it-weighs-the-same-as-a-duck-detecting-fraud-with-python-and-machine-learning.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Ryan Wang</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/if-it-weighs-the-same-as-a-duck-detecting-fraud-with-python-and-machine-learning.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Stripe's system for preventing fraudulent payments utilizes a mix of
+machine learning and data analysis. This talk will describe some
+technical challenges we’ve faced in building it. In particular, I
+will discuss how we’ve used (and occasionally written) various Python
+packages as part of a broader ecosystem to address data processing,
+feature engineering, and model evaluation problems.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stripe's system for preventing fraudulent payments utilizes a mix of
+machine learning and data analysis. Over the last few years, it has
+evolved from a collection of manually assembled ad-hoc rules to an
+ensemble of machine- learned models based on historical data from across
+the entire Stripe network. This talk will describe some of the technical
+challenges we've faced in building and scaling it. In particular I will
+discuss how we've used (and occasionally written) various Python
+packages as part of a broader ecosystem to address data processing,
+feature engineering, and model evaluation problems.&lt;/p&gt;
+&lt;p&gt;Some examples:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;We use scikit-learn to train a majority of our models&lt;/li&gt;
+&lt;li&gt;We use luigi to manage long-running feature generation jobs and model
+training scripts&lt;/li&gt;
+&lt;li&gt;We use pandas to debug models and features that generate systematic
+false positives&lt;/li&gt;
+&lt;li&gt;We wrote topmodel to evaluate model performance on both production
+and backtested data&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Keynote - How to Find Stories in Data</title><link href="https://pyvideo.org/pydata-london-2015/keynote-how-to-find-stories-in-data.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Helena Bengtsson</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/keynote-how-to-find-stories-in-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about how data is used to enrich stories at the Guardian.&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Keynote: What's it Like to be a Bot?</title><link href="https://pyvideo.org/pydata-london-2015/keynote-whats-it-like-to-be-a-bot.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Eric Drass</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/keynote-whats-it-like-to-be-a-bot.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;What do we mean by intelligence? How do the limitations of language
+leave us floundering with regards to discussing our relationship with
+‘algorithms’ and emerging machine intelligence? I argue that the
+limitations in the discourse surrounding AI are remarkably similar to
+the problems found in psychology and philosophy relating to other
+minds.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Taking the title from the seminal philosphy of mind paper by Thomas
+Nagel (What is it like to be a Bat (1974)) this talk looks at the
+problems surrounding Artificial Intelligence, illustrated with examples
+from my own artistic practice.&lt;/p&gt;
+&lt;p&gt;What do we mean by intelligence? How do the limitations of language
+leave us floundering with regards to discussing our relationship with
+‘algorithms’ and emerging machine intelligence? I argue that the
+limitations in the discourse surrounding AI are remarkably similar to
+the problems found in psychology and philosophy relating to other minds.&lt;/p&gt;
+&lt;p&gt;Much has been said about the forthcoming ‘singularity’, but little
+attention is being paid to the signals and signs already emerging on
+this path. My artworks play in this space, highlighting the potentials
+and limitations inherent in existing technologies and questioning our
+relationship with the world of bots.&lt;/p&gt;
+&lt;p&gt;We already live in an algorithmically mediated world, though in many
+ways we remain blind to the ramifications. The world of the future will
+be teeming with intelligent systems, though they may not conform to our
+narrow anthropomorphic perspective on what intelligence is. For us to
+prepare for the future, perhaps we need to change the way we think about
+thinking, just as the machines are changing theirs.&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Making Computations Execute Very Quickly</title><link href="https://pyvideo.org/pydata-london-2015/making-computations-execute-very-quickly.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Russel Winder</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/making-computations-execute-very-quickly.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This session is about using native code with Python to ensure
+computationally intensive programs execute as fast as is possible.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is well known as a language that does not execute computationally
+intensive programs quickly. Traditionally, Cython and/or NumPy have been
+the tools to speed things up. There is interest in Numba as a new way
+forward. However C++14, D, Chapel, and possibly Rust, maybe Go, are
+there, are much easier to work with than you might think, and lead to
+very high performance and easily maintained code.&lt;/p&gt;
+&lt;p&gt;In this session we will look at a couple of example codes to provide
+signposts as to how we can take a more polyglot approach to the
+construction of computationally intensive systems.&lt;/p&gt;
+</summary></entry><entry><title>PyPy, The Python Scientific Community and C extensions</title><link href="https://pyvideo.org/pydata-london-2015/pypy-the-python-scientific-community-and-c-extensions.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Romain Guillebert</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/pypy-the-python-scientific-community-and-c-extensions.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyPy is the most popular alternative implementation of Python, but it
+falls short in term of compatibility with C extensions, this talk is
+about why C extensions are so hard to support on alternative
+implementations and why they prevent Python from improving.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recently we've seen the rise of new technologies like Julia, those have
+the ability to build a new ecosystem on a clean slate and thus be better
+than Python in some aspects. What would it take to be as good as those
+technologies on those aspects without loosing all the things we love
+about Python? This talk will describe my perfect future where Python
+keeps getting better, gets to keep it's great set of libraries, where
+PyPy fits in that future and why C extensions are a big road block.&lt;/p&gt;
+</summary></entry><entry><title>Python and scikit-learn based open research SDK for collaborative data management and exchange</title><link href="https://pyvideo.org/pydata-london-2015/python-and-scikit-learn-based-open-research-sdk-for-collaborative-data-management-and-exchange.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Grigori Fursin</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/python-and-scikit-learn-based-open-research-sdk-for-collaborative-data-management-and-exchange.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;We would like to share our experience with a python-based Collective
+Knowledge SDK for collaborative and reproducible experimentation. It
+helps organize and share experimental setups (code, data and meta) as
+unified and reusable components with JSON API via GITHUB. It also
+helps unify, automate and crowdsource analysis and exploration of
+multi-dimensional optimization spaces using scikit-learn.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://github.com/ctuning/ck"&gt;http://github.com/ctuning/ck&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Faster and more power efficient computer systems are vital to continue
+innovation in science and technology. However, designing such systems
+has become intolerably complex, ad-hoc, costly and error prone due to an
+enormous number of available design and optimization choices, and
+complex interactions between all software and hardware components.&lt;/p&gt;
+&lt;p&gt;Originally, our automatic and machine-learning based exploration and
+autotuning techniques showed high potential to address above problems
+[1]. On the other hand, very quickly we faced many other problems such
+as dealing with ever changing tools and their interfaces, lack of a
+common experimental methodology, lack of computational power for machine
+learning and feature selection, problems with reproducibility of
+empirical experiments, and lack of unified mechanisms for knowledge
+management and exchange.&lt;/p&gt;
+&lt;p&gt;Eventually, to be able to proceed with our research, we did not have a
+choice but to develop an open-source framework and repository
+(Collective Knowledge) for collaborative and reproducible
+experimentation [2]. This python-based framework and repository helped
+our community start organizing, describing, cross-linking and sharing
+code, data, experimental setups and meta information as unified and
+reusable components with JSON API via standard Git services (such as
+GITHUB or BitBucket) [3]. Such unification, in turn, helped researchers
+assemble various experimental setups (workflows) from shared python
+components to quickly prototype ideas while crowdsourcing experiments
+across spare computer resources such as Android mobile phones and
+tablets [4].&lt;/p&gt;
+&lt;p&gt;Furthermore, public and unified repository allowed the community to
+expose experiments to predictive analytics from scikit-learn
+(statistical analysis, data mining, machine learning) to automate and
+speed up exploration of multi- dimensional experimental choices,
+analysis of results and decision making (i.e. predicting program
+optimizations or hardware configuration based on program and data set
+features) [1,3].&lt;/p&gt;
+&lt;p&gt;During past 5 years, our free and open-source technology has been
+extensively used and validated by several major industrial partners. It
+also helped initiate new publication model in computer engineering where
+experiments and artifacts are validated and improved by the community
+[5]. We therefore believe that our practical experience with this
+python-based framework and scikit-learn tools may be useful to
+researchers from other fields.&lt;/p&gt;
+&lt;p&gt;In this talk, we would like to present our framework, JSON-based APIs,
+real usage experience to solve program optimization problems, and future
+work for python-based data management and exchange. In a longer term, we
+are interested to collaborate with a python community to speed up python
+itself and related data analytics modules using our machine-learning
+based autotuning and run- time adaptation techniques.&lt;/p&gt;
+&lt;p&gt;More details about our techniques and public initiatives:&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://hal.inria.fr/hal-01054763"&gt;https://hal.inria.fr/hal-01054763&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a class="reference external" href="http://github.com/ctuning/ck"&gt;http://github.com/ctuning/ck&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[3] &lt;a class="reference external" href="http://c-mind.org/repo"&gt;http://c-mind.org/repo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[4]
+&lt;a class="reference external" href="https://play.google.com/store/apps/details?id=com.collective_mind.node"&gt;https://play.google.com/store/apps/details?id=com.collective_mind.node&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[5] &lt;a class="reference external" href="http://c-mind.org/reproducibility"&gt;http://c-mind.org/reproducibility&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Rescuing and Exploring Complex Life Science Data</title><link href="https://pyvideo.org/pydata-london-2015/rescuing-and-exploring-complex-life-science-data.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Paul Agapow</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/rescuing-and-exploring-complex-life-science-data.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Often we have no choice but to work with messy, difficult data. I
+describe the Python-based approaches used to rescue and repair a
+complex malformed dataset (using csvkit and a rule-driven
+sanitisation approach), mount it in a new user-friendly db (using
+pycap) before exploration (using py4neo). I finish by reflecting on
+Python’s “gaps” as concerns life science/ biomedical analytical
+tools.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Everyone complains about messy, difficult datasets but often we have no
+choice but to work with them. In 2014, I was charged with the
+“informatic rescue” of the data for a large trans-European
+epidemiological trial, where the challenges were (1) to extract and make
+useable the complicated but malformed patient data in a remote and
+idiosyncratic database, (2) make this available and regularly updated in
+a user-friendly system, (3) integrate several other data sources and
+finally (4) explore the data for research purposes.&lt;/p&gt;
+&lt;p&gt;Here I describe the Python-based approach I used. Starting with &lt;em&gt;csvkit&lt;/em&gt;
+to recreate the original legacy database for direct examination and
+manipulation, malformed data was transformed by a pipeline of
+rule-driven sanitisation before being subjected to validation via
+another pipeline of rules. I describe how &lt;em&gt;pycap&lt;/em&gt; and &lt;em&gt;REDCap&lt;/em&gt; were used
+to make an easily updatable and user- friendly database, and how this
+was leveraged in merging other datasets. I show how this data was
+integrated with associated and complex datasets (analytical and genomic)
+and explored in a graph database using &lt;em&gt;py4neo&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, I reflect on the gaps in Python’s life science and biomedical
+analytical offerings, including why Excel spreadsheets are here to stay,
+if our current IDEs are good enough and whether developers are the enemy
+of the good enough.&lt;/p&gt;
+</summary></entry><entry><title>Simulating Quantum Physics in Less Than 20 Lines of Pure Python</title><link href="https://pyvideo.org/pydata-london-2015/simulating-quantum-physics-in-less-than-20-lines-of-pure-python.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Katie Barr</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/simulating-quantum-physics-in-less-than-20-lines-of-pure-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The quantum walk in Python; an explaination of the model and the
+motivations for studying it as well as the process of simulation and
+data collection finishing with why the quantum walk is of interest to
+quantum computer scientists.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Quantum physics is notoriously tricky, but if you have some coding
+ability, exploring quantum systems is extremely easy. The discrete time
+quantum walk is the quantum analogue of the classical random walk, and
+was developed in the hope of it having algorithmic applications. In
+fact, the model is universal for quantum computation, and famous
+algorithms such as Grovers' (quantum search) can be described in terms
+of it.&lt;/p&gt;
+&lt;p&gt;I will describe the code for a quantum walk on a 2d lattice, and
+indicate how this code can be used and adapted to address open research
+questions in the field of quantum information.&lt;/p&gt;
+&lt;p&gt;As well as describing in detail how to simulate quantum walks, I will
+give a brief introduction in general to simulating quantum systems, the
+sorts of things you look for if investigating them numerically, and the
+suitability in general of using simulation as a tool for researching
+physics. After making it look ridiculously easy, I will describe the
+challenges faced by people investigating quantum systems numerically,
+and other reasons why we need quantum computers.&lt;/p&gt;
+</summary></entry><entry><title>Smart Cars of Tomorrow: Real-Time Driving Patterns</title><link href="https://pyvideo.org/pydata-london-2015/smart-cars-of-tomorrow-real-time-driving-patterns.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Ronert Obst</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/smart-cars-of-tomorrow-real-time-driving-patterns.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In recent years, the adoption of electric cars has resulted in a
+desperate need from carmakers for accurate range prediction. In
+addition, fuel efficiency is of increasing concern due to today’s
+ever-rising fuel costs. In this talk, we will outline a machine
+learning framework for real-time data analysis to demonstrate how
+live data collected from cars can be used to provide valuable
+information for range prediction and smart navigation.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In recent years, the adoption of electric cars has resulted in a
+desperate need from carmakers for accurate range prediction. In
+addition, fuel efficiency is of increasing concern due to today’s
+ever-rising fuel costs. In this talk, we will outline a machine learning
+framework for real-time data analysis to demonstrate how live data
+collected from cars can be used to provide valuable information for
+range prediction and smart navigation.&lt;/p&gt;
+&lt;p&gt;For our solution, we use a Bluetooth dongle that connects to a standard
+OBD II car diagnostics data port. Together with a self-developed iOS app
+we can then stream OBD II data into our framework’s big data
+infrastructure for long-term storage, batch training processes, and
+subsequent real-time analysis. We will show how we used different
+open-source technologies (Spark. Spring XD, Python and others) to
+stream, store, and reason over this data in a scalable way.&lt;/p&gt;
+&lt;p&gt;In particular, we will focus on how we designed the machine learning
+framework to derive individual driver ‘fingerprints’ from variables such
+as speed, acceleration, driving times, and location, taken from
+historical data. These fingerprints are then used within the real-time
+prediction framework to determine final journey destination and driving
+behavior in real time during the journey. We will also look at how other
+public and free data sources such as traffic information, weather, and
+fuel station locations could be used to further improve the accuracy and
+scope of our models.&lt;/p&gt;
+&lt;p&gt;This talk is intended to demonstrate pioneering work in the space of big
+data and the connected car. We will take into consideration the insights
+we have gained from building this prototype, both into infrastructure
+and analysis, to give our view on what such real-time driving
+intelligence applications of tomorrow could look like.&lt;/p&gt;
+</summary></entry><entry><title>The Dark Art of Search Relevancy</title><link href="https://pyvideo.org/pydata-london-2015/the-dark-art-of-search-relevancy.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Eddie Bell</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/the-dark-art-of-search-relevancy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Building a search engine is a dark art that is made even more
+difficult by the nebulous ever-changing concept of search relevancy.
+When, and to what degree, is a result deemed to be relevant for a
+given search term? In this talk I will describe how we built a Lyst
+search relevancy data set using heuristics, crowd-sourcing and Xbox
+Live matchmaking.&lt;/p&gt;
+&lt;p&gt;Full details —&amp;nbsp;&lt;a class="reference external" href="http://london.pydata.org/schedule/presentation/1/"&gt;http://london.pydata.org/schedule/presentation/1/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Search is a hard area to work in. Techniques are not made public due to
+their value and little academic work is done in the area. Furthermore,
+Google has made the exceptional an everyday experience so the bar for
+success is very high from the outset.&lt;/p&gt;
+&lt;p&gt;Search data sets are also hard to create due to the nebulous
+ever-changing concept of search relevancy. When, and to what degree, is
+a result deemed to be relevant for a given search term? The
+ElasticSearch documentation states it well: &lt;em&gt;&amp;quot; Search relevancy tuning
+is a rabbit hole that you can easily fall into and never emerge&amp;quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this presentation I'll give a introduction to building a search
+relevancy data set with python using crowd-sourcing and the Trueskill
+algorithm from Microsoft. Trueskill is used for matchmaking on XBox Live
+and it allows us to transform moderated pairwise comparisons into
+rankings. The rankings can then be used to learn what results best match
+a given search phrase. I'll briefly cover how we're modeling the
+moderated rankings at Lyst using deep learning.&lt;/p&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h4&gt;References&lt;/h4&gt;
+&lt;p&gt;M. Hadi Kiapour, Kota Yamaguchi, Alexander C. Berg, Tamara L. Berg.
+Hipster Wars: Discovering Elements of Fashion Styles (2014).&lt;/p&gt;
+&lt;p&gt;Yelong Shen, Xiaodong He, Jianfeng Gao, Li Deng, and Grégoire Mesnil.
+Learning semantic representations using convolutional neural networks
+for web search (2014).&lt;/p&gt;
+&lt;p&gt;Ralf Herbrich, Tom Minka, and Thore Graepel. TrueSkill(TM): A Bayesian
+Skill Rating System (2007).&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Using the SALib Library for Conducting Sensitivity Analyses of Models</title><link href="https://pyvideo.org/pydata-london-2015/using-the-salib-library-for-conducting-sensitivity-analyses-of-models.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Will Usher</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/using-the-salib-library-for-conducting-sensitivity-analyses-of-models.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Sensitivity analysis should be a central part of the model
+development process, yet software to actually perform the
+best-practice approaches are seldom available. In this talk, there is
+justification for the importance of sensitivity analysis,
+step-by-step examples of how to use SALib and an outline of the
+advantages.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/jdherman/SALib"&gt;SALib&lt;/a&gt; is an open source Python
+library for conducting sensitivity analyses released under an MIT
+license.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll first justify the importance of sensitivity analysis,
+give an step-by-step example of how to use the library, and outline the
+advantages of using SALib.&lt;/p&gt;
+&lt;p&gt;We've packaged variance-based, elementary effects, and derivative based
+approaches such as:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sobol Sensitivity Analysis&lt;/li&gt;
+&lt;li&gt;Method of Morris, including groups and optimal trajectories&lt;/li&gt;
+&lt;li&gt;Fourier Amplitude Sensitivity Test (FAST)&lt;/li&gt;
+&lt;li&gt;Delta Moment-Independent Measure&lt;/li&gt;
+&lt;li&gt;Derivative-based Global Sensitivity Measure (DGSM)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The library is slowly gaining acceptance across academia as a package of
+powerful tools from the literature to help identify key model inputs.&lt;/p&gt;
+&lt;p&gt;Sensitivity analysis should be a central part of the model development
+process, yet software to actually perform the best-practice approaches
+are seldom available. As such, sensitivity analyses are often tagged on
+at the last minute to a piece of work, and seldom are the most effective
+techniques used. SALib solves all of this, by providing a simple API,
+accessible from the command prompt or within python, to a range of
+methods for coupled sample generation &amp;amp; analysis.&lt;/p&gt;
+&lt;p&gt;The library has been written so as to be independent from the model
+being analysed by the library. It is written in a functional style, to
+maintain clarity, using numpy almost throughout. While none of the
+techniques are particularly computationally intensive, this is one of
+the only open-source libraries which collect these techniques into one
+cohesive library. As different approaches are applicable for different
+kinds of models and types of data, the harmonised API allows users to
+switch between the different techniques with ease.&lt;/p&gt;
+&lt;p&gt;Documentation is currently at a very early stage, with just a basic and
+advanced readme available. However, there are use examples for each of
+the methods and test functions to see the library in action.&lt;/p&gt;
+&lt;p&gt;Testing coverage is relatively good, particularly for the Morris Method.&lt;/p&gt;
+&lt;p&gt;We've recently released version v0.5 with an MIT license.&lt;/p&gt;
+&lt;p&gt;www.github.com/jdherman/SALib&lt;/p&gt;
+</summary></entry><entry><title>Veni, Vidi, Voronoi: Attacking Viruses using spherical Voronoi diagrams in Python</title><link href="https://pyvideo.org/pydata-london-2015/veni-vidi-voronoi-attacking-viruses-using-spherical-voronoi-diagrams-in-python.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Tyler Reddy</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/veni-vidi-voronoi-attacking-viruses-using-spherical-voronoi-diagrams-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Roughly spherical objects are abundant and affect human lives every
+day--whether dealing with the surface of the earth or microscopic
+viruses that cause severe illness in humans. Spherical Voronoi
+diagrams can be used to gain insight into such spherical objects and
+the algorithms used have only recently been proposed. I will discuss
+an open source Python implementation and remaining challenges.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A Voronoi diagram for a set of input data points (called generators)
+defines cells (polygons) around each generator such that any point
+within a given cell is closer to its generator than to any other
+generator in the system. On a sphere for example, this means you could
+rapidly identify the closest airport to a search and rescue region on
+the surface of the earth. I've produced an open source Python
+implementation of the Voronoi diagram on the surface of a sphere. The
+(&lt;a class="reference external" href="https://github.com/tylerjereddy/py_sphere_Voronoi"&gt;https://github.com/tylerjereddy/py_sphere_Voronoi&lt;/a&gt; &amp;quot;repository&amp;quot;) and
+(&lt;a class="reference external" href="http://py-sphere-voronoi.readthedocs.org/en/latest/voronoi_utility.html"&gt;http://py-sphere-voronoi.readthedocs.org/en/latest/voronoi_utility.html&lt;/a&gt;
+&amp;quot;documentation&amp;quot;) are both available online. The code is capable of
+producing spherical Voronoi diagrams for a wide range of input test
+cases as verified by the unit tests, and further exposes the individual
+surface areas and coordinates of each Voronoi cell on the surface. I
+will discuss the procedure (algorithm) I've used to generate the
+spherical Voronoi diagram and highlight limitations / challenges moving
+forward along with some example applications (i.e., viruses).&lt;/p&gt;
+&lt;p&gt;The remaining challenges, for which computational geometry and
+engineering expertise would be most welcome, will be discussed in some
+detail. For example, although the % surface area reconstitution when
+summing up the areas of the Voronoi cells is generally &amp;gt; 95 % of the
+theoretical surface area of the sphere, there are occasional (albeit
+rare) cases where a vertex is excluded from a Voronoi cell, leaving
+'blank' spaces in the diagrams. There is also a general susceptibility
+to numerical / floating point instability in some of the calculations,
+presumably due to the substantial number of trigonometric operations.
+Again, input from experienced engineers and mathematicians would be most
+helpful in improving this open source effort.&lt;/p&gt;
+</summary></entry><entry><title>Accelerating Scientific Code with Numba</title><link href="https://pyvideo.org/pydata-london-2015/accelerating-scientific-code-with-numba.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Graham Markall</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/accelerating-scientific-code-with-numba.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Numba is a just-in-time Python compiler that can be used to speed up
+a wide range of scientific and other numerical applications. This
+tutorial is intended to provide an introduction to using Numba, and
+ways of understanding of the performance of Numba-compiled code.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This tutorial will provide an overview of
+&lt;a class="reference external" href="http://numba.pydata.org/"&gt;Numba&lt;/a&gt;, a just-in-time Python compiler
+focused on numerical computing. Originally aimed at computations using
+Numpy arrays, it has been expanded to work with other Python types and
+can speed up computations that require more than just fast linear
+algebra operations. Numba targets both CPUs and CUDA GPUs by generating
+native code using the LLVM compiler infrastructure.&lt;/p&gt;
+&lt;p&gt;As there are different components of Numba that can be applied in
+different circumstances, this introduction aims to span the breadth of
+use cases rather than focusing on a single area in depth. This is in
+order to enable the selection of appropriate portions of code to use
+with Numba, and the correct selection of Numba's facilities in each
+case.&lt;/p&gt;
+&lt;p&gt;Areas that will be covered include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An overview of the type system, with a view to understanding and
+overcoming typing issues,&lt;/li&gt;
+&lt;li&gt;Compilation of Python functions using the &lt;tt class="docutils literal"&gt;&amp;#64;jit&lt;/tt&gt; decorator,&lt;/li&gt;
+&lt;li&gt;Creation of Numpy ufuncs in Python using the &lt;tt class="docutils literal"&gt;&amp;#64;vectorize&lt;/tt&gt;
+decorator,&lt;/li&gt;
+&lt;li&gt;Understanding and measuring the performance of Numba-compiled code,&lt;/li&gt;
+&lt;li&gt;Debugging facilities in Numba.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This tutorial is intended for an audience of programmers and data
+scientists who have an interest in speeding up numerical routines, and
+people with a general interest in high-performance Python. In order to
+get started quickly, it is recommended that attendees install the
+&lt;a class="reference external" href="https://store.continuum.io/cshop/anaconda/"&gt;Anaconda Python
+distribution&lt;/a&gt; or
+&lt;a class="reference external" href="http://conda.pydata.org/miniconda.html"&gt;Miniconda&lt;/a&gt;, as this provides
+a robust mechanism for installing Numba on Linux, Mac OS X and Windows.&lt;/p&gt;
+</summary><category term="tutorial"></category></entry><entry><title>Analysis and transformation of geospatial data using Python</title><link href="https://pyvideo.org/pydata-london-2015/analysis-and-transformation-of-geospatial-data-using-python.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Demeter Sztanko</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/analysis-and-transformation-of-geospatial-data-using-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A tutorial covering some general concepts of geospatial data, main
+formats in which it is distributed and some common places where this
+data can be acquired. We will also learn how to read, process and
+visualise this data using Python and QGIS. This talk will cover some
+typical problems one can experience when working with geospatial
+data.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Installing tools and packages (ansible scripts/cloud machine will be
+provided)&lt;/li&gt;
+&lt;li&gt;Basic concepts&lt;/li&gt;
+&lt;li&gt;geometries. Fixing invalid geometries.&lt;/li&gt;
+&lt;li&gt;basic operations (union, intersection, difference)&lt;/li&gt;
+&lt;li&gt;advanced operations (buffer, convex hull, skeleton, voronoi)&lt;/li&gt;
+&lt;li&gt;Formats and tools&lt;/li&gt;
+&lt;li&gt;Shapefile&lt;/li&gt;
+&lt;li&gt;GeoJSON&lt;/li&gt;
+&lt;li&gt;TopoJSON&lt;/li&gt;
+&lt;li&gt;GeoTIFF&lt;/li&gt;
+&lt;li&gt;OSM data&lt;/li&gt;
+&lt;li&gt;Projections&lt;/li&gt;
+&lt;li&gt;common projections and their use&lt;/li&gt;
+&lt;li&gt;how to chose the projection&lt;/li&gt;
+&lt;li&gt;reprojecting datasets&lt;/li&gt;
+&lt;li&gt;Using geospatial index&lt;/li&gt;
+&lt;li&gt;Open Geospatial datasets&lt;/li&gt;
+&lt;li&gt;UK specific datasets&lt;/li&gt;
+&lt;li&gt;OpenStreetMap&lt;/li&gt;
+&lt;li&gt;elevation data&lt;/li&gt;
+&lt;li&gt;Geocoding&lt;/li&gt;
+&lt;li&gt;Storing geospatial data in databases (PostgreSQL, SpatiaLite,
+MongoDB, ElasticSearch)&lt;/li&gt;
+&lt;/ol&gt;
+</summary><category term="tutorial"></category></entry><entry><title>First Steps with Spark</title><link href="https://pyvideo.org/pydata-london-2015/first-steps-with-spark.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Maria Mestre</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/first-steps-with-spark.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Spark is a distributed computing tool that offers many advantages
+over more established Hadoop frameworks. Apart from its improved
+memory usage and flexibility, it provides a consistent framework to
+do everything from ad-hoc big data analysis to the construction of
+a data processing pipeline in production.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The data science team at Skimlinks has been using Spark for over a
+year. We will share some of our experience of how to do large-scale
+data analysis using Spark stand-alone, going from its basic
+functionality to more advanced features.&lt;/p&gt;
+&lt;p&gt;We will first give an introduction to Spark, explaining how
+computations are distributed across the cluster using resilient
+distributed datasets (RDDs). A high-level understanding of how a
+workload is split into stages and tasks is important to be able to
+diagnose potential problems. After showing how to get started on a
+cluster of EC2 instances, we will go through a complicated part of
+using Spark: how to set its configuration parameters.&lt;/p&gt;
+&lt;p&gt;During the first half of the talk, we will focus on Spark core
+functionality, going through some of the most common problems
+encountered during basic computations. Using an example from
+impression data, we will do large-scale text processing using
+popular ML Python libraries.&lt;/p&gt;
+&lt;p&gt;In the latter half of the talk, we will focus towards using Apache
+Spark in practice by giving an overview of building a large data
+processing pipeline that ingests and summarises terabytes of data
+on a daily basis. Many non-technical departments such as Business
+Intelligence and Marketing are familiar with Python and SQL. We
+will demonstrate how Spark SQL and Dataframes can be used to query
+over terabytes of data on the fly.&lt;/p&gt;
+</summary></entry><entry><title>Getting started with Bokeh / Let's build an interactive data visualization for the web..in Python!</title><link href="https://pyvideo.org/pydata-london-2015/getting-started-with-bokeh-lets-build-an-interactive-data-visualization-for-the-webin-python.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Sarah Bird</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/getting-started-with-bokeh-lets-build-an-interactive-data-visualization-for-the-webin-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The Bokeh data visualization library allows you to build interactive
+visualizations for the web in python. This training gives a quick
+introduction to Bokeh's unique features. We'll do exercixes building
+up a variety of visualizations and finish discussing topics and
+questions from participants related to their own datasets &amp;amp; needs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The &lt;a class="reference external" href="http://bokeh.pydata.org/"&gt;Bokeh data visualization library&lt;/a&gt;
+allows you to build interactive visualizations for the web in python. It
+has a range of capabilities from quick &amp;quot;one-line&amp;quot; charts to streaming
+datasets to integrating with your existing plot libraries such as
+matplotlib or ggplot.&lt;/p&gt;
+&lt;p&gt;This training gives a quick hands-on introduction to Bokeh's core
+features. We'll do exercises building up a variety of visualizations and
+finish up discussing topics and questions from participants related to
+their own datasets &amp;amp; needs.&lt;/p&gt;
+&lt;p&gt;This is the planned outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;(20 minutes) Bokeh feature walk-through. The relationship between
+bokeh, bokehjs and bokeh-server. The various API levels of bokeh
+(models, plotting, charts). And, examples of a variety of
+visualizations.&lt;/li&gt;
+&lt;li&gt;(20 minutes): Exercises - 1 - The charts &amp;amp; plotting interface. Get
+quickly plotting in an ipython notebook. Different types of data
+accepted, and how to customize a plot.&lt;/li&gt;
+&lt;li&gt;(10 minutes): Tips for navigating the Bokeh docs and examples as
+you're getting up to speed.&lt;/li&gt;
+&lt;li&gt;(20 minutes): Exercises - 2 - (a) The models interface. Build a
+custom plot from the ground up using the Models API. (b) Quick, yet
+custom, using the charts interface and models together.&lt;/li&gt;
+&lt;li&gt;(10 minutes): Sharing your plots. Overview of the different ways to
+share your plots with your colleagues and the world.&lt;/li&gt;
+&lt;li&gt;(20 minutes): Exercises - 3 - Add custom interactivity - Customize
+your hover and selections. Implement linked selection, brushing, and
+panning.&lt;/li&gt;
+&lt;li&gt;(20 minutes): open space for questions and interactively solving
+Bokeh problems on your real-life problems &amp;amp; data as time permits.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Getting Started with Cloud Foundry for Data Science</title><link href="https://pyvideo.org/pydata-london-2015/getting-started-with-cloud-foundry-for-data-science.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Ian Huston</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/getting-started-with-cloud-foundry-for-data-science.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Cloud Foundry is an open source Platform-as-a-Service that can be
+used to easily deliver data driven applications. In this tutorial we
+will learn how to push an application to a real CF instance, how to
+connect to managed data services like Redis and PostgreSQL and how to
+deploy PyData and R projects using community buildpacks.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://cloudfoundry.org/"&gt;Cloud Foundry&lt;/a&gt; is an open source
+Platform-as-a- Service that can be used to easily deliver data driven
+applications. In this tutorial we will learn how to push an application
+to a real CF instance, how to connect to managed data services like
+Redis and PostgreSQL and how to deploy PyData and R projects using
+community buildpacks.&lt;/p&gt;
+&lt;p&gt;By the end of the tutorial participants will know how to _ deploy your
+first app using Cloud Foundry, _ connect to databases and other data
+services, _ use PyData packages with a Heroku-style buildpack, _ find
+public and private Cloud Foundry installation options.&lt;/p&gt;
+&lt;p&gt;Participants will need to register on a public Cloud Foundry instance to
+follow along with the tutorial. Detailed instructions will be provided
+for &lt;a class="reference external" href="http://run.pivotal.io/"&gt;Pivotal Web Services&lt;/a&gt; which offers a 60
+day free trial. Other options include IBM Bluemix and HP Helion
+Development Platform.&lt;/p&gt;
+&lt;p&gt;Participants should be comfortable on the command line and download and
+install the &lt;a class="reference external" href="http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html"&gt;CF CLI
+tools&lt;/a&gt;
+before the tutorial.&lt;/p&gt;
+</summary><category term="tutorial"></category></entry><entry><title>How “good” is your model, and how can you make it better?</title><link href="https://pyvideo.org/pydata-london-2015/how-good-is-your-model-and-how-can-you-make-it-better.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Chih-Chun Chen</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/how-good-is-your-model-and-how-can-you-make-it-better.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This hands-on tutorial will show you how to use scikit-learn’s model
+evaluation functions to evaluate different models in terms of
+accuracy and generalisability, and search for optimal parameter
+configurations.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The objective of this tutorial is to give participants the skills
+required to validate, evaluate and fine-tune models using scikit-learn’s
+evaluation metrics and parameter search capabilities. It will combine
+both the theoretical rationale behind these methods and their code
+implementation.&lt;/p&gt;
+&lt;p&gt;The session will be structured as follows (rough timings in
+parentheses):&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Explanation of over-fitting and the bias-variance trade-off, followed
+by a brief conceptual overview of cross-validation, bootstrapping,
+and ensemble methods, in particular with respect to bias and
+variance. Pointers to the corresponding scikit-learn functions will
+also be given. (20 minutes)&lt;/li&gt;
+&lt;li&gt;Implementation of cross-validation and grid-search method for
+parameter tuning, using KNN classification as an illustrative
+example. Participants will train two KNN neighbours with different
+numbers of neighbours on preprocessed data (provided). They will then
+be guided through cross-validation, plotting of results, and
+grid-search to find the best neighbour and weight configuration(s).
+(30 minutes)&lt;/li&gt;
+&lt;li&gt;Comparison of different classification models using cross-validation.
+Participants will implement a logistic regression, linear and
+non-linear support vector machine (SVM) or neural network model and
+apply the same cross-validation and grid search method as in the
+guided KNN example. Participants will then compare their plots,
+evaluate their results and discuss which model they might choose for
+different objectives, trading off generalisability, accuracy, speed
+and randomness. (70 minutes)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We assume participants will be familiar with numpy, matplotlib, and at
+least the intuition behind some of the main classification algorithms.
+Before the tutorial, participants with github accounts should fork from
+&lt;a class="reference external" href="https://github.com/cambridgecoding/pydata-tutorial"&gt;https://github.com/cambridgecoding/pydata-tutorial&lt;/a&gt; or download the files
+and iPython notebook so they can participate in the hands on activities.
+Required libraries: numpy, scikit-learn, matplotlib, pandas, scipy,
+multilayer_perceptron (provided)&lt;/p&gt;
+</summary><category term="tutorial"></category></entry><entry><title>Open Source Tools for Financial Time Series Analysis and Visualization</title><link href="https://pyvideo.org/pydata-london-2015/open-source-tools-for-financial-time-series-analysis-and-visualization.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Yves Hilpisch</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/open-source-tools-for-financial-time-series-analysis-and-visualization.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The tutorial covers standard Python and Open Source tools (pandas,
+matplotlib, seaborn, R/ggplot, etc.) and recent innovations
+(TsTables, bcolz, blaze, plot.ly) for financial time series analysis
+and visualization. In addition, approaches are illustrated for high
+performance I/O of high frequency financial data. It briefly sheds
+light on the visualization of real-time/streaming financial data.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="https://github.com/yhilpisch/pydlon15"&gt;https://github.com/yhilpisch/pydlon15&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Probabilistic programming in sports analytics</title><link href="https://pyvideo.org/pydata-london-2015/probabilistic-programming-in-sports-analytics.html" rel="alternate"></link><published>2015-06-19T00:00:00+00:00</published><updated>2015-06-19T00:00:00+00:00</updated><author><name>Peadar Coyle</name></author><id>tag:pyvideo.org,2015-06-19:pydata-london-2015/probabilistic-programming-in-sports-analytics.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A discussion and tutorial of how to use pymc to predict rugby
+results. Also will include an introduction to Bayesian statistics.&lt;/p&gt;
+&lt;p&gt;Probabilistic Programming and Bayesian Methods are called by some a
+new paradigm. There are numerous interesting applications such as to
+Quantitative Finance.I'll discuss what probabilistic programming is,
+why should you care and how to use PyMC and PyMC3 from Python to
+implement these methods. I'll be applying these methods to studying
+the problem of 'rugby sports analytics' particularly how to model the
+winning team in the recent Six Nations in Rugby. I will discuss the
+framework and how I was able to quickly and easily produce an
+innovative and powerful model as a non-expert.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using Pymc and the pydata stack to attack a problem in rugby analytics.
+Similar to my talk submitted to Berlin. Probabilistic Programming and
+Bayesian Methods are called by some a new paradigm. There are numerous
+interesting applications such as to Quantitative Finance. I'll discuss
+what probabilistic programming is, why should you care and how to use
+PyMC and PyMC3 from Python to implement these methods. I'll be applying
+these methods to studying the problem of 'rugby sports analytics'
+particularly how to model the winning team in the recent Six Nations in
+Rugby. I will discuss the framework and how I was able to quickly and
+easily produce an innovative and powerful model as a non- expert. I will
+go into more detail than normal, giving a few examples of Bayesian
+Programming, and a brief introduction to statistics and statistical
+thinking. My technical case study will be the Rugby Analytics, Football
+Analytics and FinTech friendly Quantitative Finance examples. Technology
+used: PyMC, PyMC3, Pandas, Pydata stack. I recommend Anaconda installed
+on your laptops to get everyone off the ground easily. Link to the
+Tutorial is here &lt;a class="reference external" href="https://github.com/springcoil/TutorialPyMCRugby"&gt;PyMC
+Tutorial&lt;/a&gt; I have the
+following dependencies for my tutorial. pip install patsy pandas pip
+install pymc - PyMC2 pip install git+https://github.com/pymc-devs/pymc3
+- PyMC3 pip install seaborn&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_anne-matthies.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-25T00:00:00+00:00</updated><entry><title>Keeping the grip on decoupled code using CLIs</title><link href="https://pyvideo.org/pycon-de-2017/keeping-the-grip-on-decoupled-code-using-clis.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Anne Matthies</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/keeping-the-grip-on-decoupled-code-using-clis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Anne Matthies&lt;/strong&gt; (&amp;#64;babeltron)&lt;/p&gt;
+&lt;p&gt;Anne Matthies has been coding data stuff professionally since 1996. She switched to Python 2 in 2000, to Python 3 in 2015. Currently, she’s working at Babbel, Berlin, responsible for building and operating the data platform – and developing the next generation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So you’ve decoupled your code monolith into all those micro chunks. When someone asks &amp;quot;How can I…&amp;quot; you want to answer: &amp;quot;That’s easy! We’ve built that.&amp;quot; Actually, you’ve built all parts needed for that. Who plugs them together? And how?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Keeping the grip on decoupled code using CLIs&lt;/p&gt;
+&lt;p&gt;So you’ve decoupled your monolith spaghetti code into micro chunks. You’ve switched to infrastructure as code, and you’re confident that it scales horizontally. Your data pipelines are pretty resilient, your CI pipeline runs tests on every single git push.&lt;/p&gt;
+&lt;p&gt;And then, you get a new team member. Or your CTO wants to plot data of his brandnew sandbox project that isn’t integrated into your pipelines. Or someone just asks &amp;quot;How can I…&amp;quot; and you want to answer: &amp;quot;That’s easy! We’ve built that… – Well, actually, we’ve built all parts needed for that.&amp;quot; Who plugs them together? And how?&lt;/p&gt;
+&lt;p&gt;In my talk, I’d like to show how lightweight CLIs can be Ariadne Threads through the labyrinth of micro components. How at Babbel we use conda, setuptools entrypoints and simple CLI scripts to keep the grip on our data platform code chunks&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="pydata"></category><category term="devops"></category><category term="cli"></category><category term="python"></category></entry><entry><title>floto - A Task Orchestration Package based on SWF and boto3</title><link href="https://pyvideo.org/pydata-warsaw-group/floto-a-task-orchestration-package-based-on-swf-and-boto3.html" rel="alternate"></link><published>2016-03-15T00:00:00+00:00</published><updated>2016-03-15T00:00:00+00:00</updated><author><name>Anne Matthies</name></author><id>tag:pyvideo.org,2016-03-15:pydata-warsaw-group/floto-a-task-orchestration-package-based-on-swf-and-boto3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;#3 PyData Warsaw&lt;/p&gt;
+&lt;p&gt;Anne Matthies is the Lead Data Architect at Babbel, Berlin. She’s responsible for building and operating the data platform – and developing the next generation.&lt;/p&gt;
+</summary></entry><entry><title>Zero-Administration Data Pipelines using AWS Simple Workflow</title><link href="https://pyvideo.org/pydata-berlin-2016/zero-administration-data-pipelines-using-aws-simple-workflow.html" rel="alternate"></link><published>2016-06-01T00:00:00+00:00</published><updated>2016-06-01T00:00:00+00:00</updated><author><name>Anne Matthies</name></author><id>tag:pyvideo.org,2016-06-01:pydata-berlin-2016/zero-administration-data-pipelines-using-aws-simple-workflow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Berlin 2016&lt;/p&gt;
+&lt;p&gt;Floto is an open source tool to programmatically author, schedule and run scalable data pipelines using AWS Simple Workflow - without the need to maintain a master server or queue or the state of workers.&lt;/p&gt;
+&lt;p&gt;There are quite a few great tools for building effective and robust distributed data processing pipelines, especially Luigi from Spotify and Airflow from AirBnB.&lt;/p&gt;
+&lt;p&gt;For scaling out, they all require a queue or master server, though. And those need maintenance.&lt;/p&gt;
+&lt;p&gt;We wrote floto (&lt;a class="reference external" href="https://github.com/babbel/floto"&gt;https://github.com/babbel/floto&lt;/a&gt;), an open source tool to programmatically author, schedule and run scalable data pipelines on AWS - without the maintenance overhead.&lt;/p&gt;
+&lt;p&gt;It uses AWS Simple Workflow, but I'll talk most about some general topics regarding data workflow orchestration:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;separation of concerns&lt;/li&gt;
+&lt;li&gt;managing complexity through dependency reduction&lt;/li&gt;
+&lt;li&gt;idempotent (or re-runnable) jobs&lt;/li&gt;
+&lt;li&gt;transactional jobs (either completely fail, or completely succeed)&lt;/li&gt;
+&lt;li&gt;failures and reruns&lt;/li&gt;
+&lt;li&gt;evolving changes&lt;/li&gt;
+&lt;li&gt;organizational scaling&lt;/li&gt;
+&lt;li&gt;heterogenous systems&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Floto"></category></entry></feed>

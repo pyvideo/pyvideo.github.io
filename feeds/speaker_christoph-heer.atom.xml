@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_christoph-heer.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-10-10T00:00:00+00:00</updated><entry><title>Is it me, or the GIL?</title><link href="https://pyvideo.org/pycon-de-2019/is-it-me-or-the-gil.html" rel="alternate"></link><published>2019-10-10T00:00:00+00:00</published><updated>2019-10-10T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2019-10-10:pycon-de-2019/is-it-me-or-the-gil.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Christoph Heer&lt;/p&gt;
+&lt;p&gt;Track:PyConDE
+People refer Python's Global Interpreter Lock as main bottleneck for their performance critical applications. But how can you test if your application really suffer from the GIL?&lt;/p&gt;
+&lt;p&gt;Recorded at the PyConDE &amp;amp; PyData Berlin 2019 conference.
+&lt;a class="reference external" href="https://pycon.de"&gt;https://pycon.de&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More details at the conference page: &lt;a class="reference external" href="https://de.pycon.org/program/BHDEAR"&gt;https://de.pycon.org/program/BHDEAR&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pydataberlin"&gt;https://twitter.com/pydataberlin&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pyconde"&gt;https://twitter.com/pyconde&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Is it me, or the GIL?</title><link href="https://pyvideo.org/europython-2019/is-it-me-or-the-gil.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/is-it-me-or-the-gil.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python's Global Interpreter Lock is a friend and rival at the same time.
+We, as developers, can focus on the design and implementation of
+applications without the hassle of memory management. On the other side,
+we complain about the GIL as the limiting factor of performance
+sensitive applications. Therefore, it is common to refactor parts of
+systems when the system doesn't perform or scale enough anymore. The
+refactoring often includes the switch of the used concurrency paradigms
+like replacing multithreading with multiprocessing or asyncio. Another
+option is moving logic of CPU-bound workload into C extensions or a full
+rewrite in a &amp;quot;GIL-free&amp;quot; language. But how do you know that the GIL is
+the actual performance bottleneck?&lt;/p&gt;
+&lt;p&gt;While scaling and developing performance sensitive components in Python,
+my colleagues and I often also assumed the GIL as cause of our
+performance problems because it is a common and simple answer for this
+usually complex and varied problems. Instead of starting a rewrite or
+major refactoring, we took a step back and tried to prove our
+assumption. With the result that analyzing the impact of the GIL
+contention on the overall performance is a very interesting problem
+without common practices or easy usable set of tools that support Python
+developers. Within this talk, I will share and explain the methods and
+tools, which we use to analyze the relevance of the GIL on our
+application performance and how it helped us to stay focused on the
+actual problematic areas of our applications that required improvements
+to meet our performance goals.&lt;/p&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scaling"></category><category term="Tooling"></category></entry><entry><title>Observe all your applications</title><link href="https://pyvideo.org/pycon-de-2018/observe-all-your-applications.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/observe-all-your-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You just deployed your new version of an application or micro-service;
+how do you know everything works as expected? You run your comprehensive
+test suite to verify functional correctness for known scenarios and
+performance tests before deploying, but does your application really
+work at the moment or is it just responding with error messages to all
+incoming requests?&lt;/p&gt;
+&lt;p&gt;I’m part of the team that runs a huge infrastructure for the SAP HANA
+development. This infrastructure is vital for nearly all development &amp;amp;
+testing activities of SAP HANA. As this infrastructure is powered by
+multiple in-house developed applications, we immediately want to know if
+an application starts to fail and we need to be able to quickly diagnose
+what caused the failure.&lt;/p&gt;
+&lt;p&gt;This talk will give you an overview how we monitor our full stack from
+the 2000 physical machines up to the 10,000 parallel running Python
+application processes, micro-service instances and batch processing
+jobs. It includes a review about the used tools, bad and good examples
+of instrumentation in Python code, the resulting visualisation and an
+outlook on upcoming improvements.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="Infrastructure"></category><category term="Networks"></category><category term="Programming"></category><category term="Python"></category></entry><entry><title>Automated testing with 400TB memory</title><link href="https://pyvideo.org/pycon-de-2017/automated-testing-with-400tb-memory.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/automated-testing-with-400tb-memory.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Christoph Heer&lt;/strong&gt; (&amp;#64;ChristophHeer)&lt;/p&gt;
+&lt;p&gt;I’m an Infrastructure Engineer in the team behind SAP’s huge test infrastructure for SAP HANA. In my spare time, I develop web applications with Django or playing around with new programming languages like Rust.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SAP operates a dedicated test infrastructure with more than 400TB main memory for its in-memory database SAP HANA. All custom implementations like improved scheduling, caching of artifacts and monitoring were implemented in our favorite programming language Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SAP operates a large test infrastructure to test its in-memory database SAP HANA. In 2010, we started with a single Jenkins master with ten nodes. But to keep our testing time acceptable for the growing number of developers we had to scale up, which led to multiple different scaling challenges. The current test infrastructure is powered by more than thousand physical servers and provides different services like continuous integration, code coverage and code linting for a huge C++ project. These services are essential for developing and shipping new SAP HANA versions.&lt;/p&gt;
+&lt;p&gt;This talk provides insights into how we scaled and improved our test infrastructure. All custom implementations like improved scheduling, expressive test configuration and caching of artifacts were implemented in our favorite programming language Python. With the flexibility and power of Python it has been easier to extend, optimize and adapt the infrastructure for new requirements like different CPU architectures and newer operating system versions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="python"></category><category term="use-case"></category><category term="devops"></category><category term="business"></category></entry><entry><title>How SAP is using Python to test its database SAP HANA</title><link href="https://pyvideo.org/europython-2017/how-sap-is-using-python-to-test-its-database-sap-hana.html" rel="alternate"></link><published>2017-07-11T00:00:00+00:00</published><updated>2017-07-11T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2017-07-11:europython-2017/how-sap-is-using-python-to-test-its-database-sap-hana.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SAP operates one of the largest test infrastructure to test its
+in-memory database SAP HANA. The infrastructure provides different
+services like continues integration, code coverage and code linting
+for a huge C++ project with Python test coding. These services are
+essential for the development teams and quality specialists. Without
+these services developing and shipping of new SAP HANA version
+wouldn’t be possible.&lt;/p&gt;
+&lt;p&gt;In 2010, we started with a single Jenkins master with ten nodes. But
+to keep our testing time acceptable for the growing number of
+developers we had to scale up and that led to multiple different
+scaling challenges. The current test infrastructure is powered by
+more than thousand physical servers. Scaling of the infrastructure
+was only possible with custom optimizations like improved scheduling,
+expressive test configuration and robust tooling implemented in our
+favorite language Python. With the flexibility and power of Python
+it’s possible for developers to implement complex test scenarios to
+verify features and mitigate regressions. On infrastructure side, it
+has been easier to extend, optimize and adapt the infrastructure for
+new requirements like different CPU architectures and newer Operating
+systems versions.&lt;/p&gt;
+&lt;p&gt;This talk provides insights and stories how we scaled and improved
+our test infrastructure and how new technologies like Linux
+Containers can improve automated testing and software quality
+assurance.&lt;/p&gt;
+</summary></entry></feed>

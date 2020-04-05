@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 31 Aug 2017 00:00:00 +0000</lastBuildDate><item><title>AMfe - Finite Elements for Structural Dynamics with Simplicity in Mind</title><link>https://pyvideo.org/euroscipy-2017/amfe-finite-elements-for-structural-dynamics-with-simplicity-in-mind.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Model order reduction is a research field of unbroken interest in structural dynamics. Especially in recent years, methods for reducing nonlinear systems have been developed allowing for more sophisticated simulations, which are highly demanded for parameter studies or optimization.
+The typical workflow for developing new reduction methods for &lt;em&gt;linear&lt;/em&gt; systems is to use commercial finite element code, export the assembled system matrices and then apply new methods in an environment of choice. However, this workflow is not feasible for &lt;em&gt;nonlinear&lt;/em&gt; systems, since modifications of the internal operations of the finite element program are indispensable.
+While commercial codes usually deny access to internal operations, common open source programs are often implemented in compiled languages making prototyping of methods a tedious, complicated task.
+In this talk, we introduce the finite element toolbox ”AMfe” which is written in Python. In contrast to other open source finite element codes it focuses on nonlinear structural problems, modularity and accessibility and is hence a perfect environment for prototyping of new reduction techniques. The talk gives an overview over what can be done with AMfe and how it is implemented with the help of Scipy, Numpy and the Numpy Fortran Extension f2py.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Meyer</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/amfe-finite-elements-for-structural-dynamics-with-simplicity-in-mind.html</guid><category>amfe</category></item><item><title>Arcas - Using Python to access open research literature</title><link>https://pyvideo.org/euroscipy-2017/arcas-using-python-to-access-open-research-literature.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Literature collection is a crucial process in all studies. It allows for the
+comparison in the historical context of the research as well as how the
+research is different or original from what others have done. Not several
+years ago, assembling sources was not an easy task. A major part of the
+problem was overcome with the creation of various scholarly databases and
+collections that live on the web.&lt;/p&gt;
+&lt;p&gt;The beauty of programming is that it allows repeated tasks such as harvesting
+the web for data to be automatised; that is how the web scraping or web data
+extraction was created. Similarly, enabling an automatised process to scrape
+through the scholarly databases would greatly benefit researchers.&lt;/p&gt;
+&lt;p&gt;This has inspired the development of an open source library called Arcas
+which allows for web scraping of academic articles using open access APIs.
+APIs such PLOS, IEEE, arXiv etc.&lt;/p&gt;
+&lt;p&gt;My proposal for EuroScipy 2017 is to introduce the library Arcas and how
+scraping online APIs was implemented in a sustainable and reproducible manner
+using Python.&lt;/p&gt;
+&lt;p&gt;Furthermore, to test the abilities of the library a data set was collected on
+a specific topic. I am also proposing to give a very brief analysis on this
+data set using both supervised and unsupervised machine learning
+algorithms.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nikoleta Evdokia Glynatsi</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/arcas-using-python-to-access-open-research-literature.html</guid><category>arcas</category></item><item><title>Autoscaling distributed compute with Dask, Kubernetes and AWS</title><link>https://pyvideo.org/euroscipy-2017/autoscaling-distributed-compute-with-dask-kubernetes-and-aws.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presenter: Jacob Tomlinson &amp;amp; Alex Hilson&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jacob Tomlinson</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/autoscaling-distributed-compute-with-dask-kubernetes-and-aws.html</guid></item><item><title>AutoWIG: Wrapping very large C++ libraries in Python automatically</title><link>https://pyvideo.org/euroscipy-2017/autowig-wrapping-very-large-c-libraries-in-python-automatically.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Most of Python and R scientific packages incorporate compiled scientific
+libraries to speed up the execution of the code needed for
+high-performance computing and to reuse legacy libraries.&lt;/p&gt;
+&lt;p&gt;Several semi-automatic solutions exist to wrap these compiled libraries:
+SWIG, Cython, Boost.Python.&lt;/p&gt;
+&lt;p&gt;However, the process of wrapping a large C++ library is cumbersome and
+time consuming, mainly due some high-level constructs that have no
+equivalent in Python (template, complex iterators, …).&lt;/p&gt;
+&lt;p&gt;In this talk, we introduce AutoWIG, a Python package that enables full
+C++ introspection using LLVM/Clang technologies.&lt;/p&gt;
+&lt;p&gt;Default strategies have been designed to transform any C++ construct
+into Python, using Boost.Python for instance.&lt;/p&gt;
+&lt;p&gt;Based on the introspection, a set of classes, methods, namespaces are
+retrieve and Boost.Python code is generated using the Mako template
+engine.&lt;/p&gt;
+&lt;p&gt;Our approach is automatic, extensible, and applies to complex C++
+libraries, composed of thousands of classes or incorporating modern
+meta-programming constructs.&lt;/p&gt;
+&lt;p&gt;For instance, we wrap with AutoWIG the full Clang library to obtain full
+introspection on C++ code such as template classes.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://autowig.readthedocs.io/en/latest/examples/index.html"&gt;Jupyter notebooks&lt;/a&gt; and &lt;a class="reference external" href="http://autowig.readthedocs.io/en/latest/install/docker.html"&gt;Docker images&lt;/a&gt; render AutoWIG easy to pick up
+and play with.&lt;/p&gt;
+&lt;p&gt;The source code is hosted on &lt;a class="reference external" href="http://github.com/StatisKit/AutoWIG"&gt;GitHub&lt;/a&gt; and binaries can be &lt;a class="reference external" href="http://autowig.readthedocs.io/en/latest/install/anaconda.html"&gt;installed&lt;/a&gt;
+with Conda.&lt;/p&gt;
+&lt;p&gt;Designed as a library, this package can easily be integrated with
+compiler toolchains, such as SCons, to ease the development process of
+teams.&lt;/p&gt;
+&lt;p&gt;A more detailed description of this package can be read on this
+&lt;a class="reference external" href="https://arxiv.org/abs/1705.11000"&gt;preprint&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;During the talk, we will describe AutoWIG main features and cover how
+you can generate Python bindings for your C++ libraries illustrating by
+various Jupyter notebooks.&lt;/p&gt;
+&lt;p&gt;In particular, we will explain how we have bootstrapped the wrapping of
+LLVM/Clang in Python, using libclang, to provide unavailable features
+such as introspection on C++ templates from Python.&lt;/p&gt;
+&lt;p&gt;An example of the wrapping of C++ &lt;a class="reference external" href="http://eigen.tuxfamily.org"&gt;linear algebra&lt;/a&gt; and &lt;a class="reference external" href="http://github.com/StatisKit"&gt;statistical&lt;/a&gt;
+libraries to benefit of state-of-the-art graphical model learning
+algorithms will be discussed in depth.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pierre Fernique</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/autowig-wrapping-very-large-c-libraries-in-python-automatically.html</guid></item><item><title>Bayesian Optimization - Can you do better than randomly guessing parameters?</title><link>https://pyvideo.org/euroscipy-2017/bayesian-optimization-can-you-do-better-than-randomly-guessing-parameters.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Choosing the right hyper-parameters for a deep neural network, configuring a fluid dynamics simulation or finding the recipe of the next prize winning beer have three things in common: each trial is expensive, you don't have an analytic function you can minimise with &lt;cite&gt;scipy.minimize&lt;/cite&gt; and you only get noisy observations from each trial.&lt;/p&gt;
+&lt;p&gt;Bayesian optimisation (BO) to the rescue! BO is a clever piece of math designed to solve exactly these kinds of problems. This talk is for people who have to find the best configuration for an &amp;quot;algorithm&amp;quot; that is expensive to run. Currently you might be performing a grid search or trying settings at random. Neither of these learn from observations they have already made. The fundamental idea of BO is to use previous observations to make a prediction about which settings to try next. By doing this you can reduce the number of evaluations needed to find the optimal settings.&lt;/p&gt;
+&lt;p&gt;In this talk you will learn about bayesian optimisation, how to implement the basics yourself, some tricks of the trade, and I will introduce you to the scikit-optimize library: a simple and efficient library to minimize (very) expensive and noisy black-box functions. It implements several methods for BO and attempts to be accessible and easy to use in many different contexts.&lt;/p&gt;
+&lt;p&gt;We will start by looking at some simple examples in depth, discuss when BO is the right tool and when not, and then use scikit-optimize to find the best hyper-parameters for a neural network.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tim Head</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/bayesian-optimization-can-you-do-better-than-randomly-guessing-parameters.html</guid><category>bayesian optimization</category></item><item><title>Deep Learning for Fraud Detection</title><link>https://pyvideo.org/euroscipy-2017/deep-learning-for-fraud-detection.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will discuss Machine Learning pipeline set up to prevent frauds in user authentications. The analysis relies on keystroke dynamics to learn from user's behavioural patterns and detect anomalous access. Results obtained on data of real users accessing their bank accounts will be presented, along with code examples in scikit-learn and Keras.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Valerio Maggio</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/deep-learning-for-fraud-detection.html</guid></item><item><title>fastmat - A simple Package for Fast Linear Transforms</title><link>https://pyvideo.org/euroscipy-2017/fastmat-a-simple-package-for-fast-linear-transforms.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Wouldn't it be cool if there was a way to play and interact with matrices in code like a mathematician can do on paper? What is so cool about that is, that instead of working with matrices as rectangles of numbers like a computer normally does, you can employ structural information while still exploiting most of the freedom you have when scribbling on a piece of paper. At first sight this seems hard to realize efficiently but as we show quite the contrary is the case. A structure driven approach for handling matrices implies great flexibility, speed and fun!&lt;/p&gt;
+&lt;p&gt;We will open the presentation with the demonstration of a motivational application from ultrasonic non-destructive testing -- namely the Synthetic Aperture Focusing Technique (SAFT) -- which employs large sparse and strongly structured matrices for focussing spatial irregularities in an observed medium-under-test. We will carve out why thinking about structured representations is reasonable and how scientific computing may benefit from applying additional abstraction steps of a matrix' representation when implementing various kinds of algorithms.&lt;/p&gt;
+&lt;p&gt;Following, we introduce our open-source package 'fastmat' and show how it can be applied to implement real-world problems like the aforementioned SAFT. Due to its sleek architecture we demonstrate how highly intuitive code can be produced with strong proximity to the mathematical formulation of the problem, yet still allowing exploitation of matrix structure in efficient storage and computation. We will demonstrate that the architecture retains the high performance benefits in terms of computation time and memory complexity even for meta operations involving multiple matrices like linear combinations, block structures or matrix-matrix-vector products.&lt;/p&gt;
+&lt;p&gt;Closing the presentation we will compare the performance of 'fastmat'-based matrix operations against their straightforward dense and unstructured implementations. Further, we will wrap up the opening motivational application in terms of performance and show pros and cons of working with 'fastmat' with respect to implementation effort, flexibility and performance.&lt;/p&gt;
+&lt;p&gt;To fully profit from this talk attendees should bring a basic understanding of Python and Numpy. A rough understanding about the general concepts of linear algebra might turn out to be helpful. The 30-minute presentation will be given in english language by Sebastian Semper and Christoph Wagner, both research assistants from the Technische Universität Ilmenau. The presentation slides (also in english) will be made available online shortly after the session. We are happy to answer short questions during and are open for discussions subsequent to the talk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sebastian Semper</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/fastmat-a-simple-package-for-fast-linear-transforms.html</guid><category>fastmat</category></item><item><title>FluRS - A Library for Streaming Recommendation Algorithms</title><link>https://pyvideo.org/euroscipy-2017/flurs-a-library-for-streaming-recommendation-algorithms.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="overview"&gt;
+&lt;h4&gt;Overview&lt;/h4&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/takuti/flurs"&gt;FluRS&lt;/a&gt; is a Python library for streaming recommendation algorithms
+which enables you to efficiently and flexibly build a recommendation
+model from complex user-item data. By focusing around the library, this
+talk discusses each aspect of &lt;strong&gt;past&lt;/strong&gt;, &lt;strong&gt;present&lt;/strong&gt; and &lt;strong&gt;future&lt;/strong&gt; as
+follows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Past&lt;/strong&gt;: Challenges in classical recommendation engines (with their
+Python implementation),&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Present&lt;/strong&gt;: How the speaker designed and implemented new kinds of
+recommendation algorithms as the Python library,&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Future&lt;/strong&gt;: The feasibility of fast, real-time recommendation at
+scale with or without FluRS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Note that, in order to learn the basic concept underlying the FluRS
+library, you can refer to the following article: &lt;a class="reference external" href="https://takuti.me/note/flurs/"&gt;FluRS: A Python
+Library for Online Item Recommendation&lt;/a&gt;. In short, implementation of
+FluRS takes advantage of the dependency injection technique, and
+developers do not need to worry much about recommender-specific code
+which commonly appears regardless of algorithm.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="target"&gt;
+&lt;h4&gt;Target&lt;/h4&gt;
+&lt;p&gt;This talk is designed for people who have fundamental knowledge of
+machine learning (e.g., &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_(mathematics)"&gt;matrix computations&lt;/a&gt;, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Gradient_descent"&gt;gradient descent&lt;/a&gt;,
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)"&gt;cross validation&lt;/a&gt;) and Python coding with the NumPy &amp;amp; SciPy libraries;
+that is, audience does not have to be a professional machine learning
+researcher or Python developer. In particular, since the speaker
+explains the field of recommender systems from basics, people can enjoy
+without previous knowledge of recommendation techniques.&lt;/p&gt;
+&lt;p&gt;Eventually, the speaker expects audiences to become able to teach their
+friends the basic of recommender systems and implement recommendation
+algorithms by themselves.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h4&gt;Background&lt;/h4&gt;
+&lt;p&gt;Recommendations nowadays play an important role in real-world
+applications such as e-commerce and social networking services in order
+to improve customers’ satisfaction, but the widely-developed systems
+pose a crucial challenge which cannot be properly handled by the
+classical techniques. More concretely, even though users’ interests and
+item properties change dynamically over time on modern systems, there is
+a lack of effective ways and empirical studies to catch up with the
+dynamic data.&lt;/p&gt;
+&lt;p&gt;In that context, throughout his master’s program and experience in the
+industry, the speaker fully realized how building real-world recommender
+systems is difficult over the past years. Thus, he ultimately invented
+two novel recommendation techniques to tackle the challenging scenario,
+and published corresponding research papers:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Incremental Factorization Machines for Persistently Cold-starting
+Online Item Recommendation&lt;/strong&gt; [&lt;a class="reference external" href="https://arxiv.org/abs/1607.02858"&gt;Paper&lt;/a&gt;] [&lt;a class="reference external" href="https://speakerdeck.com/takuti/incremental-factorization-machines"&gt;Slides&lt;/a&gt;] [&lt;a class="reference external" href="https://github.com/takuti/stream-recommender/tree/v0.3.1-recprofile-2016"&gt;GitHub&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sketching Dynamic User-Item Interactions for Online Item
+Recommendation&lt;/strong&gt; [&lt;a class="reference external" href="http://dl.acm.org/citation.cfm?id=3022152"&gt;Paper.&lt;/a&gt;] [&lt;a class="reference external" href="https://takuti.me/docs/chiir-2017-poster.pdf"&gt;Poster.&lt;/a&gt;] [&lt;a class="reference external" href="https://github.com/takuti/stream-recommender/tree/v0.5.0-chiir-2017-and-thesis"&gt;GitHub.&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Notice that, as the GitHub links suggest, these inventions have been
+achieved along with the development of FluRS. So, one of the main topics
+of this talk is to dig deep into the experience.&lt;/p&gt;
+&lt;p&gt;For the reasons mentioned above, FluRS is a “package” of things what the
+speaker has experienced in both academia and industry, and hence he
+decided to give a talk on the library from a practical point of view.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note: All contents are based on the speaker’s own thought, and they do
+not reflect the view of any of his previous and current affiliations.&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takuya Kitazawa</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/flurs-a-library-for-streaming-recommendation-algorithms.html</guid></item><item><title>Fully Convolutional Networks for Image Segmentation</title><link>https://pyvideo.org/euroscipy-2017/fully-convolutional-networks-for-image-segmentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Recently, a considerable advancemet in the area of Image Segmentation
+was achieved after state-of-the-art methods based on Fully Convolutional
+Networks (FCNs) were developed. The objective of Image Segmentation
+problem is to label every pixel in the image with the class of its
+enclosing object or region. This problem is extremely challenging
+because the method should have strong classification and localization
+properties at the same time. While being very complicated, image
+segmentation is an important problem as it has many applications in
+medicine, autonomous driving and other fields. In our talk, we go
+through theory of the recent state-of-the-art methods for image
+segmentation based on FCNs and present our library which aims to provide
+a simplified way for users to apply these methods for their own
+problems.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="detailed-description"&gt;
+&lt;h4&gt;Detailed description&lt;/h4&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h5&gt;Background&lt;/h5&gt;
+&lt;p&gt;Methods based on Convolutional Neural Networks (CNNs) have pushed the
+performance on a broad array of problems, including image classification
+&lt;a class="reference external" href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf"&gt;(1)&lt;/a&gt;
+and object detection
+&lt;a class="reference external" href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf"&gt;(2)&lt;/a&gt;.
+ImageNet Large Scale Visual Recognition Competition (ILSVRC) is a main
+image classification competition. The training data of ILSVRC contains
+1000 categories and approximately 1.2 million images and all successful
+approaches that perform well on this dataset are based on CNNs.
+Moreover, CNNs that were trained on this dataset act as a good
+initialization for other tasks as object detection, image segmentation
+and others
+&lt;a class="reference external" href="http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Girshick_Rich_Feature_Hierarchies_2014_CVPR_paper.pdf"&gt;(2)&lt;/a&gt;
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;However, partial built-in invariance of CNNs to translations, rotations
+and other transformations made it hard to use pretrained CNNs for the
+task of image segmentation. While being beneficial for the task of image
+classification, invariance properties are not beneficial for the task of
+image segmentation where strong localization propoerties are required
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Recent work introduced Fully Convolutional Networks
+&lt;a class="reference external" href="https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf"&gt;(3)&lt;/a&gt;,
+an adaptation of image classification CNNs that enables to successfully
+use them for the task of image segmentation while reducing the negative
+effect of invariance properties. In our talk, we briefly describe basic
+building blocks of CNNs (convolutional layers, pooling layer, fully
+connected layers etc.), explain why they show superior performance
+according to recent papers, explain how these CNNs can be converted into
+FCNs in order to perform image segmentation. After that we conclude with
+demonstration of how our library can be used to train FCNs for image
+segmentation on a particular dataset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="talk-overview"&gt;
+&lt;h4&gt;Talk overview.&lt;/h4&gt;
+&lt;p&gt;We plan to structure our talk in the following way:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Basic building blocks of Convolutional Neural Networks (CNNs) based
+on &amp;quot;A guide to convolution arithmetic for deep learning&amp;quot; resource
+&lt;a class="reference external" href="https://arxiv.org/pdf/1603.07285.pdf"&gt;(4)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration on how these CNNs can be applied for image
+classification based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/10/30/image-classification-and-segmentation-using-tensorflow-and-tf-slim/"&gt;(5)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how CNNs can be converted into
+FCNs based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/10/30/image-classification-and-segmentation-using-tensorflow-and-tf-slim/"&gt;(5)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how interpolation can be
+reformulated in terms of convolution and being integrated into the
+network architecture based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2016/11/22/upsampling-and-image-segmentation-with-tensorflow-and-tf-slim/"&gt;(6)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Live demonstration and explanation on how FCNs can be trained on the
+PASCAL VOC general image segmentation dataset based on our blog post
+&lt;a class="reference external" href="http://warmspringwinds.github.io/tensorflow/tf-slim/2017/01/23/fully-convolutional-networks-(fcns)-for-image-segmentation/"&gt;(7)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Demonstration of how our library
+&lt;a class="reference external" href="https://github.com/warmspringwinds/tf-image-segmentation"&gt;(8)&lt;/a&gt;
+(implemented using Tensorflow library) was used to train these models
+for the task of segmentation of medical images based on our recent
+paper &lt;a class="reference external" href="https://arxiv.org/abs/1703.08580"&gt;(9)&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Demonstration of the same library but ported to PyTorch and why it is
+easier to use.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion-and-discussion"&gt;
+&lt;h4&gt;Conclusion and discussion&lt;/h4&gt;
+&lt;p&gt;In our talk, we introduced audience to the recent advancement in the
+field of image segmentation research, briefly covered the theory behind
+it and showed how some of the recent state-of-the-art image segmentation
+methods can be applied to a particular task using our library.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="biography-and-additional-information"&gt;
+&lt;h4&gt;Biography and additional information&lt;/h4&gt;
+&lt;p&gt;Daniil Pakhomov is a PhD student at Johns Hopkins University. His main
+research areas are general image segmentation and segmentation of
+medical images.&lt;/p&gt;
+&lt;p&gt;Contents of our blog posts were well-accepted by machine learning
+community. Some of them got promotional tweets from the official Kaggle
+account and others &lt;a class="reference external" href="https://twitter.com/warmspringwinds"&gt;(10)&lt;/a&gt;. The
+author previously gave a talk on EuroScipy 2016 conference
+&lt;a class="reference external" href="https://www.euroscipy.org/2016/schedule/sessions/13/"&gt;(11)&lt;/a&gt;. The
+author has contributed to &lt;tt class="docutils literal"&gt;tensorflow/models&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Theano&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-image&lt;/span&gt;&lt;/tt&gt; repositories. Similar talk by the author was accepted
+to be presented at Scipy 2017 and this talk is an extended and improved
+version of it since then.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniil Pakhomov</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/fully-convolutional-networks-for-image-segmentation.html</guid></item><item><title>GeoPandas - geospatial data in Python made easy</title><link>https://pyvideo.org/euroscipy-2017/geopandas-geospatial-data-in-python-made-easy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The goal of GeoPandas is to make working with geospatial data in python easier. GeoPandas extends the pandas data analysis library to work with geographic objects and spatial operations.&lt;/p&gt;
+&lt;p&gt;It combines the capabilities of pandas and shapely, providing geospatial operations in pandas and a high-level interface to multiple geometries to shapely. It further builds upon the capabilities of many other libraries including fiona (reading/writing data), pyproj (projections), rtree (spatial index), ... GeoPandas enables you to easily do operations in python that would otherwise require a spatial database such as PostGIS.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joris Van den Bossche</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/geopandas-geospatial-data-in-python-made-easy.html</guid></item><item><title>Getting the hang of WASM</title><link>https://pyvideo.org/euroscipy-2017/getting-the-hang-of-wasm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://webassembly.org/"&gt;Web Assembly&lt;/a&gt; (WASM) is a new open standard
+developed by representatives from all major browsers. It is a low level
+binary format designed to be compact and run at native speed, while
+being memory-safe.&lt;/p&gt;
+&lt;p&gt;WASM is primarily intended to run code in browsers, but will also run in
+other environments like desktop, mobile and more. This makes it
+interesting to use as an intermediate language (IR); code that compiles
+to WASM will (in the future) run basically anywhere.&lt;/p&gt;
+&lt;p&gt;A proof of concept was released early this year and works out of the box
+in recent Firefox and Chrome browsers. In order to play with WASM
+myself, I wrote a &lt;a class="reference external" href="https://github.com/almarklein/pywasm"&gt;tiny Python
+library&lt;/a&gt; that makes it
+relatively easy to generate WASM modules.&lt;/p&gt;
+&lt;p&gt;In this talk I will briefly explain what WASM is, describe the anatomy
+of a WASM module, how it fits in the host environment (e.g. JavaScript
+or a C++ program), and the kinds of opportunities that this provides.
+Via live coding in a notebook, I will first write a simple WASM program
+by hand, compile it to binary WASM, and execute it in the notebook
+itself. We will then move to higher levels (including a Mindfuck to WASM
+compiler) and end with compiling a simple Python program to WASM, which
+will find the 10001st prime much faster than Python does. As a side
+effect, this talk is also a crash course on how compilers work.&lt;/p&gt;
+&lt;p&gt;I expect WASM to have a major impact. Although it is currently in its
+early infancy, we can already play with it, and I hope to give a glimpse
+of the awesome things that it can do.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Almar Klein</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/getting-the-hang-of-wasm.html</guid><category>web assembly</category><category>wasm</category></item><item><title>Git</title><link>https://pyvideo.org/euroscipy-2017/git.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tutorial prerequisites.&lt;/p&gt;
+&lt;p&gt;Everybody developing code can profit from a version control system, no
+matter whether it is code written in Python or any other programming
+language or even a paper written, e.g., in LaTeX. A very popular version
+control system, particularly in the development of open source software,
+is Git which this tutorial will be devoted to. We will explore the basic
+workflow of code development with Git and also take a look at how code
+can be developed collaboratively with the help of Github.&lt;/p&gt;
+&lt;p&gt;While the example used to gain experience with the Git workflow will be
+based on Python code, a knowledge of Python is not strictly required for
+the purpose of this tutorial.&lt;/p&gt;
+&lt;p&gt;Apart from Python, which is only needed if you want to run the script
+used in the example, you will need the Git software to follow the Git
+workflow on your computer. See
+&lt;a class="reference external" href="https://git-scm.com/downloads"&gt;git-scm.com/downloads&lt;/a&gt; for binaries
+for Mac OS X and Windows as well as installation instructions for Linux
+and Solaris. There is no need to install a Git GUI as all examples will
+be demonstrated on the command line.&lt;/p&gt;
+&lt;p&gt;If you want to follow along the Github workflow at the end of the
+tutorial, you might want to sign up for Github at
+&lt;a class="reference external" href="https://github.com"&gt;github.com&lt;/a&gt;. This will require you to choose a
+user name and a password and to provide your email address. Even if you
+do not sign up for Github, you will still be able to do most of the
+examples on your computer.&lt;/p&gt;
+&lt;p&gt;The tutorial can be obtained from
+&lt;a class="reference external" href="https://github.com/gertingold/euroscipy-git-tutorial"&gt;Github&lt;/a&gt;. You
+can get the LaTeX source and the images by downloading a zip file from
+&lt;a class="reference external" href="https://github.com/gertingold/euroscipy-git-tutorial"&gt;Github&lt;/a&gt; or by
+cloning the repository once you have Git installed:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+git clone https://github.com/gertingold/euroscipy-git-tutorial.git
+&lt;/pre&gt;
+&lt;p&gt;A PDF file of the presentation is available from
+&lt;a class="reference external" href="https://github.com/gertingold/euroscipy-git-tutorial/blob/master/presentation.pdf"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gert Ingold</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/git.html</guid></item><item><title>Handshakes, Citizen Science and Evolution</title><link>https://pyvideo.org/euroscipy-2017/handshakes-citizen-science-and-evolution.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the 1980s Robert Axelrod invited submissions for a computer tournament in
+which people submitted strategies for the Iterated Prisoner's dilemma. This
+is a game in which individuals choose to either cooperate or defect
+with each other. Since then similar work has been used to understand the
+evolution of cooperative behaviour in an evolutionary setting.&lt;/p&gt;
+&lt;p&gt;Like a large number of early (and sadly ongoing) research code, the code from
+Robert Axelrod's work was lost. Similar ongoing work is often done with poor
+sustainable practice for the software involved. In 2015, a Python library aiming
+to reproduce Axelrod's work was put on github (the Axelrod library). It has
+since accumulated more than 200 strategies with contributions from Academics and
+hobbyists alike.&lt;/p&gt;
+&lt;p&gt;This vast OPEN treasure trove of game theoretic tools is now being used to
+undertake a number of research projects. Including one that looks at an
+evolutionary process called a Moran Process which is a model of a population in
+which the makeup of future generations of the population depend on how well
+individuals of the current generation perform.&lt;/p&gt;
+&lt;p&gt;In 2012 a piece of research claimed that there was no advantage to having long
+memory of interactions. The work this talk will describe demonstrates how that's
+not true in evolutionary dynamics. Indeed: complex strategies have been trained
+using reinforcement learning and the huge number of strategies available through
+the Axelrod library to perform particularly well.&lt;/p&gt;
+&lt;p&gt;Interesting behavioural aspects also emerge: without external input, the strong
+strategies evolve &amp;quot;handshakes&amp;quot;. These handshakes allow them to recognise friend
+or foe in the population and act accordingly.&lt;/p&gt;
+&lt;p&gt;This work not only has implications at a game theoretic and reinforcement
+learning level but can also help
+understand how and why complex behaviour can emerge in evolutionary settings.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vince Knight</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/handshakes-citizen-science-and-evolution.html</guid></item><item><title>Interactive 3D Visualization in Jupyter Notebooks</title><link>https://pyvideo.org/euroscipy-2017/interactive-3d-visualization-in-jupyter-notebooks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Interactive 3D visualization of data is a crucial part of the analysis toolbox for many subfields of computational science and engineering, ranging from fluid dynamics to biology, mathematics, cosmology, and more. With the widespread availability of WebGL in browsers, it is now possible to include GPU accelerated 3D graphics directly in Jupyter Notebooks (www.jupyter.org). As part of the OpenDreamKit project (www.opendreamkit.org), we are working to improve the state of 3D visualization in Notebooks.&lt;/p&gt;
+&lt;p&gt;In the last couple of years a number of visualization projects have started to explore this area, including established projects such as VTK, Paraview and MayaVi, as well as newer, smaller projects such as ipyvolume, pythreejs, k3d-jupyter, SciviJS, and unray, the latter three being initiatives from the OpenDreamKit project.&lt;/p&gt;
+&lt;p&gt;In this talk we will present the current state of 3D visualization in Jupyter Notebooks and our contributions, including our work to lessen fragmentation and double-work in the field.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vidar Tonaas Fauske</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/interactive-3d-visualization-in-jupyter-notebooks.html</guid><category>jupyter notebook</category></item><item><title>Intro to Cython</title><link>https://pyvideo.org/euroscipy-2017/intro-to-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've probably heard of Cython as a tool for fast data processing. Well, it's more than that. Over the years, the Cython compiler has become a major pillar in the Python ecosystem, helping Python users all over the world to crunch their data, write fast and portable native code, and integrate native libraries into their Python workflow. Several excellent projects from the scientific Python world chose Cython to allow &amp;quot;normal people&amp;quot; to write and maintain efficient code for complex scientific algorithms, whenever Python itself comes to its limits.&lt;/p&gt;
+&lt;p&gt;In this tutorial, I will present the Cython compiler and quickly show how to speed up code with it, how to talk to native code, and a couple of more things that you might want to try out with it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/intro-to-cython.html</guid><category>Cython</category></item><item><title>Introduction into the ppci project</title><link>https://pyvideo.org/euroscipy-2017/introduction-into-the-ppci-project.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The ppci project was started by the need for a better system level
+programming language then C. The compiler is implemented in python, and
+hence is not very fast. On the other hand, the compiler is portable and
+is easier to develop due to being implemented into a higher level
+language. Currently it supports msp430, x86, xtensa, avr, arm, open risc
+and stm8 computer architectures, in various levels of maturity. The
+supported languages are C3 and brainfuck. Language support for C is a
+work in progress.&lt;/p&gt;
+&lt;p&gt;The C3 language was the starting point for the compiler, aiming at being
+a better version of C. It has no header files, but features a more
+modular approach like C# and java. Furthermore its syntax is context
+free, making it easier to parse using standard compiler tools.&lt;/p&gt;
+&lt;p&gt;The backend of the compiler consists of a code generator featuring both
+instruction selection and register coloring algorithms. The output of
+the compiler is an instruction stream, which can be serialized as text
+or in binary form.&lt;/p&gt;
+&lt;p&gt;Possible uses of this library are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Compile code and include it into the currently running python
+instance&lt;/li&gt;
+&lt;li&gt;Create ctypes bindings for C code by making use of the C parser
+frontend&lt;/li&gt;
+&lt;li&gt;Create a programming language using ply/textx and generate machine
+code from it using ppci&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During this session, we will explore the various parts of the ppci
+library and have a good overview what it is capable of.&lt;/p&gt;
+&lt;p&gt;Further documentation is &lt;a class="reference external" href="http://ppci.readthedocs.io/en/latest/"&gt;located
+here&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Windel Bouwman</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/introduction-into-the-ppci-project.html</guid><category>ppci</category></item><item><title>Keras</title><link>https://pyvideo.org/euroscipy-2017/keras.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Goal of the Tutorial&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Introduce&lt;/strong&gt; main features of Keras APIs to build Neural Networks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learn&lt;/strong&gt; how to implement simple and complex Deep Neural Networks
+Architectures using Keras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discover&lt;/strong&gt; Keras Implementation and Internals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: examples and hands-on exercises will be provided along the
+way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;em&gt;Multi-layer Fully Connected Networks (and the ``backends``)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Bottleneck features and Embeddings&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Convolutional Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Transfer Learning and Fine Tuning&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Residual Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Recursive Neural Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;[Variational] AutoEncoders and Adversarials&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Multi-Modal Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Custom Layers and Optimisers&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Interactive Networks and Callbacks&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr class="docutils" /&gt;
+&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Multi-layer Fully Connected Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this notebook we will learn the basic building blocks of Keras
+APIs to create deep neural networks. We will learn how to use the
+&lt;tt class="docutils literal"&gt;Sequential&lt;/tt&gt; object as well as &lt;em&gt;Functional&lt;/em&gt; and &lt;tt class="docutils literal"&gt;keras.backend&lt;/tt&gt;
+APIs. First examples of MLP and Fully Connected Networks will be
+presented.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Bootleneck Features and Embeddings&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;After having played a bit with Keras APIs for building networks, we
+start learn how to inspect network's internals. In details, we will
+learn (1) how to iterate over layers; (2) how to initialise and get
+weights; (3) how to extract bottleneck features and create
+embeddings.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Convolutional Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will teach how to build CNN (Convolutional Neural
+Networks). Convolutional, Pooling, DropOut layers will be
+presented, along with clear description on how to properly apply
+convolutions on images, depending on &lt;tt class="docutils literal"&gt;image_dim_ordering&lt;/tt&gt;
+setting.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Transfer Learning and Fine Tuning&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;The Keras implementation of some famous Deep Convolutional Networks
+will be presented (i.e. &lt;tt class="docutils literal"&gt;keras.applications.vgg16&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;keras.applications.vgg19&lt;/tt&gt;, and
+&lt;tt class="docutils literal"&gt;keras.applications.inceptionv3&lt;/tt&gt;). We will learn how to leverage
+on these models for transfer learning and fine tuning using Keras
+&lt;tt class="docutils literal"&gt;Layer&lt;/tt&gt; APIs.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Residual Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this notebook, Residual Networks will be presented. In
+particular, the Keras implementation of the residual network
+topology will be explained. Then, ResNet
+(&lt;tt class="docutils literal"&gt;keras.applications.resnet50&lt;/tt&gt;) Keras implementation will be
+detailed.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Recurrent Neural Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Recurrent Neural Networks (i.e. LSTM and GRU) are the main topic of
+this notebook. The Keras implementation of these two types of
+network will be presented along with working examples combining
+Word Embeddings and Convolutional Layers (i.e.
+&lt;tt class="docutils literal"&gt;keras.layers.convolutional_recurrent&lt;/tt&gt;)&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;[Variational] AutoEncoders and Adversarials&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will be devoted to show how to implement AutoEncoders
+in Keras. In particular, the implementation of Stacked
+AutoEncoders, Variational AutoEncoders and Generative Adversarial
+Networks will be presented.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Multi-Modal Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Multi-Input and Multi-task Networks are the fundamental steps for
+advanced deep networks. This notebook will provide implementation
+recipes and examples.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Custom Layers and Optimisers&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will provide details and examples of Keras internals.
+In particular, we will learn how to implement a Custom Layer in
+Keras, and custom Activation functions, and custom optimisers.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Interactive Networks and Callbacks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this last notebook, &lt;tt class="docutils literal"&gt;keras.callbacks&lt;/tt&gt; will be explained.
+Callbacks to track and monitor network performances during the
+training process will be built and integrated inside a web app.
+Finally, an example of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;keras-js&lt;/span&gt;&lt;/tt&gt; will be described, detailing
+functions in Keras to export models and weights (in &lt;tt class="docutils literal"&gt;json&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;hdf5&lt;/tt&gt; formats).&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="requirements"&gt;
+&lt;h4&gt;Requirements&lt;/h4&gt;
+&lt;p&gt;This tutorial requires the following packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;Python version 3.5.x&lt;/div&gt;
+&lt;div class="line"&gt;- Python 3.4 is fine as well&lt;/div&gt;
+&lt;div class="line"&gt;- likely Python 2.7 would also be fine, but &lt;em&gt;who knows&lt;/em&gt;? :P&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; version 1.10 or later: &lt;a class="reference external" href="http://www.numpy.org/"&gt;http://www.numpy.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt; version 0.16 or later: &lt;a class="reference external" href="http://www.scipy.org/"&gt;http://www.scipy.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;matplotlib&lt;/tt&gt; version 1.4 or later: &lt;a class="reference external" href="http://matplotlib.org/"&gt;http://matplotlib.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt; version 0.16 or later: &lt;a class="reference external" href="http://pandas.pydata.org"&gt;http://pandas.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; version 0.15 or later: &lt;a class="reference external" href="http://scikit-learn.org"&gt;http://scikit-learn.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;keras&lt;/tt&gt; version 1.0 or later: &lt;a class="reference external" href="http://keras.io"&gt;http://keras.io&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;tensorflow&lt;/tt&gt; version 0.9 or later: &lt;a class="reference external" href="https://www.tensorflow.org"&gt;https://www.tensorflow.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;ipython&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;jupyter&lt;/tt&gt; version 4.0 or later, with notebook support&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Optional but recommended):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;pyyaml&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;hdf5&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;h5py&lt;/tt&gt; (required if you use model saving/loading
+functions in keras)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The easiest way to get (most) these is to use an all-in-one installer
+such as &lt;a class="reference external" href="http://www.continuum.io/downloads"&gt;Anaconda&lt;/a&gt; from Continuum.
+These are available for multiple architectures.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Valerio Maggio</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/keras.html</guid><category>tutorial</category></item><item><title>Keynote: How to Fix a Scientific Culture: Psychology as a Cautionary Tale and Paragon</title><link>https://pyvideo.org/euroscipy-2017/keynote-how-to-fix-a-scientific-culture-psychology-as-a-cautionary-tale-and-paragon.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the last six years, small- and large-scale replication efforts have
+raised the suspicion that a large number of psychological
+findings—including some of our dearest effects—are flimsy at best.
+“Standard Operating Procedures” of the field have been shown to result
+in false-positive rates close to 100%; articles are filled with
+reporting errors and impossible statistics; transparency of the
+scientific process is often abysmal. These shortcomings have resulted in
+an unprecedented level of scientific introspection, giving rise to the
+development of new meta-scientific methods, new modes of scientific
+publishing, and a strong push towards Open Science, which will be
+covered in this talk.&lt;/p&gt;
+&lt;div class="section" id="biographical-sketch"&gt;
+&lt;h4&gt;Biographical sketch&lt;/h4&gt;
+&lt;p&gt;Julia Rohrer is a personality psychologist and pursues her PhD at the
+International Max Planck Research School on the Life Course, the German
+Institute for Economic Research, the Free University of Berlin, and the
+University of Leipzig. She is an outspoken advocate for Open Science and
+the current movement towards greater methodological rigor in psychology.
+She is one of the authors of the meta-scientific blog “The 100% CI.”&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Julia Rohrer</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/keynote-how-to-fix-a-scientific-culture-psychology-as-a-cautionary-tale-and-paragon.html</guid><category>keynote</category></item><item><title>Keynote: PyTorch: a framework for fast, dynamic deep learning and scientific computi</title><link>https://pyvideo.org/euroscipy-2017/keynote-pytorch-a-framework-for-fast-dynamic-deep-learning-and-scientific-computi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this session, you shall be introduced to a new framework for
+scientific computing, mainly
+aimed at deep learning workloads. The framework consists of an ndarray
+library that natively
+supports GPU execution, an automatic differentiation engine that is
+flexible and fast, and
+an optimization package for gradient based optimization methods. We
+shall discuss practical
+workflows, our features on top of python multiprocessing for efficient
+parallel data loaders
+and finally we shall briefly look at our upcoming just-in-time Tensor
+compiler to fuse
+computations and execute them more efficiently.&lt;/p&gt;
+&lt;div class="section" id="biographical-sketch"&gt;
+&lt;h4&gt;Biographical sketch&lt;/h4&gt;
+&lt;p&gt;Soumith Chintala is a Researcher at Facebook AI Research, where he
+works on deep learning,
+reinforcement learning, generative image models, agents for video
+games and large-scale
+high-performance deep learning. Prior to joining Facebook in August
+2014, he worked at
+MuseAmi, where he built deep learning models for music and vision
+targeted at mobile
+devices. He holds a Masters in CS from NYU, and spent time in Yann
+LeCun's NYU lab building
+deep learning models for pedestrian detection, natural image OCR,
+depth-images among others.&lt;/p&gt;
+&lt;p&gt;(Reproduced from &lt;a class="reference external" href="https://research.fb.com/people/chintala-soumith/"&gt;https://research.fb.com/people/chintala-soumith/&lt;/a&gt;)&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Soumith Chintala</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/keynote-pytorch-a-framework-for-fast-dynamic-deep-learning-and-scientific-computi.html</guid><category>keynote</category><category>pytorch</category></item><item><title>Leverage knowledge from under-represented classes in machine learning: an introduction to imbalanced-learn</title><link>https://pyvideo.org/euroscipy-2017/leverage-knowledge-from-under-represented-classes-in-machine-learning-an-introduction-to-imbalanced-learn.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="the-curse-of-imbalanced-data-sets"&gt;
+&lt;h4&gt;The curse of imbalanced data sets&lt;/h4&gt;
+&lt;p&gt;The curse of imbalanced data set refers to data sets in which the number
+of samples in one class is less than in others. This issue is often
+encountered in real world data sets such as medical imaging applications
+(e.g. cancer detection), fraud detection, etc. In such particular
+condition, machine learning algorithms learn sub-optimal models which
+will generally favor the class having the largest number of samples.&lt;/p&gt;
+&lt;p&gt;In this talk, we will present the
+'&lt;a class="reference external" href="https://github.com/scikit-learn-contrib/imbalanced-learn"&gt;imbalanced-learn&lt;/a&gt;'
+package which implement some of the state-of-the-art algorithms,
+tackling the class imbalance problem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-scikit-learn-contrib-project"&gt;
+&lt;h4&gt;A &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn-contrib&lt;/span&gt;&lt;/tt&gt; project&lt;/h4&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; includes a tremendous set of pre-processing methods
+(i.e. transformers, standardizers, etc.) to optimally train machine
+learning algorithms. However, there is currently no estimators to reduce
+or generate samples. Therefore, the &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;imbalanced-learn&lt;/span&gt;&lt;/tt&gt; provides a new
+type of estimator, named sampler, aiming at resampling a data set
+whenever it is desired. The samplers are fully compatible with the
+current &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; API and are composed of the following main
+methods inspired from &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt;: (i) &lt;tt class="docutils literal"&gt;fit&lt;/tt&gt;, (ii) &lt;tt class="docutils literal"&gt;sample&lt;/tt&gt;,
+and (iii) &lt;tt class="docutils literal"&gt;fit_sample&lt;/tt&gt;. Additionally, a class &lt;tt class="docutils literal"&gt;Pipeline&lt;/tt&gt; is
+inherited from &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt;, permitting to incorporate samplers in
+the usual classification pipeline. During the talk, we will also present
+the key parameters, shared by all the samplers.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-data-science-perspective"&gt;
+&lt;h4&gt;A data science perspective&lt;/h4&gt;
+&lt;p&gt;Regarding the data science aspect of this talk, we will highlight the
+distinctive characteristics of the different algorithms: (i)
+over-sampling, (ii) controlled under-sampling, (iii) cleaning
+under-sampling, (iv) combination of over-sampling and cleaning
+under-sampling, and (v) ensemble sampler.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="concrete-examples"&gt;
+&lt;h4&gt;Concrete examples&lt;/h4&gt;
+&lt;p&gt;In addition, we will briefly present a couple of examples in which the
+package has been used on real-world data sets.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="perspectives"&gt;
+&lt;h4&gt;Perspectives&lt;/h4&gt;
+&lt;p&gt;Our package is still under heavy development and we are aiming at
+improving the following points:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Speed optimization through benchmarking and profiling.&lt;/li&gt;
+&lt;li&gt;Quantitative classification performance benchmarking.&lt;/li&gt;
+&lt;li&gt;Additional algorithms (categorical features, ...)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillaume Lemaitre</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/leverage-knowledge-from-under-represented-classes-in-machine-learning-an-introduction-to-imbalanced-learn.html</guid></item><item><title>Lightning Talks</title><link>https://pyvideo.org/euroscipy-2017/lightning-talks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presenter: various&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/lightning-talks.html</guid><category>lightning talks</category></item><item><title>Matplotlib</title><link>https://pyvideo.org/euroscipy-2017/matplotlib.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This tutorial is for Python users who would like to create nice 2d plots
+with Python.&lt;/p&gt;
+&lt;div class="section" id="audience-level"&gt;
+&lt;h4&gt;Audience Level&lt;/h4&gt;
+&lt;p&gt;Students should have a working knowledge of Python. NumPy knowledge is
+helpful but not required.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prerequisites"&gt;
+&lt;h4&gt;Prerequisites&lt;/h4&gt;
+&lt;p&gt;Please bring your laptop with the operating system of your choice
+(Linux, Mac OS X, Windows). In addition to Python 3.6 (2.7 works if
+really want to use it), we need:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a current versions of matplotlib (&lt;a class="reference external" href="http://matplotlib.sourceforge.net"&gt;http://matplotlib.sourceforge.net&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Jupyter (&lt;a class="reference external" href="http://jupyter.org/"&gt;http://jupyter.org/&lt;/a&gt;) and&lt;/li&gt;
+&lt;li&gt;NumPy (&lt;a class="reference external" href="http://numpy.scipy.org"&gt;http://numpy.scipy.org&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you use Anaconda you should have all requirements installed. If you
+use a new &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; environment install with:&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;conda install jupyter numpy matplotlib&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;The same goes for &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;pip install jupyter numpy matplotlib&lt;/tt&gt;&lt;/p&gt;
+&lt;div class="section" id="method"&gt;
+&lt;h5&gt;Method&lt;/h5&gt;
+&lt;p&gt;This is a hands-on course. Students are strongly encouraged to work
+along with the trainer at the interactive prompt. There will be
+exercises the students need to do on their own. Experience shows that
+this active involvement is essential for an effective learning.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="content"&gt;
+&lt;h5&gt;Content&lt;/h5&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The library matplotlib provides many different types of diagrams from
+within Python with only few lines of code. Examples are used to
+exercise the use of this library. The tutorial provides an overview
+how to create plots . Using matplotlib from Jupyter Notebook provides
+an interactive environment for fast testing of ideas. We will be using
+this for most of the tutorial.&lt;/div&gt;
+&lt;div class="line"&gt;With a simple plot we learn how to add axis labels, titles and a
+legend. The GUI offers zooming, panning, changing of plot sizes and
+other interactive ways to modify the plot. We will use Python to
+change properties of existing plots such as line colors, marker
+symbols, or line styles. There are several ways how to place text on
+plots. You will learn about the different coordinate systems relative
+to the plot, the canvas or the figure. Another topic are ticks, where
+to put them and how to format them to achieve publication-quality
+plots. The concepts of figures, subplots, and axes and how they relate
+to each other will be explained with examples.&lt;/div&gt;
+&lt;div class="line"&gt;Matplotlib offers many different types of plots. The tutorial
+introduces several of them with an example. A more advanced topic will
+be creating your own plot types. Finally, we will create a small
+animation to explore the possibilities to visualize changes.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h5&gt;Outline&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Jupyter&lt;/li&gt;
+&lt;li&gt;Simple plots&lt;/li&gt;
+&lt;li&gt;Properties&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;li&gt;Ticks&lt;/li&gt;
+&lt;li&gt;Figures, subplots, and axes&lt;/li&gt;
+&lt;li&gt;Other types of plots&lt;/li&gt;
+&lt;li&gt;The class library&lt;/li&gt;
+&lt;li&gt;Creating New Plot Types&lt;/li&gt;
+&lt;li&gt;Animations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="audience-level-novice"&gt;
+&lt;h6&gt;Audience level: Novice&lt;/h6&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/matplotlib.html</guid><category>tutorial</category></item><item><title>nbval - Testing your notebooks</title><link>https://pyvideo.org/euroscipy-2017/nbval-testing-your-notebooks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many scientific computing projects involve code in notebooks, either to produce results or to demonstrate and explain the use of a software package. But how do you ensure that your notebooks still work as the libraries they import and call change? nbval is a plugin for the pytest testing framework which runs your notebooks as part of your test suite, so that unexpected errors will show up as test failures. You can also use nbval to check that key pieces of the produced outputs match those saved in the notebook file, to be sure that the code is still doing the same thing. This ability to automatically test notebooks with nbval enables notebooks to be a part of verifying a reproducible scientific publication.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Kluyver</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/nbval-testing-your-notebooks.html</guid><category>nbval</category></item><item><title>NetworkX</title><link>https://pyvideo.org/euroscipy-2017/networkx.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;working with graphs using python and the NetworkX package. This will be
+a hands on tutorial and will require writing a lot of code snippets. The
+participants should be comfortable with basic python (loops,
+dictionaries, lists) and some(minimal) experience with working inside a
+jupyter notebook.&lt;/p&gt;
+&lt;p&gt;Broadly the tutorial is divided into four parts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Part A (20 mins)&lt;ul&gt;
+&lt;li&gt;Basics of graph theory and various examples of networks in real life.&lt;/li&gt;
+&lt;li&gt;Introduction to the NetworkX API and various data structures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Part B (30 mins)&lt;ul&gt;
+&lt;li&gt;Work with small synthetic networks (generated using random graph
+generators) to understand the structure of the network.&lt;/li&gt;
+&lt;li&gt;Analyse the network and study various properties of the network like
+centrality, connectivity, shortest paths, cliques.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Part C (30 mins)&lt;ul&gt;
+&lt;li&gt;We'll use the various techniques we have learnt so far and model a
+network out of real world data like co-authorship network(
+&lt;a class="reference external" href="http://www-personal.umich.edu/~mejn/netdata/cond-mat-2005.zip"&gt;http://www-personal.umich.edu/~mejn/netdata/cond-mat-2005.zip&lt;/a&gt;) and
+study the structure and properties of this network.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Part D (10 mins)&lt;ul&gt;
+&lt;li&gt;We'll work on some interesting problems like temporal networks and
+visualisation of networks. - We'll model the US Airport Network with
+respect to time and will try to make sense out of it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By the end of the tutorial everyone should be comfortable with hacking
+on the NetworkX API, modelling data as networks and basic analysis on
+networks using python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mridul Seth</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/networkx.html</guid><category>tutorial</category></item><item><title>NumPy (1/2)</title><link>https://pyvideo.org/euroscipy-2017/numpy-12.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;NumPy forms the basis of the scientific ecosystem of Python by providing
+a new data type, the &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;. This type allows to represent
+multi-dimensional homogeneous data as they appear in many scientific
+applications in the form of vectors and matrices or, for example,
+images. The use of NumPy arrays allows to significantly speed up
+numerical calculations in Python and, in addition, permits to write more
+succinct and readable code.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will discuss the basic concepts of &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;s
+and, in particular, how they can be indexed to efficiently work with
+multi-dimensional data. We will learn how to manipulate &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;s
+with NumPy and explore how typical numerical tasks can be solved either
+with NumPy or other packages from the Python scientific ecosystem like
+SciPy (which will be covered in more detail in a subsequent tutorial).&lt;/p&gt;
+&lt;p&gt;A basic knowledge of Python, at least on the level of the introductory
+tutorial on Python, is expected. Some familiarity with the slicing
+syntax of Python lists will be useful.&lt;/p&gt;
+&lt;p&gt;For the NumPy tutorial, it will be sufficient to have installed the
+packages mentioned on the top of this page.&lt;/p&gt;
+&lt;p&gt;Teaching material is available from
+&lt;a class="reference external" href="https://github.com/gertingold/euroscipy-numpy-tutorial/"&gt;Github&lt;/a&gt;.
+Make sure that you download the &lt;a class="reference external" href="https://raw.githubusercontent.com/gertingold/euroscipy-numpy-tutorial/master/numpy-tutorial-exercises.ipynb"&gt;Jupyter
+notebook&lt;/a&gt;
+containing the exercises.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gert Ingold</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/numpy-12.html</guid></item><item><title>NumPy (2/2)</title><link>https://pyvideo.org/euroscipy-2017/numpy-22.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;NumPy forms the basis of the scientific ecosystem of Python by providing
+a new data type, the &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;. This type allows to represent
+multi-dimensional homogeneous data as they appear in many scientific
+applications in the form of vectors and matrices or, for example,
+images. The use of NumPy arrays allows to significantly speed up
+numerical calculations in Python and, in addition, permits to write more
+succinct and readable code.&lt;/p&gt;
+&lt;p&gt;In this tutorial, we will discuss the basic concepts of &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;s
+and, in particular, how they can be indexed to efficiently work with
+multi-dimensional data. We will learn how to manipulate &lt;tt class="docutils literal"&gt;ndarray&lt;/tt&gt;s
+with NumPy and explore how typical numerical tasks can be solved either
+with NumPy or other packages from the Python scientific ecosystem like
+SciPy (which will be covered in more detail in a subsequent tutorial).&lt;/p&gt;
+&lt;p&gt;A basic knowledge of Python, at least on the level of the introductory
+tutorial on Python, is expected. Some familiarity with the slicing
+syntax of Python lists will be useful.&lt;/p&gt;
+&lt;p&gt;For the NumPy tutorial, it will be sufficient to have installed the
+packages mentioned on the top of this page.&lt;/p&gt;
+&lt;p&gt;Teaching material is available from
+&lt;a class="reference external" href="https://github.com/gertingold/euroscipy-numpy-tutorial/"&gt;Github&lt;/a&gt;.
+Make sure that you download the &lt;a class="reference external" href="https://raw.githubusercontent.com/gertingold/euroscipy-numpy-tutorial/master/numpy-tutorial-exercises.ipynb"&gt;Jupyter
+notebook&lt;/a&gt;
+containing the exercises.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gert Ingold</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/numpy-22.html</guid></item><item><title>Pandas</title><link>https://pyvideo.org/euroscipy-2017/pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas is nowadays the library of choice for manipulating and analysing structured data, providing high-performance, easy-to-use data structures and data analysis tools.&lt;/p&gt;
+&lt;p&gt;This hands-on tutorial will give a basic introduction to pandas, guide you through the different data structures and its manipulation, explaining the the key concepts and defining features. No prior knowledge about pandas is required.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joris Van den Bossche</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/pandas.html</guid><category>tutorial</category><category>pandas</category></item><item><title>Poster Introductions</title><link>https://pyvideo.org/euroscipy-2017/poster-introductions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Poster introductions (2 minute talks)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/poster-introductions.html</guid></item><item><title>Pyrate - Optical Raytracing Based on Python</title><link>https://pyvideo.org/euroscipy-2017/pyrate-optical-raytracing-based-on-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pyrate is a program for scientific optical lens design. It traces rays
+through an optical system and optimizes its properties, e.g. lens radii.&lt;/p&gt;
+&lt;p&gt;The merit function to be minimized during optimization can vastly vary
+depending on the type of objective and constraints. During the design
+process, the merit function is changed a lot, as the system must fulfill
+ever more requirements when approaching production readiness.&lt;/p&gt;
+&lt;p&gt;We present a variable container, storing the variable value, its status,
+and possible constraints. The status is used to indicate whether the
+variable shall be optimized or not. Designers often use only parts of
+the available variables, especially in early design stages.&lt;/p&gt;
+&lt;p&gt;Before optimization, the highest hierarchy object collects all
+containers from its children and grandchildren, wraps them to a format
+usable by scipy.minimize and optimizes the system with the current merit
+function.&lt;/p&gt;
+&lt;p&gt;We show several examples of optical systems optimized with our program.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Johannes Hartung</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/pyrate-optical-raytracing-based-on-python.html</guid><category>pyrate</category><category>raytracing</category></item><item><title>Python (1/2)</title><link>https://pyvideo.org/euroscipy-2017/python-12.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python tutorial will present the basic of the programming language
+itself. Therefore, no extra package apart of the Jupyter notebook will
+be required. However, we might have a preference for Python 3.6 over
+Python 2.7. The tutorial will be based on the &lt;a class="reference external" href="http://www.scipy-lectures.org/intro/language/python_language.html"&gt;SciPy lecture
+notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The corresponding notebooks are available
+&lt;a class="reference external" href="https://github.com/glemaitre/euroscipy-2017"&gt;here&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillaume Lemaître</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/python-12.html</guid></item><item><title>Python (2/2)</title><link>https://pyvideo.org/euroscipy-2017/python-22.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python tutorial will present the basic of the programming language
+itself. Therefore, no extra package apart of the Jupyter notebook will
+be required. However, we might have a preference for Python 3.6 over
+Python 2.7. The tutorial will be based on the &lt;a class="reference external" href="http://www.scipy-lectures.org/intro/language/python_language.html"&gt;SciPy lecture
+notes&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The corresponding notebooks are available
+&lt;a class="reference external" href="https://github.com/glemaitre/euroscipy-2017"&gt;here&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillaume Lemaître</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/python-22.html</guid></item><item><title>Real-time Crowd-sourced Detection of Earthquakes</title><link>https://pyvideo.org/euroscipy-2017/real-time-crowd-sourced-detection-of-earthquakes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The European-Mediterranean Seismological Centre publishes up to date
+earthquake information from around the world. However, for several
+years, we have been able to detect many important earthquakes earlier
+than the seismic networks! After an earthquake, people affected often
+rapidly arrive on our website or use our app, this causes a peak in
+internet traffic that our customised traffic monitoring system detects.&lt;/p&gt;
+&lt;p&gt;When a peak is detected, our website and app respond by requesting our
+users to complete a questionnaire if they have felt an earthquake. Each
+peak is also analyzed to estimate its epicentre and start time,
+whereupon the system starts trying to associate the peak with a
+seismically detected earthquake. If an association is obtained, this
+earthquake is given special status by our website since we can be sure
+that it has been felt by the public (most earthquakes are only felt by a
+few people). This system helps us improve our site’s responsivity and
+hence our connection with the public.&lt;/p&gt;
+&lt;p&gt;The system consists of a collection of python processes linked via
+&lt;a class="reference external" href="https://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt;. RabbitMQ is a messaging server
+that creates a queue of messages for each process to consume. We use the
+&lt;a class="reference external" href="https://github.com/pika/pika"&gt;pika&lt;/a&gt; library to interact with
+RabbitMQ from python, each process is an actor in the RMQ network.&lt;/p&gt;
+&lt;p&gt;Users are localized via their IP or mobile phone geolocation. Peaks are
+localized using a clustering algorithm. This allows us to create maps of
+activity, which is done using &lt;a class="reference external" href="http://gmt.soest.hawaii.edu/"&gt;GMT&lt;/a&gt;
+(via &lt;a class="reference external" href="http://emolch.github.io/gmtpy/"&gt;gmtpy&lt;/a&gt; - GMT is a mapping
+software popular in the seismic community).&lt;/p&gt;
+&lt;p&gt;Data and results are also persisted to a
+&lt;a class="reference external" href="https://www.postgresql.org"&gt;postgresql&lt;/a&gt; database using the
+&lt;a class="reference external" href="https://www.sqlalchemy.org"&gt;sqlalchemy&lt;/a&gt; toolkit. A realtime display
+of the postgresql data is accomplished using
+&lt;a class="reference external" href="https://grafana.com/"&gt;Grafana&lt;/a&gt; via a customization of the
+&lt;a class="reference external" href="https://graphite-api.readthedocs.io/en/latest/"&gt;graphite-api&lt;/a&gt;
+application.&lt;/p&gt;
+&lt;p&gt;This talk will give an overview of our system’s operation and details on
+its technical implementation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Robert Steed</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/real-time-crowd-sourced-detection-of-earthquakes.html</guid></item><item><title>Scikit-image</title><link>https://pyvideo.org/euroscipy-2017/scikit-image.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tutorial materials can be found on
+&lt;a class="reference external" href="https://github.com/emmanuelle/scikit-image-euroscipy2017"&gt;https://github.com/emmanuelle/scikit-image-euroscipy2017&lt;/a&gt;: you can
+download a zip on
+&lt;a class="reference external" href="https://github.com/emmanuelle/scikit-image-euroscipy2017/archive/master.zip"&gt;https://github.com/emmanuelle/scikit-image-euroscipy2017/archive/master.zip&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;If you installed Anaconda or Canopy, you already have scikit-image
+installed.&lt;/div&gt;
+&lt;div class="line"&gt;Otherwise, see &lt;a class="reference external" href="http://scikit-image.org/docs/stable/install.html"&gt;http://scikit-image.org/docs/stable/install.html&lt;/a&gt; for
+installation instructions.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;scikit-image version 0.12 or 0.13 is preferable.&lt;/p&gt;
+&lt;p&gt;Test code&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;gt;&amp;gt;&amp;gt; from skimage import io, data
+&amp;gt;&amp;gt;&amp;gt; camera = data.camera()
+&amp;gt;&amp;gt;&amp;gt; io.imshow(camera)
+&lt;/pre&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Emmanuelle Gouillart</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/scikit-image.html</guid><category>tutorial</category><category>scikit-image</category></item><item><title>SciPy</title><link>https://pyvideo.org/euroscipy-2017/scipy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presenter: Gaël Varoquaux&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gaël Varoquaux</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/scipy.html</guid></item><item><title>Simphony-Remote - Accessing containerized desktop and web applications with a web browser</title><link>https://pyvideo.org/euroscipy-2017/simphony-remote-accessing-containerized-desktop-and-web-applications-with-a-web-browser.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SimPhoNy Remote is a web application that coordinates the execution of Docker images. These images have been tailored to a specific use case: accessing a Desktop or Web application combining JupyterHub, Docker and noVNC. The resulting product is flexible in authentication methods, easy to install and setup. Users can be granted fine grained permissions not only on the available applications, but also on the execution policy, such as mounted data directories and container execution parameters. In addition to Desktop applications via VNC, SimPhoNy remote supports pure Web applications. At the moment, Jupyter Notebook and a File Browser are available.&lt;/p&gt;
+&lt;p&gt;SimPhoNy Remote can be useful to educators, researchers, and anyone who needs to provide a controlled set of desktop applications to users, accessible via a web browser. The talk does not require advanced technical knowledge to understand the overall concept and use. Through the talk, the audience will learn basic usage of the user and administrative interface, as well as possible use cases of the SimPhoNy Remote application.&lt;/p&gt;
+&lt;p&gt;SimPhoNy Remote is an open-source product developed by Enthought as part of the SimPhoNy (FP7/NMP-2013-1.4-1/604005) and FORCE projects (Horizon 2020/NMBP-23-2016/721027).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefano Borini</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/simphony-remote-accessing-containerized-desktop-and-web-applications-with-a-web-browser.html</guid><category>simphony-remote</category></item><item><title>SymPy</title><link>https://pyvideo.org/euroscipy-2017/sympy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;To follow the SymPy tutorial, please go to
+&lt;a class="reference external" href="https://github.com/leosartaj/euroscipy-sympy-tutorial"&gt;https://github.com/leosartaj/euroscipy-sympy-tutorial&lt;/a&gt; This link contains
+all the notebooks and instructions to install the required software.
+Additionally run &lt;tt class="docutils literal"&gt;python test_installation.py&lt;/tt&gt; to check your
+installation. I will be updating the notebooks, so please pull the
+latest copy before the tutorial.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sartaj Singh</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/sympy.html</guid><category>tutorial</category><category>simpy</category></item><item><title>Testing the unknown: how to test scientific codes</title><link>https://pyvideo.org/euroscipy-2017/testing-the-unknown-how-to-test-scientific-codes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the experimental sciences, new theories are developed by applying the scientific method to produce results which are accurate, reproducible and reliable. This involves testing the experimental setup to show that it is working as designed and thoroughly documenting the progress of the experiment. Results will not be trusted unless the experiment has been carried out to a suitable standard.&lt;/p&gt;
+&lt;p&gt;In computational science, we should aim to apply the same principles. Results should only be trusted if the code that has produced it has undergone rigorous testing which demonstrates that it is working as intended, and any limitations of the code (e.g. numerical errors) are understood and quantified.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this can be quite challenging. By their very nature, scientific codes are built to investigate systems where the behaviour is to some extent unknown, so testing them can be quite difficult. They can be very complex, built over a number of years (or even decades!) with contributions from many people.&lt;/p&gt;
+&lt;p&gt;In this talk, I shall look at how to design tests for scientific codes, showing that even for the most complicated of codes, there are a number of different tests we can apply to ensure we build robust, reliable code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alice Harpole</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/testing-the-unknown-how-to-test-scientific-codes.html</guid></item><item><title>The OpenTURNS uncertainty quantification Python module</title><link>https://pyvideo.org/euroscipy-2017/the-openturns-uncertainty-quantification-python-module.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Uncertainty quantification is a set of methods which aim at estimating the uncertainties of engineering systems in order to mitigate risks.
+OpenTURNS is an open source C++ library for uncertainty propagation by probabilistic methods.
+However, most OpenTURNS users know its Python interface, which has gained maturity thanks to more than 10 years of development.
+In this talk, we will present an overview of its interesting features, including the link with other Python packages.
+In order to get a sense of what exactly OpenTURNS can do, we will present practical examples of the Python interface.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael Baudin</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/the-openturns-uncertainty-quantification-python-module.html</guid></item><item><title>Tricks for Efficient Multicore Computing</title><link>https://pyvideo.org/euroscipy-2017/tricks-for-efficient-multicore-computing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this presentation you will learn about:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;tt class="docutils literal"&gt;concurrent.futures&lt;/tt&gt; API of Python 3&lt;/li&gt;
+&lt;li&gt;Threads vs forked processes vs spawned processes (pros and cons)&lt;/li&gt;
+&lt;li&gt;The impact of the GIL on CPU-bound Python programs&lt;/li&gt;
+&lt;li&gt;Bad interactions of fork-based multiprocessing and OpenMP runtimes&lt;/li&gt;
+&lt;li&gt;BLAS-based parallelism (e.g. MKL, OpenBLAS)&lt;/li&gt;
+&lt;li&gt;Memory bandwidth bound operations, arithmetic intensity and the
+roofline model.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will include non-representative micro-benchmarks and silly
+quizzes for the audience :)&lt;/p&gt;
+&lt;p&gt;We will also quickly introduce the
+&lt;a class="reference external" href="https://github.com/tomMoral/loky/"&gt;loky&lt;/a&gt; project to help mitigate
+some of the problems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Oliver Grisel</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/tricks-for-efficient-multicore-computing.html</guid></item><item><title>Working with Audio Data in Python</title><link>https://pyvideo.org/euroscipy-2017/working-with-audio-data-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many disciplines in science and engineering are focused on the perception and production of sounds. Applications range from signal processing algorithms to music information retrieval and speech analysis, and even audiological research. All of these disciplines require the playback and recording, and storage and retrieval of audio data.&lt;/p&gt;
+&lt;p&gt;As a data structure, audio data is simple to work with: it consists of long arrays of air pressure measurements at a sample rate of several thousands per second. This kind of data is perfectly suited for Numpy arrays, and Numpy, Scipy, and Matplotlib contain a host of functionality for manipulating and analyzing audio data.&lt;/p&gt;
+&lt;p&gt;Yet, actually playing and recording audio data in Python is still a major issue. While libraries exist for playback and recording, the quality of the implementations vary greatly between operating systems and audio APIs. In particular, academic signal processing often requires low-latency, real-time, multi-channel interaction with arbitrary sound cards, which can be difficult for existing libraries to support.&lt;/p&gt;
+&lt;p&gt;Reading and writing audio files from Python is similarly difficult. Again, Python libraries do exist, but consistent, high-performance access to the vast variety of existing audio file formats is still a challenge.&lt;/p&gt;
+&lt;p&gt;This talk presents an overview of the history and current landscape of audio libraries available for Python. Additionally, it highlights our ongoing work on the libraries SoundFile and Python-Audio, which bring high-performance reading and writing of audio files, and real-time playback and recording of audio data to Python.&lt;/p&gt;
+&lt;p&gt;SoundFile uses CFFI to interact with libsndfile, a C library for reading and writing audio files as Numpy arrays. However, while libsndfile supports a great number of audio file formats, support for patent-encumbered formats still seems impossible for an open-source library.&lt;/p&gt;
+&lt;p&gt;Python-Audio again uses CFFI to expose each operating system's native audio API to Python in a consistent manner. Python-Audio was born out of frustration with existing cross-platform libraries in both C and Python, and is based on our previous work on PySoundCard and PyAudio. Moreover, the use of the operating systems' native audio APIs may prove to be the solution for the legal issues with patent-encumbered file formats. But while Python-Audio has working implementations for all three major operating systems, it is still a very recent project, and we would like to encourage attendees to provide feedback and contributions.&lt;/p&gt;
+&lt;p&gt;In conclusion, working with audio data in Python is not as easy as it should be, and the scientific Python community still faces challenges for both reading and writing audio files and playback and recording of real-time audio data. Nevertheless, we believe that these problems can be overcome, and audio data should become significantly easier to work with for scientists and engineers in the near future.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Bastian Bechtold</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/working-with-audio-data-in-python.html</guid></item><item><title>Advanced data wrangling with pandas</title><link>https://pyvideo.org/euroscipy-2017/advanced-data-wrangling-with-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas is nowadays the library of choice for manipulating and analysing structured data, providing high-performance, easy-to-use data structures and data analysis tools.&lt;/p&gt;
+&lt;p&gt;In this hands-on tutorial on using pandas for data analysis, you will be guided through some of the powerful methods and concepts in pandas, including time series manipulation (resampling and rolling operations), groupby operations, reshaping with stack/unstack/pivot, …&lt;/p&gt;
+&lt;p&gt;Basic familiarity with pandas data structures (Series/DataFrame) is assumed.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joris Van den Bossche</dc:creator><pubDate>Wed, 30 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-30:euroscipy-2017/advanced-data-wrangling-with-pandas.html</guid><category>tutorial</category></item><item><title>Scikit-learn (1/2)</title><link>https://pyvideo.org/euroscipy-2017/scikit-learn-12.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Please install the following packages (either with pip or conda):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;scikit-learn 0.19.0 (along with numpy and scipy as dependencies)&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;jupyter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check the scikit-learn version with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+python -c &amp;quot;import sklearn; print(sklearn.__version__)&amp;quot;
+&lt;/pre&gt;
+&lt;p&gt;If you have an old version you can upgrade to scikit-learn 0.19.0 with
+&lt;tt class="docutils literal"&gt;conda update &lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; if you use conda or
+&lt;tt class="docutils literal"&gt;pip install &lt;span class="pre"&gt;-U&lt;/span&gt; &lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; otherwise.&lt;/p&gt;
+&lt;p&gt;We recommend using Python 3.6 but the tutorial material should also work
+with older Python versions (including Python 2.7, but please please
+consider using Python 3.6 instead).&lt;/p&gt;
+&lt;p&gt;In addition you can also install
+&lt;a class="reference external" href="https://scikit-optimize.github.io/"&gt;scikit-optimize&lt;/a&gt; (if you use a
+conda environment, you need to first &lt;tt class="docutils literal"&gt;conda install pip&lt;/tt&gt; and then
+&lt;tt class="docutils literal"&gt;pip install &lt;span class="pre"&gt;scikit-optimize&lt;/span&gt;&lt;/tt&gt;) in that environment. scikit-optimize
+has a dependency on scikit-garden which does not yet provide any binary
+package and can fail to install automatically from source on systems
+that lack a properly configured C/C++ compiler. If you have trouble
+installing scikit-garden and scikit-optimize, don't worry you will be
+able to follow those sections on the video projector while still being
+able to run the exercises of the other sections that only require
+scikit-learn.&lt;/p&gt;
+&lt;p&gt;The notebooks will be published on
+&lt;a class="reference external" href="https://github.com/ogrisel/euroscipy_2017_sklearn"&gt;https://github.com/ogrisel/euroscipy_2017_sklearn&lt;/a&gt; (please update on
+Sunday evening or at the beginning of the tutorial assuming wifi is good
+enough).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Olivier Grisel</dc:creator><pubDate>Wed, 30 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-30:euroscipy-2017/scikit-learn-12.html</guid><category>tutorial</category><category>scikit-learn</category></item><item><title>Scikit-learn (2/2)</title><link>https://pyvideo.org/euroscipy-2017/scikit-learn-22.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Please install the following packages (either with pip or conda):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;scikit-learn 0.19.0 (along with numpy and scipy as dependencies)&lt;/li&gt;
+&lt;li&gt;pandas&lt;/li&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;jupyter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Check the scikit-learn version with:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+python -c &amp;quot;import sklearn; print(sklearn.__version__)&amp;quot;
+&lt;/pre&gt;
+&lt;p&gt;If you have an old version you can upgrade to scikit-learn 0.19.0 with
+&lt;tt class="docutils literal"&gt;conda update &lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; if you use conda or
+&lt;tt class="docutils literal"&gt;pip install &lt;span class="pre"&gt;-U&lt;/span&gt; &lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; otherwise.&lt;/p&gt;
+&lt;p&gt;We recommend using Python 3.6 but the tutorial material should also work
+with older Python versions (including Python 2.7, but please please
+consider using Python 3.6 instead).&lt;/p&gt;
+&lt;p&gt;In addition you can also install
+&lt;a class="reference external" href="https://scikit-optimize.github.io/"&gt;scikit-optimize&lt;/a&gt; (if you use a
+conda environment, you need to first &lt;tt class="docutils literal"&gt;conda install pip&lt;/tt&gt; and then
+&lt;tt class="docutils literal"&gt;pip install &lt;span class="pre"&gt;scikit-optimize&lt;/span&gt;&lt;/tt&gt;) in that environment. scikit-optimize
+has a dependency on scikit-garden which does not yet provide any binary
+package and can fail to install automatically from source on systems
+that lack a properly configured C/C++ compiler. If you have trouble
+installing scikit-garden and scikit-optimize, don't worry you will be
+able to follow those sections on the video projector while still being
+able to run the exercises of the other sections that only require
+scikit-learn.&lt;/p&gt;
+&lt;p&gt;The notebooks will be published on
+&lt;a class="reference external" href="https://github.com/ogrisel/euroscipy_2017_sklearn"&gt;https://github.com/ogrisel/euroscipy_2017_sklearn&lt;/a&gt; (please update on
+Sunday evening or at the beginning of the tutorial assuming wifi is good
+enough).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Olivier Grisel</dc:creator><pubDate>Wed, 30 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-30:euroscipy-2017/scikit-learn-22.html</guid><category>tutorial</category><category>scikit-learn</category></item></channel></rss>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_distributed-systems.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>Configuring uWSGI for Production: The defaults are all wrong</title><link href="https://pyvideo.org/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Peter Sperl</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Two years ago, we began migrating from a proprietary service framework
+to a WSGI-compliant one. We chose uWSGI as our host because of its
+performance and feature set. But, while powerful, uWSGI's defaults are
+driven by backward compatibility and are not ideal for new deployments.
+Powerful features can be overlooked due to the sheer magnitude of its
+feature set and spotty documentation. As we've scaled up the number of
+services hosted by uWSGI over the last year, we've had to tweak our
+standard configuration.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll present the base uWSGI configuration we use as a
+starting point for all services, as well as some tips to avoid known
+gotchas and provide a base level of defensiveness and high reliability.
+This base configuration makes use of several &amp;quot;no-cost&amp;quot; uWSGI features
+that help protect services from common, yet difficult to prevent issues
+-- some of which we discovered the hard way. We'll also talk about some
+programmatic uWSGI features which can be leveraged to improve
+reliability and improve outage response.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the topics we'll cover include:&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating memory leaks&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating stuck, hung, or infinitely looping processes&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing misconfigurations&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing wasted development effort&lt;/div&gt;
+&lt;div class="line"&gt;- Improving outage response&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Best Practice"></category><category term="Distributed Systems"></category><category term="Microservices"></category><category term="Web Servers and MicroFWs"></category><category term="failures/mistakes"></category></entry><entry><title>From HTTP to Kafka-based microservices</title><link href="https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Wojciech Rząsa</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/from-http-to-kafka-based-microservices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Communication"></category><category term="Distributed Systems"></category></entry><entry><title>Parallel computing in Python: Current state and recent advances</title><link href="https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Pierre Glaser</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Distributed Systems"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Building Data Workflows with Luigi and Kubernetes</title><link href="https://pyvideo.org/europython-2019/building-data-workflows-with-luigi-and-kubernetes.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Nar Kumar Chhantyal</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/building-data-workflows-with-luigi-and-kubernetes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will focus on how one can build complex data pipelines in
+Python. I will introduce Luigi and show how it solves problems while
+running multiple chain of batch jobs like dependency resolution,
+workflow management, visualisation, failure handling etc.&lt;/p&gt;
+&lt;p&gt;After that, I will present how to package Luigi pipelines as Docker
+image for easier testing and deployment. Finally, I will go through way
+to deploy them on Kubernetes cluster, thus making it possible to scale
+Big Data pipelines on- demand and reduce infrastructure costs. I will
+also give tips and tricks to make Luigi Scheduler play well with
+Kubernetes batch execution feature.&lt;/p&gt;
+&lt;p&gt;This talk will be accompanied by demo project. It will be very
+beneficial for audience who have some experience in running batch jobs
+(not necessarily in Python), typically people who work in Big Data
+sphere like data scientists, data engineers, BI devs and software
+developers. Familiarity with Python is helpful but not needed.&lt;/p&gt;
+</summary><category term="Architecture"></category><category term="Big Data"></category><category term="Data"></category><category term="Distributed Systems"></category><category term="Scaling"></category></entry><entry><title>How To Build a Python Microservice Without Losing a Job</title><link href="https://pyvideo.org/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Anton Caceres</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarcastic talk, sharing real-life experience on both technical and
+social aspects of doing an architecture migration to microservices
+without losing a job.&lt;/p&gt;
+&lt;p&gt;Any change in software architecture is a significant time investment.
+Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;I would like to share typical pitfalls of choosing a framework stack,
+communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+</summary><category term="Architecture"></category><category term="Best Practice"></category><category term="Communication"></category><category term="Distributed Systems"></category><category term="Microservices"></category></entry><entry><title>Testing Microservices: fast and with confidence</title><link href="https://pyvideo.org/europython-2019/testing-microservices-fast-and-with-confidence.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Stephan Jaensch</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/testing-microservices-fast-and-with-confidence.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A main advantage of microservices is improved developer velocity. One
+roadblock to achieving it is giving developers the confidence that their
+changes are correct and safe, which is a challenging problem in such a
+distributed architecture. Typical approaches involve relying on
+automated end- to-end testing, which is costly to set up, develop tests
+for and run.&lt;/p&gt;
+&lt;p&gt;In this talk I will explore an approach to testing that does not require
+the presence of any external dependencies (not even &amp;quot;fake&amp;quot; or &amp;quot;test
+double&amp;quot; implementations of them), but provides many of the benefits of
+an end-to-end test. Come by to learn about how we can use a downstream
+service's API specification to make sure the system under test interacts
+with it in the correct way (&amp;quot;contract testing&amp;quot;) - a key ingredient
+missing from most unit or integration test setups. We'll then go even
+further to cover testing scenarios that previously could only be covered
+with end-to-end tests: how to maintain and validate state of your
+downstream dependencies.&lt;/p&gt;
+</summary><category term="Distributed Systems"></category><category term="Microservices"></category><category term="Testing"></category><category term="python"></category></entry><entry><title>Implementing distributed systems with Consul</title><link href="https://pyvideo.org/pycon-sk-2018/implementing-distributed-systems-with-consul.html" rel="alternate"></link><published>2018-03-10T00:00:00+00:00</published><updated>2018-03-10T00:00:00+00:00</updated><author><name>Matúš Valo</name></author><id>tag:pyvideo.org,2018-03-10:pycon-sk-2018/implementing-distributed-systems-with-consul.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Developing distributed systems is hard. Implementing distributed system
+from scratch requires knowledge of specialized algorithms and
+programming techniques. Consul is distributed system which enables us to
+build distributed system only by using Consul HTTP API. In our
+presentation, we are going to show basic concepts of consul, building
+our own consul cluster and showing how consul can be used for
+implementing distributed system. Our discussion will include also
+showing how we can benefit from consul even when using already existing
+python distributed components.&lt;/p&gt;
+</summary><category term="Consul"></category><category term="Distributed systems"></category><category term="PyCon SK"></category><category term="Python"></category></entry></feed>

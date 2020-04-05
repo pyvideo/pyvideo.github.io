@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 02 Feb 2016 00:00:00 +0000</lastBuildDate><item><title>Life of a Python program</title><link>https://pyvideo.org/pycon-es-2015/life-of-a-python-program.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sometimes is good to know what's happening under the hood,
+this talk will explain how CPython works internally since
+we type &lt;cite&gt;python myprogram.py&lt;/cite&gt; until our code is finally executed
+explaining the process that CPython does to run our programs.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is explain people how to explore the code
+of the interpreter itself using some common tools and let regular
+Python developers that aren't used to work with C lose the fear
+about looking under the hood.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-02-02:pycon-es-2015/life-of-a-python-program.html</guid><category>Track Básico</category><category>CPython</category></item><item><title>Extending Python</title><link>https://pyvideo.org/pycon-es-2015/pycon-es-2015-extending-python-francisco-fernandez-castano-track-basico.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is a great language, but there are occasions where we need access to low level operations or connect with some database driver written in C or we need to overcome to some speed boottleneck in Python due to some limitation in the language, like NumPy or Scikit-learn do, using extensions.&lt;/p&gt;
+&lt;p&gt;With the FFI(Foreign function interface) we can connect Python with other languages like C, C++ and even Rust or Fortran.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-02-02:pycon-es-2015/pycon-es-2015-extending-python-francisco-fernandez-castano-track-basico.html</guid><category>Track Básico</category><category>ffi</category></item><item><title>Knowing your garbage collector</title><link>https://pyvideo.org/europython-2015/europython-2015-francisco-fernandez-castano-knowing-your-garbage-collector.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Francisco Fernández Castaño - Knowing your garbage collector
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;As Python programmers we're used to program without taking care about allocating
+memory for our objects and later on freeing them, Python garbage collector
+takes care of this task automatically for us.&lt;/p&gt;
+&lt;p&gt;Garbage collection is one of the most challenging topics in computer science,
+there are a lot of research around the topic and different ways to tackle
+the problem.&lt;/p&gt;
+&lt;p&gt;Knowing how our language does this process give us a better understanding
+of underlying interpreter and allow us to know why problems like cycles
+can happen in CPython interpreters.&lt;/p&gt;
+&lt;p&gt;So, this talk aims to be and introduction to the topic and a walkaround
+through different approaches followed in CPython and PyPy:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Generational Reference counting with cycles detector on CPython.&lt;/li&gt;
+&lt;li&gt;Incremental version of the MiniMark GC on PyPy.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Thu, 06 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-06:europython-2015/europython-2015-francisco-fernandez-castano-knowing-your-garbage-collector.html</guid></item><item><title>Graph Databases, a little connected tour</title><link>https://pyvideo.org/europython-2014/graph-databases-a-little-connected-tour.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;There are many kinds of NoSQL databases like, document databases,
+key-value, column databases and graph databases. In some scenarios is
+more convenient to store our data as a graph, because we want to extract
+and study information relative to these connections. In this scenario,
+graph databases are the ideal, they are designed and implemented to deal
+with connected information in a efficient way.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are many kinds of NoSQL databases like, document databases,
+key-value, column databases and graph databases. In some scenarios is
+more convenient to store our data as a graph, because we want to extract
+and study information relative to these connections. In this scenario,
+graph databases are the ideal, they are designed and implemented to deal
+with connected information in a efficient way. In this talk I'll explain
+why NoSQL is necessary in some contexts as an alternative to traditional
+relational databases. How graph databases allow developers model their
+domains in a natural way without translating these domain models to an
+relational model with some artificial data like foreign keys and why is
+more efficient a graph database than a relational one or even a document
+database in a high connected environment. Then I'll explain specific
+characteristics of Neo4J as well as how to use Cypher the neo4j query
+language through python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Wed, 23 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-23:europython-2014/graph-databases-a-little-connected-tour.html</guid></item><item><title>Extending Python, what is the best option for me?</title><link>https://pyvideo.org/europython-2014/extending-python-what-is-the-best-option-for-me.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python is a great language, but there are occasions where we need access
+to low level operations or connect with some database driver written in
+C. With the FFI(Foreign function interface) we can connect Python with
+other languages like C, C++ and even the new Rust. There are some
+alternatives to achieve this goal, Native Extensions, Ctypes and CFFI.
+I'll compare this three ways of extending Python.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk we will explore all the alternatives in cpython ecosystem
+to load external libraries. In first place we'll study the principles
+and how shared libraries work. After that we will look into the
+internals of CPython to understand how extensions work and how modules
+are loaded. Then we will study the main three alternatives to extend
+CPython: Native Extensions, Ctypes and CFFI and how to automate the
+process. Furthermore we will take a look to other python implementations
+and how we can extend it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-22:europython-2014/extending-python-what-is-the-best-option-for-me.html</guid></item><item><title>Extending Python</title><link>https://pyvideo.org/pycon-italia-2015/extending-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is a great language, but there are occasions where we need access
+to low level operations or connect with some database driver written in
+C or we need to overcome to some speed boottleneck in Python due to some
+limitation in the language, like NumPy or Scikit-learn do, using
+extensions. With the FFI(Foreign function interface) we can connect
+Python with other languages like C, C++ and even Rust or Fortran. There
+are some alternatives to achieve this goal, Native Extensions, Ctypes
+and CFFI. We’ll compare this three ways of extending Python and we’ll
+study pros and cons of each approach.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-05-29:pycon-italia-2015/extending-python.html</guid></item><item><title>Graph Databases, a little connected tour</title><link>https://pyvideo.org/pycon-italia-2015/graph-databases-a-little-connected-tour-0.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-05-29:pycon-italia-2015/graph-databases-a-little-connected-tour-0.html</guid></item><item><title>Knowing your Garbage collector</title><link>https://pyvideo.org/pycon-italia-2015/knowing-your-garbage-collector.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As Python programmers we’re used to program without taking care about
+allocating memory for our objects and later on freeing them, Python
+garbage collector takes care of this task automatically for us. Garbage
+collection is one of the most challenging topics in computer science,
+there are a lot of research around the topic and different ways to
+tackle the problem. Knowing how our language does this process give us a
+better understanding of underlying interpreter and allow us to know why
+problems like cycles can happen in CPython interpreters. So, this talk
+aims to be and introduction to the topic and a walkaround through
+different approaches followed in CPython and PyPy:&lt;/p&gt;
+&lt;p&gt;Generational Reference counting with cycles detector on CPython.
+Incremental version of the MiniMark GC on PyPy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Fernández Castaño</dc:creator><pubDate>Fri, 29 May 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-05-29:pycon-italia-2015/knowing-your-garbage-collector.html</guid></item></channel></rss>

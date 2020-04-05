@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pycon-italia-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-06-09T00:00:00+00:00</updated><entry><title>Cosa mi entusiasma nelle prossime release di Django</title><link href="https://pyvideo.org/pycon-italia-2015/cosa-mi-entusiasma-nelle-prossime-release-di-djan.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Riccardo Magliocchetti</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/cosa-mi-entusiasma-nelle-prossime-release-di-djan.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ci sono almeno tre feature di django 1.8 / 1.9 che mi entusiasmano. Non
+sono sono i template multipli o la possibilità di utilizzare i campi
+specializzati di postgres. Qualcuna di esse magari non finirà nemmeno
+nelle release notes. Ad alcune di esse ho collaborato direttamente e
+descriverò la mia esperienza nel contribuire a Django.&lt;/p&gt;
+</summary></entry><entry><title>CRAIS - Testing, everywhere</title><link href="https://pyvideo.org/pycon-italia-2015/crais-testing-everywhere.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Aniello Barletta</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/crais-testing-everywhere.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;During this talk I’ll show the architecture and the design pattern used
+to implement the CRAIS Appium broker.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CRAIS acts as an Appium (1) broker, in order to spawn Appium servers as
+selenium grid nodes with specific capabilities using:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;USB hotplug Mechanism for locally-connected devices, where CRAIS
+dinamically generate the node, registering itself to the hub,&lt;/li&gt;
+&lt;li&gt;RPC invocation, where CRAIS spawns ad-hoc appium server instances.
+The RPC method could be used to use remote android devices connected
+to the server using a reverse-ssh tunnel.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CRAIS is based on:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;ZODB object database for device storage (for both Hotplug &amp;amp; RPC),
+ConfigObj for configuration management, Pyro4, a library that enables
+to build applications in which objects can talk to each other over
+the network,&lt;/li&gt;
+&lt;li&gt;Cement as CLI framework.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CRAIS is implemented in order to use the same Object Database in both
+RPC &amp;amp; Hotplug mode.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Appium is an open source test automation framework for use with
+native, hybrid and mobile web apps, used in B! to integrate Android
+/ iOS testing in a QA automation infrastructure.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Prerequisites:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Selenium GRID specifications&lt;/li&gt;
+&lt;li&gt;Acceptance testing knowledge&lt;/li&gt;
+&lt;li&gt;Python multithreading &amp;amp; subprocess32 modules usage&lt;/li&gt;
+&lt;/ol&gt;
+</summary></entry><entry><title>DevOps Security — Protect Your Application From Being Owned</title><link href="https://pyvideo.org/pycon-italia-2015/devops-security-protect-your-application-from-b.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Justin Mayer</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/devops-security-protect-your-application-from-b.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In addition to outlining strategies for proper configuration of
+unattended security updates, this talk briefly covers how to maintain
+the security of Docker container environments, where the above
+strategies generally do not apply. In such environments, an entirely
+different approach and workflow is usually required.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Heartbleed, Shellshock, POODLE, GHOST… With severe security
+vulnerabilities on the rise, how can developers protect the systems used
+to deploy their applications? Unattended package upgrades can help, but
+only if they are properly set up and monitored. Some of the challenges
+include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;many popular virtual private server (VPS) providers do not install or
+enable automatic security updates in their OS images&lt;/li&gt;
+&lt;li&gt;“unattended-upgrades” on Debian-based systems installs automatic
+security updates but does not actually enable them, potentially
+putting unsuspecting users at risk&lt;/li&gt;
+&lt;li&gt;some security updates (e.g., kernel-level) require a server reboot to
+take effect, and yet users often don’t realize this until the next
+time they log in, resulting in a system that is vulnerable in the
+interim&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>DjangoCMS Best Practices</title><link href="https://pyvideo.org/pycon-italia-2015/djangocms-best-practices.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Iacopo Spalletti</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/djangocms-best-practices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ci sono almeno tre feature di django 1.8 / 1.9 che mi entusiasmano. Non
+sono sono i template multipli o la possibilità di utilizzare i campi
+specializzati di postgres. Qualcuna di esse magari non finirà nemmeno
+nelle release notes. Ad alcune di esse ho collaborato direttamente e
+descriverò la mia esperienza nel contribuire a Django.&lt;/p&gt;
+</summary></entry><entry><title>Kivy RAD Python per lo sviluppo di applicazioni mobile e non solo.</title><link href="https://pyvideo.org/pycon-italia-2015/kivy-rad-python-per-lo-sviluppo-di-applicazioni-m.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Davide Corio</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/kivy-rad-python-per-lo-sviluppo-di-applicazioni-m.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kivy è un RAD Python per lo sviluppo di applicazioni NUI (Natural User
+Interface) cross-platform, caratterizzato dalla possibilità di creare
+applicazioni per Android ed iOS oltre che per i principali ambienti
+desktop. Scopriamo qualcosa di più su Kivy e sulle sue potenzialità.&lt;/p&gt;
+</summary><category term="kivy"></category></entry><entry><title>Managing Docker with Python</title><link href="https://pyvideo.org/pycon-italia-2015/managing-docker-with-python.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Giancarlo Fanelli</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/managing-docker-with-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk gives an overview about the Python modules that allow you to
+interact with Docker.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Looking at the most successful open source projects we have been
+seriously impressed by the importance of Docker: it is positively
+revolutionizing the DevOps industry. Docker is a valid alternative to
+the traditional virtual machines and it is redefining the IT service
+deployment.&lt;/p&gt;
+&lt;p&gt;Thanks to the available Docker APIs, we have witnessed a remarkable
+proliferation of tools based on the same APIs to efficiently manage
+virtual infrastructures: a place of honor, among of all of these, is
+reserved to the libraries and tools written in Python.&lt;/p&gt;
+&lt;p&gt;This talk is divided into two parts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The first part provides an introduction to Docker by illustrating a
+typical use case: a network of micro-services aimed to manage a web
+application.&lt;/li&gt;
+&lt;li&gt;The second part goes into detail on how to write Python code which
+will be able to orchestrate Docker images and containers.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Modern Python Patterns and Idioms</title><link href="https://pyvideo.org/pycon-italia-2015/modern-python-patterns-and-idioms.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Alex Martelli</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/modern-python-patterns-and-idioms.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;As Python grows, the problem spaces we address keep shifting, and best
+practices for software development mature, so does the set of
+best-of-breed patterns and idioms change: some classics fading, new
+stars emerging. This talk helps fill the gap between yesterday’s good
+old Python, and tomorrow’s glittering vistas.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python itself has grown to encompass some classic idioms, such as
+Decorate-Sort-Undecorate, AKA DSU, begetting the widespread key=
+argument to most functions related to ordering – but not quite all of
+them: heapq, for example, still mostly lacks key= – so, we also show
+what idioms to use with this and similar modules.&lt;/p&gt;
+&lt;p&gt;Lists have long been one of Python’s strengths, and they’re of course
+still precious – but many kinds of specialized containers have emerged,
+and it’s important to know how to choose among them, and when and how to
+roll your own. More important still, iterators have grown into
+prominence, and very often they’ll be the best choice – and they come
+with a large set of relevant patterns and idioms.&lt;/p&gt;
+&lt;p&gt;The tectonic shift that’s taking us from classic to modern Python goes
+even deeper – even the dominance of good old duck typing is threatened!
+Specifically, in many cases, we use, instead, goose typing – checking
+against an abstract base class – and, as type annotations slowly emerge,
+they reinforce this general tendency.&lt;/p&gt;
+&lt;p&gt;These, and a miscellanea of smaller patterns and idioms (concerning I/O,
+best uses of dicts and other specialized mappings, async operations,
+testing, …), are fast becoming indispensable parts of the Proficient
+Pythonista’s repertoire.&lt;/p&gt;
+</summary></entry><entry><title>Test Driven Deployment with Nose Test and IPython</title><link href="https://pyvideo.org/pycon-italia-2015/test-driven-deployment-with-nose-test-and-ipython.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/test-driven-deployment-with-nose-test-and-ipython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Devops gospel is widespread, but what happens to big legacy
+infrastructures? The switch to Continuous Delivery is hard:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;customers are reluctant to disruptive changes;&lt;/li&gt;
+&lt;li&gt;old operation teams must adapt to new technologies.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’ll show how a light Test Driven approach to system delivery allowed
+us to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;reduce software updates time;&lt;/li&gt;
+&lt;li&gt;eliminate maintenance issues;&lt;/li&gt;
+&lt;li&gt;contribute to open source;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The operation team had no troubles thanks to the fast learning curve of
+python.&lt;/p&gt;
+&lt;p&gt;The library we contribute has been included in Red Hat 389 Directory
+Server.&lt;/p&gt;
+</summary></entry><entry><title>Una guida per lo sviluppo collaborativo</title><link href="https://pyvideo.org/pycon-italia-2015/una-guida-per-lo-sviluppo-collaborativo.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Riccardo Magliocchetti</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/una-guida-per-lo-sviluppo-collaborativo.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Lo scopo del talk è quello tramite esempi reali di fornire le basi
+tecniche (ma non solo) per poter sviluppare con efficacia free software
+in collaborazione con gli altri. Prerequisiti: conoscenza base di git&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Github ha reso lo sviluppo di software in modo collaborativo alla
+portata di tutti. E questo è grandioso! Lo sviluppo collaborativo però
+ha delle regole non scritte, diverse da quelle abituali dello sviluppo
+di software proprietario fatto all’interno delle mura aziendali.&lt;/p&gt;
+</summary></entry><entry><title>Understanding PyPy</title><link href="https://pyvideo.org/pycon-italia-2015/understanding-pypy.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/understanding-pypy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyPy is an alternative implementation of CPython implemented in Python.
+Understanding concepts like RPython, JIT, PyPy garbage collection and
+other core concepts can be difficult for newcomers to understand. This
+talk is aimed to introduce all of these concepts to help better
+understand how PyPy works.&lt;/p&gt;
+</summary></entry><entry><title>V-ERAS-14: Una missione di esplorazione marziana in realtà virtuale</title><link href="https://pyvideo.org/pycon-italia-2015/v-eras-14-una-missione-di-esplorazione-marziana.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Ezio Melotti</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/v-eras-14-una-missione-di-esplorazione-marziana.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;European MaRs Analogue Station for Advanced Technologies Integration
+(ERAS) è un programma guidata dall’Italian Mars Society (IMS), il cui
+obiettivo principale è fornire un ambiente di test per studiare
+operazioni sul campo in preparazione a una missione su Marte. Prima
+della sua costruzione, IMS ha iniziato lo sviluppo di una simulazione
+immersiva in realtà virtuale (VR) della stazione ERAS (V-ERAS). Il setup
+iniziale di V-ERAS si basa sui seguenti elementi chiave: - Simulazione
+della stazione ERAS usando un virtual reality headset - Full body
+tracking - Integrazione con un treadmill omnidirezionale - Supporto per
+il monitoraggio della salute dei membri della crew - Supporto per utenti
+multipli Fin dall’inizio, Python è stato una delle tecnologie chiave che
+ci ha permesso di sviluppare il sistema, grazie anche a un team
+internazionale di studenti che hanno partecipato con l’IMS a Google
+Summer of Code. Nel Dicembre 2014, quattro astronauti virtuali hanno
+condotto per una settimana un programma di simulazioni immersive in
+realtà virtuale durante la prima missione V-ERAS (V-ERAS-14). La
+presentazione mostrerà i risultati della missione V-ERAS-14,
+integrandoli con il ruolo che Python ha avuto nel supportare
+l’infrastruttura del progetto.&lt;/p&gt;
+</summary></entry><entry><title>Writing an 8086 emulator</title><link href="https://pyvideo.org/pycon-italia-2015/writing-an-8086-emulator.html" rel="alternate"></link><published>2015-06-09T00:00:00+00:00</published><updated>2015-06-09T00:00:00+00:00</updated><author><name>Cesare Di Mauro</name></author><id>tag:pyvideo.org,2015-06-09:pycon-italia-2015/writing-an-8086-emulator.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An 8086 emulator written in Python is presented. The talk gives a brief
+introduction to the 8086 architecture, the pitfalls on emulating it, and
+the challenge to have a working model ready to be quickly ported in C
+(which is the final goal of the project). Some classes are presented
+that try to “mimic” the C memory pointers handling, to make the port
+easier. A set of APIs is shown, which are exposed to the emulator
+“consumers” (applications, drivers, or kernels). Finally, some words are
+spent about how testing is done and can be reused by the C version as
+well.&lt;/p&gt;
+</summary></entry><entry><title>*aaS Royal Rumble - Q&amp;A</title><link href="https://pyvideo.org/pycon-italia-2015/aas-royal-rumble-qa.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Alex Martelli</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/aas-royal-rumble-qa.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;La sessione di Q&amp;amp;A ti permetterà di approfondire le differenze tra le
+varie piattaforme.&lt;/p&gt;
+</summary></entry><entry><title>Automatizzare i deploy di applicazioni Django con Ansible</title><link href="https://pyvideo.org/pycon-italia-2015/automatizzare-i-deploy-di-applicazioni-django-con.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Maurizio Branca</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/automatizzare-i-deploy-di-applicazioni-django-con.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il talk descrive come con Ansible sia possibile effettuare deploy
+frequenti ed affidabili di applicazioni web basate su Django. Il deploy
+di un applicazione web richiede di effettuare una serie di operazioni
+nella corretta sequenza. Effettuando le operazioni in modo manuale la
+probabilità di commettere errori aumenta all’aumentare di progetti
+portati avanti in parallelo o al verificarsi di situazioni di pressione
+e stanchezza. Anche in assenza di errori ci si può trovare a spendere il
+proprio tempo poco efficacemente ed in modo tedioso, ripetetendo più e
+più volte sempre delle semplici operazioni manuali. Viene descritto cosa
+sia Ansible, quali sono i suoi elementi/componenti costitutivi
+(Playbook, Play, Inventory, Task, Module). Viene sottolineata la
+necessità di uno standard di progetto e di un workflow uniforme per
+operarvi in modo efficace. Per rendere accessibili le operazioni di
+deploy anche ai membri non specializzati del team viene proposto
+l’utilizzo di un chat bot. L’uso di Ansible permette di automatizzare
+operazioni altrimenti manuali, ripetitive ed error prone. In particolare
+il processo di deploy rimane ben descritto e sempre aggionato come Play
+di Ansible e non affidato alla mente di operatori o documentazione a
+rischio obsolescenza.&lt;/p&gt;
+</summary></entry><entry><title>Baking Beaker perchè sessioni e caching possono ancora convivere</title><link href="https://pyvideo.org/pycon-italia-2015/baking-beaker-perche-sessioni-e-caching-possono.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Alessandro Molina</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/baking-beaker-perche-sessioni-e-caching-possono.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Beaker è probabilmente la più diffusa soluzione cross-framework per la
+gestione delle sessioni e della cache nell’ambito web. Nato nel 2005
+dagli autori di SQLAlchemy e Pylons è stato sempre mantenuto al fianco
+del framework Pylons. Dopo la fine di Pylons a favore di Pyramid il suo
+futuro è diventato incerto e, per quanto sia ancora oggi molto usato al
+fianco di Bottle, Flask, TurboGears e spesso anche Pyramid, alcuni dei
+limiti dovuti all’incompatibilità con Python3 ed alcune scelte
+architetturali hanno portato gli utenti ad avvicinarsi a soluzioni
+alternative. Nel 2015 la manutenzione di Beaker è stata passata da Ben
+Bangert al team di TurboGears che ha riscritto tutta la compatibilità
+con Python3 rendendo Beaker un progetto nativo Python3 e risolto alcuni
+dei bugs di più lunga data. Il talk mira a mostrare l’esperienza e le
+problematiche venute alla luce nei quasi 10 anni di vita del framework
+ed illustrare come si intende ridare forza al progetto risolvendo alcuni
+dei limiti architetturali pricinpali e quali sono state le scelte
+“sbagliate”. Lo scopo è diffondere quali possono essere le problematiche
+e le false supposizioni che esistono nell’ambito del caching e della
+gestione delle sessioni facendo tesoro delle esperienze fatte dal
+progetto Beaker nel corso della sua vita.&lt;/p&gt;
+</summary></entry><entry><title>Bokeh è qui! Visualizzazioni interattive per Python (e amici)</title><link href="https://pyvideo.org/pycon-italia-2015/bokeh-e-qui-visualizzazioni-interattive-per-pyth.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Fabio Pliger</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/bokeh-e-qui-visualizzazioni-interattive-per-pyth.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bokeh e’ un [nuovo] framework grafico per la visualizzazione di grandi
+dataset [Python (e non solo!)] con supporto nativo per le piú recenti
+tecnologie web. Lo scopo di questo ampio ed ambizioso progetto e’ di
+fornire uno strumento elegante e sintetico per la costruzione di
+infografiche, charts e interfacce interattive HTML nello stile di
+Protovis/D3 e allo tempo fornendo iterattivita’ di altissime prestazioni
+su enormi quantità di dati. Il progetto, arrivando alla versione 0.8, ha
+raggiunto livelli di funzionalità e stabilità tali da destare enorme
+interesse e l’utilizzo non solo nella communità scientifica, tanto da
+essere scelto da Facebook come backend per la creazione di plot e
+immagini su iTorch. Il talk presenterà la particolare architettura di
+Bokeh, sulle varie feature e API, concludendo, infine, con una serie di
+esempi pratici di applicazioni e piccoli script cercando di esporre il
+più possibile le sue particolarità e potenzialità.&lt;/p&gt;
+</summary></entry><entry><title>Bulding a social network analysis</title><link href="https://pyvideo.org/pycon-italia-2015/bulding-a-social-network-analysis.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Luca Mearelli</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/bulding-a-social-network-analysis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Every conversation has a structure. The network formed by the persons
+who interact in the conversations inside an online community can thus be
+analysed with the tools of the network science to understand their
+characteristics. Enriching online conversations with social network
+analysis we hope to be able to give community moderators tools that
+could help them to build better communities and guide the collective
+intelligence processes inside them. The great vision in this is to be
+able to contribute to building the engines that could help us to build
+effective platforms for participatory democracy ( a better overview on
+these theme is explained by my colleague Alberto Cottica in this TEDx
+talk: &lt;a class="reference external" href="https://www.youtube.com/watch?v=KKrM2c-ww_k"&gt;https://www.youtube.com/watch?v=KKrM2c-ww_k&lt;/a&gt; )&lt;/p&gt;
+&lt;p&gt;Edgesense is our attempt at making tools for social network analysis
+accessible to all those that could gain the most from them but maybe did
+not yet know their potential. Edgesense is built around a set of scripts
+that process the community data and extract the most relevant network
+metrics and the network structure and a dashboard that is able to
+present them giving a clear view of them. Through the dashboard
+community managers can for the first time see in a glimpse who is
+talking to who, which users are central to the community and those who
+are on the periphery. They can see which sub-communities are developing
+inside the larger online conversation and who is acting as a bridge
+between them.This is very useful to guide the conversation or to
+determine which users have the most authority (through measures of
+centrality or “pagerank&amp;quot;)&lt;/p&gt;
+&lt;p&gt;Python has been central to the development of Edgesense it has made
+possible to create a processing pipeline that takes the data from
+various sources (Drupal community sites, twitter conversations, mailing
+lists data) and builds the network of interactions among the users.
+Python has also enabled us to choose from a very rich library of social
+network analysis algorithms to calculate the metrics that we are
+presenting in the dashboard to help understand the social interactions.&lt;/p&gt;
+&lt;p&gt;During this talk we’ll look at which choices we were required when
+building a data processing application that takes real-life data,
+extracts useful informations and prepares t for visualisation. We’ll see
+a primer on the network science required to interpret the structure of
+the users community and how the algorithms and the metrics were chosen.
+We’ll also present the challenges that we are facing to extend Edgesense
+to ever larger communities.&lt;/p&gt;
+&lt;p&gt;The presentation will be useful to both developers interested in using
+python to do social network analysis and to those already skilled in it
+which could find inspiration in the problems we are trying to solve with
+Edgesense.&lt;/p&gt;
+&lt;p&gt;Edgesense has been developed by Wikitalia within the CATALYST EC project
+on collective intelligence and it is available as open source software:
+&lt;a class="reference external" href="https://github.com/Wikitalia/edgesense"&gt;https://github.com/Wikitalia/edgesense&lt;/a&gt; (an example of a live dashboard
+is available here: &lt;a class="reference external" href="http://matera2019.edgesense.spazidigitali.com/"&gt;http://matera2019.edgesense.spazidigitali.com/&lt;/a&gt; )&lt;/p&gt;
+</summary></entry><entry><title>Don't let your passion kill your motivation</title><link href="https://pyvideo.org/pycon-italia-2015/dont-let-your-passion-kill-your-motivation.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/dont-let-your-passion-kill-your-motivation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If I would ask you to sit down and do some work right now (assuming
+you’re not doing it), how would you feel about it? Would you be
+motivated enough to take off your laptop and start coding? Or would you
+rather do something else? Programming is more about other things than
+just coding. Great books - like The Passionate Programmer by Chad Fowler
+- have eloquently explained the different perspectives there are about
+what programming is and how you can take the most out of your skills.
+Nonetheless, programming is even more than that. Programming is more
+than just producing results and it’s definitely more than just being
+“smart”. In fact, programming is probably more about how to keep
+programming than actually doing it. Likely, one of the things we,
+developers, struggle the most with is motivation. Therefore, join me in
+this talk while I share some of my motivational ups and downs and walk
+you through some of the things that have worked for me along the way.&lt;/p&gt;
+</summary></entry><entry><title>ES6 the Python parts</title><link href="https://pyvideo.org/pycon-italia-2015/es6-the-python-parts.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Stefano Bossi</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/es6-the-python-parts.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Javascript sta cambiando molto negli ultimi anni e non è più il
+linguanggio realizzato in 2 settimane da Brendan Eich. Tra list
+comprehension, iterators e generators sembra somigliare sempre di più al
+nostro amato Python.&lt;/p&gt;
+</summary></entry><entry><title>Healing a shell-shocked infrastructure, in a couple of hours, from your bed.</title><link href="https://pyvideo.org/pycon-italia-2015/healing-a-shell-shocked-infrastructure-in-a-coup.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Michele Finelli</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/healing-a-shell-shocked-infrastructure-in-a-coup.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In September 2014 a very severe vulnerabilty in bash was discovered,
+affecting any Linux system on Earth. For Internet-facing services it was
+necessary to patch the servers as soon as possible: the time was running
+low and our hero (me) was lying in a bad, due to a painful back-ache … a
+disaster was looming … This is an account of how everything ended well,
+due to an appropriate management of the server infrastructure. A lot of
+procedures had already been automated with Fabric, and it was at the end
+very easy - even if quite stressful - to update everything in a couple
+of hours (~150 hosts in various configurations / locations). The talk is
+a real case, and its objective is to help people understanding the
+importance of proper server automation and management. Basic Python
+knowledge will be enough to understand the presentation, all the
+relevant information about Fabric will be explained during the talk.&lt;/p&gt;
+</summary></entry><entry><title>HSTORE JSON e JSONB dati non strutturati ad alter performance</title><link href="https://pyvideo.org/pycon-italia-2015/hstore-json-e-jsonb-dati-non-strutturati-ad-alter.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Marco Nenciarini</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/hstore-json-e-jsonb-dati-non-strutturati-ad-alter.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nelle ultime release di PostgreSQL è stato fatto un enorme lavoro sui
+dati non strutturati, culminato con l’aggiunta del tipo JSONB. Insieme a
+JSON, HSTORE e array fornisce una potenza mai vista per le proprie
+applicazione web e non solo. In questo talk si passeranno in rassegna
+alcuni dei possibili casi d’uso e si illustreranno i vantaggi delle
+varie possibilità.&lt;/p&gt;
+</summary></entry><entry><title>Importazione dati in Django</title><link href="https://pyvideo.org/pycon-italia-2015/importazione-dati-in-django.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Gianluca Esposito</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/importazione-dati-in-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;L’importazione dati da una fonte esterna, in un Database già esistente,
+è un task che nasconde numerose insidie. Generalmente, i dati da
+importare risiedono in un file csv, o comunque possono essere ricondotti
+a questo formato. Esistono numerose app django che si occupano di
+importazione dati da csv, ma purtroppo non esiste ancora un prodotto che
+sia in grado di trattare la grande varietà di scenari possibili. il talk
+presenterà scenari comuni di importazione dati, concentrandosi sui casi
+che si presentano più di frequente e mostrerà come possano essere
+risolti e schedulati, in maniera sufficientemente economica, utilizzando
+una app Django creata dall’autore. Verranno anche parzialmente discussi
+casi di reingegnerizzazione di applicazioni esistenti con l’importazione
+di dump di DB con uno Schema differente .&lt;/p&gt;
+</summary></entry><entry><title>Lessons learned about testing and TDD</title><link href="https://pyvideo.org/pycon-italia-2015/lessons-learned-about-testing-and-tdd.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Marco Buttu</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/lessons-learned-about-testing-and-tdd.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Prima o poi, sperabilmente, il nostro software andrà in produzione.
+Questo è il momento in cui gli errori di gioventù si pagano cari, senza
+alcuno sconto. Se non abbiamo scritto regression test, siamo veramente
+nei guai, guai seri! Se li abbiamo scritti, ma senza adottare il TDD,
+probabilmente aumenterà il tempo necessario per il bug fix e la
+manutenzione, sia perché non abbiamo massimizzato la copertura del
+codice, sia perché i test risulteranno complessi e con duplicazioni. In
+questo talk l’autore parlerà dei suoi errori di gioventù, del perché ha
+adottato il TDD come disciplina per lo sviluppo e di quelle che
+considera le best practice. Verranno mostrati degli esempi di test di
+accettazione, funzionali, di integrazione e unitari. Esempi reali, ma
+semplici ed eloquenti, volti ad evidenziare non solo l’utilità dei test,
+ma anche quella di scriverli prima del codice. Il contesto è quello del
+Sardinia Radio Telescope. Slides:
+&lt;a class="reference external" href="http://marco-buttu.github.io/pycon_testing/"&gt;http://marco-buttu.github.io/pycon_testing/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Machine Learning Recipes for Large Scale problems</title><link href="https://pyvideo.org/pycon-italia-2015/machine-learning-recipes-for-large-scale-problems.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/machine-learning-recipes-for-large-scale-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine Learning focuses on constructing algorithms for making
+predictions from data. These algorithms usually require huge amount of
+data to analyse, thus demanding for high computational costs and
+requiring easily scalable solutions to be effectively applied. These
+factors favoured a more and more increasing interest in scaling up
+machine learning applications.&lt;/p&gt;
+&lt;p&gt;Scikit-learn is one of the most popular machine learning library in
+Python, providing implementations for several machine learning methods,
+along with datasets and (performance) evaluation algorithms.&lt;/p&gt;
+&lt;p&gt;In this talk some recipes to scale up machine learning algorithms with
+scikit-learn will be presented. The talk will go over several examples
+and case studies that will be presented in a problem-to-solution way in
+order to likely engage discussions during and after the talk.&lt;/p&gt;
+&lt;p&gt;The talk is intended for an intermediate level of audience. It requires
+(very) basic math skills and a good knowledge of the Python language.
+Good knowledge of the numpy and scipy packages is also a plus.&lt;/p&gt;
+</summary></entry><entry><title>Messing up with PyMongo for fun and profit</title><link href="https://pyvideo.org/pycon-italia-2015/messing-up-with-pymongo-for-fun-and-profit.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Alessandro Molina</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/messing-up-with-pymongo-for-fun-and-profit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;BSON (Binary JSON) è il formato di rappresentazione dei dati usato
+internamente da MongoDB per la trasmissione e rappresentazione dei
+documenti salvati nel database. Ogni volta che si implementano delle API
+HTTP basate su MongoDB il driver (pymongo) riceve i dati in formato BSON
+e li deve convertire in un formato comprensibile da Python.
+Successivamente questi dati dovranno essere re-encodati nel formato
+usato dalle nostre API, solitamente JSON. Per qualcosa come una API REST
+che solitamente è solo un proxy ai dati effettivi, l’encoding/decoding
+dance può arrivare a pesare pesantemente sulle performance riducendo il
+throughput del nostro API Server. La presentazione mira a mostrare come
+studiando il funzionamento interno di PyMONGO ed alterandone alcuni
+flussi si può evitare in molti casi questo balletto e guadagnare
+sensibilmente in numero di richieste al secondo servite dal nostro
+ambiente.&lt;/p&gt;
+</summary></entry><entry><title>Python 3 for Data Science: what works, what doesn't</title><link href="https://pyvideo.org/pycon-italia-2015/python-3-for-data-science-what-works-what-doesn.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/python-3-for-data-science-what-works-what-doesn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the last years, the Python programming language has engaged a major
+renovation, and Python 3.x is going to be the next generation reference
+of the language. However, despite the community strives to support the
+language switch among pythonistas, Python 3 is not yet the real de-facto
+reference version of the language and Python 2.x is still on the go.
+Moreover, as for the scientific Python community, only few years ago
+most of the scientific python packages only (or mainly) supported Python
+2. In this talk we will analyse how far the support to Python 3 extent
+to the Python scientific packages, emphasising what actually works and
+what doesn’t. The general claim of this talk is that, from a technical
+perspective, Python 3 is a more mature language from many point of view
+(w.r.t. Python 2), and the scientific community is now able more than
+ever to switch to Python 3. However, so far, the switch has not been
+done yet. Thus, some reflections on this “particular” community of
+pythonistas will conclude the talk in order to stimulate the discussion
+and derive together possible solutions and “workaround” to support this
+change.&lt;/p&gt;
+</summary></entry><entry><title>Si può fare E Commerce con Django?</title><link href="https://pyvideo.org/pycon-italia-2015/si-puo-fare-e-commerce-con-django.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Marco Badan</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/si-puo-fare-e-commerce-con-django.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Ci sono molte soluzioni per il commercio elettronico al di fuori di
+Python. Vi racconterò perché per me è meglio fare e-commerce con Python
+e Django anche per piccoli progetti. Farò un’introduzione a django-oscar
+una soluzione e-commerce per Django.&lt;/p&gt;
+</summary></entry><entry><title>Test-driven machine learning with scikit-learn</title><link href="https://pyvideo.org/pycon-italia-2015/test-driven-machine-learning-with-scikit-learn.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/test-driven-machine-learning-with-scikit-learn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine learning is an amazing research and application field, which
+perfectly matches math skills with coding abilities in order to define
+programs that are able to learn from data. Therefore, after having
+defined our own (mathematical) model, machine learning is about writing
+code - sometimes a lot of - to actually make the model to work. However,
+one point usually underestimated or omitted when dealing with machine
+learning algorithms is how to write good quality code.&lt;/p&gt;
+&lt;p&gt;Test-driven development (TDD) is one of the most popular agile methods,
+specifically designed to support developers in producing (potential)
+less-buggy code by writing tests before the actual code under test. The
+application of test-first programming principles to the implementation
+of Naive Bayes classifiers or Neural networks looks like a daunting
+challenge.&lt;/p&gt;
+&lt;p&gt;Conversely, the test-code-refactor cycle strategy founds its principles
+in the scientific method: make a proposition of validity, share results,
+work in feedback loops. Moreover, this kind of approach to tackle
+problems, in this particular case would also allow for a better
+understanding of how the whole learning model works under the hood.&lt;/p&gt;
+&lt;p&gt;In this talk, examples of Test-Driven implementations of some of the
+most famous machine learning algorithms will be presented using
+scikit-learn.&lt;/p&gt;
+&lt;p&gt;The talk is intended for an intermediate audience. The content of the
+talk is intended to be mostly practical, and code oriented. Thus a good
+proficiency with the Python language is required. Conversely, no prior
+knowledge about TDD nor Machine Learning algorithms is necessary to
+attend this talk.&lt;/p&gt;
+</summary></entry><entry><title>Testing di applicazioni Django con pytest</title><link href="https://pyvideo.org/pycon-italia-2015/testing-di-applicazioni-django-con-pytest.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Simone Dalla</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/testing-di-applicazioni-django-con-pytest.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django lo conosciamo. Scriviamo le nostre applicazione e nel mentre
+abbiamo la nostra suite di test automatizzati. Possibilmente seguiamo la
+disciplina del “test-driven development” e Django ci fornisce già una
+serie di strumenti per seguirla. Pytest si definisce “a mature
+full-featured Python testing tool” e io sono d’accordo. Vedremo come può
+aggiungere qualcosa, può integrarsi o perfino sostituire gli strumenti
+forniti da Django per scrivere ed effettuare i nostri tests.&lt;/p&gt;
+</summary></entry><entry><title>A little, multiplatform, pure python GUI</title><link href="https://pyvideo.org/pycon-italia-2015/a-little-multiplatform-pure-python-gui.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Davide Rosa</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/a-little-multiplatform-pure-python-gui.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nuova piattaforma, nuova GUI. Sempre la stessa storia. Quante volte vi è
+capitato di adattare un vostro script ad una nuova piattaforma, solo
+perché l’interfaccia utente non era supportata dal device di
+destinazione? E poi installa questo, installa quello e qualcosa non và…
+Bene, vi presento la mia GUI, 28Kb di puro python, puro stupendo e
+morbido python. E che dire della possibilità di accesso remoto
+all’interfaccia? Quanto sarebbe bello poter sviluppare su Android o
+Raspberry e dare comandi da remoto tramite il vostro PC? Certo, perché
+oltre ad essere multipiattaforma, la vostra nuova interfaccia è
+visualizzabile da qualunque dispositivo sulla rete (se voi lo vorrete
+ovviamente ;-) ) attraverso un comunissimo browser. Ve la presento.
+Link: github.com/dddomodossola/gui&lt;/p&gt;
+</summary></entry><entry><title>Asynchronous Web Development with Python 3</title><link href="https://pyvideo.org/pycon-italia-2015/asynchronous-web-development-with-python-3.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Anton Caceres</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/asynchronous-web-development-with-python-3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The asyncio module with updated chainable coroutines introduced with
+Python 3.4 was a game-changer for I/O management and asynchronous web
+development in Python. Even web frameworks like Tornado that already had
+an own asynchronous IO-loop implementation, can now take advantage of
+the subgenerator delegation syntax to provide a high degree of
+concurrency and responsiveness while keeping the simplicity of
+sequential code. This talk will focus on the new way of writing
+asynchronous code with Python 3, explaining the concept of futures,
+coroutines and ioloop. It will complete with a basic demo of running
+this code on Tornado, comparing its syntax and performance with other
+popular web frameworks.&lt;/p&gt;
+&lt;p&gt;It is also possible to present this topic in a workshop format. Contact
+me for details.&lt;/p&gt;
+</summary></entry><entry><title>Bokeh is here! Interactive Visualization for Python (and friends).</title><link href="https://pyvideo.org/pycon-italia-2015/bokeh-is-here-interactive-visualization-for-pyth.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Fabio Pliger</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/bokeh-is-here-interactive-visualization-for-pyth.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bokeh is a Python interactive visualization library for large datasets
+that natively uses the latest web technologies. Its goal is to provide
+elegant, concise construction of novel graphics in the style of
+Protovis/D3, while delivering high-performance interactivity over large
+data to thin clients. The talk will go through it’s design providing
+details of the different API layers (bottom to top) concluding with a
+comprehensive showcase of examples to expose many of the features that
+make Bokeh so powerful and easy.&lt;/p&gt;
+</summary></entry><entry><title>Breaking backwards compatibility The easy way</title><link href="https://pyvideo.org/pycon-italia-2015/breaking-backwards-compatibility-the-easy-way.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/breaking-backwards-compatibility-the-easy-way.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Say you have this piece of software that many people use. One day, you
+wake up and you have the urge to make them suffer. Well, there’s no
+better way to do so than breaking the software they’re using. In this
+talk, I’ll walk you through very good ways to do so by showing examples
+taken from experience - because experience is the only thing that
+matters (TM) - so that you’ll be able, by the time this talk ends, to do
+the same to your users. (P.S: If you’ve a kinder hearth, you can also do
+the exact oposite of what I’ll say and keep your users happy.)&lt;/p&gt;
+</summary></entry><entry><title>Building Successful APIs Overnight</title><link href="https://pyvideo.org/pycon-italia-2015/building-successful-apis-overnight.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Orlando Kalossakas</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/building-successful-apis-overnight.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hackathons have boomed, people attending such events have been consuming
+thousands of APIs to power their creative projects. However, not
+everyone can consume APIs like a boss. Companies spend hundreds of
+thousands of dollars in promoting and ensuring best practices are
+followed when building APIs. In this talk I will give you an overview of
+how to build a potentially successful API overnight, like hackathoneers
+love them and that they will consume with ease. A recipe for success as
+a takeaway from this talk will be successfully shared with the audience.&lt;/p&gt;
+</summary></entry><entry><title>Come creare API REST per tutti i gusti con Django OAuth Toolkit</title><link href="https://pyvideo.org/pycon-italia-2015/come-creare-api-rest-per-tutti-i-gusti-con-django.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Federico Frenguelli</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/come-creare-api-rest-per-tutti-i-gusti-con-django.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Il vostro backend ha bisogno di una API REST? Prendete una cucchiaiata
+di Django, mescolate bene con Django REST Framework e alla fine una
+bella spolverata di Django OAuth Toolkit per cucinare l’API perfetta in
+pochi minuti.&lt;/p&gt;
+</summary></entry><entry><title>Controllo di un dispositivo per la riabilitazione dell’arto superiore</title><link href="https://pyvideo.org/pycon-italia-2015/controllo-di-un-dispositivo-per-la-riabilitazione.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Matteo Malosio</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/controllo-di-un-dispositivo-per-la-riabilitazione.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Le moderne pratiche di neuroriabilitazione possono beneficiare di
+dispositivi robotici, progettati e realizzati per assistere il paziente
+e il personale medico durante la fase di recupero funzionale e
+cognitivo. Essi possono alleviare lo sforzo fisico del fisioterapista
+durante la terapia, rendere i pazienti parzialmente indipendenti durante
+gli esercizi, ottimizzare la disponibilità dei terapisti durante
+sessioni parallele di riabilitazione e rendere oggettiva la valutazione
+delle capacità motorie. Alcune cliniche hanno la possibilità di
+acquistare dispositivi costosi e complessi, ma questi stessi aspetti li
+rendono non adatti ad essere installati nella maggior parte dei centri
+di riabilitazione e presso le case dei pazienti. Per questi motivi è
+stato realizzato LINarm, un dispositivo robotico a basso costo dedicato
+alla riabilitazione dell’arto superiore. Esso sfrutta la tecnica FDM di
+stampa 3D per la realizzazione di alcuni componenti meccanici, un
+peculiare schema meccanico a rigidezza variabile ed un microcontrollore
+Arduino interfacciato ad un PC Linux-based per una soluzione di
+controllo flessibile ed economica. Il talk sarà relativo alla
+descrizione dell’architettura di controllo sviluppata, focalizzandosi
+sull’interfaccia utente realizzata in Python. Essa integra un layer per
+la comunicazione bidirezionale con la scheda Arduino, funzionalità di
+plot real-time 2D e 3D per il monitoraggio del dispositivo e per il
+feedback visivo, comandi grafici per un controllo interattivo e la
+possibilità di programmare esercizi di training riaiblitativo attraverso
+script Python. I requisiti richiesti sono un minimo background di
+conoscenza relativa al linguaggio Python ed alla piattaforma Arduino,
+oltre ad una discreta passione per i dispositivi elettromeccanici.&lt;/p&gt;
+</summary></entry><entry><title>Da e Verso Odoo importazione e sincronizzazione dei dati</title><link href="https://pyvideo.org/pycon-italia-2015/da-e-verso-odoo-importazione-e-sincronizzazione-d.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Francesco Apruzzese</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/da-e-verso-odoo-importazione-e-sincronizzazione-d.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;“Da e Verso Odoo: XML-RPC, Erppeek e Python” importazione e
+sincronizzazione dei dati come affrontare le necessità di importazione
+dei dati a seguito di una prima installazione, la sincronizzazione in
+ambienti dove sono presenti database da allineare.&lt;/p&gt;
+</summary></entry><entry><title>Data Structures Discipline with Python</title><link href="https://pyvideo.org/pycon-italia-2015/data-structures-discipline-with-python.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Fernando Masanori</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/data-structures-discipline-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Data Structures is traditionally a “bogeyman” discipline in Computer
+Science courses and has a high degree of failure. In FATEC São José dos
+Campos we are adopting a hybrid approach, with C and Python languages.
+The failure rate decreased from 85% (2008) to 12% (2014). The talk will
+be extensively illustrated with code in C and Python, addressing the
+various concepts taught in this course.&lt;/p&gt;
+</summary></entry><entry><title>Davvy - Django, WebDAV e (pessimo) stato dell'arte.</title><link href="https://pyvideo.org/pycon-italia-2015/davvy-django-webdav-e-pessimo-stato-dellart.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Adriano Di Luzio</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/davvy-django-webdav-e-pessimo-stato-dellart.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Davvy è un’applicazione Django che permette la gestione di servizi
+WebDAV. Gli obiettivi del talk comprendono: fornire un’overview del
+protocollo WebDAV e mostrarne la nostra implementazione; mostrare la
+costruzione di un’applicazione Django che gestisca servizi basati su
+protocolli di questo tipo, in modo che sia estendibile a piacimento e
+pienamente configurabile (e quindi anche qualche buona regola da seguire
+nello sviluppo Django). Analizzare lo stato dell’arte e quindi, in
+particolare, come ogni client implementi, a proprio piacimento,
+specifiche “personalizzate” del protocollo, risultando in una quasi
+impossibile interoperabilità e una scarsa compatibilità con i fornitori
+di servizi. I prerequisiti necessari richiedono soltanto una conoscenza
+poco approfondita di Django. Il talk includerà:&lt;/p&gt;
+&lt;p&gt;Dettagli sul protocollo WebDAV: cos’è, a cosa serve, come lo
+utilizziamo, e le alternative odierne. Dettagli implementativi: come
+funziona WebDAV sotto il cofano, le estensioni che apporta ad HTTP, come
+utilizza l’XML e soprattutto, come utilizzare Django per gestirlo.
+Django e WebDAV: la struttura nello specifico della nostra
+implementazione, il model, le view e l’implementazione di
+un’applicazione Django sui generis. Scelte di implementazione,
+difficoltà tecniche e soluzioni: dove abbiamo utilizzato il database e
+dove invece abbiamo ritenuto più opportuno sfruttare le periferiche di
+archiviazione, i problemi che abbiamo incontrato durante lo sviluppo, e
+come li abbiamo risolti. Il pessimo stato dell’arte: come ogni client
+implementi una propria versione “personalizzata” di WebDAV e come Davvy
+si adatta in mdo implicito ed automatico alle diverse richieste dei
+client. Esempi sui più noti client: Apple’s Calendar, Mozilla
+Thunderbird, e così via.&lt;/p&gt;
+</summary></entry><entry><title>Django 1.7 on App Engine: It cloud work!</title><link href="https://pyvideo.org/pycon-italia-2015/django-17-on-app-engine-it-cloud-work.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Massimiliano Pippi</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/django-17-on-app-engine-it-cloud-work.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django was actively supported at an early stage of the Python runtime in
+App Engine SDK through the notable django-nonrel framework, a fork of
+the original project that adds support for NoSql databases. But starting
+from the App Engine SDK 1.6.2, released more than two years ago, you can
+instead deploy Django’s official releases and take advantages from the
+whole stack of the framework. In less than half an hour we’ll see how we
+can easily deploy the latest version of Django on the Google Cloud
+Platform, taking advantage of the tools and services provided by App
+Engine, Cloud SQL and Cloud Storage.&lt;/p&gt;
+</summary></entry><entry><title>Django admin addon fra potenza e semplicità</title><link href="https://pyvideo.org/pycon-italia-2015/django-admin-addon-fra-potenza-e-semplicita.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Sandro Dentella</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/django-admin-addon-fra-potenza-e-semplicita.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il talk vuole presentare alcuni strumenti di utilizzo molto generale che
+sono stati sviluppati in Thunder Systems per integrare le funzionalità
+offerte dall’admin di Django. In particolare verrano presentati uno
+strumento di ricerca avanzata, che affianchiamo alla ricerca semplice di
+Django, un modo efficace di suddividere il layout di una form (e
+relative inlines) su più tab ed infine quello che abbiamo battezzato
+AjaxInlines, un ibrido fra le TabularInlines e la changelist che
+permette di manipolare i figli di un oggetto via chiamate ajax quindi in
+modo particolarmente efficace. La caratteristica che unisce queste 3
+aggiunte è la semplicità e la chiarezza della sintassi richiesta.&lt;/p&gt;
+</summary></entry><entry><title>Does Python stand a chance in todays world of data science?</title><link href="https://pyvideo.org/pycon-italia-2015/does-python-stand-a-chance-in-todays-world-of-dat.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Radim Řehůřek</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/does-python-stand-a-chance-in-todays-world-of-dat.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;With the multitude of data mining tools coming out in the data science
+world, Python is one choice of many. How does it compare? This talk
+looks into some pragmatic aspects of its (data mining) ecosystem, its
+baggage and its future.&lt;/p&gt;
+</summary></entry><entry><title>Extending Python</title><link href="https://pyvideo.org/pycon-italia-2015/extending-python.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Francisco Fernández Castaño</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/extending-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is a great language, but there are occasions where we need access
+to low level operations or connect with some database driver written in
+C or we need to overcome to some speed boottleneck in Python due to some
+limitation in the language, like NumPy or Scikit-learn do, using
+extensions. With the FFI(Foreign function interface) we can connect
+Python with other languages like C, C++ and even Rust or Fortran. There
+are some alternatives to achieve this goal, Native Extensions, Ctypes
+and CFFI. We’ll compare this three ways of extending Python and we’ll
+study pros and cons of each approach.&lt;/p&gt;
+</summary></entry><entry><title>Extract, Transform, Load using mETL</title><link href="https://pyvideo.org/pycon-italia-2015/extract-transform-load-using-metl-0.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Bence Faludi</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/extract-transform-load-using-metl-0.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;mETL is an ETL package written in Python. Program can be used to load
+practically any kind of data to any target. Code is open source and
+available for anyone who want to use it. The main advantage to
+configurable via Yaml files and You have the possibility to write any
+transformation in Python and You can use it natively from any framework
+as well. We are using this tool in production for many of our clients
+and It is really stable and reliable. The project has a few contributors
+all around the world right now and I hope many developer will join soon.
+I want to introduce you this tool. In this presentation I will show you
+the functionality and the common use cases. Furthermore I will talk
+about other ETL tools in Python.&lt;/p&gt;
+</summary></entry><entry><title>Genome annotation@BioDec: python all over the place.</title><link href="https://pyvideo.org/pycon-italia-2015/genome-annotationbiodec-python-all-over-the-pla.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Ivan Rossi</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/genome-annotationbiodec-python-all-over-the-pla.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will briefly describe BioDec’s genome annotation pipeline,
+which has been internally evolved for ten years to annotate mammalian,
+bacterial, and viral genomes at the protein level. Everything we built
+is coded in Python: the machine-learning annotation engine, the
+middleware and the data visualization interface. A software that would
+have been extremely difficult to create, for a tiny shop as BioDec,
+without leveraging the language itself and projects such as BioPython,
+Scipy, Plone, and Web2py. We will try to distill some of the lessons
+that we learned from more than ten years of experience dealing with
+machine-learning-intensive applications and large data sets with
+open-source software and Python.&lt;/p&gt;
+</summary></entry><entry><title>gitfs - building a filesystem in Python</title><link href="https://pyvideo.org/pycon-italia-2015/gitfs-building-a-filesystem-in-python.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Emanuel Danci</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/gitfs-building-a-filesystem-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;gitfs is an open-source[1] filesystem which was designed to bring the
+full powers of Git to everyone, no matter how little they know about
+versioning. A user can mount any repository and all the his changes will
+be automatically converted into commits. gitfs will also expose the
+history of the branch you’re currently working on by simulating
+snapshots of every commit. gitfs is useful in places where you want to
+keep track of all your files, but at the same time you don’t have the
+possibility of organizing everything into commits yourself. A FUSE
+filesystem for git repositories, with local cache. In this talk we will
+take a look at some of the crucial aspects involved in building a
+reliable FUSE filesystem, the steps that we took in building gitfs,
+especially in handling the git objects
+(&lt;a class="reference external" href="http://git-scm.com/book/en/v2/Git-Internals-Git-Objects"&gt;http://git-scm.com/book/en/v2/Git-Internals-Git-Objects&lt;/a&gt;), what testing
+methods we have used for it and also we will share the most important
+lessons learned while building it. The prerequisites for this talk are:&lt;/p&gt;
+&lt;p&gt;A good understanding of how Git works Basic understaning of Operating
+Systems concepts&lt;/p&gt;
+&lt;p&gt;[1] You can get the source here - &lt;a class="reference external" href="https://github.com/PressLabs/gitfs"&gt;https://github.com/PressLabs/gitfs&lt;/a&gt;;
+you cand find more details here - &lt;a class="reference external" href="http://www.presslabs.com/gitfs/"&gt;http://www.presslabs.com/gitfs/&lt;/a&gt;.&lt;/p&gt;
+</summary></entry><entry><title>Gradual Typing in Python</title><link href="https://pyvideo.org/pycon-italia-2015/gradual-typing-in-python.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Alejandro Gómez</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/gradual-typing-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gradual typing in dynamic languages is becoming popular. The
+implementations for Python, Lua, Clojure and Racket show how a dynamic
+language can be retrofitted with static type checking. This makes
+possible to combine the flexibility of these languages with the
+guarantees of a type checker and can be done in a gradual, non-invasive
+manner. In this talk we’ll understand what gradual typing is and the
+benefits it yields, explore the existing implementations for Python and
+talk about Guido’s plans for the usage of function annotations
+introduced in Python 3.&lt;/p&gt;
+</summary></entry><entry><title>Graph Databases, a little connected tour</title><link href="https://pyvideo.org/pycon-italia-2015/graph-databases-a-little-connected-tour-0.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Francisco Fernández Castaño</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/graph-databases-a-little-connected-tour-0.html</id><summary type="html"></summary></entry><entry><title>How to get Data Science Models into production on a budget</title><link href="https://pyvideo.org/pycon-italia-2015/how-to-get-data-science-models-into-production-on.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Peadar Coyle</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/how-to-get-data-science-models-into-production-on.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One of the biggest challenges we have as data scientists is getting our
+models into production. I’ve worked with Java developers to get models
+into production and there aren’t always the same libraries in Java as
+there are in Python. Example try porting Scikitlearn code to Java.
+Possible solution: PMML (from last time) or you write spec. An even
+better solution: I will explain how to use Science Ops from YhatHQ to
+build better data products. Specifically I will talk about how to use a
+Python, Pandas etc to build a model. Test it locally and then deploy it
+so thatdevelopers can get an easy to use RESTful API. I will remark some
+of my experiences from working with it, and give a use case and some
+architectural remarks. I’ll also give a run down of alternatives to
+Science Ops that I’ve found. Pre Requisites - some experience with
+Pandas and the scientific Python would be beneficial. This talk is aimed
+at Data Science enthusiasts or professionals.&lt;/p&gt;
+</summary></entry><entry><title>Il modello ad oggetti di Python</title><link href="https://pyvideo.org/pycon-italia-2015/il-modello-ad-oggetti-di-python.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Marco Buttu</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/il-modello-ad-oggetti-di-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Come sappiamo in Python ogni nome è legato ad un oggetto, e questo è il
+motivo per cui si dice: everything in Python is an object. Ma in realtà
+cosa sia un oggetto, non sempre ci è ben chiaro, e anche nella
+documentazione ufficiale difatti si trovano imprecisioni in proposito.
+Lo scopo di questo talk è illustrare il modello ad oggetti di Python, in
+modo sia da chiarire il significato delle relazioni tra oggetti, sia i
+termini oggetto, istanza, classe e tipo. Vedremo quanto sia importante
+capire il concetto di metaclasse, perché anche se mai ne definiremo una,
+programmando in Python ne avremo a che fare quotidianamente. A questo
+punto sapremo che se una classe ha un attributo, non significa che anche
+le sue istanze lo debbano avere. Capiremo che non ha senso fare
+distinzioni tra oggetti e classi, mentre ha senso farle tra classi e
+non-classi. Slides: &lt;a class="reference external" href="http://marco-buttu.github.io/pycon_objmodel/"&gt;http://marco-buttu.github.io/pycon_objmodel/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Il progetto Barman: Open Source, Team, devops, kanban, PostgreSQL e Python</title><link href="https://pyvideo.org/pycon-italia-2015/il-progetto-barman-open-source-team-devops-ka.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Gabriele Bartolini</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/il-progetto-barman-open-source-team-devops-ka.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Barman è un software open source per la disaster recovery di database
+PostgreSQL, probabilmente, in questo momento, il tool più utilizzato al
+mondo per questo scopo. È un progetto open source nato nel 2012, scritto
+in Python e totalmente sviluppato in Italia. In questo talk vogliamo
+condividere i processi di sviluppo e le tecnologie impiegati in
+2ndQuadrant per lo sviluppo di Barman e l’importanza fondamentale della
+collaborazione fra tutti i membri del team, grazie a cultura devops,
+kanban, metodologie agili, pair programming, testing, ecc. Il talk è
+presentato insieme a Marco Nenciarini.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: The IoT (r)evolution, present and future.</title><link href="https://pyvideo.org/pycon-italia-2015/keynote-the-iot-revolution-present-and-future.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Fabio Pliger</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/keynote-the-iot-revolution-present-and-future.html</id><summary type="html"></summary></entry><entry><title>Knowing your Garbage collector</title><link href="https://pyvideo.org/pycon-italia-2015/knowing-your-garbage-collector.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Francisco Fernández Castaño</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/knowing-your-garbage-collector.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As Python programmers we’re used to program without taking care about
+allocating memory for our objects and later on freeing them, Python
+garbage collector takes care of this task automatically for us. Garbage
+collection is one of the most challenging topics in computer science,
+there are a lot of research around the topic and different ways to
+tackle the problem. Knowing how our language does this process give us a
+better understanding of underlying interpreter and allow us to know why
+problems like cycles can happen in CPython interpreters. So, this talk
+aims to be and introduction to the topic and a walkaround through
+different approaches followed in CPython and PyPy:&lt;/p&gt;
+&lt;p&gt;Generational Reference counting with cycles detector on CPython.
+Incremental version of the MiniMark GC on PyPy.&lt;/p&gt;
+</summary></entry><entry><title>Kung Fu Pandas</title><link href="https://pyvideo.org/pycon-italia-2015/kung-fu-pandas.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Christian Barra</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/kung-fu-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scopo di questo talk è di introdurvi nel fantastico mondo del Kung
+Fu….con Pandas ! Parliamo di cosa è Pandas, a cosa puó servirvi e di
+come utilizzarlo con alcuni esempi pratici. Un potente strumento per
+gestire ed analizzare i vostri dati ! Prerequisiti: Conoscenza di Python
+Goals: Utilizzo di Pandas come strumento per elaborare e analizzare dati&lt;/p&gt;
+</summary></entry><entry><title>Odoo 8 Sviluppo di un modulo dalla A al Report</title><link href="https://pyvideo.org/pycon-italia-2015/odoo-8-sviluppo-di-un-modulo-dalla-a-al-report.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Eliumara del Valle Lopez</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/odoo-8-sviluppo-di-un-modulo-dalla-a-al-report.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Introduzione di cos’ è un modulo? - Files - Viste, Azioni, Menu e altre
+interfacce – Ereditarietà - Programmazione modulo - Report QWeb&lt;/p&gt;
+</summary></entry><entry><title>Odoo 8.0. Le nuove API</title><link href="https://pyvideo.org/pycon-italia-2015/odoo-80-le-nuove-api.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Davide Corio</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/odoo-80-le-nuove-api.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La novità principale della versione 8.0 sono state sicuramente le tanto
+attese nuove API. Più pythoniche, meno prolisse. Vediamo assieme le
+principali differenze, tramite un confronto approfondito con le API che
+hanno accompagnato Odoo fino alla versione 7.0.&lt;/p&gt;
+</summary></entry><entry><title>Odoo CMS by Davide Corio</title><link href="https://pyvideo.org/pycon-italia-2015/odoo-cms-by-davide-corio.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Davide Corio</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/odoo-cms-by-davide-corio.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Odoo website builder, ecommerce ed altre nuove funzionalità.
+Approfondiamo questo nuovo set di moduli introdotto con la versione 8.0
+di Odoo con i quali possiamo aggiungere funzionalità specifiche di CMS
+ed altri strumenti per lo sviluppo di siti web. Configuriamo assieme un
+sito web con Odoo CMS e giochiamo con temi, snippets e blocchi. Odoo si
+è dichiarato in guerra contro Wordpress, Drupal, Joomla &amp;amp; C. Riuscirà a
+scalare la classifica?&lt;/p&gt;
+</summary></entry><entry><title>Odoo Connector</title><link href="https://pyvideo.org/pycon-italia-2015/odoo-connector.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Franco Tampieri</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/odoo-connector.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Odoo Connector è un modulo community usato principalmente per
+sincronizzare dati da e verso altre applicazioni, soprattutto
+piattaforme per il commercio elettronico come Magento e Prestashop.
+Vediamo come scrivere un plugin per il Odoo Connector così da abilitare
+la sincronizzazione di dati con le nostre applicazioni.&lt;/p&gt;
+</summary></entry><entry><title>Odoo disaster recovery con Barman</title><link href="https://pyvideo.org/pycon-italia-2015/odoo-disaster-recovery-con-barman.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Giulio Calacoci</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/odoo-disaster-recovery-con-barman.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sei stufo di gestire i processi di backup e recovery dei tuoi server
+PostgreSQL facendo uso di script ‘ad hoc’ ? Hai paura di poter essere
+svegliato nel cuore della notte o peggio mentre sei in vacanza, per
+eseguire il ripristino di uno dei server critici per il business della
+tua ditta? Barman, Backup e Recovery Manager, standardizza le operazioni
+di backup e recovery, permettendo agli amministratori di database e agli
+amministratori di sistema di integrare facilmente all’interno del loro
+piano di disaster recovery le soluzioni basate su Odoo .&lt;/p&gt;
+</summary></entry><entry><title>Packaging Django projects for PyPI</title><link href="https://pyvideo.org/pycon-italia-2015/packaging-django-projects-for-pypi.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Roberto Rosario</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/packaging-django-projects-for-pypi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Packaging Python libraries and Django apps has become easier. Packaging
+Django projects? Not there yet. This talk will cover the uncharted
+territory of Django project packaging, covering topics like: optimal
+file layout, user overridable settings, auto admin user creation,
+automated project initial setup like creation of Django’s secret keys
+and some PyPI hacks not for the Python developer with easily to upset
+stomach :) Attendees will get the knowledge needed to package their
+Django projects and avoid some unforeseen problems, why the default
+Django project file structure is not suited for packaging, and some
+other project pain points.&lt;/p&gt;
+</summary></entry><entry><title>PostgreSQL 9 4 per devops (in English)</title><link href="https://pyvideo.org/pycon-italia-2015/postgresql-9-4-per-devops-in-english.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Gabriele Bartolini</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/postgresql-9-4-per-devops-in-english.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The world’s best open source database won’t stop improving! Discover the
+new features introduced in PostgreSQL 9.4, classified from a devops
+point of view, in particular:&lt;/p&gt;
+&lt;p&gt;logical streaming replication, the foundation of bi-directional and
+multi-master replication JSONB data type support, dedicated to NoSQL
+lovers! concurrent refresh of materialised views, dedicated to data
+warehouse fans!&lt;/p&gt;
+</summary></entry><entry><title>PostgreSQL 9.4 per devops</title><link href="https://pyvideo.org/pycon-italia-2015/postgresql-94-per-devops.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Gabriele Bartolini</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/postgresql-94-per-devops.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il database relazionale open source più avanzato al mondo non smette di
+migliorarsi. Scopri le novità introdotte nella versione 9.4 di
+PostgreSQL, opportunamente classificate in un’ottica devops, ed in
+particolare:&lt;/p&gt;
+&lt;p&gt;replica logica in streaming, il primo passo per replica bidirezionale e
+multi-master supporto per il tipo di dato JSONB, per la felicità degli
+amanti dei database NoSQL refresh concorrente di viste materializzate,
+per gli amanti dei data warehouse&lt;/p&gt;
+</summary></entry><entry><title>Python e l'Open Sorce nella Pubblicazione Amministrazione Italiana</title><link href="https://pyvideo.org/pycon-italia-2015/python-e-lopen-sorce-nella-pubblicazione-amminis.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Simone Dalla</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/python-e-lopen-sorce-nella-pubblicazione-amminis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In questo talk verranno illustrati casi d’uso, software, tools del mondo
+Python e Open Source che possono essere adottati nella Pubblica
+Amministrazione (e non solo ovviamente). Si vedrà ad esempio come Python
+può essere il migliore amico del “tecnico del CED” per scrivere i propri
+o scrivere in breve tempo, un gestionale per sostituire intricati fogli
+elettronici e ingestibili file “Access”. Python può e deve essere uno
+dei migliori alleati, per una PA più efficiente, snella e trasparente.&lt;/p&gt;
+</summary></entry><entry><title>Python e videogiochi: come siamo messi?</title><link href="https://pyvideo.org/pycon-italia-2015/python-e-videogiochi-come-siamo-messi.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Roberto De Ioris</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/python-e-videogiochi-come-siamo-messi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il videogioco e’ probabilmente la massima espressione del mondo
+tecnologico . Programmatori, grafici, musicisti, sceneggiatori lavorano
+insieme nel costruire qualcosa che spesso si avvicina all’arte piu’ che
+alla scienza. Come si colloca python in questo mondo ? C’e’ ancora
+spazio per lui ? C’e’ mai stato ? Ce ne sara’ ? Possiamo fare qualcosa,
+come community, per migliorare le cose ?&lt;/p&gt;
+</summary></entry><entry><title>Python, the next Brazilian generation</title><link href="https://pyvideo.org/pycon-italia-2015/python-the-next-brazilian-generation.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Fernando Masanori</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/python-the-next-brazilian-generation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python for Zombies is the first MOOC (Massive Open Online Course) in
+portuguese. With a team made up of three folks and no budget, we have
+reached 30.000 enrollments in one year and half. After having taken the
+course, some former girl students even founded the first PyLadies groups
+in Brazil, with great impact in diversity (RuPy Natal: 300+ 1/3 women,
+Code Girl 2: 700+ 60% women). This MOOC also have a great impact in
+Python community: I gave 40 talk’s and short courses in 2014!&lt;/p&gt;
+</summary></entry><entry><title>Riconoscimento di eventi in sequenze di immagini molto rumorose</title><link href="https://pyvideo.org/pycon-italia-2015/riconoscimento-di-eventi-in-sequenze-di-immagini.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Gianfranco Durin</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/riconoscimento-di-eventi-in-sequenze-di-immagini.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In molti sistemi fisici, è importante riuscire ad individuare degli
+eventi analizzando una sequenza di immagini. Un esempio tra i tanti è
+quello di analizzare la dinamica di magnetizzazione un film sottile
+magnetico misurato con sistemi magneto-ottici. Le sequenze che si
+misurano contengono immagini solitamente molto rumorose dove è difficile
+riconoscere gli oggetti (nel nostro caso zone corrispondenti a
+inversione della magnetizzazione) perché i loro contorni non sono ben
+definiti. Non valgono quindi le tecniche standard per il riconoscimento
+dei bordi, come la edge detection etc. In questo talk si propone una
+tecnica alternativa molto semplice ma potente che consiste
+nell’analizzare la sequenza del colore (o della scala di grigi) di un
+singolo pixel per poi ricostruire la dinamica dell’intera sequenza.
+Questo metodo è anche un istruttivo esempio dell’uso del calcolo
+parallelo. Non sono necessari particolare prerequisiti per la
+comprensione del talk.&lt;/p&gt;
+</summary></entry><entry><title>Scipy e Rpy per l'analisi degli acquisti della pubblica amministrazione</title><link href="https://pyvideo.org/pycon-italia-2015/scipy-e-rpy-per-lanalisi-degli-acquisti-della-pu.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Francesco Cavazzana</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/scipy-e-rpy-per-lanalisi-degli-acquisti-della-pu.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il talk propone di mostrare un caso concreto di utilizzo di python, con
+varie librerie, per l’analisi di dati in formato aperto in ambito
+economico. Tutti gli enti pubblici italiani per legge devono pubblicare
+un file xml liberamente accessibile con tutti i dettagli sulla spesa per
+acquisti di lavori, beni e servizi. Questa mole di dati può dare
+informazioni molto interessanti per il controllo della spesa pubblica:
+benchmark per gli operatori del settore, controllo diffuso sulla spesa
+pubblica da parte della cittadinanza, prevenzione della corruzione, ma
+anche analisi di mercato e confronto con i concorrenti per aziende
+fornitori della pubblica amministrazione. Per analizzare questa mole di
+dati, pubblica ormai da un anno, ma ancora poco utilizzata, ho
+utilizzato python per scaricare e interpretare i file xml, organizzare i
+dati raccolti in un database, analizzarli con indici, grafici, confronti
+di settore, variazione nel tempo, analisi di regressione. Le analisi
+sono state condotte principalmente utilizzando scipy (con anche un
+esempio di calcolo parallelo multiprocesso). Ho inoltre utilizzato il
+software statistico R tramite rpy2 per alcune analisi e per la
+generazione di grafici. La presentazione delle analisi è realizzata in
+excel con xlsxwriter, con molti grafici disegnati direttamente da excel,
+ma ovviamente parametrizzati in python. Per l’interpretazione dell’xml,
+qualche pagina web per la gestione e per tenere insieme il tutto ho
+utilizzato genropy. Il talk può essere interessante per mostrare come le
+librerie python per il calcolo scientifico possano essere utilizzate
+velocemente e con un tempo di apprendimento veramente minimo anche non
+da statistici o matematici, ma da un economista come me, per ottenere
+risultati magari semplici per gli esperti del settore (ho appena
+sfiorato la superficie delle potenzialità di questi strumenti), ma
+comunque strabilianti per chi è abituato a fare i conti solo con excel.
+Prerequisiti per una piena comprensione sono una conoscenza normale di
+python e un’idea di cos’è l’XML. Per quanto riguarda le librerie scipy e
+rpy2 il talk è assolutamente introduttivo, un esempio di come può usarle
+con frutto anche un totale principiante come me.&lt;/p&gt;
+</summary></entry><entry><title>The meta API by Daniel Pyrathon 1</title><link href="https://pyvideo.org/pycon-italia-2015/the-meta-api-by-daniel-pyrathon-1.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/the-meta-api-by-daniel-pyrathon-1.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Meta API is the core part of Django that enables introspection of
+the ORM with the rest of the system. The API allows different parts of
+the framework such as lookups, queries, forms, admin to understand and
+use the capabilities of every model. As part of Summer of Code 2014 I
+refactored and redesigned some core parts of this API and, as the
+purpose of this talk, I plan on advocating how developers can benefit
+from this API in numerous ways: from understanding how Django’s model
+works, to enhancing your application through model introspection.
+Moreover, I will give an overview of how we can create a custom store
+that can be plugged into Django, together with some code snippets and
+(maybe) a live demo. This talk is an extension of the talk I did at
+Django Under the Hood, when the API was not finished yet. Now that the
+API has landed in master, I will also describe my process in getting
+involved into the Django community and how easy and rewarding it is to
+contribute to the project. Objectives&lt;/p&gt;
+&lt;p&gt;Give a brief overview of what the Meta API is, it’s features and what
+can be done with it Look at some of Django’s ORM code: from the model
+metaclass to the relation graph Describe my experience in creating a
+custom Meta that talks to GMail through Django’s Model API (demo) Define
+a small but concise guide on how to contribute to Django&lt;/p&gt;
+</summary></entry><entry><title>The Meta API: yesterday, today, and tomorrow</title><link href="https://pyvideo.org/pycon-italia-2015/the-meta-api-yesterday-today-and-tomorrow.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Daniel Pyrathon</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/the-meta-api-yesterday-today-and-tomorrow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Meta API is the core part of Django that enables introspection of
+the ORM with the rest of the system. The API allows different parts of
+the framework such as lookups, queries, forms, admin to understand and
+use the capabilities of every model. As part of Summer of Code 2014 I
+refactored and redesigned some core parts of this API and, as the
+purpose of this talk, I plan on advocating how developers can benefit
+from this API in numerous ways: from understanding how Django’s model
+works, to enhancing your application through model introspection.
+Moreover, I will give an overview of how we can create a custom store
+that can be plugged into Django, together with some code snippets and
+(maybe) a live demo. This talk is an extension of the talk I did at
+Django Under the Hood, when the API was not finished yet. Now that the
+API has landed in master, I will also describe my process in getting
+involved into the Django community and how easy and rewarding it is to
+contribute to the project. Objectives&lt;/p&gt;
+&lt;p&gt;Give a brief overview of what the Meta API is, it’s features and what
+can be done with it Look at some of Django’s ORM code: from the model
+metaclass to the relation graph Describe my experience in creating a
+custom Meta that talks to GMail through Django’s Model API (demo) Define
+a small but concise guide on how to contribute to Django&lt;/p&gt;
+</summary></entry><entry><title>Un programmatore python tra gli elefanti (di Hadoop)</title><link href="https://pyvideo.org/pycon-italia-2015/un-programmatore-python-tra-gli-elefanti-di-hado.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Davide Setti</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/un-programmatore-python-tra-gli-elefanti-di-hado.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Una vita idilliaca tra list comprehension e generator, senza
+preoccuparti troppo dei tipi. Sei felice. E poi arriva lui. Hadoop. Ma
+tu non devi abbatterti. C’è speranza. Come sopravvivere in un ecosistema
+Java? L’obiettivo di questo talk è di introdurre Hadoop e come è
+possibile utilizzare Python, quando ha senso farlo. Verranno introdotti:&lt;/p&gt;
+&lt;p&gt;Hadoop MapReduce e HDFS Hadoop Streaming Pig YARN Spark&lt;/p&gt;
+&lt;p&gt;Non si vuole proporre un uso forzato di Python dove non ha senso, ma
+solo suggerire in base all’esperienza maturata quando è utile e quali
+sono i limiti.&lt;/p&gt;
+</summary></entry><entry><title>V-ERAS-14: A Virtual Reality Mars Exploration Mission (in English)</title><link href="https://pyvideo.org/pycon-italia-2015/v-eras-14-a-virtual-reality-mars-exploration-mis.html" rel="alternate"></link><published>2015-05-29T00:00:00+00:00</published><updated>2015-05-29T00:00:00+00:00</updated><author><name>Ezio Melotti</name></author><id>tag:pyvideo.org,2015-05-29:pycon-italia-2015/v-eras-14-a-virtual-reality-mars-exploration-mis.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This presentation reports on the outcomes of the V-ERAS-14 Mission while
+focusing on the integral role played by the Python language in
+supporting the project infrastructure.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The European MaRs Analogue Station for Advanced Technologies Integration
+(ERAS) is a program spearheaded by the Italian Mars Society (IMS), whose
+main goal is to provide an effective test bed for field operation
+studies in preparation for human missions to Mars. Preliminarily to its
+construction, IMS has started the development of an immersive Virtual
+Reality (VR) simulation of the ERAS Station (V-ERAS). The initial V-ERAS
+setup has been based on the following key elements: - ERAS Station
+simulation using an appropriate game engine supporting a virtual reality
+headset - Full body tracking - Integration of an omnidirectional
+treadmill - Support for the crew members’ health monitoring -
+Multiplayer Support Since the beginning, Python has been one of the key
+technologies that allowed us to develop the system, also thanks to a
+team of international students that participated with the IMS to Google
+Summer of Code. In December 2014, four virtual astronauts have conducted
+a sustained program of immersive virtual reality simulations during the
+first week-long V-ERAS Mission (V-ERAS-14). The presentation will report
+on the outcomes of the V-ERAS-14 Mission while fusing on the transversal
+role played by the Python language in supporting the project
+infrastructure.&lt;/p&gt;
+</summary></entry><entry><title>Pycon Cinque Reportage</title><link href="https://pyvideo.org/pycon-italia-2015/pycon-cinque-reportage.html" rel="alternate"></link><published>2014-06-23T00:00:00+00:00</published><updated>2014-06-23T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2014-06-23:pycon-italia-2015/pycon-cinque-reportage.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Scopri il mondo di PyCon Italia, e ascolta i commenti dei partecipanti
+all'evento!&lt;/p&gt;
+</summary></entry></feed>

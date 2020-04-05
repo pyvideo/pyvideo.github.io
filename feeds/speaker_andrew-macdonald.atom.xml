@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_andrew-macdonald.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-15T00:00:00+00:00</updated><entry><title>Automated deployment of Python packages for development</title><link href="https://pyvideo.org/pycon-au-2016/automated-deployment-of-python-packages-for-development.html" rel="alternate"></link><published>2016-08-15T00:00:00+00:00</published><updated>2016-08-15T00:00:00+00:00</updated><author><name>Andrew MacDonald</name></author><id>tag:pyvideo.org,2016-08-15:pycon-au-2016/automated-deployment-of-python-packages-for-development.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andrew MacDonald&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2016.pycon-au.org/schedule/109/view_talk"&gt;https://2016.pycon-au.org/schedule/109/view_talk&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The ability to automatically deploy development and test versions of software supports a rapid development/release cycle.&lt;/p&gt;
+&lt;p&gt;Within our section of the Bureau of Meteorology we have a number of internal Python packages, ranging from small simple packages to large applications that are dependent on the smaller packages. We manage the development cycle to ease deployment of these packages and applications into development, test, and production environments.&lt;/p&gt;
+&lt;p&gt;Elements of our process are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Source code management (git)&lt;/li&gt;
+&lt;li&gt;Code review (Gerrit)&lt;/li&gt;
+&lt;li&gt;Continuous integration (Jenkins)&lt;/li&gt;
+&lt;li&gt;Internal PyPi servers (Apache)&lt;/li&gt;
+&lt;li&gt;A development environment for automatic deployment of every Gerrit approved commit (Anaconda environment via Jenkins)&lt;/li&gt;
+&lt;li&gt;Versioning (git tags + versioneer)&lt;/li&gt;
+&lt;li&gt;Test environment for every tagged version (Anaconda environment via Jenkins)&lt;/li&gt;
+&lt;li&gt;Production environment for specified releases (Anaconda environment via Ansible)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A key benefit of this process is that we have a deployed Python environment for the latest development version of all packages, a pinned collection of packages for testing, and an approved stable collection for production. The development and test environments are rapidly updated when commits are approved in Gerrit or tagged. The production environment is then readily updated with specific versions after a period of testing in the test environment.&lt;/p&gt;
+&lt;p&gt;This presentation will discuss our development process, how it works for us and how we leverage Python packaging to do it.&lt;/p&gt;
+</summary></entry></feed>

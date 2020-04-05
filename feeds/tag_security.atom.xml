@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_security.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>Evolving a helper script into a 180,000-lines-of-Python-code project</title><link href="https://pyvideo.org/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Mikhail Bushkov</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GRR Rapid Response (&lt;a class="reference external" href="https://github.com/google/grr"&gt;https://github.com/google/grr&lt;/a&gt;) is an incident
+response framework focused on remote live forensics.&lt;/p&gt;
+&lt;p&gt;It consists of a Python client (agent) that is installed on target
+systems, and Python server infrastructure that can manage and talk to
+clients. The goal of GRR is to support forensics and investigations in a
+fast, scalable manner to allow analysts to quickly triage attacks and
+perform analysis remotely.&lt;/p&gt;
+&lt;p&gt;GRR was started at Google in 2009 as a simple Python helper script used
+by Incident Response engineers. Eventually a little Python script got a
+little server component, was adapted to run on multiple systems (Mac,
+Linux, Windows), then a little UI was added and a few nice features were
+introduced (large-scale hunts, collection of predefined artifacts,
+memory analysis). A helper script has eventually evolved into a
+sophisticated framework with 180,000 lines of Python code.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In the presentation we’ll talk about the process of evolving a small
+prototype-like Python project into a production-ready system, using
+GRR as an example. The topics that we’ll cover are:&lt;/div&gt;
+&lt;div class="line"&gt;* Taking shortcuts - both in terms of design and implementation.
+Reasons for taking them and their eventual costs.&lt;/div&gt;
+&lt;div class="line"&gt;* Relying on Python’s power features (i.e. meta-classes, mixins)?
+Long-term consequences on maintainability and readability.&lt;/div&gt;
+&lt;div class="line"&gt;* Organising the project into separate PyPI packages - benefits of
+doing that.&lt;/div&gt;
+&lt;div class="line"&gt;* Continuous integration, testing and automated builds for various
+platforms - implementation costs and maintainability effects.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Databases"></category><category term="Deployment/Continuous Integration and Delivery"></category><category term="Development"></category><category term="Open-Source"></category><category term="Security"></category></entry><entry><title>Darkweb + Python: discover, analyze and extract information from hidden services</title><link href="https://pyvideo.org/pycon-italia-2019/darkweb-python-discover-analyze-and-extract-information-from-hidden-services.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Jose Manuel Ortega</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/darkweb-python-discover-analyze-and-extract-information-from-hidden-services.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will start explaining how Tor project can help us to the
+research and development of tools for online anonymity and privacy of
+its users while surfing the Internet, by establishing virtual circuits
+between the different nodes that make up the Tor network. In addition,
+we will review how Tor works from anonymity point of view, preventing
+websites from tracking you. Python help us to automate the process to
+search an discover hidden services thanks to packages like
+requests,requesocks and sockspy. At this point we will review the
+crawling process and show tools in python ecosystem available for this
+task such as Deep Explorer(&lt;a class="reference external" href="https://github.com/blueudp/deep-explorer"&gt;https://github.com/blueudp/deep-explorer&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;These could be the talking points:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to Tor project and hidden services&lt;/li&gt;
+&lt;li&gt;Discovering hidden services.&lt;/li&gt;
+&lt;li&gt;Modules and packages we can use in python for connecting with Tor
+network&lt;/li&gt;
+&lt;li&gt;Tools that allow search hidden services and atomate the crawling
+process in Tor network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1563"&gt;https://python.it/feedback-1563&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="tor"></category><category term="security"></category><category term="privacy"></category><category term="hacking"></category><category term="crawler"></category></entry><entry><title>Defence Against the Dark Arts: Adversarial ML</title><link href="https://pyvideo.org/pycon-italia-2019/defence-against-the-dark-arts-adversarial-ml.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Amit Kushwaha</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/defence-against-the-dark-arts-adversarial-ml.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security and Privacy issues need no introduction. But how exactly is
+this affecting the field of Machine Learning? This is what this talk
+will cover. We first expose the attack surface of systems deploying
+machine learning. We then describe how an attacker may force models to
+make wrong predictions with very little information about the victim.
+One such attack can be biometric recognition where fake biometric traits
+may be exploited to impersonate a legitimate user. We demonstrate that
+these attacks are practical against existing machine learning as a
+service platform. Towards the end, we will discuss current research to
+defend models from such attacks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1700"&gt;https://python.it/feedback-1700&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="security"></category><category term="Artificial Intelligence"></category><category term="privacy"></category></entry><entry><title>Open Sourcing at Work</title><link href="https://pyvideo.org/pycon-ca-2018/open-sourcing-at-work.html" rel="alternate"></link><published>2018-11-11T00:00:00+00:00</published><updated>2018-11-11T00:00:00+00:00</updated><author><name>Faisal Dosani</name></author><id>tag:pyvideo.org,2018-11-11:pycon-ca-2018/open-sourcing-at-work.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We just open sourced 2 projects (datacompy, and locopy) with roots in Data Science and Engineering which we will showcase. While is it exciting and rewarding to share your ideas with the world it isn't always easy. Thinking about licenses, copyrights, and protecting confidential information is a must!&lt;/p&gt;
+&lt;p&gt;Working in a large organization which is embracing the mantra 'open source first' is really exciting. Part of this journey is to make sure we give back to the open source community when we can. Two of our projects had gained traction internally: datacompy, and locopy. As part of our commitment we wanted to make sure we could open source these projects for others to use and contribute back to. DataComPy is a package to compare two Pandas DataFrames. Originally started to be something of a replacement for SAS's PROC COMPARE for Pandas DataFrames with some more functionality than just Pandas.DataFrame.equals(Pandas.DataFrame) (in that it prints out some stats, and lets you tweak how accurate matches have to be). Then extended to carry that functionality over to Spark Dataframes. Locopy helps load flat files to S3 and then to Amazon Redshift, and assist with ETL processing. It is DB Driver (Adapter) agnostic, provides basic functionality to move data to S3 buckets, execute COPY commands to load data to S3, and into Redshift, and UNLOAD commands to unload data from Redshift into S3. While building these products was exciting and fun, some of the legal considerations were as interesting, complex, and required collaboration between many teams, from security, licensing, brand, and IP/copyright. We'll explore the projects, and some of these other considerations which can make or break if you decide to release a project into the wild, along with the road blocks we faced with in these areas.&lt;/p&gt;
+</summary><category term="open source"></category><category term="licensing"></category><category term="copyright"></category><category term="data"></category><category term="security"></category><category term="testing"></category><category term="best practices"></category><category term="data science"></category></entry><entry><title>Testing python security</title><link href="https://pyvideo.org/pycon-ireland-2018/testing-python-security.html" rel="alternate"></link><published>2018-11-10T00:00:00+00:00</published><updated>2018-11-10T00:00:00+00:00</updated><author><name>Jose Manuel Ortega</name></author><id>tag:pyvideo.org,2018-11-10:pycon-ireland-2018/testing-python-security.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is a language that in a easy way allows to scale up from starter projects to complex applications for data processing and serving dynamic web pages. But as you increase complexity in your applications, it can be easy to introduce potential problems and vulnerabilities. In this talk, I will highlight the biggest problems we can find in python functions, how to use then in a secure way and tools and services that help you identify vulnerabilities in the python source code. These could be the main talking points: -Introduction to secure programming in python. -Introduce dangerous functions for code inyection and how we can solve this issues from a security point of view. -Common attack vectors on Python applications like Remote Command Execution and SQL injection -Best practices for avoid execution of malicious commands -Tools that help us to protect and obfuscate our source code&lt;/p&gt;
+</summary><category term="security"></category></entry><entry><title>Python for hackers and Penetration testing</title><link href="https://pyvideo.org/europython-2013/python-for-hackers-and-penetration-testing.html" rel="alternate"></link><published>2013-07-05T00:00:00+00:00</published><updated>2013-07-05T00:00:00+00:00</updated><author><name>Oltjano Terpollari</name></author><id>tag:pyvideo.org,2013-07-05:europython-2013/python-for-hackers-and-penetration-testing.html</id><summary type="html"></summary><category term="sqlmap"></category><category term="subnet"></category><category term="set"></category><category term="networking"></category><category term="zip"></category><category term="whitehat"></category><category term="web"></category><category term="windows"></category><category term="sysadmin"></category><category term="ssh"></category><category term="linux"></category><category term="hacking"></category><category term="pythonscripts"></category><category term="security"></category><category term="socket"></category></entry><entry><title>Passwords - the server side</title><link href="https://pyvideo.org/europython-2013/passwords-the-server-side.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Thomas Waldmann</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/passwords-the-server-side.html</id><summary type="html"></summary><category term="sysadmin"></category><category term="best-practices"></category><category term="security"></category><category term="servers"></category></entry><entry><title>Celery and Social Networks. 5 Things I Have Learned During Earthquake Hackathon.</title><link href="https://pyvideo.org/europython-2013/celery-and-social-networks-5-things-i-have-learned-during-earthquake-hackathon.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Andrew Mleczko</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/celery-and-social-networks-5-things-i-have-learned-during-earthquake-hackathon.html</id><summary type="html"></summary><category term="celery"></category><category term="security"></category><category term="open-source"></category><category term="case-study"></category><category term="social"></category></entry><entry><title>Everyday security issues and how to avoid them</title><link href="https://pyvideo.org/pycon-italia-2018/everyday-security-issues-and-how-to-avoid-them.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/everyday-security-issues-and-how-to-avoid-them.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security is hard, yet vital for any software these days. After all you
+don’t want to become the laughing stock on hacker news or cause your
+company to loose billions in shareholder value. This talk won’t turn you
+into a security specialist over night, but you will learn how to avoid
+common mistakes in your daily work as developer or administrator. I’m
+going to take you on a brief tour in secure software design, illustrate
+various attack vectors, and point you to helpful tools and resources.
+Topics include threat analysis, deployment, parsing, authentication,
+TLS/SSL, crypto, and user interaction, with some real life examples from
+my daily work.&lt;/p&gt;
+&lt;div class="section" id="note"&gt;
+&lt;h4&gt;Note&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;The talk will be an extended version of my PyCon UK 2017 and DevConf.CZ
+2018 info sec talk. Slides are recordings of my PyCon UK talk are
+available at
+https://speakerdeck.com/tiran/pycon-uk-2017-everyday-security-issues-and-how-
+to-avoid-them .&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 20 April&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="security"></category><category term="infosec"></category><category term="Cryptography"></category></entry><entry><title>La sicurezza dei database MySQL in ottica GDPR</title><link href="https://pyvideo.org/pycon-italia-2018/la-sicurezza-dei-database-mysql-in-ottica-gdpr.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Marco Carlessi</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/la-sicurezza-dei-database-mysql-in-ottica-gdpr.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il 25 maggio 2018 la GDPR diventerà legge per tutte le aziende che
+trattano dati sensibili di cittadini europei, a prescindere dalla
+nazionalità o dalle leggi locali: in pratica tutte le aziende private
+italiane, nessuna esclusa.&lt;/p&gt;
+&lt;p&gt;Questa presentazione è quindi dedicata a chi si occupa di sicurezza e
+che dovrà fare i conti con questa normativa, ma non da un punto di vista
+legale, bensì tecnico: come posso aderire alle richieste se uso il
+database MySQL?&lt;/p&gt;
+&lt;p&gt;Quindi dopo un breve introduzione alla GDPR, ci concentreremo su come
+MySQL possa soddisfarne le richieste (con riferimento ai vari articoli)
+così da fornire la conoscenza che permetta di scegliere le strategie
+migliori per il proprio business.&lt;/p&gt;
+&lt;p&gt;Questa sessione è indicata per chiunque lavori con MySQL. Saranno date
+per scontate solo le conoscenze di base dei database, ma chi ha già
+conoscenza di MySQL potrà apprezzarne a pieno le opzioni.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 14:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Cryptography"></category><category term="sql"></category><category term="architecture"></category><category term="mysql"></category><category term="best-practices"></category><category term="security"></category></entry><entry><title>Protecting Privacy and Security — For Yourself and Your Community</title><link href="https://pyvideo.org/pycon-sk-2018/protecting-privacy-and-security-for-yourself-and-your-community.html" rel="alternate"></link><published>2018-03-09T00:00:00+00:00</published><updated>2018-03-09T00:00:00+00:00</updated><author><name>Justin Mayer</name></author><id>tag:pyvideo.org,2018-03-09:pycon-sk-2018/protecting-privacy-and-security-for-yourself-and-your-community.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Internet service providers, ad networks, governments… Many organizations
+have increasing access to our personal information. Protecting privacy
+in this environment is a non-trivial effort, and the threats posed by
+malicious attackers further exacerbates this problem. We, as developers,
+owe it to ourselves and to our communities to do the best we can to
+improve our collective security and privacy.&lt;/p&gt;
+&lt;p&gt;Attendees of this talk will walk away with a thorough understanding of
+the following topics and the problems they solve:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;multi-factor authentication&lt;/li&gt;
+&lt;li&gt;encrypted DNS&lt;/li&gt;
+&lt;li&gt;SSH/VPN tunnels&lt;/li&gt;
+&lt;li&gt;full disk encryption&lt;/li&gt;
+&lt;li&gt;compartment isolation&lt;/li&gt;
+&lt;li&gt;“onion-skin” routing&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition, digital interactions with other people increasingly occur
+via hosted services, which while convenient can compromise the privacy,
+integrity, and control of our data. With some open-source software and
+inexpensive virtual servers, we can take back control and empower us all
+to securely share our lives with one another.&lt;/p&gt;
+</summary><category term="Privacy"></category><category term="PyCon SK"></category><category term="Python"></category><category term="Security"></category></entry><entry><title>Pyramidセキュリティ</title><link href="https://pyvideo.org/pycon-japan-2012/pyramidsekiyuritei.html" rel="alternate"></link><published>2012-09-15T00:00:00+00:00</published><updated>2012-09-15T00:00:00+00:00</updated><author><name>村岡 友介</name></author><id>tag:pyvideo.org,2012-09-15:pycon-japan-2012/pyramidsekiyuritei.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pyramidセキュリティ&lt;/p&gt;
+</summary><category term="pyramid"></category><category term="security"></category></entry><entry><title>Value Driven Threat Modeling - Security by Design</title><link href="https://pyvideo.org/pycon-israel-2018/value-driven-threat-modeling-security-by-design.html" rel="alternate"></link><published>2018-06-04T00:00:00+00:00</published><updated>2018-06-04T00:00:00+00:00</updated><author><name>Avi Douglen</name></author><id>tag:pyvideo.org,2018-06-04:pycon-israel-2018/value-driven-threat-modeling-security-by-design.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Threat Modeling is a great method to identify potential security weaknesses, and is an important part of any secure design. A threat model can help analyze how to best protect your assets, prevent attacks, harden your systems, and efficiently prioritize security investment. Regardless of programming language, threat modeling provides a far greater return than most any other security technique in the development process. Therefore, threat modeling should be an early priority in application design process. Unfortunately, it is common knowledge that building a full threat model is always heavily resource intensive, requires a full team of expensive security professionals, takes up far too much developer time, and does not scale at all.&lt;/p&gt;
+&lt;p&gt;But the common knowledge is wrong! In fact, this is not at all necessary, and should not be an excuse to avoid building a robust system. Using a value-driven approach, skilled development teams can very efficiently ensure that the features they build can protect themselves, the application, and the business value that the features were created for. Value Driven Threat Modeling offers an alternative to top-heavy, big-model-up-front threat modeling that security pros love, in favor of agility, speed, and developer independence.&lt;/p&gt;
+&lt;p&gt;This talk will describe Value Driven Threat Modeling, and show how to incorporate it into your existing agile development. We will discuss how developers can efficiently produce and leverage a threat model to improve application development, and walkthrough some example scenarios. If you want to be a good developer in 2018, you need to prepare for the threats of 2020!&lt;/p&gt;
+</summary><category term="security"></category></entry><entry><title>All in the timing: How side channel attacks work</title><link href="https://pyvideo.org/pycon-us-2018/all-in-the-timing-how-side-channel-attacks-work.html" rel="alternate"></link><published>2018-05-11T00:00:00+00:00</published><updated>2018-05-11T00:00:00+00:00</updated><author><name>Philip James</name></author><id>tag:pyvideo.org,2018-05-11:pycon-us-2018/all-in-the-timing-how-side-channel-attacks-work.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, you’ll learn about a category of security issue known as side channel attacks. You’ll be amused to see how features like automatic data compression, short-circuit execution, and deterministic hashing can be abused to bypass security systems. No security background knowledge is required. The talk assumes at least intermediate Python experience.&lt;/p&gt;
+&lt;p&gt;We’ll take a tour of real side channel vulnerabilities in open source Python codebases, including the patches that fixed them. It also offers practical advice for avoiding these issues. My goal is to demystify this topic, even if you aren’t writing security-critical software.&lt;/p&gt;
+</summary><category term="security"></category><category term="vulnerability"></category></entry><entry><title>Scientific Hooliganism: lessons from the first hack in history</title><link href="https://pyvideo.org/pycon-italia-2017/scientific-hooliganism-lessons-from-the-first-hack-in-history.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Lilly Ryan</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/scientific-hooliganism-lessons-from-the-first-hack-in-history.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In 1903, Guglielmo Marconi prepared to unveil his world-first,
+long-distance wireless communication technology to the Royal Institution
+in London. He was looking forward to roaring success, scientific
+acclaim, and a string of wealthy new customers - but he didn’t count
+upon falling victim to the first hack in history.&lt;/p&gt;
+&lt;p&gt;This is a tale of business secrets, flame wars, stage magic, and
+magnificent sideburns, direct from the records of Edwardian England.&lt;/p&gt;
+&lt;p&gt;The talk highlights several of the lessons that the FLOSS and
+information security communities can still learn from the fateful events
+of 1903. Marconi’s tale is a master class in the necessity of open
+source technology, as well as being a delightful introduction to the art
+of vulnerability reporting.&lt;/p&gt;
+</summary><category term="infosec"></category><category term="FLOSS"></category><category term="radio"></category><category term="security"></category><category term="hacking"></category><category term="history"></category></entry><entry><title>Oh, I found a Security Issue</title><link href="https://pyvideo.org/pyconweb-2017/oh-i-found-a-security-issue.html" rel="alternate"></link><published>2017-05-28T00:00:00+00:00</published><updated>2017-05-28T00:00:00+00:00</updated><author><name>Markus Holtermann</name></author><id>tag:pyvideo.org,2017-05-28:pyconweb-2017/oh-i-found-a-security-issue.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A talk together with Florian Apolloner&lt;/p&gt;
+&lt;p&gt;Ever thought about what happens when somebody finds a security issue in Django? How does one responsibly disclose the issue? What happens after that? How does the Django team work on it? What happens until a Django security release is published? What comes afterwards?
+Also, Django is “reassuringly secure”. Let’s look at the history ;-)&lt;/p&gt;
+&lt;p&gt;We'll give an insight on how the Django team handles security issues,
+which can serve as a guideline and followed in own projects. We'll
+will also review the history of Django's security issues to identify
+hotspots and areas to look out for.&lt;/p&gt;
+</summary><category term="django"></category><category term="security"></category></entry><entry><title>Frog and Toad Learn Django Security</title><link href="https://pyvideo.org/pydx-2016/frog-and-toad-learn-django-security.html" rel="alternate"></link><published>2016-12-30T00:00:00+00:00</published><updated>2016-12-30T00:00:00+00:00</updated><author><name>Philip James</name></author><id>tag:pyvideo.org,2016-12-30:pydx-2016/frog-and-toad-learn-django-security.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyDX 2016 talk by Philip James&lt;/p&gt;
+&lt;p&gt;Come join us by the fire as we have Security Story Time with our friends, Frog and Toad. With them, you'll learn about all the things Django does to protect users and developers out of the box. We'll look at simplified code samples from the Django codebase to see what's happening under the hood, and cover how to make the Django security model even stronger in your application.&lt;/p&gt;
+</summary><category term="security"></category><category term="django"></category></entry><entry><title>Eat Your Vegetables Data Security for Data Scientists</title><link href="https://pyvideo.org/pydata-dc-2016/eat-your-vegetables-data-security-for-data-scientists.html" rel="alternate"></link><published>2016-10-08T00:00:00+00:00</published><updated>2016-10-08T00:00:00+00:00</updated><author><name>Will Voorhees</name></author><id>tag:pyvideo.org,2016-10-08:pydata-dc-2016/eat-your-vegetables-data-security-for-data-scientists.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://www.slideshare.net/WilliamVoorhees1/eat-your-vegetables-data-security-for-data-scientists"&gt;http://www.slideshare.net/WilliamVoorhees1/eat-your-vegetables-data-security-for-data-scientists&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;You've got data: lots of it. People want to get their hands on that data. You don't want that, so let's go over a few things you can do to dissuade attackers from getting their grubby mitts on your hard processed datastore. We'll cover the obvious things (spoiler alert: encryption) and then some advanced techniques for keeping data secure while still keeping it usable (that is to say, analyzable).&lt;/p&gt;
+</summary><category term="Data"></category><category term="Security"></category></entry><entry><title>The Internet of (Better) Things</title><link href="https://pyvideo.org/pycon-au-2016/the-internet-of-better-things.html" rel="alternate"></link><published>2016-08-12T00:00:00+00:00</published><updated>2016-08-12T00:00:00+00:00</updated><author><name>Nick Moore</name></author><id>tag:pyvideo.org,2016-08-12:pycon-au-2016/the-internet-of-better-things.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Internet of Things! Existential menace or meaningless buzzword? Automating away drudgery or just eroding privacy? Cornucopia or Panopticon? We'll look at the poor state of the current IoT in terms of security, privacy and interoperation. We'll consider a set of requirements for a better IoT. And we'll look at what we as Pythonistas can do to improve on this, as a community and an industry.&lt;/p&gt;
+</summary><category term="Internet-of-Things"></category><category term="Security"></category><category term="Privacy"></category><category term="Interoperation"></category></entry><entry><title>Pony Pwning</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--pony-pwning.html" rel="alternate"></link><published>2010-09-08T00:00:00+00:00</published><updated>2010-09-08T00:00:00+00:00</updated><author><name>Adam Baldwin</name></author><id>tag:pyvideo.org,2010-09-08:djangocon-us-2010/djangocon-2010--pony-pwning.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django's awesomeness unfortunately doesn't make it impenetrable. This
+talk will cover common pitfalls of the Django developer as seen through
+the eyes of a hacker or malicious user.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Django is arguably the most secure web framework. The Django team have
+done an excellent job making secure-by-default decisions for our web
+applications in many situations. Still, the last mile in development is
+where the bulk of security vulnerabilities can be introduced and
+Django's powerful flexibility allows for plenty of rope for developers
+to hang themselves. Understanding the vulnerabilities that can be
+created by common mistakes or misconceptions and overlooked details in
+development will be useful for any Django user.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2010"></category><category term="security"></category></entry><entry><title>Advanced security topics</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--advanced-security-topics.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Paul McMillan</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--advanced-security-topics.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Advanced security topics&lt;/p&gt;
+&lt;p&gt;Presented by Paul McMillan&lt;/p&gt;
+&lt;p&gt;An in-depth look (with demonstrations) at the how and why of several
+advanced security topics. Discussion of ways to improve security of the
+framework moving forward.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2011"></category><category term="security"></category><category term="web"></category></entry><entry><title>How we found our security best practices (and what they are)</title><link href="https://pyvideo.org/djangocon-us-2012/how-we-found-our-security-best-practices-and-wha.html" rel="alternate"></link><published>2012-09-04T00:00:00+00:00</published><updated>2012-09-04T00:00:00+00:00</updated><author><name>James Socol</name></author><id>tag:pyvideo.org,2012-09-04:djangocon-us-2012/how-we-found-our-security-best-practices-and-wha.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Mozilla takes data security very seriously. We have AppSec, OpSec, and
+InfraSec teams, and our web developers have baked our security best
+practices into documentation and a Django app called Funfactory. Hear
+how we came to those best practices, what they are, and how to follow
+them.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Privacy and security are key parts of Mozilla's mission, and we build
+some of the largest Django applications on the web, so being at the
+absolutely forefront of security is crucial to us. And having a great
+user experience is, too. So over the past few years, we've developed a
+number of proposals, tools --like Bleach and django-ratelimit--and best
+practices, and we've wrapped these up into our application template
+Playdoh and an app called Funfactory.&lt;/p&gt;
+&lt;p&gt;I'll share those best practices and their motivations. We'll also go
+over a number of tools, settings, and even some fairly new web standard
+proposals (with tools, of course) to help you build the most secure
+Django applications you can, at whatever scale you're building.&lt;/p&gt;
+</summary><category term="django"></category><category term="security"></category></entry><entry><title>sqlmap - security development in Python</title><link href="https://pyvideo.org/europython-2011/sqlmap-security-development-in-python.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Miroslav Stampar</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/sqlmap-security-development-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Miroslav Stampar - 23 June 2011 in &amp;quot;Track Tagliatelle&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The &amp;quot;sqlmap&amp;quot; is one of the largest, widely used and most active Python
+projects in the IT security community (more than 2000 commits in one
+year period with community of over 100 active testers). It combines it's
+developers' strong security knowledge together with analytical,
+mathematical and Python development skills to provide IT professionals
+with vibrant features.&lt;/p&gt;
+&lt;p&gt;Talk would be consisted of several parts: short introduction to project
+and developers, developing and testing environment, programming cycle,
+program's workflow, technologies used, common pitfalls and how we've
+circumvent them, usage of mathematical models, optimizations, project's
+future goals.&lt;/p&gt;
+&lt;p&gt;The significant part of this talk would be the immediate insight into
+the developing process of probably the world's most advanced open-source
+Python IT security project today.&lt;/p&gt;
+</summary><category term="community"></category><category term="security"></category><category term="testing"></category></entry><entry><title>What is Google App Engine?</title><link href="https://pyvideo.org/europython-2011/what-is-google-app-engine.html" rel="alternate"></link><published>2011-07-24T00:00:00+00:00</published><updated>2011-07-24T00:00:00+00:00</updated><author><name>Wesley J. Chun</name></author><id>tag:pyvideo.org,2011-07-24:europython-2011/what-is-google-app-engine.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] wesley chun - 23 June 2011 in &amp;quot;Track Tagliatelle&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Google App Engine is a unique hosting platform that lets you build
+applications and run them in Google's data centers using the massive
+global infrastructure built to run the Internet's most powerful company.
+App Engine offers a development environment that uses familiar
+technologies (Java and Python) and provides a powerful and robust set of
+APIs to users while maintaining security and independence from other
+apps running in the cloud. It is always free to get started so you can
+try it out with no risk, and if you need additional computing resources,
+you can purchase additional computing resources beyond the free quota
+limits. (If you enable billing and trust us with your credit card, we
+will extend your free quotas even further; you won't get charged until
+you exceed those &lt;em&gt;extended&lt;/em&gt; quotas.) Scale your application to millions
+of users and pay only for what you use at competitive market pricing.&lt;/p&gt;
+&lt;p&gt;In this session, we provide an update of the newest features found in
+the most recent releases of the App Engine platform. We also share some
+suggestions for best practices to existing App Engine developers.&lt;/p&gt;
+&lt;p&gt;Beginners to the App Engine platform will be interested in the
+introductory workshop which may be offered (see description below).&lt;/p&gt;
+&lt;p&gt;Google App Engine workshop&lt;/p&gt;
+&lt;p&gt;In this tutorial, we'll give you a comprehensive introduction to the
+platform in two/three components:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;1-hour Introduction to Cloud computing and Google App Engine seminar&lt;/li&gt;
+&lt;li&gt;3-hour App Engine hands-on workshop/codelab&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the first hour, we review Cloud Computing as an industry and where
+Google App Engine fits into the picture. Specifically, we discuss App
+Engine as a PaaS solution because of the inherent challenges of building
+web and other applications. We'll outline the architecture of App
+Engine, what it's major components are, introduce its features and APIs,
+discuss the service and how it works (including information on the free
+quotas), present some information about current users and usage,
+including integration with Google Apps, and finally, give an overview of
+its enterprise edition called Google App Engine for Business.&lt;/p&gt;
+&lt;p&gt;After the approximately one-hour lecture, we'll show you how to create
+applications that run on App Engine by building a simple but real web
+application from the ground up via a hands-on coding laboratory.
+Although based on the online tutorial, this codelab goes up and beyond
+what's in the documentation: you will get a more detailed step-by-step
+instructions to replicate that example as well as have the opportunity
+to extend your application with some of the newer APIs that come with
+App Engine. The codelab will cover the Users service, non-relational
+Datastore, and Memcache APIs. Time-permitting, we'll also discuss some
+of the newest features found in recent App Engine releases.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="cloud"></category><category term="google"></category><category term="hosting"></category><category term="infrastructure"></category><category term="memcache"></category><category term="security"></category><category term="web"></category></entry><entry><title>Seattle: A Python-based Platform for Easy Development and Deployment of Networked Systems and Applications (#162)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--seattle--a-python-based-platform-for-.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Ivan Beschastnikh</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--seattle--a-python-based-platform-for-.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A Python-based Platform for Easy Development and Deployment of Networked
+Systems and Applications&lt;/p&gt;
+&lt;p&gt;Presented by Ivan Beschastnikh, Justin Samuel, and Justin Cappos&lt;/p&gt;
+&lt;p&gt;Seattle is an open-source platform for developing and deploying
+networked applications. Core feature of Seattle is that it allows safe
+execution of untrusted code on end-user systems. In our talk we look at
+how we used Python to build a safe, restricted code execution
+environment for Seattle that not only provides execution safety but also
+enforces strict resource consumption limits. In addition, Seattle
+includes a high-level API to hide inconsistent OS-specific behaviors
+from developers. What results is a platform that welcomes the
+participation of end-user machines for general-purpose distributed
+programming and creates new possibilities for developers.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://seattle.cs.washington.edu/"&gt;http://seattle.cs.washington.edu/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Beginning of talk missing, due to technical
+problems.]&lt;/p&gt;
+</summary><category term="api"></category><category term="language"></category><category term="mobile"></category><category term="network"></category><category term="p2p"></category><category term="pycon"></category><category term="pycon2010"></category><category term="seattle"></category><category term="security"></category><category term="university"></category></entry><entry><title>Through the Side Channel: Timing and Implementation Attacks in Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--through-the-side-channel--timing-and-.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Geremy Condra</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--through-the-side-channel--timing-and-.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Through the Side Channel: Timing and Implementation Attacks in Python&lt;/p&gt;
+&lt;p&gt;Presented by Geremy Condra&lt;/p&gt;
+&lt;p&gt;Python's dynamic nature, large standard library, and concern for beauty
+over performance make it an elegant and uniquely easy to use language,
+but they also cause some unique problems. In this talk we'll explore how
+features ranging from dictionaries to duck typing can become security
+risks, demonstrate those attacks on real Python projects, and examine
+how you can protect yourself and your code.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Over the last decade, an increasing body of evidence has accumulated
+indicating that even when a system is hardened enough to provide strong
+guarantees about its high-level behavior, implementation details and
+especially performance properties can still provide attackers with an
+easy way in. For Python, this is especially problematic: its generally
+high-level view and the emphasis placed on flexibility often mean that
+it can be difficult to stop attackers from gaining a foothold, while its
+comparatively low execution speed increases the efficacy of wide variety
+of implementation and timing attacks.&lt;/p&gt;
+&lt;p&gt;To help Pythonistas understand and cope with these problems, we've
+divided this talk into two parts: in the first, we demonstrate the
+attacks against a series of widely-deployed Python projects with the
+goal of both improving awareness about the issue and demonstrating
+common weaknesses to be avoided. The second demonstrates effective
+countermeasures and alternative constructions with the goal of improving
+defenders' odds of spotting and correcting these flaws in their own
+code.&lt;/p&gt;
+</summary><category term="hacking"></category><category term="hardening"></category><category term="pycon"></category><category term="pycon2011"></category><category term="security"></category></entry><entry><title>TUF: Secure Software Updates in Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--tuf--secure-software-updates-in-pytho.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Geremy Condra</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--tuf--secure-software-updates-in-pytho.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;TUF: Secure Software Updates in Python&lt;/p&gt;
+&lt;p&gt;Presented by Geremy Condra&lt;/p&gt;
+&lt;p&gt;From an attacker's point of view there are few entry points with as much
+to offer as a vulnerable software updater, yet history tells us that
+such vulnerabilities are common. In this talk we'll demonstrate a number
+of attacks, explain how common approaches fail to defend against them,
+and demonstrate a pure Python library (TUF) that provides both robust
+protection and extreme ease of use.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Vulnerabilities in software update systems expose users to huge range of
+potential security risks, including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Freeze attacks,&lt;/li&gt;
+&lt;li&gt;Mix-and-match attacks,&lt;/li&gt;
+&lt;li&gt;Rollback attacks, and&lt;/li&gt;
+&lt;li&gt;Endless data attacks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the first part of this talk, we'll demonstrate each of these against
+real- world software updaters and explain how commonly used
+countermeasures fail in application. We'll then move on to the second
+part of the talk, demonstrating TUF, its internals, and the mechanisms
+it uses to additionally defend against key compromise. Finally, we'll
+demonstrate how easy it is to integrate TUF into your application and
+its lifecycle.&lt;/p&gt;
+</summary><category term="pycon"></category><category term="pycon2011"></category><category term="security"></category><category term="tuf"></category><category term="updates"></category></entry></feed>

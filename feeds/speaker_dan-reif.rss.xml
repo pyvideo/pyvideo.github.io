@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 15 Aug 2016 00:00:00 +0000</lastBuildDate><item><title>The Evolution of Python Packaging at Facebook</title><link>https://pyvideo.org/pycon-au-2016/the-evolution-of-python-packaging-at-facebook.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dan Reif
+&lt;a class="reference external" href="https://2016.pycon-au.org/schedule/131/view_talk"&gt;https://2016.pycon-au.org/schedule/131/view_talk&lt;/a&gt;
+With tens of millions of Python invocations every day, what’s a packager to do?  The answer selected must account for the insanity of a deeply-heterogeneous production environment: different kernels, different OS distributions, even different versions of system Python.  It also needs enough context to carry with it a consistent reference point for when it was packaged relative to the work of thousands of engineers in a single, unified source control tree.  Lastly, at Facebook scale with hundreds of thousands of servers, every byte sent over the network and stored on disk counts, and every CPU cycle wasted can create a myriad of challenges associated with data center operations management.&lt;/p&gt;
+&lt;p&gt;Sure, it’d be easy to show what a beautiful, easy packaging format we’ve developed at Facebook, and sing its praises, but that’s not what this talk is about.  Instead, we’ll get into the nitty-gritty, and talk about hard tradeoffs that happen when developing a system in the real world.  This is an in-depth look at how Facebook’s packaging has evolved, warts and speed bumps included.  Some of the design goals we addressed (and/or issues we hit!) included:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Synchronizing and pinning versioning of underlying compiled libraries across related tools&lt;/li&gt;
+&lt;li&gt;Running the package as a transparently-Pythonic command-line utility, à la shebang, so we could do in-place replacements of packages written in other languages (e.g. C++)&lt;/li&gt;
+&lt;li&gt;Optimizing package size transferred across the network&lt;/li&gt;
+&lt;li&gt;Optimizing package sizes on disk&lt;/li&gt;
+&lt;li&gt;Minimizing package launch times&lt;/li&gt;
+&lt;li&gt;Handling packages launched from a network-FS location that subsequently goes offline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Attendees will learn about the different tools and techniques we used to solve these challenges, as well as the reasoning behind any trade offs that were made.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dan Reif</dc:creator><pubDate>Mon, 15 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-15:pycon-au-2016/the-evolution-of-python-packaging-at-facebook.html</guid></item></channel></rss>

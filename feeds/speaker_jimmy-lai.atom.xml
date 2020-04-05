@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jimmy-lai.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-20T00:00:00+00:00</updated><entry><title>Python Profilers We Built for Efficiency</title><link href="https://pyvideo.org/pycon-taiwan-2019/python-profilers-we-built-for-efficiency.html" rel="alternate"></link><published>2019-09-20T00:00:00+00:00</published><updated>2019-09-20T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2019-09-20:pycon-taiwan-2019/python-profilers-we-built-for-efficiency.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 11:30–12:00&lt;/p&gt;
+&lt;p&gt;To solve efficiency issue of our Python application. We started with cProfile to profile function call CPU cost and found it couldn't differentiate call-stacks sharing the same function calls. Asyncio makes the issue worse, since gathered functions all have the event loop as caller. We ended up build our own function call profilers:
+* CPU cost profiler: CPU instructions per function call with complete call stack.
+* Latency profiler with asyncio support: collect timestamp/latency per function call and yield from await.
+* Profiler identifies lru_cache opportunities: functions have high cost and high hit rate of parameters/returns.&lt;/p&gt;
+&lt;p&gt;We share how we implemented those profilers. After this talk, you'll have learned how to:
+* Build profilers by registering a callback function for function calls.
+* Handle call stacks in asyncio world.
+* Use different timers and traversing through call-stack.
+* Implement a CPU profiler, latency profiler lru_cache opportunities profiler.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/jimmylai/talks"&gt;https://github.com/jimmylai/talks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Jimmy Lai&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Software Engineer in Instagram Infrastructure. His recent interest is Python efficiency, including profiling, optimization and asyncio. He has been sharing his experiences in PyCon Taiwan since 2012. This year, he plan to share his latency efficiency experiences on large scale Python web application.&lt;/p&gt;
+</summary></entry><entry><title>Building a Knowledge Graph - the new search engine technology</title><link href="https://pyvideo.org/pycon-apac-2014/building-a-knowledge-graph-the-new-search-engin.html" rel="alternate"></link><published>2014-06-27T00:00:00+00:00</published><updated>2014-06-27T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2014-06-27:pycon-apac-2014/building-a-knowledge-graph-the-new-search-engin.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Knowledge graph is the new search engine technology. All the leading
+search engine exploit knowledge graph to provide more accurate result to
+user, e.g. Bing, Google, Yahoo.&lt;/p&gt;
+&lt;p&gt;In this talk, the speaker will demonstrate how to build a searchable
+knowledge graph from scratch. Lots of python tools will be applied
+during the process. The process includes data wrangling, graph entity
+indexing, full text search and web visualization. The data sources are
+from dbpedia.org. Enormous amount of entities are collected and stored
+to graph database for relationship querying and full text search engine
+for searching. In the web visualization, a searchable interface and
+visualized result demonstrate the knowledgable information to customer.&lt;/p&gt;
+&lt;p&gt;About the speaker&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Python fan, and his interested topics are natural
+language processing and machine learning. He specializes in combining
+machine learning algorithm and cloud computing technology to do big data
+analysis, building application services.&lt;/p&gt;
+</summary></entry></feed>

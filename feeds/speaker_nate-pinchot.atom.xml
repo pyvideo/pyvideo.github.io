@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_nate-pinchot.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-09-18T00:00:00+00:00</updated><entry><title>E-Commerce with Django at Scale: Effective Performance Lessons Learned</title><link href="https://pyvideo.org/djangocon-us-2015/e-commerce-with-django-at-scale-by-nate-pinchot.html" rel="alternate"></link><published>2015-09-18T00:00:00+00:00</published><updated>2015-09-18T00:00:00+00:00</updated><author><name>Nate Pinchot</name></author><id>tag:pyvideo.org,2015-09-18:djangocon-us-2015/e-commerce-with-django-at-scale-by-nate-pinchot.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;E-Commerce with Django at Scale: Effective Performance Lessons Learned&lt;/p&gt;
+&lt;p&gt;I'll take you through the most effective performance lessons we've
+learned and show you how you can implement them (with example code).&lt;/p&gt;
+&lt;p&gt;TWO-PASS CACHING WITH CLASS-BASED VIEWS&lt;/p&gt;
+&lt;p&gt;By far, this is one of the most effective performance optimizations we
+have done in terms of HTTP response time.&lt;/p&gt;
+&lt;p&gt;Using class-based views, we are able to do two-pass caching. On the
+first pass of the view, we render everything that's not specific to the
+user. No AJAX calls needed to get user specific content on the page.
+I'll show you how.&lt;/p&gt;
+&lt;p&gt;DATA CACHING STRATEGY&lt;/p&gt;
+&lt;p&gt;I'll review how we use multiple levels of data caching to greatly
+improve the amount of time it takes to rebuild the entire cache.&lt;/p&gt;
+&lt;p&gt;DB READ REPLICAS FOR PERFORMANCE / CUSTOM BACKEND FOR FAILOVER&lt;/p&gt;
+&lt;p&gt;Read replica databases are great for performance. You've set up a few
+read replicas and implemented a fancy new database router which sends
+read queries to the read replicas (round robin) for any data that
+doesn't need to be up-to-the-millisecond fresh (e.g. blog posts, product
+descriptions).&lt;/p&gt;
+&lt;p&gt;You're sitting back and relishing in the improved performance when one
+of your database read replicas goes offline. Now what? I'll show you how
+we implemented a custom database backend to handle this gracefully.&lt;/p&gt;
+&lt;p&gt;MIGRATIONS RULES&lt;/p&gt;
+&lt;p&gt;This is less of a performance optimization and more of a set of rules we
+try to stick to. I'll review some snafus we've had and how we avoided
+future production issues while keeping the site at 99% uptime.&lt;/p&gt;
+</summary></entry></feed>

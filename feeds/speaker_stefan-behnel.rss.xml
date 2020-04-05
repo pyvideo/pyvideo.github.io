@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Get up to speed with Cython 3.0</title><link>https://pyvideo.org/europython-2019/get-up-to-speed-with-cython-30.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing lots of data, in need of more speed, or struggling to make
+use of native code? The Cython compiler for Python solves all of these
+problems in a pythonic way, by compiling Python code to optimised C
+code.&lt;/p&gt;
+&lt;p&gt;Cython [1] has a very long history of faithfully helping users to solve
+their Python performance problems and integrating native code into
+Python in production critical settings, while stimulating somewhat less
+confidence with its 0.x versioning scheme. For the next Cython version,
+a stable 3.0 release, we are planning to clean up several historically
+grown issues in the language to make the Cython compiler more friendly
+for modern Python users to work with.&lt;/p&gt;
+&lt;p&gt;In this talk, I will show how Cython can be used for compiling and
+speeding up Python code, using fast native data structures and
+libraries. I will then give an overview of the changes that are on their
+way for the 3.0 release and how they will affect the user experience.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://cython.org"&gt;https://cython.org&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/get-up-to-speed-with-cython-30.html</guid><category>C-Languages</category><category>Compiler and Interpreters</category><category>Cython</category><category>Performance</category><category>Programming</category></item><item><title>Cython to speed up your Python code</title><link>https://pyvideo.org/pycon-de-2018/cython-to-speed-up-your-python-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://cython.org"&gt;Cython&lt;/a&gt; is not only a very fast and comfortable
+way to talk to native code and libraries, it is also a widely used tool
+for speeding up Python code. The Cython compiler translates Python code
+to C or C++ code, and applies many static optimisations that make Python
+code run visibly faster than in the interpreter. But even better, it
+supports static type annotations that allow direct use of C/C++ data
+types and functions, which the compiler uses to convert and optimise the
+code into fast, native C. The tight integration of all three languages,
+Python, C and C++, makes it possible to freely mix Python features like
+generators and comprehensions with C/C++ features like native data
+types, pointer arithmetic or manually tuned memory management in the
+same code.&lt;/p&gt;
+&lt;p&gt;This talk by a core developer introduces the Cython compiler by
+interactive code examples, and shows how you can use it to speed up your
+real-world Python code. You will learn how you can profile a Python
+module and use Cython to compile and optimise it into a fast binary
+extension module. All of that, without losing the ability to run it
+through common development tools like code checkers or coverage test
+tools.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/cython-to-speed-up-your-python-code.html</guid><category>Big Data</category><category>Infrastructure</category><category>Jupyter</category><category>Parallel Programming</category></item><item><title>Cython to speed up your Python code</title><link>https://pyvideo.org/europython-2018/cython-to-speed-up-your-python-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://cython.org"&gt;Cython&lt;/a&gt; is not only a very fast and comfortable
+way to talk to native code and libraries, it is also a widely used tool
+for speeding up Python code. The Cython compiler translates Python code
+to C or C++ code, and applies many static optimisations that make Python
+code run visibly faster than in the interpreter. But even better, it
+supports static type annotations that allow direct use of C/C++ data
+types and functions, which the compiler uses to convert and optimise the
+code into fast, native C. The tight integration of all three languages,
+Python, C and C++, makes it possible to freely mix Python features like
+generators and comprehensions with C/C++ features like native data
+types, pointer arithmetic or manually tuned memory management in the
+same code.&lt;/p&gt;
+&lt;p&gt;This talk by a core developer introduces the Cython compiler by
+interactive code examples, and shows how you can use it to speed up your
+Python code. You will learn how you can profile a Python module and use
+Cython to compile and optimise it into a fast binary extension module.
+All of that, without losing the ability to run it through common
+development tools like static analysers or coverage test tools.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:europython-2018/cython-to-speed-up-your-python-code.html</guid></item><item><title>Lift your Speed Limits with Cython</title><link>https://pyvideo.org/fosdem-2018/lift-your-speed-limits-with-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fast native code for Python&lt;/p&gt;
+&lt;p&gt;The Cython compiler is the most widely used static compiler for Python. It is used to speed up Python code and to extend the CPython runtime with fast native extension modules that process huge amounts of data all around the world. This talk by one of the core developers gives a quick intro into the compiler, the language, and some of its main applications in the Python big-data ecosystem.&lt;/p&gt;
+&lt;p&gt;Cython is not just a Python compiler or a native code wrapping tool, but also a programming language in its own right that mixes the Python language with C and C++ data types. The fact that you can simply drop Python code into it and compile it gives a very low entry level into performance optimisation by statically compiling your critical code and then tuning it into fast C to make it run faster.&lt;/p&gt;
+&lt;p&gt;In this talk, I will guide you through some examples where the compilation of regular Python code leads to faster execution, and present ways how to make the code run much faster.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-02-03:fosdem-2018/lift-your-speed-limits-with-cython.html</guid><category>cython</category></item><item><title>Cython to the Rescue</title><link>https://pyvideo.org/pycon-cz-2018/cython-to-the-rescue.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You just found that C library which solves that huge problem you have. It solves it completely, it's so fast, it's old, rock solid and well tested – and difficult to use, because it has that real-world, well aged C-API. Maybe even C++. So, you want to use it from Python, but there's no wrapper yet? Or worse, the existing wrapper is auto-generated and feels clumsy, slow and just as ugly to work with as C?&lt;/p&gt;
+&lt;p&gt;Give Cython a try! It's the fastest way to make Python talk (to) native code, and a pleasure to work with as a general programming language.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Sun, 03 Jun 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-06-03:pycon-cz-2018/cython-to-the-rescue.html</guid></item><item><title>Intro to Cython</title><link>https://pyvideo.org/euroscipy-2017/intro-to-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've probably heard of Cython as a tool for fast data processing. Well, it's more than that. Over the years, the Cython compiler has become a major pillar in the Python ecosystem, helping Python users all over the world to crunch their data, write fast and portable native code, and integrate native libraries into their Python workflow. Several excellent projects from the scientific Python world chose Cython to allow &amp;quot;normal people&amp;quot; to write and maintain efficient code for complex scientific algorithms, whenever Python itself comes to its limits.&lt;/p&gt;
+&lt;p&gt;In this tutorial, I will present the Cython compiler and quickly show how to speed up code with it, how to talk to native code, and a couple of more things that you might want to try out with it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/intro-to-cython.html</guid><category>Cython</category></item><item><title>Getting Native with Cython</title><link>https://pyvideo.org/pycon-de-2016/getting-native-with-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cython is not only an excellent and widely used tool to speed up computational Python code, it’s also a very comfortable way to talk to native code and libraries. The Cython compiler translates Python code to C or C++ code, and supports static type annotations to allow direct use of C/C++ data types and functions. The tight integration of all three languages makes it possible to freely mix Python features like generators and comprehensions with C/C++ features like native data types, pointer arithmetic or manually tuned memory management in the same code.
+This talk by a core developer introduces the Cython compiler by interactive code examples and presents recent enhancements in the language that continue to make Cython the best choice for the development of fast and portable Python extensions.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Sun, 30 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-30:pycon-de-2016/getting-native-with-cython.html</guid></item><item><title>Get Native with Cython</title><link>https://pyvideo.org/euroscipy-2015/get-native-with-cython-euroscipy-2015-stefan-behnel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cython is not only an excellent and widely used tool to speed up computational Python code, it’s also a very comfortable way to talk to native code and libraries. This tutorial by a Cython core developer introduces the Cython programming language and its compiler and leads the participants all the way from their first Python extension to an efficient integration with native C/C++ code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Mon, 05 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-05:euroscipy-2015/get-native-with-cython-euroscipy-2015-stefan-behnel.html</guid></item><item><title>Get native with Cython</title><link>https://pyvideo.org/europython-2015/get-native-with-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stefan Behnel - Get native with Cython
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;[Cython][1] is not only an excellent and widely used tool to speed up computational Python code, it's also a very comfortable way to talk to native code and libraries. The Cython compiler translates Python code to C or C++ code, and supports static type annotations to allow direct use of C/C++ data types and functions. The tight integration of all three languages makes it possible to freely mix Python features like generators and comprehensions with C/C++ features like native data types, pointer arithmetic or manually tuned memory management in the same code.&lt;/p&gt;
+&lt;p&gt;This talk by a core developer introduces the Cython compiler by
+interactive code examples and presents recent enhancements in the
+language that continue to make Cython the best choice for the
+development of fast and portable Python extensions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Examples used in presentation as &lt;strong&gt;[IPython/Jupyter][3]&lt;/strong&gt;
+or &lt;strong&gt;[HTML][2]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://cython.org/"&gt;http://cython.org/&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://consulting.behnel.de/ep/2015/ep15-cython.ipynb"&gt;http://consulting.behnel.de/ep/2015/ep15-cython.ipynb&lt;/a&gt;
+[3]: &lt;a class="reference external" href="http://consulting.behnel.de/ep/2015/ep15-cython.html"&gt;http://consulting.behnel.de/ep/2015/ep15-cython.html&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-05:europython-2015/get-native-with-cython.html</guid></item><item><title>Fast Async Code with Cython and AsyncIO</title><link>https://pyvideo.org/europython-2016/fast-async-code-with-cython-and-asyncio.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stefan Behnel - Fast Async Code with Cython and AsyncIO
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/fast-async-code-with-cython-and-asyncio"&gt;https://ep2016.europython.eu//conference/talks/fast-async-code-with-cython-and-asyncio&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Learn how to use the new async/await language feature to write
+asynchronous code in Python and &lt;a class="reference external" href="http://cython.org/"&gt;Cython&lt;/a&gt;. See how to benefit from
+the excellent low-level features that Cython provides to speed up or
+parallelise your code, interface natively with external C/C++ code,
+and achieve better responsiveness and lower latency also in mostly I/O
+bound applications.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Python has recently seen a fresh development boost around asynchronous
+applications, triggered by the addition of the asyncio library and the
+new async/await language features in Python 3.5, but coming from a
+world of well established tools like &lt;a class="reference external" href="https://twistedmatrix.com/"&gt;Twisted&lt;/a&gt; and &lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;Tornado&lt;/a&gt;.
+The &lt;a class="reference external" href="http://cython.org/"&gt;Cython&lt;/a&gt; compiler, which compiles Python code to C, has
+accompanied and influenced this development. It provides full language
+support for async/await under all Python versions starting from 2.6,
+as well as native interoperability with existing Python code and the
+new Python coroutines in Python 3.5.&lt;/p&gt;
+&lt;p&gt;Benchmarks show that, while fully compatible, Cython compiled
+coroutines perform about 2-3x better than the same code executed in
+Python, but they additionally allow to interface natively with
+external C/C++ code, release the GIL, do parallel computation, and
+much more. All of this extends the applicable zone for asynchronous
+applications dramatically and can lead to better responsiveness and
+lower latency also for mostly I/O bound applications.&lt;/p&gt;
+&lt;p&gt;This joined talk by an async I/O expert and one of the Cython core
+developers explains how to write code with async/await in Python and
+Cython, and shows how to benefit from the excellent low-level features
+that Cython provides on top of Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 28 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-28:europython-2016/fast-async-code-with-cython-and-asyncio.html</guid></item><item><title>The Cython Compiler for Python</title><link>https://pyvideo.org/europython-2014/the-cython-compiler-for-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The Cython compiler is the most widely used static compiler for Python.
+It is used to speed up Python code and to extend CPython with fast
+native extension modules that process huge amounts of data all around
+the world. This talk by one of the core developers gives an intro to
+using the compiler and an overview of its major features.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Cython compiler is the most widely used static compiler for Python.
+The code it generates is used in countless critical applications that
+process huge amounts of data world wide. Cython has two major use cases:
+to compile Python code into fast native extension modules, and to
+connect native code to the CPython runtime. The main goal of the Cython
+project is to make it easy for users to manually optimise their Python
+code to make it run at C speed. This talk by one of the core developers
+will give an intro to using the compiler and an overview of its major
+features.&lt;/p&gt;
+&lt;p&gt;Outline will be more or less as follows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cython: intro to the project and the compiler (4 min.)&lt;/li&gt;
+&lt;li&gt;compiling Python code&lt;ul&gt;
+&lt;li&gt;how to do it and what you get (3 min.)&lt;/li&gt;
+&lt;li&gt;a tiny bit of distutils (2 min.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;static typing and Cython extensions to the Python language&lt;ul&gt;
+&lt;li&gt;static typing in Cython language syntax (3 min.)&lt;/li&gt;
+&lt;li&gt;static typing in pure Python syntax (2 min.)&lt;/li&gt;
+&lt;li&gt;why Cython's type system is cool and what users need to know about
+it (8 min.)&lt;/li&gt;
+&lt;li&gt;Cython for optimising Python code (5 min.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;quick intro: talking to native C/C++ code in Cython&lt;ul&gt;
+&lt;li&gt;using external C APIs (4 min.)&lt;/li&gt;
+&lt;li&gt;using external C++ APIs (3 min.)&lt;/li&gt;
+&lt;li&gt;how to build and link in distutils (2 min.)&lt;/li&gt;
+&lt;li&gt;notes on ways to wrap large C-APIs (1 min.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;quick overview: special features for high-performance code&lt;ul&gt;
+&lt;li&gt;NumPy integration and memory views, fused types, parallel loops in
+all brevity (3 min.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-22:europython-2014/the-cython-compiler-for-python.html</guid></item><item><title>lxml - schnelles XML mit Python</title><link>https://pyvideo.org/pycon-de-2011/lxml-schnelles-xml-mit-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Überblick über die XML-Bibliothek lxml, das flinke Schweizer
+Taschenmesser zur XML-Verarbeitung.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Fri, 07 Oct 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-10-07:pycon-de-2011/lxml-schnelles-xml-mit-python.html</guid></item><item><title>Cython - das Beste aus Python und C</title><link>https://pyvideo.org/pycon-de-2011/cython-das-beste-aus-python-und-c.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Überblick über die Programmiersprache Cython, die die Leichtigkeit von
+Python mit der Performance von C kombiniert.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 06 Oct 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-10-06:pycon-de-2011/cython-das-beste-aus-python-und-c.html</guid></item><item><title>Schneller ohne C++</title><link>https://pyvideo.org/pycon-de-2012/schneller-ohne-c.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Die Sichtbarkeit von C++ in der Software-Entwicklung ist auch in ihrem
+33. Jahr noch enorm. In vielen Bereichen, z.B. im Ingenieursumfeld und
+im Embedded-Bereich wird schon aus Tradition mit C und C++ entwickelt,
+oft ohne den Blick auf Alternativen. Eingespielte Entwicklerteams und
+große, über lange Zeit gewachsene Code-Basen lassen einen Umstieg
+unmöglich erscheinen.&lt;/p&gt;
+&lt;p&gt;In diesem Vortrag werde ich die Frage stellen, warum C und C++ so große
+Verbreitung besitzen, trotz der hohen Anforderungen an
+Entwicklererfahrung und der aufwändigen und fehleranfälligen Entwicklung
+mit diesen Sprachen. Dabei zeigt sich Python als ganz natürliche
+Ergänzungssprache, die sich leicht mit bestehenden Code integriert und
+in vielen Bereichen die Entwicklung dank des Paretoprinzips merklich
+beschleunigt.&lt;/p&gt;
+&lt;p&gt;Python erlaubt sowohl eine schnelle prototypische Umsetzung neuer
+Anforderungen als auch die Integration anspruchsvoller Features durch
+die breite Funktionalität in der Standardbibliothek und den nahezu
+allumfassenden Fundus an Bibliotheken. Das Spektrum geht dabei von
+einfachen Skripten über Test-Unterstützung und Web-Frontends bis hin zu
+Finanzanwendungen, Bildverarbeitung und zur performancekritischen
+Analyse gigantischer Datenmengen aus Tiefseesensoren und
+Radioteleskopen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-01:pycon-de-2012/schneller-ohne-c.html</guid><category>c++</category><category>entwicklungskosten</category><category>python</category><category>sprachintegration</category></item><item><title>Schnelle Schleifen mit Cython</title><link>https://pyvideo.org/pycon-de-2012/schnelle-schleifen-mit-cython.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Keine PyCon(-DE) ohne Cython, die de-facto Standarderweiterungssprache
+für Python. Diesmal geht es um ein paar neuere Spracherweiterungen zur
+Python- Syntax, die den Cython-Compiler besonders attraktiv für
+High-Performance- Computing machen: Parallele Schleifen mit OpenMP,
+effizientes Slicing mit Memory-Views und generische Funktionen.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://cython.org"&gt;Cython&lt;/a&gt; ist eine Programmiersprache, die die
+Sprache Python um zusätzliche Features ergänzt. Sie macht das Schreiben
+von schnellen Erweiterungsmodulen für CPython und das Anbinden von
+externen nativen Bibliotheken (C/C++/Fortran/...) so einfach wie Python
+selbst.&lt;/p&gt;
+&lt;p&gt;Dieser Vortrag gibt einen kurzen Einblick in Cython und speziell in die
+Optimierung von schleifenbasierten Algorithmen über NumPy Arrays, mit
+denen große Datenmengen effizient verarbeitet werden können. Dazu werden
+Memory- Views verwendet, die mit Version 0.16 in Cython Einzug gehalten
+haben. Hinzu gesellen sich parallele Schleifen, sowie generische
+Funktionen, die es dem Compiler erlauben, einmal geschriebenen Code für
+verschiedene native Datentypen zu optimieren.&lt;/p&gt;
+&lt;p&gt;Eine ausführliche Version dieses Vortrags mit entsprechenden Übungen
+wird zusätzlich als Tutorial angeboten.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-31:pycon-de-2012/schnelle-schleifen-mit-cython.html</guid></item><item><title>Cython mit PyPy - das Beste aus drei Welten</title><link>https://pyvideo.org/pycon-de-2012/cython-mit-pypy-das-beste-aus-drei-welten.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Die Programmiersprache Cython (&lt;a class="reference external" href="http://cython.org"&gt;http://cython.org&lt;/a&gt; &amp;quot;Web- Seite des
+Cython-Projekts&amp;quot;) ist das de-facto Standard-Tool um CPython um nativen
+Code zu erweitern. Die Python-ähnliche Sprache macht schon seit einigen
+Jahren das Schreiben von schnellen Erweiterungsmodulen für CPython und
+das Anbinden von externen nativen Bibliotheken (C/C++/Fortran/...) so
+einfach wie Python selbst und gleichzeitig so effizient wie C. Davon
+profitiert besonders das weite Feld des High-Performance-Computing in
+Python (NumPy/SciPy/Sage/...), aber auch zahllose andere Bereiche, die
+eine effiziente Verarbeitung großer Datenmengen und die Anbindung von
+nativen Bibliotheken an die Programmiersprache Python benötigen.&lt;/p&gt;
+&lt;p&gt;Die neueste Version des Cython-Compilers bietet erstmals auch
+Unterstützung für PyPy an, eine alternative Python-Implementierung, die
+vor allem durch ihren schnellen JIT-Compiler von sich reden macht.
+Dadurch kann einmal mit Cython geschriebener und in C übersetzter Code
+sowohl in CPython als auch in PyPy verwendet werden. So wird es
+beispielsweise möglich, in einer einzigen Code-Basis effiziente
+Anbindungen externer Bibliotheken für beide Laufzeitumgebungen zu
+entwickeln.&lt;/p&gt;
+&lt;p&gt;Dieser Vortrag von einem der Cython Core-Entwickler erklärt, welche
+Fallstricke dabei noch auf Benutzerseite zu erwarten sind und gibt
+Hilfestellungen beim Schreiben von Cython-Code, der sowohl in CPython
+als auch in PyPy funktioniert.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-30:pycon-de-2012/cython-mit-pypy-das-beste-aus-drei-welten.html</guid></item><item><title>Lupa - LuaJIT in Python</title><link>https://pyvideo.org/pycon-de-2013/lupa-luajit-in-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Python-Interpreter hat den Ruf, eine ausgereifte und grandios
+einfach zu verwendende dynamische Sprache und Laufzeitumgebung zu
+bieten, die für jede noch so &lt;a class="reference external" href="https://xkcd.com/413/"&gt;exotische
+Anforderung&lt;/a&gt; eine Lösung bereit hält.&lt;/p&gt;
+&lt;p&gt;Ein oft genanntes Manko ist jedoch die begrenzte Performance des
+Interpreters für stark algorithmisch geprägte, kritische Teile von
+Anwendungen. Insbesondere hochdynamischer und generierter Code kommt
+hier schnell an seine Grenzen.&lt;/p&gt;
+&lt;p&gt;Auf der anderen Seite existiert mit LuaJIT2 eine sehr schnelle
+JIT-kompilierte Laufzeitumgebung der dynamischen Programmiersprache Lua,
+die bereits so manche Performance-Rekorde gebrochen hat und sich durch
+ihre geringe Größe leicht in andere Programme einbinden lässt. Das große
+Manko von Lua ist jedoch das Fehlen von Standard-Bibliotheken, die
+extrem begrenzten Sprach-Features und der daraus resultierende hohe
+Aufwand bei der Entwicklung größerer Anwendungen.&lt;/p&gt;
+&lt;p&gt;Mit &lt;a class="reference external" href="https://github.com/scoder/lupa"&gt;Lupa&lt;/a&gt; steht eine Verbindung der
+beiden Programmiersprachen bereit, die es ermöglicht, aus Python heraus
+Lua-Code auszuführen und direkt mit diesem zu kommunizieren und Daten
+auszutauschen. So kann der größte Teil einer Anwendung in Python
+implementiert werden, und einzelne Aufgaben können von der schnellen
+LuaJIT-Umgebung übernommen werden.&lt;/p&gt;
+&lt;p&gt;Dieser Vortrag stellt das Projekt vor und gibt Einblicke in die
+Integration der beiden Programmiersprachen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-17:pycon-de-2013/lupa-luajit-in-python.html</guid><category>lua</category><category>luajit</category><category>lupa</category></item><item><title>XML generieren mit lxml</title><link>https://pyvideo.org/pycon-de-2013/xml-generieren-mit-lxml.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://lxml.de/"&gt;lxml&lt;/a&gt; ist der Platzhirsch unter den XML-Tools für
+Python. Über das übliche Parsen hinaus bietet es auch einige schöne
+Möglichkeiten, XML-Dokumente effizient zu generieren. Der Vortrag bietet
+eine Einführung in die Teile von lxml, die das Erzeugen von XML einfach
+und übersichtlich machen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Wed, 16 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-16:pycon-de-2013/xml-generieren-mit-lxml.html</guid><category>lxml</category><category>xml</category></item><item><title>Cython für schnelleren Python-Code</title><link>https://pyvideo.org/pycon-de-2013/cython-fur-schnelleren-python-code.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der &lt;a class="reference external" href="http://cython.org"&gt;Cython-Compiler&lt;/a&gt; ist mehr als nur ein Weg,
+Erweiterungsmodule for CPython zu schreiben. Durch die statische
+Übersetzung von reinem Python-Code öffnen sich neue Möglichkeiten, den
+Code vielfach zu beschleunigen. Anhand einiger Beispiele wird gezeigt,
+wie durch Profiling und gezielte manuelle Optimierung auch reiner
+Python-Code von statischer Kompilierung profitieren kann, ohne dabei das
+Ökosystem der CPython-Laufzeitumgebung verlassen zu müssen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Behnel</dc:creator><pubDate>Tue, 15 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-15:pycon-de-2013/cython-fur-schnelleren-python-code.html</guid><category>compiler</category><category>cython</category><category>optimierung</category></item></channel></rss>

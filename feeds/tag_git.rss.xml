@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Using Git and GitHub to safely store your code</title><link>https://pyvideo.org/python-frederick/using-git-and-github-to-safely-store-your-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Python Frederick for July 2019, I presented on the fundamentals of #Git and #GitHub for storing your code safely and sharing it with others. This talk is aimed at beginners with no prior knowledge of Git.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Layman</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:python-frederick/using-git-and-github-to-safely-store-your-code.html</guid><category>git</category><category>github</category></item><item><title>CPython loves your Pull Requests</title><link>https://pyvideo.org/pycon-italia-2018/cpython-loves-your-pull-requests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;p&gt;CPython, what’s CPython. CPython is the official implementation of
+Python, written in C. And it’s not just a implementation, it is a group
+of volunteers and where they daily work on the project but there is no
+many active contributors.&lt;/p&gt;
+&lt;p&gt;In this talk, I would like to prove to you than you can become an active
+contributor of CPython.&lt;/p&gt;
+&lt;p&gt;The core developers of CPython need your help, for example, with the
+review of some patches, you can comment a patch or try to reproduce a
+bug.&lt;/p&gt;
+&lt;p&gt;In the past, when you wanted to contribute to CPython, you had to use
+the bug tracker interface and send a patch, this patch was reviewed if
+you were lucky and after commented etc…. but this process was really
+long and time consuming.&lt;/p&gt;
+&lt;p&gt;Now with the new process based on GitHub and Git, you can create a new
+branch on your local repository and just send a Pull Request. The Pull
+Request is just awesome, it will be reviewed really quickly, we will
+comment your Pull Request and if the code is correct and the tests pass,
+then you PR will be merged in CPython.&lt;/p&gt;
+&lt;p&gt;We love and need your Pull Requests for CPython.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="audience"&gt;
+&lt;h4&gt;Audience&lt;/h4&gt;
+&lt;p&gt;For new comers to CPython and the future contributors and of course for
+the regular contributors and core-dev of CPython.&lt;/p&gt;
+&lt;p&gt;With this migration to GitHub, I will show the work done by the
+migration team, the benefits of this migration and the new
+tools/workflow. Few tools have been developed to help the core-dev. For
+example, Miss Islington has been developed for an automatic back-port of
+a branch from Python ‘master’ to Python 3.6 or 3.5, just with a “label”
+on the Pull Request&lt;/p&gt;
+&lt;p&gt;I will show some stats about the contributors and the contributions on
+the CPython project. For example, in November 2017, 4207 pull requests
+from the community since the migration in Feb 2017.&lt;/p&gt;
+&lt;p&gt;The talk is explained with a story “Once upon a time” and with humour.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h4&gt;Outline&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction&lt;ul&gt;
+&lt;li&gt;small history about the beginning of Python, the status and the
+challenges.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Former workflows, former tools:&lt;ul&gt;
+&lt;li&gt;the CLA (PSF Contributor Agreement)&lt;/li&gt;
+&lt;li&gt;the bug tracker&lt;/li&gt;
+&lt;li&gt;patch review with the Rietveld tool&lt;/li&gt;
+&lt;li&gt;typical workflow&lt;/li&gt;
+&lt;li&gt;conclusion: We have an issue for the new comers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;New workflow, new tools&lt;ul&gt;
+&lt;li&gt;Git, why?&lt;/li&gt;
+&lt;li&gt;Github, why?&lt;/li&gt;
+&lt;li&gt;Web interface, Pull Requests, Dashboards&lt;/li&gt;
+&lt;li&gt;REST API, GraphQL API for the statistics&lt;/li&gt;
+&lt;li&gt;Automation with Travis, AppVeyor&lt;/li&gt;
+&lt;li&gt;New Bots: Bedevere, Miss Islington, “The Knights who say ni!”&lt;/li&gt;
+&lt;li&gt;New tool: Blurb&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Comparison between the former and new workflow&lt;/li&gt;
+&lt;li&gt;Statistics (between Feb 2017, and Nov 2017)&lt;ul&gt;
+&lt;li&gt;Number of Pull Requests (4204)&lt;/li&gt;
+&lt;li&gt;Number of Contributors (586) vs Core Dev&lt;/li&gt;
+&lt;li&gt;Merge time, Top, Average, etc….&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="additional-notes"&gt;
+&lt;h4&gt;Additional notes&lt;/h4&gt;
+&lt;p&gt;This talk has been presented at PyCon Canada in November 2017 at
+Montreal in front of two core-devs of Python, Brett Cannon and Mariatta
+Wijaya. Also reviewed by Victor Stinner core-dev python&lt;/p&gt;
+&lt;p&gt;My talk has been shared on the python-dev mailing list by Victor
+Stinner:
+&lt;a class="reference external" href="https://mail.python.org/pipermail/python-dev/2017-December/151051.html"&gt;https://mail.python.org/pipermail/python-dev/2017-December/151051.html&lt;/a&gt;
+because the statistics were interesting for the core-dev.&lt;/p&gt;
+&lt;p&gt;Presentation at PyCon Canada 2017: &lt;a class="reference external" href="https://2017.pycon.ca/schedule/4/"&gt;https://2017.pycon.ca/schedule/4/&lt;/a&gt;
+Slides:
+&lt;a class="reference external" href="https://speakerdeck.com/matrixise/cpython-loves-your-pull-requests"&gt;https://speakerdeck.com/matrixise/cpython-loves-your-pull-requests&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My experience, speaker at PyCon Canada 2015, 2016 and 2017 Python FOSDEM
+2013, 2014, 2015 and 2017 PyCon Ireland 2015, 2016, and 2017 PyCon
+France 2012, 2014, 2016, 2017 PyCon UK 2015 EuroPython 2015, 2016 and
+2017. Montreal Python September 2015 and November 2017.&lt;/p&gt;
+&lt;p&gt;Organizer of Python FOSDEM (+- 600 people) in Belgium Co-Organizer of
+EuroPython 2015, 2016 and 2017 (as member of the Web workgroup).&lt;/p&gt;
+&lt;p&gt;Fellow Member of the Python Software Foundation since 2013 Member of the
+Fellow Workgroup for the PSF Member of the Marketing Workgroup for the
+PSF&lt;/p&gt;
+&lt;p&gt;Of course, contributor of CPython, mainly on Devguide and sometimes on
+the main repository with some fixes, new features.&lt;/p&gt;
+&lt;p&gt;For my contribution to the migration of Python.
+&lt;a class="reference external" href="https://mail.python.org/pipermail/python-committers/2017-February/004220.html"&gt;https://mail.python.org/pipermail/python-committers/2017-February/004220.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Others presentations where I explain the interpreter and the bytecode of
+Python &lt;a class="reference external" href="https://speakerdeck.com/matrixise/architecture-of-cpython-part-1"&gt;https://speakerdeck.com/matrixise/architecture-of-cpython-part-1&lt;/a&gt;
+&lt;a class="reference external" href="https://speakerdeck.com/matrixise/exploring-our-python-interpreter"&gt;https://speakerdeck.com/matrixise/exploring-our-python-interpreter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stéphane Wirtel</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/cpython-loves-your-pull-requests.html</guid><category>statistics</category><category>core-programming</category><category>CPython</category><category>community</category><category>github</category><category>git</category></item><item><title>Heroku: come deployare un'app Django in 10 minuti!</title><link>https://pyvideo.org/pycon-italia-2018/heroku-come-deployare-unapp-django-in-10-minuti.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Se sei stanco di occuparti di &lt;em&gt;load balancing&lt;/em&gt; , &lt;em&gt;routing&lt;/em&gt; e &lt;em&gt;cloud
+monitoring&lt;/em&gt; e vorresti dedicarti solo a &lt;em&gt;lambda function&lt;/em&gt; , &lt;em&gt;list
+comprehension&lt;/em&gt; o &lt;em&gt;class-based view&lt;/em&gt; allora questo è il talk che fa per
+te.&lt;/p&gt;
+&lt;p&gt;Heroku è la piattaforma PaaS ( &lt;em&gt;Platform as a Service&lt;/em&gt; ) che consente
+agli sviluppatori di creare, eseguire e gestire applicazioni interamente
+nel cloud. Ad essere fornito come servizio non c’è solo l’hardware, ma
+anche la piattaforma che astrae l’hardware stesso e permette di
+usufruire di funzionalità che consentono di ottenere bilanciamenti
+automatici, gestione del deployment e altro ancora.&lt;/p&gt;
+&lt;p&gt;Il vantaggio per l’utente è quello di concentrarsi solo ed
+esclusivamente sullo sviluppo dell’applicazione senza perdersi
+nell’analisi di problematiche legate all’ambiente in cui essa deve
+essere distribuita ottenendo così la scalabilità e l’affidabilità
+necessaria.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 15:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sabatino Severino</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/heroku-come-deployare-unapp-django-in-10-minuti.html</guid><category>paas</category><category>continuous-integration</category><category>github</category><category>continuous-delivery</category><category>Python</category><category>pipeline</category><category>django</category><category>heroku</category><category>git</category><category>deployment</category><category>web development</category></item><item><title>In git we trust</title><link>https://pyvideo.org/pycon-italia-2018/in-git-we-trust.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tutti giorni molti di noi usano git avendo a che fare con la sua
+complessità.&lt;/p&gt;
+&lt;p&gt;Alzi la mano chi non ha mai avuto un conflitto su un merge. O chi ha
+iniziato a sudare freddo pensando di aver perso ore di lavoro.&lt;/p&gt;
+&lt;p&gt;L’obbiettivo di questo talk è quello di provare a togliere il velo di
+mistero a ciò che succede sotto il cofano quando utilizziamo git, per
+usarlo con maggior consapevolezza e produttività, soprattutto quando le
+cose prendono una piega sbagliata.&lt;/p&gt;
+&lt;p&gt;Il tutto strizzando l’occhio al nostro linguaggio preferito: Python&lt;/p&gt;
+&lt;p&gt;Il tour comprenderà:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;introduzione&lt;/li&gt;
+&lt;li&gt;objects&lt;/li&gt;
+&lt;li&gt;reference&lt;/li&gt;
+&lt;li&gt;esempi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un minimo di conoscenza di git è consigliata :) .&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Simone Basso</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/in-git-we-trust.html</guid><category>git</category><category>#amicodialessia</category><category>devops</category></item><item><title>DevOps di applicazioni Python (e non solo) su OpenShift</title><link>https://pyvideo.org/pycon-italia-2018/devops-di-applicazioni-python-e-non-solo-su-openshift.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;OpenShift Origin è la Platform-as-a-Service opensource di riferimento.
+Basata su Kubernetes e Docker, contiene features aggiuntive e
+integrazioni con altri componenti che semplificano le pratiche di
+DevOps.&lt;/p&gt;
+&lt;p&gt;Dopo una breve introduzione ad Openshift ed alla sua architettura,
+vedremo come:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;fare il setup di infrastrutture applicative microservice-based (es.
+microservizi Python Flask/Django, single page application Angular,
+ecc…)&lt;/li&gt;
+&lt;li&gt;creare una piattaforma di Continuous Integration e Continuous
+Delivery&lt;/li&gt;
+&lt;li&gt;implementare e gestire la CI/CD di microservice-based application
+sfruttando l’integrazione con Git e Jenkins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="agenda"&gt;
+&lt;h4&gt;Agenda&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;architettura di base di OpenShift&lt;/li&gt;
+&lt;li&gt;come costruire un &lt;em&gt;project&lt;/em&gt; OpenShift: &lt;em&gt;builds&lt;/em&gt; e &lt;em&gt;deployments&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;automatizzare il setup mediante &lt;em&gt;template&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;utilizzare Git, Jenkins e Openshift per creare una semplice pipeline
+di CI/CD&lt;/li&gt;
+&lt;li&gt;strategie di deployment avanzate: &lt;em&gt;blue-green deployment&lt;/em&gt; , &lt;em&gt;A/B
+deployment&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prerequisiti"&gt;
+&lt;h4&gt;Prerequisiti&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;conoscenza base di Git e Jenkins&lt;/li&gt;
+&lt;li&gt;conoscenza base dei concetti CI/CD e DevOps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Fiore</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/devops-di-applicazioni-python-e-non-solo-su-openshift.html</guid><category>microservices</category><category>continuous-integration</category><category>git</category><category>continuous-delivery</category><category>kubernetes</category><category>devops</category><category>jenkins</category><category>docker</category><category>OpenShift</category></item><item><title>PaaS per tutti i gusti: CI/CD sotto controllo con Kubernetes e Dokku</title><link>https://pyvideo.org/pycon-italia-2018/paas-per-tutti-i-gusti-cicd-sotto-controllo-con-kubernetes-e-dokku.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In questo talk saranno illustrati processi e workflow tipici dei
+paradigmi del DevOp e delle metodologie Agile. Vedremo quali
+&lt;strong&gt;accorgimenti&lt;/strong&gt; devono essere presi con le applicazioni pacchettizzate
+con &lt;strong&gt;Docker&lt;/strong&gt; , in particolare le applicazioni Django e come &lt;strong&gt;evitare
+le problematiche principali che portano frustrazione e impediscono
+un’adozione reale della CI/CD&lt;/strong&gt;. Saranno presentati degli esempi pratici
+&lt;strong&gt;workflow&lt;/strong&gt; implementati con successo, in modo snello, versionato e
+ripetibile, in ambienti che vanno dal test fino alla produzione. In
+ultimo faremo una carrellata dei sistemi di &lt;strong&gt;PaaS&lt;/strong&gt; più in voga del
+momento concentrandoci quindi su &lt;strong&gt;Dokku&lt;/strong&gt; e &lt;strong&gt;Kubernetes&lt;/strong&gt; , che
+coprono tutto il ventaglio delle necessità di deploy, dal piccolo sito
+fino al sistema ultra scalabile e ridondato.&lt;/p&gt;
+&lt;p&gt;Prerequisito per il talk è conoscere i concetti base di Docker e
+dell’uso di git. Durante il talk con 3 distinti esempi e demo di
+complessità crescente esploreremo il mondo della CI/CD.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Claudio Mignanti</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/paas-per-tutti-i-gusti-cicd-sotto-controllo-con-kubernetes-e-dokku.html</guid><category>paas</category><category>continuous-integration</category><category>gitlab</category><category>kubernetes</category><category>testing</category><category>git</category><category>docker</category></item><item><title>Usare Odoo come framework</title><link>https://pyvideo.org/pycon-italia-2018/usare-odoo-come-framework.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il framework Odoo offre agli sviluppatori la possibilità di estendere
+Odoo per raggiungere gli obiettivi di business e (si spera) rendere Odoo
+più adatto al flusso di lavoro aziendale. In questo talk tratteremo come
+realizzare: La struttura di base di un modulo Odoo. Lo sviluppo di un
+modulo Odoo base. Creazione e modifica di un Report Qweb in Odoo.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 16:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eliumara López</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/usare-odoo-come-framework.html</guid><category>github</category><category>postgresql</category><category>postgres</category><category>#Python</category><category>Python</category><category>#Odoo</category><category>Qweb</category><category>git</category><category>#OCA</category><category>#PostrgreSQL</category><category>#github</category></item><item><title>Introduction to Git for the Python Hacker</title><link>https://pyvideo.org/pytexas-2012/introduction-to-git-for-the-python-hacker.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Allen</dc:creator><pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-15:pytexas-2012/introduction-to-git-for-the-python-hacker.html</guid><category>git</category></item><item><title>Continuous Delivery for Iot with Python and Iottly</title><link>https://pyvideo.org/pycon-italia-2017/continuous-delivery-for-iot-with-python-and-iottly.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We know, continuous delivery is one of the current buzzwords (much like
+IoT was a couple of years ago). But think of an industrial IoT project
+connecting thousands of remote and inaccessible devices which should be
+kept secure and updated over time. Now, imagine you can just write
+Python code for your devices, test it over-the-internet both locally in
+the lab, and in a real test environment simply by pushing your code to
+specific branches and finally just pushing to master to update the
+entire fleet.&lt;/p&gt;
+&lt;p&gt;During the talk we will use Iottly to showcase this continuous delivery
+pattern for the internet of things, with live code and connected devices
+(Raspberry Pi).&lt;/p&gt;
+&lt;p&gt;Iottly is a Development and Management Cloud Service for IoT Projects,
+built by TomorrowData. Iottly is written in Python and is open source
+(github). It features a Python sandbox for the devices, an online editor
+to program the devices over-the-internet, and the integration with git
+as the base for continuous delivery.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefano Terna</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/continuous-delivery-for-iot-with-python-and-iottly.html</guid><category>raspberrypi</category><category>git</category><category>continuous-delivery</category><category>iot</category><category>over-the-air firmware upgrade</category><category>InternetOfThings</category><category>InternetDelleCose</category><category>github</category><category>IDE</category></item><item><title>Advanced git</title><link>https://pyvideo.org/pydx-2016/advanced-git.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyDX 2016 talk by David &amp;quot;DB&amp;quot; Baumgold&lt;/p&gt;
+&lt;p&gt;You know clone, commit, push, and pull. Now you're ready for the fun stuff. This talk will give you the advanced knowledge you need to take control of your Git repository: rebase, cherry-pick, bisect, blame, squashing, and the reflog. You'll also get a better conceptual understanding of how Git works, allowing you to chain these tools together to accomplish whatever task you need.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David "DB" Baumgold</dc:creator><pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-12-30:pydx-2016/advanced-git.html</guid><category>git</category></item><item><title>Git in Control, Version Control and How it Could save Your Life</title><link>https://pyvideo.org/djangocon-us-2016/git-in-control-version-control-and-how-it-could-save-your-life.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Git in Control, Version Control and How it Could save Your Life by Rachell Calhoun&lt;/p&gt;
+&lt;p&gt;“You can’t break GitHub, don’t worry.” Maybe you can’t break it but you can sure get yourself into a labyrinth of git commands. Version control can be a headache but it can also save your project.&lt;/p&gt;
+&lt;p&gt;There are certain pitfalls to avoid when using Git, I’ve probably found most of them and stumbled my way out. While my goal is to help you avoid them altogether, I also want to give you the skills to work through these pitfalls so you can make it out alive and with your project intact.&lt;/p&gt;
+&lt;p&gt;Whether you’re working on your own project, or collaborating with others you can learn how to git survive anything. We’ll discuss the benefits version control has for your own projects as well as projects with others.&lt;/p&gt;
+&lt;p&gt;For all of you awesome collaborators working with others on a project, we’ll go over important steps to take while handling others’ code and ‘gitiquette’ so you can save yourself the embarrassment of faux pas in the git world.&lt;/p&gt;
+&lt;p&gt;My goal is to give you an overview of Github flow, provide solutions for potential problems you may encounter, and help you feel more comfortable with version control.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rachell Calhoun</dc:creator><pubDate>Fri, 12 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-12:djangocon-us-2016/git-in-control-version-control-and-how-it-could-save-your-life.html</guid><category>git</category></item><item><title>PyOhio 2010: Wrangling the bits, standardizing how apps get built</title><link>https://pyvideo.org/pyohio-2010/pyohio-2010--wrangling-the-bits--standardizing-ho.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Wrangling the bits, standardizing how apps get built&lt;/p&gt;
+&lt;p&gt;Presented by Rick Harding&lt;/p&gt;
+&lt;p&gt;As we moved more work to Python we had to figure out how to start,
+share, and deploy projects in a standard way. Virtualenv, pip, and Git
+to the rescue.&lt;/p&gt;
+&lt;p&gt;[Note: The talk starts at around 7:20 when the mic is working.]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rick Harding</dc:creator><pubDate>Sat, 31 Jul 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-07-31:pyohio-2010/pyohio-2010--wrangling-the-bits--standardizing-ho.html</guid><category>deploying</category><category>fabric</category><category>git</category><category>pip</category><category>pyohio</category><category>pyohio2010</category><category>virtualenv</category></item><item><title>A Portrait of One Scientist as a Graduate Student</title><link>https://pyvideo.org/scipy-2013/a-portrait-of-one-scientist-as-a-graduate-student.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;a focus on specific tools and techniques invaluable in doing research in
+a reproducible manner.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Ivanov, Paul, UC Berkeley&lt;/p&gt;
+&lt;p&gt;Track: General&lt;/p&gt;
+&lt;p&gt;In this talk, I will focus on the how of reproducible research. I will
+focus on specific tools and techniques I have found invaluable in doing
+research in a reproducible manner. In particular, I will cover the
+following general topics (with specific examples in parentheses):
+version control and code provenance (git), code verification (test
+driven development, nosetests), data integrity (sha1, md5, git-annex),
+seed saving ( random seed retention ) distribution of datasets
+(mirroring, git-annex, metalinks), light-weight analysis capture (
+ttyrec, ipython notebook)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Paul Ivanov</dc:creator><pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-02:scipy-2013/a-portrait-of-one-scientist-as-a-graduate-student.html</guid><category>git</category><category>reproducibility</category></item><item><title>GitPython and Git Internals</title><link>https://pyvideo.org/chipy/gitpython-and-git-internals.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Chris covers how git works, the internals, and using the GitPython
+library.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://gitorious.org/git-python"&gt;GitPython&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Allan Webber</dc:creator><pubDate>Thu, 14 Jan 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-01-14:chipy/gitpython-and-git-internals.html</guid><category>chipy</category><category>git</category><category>gitpython</category></item><item><title>Experiences making CPU-bound tasks run much faster</title><link>https://pyvideo.org/europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Ian Ozsvald - 22 June 2011 in &amp;quot;Training Pizza
+Margherita &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;UPDATE - post-event I've created a &lt;a class="reference external" href="http://ianozsvald.com/2011/06/29/high-performance-python-tutorial-v0-1%20-from-my-4-hour-tutorial-at-europython-2011/"&gt;49 page PDF write-
+up&lt;/a&gt;
+which summarises the 4 hour tutorial&lt;/p&gt;
+&lt;p&gt;As a long-time R&amp;amp;D consultant I'm often working to make slow,
+experimental code run faster for tasks like physics simulation, flood
+modeling and natural language processing. Python allows a smooth
+progression from rough-and-ready (but slow) algorithms through to finely
+tuned tasks that efficiently use as much CPU power as you can bring to
+bear. Speed-ups of 10-500* can be expected for the Mandelbrot code
+we'll use.&lt;/p&gt;
+&lt;p&gt;In this talk I'll cover a set of libraries that make CPU-bound tasks run
+much faster. We'll begin with a look at profiling using RunSnakeRun and
+line_profiler to identify our bottleneck. We'll take a look at slow
+algorithms in Python and how they can run faster using numpy and
+numexpr.&lt;/p&gt;
+&lt;p&gt;Next we'll cover the use of multiprocessing to utilise multiple CPU
+cores along with Cython or ShedSkin to easily use C code in a friendly
+Python wrapper. Multiprocessing on a quad-core system can often provide
+a 4* speed-up for the right tasks. Next parallelpython will let us run
+our code on a network of machines.&lt;/p&gt;
+&lt;p&gt;Finally we'll look at pyCUDA to utilise an NVIDIA GPU. CUDA can give the
+best improvements for mathematical problems (over 100* on the right
+tasks) but works on a narrower set of problems.&lt;/p&gt;
+&lt;p&gt;How it'll work: The tutorial will be hands on, you'll be converting
+example files from normal Python to faster variants using the tools
+below. All of it is optional, you'll get the most benefit by having
+everything installed. We'll work in groups and open discussion is
+encouraged.&lt;/p&gt;
+&lt;p&gt;NOTE - you are expected to have all these tools installed &lt;em&gt;before&lt;/em&gt; the
+tutorial (if you don't, you might find it hard to follow what's going
+on!).&lt;/p&gt;
+&lt;p&gt;I'll be using Python 2.7.1 on a Macbook (Snow Leopard). All of these
+tools run on Windows and Linux, as long as your versions are fairly
+recent everything should run just fine.&lt;/p&gt;
+&lt;p&gt;My versions (roughly ordered by importance):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python 2.7.1&lt;/li&gt;
+&lt;li&gt;RunSnakeRun 2.0.1b6 (with wxPython 2.8.12.0 Unicode)&lt;/li&gt;
+&lt;li&gt;line_profiler (1.0b2)&lt;/li&gt;
+&lt;li&gt;Cython 0.14.1&lt;/li&gt;
+&lt;li&gt;ShedSkin 0.7.1&lt;/li&gt;
+&lt;li&gt;numpy 1.5.1&lt;/li&gt;
+&lt;li&gt;numexpr 1.4.2&lt;/li&gt;
+&lt;li&gt;ParallelPython 1.6.1&lt;/li&gt;
+&lt;li&gt;pyCUDA HEAD from git as of 14th June 2011 (with CUDA 4.0 drivers)&lt;/li&gt;
+&lt;li&gt;PyPy 1.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some background reading:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/"&gt;http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/"&gt;http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ian Ozsvald</dc:creator><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-18:europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</guid><category>cython</category><category>git</category><category>multiprocessing</category><category>network</category><category>numpy</category><category>nvidia</category><category>profiling</category><category>pycuda</category><category>runsnakerun</category><category>tutorial</category><category>windows</category><category>wxpython</category></item><item><title>Hg and Git : Can't we all just get along? (#154)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--hg-and-git---can--39-t-we-all-just-ge.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hg and Git: Can't we all just get along?&lt;/p&gt;
+&lt;p&gt;Presented by Scott Chacon&lt;/p&gt;
+&lt;p&gt;There is a fair amount of unnecessary animosity between developers about
+version control systems, especially between Mercurial and Git users. In
+reality, these two systems are very similar and can actually cooperate
+pretty well. In this talk we will show just how similar Git and
+Mercurial are, look at some of their technical differences, and see how
+they can work together by looking at hg-git, the bidirectional
+Git/Mercurial bridge, implemented in Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Scott Chacon</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--hg-and-git---can--39-t-we-all-just-ge.html</guid><category>git</category><category>hg</category><category>mercurial</category><category>pycon</category><category>pycon2010</category></item><item><title>Advanced Git</title><link>https://pyvideo.org/pycon-us-2015/advanced-git.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You know clone, commit, push, and pull. Now you're ready for the fun
+stuff. This talk will give you the advanced knowledge you need to take
+control of your git repository: rebase, cherry-pick, bisect, blame,
+squashing, and the reflog. You'll also get a better conceptual
+understanding of how git works, allowing you to chain these tools
+together to accomplish whatever task you need.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David "DB" Baumgold</dc:creator><pubDate>Sat, 11 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-11:pycon-us-2015/advanced-git.html</guid><category>git</category></item></channel></rss>

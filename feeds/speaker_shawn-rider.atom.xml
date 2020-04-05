@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_shawn-rider.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2010-09-09T00:00:00+00:00</updated><entry><title>Pluggable, Reusable Django Apps: A Use Case and Proposed Solution</title><link href="https://pyvideo.org/djangocon-us-2009/pluggable--reusable-django-apps--a-use-case-and-p.html" rel="alternate"></link><published>2009-09-09T00:00:00+00:00</published><updated>2009-09-09T00:00:00+00:00</updated><author><name>Shawn Rider</name></author><id>tag:pyvideo.org,2009-09-09:djangocon-us-2009/pluggable--reusable-django-apps--a-use-case-and-p.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pluggable, reusable, django apps: A use case and proposed solution&lt;/p&gt;
+&lt;p&gt;Presented by Shawn Rider and Nowell Strite&lt;/p&gt;
+&lt;p&gt;Talks about Django usage in PBS maintained sites.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: audio jumps around a bit]&lt;/p&gt;
+</summary><category term="djangocon2009"></category></entry><entry><title>Massaging the Pony: Message Queues and You</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html" rel="alternate"></link><published>2010-09-09T00:00:00+00:00</published><updated>2010-09-09T00:00:00+00:00</updated><author><name>Shawn Rider</name></author><id>tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Message queues are a potential solution for any site that needs to
+facilitate robust asynchronous operations on your website including
+carrying out intensive or long-running actions or synchronizing off-site
+services. We will look at how PBS has used Celery and RabbitMQ to
+provide more reliable service and how to set up a robust message queue
+solution in a cloud hosting environment.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;In maintaining several different site projects written in Django over
+the past four years, the PBS Education team repeatedly found the need
+for the ability to create asynchronous processes that could handle
+long-running actions and mission-critical synchronization. We needed a
+way to handle tasks such as generating reports on large data sets and
+executing remote processes on fussy third-party services. The clear
+solution to the problems we encountered was to implement a robust
+message queue solution.&lt;/p&gt;
+&lt;p&gt;Message queues allow sites to execute processes outside the normal HTTP
+request cycle and then deliver the results of those processes in a
+variety of ways. After a survey of all available message queue solutions
+we settled on a combination of Celery and RabbitMQ to create a reliable,
+always-available system that can handle mission-critical tasks. We can
+easily develop against a message queue in our development builds, and we
+have an infrastucture based in a cloud hosting service that allows us to
+rely on the message queue without reservation.&lt;/p&gt;
+&lt;p&gt;In this talk will will look at what a message queue does for your site,
+how to implement a message queue in your Django code, and how to set up
+a reliable message queue infrastructure on your servers. We will show
+examples from some of our sites at PBS so it is clear how message queues
+work and to present some common use cases that warrant a message queue
+solution. We will also discuss some of the design patterns that made it
+easy to switch to message queue based processing for discreet tasks, as
+well as some of the things we learned that have made the solution even
+easier to implement for new tasks.&lt;/p&gt;
+</summary><category term="celery"></category><category term="djangocon"></category><category term="djangocon2010"></category><category term="messagequeues"></category><category term="queues"></category><category term="rabbitmq"></category></entry><entry><title>Teaching an Old Pony New Tricks: Maintaining and Updating an Aging Django Project</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--teaching-an-old-pony-new-tricks--.html" rel="alternate"></link><published>2010-09-07T00:00:00+00:00</published><updated>2010-09-07T00:00:00+00:00</updated><author><name>Shawn Rider</name></author><id>tag:pyvideo.org,2010-09-07:djangocon-us-2010/djangocon-2010--teaching-an-old-pony-new-tricks--.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PBS began development on its first Django project in 2006 using Django
+0.96. PBS TeacherLine launched in 2007 and continues to run today. This
+talk will discuss the process for designing the PBS TeacherLine
+codebase, how new advanced features were added over the years, and
+pitfalls you can avoid when planning projects for longevity and easy
+maintenance.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;PBS chose Django after seeing a presentation by Jacob Kaplan-Moss and
+Adrian Holovaty at OSCON 2006. That Fall, PBS Education began work on a
+new version of the PBS TeacherLine website. The site most users see when
+they visit PBS TeacherLine is essentially a brochure and catalog that
+allows educators to purchase seats in online professional development
+courses. However, behind the scenes is an administrative infrastructure
+that allows over 50 PBS stations and PBS national staff members to
+administrate hundreds of course sections and over ten thousand learners
+every year. There are robust features for accounting, reporting, student
+and staff management just to name a few.&lt;/p&gt;
+&lt;p&gt;The TeacherLine website was initially written using Django 0.96. The
+site is currently running Django 1.2 and has had major upgrades made to
+some of the core systems including the implementation of a robust
+message queue solution to handle the most intense administrative
+functions. Over the past four years, the PBS Education Technology Team
+has learned many lessons about system design, best practices, handling
+upgrades, and creating Django-based code that is flexible and easy to
+maintain.&lt;/p&gt;
+&lt;p&gt;In this discussion we will look at some of the more interesting points
+in the history of PBS TeacherLine, including design patterns,
+workarounds that were eventually made obsolete by improvements in the
+Django framework, and the process of iteratively improving functionality
+and features. We will discuss successes and failures, including the
+pitfalls we avoided and (perhaps more interestingly) those we did not.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2010"></category><category term="maintenance"></category><category term="updating"></category></entry></feed>

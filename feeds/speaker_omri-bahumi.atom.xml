@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_omri-bahumi.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-06-04T00:00:00+00:00</updated><entry><title>Exploiting network namespaces for fun and profit</title><link href="https://pyvideo.org/pycon-israel-2018/exploiting-network-namespaces-for-fun-and-profit.html" rel="alternate"></link><published>2018-06-04T00:00:00+00:00</published><updated>2018-06-04T00:00:00+00:00</updated><author><name>Omri Bahumi</name></author><id>tag:pyvideo.org,2018-06-04:pycon-israel-2018/exploiting-network-namespaces-for-fun-and-profit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What are namespaces?
+What network namespaces do?
+How containers use namespaces?
+What can we do with this?&lt;/p&gt;
+&lt;p&gt;Eventually, we will be able to write this:&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Tor&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+  &lt;span class="c1"&gt;# all code in here will be routed through the Tor container's network&lt;/span&gt;
+  &lt;span class="c1"&gt;# namespace, even subprocesses!&lt;/span&gt;
+  &lt;span class="n"&gt;requests&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'http://jsonip.com/'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+</summary><category term="namespaces"></category></entry></feed>

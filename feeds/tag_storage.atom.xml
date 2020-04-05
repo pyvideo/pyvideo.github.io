@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_storage.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-05-03T00:00:00+00:00</updated><entry><title>PostgreSQL on the kube</title><link href="https://pyvideo.org/pycon-italia-2019/postgresql-on-the-kube.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Marco Nenciarini</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/postgresql-on-the-kube.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kubernetes è un sistema di orchestrazione di container che permette di
+gestire il deploy, lo scaling e l’aggiornamento di una applicazione e di
+tutti i suoi componenti.&lt;/p&gt;
+&lt;p&gt;In questo talk parleremo di quali strumenti sono a disposizione per
+effettuare un deploy di un database PostgreSQL in un cluster Kubernetes.
+Inoltre vedremo come sia implementabile l’alta disponibilità e la
+disaster recovery, in maniera da avere i propri dati al sicuro e sempre
+accessibili.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1784"&gt;https://python.it/feedback-1784&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="postgresql"></category><category term="postgres"></category><category term="kubernetes"></category><category term="storage"></category><category term="containers"></category><category term="docker"></category><category term="k8s"></category><category term="cloud"></category></entry><entry><title>Get up to speed with OpenStack! - Part 2</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-2.html" rel="alternate"></link><published>2013-07-05T00:00:00+00:00</published><updated>2013-07-05T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-05:europython-2013/get-up-to-speed-with-openstack-part-2.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>Get up to speed with OpenStack! - Part 3</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-3.html" rel="alternate"></link><published>2013-07-05T00:00:00+00:00</published><updated>2013-07-05T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-05:europython-2013/get-up-to-speed-with-openstack-part-3.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>Get up to speed with OpenStack! - Part 1</title><link href="https://pyvideo.org/europython-2013/get-up-to-speed-with-openstack-part-1.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Muharem Hrnjadovic</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/get-up-to-speed-with-openstack-part-1.html</id><summary type="html"></summary><category term="best-practices"></category><category term="storage"></category><category term="architecture"></category><category term="cloud"></category></entry><entry><title>Introduction to OpenStack Swift</title><link href="https://pyvideo.org/europython-2013/introduction-to-openstack-swift.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Chmouel Boudjnah</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/introduction-to-openstack-swift.html</id><summary type="html"></summary><category term="res"></category><category term="storage"></category></entry><entry><title>Serverless SQL queries from Python with AWS Athena...or power to Data Scientists!</title><link href="https://pyvideo.org/pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html" rel="alternate"></link><published>2018-04-22T00:00:00+00:00</published><updated>2018-04-22T00:00:00+00:00</updated><author><name>Daniela Scardi</name></author><id>tag:pyvideo.org,2018-04-22:pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience&lt;/strong&gt; : beginner&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt; The goal of this talk is to explain how Athena, a
+serverless sql-like query service provided by Amazon’s AWS, combined
+with a Python library called PyAthena, made it possible to store and
+query as much data as needed with low costs, high performances and in a
+Pythonesque way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt; We found ourselves in a sticky situation: for monitoring
+and debugging reasons we had the need to store a large amount of data
+(around 200 million rows), trying not to spend the entire year’s budget
+but still managing to efficiently query the data in an interactive
+setting. With such Big Data, we could not simply resort to Data Science
+tools like Pandas and hope for the best. Our first idea was to just
+shove it all in our Postgres DB: since both data and database were
+stored on Amazon’s AWS infrastructure, all we had to do was to write
+ad-hoc import and update queries. Sadly, our poor Postgres machine took
+the hit, and was not able to respond to our requirements without greatly
+increasing our costs. Then we found out about Athena: a serverless,
+Presto-based, sql compliant database, that reads directly from S3
+folders and creates a virtual table on which you can run sql queries.
+Using Python’s Athena library (PyAthena) our query execution time
+dropped from hours to seconds, we simplified the infrastructure and
+decreased our costs, without the need to pay and maintain a dedicated
+server. In this talk we will show why Athena was the right solution for
+our use case and present its Python library with its functionalities.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 15:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Python"></category><category term="aws"></category><category term="storage"></category><category term="cloud"></category><category term="sql"></category></entry><entry><title>Unveiling the potential of graph databases with Python and Neo4j</title><link href="https://pyvideo.org/pycon-italia-2018/unveiling-the-potential-of-graph-databases-with-python-and-neo4j.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Fabio Lamanna</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/unveiling-the-potential-of-graph-databases-with-python-and-neo4j.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Every time we are dealing with data coming from the real world, big and
+not so big, you know that usually 80% of the time is needed to clean,
+prepare and arrange them. We can then spend the other 20% of the time
+enjoying our beloved data analysis.&lt;/p&gt;
+&lt;p&gt;The thing that you may know less is that in the last years, the Neo4j
+graph database went into the light of being the “right” place to store
+data, thanks to its capacity of direct modelling relations among data,
+its high availability and its easy, fast and clean query language
+Cypher.&lt;/p&gt;
+&lt;p&gt;In this talk I’m going to show you some tips to set up in the right way
+your data using Pandas, in order to proper model and import them into
+Neo4j. A Neo4j Python driver is available to easily import Cypher
+queries embedded in Python code. Still, the py2neo package allows
+building and querying your database right within your favourite snake
+command line.&lt;/p&gt;
+&lt;p&gt;Forget about “tall as teen” SQL queries here; thanks to Pandas, Python
+and Cypher modelling, loading and query your database is going to be
+really straightforward. After this talk, you’ll can’t wait to give Neo4j
+a try!&lt;/p&gt;
+&lt;p&gt;Prerequisite: a little knowledge of Pandas.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="database"></category><category term="graph"></category><category term="storage"></category><category term="neo4j"></category><category term="data"></category><category term="pandas"></category></entry><entry><title>Presenting pysftpserver: OpenSSH SFTP service with Python</title><link href="https://pyvideo.org/pycon-italia-2017/presenting-pysftpserver-openssh-sftp-service-with-python.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Filippo Morelli</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/presenting-pysftpserver-openssh-sftp-service-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you ever needed to connect to an OpenSSH SFTP server and keep track
+of the user activities? Or maybe limit user permissions? Or define
+specific callbacks to react to user actions?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;pysftpserver&lt;/em&gt; is an OpenSSH SFTP wrapper, written purely in Python. It
+is yet another cool example of what you might already know: how powerful
+Python can be while staying extremely simple.&lt;/p&gt;
+&lt;p&gt;This talk aims at presenting the tool and a few use cases in which it
+was harnessed, including one with Django and Django REST Framework. It
+requires a good knowledge of Python and Django and understanding the
+basics of a SFTP service.&lt;/p&gt;
+</summary><category term="SFTP"></category><category term="command-line"></category><category term="django-rest-framework"></category><category term="storage"></category><category term="django"></category><category term="ssh"></category><category term="servers"></category></entry></feed>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_simon-cross.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-06T00:00:00+00:00</updated><entry><title>Conversing with people living in poverty</title><link href="https://pyvideo.org/europython-2014/conversing-with-people-living-in-poverty.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/conversing-with-people-living-in-poverty.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://vumi.org"&gt;Vumi&lt;/a&gt; is a text messaging system designed to reach
+out to those in poverty on a massive scale via their mobile phones. It's
+written in Python using Twisted. This talk is about how and why we built
+it and how you can join us in making the world a better place.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;43% of the world's population live on less than €1.5 per day.&lt;/p&gt;
+&lt;p&gt;The United Nations defines poverty as a &amp;quot;lack of basic capacity to
+participate effectively in society&amp;quot;. While we often think of the poor as
+lacking primarily food and shelter, the UN definition highlights their
+isolation. They have the least access to society's knowledge and
+services and the most difficulty making themselves and their needs heard
+in our democracies.&lt;/p&gt;
+&lt;p&gt;While smart phones and an exploding ability to collect and process
+information are transforming our access to knowledge and the way we
+organize and participate in our societies, those living in poverty have
+largely been left out. This has to change.&lt;/p&gt;
+&lt;p&gt;Basic mobile phones present an opportunity to effect this change
+&lt;a class="reference external" href="https://www.youtube.com/watch?v=0bXjgx4J0C4#t=20"&gt;3&lt;/a&gt;. Only three
+countries in the world have fewer than 65 mobile phones per 100 people
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_mobile_phones_in_use"&gt;4&lt;/a&gt;.
+The majority of these phones are not Android or iPhones, but they do
+nevertheless provide a means of communication -- via voice calls, SMSes
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Short_Message_Service"&gt;6&lt;/a&gt;, USSD
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Unstructured_Supplementary_Service_Data"&gt;7&lt;/a&gt;
+and instant messaging.&lt;/p&gt;
+&lt;p&gt;By comparison, 25 countries have less than 5% internet penetration
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users"&gt;5&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Vumi &lt;a class="reference external" href="http://vumi.org/"&gt;1&lt;/a&gt; is an open source text messaging system
+designed to reach out to those in poverty on a massive scale via their
+mobile phones. It's written in Python using Twisted.&lt;/p&gt;
+&lt;p&gt;Vumi is already used to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;provide Wikipedia access over USSD and SMS in Kenya &lt;a class="reference external" href="http://blog.praekeltfoundation.org/post/65981723628/wikipedia-zero-over-text-with-praekelt-foundation"&gt;8&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;register a million voters in Libya
+&lt;a class="reference external" href="http://www.libyaherald.com/2014/01/01/over-one-million-register-for-constitutional-elections-on-final-sms-registration-day/#axzz2sroHcg00"&gt;10&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;deliver health information to mothers in South Africa
+&lt;a class="reference external" href="http://blog.praekeltfoundation.org/post/65042080515/mama-launches-healthy-family-nutrition-programme"&gt;9&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;prevent election violence in Kenya
+&lt;a class="reference external" href="http://blog.praekeltfoundation.org/post/51210616848/the-texting-will-never-be-done-peace-messages-in-kenya"&gt;11&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a brief overview of mobile networking and cellphone use in Africa&lt;/li&gt;
+&lt;li&gt;why we built Vumi&lt;/li&gt;
+&lt;li&gt;the challenges of operating in unreliable environments&lt;/li&gt;
+&lt;li&gt;an overview of Vumi's features and architecture&lt;/li&gt;
+&lt;li&gt;how you can help!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vumi features some cutting edge design choices:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;horizontally scalable Twisted processes communicating using RabbitMQ.&lt;/li&gt;
+&lt;li&gt;declarative data models backed by Riak.&lt;/li&gt;
+&lt;li&gt;sharing common data models between Django and Twisted.&lt;/li&gt;
+&lt;li&gt;sandboxing hosted Javascript code from Python.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overview of challenges Vumi addresses:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Scalability&lt;/em&gt;: Vumi needs to support both small scale applications
+(demos, pilot projects, applications tailored for a particular
+community) and large ones (things that everyone within a country might
+use). We address this using Twisted workers that exchange messages via
+RabbitMQ and store data in Riak. Having projects share RabbitMQ and Riak
+instances significantly reduces the overhead for small projects (e.g.
+its not cost effective to launch the recommended minimum of 5 Riak
+servers for a small project).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Barriers to entry&lt;/em&gt;: Often the people with good ideas don't have access
+to one of many things needed to run a production system themselves, e.g.
+capital, time, stable infrastructure. We address this by providing a
+hosted Vumi instance that runs sandboxed Javascript applications. All
+the application author needs is their idea, the ability to write
+Javascript and upload it to our servers. The target audience here is
+African entrepreneurs at incubator spaces like iHub (Nairobi), kLab
+(Kigali), BongoHive (Lusaka) and JoziHub (Johannesburg).&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Unreliable third-party systems&lt;/em&gt;: It's one thing for parts of ones own
+system to go down, it's another for crucial third-party systems to go
+down. Vumi takes an SMTP-like approach to solving this and uses
+persistent queues so that messages can back up in the queue while
+third-party systems are down and be processed when they become available
+again. We also feedback information on whether third-party messaging
+systems have accepted or reject messages to the application that
+initiated them.&lt;/p&gt;
+&lt;p&gt;Vumi is developed by the Praekelt Foundation
+&lt;a class="reference external" href="http://praekeltfoundation.org/"&gt;2&lt;/a&gt; (and individual contributors!).&lt;/p&gt;
+</summary></entry><entry><title>PyConZA 2013: Opening Ceremony</title><link href="https://pyvideo.org/pycon-za-2013/pyconza-2013-opening-ceremony.html" rel="alternate"></link><published>2013-10-03T00:00:00+00:00</published><updated>2013-10-03T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2013-10-03:pycon-za-2013/pyconza-2013-opening-ceremony.html</id><summary type="html"></summary><category term="pyconza"></category><category term="pyconza2013"></category></entry><entry><title>PyConZA 2014: Closing Remarks</title><link href="https://pyvideo.org/pycon-za-2014/pyconza-2014-closing-remarks.html" rel="alternate"></link><published>2014-10-03T00:00:00+00:00</published><updated>2014-10-03T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2014-10-03:pycon-za-2014/pyconza-2014-closing-remarks.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyConZA 2014 closing remarks.&lt;/p&gt;
+</summary><category term="pyconza"></category><category term="pyconza2014"></category></entry><entry><title>Closing</title><link href="https://pyvideo.org/pycon-za-2015/closing.html" rel="alternate"></link><published>2015-10-02T00:00:00+00:00</published><updated>2015-10-02T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2015-10-02:pycon-za-2015/closing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The closing ceremony. A general wrap of the conference. There will also
+be announcements about sprints on Saturday and Sunday.&lt;/p&gt;
+</summary><category term="Room 215"></category></entry><entry><title>"Python in Production" Panel Discussion</title><link href="https://pyvideo.org/pycon-za-2015/python-in-production-panel-discussion.html" rel="alternate"></link><published>2015-10-02T00:00:00+00:00</published><updated>2015-10-02T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2015-10-02:pycon-za-2015/python-in-production-panel-discussion.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A panel discussion on using and deploying Python projects in production.
+The panel will follow a simple discussion format with panelists
+responding to questions from the audience.&lt;/p&gt;
+&lt;p&gt;Panel chair: * &lt;em&gt;Simon Cross&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Panelists:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;em&gt;Andy Rabagliati&lt;/em&gt; (CSIR / CHPC)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Bryn Divey&lt;/em&gt; (Oracle)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Colin Alston&lt;/em&gt; (Praekelt)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Milton Madanda&lt;/em&gt; (Praekelt)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stefano Rivera&lt;/em&gt; (Debian Developer)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Room 215"></category></entry><entry><title>Opening</title><link href="https://pyvideo.org/pycon-za-2015/opening.html" rel="alternate"></link><published>2015-10-01T00:00:00+00:00</published><updated>2015-10-01T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2015-10-01:pycon-za-2015/opening.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A general welcome and an introduction to all the exciting things that
+will be happening at PyConZA 2015!&lt;/p&gt;
+</summary><category term="Room 215"></category></entry><entry><title>Friday Lightning Talks</title><link href="https://pyvideo.org/pycon-za-2016/friday-lightning-talks.html" rel="alternate"></link><published>2016-10-07T00:00:00+00:00</published><updated>2016-10-07T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2016-10-07:pycon-za-2016/friday-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Radio Astronomy and MeerKAT In 5 minutes: A Radio Telescope Run&lt;/strong&gt;
+by Neilen Marais&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PyCon Zimbabwe&lt;/strong&gt; by Anna Makarudze&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Jinja2 Cli&lt;/strong&gt; by William Stewart&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PyCon Namibia&lt;/strong&gt; by Jessica Upani&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Django Girls&lt;/strong&gt; by Lisa Adams &amp;amp; Codie Roelf&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pinning Proper Package Versions across Platforms, Languages and
+Branches.&lt;/strong&gt; by David Fraser&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>Panel Discussion: Teaching Python</title><link href="https://pyvideo.org/pycon-za-2016/panel-discussion-teaching-python.html" rel="alternate"></link><published>2016-10-07T00:00:00+00:00</published><updated>2016-10-07T00:00:00+00:00</updated><author><name>Simon Cross</name></author><id>tag:pyvideo.org,2016-10-07:pycon-za-2016/panel-discussion-teaching-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;On Friday morning, there will be a panel discussion on teaching Python.
+The panel will follow a simple discussion format with panelists
+responding to questions from the audience.&lt;/p&gt;
+&lt;div class="section" id="panelists"&gt;
+&lt;h4&gt;Panelists&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;em&gt;Andy Rabagliati&lt;/em&gt; (Centre for High Performance Computing)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Anna Makarudze&lt;/em&gt; (Django Girls Harare, PyConZW organizer)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Jessica Upani&lt;/em&gt; (University of Namibia, PyConNA organizer)&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Michelle Kuttel&lt;/em&gt; (University of Cape Town)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Simon Cross will be chairing the panel.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Friday Lightning Talks</title><link href="https://pyvideo.org/pycon-za-2017/friday-lightning-talks.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Pi Delport</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/friday-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Friday Lightning Talks&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bruce Merry: &amp;quot;asyncio: it's all about the cancellation&amp;quot;&lt;/li&gt;
+&lt;li&gt;Simba Nyatsanga: &amp;quot;Keep you friends close and caches closer&amp;quot;&lt;/li&gt;
+&lt;li&gt;Peter van Onselen: &amp;quot;And now for something completely different&amp;quot;&lt;/li&gt;
+&lt;li&gt;Simon Cross: &amp;quot;Python Software Society of South Africa&amp;quot;&lt;/li&gt;
+&lt;li&gt;Whitney Tennant: &amp;quot;Why I kept flying to Cape Town for sammiches&amp;quot;&lt;/li&gt;
+&lt;li&gt;Matthew French: &amp;quot;Grid computing on a budget (Or: Reinventing celery)&amp;quot;&lt;/li&gt;
+&lt;li&gt;Marlene Mhangami: &amp;quot;The PSF and Python in Africa&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry></feed>

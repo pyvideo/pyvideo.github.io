@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_deepak-sharma.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-08-04T00:00:00+00:00</updated><entry><title>Deep Sequence Models for Attribute Extraction from Product Titles</title><link href="https://pyvideo.org/pydata-delhi-2019/deep-sequence-models-for-attribute-extraction-from-product-titles.html" rel="alternate"></link><published>2019-08-04T00:00:00+00:00</published><updated>2019-08-04T00:00:00+00:00</updated><author><name>Deepak Sharma</name></author><id>tag:pyvideo.org,2019-08-04:pydata-delhi-2019/deep-sequence-models-for-attribute-extraction-from-product-titles.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We are working on extracting attributes (brand, shape, color etc) from
+raw product descriptions. The text is short and noisy and highly
+contextual and the labeling of attributes for training ML models is
+costly. I discuss how we build a deep sequence CNN-BiLSTM-CRF model in
+Pytorch to extract attributes from noisy text with minimum labeling
+using an active learning approach.&lt;/p&gt;
+&lt;p&gt;At Clustr, I am working on converting raw product data available with
+SMEs to structured catalog. One of the key tasks of building catalogue
+is extracting attributes from raw product titles. Typical attributes
+include Brands, Color, Shape, measurement etc. Product titles are
+usually very short text describing the product without any significant
+grammar. The titles are very dependent on the user which generates very
+noisy text with abbreviations, spelling mistakes, omiitted text,
+improper spaces, transliteration etc. The additional challenge is
+availability of labeled data to train a machine learning model on this.
+The product data we receive is not labeled and labeling is a costly
+excercise. I show how we built a deep sequence model with CNN, BiLSTM
+and CRF architecture and tuned it using active learning methods for this
+task.&lt;/p&gt;
+&lt;p&gt;I will discuss various deep sequence models combined with conditional
+random fields to label attributes from such text and outline pros and
+cons of different architectures. The model uses pretrained word
+embeddings. I will outtine some of the challenges of sparse tokens and
+noise while building our domain specific word embeddings. A key aspect
+of the problem is the lack of labeled data and high cost of getting this
+data. To minimize the cost of labeling I trained our model using an
+active learning approach. The active labeling requires sampling
+strategies such that minimum labeling can have maximum improvement in
+model performance. I implemented both model confidence based sampling
+and data coverage based sampling such that we are able to label examples
+which the model is least confident about and which are very different
+from the existing training examples. The active learning examples in a
+single training iteration were only about 1000 examples. Training models
+with such few examples required us to be very careful about overfitting
+in training. I will also talk about how I regularized the model.&lt;/p&gt;
+&lt;p&gt;To rapidly iterate in experiments I created an experimental setup which
+allowed rapid changes and traceability. It was challenging to measure
+the performance of the model and understand the limitations of the
+model. To do this more effectively, I tracked various metrics to measure
+the performance of the model including various metrics relevant to the
+Named Entity Tasks. These metrics were very informative in identifying
+the gaps in the model. I will discuss these in detail.&lt;/p&gt;
+&lt;p&gt;Overall this talk will provide audience a good in depth understanding of
+how deep sequence models are built in Pytorch for challenging
+information extraction tasks. They will understand the pros and cons of
+different architectures, things to keep in mind while tuning such deep
+models and how active learning is performed in deep sequence models.&lt;/p&gt;
+</summary></entry></feed>

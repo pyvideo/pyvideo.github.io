@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate><item><title>Genropy e lo storage di file in cloud</title><link>https://pyvideo.org/pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Con la transizione dagli applicativi su server proprietari agli
+applicativi in cloud nasce l’esigenza di separare i dati dal loro
+storage fisico sul server dove risiede l’applicazione.&lt;/p&gt;
+&lt;p&gt;Per soddisfare questa esigenza abbiamo provveduto a implementare in
+Genropy delle API per rendere trasparente l’accesso al filesystem e
+consentire quindi di scrivere procedure che possano funzionare
+indifferentemente appoggiandosi in locale o in cloud
+(&lt;a class="reference external" href="https://aws.amazon.com/it/s3/"&gt;S3&lt;/a&gt; o simili)&lt;/p&gt;
+&lt;p&gt;Esamineremo brevemente la gestione dei servizi di Genropy e parleremo in
+particolare del servizio di Storage che consente di astrarre delle
+directory logiche su cui operare nell’applicativo, potendo decidere
+durante l’istallazione la corrispondenza con una directory locale o nel
+cloud.&lt;/p&gt;
+&lt;p&gt;Nel talk vedremo come rimpiazzare tutte le chiamate al FileSystem con le
+corrispondenti chiamate alle API del servizio di Storage. Ci
+soffermeremo sulla classe StorageNode che implementa sia i metodi
+necessari per le operazioni di scrittura, lettura e cancellazione di
+File e Directory indipendentemente dalla loro collocazione locale o in
+cloud sia un metodo che fornisce l’URL da servire per vedere o scaricare
+il contenuto statico.&lt;/p&gt;
+&lt;p&gt;Nel caso di servizi S3 o simili viene gestita automaticamente la
+gestione di un token di autorizzazione temporaneo basato sui privilegi
+dell’utente che effettua la richiesta. Questo consente di servire
+direttamente i file statici direttamente dal cloud invece di farli
+transitare dal server applicativo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1761"&gt;https://python.it/feedback-1761&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Porcari</dc:creator><pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-03:pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</guid><category>S3</category><category>genropy</category><category>cloud</category><category>deploy</category></item><item><title>Business Intelligence con Genropy</title><link>https://pyvideo.org/pycon-italia-2018/business-intelligence-con-genropy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genropy è ormai un framework maturo col quale sono stati scritti molti
+gestionali che funzionano con piena soddisfazione di clienti e utenti.
+Nel corso degli ultimi due anni è stato realizzato in particolare il
+gestionale ERPY che usato con successo per gli adempimenti fiscali ma
+anche per fornire alla direzione strumenti di analisi e di controllo
+facilmente consultabili.&lt;/p&gt;
+&lt;p&gt;A tal fine sono state implementate direttamente come funzionalità base
+del framework strumenti di interrogazione e di business intelligence che
+sono a disposizione di qualsiasi gestionale scritto in genropy.&lt;/p&gt;
+&lt;p&gt;Nel corso del talk verranno mostrate le funzionalità base di Genropy con
+particolare attenzione alle nuove funzionalità introdotte tra cui:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Integrazione con Pandas per creare in pochi minuti viste e grafici
+dei dati aziendali con la possibilità di salvarli e di essere
+eseguiti in momenti successivi e/o programmati.&lt;/li&gt;
+&lt;li&gt;Costruzione di dashboard per mostrare in forma grafica e tabellare i
+vari aspetti della realtà aziendale.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Porcari</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/business-intelligence-con-genropy.html</guid><category>Erpy</category><category>genropy</category><category>business-intelligence</category><category>ERP</category><category>pandas</category></item><item><title>Da applicativi Desktop a Web</title><link>https://pyvideo.org/pycon-italia-2018/da-applicativi-desktop-a-web.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;L’evoluzione nel campo dell’informatica sta rendendo obsoleti moltissimi
+applicativi desktop sviluppati negli ultimi anni. Lo sviluppatore che
+deve aggiornare il proprio lavoro deve quindi decidere la tecnologia
+migliore, impararla e procedere alla conversione sia delle procedure
+(replicando in web il funzionamento che aveva in desktop) sia dei dati.
+Nel talk vi racconteremo la nostra esperienza, del perchè abbiamo scelto
+Python e Genropy e dei risultati che abbiamo ottenuto in poco tempo. In
+particolare vedremo a titolo di esempio un applicativo per la gestione
+del personale, uno per la gestione delle assemblee ed uno per la
+gestione di un economato.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Luigi Renna</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/da-applicativi-desktop-a-web.html</guid><category>genropy</category><category>gestionali</category><category>business</category></item><item><title>Erpy e Genropy. Gestione punti vendita</title><link>https://pyvideo.org/pycon-italia-2018/erpy-e-genropy-gestione-punti-vendita.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genropy è il framework che Softwell ha realizzato per scrivere le
+proprie applicazioni gestionali e che è offerto in licenza LGPL agli
+sviluppatori che cercano un robusto ambiente per portare in tecnologia
+web SPA (Single Page Application) procedure complesse e, in particolare,
+procedure legacy.&lt;/p&gt;
+&lt;p&gt;Con Genropy è stato poi creato Erpy, un moderno ERP che offre agli
+utenti un’esperienza d’uso analoga a quella desktop ma con tutti i
+benefici di un ambiente web.&lt;/p&gt;
+&lt;p&gt;Erpy mette a disposizione una contabilità completa, la contabilità
+industriale, fatturazione, magazzino e, soprattutto, offre la base
+ideale per scrivere gestionali su misura.&lt;/p&gt;
+&lt;p&gt;Nel corso del Talk vedremo il casi d’uso di CUSL, una realtà che opera
+con punti vendita nelle università milanesi per offrire agli studenti la
+possibilità di acquistare a prezzi scontati i testi scolastici e il
+materiale ausiliario.&lt;/p&gt;
+&lt;p&gt;Basandoci su Erpy sono state personalizzate le procedure ERPY per
+adeguarsi alle necessità specifiche e sono state create numerose
+procedure ex novo. In particolare la procedure per effettuare la vendita
+e le prenotazioni da più sedi, gestire la richiesta merce alla sede
+centrale, gestire le caparre per le prenotaioni, stampare gli scontrini
+fiscali, gli scontrini di reso, utilizzare come metodi di pagamento i
+contanti, i pos, satispay e 18App.&lt;/p&gt;
+&lt;p&gt;Il sistema consente inoltre di gestire gli ordini delle sedi periferiche
+al magazzino centrale, il raggruppamento degli ordini dalle sedi per
+creare gli ordini a fornitori, la gestione dell’arrivo merce da
+fornitore e il successivo invio alle sedi periferiche. Il sistema
+provvede inoltre a inviare automaticamente le mail a chi ha delle
+prenotazioni in corso per procedere al ritiro. Il tutto è completato poi
+con numerose procedure ausiliarie e statistiche. Le operazioni di
+vendita, sia per corrispettivi che per fattura, rientrano
+automaticamente nel sistema contabile e danno luogo a tutti gli
+adempimenti di legge.&lt;/p&gt;
+&lt;p&gt;Nel corso del talk vedremo i dettagli della procedura e mostreremo
+alcuni snippet di codice per dar modo di capire come sia semplice ed
+immediato creare questo tipo di applicazioni con Genropy.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 14:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Giovanni Porcari</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/erpy-e-genropy-gestione-punti-vendita.html</guid><category>Erpy</category><category>genropy</category><category>gestionali</category></item><item><title>Pilotare un braccio robotico dal cloud con GenroPy e Raspberry</title><link>https://pyvideo.org/pycon-italia-2017/pilotare-un-braccio-robotico-dal-cloud-con-genropy-e-raspberry.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Spesso con gli applicativi in cloud si pone il problema di pilotare
+periferiche presenti nella rete locale o collegate direttamente al
+computer come registratori di cassa, stampanti industriali o altri
+dispositivi. Per superare questa difficoltà abbiamo sviluppato un client
+in Python sfruttando il framework GenroPy e installandolo sul proprio
+computer o su una scheda RaspberryPi possiamo pilotare le periferiche
+dal software in cloud. Il software è scritto interamente in Python ed è
+studiato per usare un sistema a plugin grazie al quale basta scrivere un
+solo modulo Python per aggiungere le funzionalità specifiche di una
+singola periferica. Nel talk mostreremo come pilotare un piccolo braccio
+robotico direttamente dal web sfruttando i WebSocket per la
+comunicazione con il server, le Bag di GenroPy per la messaggistica e
+qualche componente elettronico per il collegamento fisico con il
+braccio.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michele Bertoldi</dc:creator><pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-09:pycon-italia-2017/pilotare-un-braccio-robotico-dal-cloud-con-genropy-e-raspberry.html</guid><category>raspberrypi</category><category>genropy</category><category>robotics</category></item><item><title>A year of Genropy</title><link>https://pyvideo.org/pycon-italia-2017/a-year-of-genropy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The presentation focuses on the use of Genropy in a year,from the first
+difficulties to first successes, analyzing the pros and cons of its use.&lt;/p&gt;
+&lt;p&gt;During the talk there will be a small presentation of two projects made
+with Genropy. The first project is the one I have worked on in the last
+year, a platform that analyzes energy data. The second one is Genrello,
+a Trello made with Genropy, developed in spare time as a hobby.&lt;/p&gt;
+&lt;p&gt;The talk does not require any preconditions for the comprehension.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Muhammad Hassan Khurshid</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/a-year-of-genropy.html</guid><category>Python</category><category>web</category><category>genropy</category><category>framework</category></item><item><title>Analisi dati e grafici con Genropy e Pandas</title><link>https://pyvideo.org/pycon-italia-2017/analisi-dati-e-grafici-con-genropy-e-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genropy è un framework per la creazione di Single Page Applications che
+offre ad utenti e sviluppatori un ambiente di lavoro molto comodo per il
+caricamento e la gestione dei dati. In questo talk parleremo degli
+strumenti messi a disposizione per l’analisi dei dati e la
+rappresentazione grafica, tabellare e in dashboard. Parleremo in
+particolare dell’integrazione con Pandas e di come sia facile anche per
+un utente non particolarmente esperto generare pivot table, e creare
+colonne calcolate e mostrare i risultati come grafici.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Porcari</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/analisi-dati-e-grafici-con-genropy-e-pandas.html</guid><category>genropy</category><category>webapp</category><category>pandas</category><category>web-development</category><category>graph</category></item><item><title>Genropy: 10 anni di sviluppo di un framework italiano</title><link>https://pyvideo.org/pycon-italia-2017/genropy-10-anni-di-sviluppo-di-un-framework-italiano.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genropy è un framework per la creazione di Single Page Applications che
+consente allo sviluppatore di scrivere applicazioni complesse in tempi
+brevissimi. Lo scopo del framework è di mettere a disposizione un
+potente costruttore di GUI web, un ORM molto facile, veloce ed intivo ed
+una serie di component che rendono possibile costruire la propria
+applicazione in poche righe di codice. A questo si aggiungono tools di
+amministrazione per la gestione di permessi, grafici, gestione del
+workflow, gestore di stampe e molti altri che fanno di Genropy
+un’ambiente usabile immediatamente in produzione anche in situazioni
+complesse e critiche.&lt;/p&gt;
+&lt;p&gt;Abbiamo cominciato a scrivere Genropy nel 2005 e durante il primo Pycon
+qui a Firenze nel 2007, abbiamo ne abbiamo mostrato la primissima
+versione. Da allora, ogni edizione di Pycon è stata l’occasione per
+presentare le nuove features e cercare di diffondere la copnoscenza di
+questo framework . A distanza di 10 anni possiamo dire che esiste una
+minuscola ma molto attiva community che utilizza Genropy come strumento
+quotidiano per scrivere le proprie applicazioni web.&lt;/p&gt;
+&lt;p&gt;In questo talk vorremmo raccontarvi questa avventura, e darvi modo di
+conoscere meglio Genropy e di capire se può essere anche per voi il
+vostro nuovo modo di scriverre applicazioni web.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Giovanni Porcari</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/genropy-10-anni-di-sviluppo-di-un-framework-italiano.html</guid><category>community</category><category>genropy</category><category>gui</category><category>web-development</category><category>business</category></item><item><title>Genropy - Caso d'uso: gestione di una infrastruttura telefonica VoIP di medie/grandi dimensioni</title><link>https://pyvideo.org/pycon-italia-2017/genropy-caso-duso-gestione-di-una-infrastruttura-telefonica-voip-di-mediegrandi-dimensioni.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La gestione delle configurazioni VOIP per realtà di grandi dimensioni
+può essere un problema non indifferente quando ci sia la necessità di
+frequenti cambiamenti. Per questa ragione, in occasione della migrazione
+del sistema telefonico passando dall’attuale sistema telefonico digitale
+vecchio stile con centrale locale a sistema digitale VoIP con gestione
+delocalizzata, abbiamo pensato di costruire un gestionale che
+facilitasse tale migrazione e che ci consentisse di gestire poi nel
+tempo tutte le richieste di attivazioni e modifiche che, per la
+tipologia di azienda, sono assai frequenti.&lt;/p&gt;
+&lt;p&gt;In realtà avevamo già un sistema precedente basato su PHP, ma la
+manutenzione del codice era ormai un problema. Per questa ragione
+abbiamo pensato di ripartire da zero e abbiamo deciso di utilizzare il
+framework Genropy, che ci dava modo di raggiungere in tempi molto rapidi
+dei risultati in grado di risolvere i nostri problemi attuali, lasciando
+lo spazio, data la modularità del sistema, ad ulteriori implementazioni
+per coprire anche aree nuove.&lt;/p&gt;
+&lt;p&gt;Nel talk vi racconterò la mia esperienza e vi mostrerò i risultati
+ottenuti.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mauro Zanardi</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/genropy-caso-duso-gestione-di-una-infrastruttura-telefonica-voip-di-mediegrandi-dimensioni.html</guid><category>genropy</category><category>gestionali</category><category>VoIP</category><category>framework</category></item><item><title>iCond: GenroPy per amministratori di condomini</title><link>https://pyvideo.org/pycon-italia-2017/icond-genropy-per-amministratori-di-condomini.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I software verticali costituiscono da sempre un grosso problema. Quello
+della nostra azienda - che si occupa di condomini - ideato, pensato e
+realizzato da noi in tempi eroici quando i S.O. stavano sui floppy,
+aveva bisogno di un pesante refresh. Obiettivo del talk é quello di
+illustrare l’esperienza della nostra azienda, appassionata da sempre di
+tecnologia che, pur non sviluppando software, é riuscita ad utilizzare
+le potenzialità, la flessibilità e gli strumenti disponibili in GenroPy,
+grazie anche al supporto di tutto il suo team, per realizzare iCond, un
+software completamente nuovo che va oltre il mero programma contabile e
+che gestisce a 360 gradi l’attività dell’amministratore condominiale.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrea Busanelli</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/icond-genropy-per-amministratori-di-condomini.html</guid><category>In-house software</category><category>genropy</category><category>Condomini</category></item><item><title>La GUI di Genropy</title><link>https://pyvideo.org/pycon-italia-2017/la-gui-di-genropy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lo scopo di quersto talk è di offrire una panoramica della GUI di
+Genropy e del suo meccanismo di funzionamento. In particolare verra
+mostrato come sia possibile, scrivendo solo codice python, usare genropy
+come interfaccia grafica al di fuori del classico uso del gestionale&lt;/p&gt;
+&lt;p&gt;Proveremo a vedere come dare un’ interfaccia grafica ad alcuni comandi
+di shell e a mostrare come tramite i widget di genropy sia possibile
+gestire con poche righe di codice python widget complessi come griglie,
+griglie editabili e alberi.&lt;/p&gt;
+&lt;p&gt;Vi mostreremo l’utilizzo sia in versione classica nel browser, che con
+electron.&lt;/p&gt;
+&lt;p&gt;Mostreremo anche l’uso di RPC classiche e di websocket.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Giovanni Porcari</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/la-gui-di-genropy.html</guid><category>genropy</category><category>gui</category><category>websockets</category></item><item><title>Realizzare stampe HTML e PDF usando solo Python</title><link>https://pyvideo.org/pycon-italia-2017/realizzare-stampe-html-e-pdf-usando-solo-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Uno dei compiti più noiosi per chi fa software orientato al business ma
+non solo, è quello di generare stampe con layout complessi e specifici
+sulle esigenze del committente. Creare documenti come fatture, moduli
+d’ordine, bolle di lavorazione e trasporto, schede prodotto o qualsiasi
+cosa il cliente abbia il desiderio di vedere sulla stramaledetta carta è
+una cosa che di norma comporta diverse criticità. Infatti ci troviamo a
+dover ingabbiare dati, che solitamente rappresentiamo a video con layout
+elastici e responsivi, in strutture grafiche rigide che devono risultare
+sempre uguali, misurate in millimetri e ben leggibili una volta
+stampate. Per rispondere a questa necessità &lt;strong&gt;Genropy&lt;/strong&gt; mette a
+disposizione la libreria &lt;em&gt;gnrhtml&lt;/em&gt; che permette di descrivere in Python
+layout complessi ed annidati, ottenendo come risultato un documento HTML
+ed eventualmente PDF tramite il comando &lt;em&gt;wkhtmltopdf&lt;/em&gt;. La libreria
+&lt;em&gt;gnrhtml&lt;/em&gt; è perfettamente integrata con il framework &lt;strong&gt;Genropy&lt;/strong&gt;, ma può
+essere facilmente utilizzata anche al di fuori da questo ambiente.
+Durante il talk spiegheremo il funzionamento della libreria e ne
+mosteremo l’utilizzo con un caso d’esempio realizzato sia &lt;strong&gt;Genropy&lt;/strong&gt;
+che in &lt;strong&gt;Django&lt;/strong&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Saverio Porcari</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/realizzare-stampe-html-e-pdf-usando-solo-python.html</guid><category>pdf</category><category>prints</category><category>html</category><category>business</category><category>genropy</category></item></channel></rss>

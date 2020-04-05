@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_petr-stehlik.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-13T00:00:00+00:00</updated><entry><title>The dos and don'ts of task queues</title><link href="https://pyvideo.org/pycon-uk-2019/the-dos-and-donts-of-task-queues.html" rel="alternate"></link><published>2019-09-13T00:00:00+00:00</published><updated>2019-09-13T00:00:00+00:00</updated><author><name>Petr Stehlík</name></author><id>tag:pyvideo.org,2019-09-13:pycon-uk-2019/the-dos-and-donts-of-task-queues.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Let’s talk about our experience with Celery and intentions to switch to RQ which failed. We’ll show our setup of larger apps than the ones presented in doc examples together with useful tips&amp;amp;tricks on the orchestration of such apps.&lt;/p&gt;
+</summary></entry><entry><title>The dos and don'ts of task queues</title><link href="https://pyvideo.org/europython-2019/the-dos-and-donts-of-task-queues.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Petr Stehlík</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/the-dos-and-donts-of-task-queues.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we’ll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it’s the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won’t talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we’ll present our current setup which can take upon any number of
+tasks*. How we orchestrate the app and continuously integrate and
+deploy and what fun things await ahead of us in the development.&lt;/p&gt;
+&lt;p&gt;*Conditions may apply.&lt;/p&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Architecture"></category><category term="Best Practice"></category><category term="Case Study"></category><category term="failures/mistakes"></category></entry><entry><title>The dos and don'ts of task queues</title><link href="https://pyvideo.org/pycon-sk-2019/the-dos-and-donts-of-task-queues.html" rel="alternate"></link><published>2019-03-24T00:00:00+00:00</published><updated>2019-03-24T00:00:00+00:00</updated><author><name>Petr Stehlík</name></author><id>tag:pyvideo.org,2019-03-24:pycon-sk-2019/the-dos-and-donts-of-task-queues.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Let's talk about our experience with Celery and intentions to switch to
+RQ which failed. We'll show our setup of larger and more complex apps
+than the ones presented in doc examples together with some useful tips
+and tricks and how-tos on orchestrating such apps for thousands of tasks
+a day.&lt;/p&gt;
+&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we'll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it's the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won't talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we'll present our current setup which can take upon any number of tasks.
+How we orchestrate the app and continuously integrate and deploy and
+what fun things await ahead of us in the development.&lt;/p&gt;
+</summary></entry></feed>

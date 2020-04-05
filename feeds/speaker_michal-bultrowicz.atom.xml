@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_michal-bultrowicz.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-10-15T00:00:00+00:00</updated><entry><title>TDD mikroserwisów</title><link href="https://pyvideo.org/pycon-pl-2016/tdd-mikroserwisow.html" rel="alternate"></link><published>2016-10-15T00:00:00+00:00</published><updated>2016-10-15T00:00:00+00:00</updated><author><name>Michał Bultrowicz</name></author><id>tag:pyvideo.org,2016-10-15:pycon-pl-2016/tdd-mikroserwisow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Propozycja tego, jak można tworzyć mikroserwisy w Pythonie zakładając
+pisanie testów najpierw, a dopiero potem właściwego kodu. Na każdym
+etapie pracy. Żadne pseudo-TDD.Skupię się na testach funkcjonalnych
+badających całych proces aplikacji z zewnątrz (pomogą w tym Docker i
+Pytest) oraz testach kontraktowych pilnujących, że nikt w trakcie
+developmentu nie zmienił zewnętrznych interfejsów naszej aplikacji. W
+drugim przypadku wykorzystany będzie Swagger.Przykłady nie będą polegać
+na silnej integracji z żadnym webowym frameworkiem. Poruszę też kwestię
+mierzenia pokrycia testowego w nieco bardziej skomplikowanych
+przypadkach (jak testy funkcjonalne).&lt;/p&gt;
+</summary></entry><entry><title>Python microservices on PaaS done right</title><link href="https://pyvideo.org/europython-2015/python-microservices-on-paas-done-right.html" rel="alternate"></link><published>2015-08-02T00:00:00+00:00</published><updated>2015-08-02T00:00:00+00:00</updated><author><name>Michał Bultrowicz</name></author><id>tag:pyvideo.org,2015-08-02:europython-2015/python-microservices-on-paas-done-right.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Michał Bultrowicz - Python microservices on PaaS done right
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Lately, there's a lot of talk about microservices but not enough
+concrete examples and case studies. I want to change that by showing:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how thinking in PaaS terms can lead to robust and scalable designs;&lt;/li&gt;
+&lt;li&gt;what infrastructure and automation you need to set up to go along smoothly;&lt;/li&gt;
+&lt;li&gt;how to get real time metrics of your apps;&lt;/li&gt;
+&lt;li&gt;what makes Python good for microservices;&lt;/li&gt;
+&lt;li&gt;what is Python's performance relative to some alternatives.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites for the talk:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;some experience with web development in Python;&lt;/li&gt;
+&lt;li&gt;basic knowledge of RESTful web services.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>TDD of Python microservices</title><link href="https://pyvideo.org/europython-2016/tdd-of-python-microservices.html" rel="alternate"></link><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><author><name>Michał Bultrowicz</name></author><id>tag:pyvideo.org,2016-08-05:europython-2016/tdd-of-python-microservices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Michał Bultrowicz - TDD of Python microservices
+[EuroPython 2016]
+[22 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/tdd-of-python-microservices"&gt;https://ep2016.europython.eu//conference/talks/tdd-of-python-microservices&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A framework-agnostic approach to creating Python microservices with a
+tests-first approach.
+I'll show how to utilize Docker and Swagger to create service and
+contract tests that run your service as an independent process, as if
+it was running in production, giving you and your team a higher degree
+of confidence when introducing changes.&lt;/p&gt;
+&lt;p&gt;A little bit of a broader microservice, TDD and work management
+context will also be given.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;These will be my ideas on how to help a microservice-based (HTTP)
+project by integrating testing into the development process (TDD).
+I'll approach the testing pyramid presented in Martin Fowler's
+&amp;quot;Microservice Testing&amp;quot; as well as the test variants in &amp;quot;Building
+Microservices&amp;quot; (O'Reilly) and I'll show a way of how they can be
+translated to real-life Python.&lt;/p&gt;
+&lt;p&gt;The main focus will be on &amp;quot;service tests&amp;quot; (aka. out-of-process
+component tests) and contract tests. They both can be run relatively
+fast on a development machine and can give fast feedback to the
+developer, preventing many kinds of problems.&lt;/p&gt;
+&lt;p&gt;Service tests run the whole application process without any internal
+modifications, but have to present the service with a fake &amp;quot;outside
+world&amp;quot;. I'll show how to fake external HTTP services with Mountebank
+(similar to WireMock). Instead of faking other systems (like
+databases) we can quickly spin up the real deal as a Docker container
+from within the tests.&lt;/p&gt;
+&lt;p&gt;Contract tests check if the contract (interface) of your service with
+the outside world is kept, so no external services should be broken by
+the changes you are introducing. It can also work the other way
+around, proving that your collaborators are keeping their part of the
+deal. In both cases, Swagger (a RESTful API description scheme) and a
+few clever tricks can be used for significant advantage.&lt;/p&gt;
+</summary></entry></feed>

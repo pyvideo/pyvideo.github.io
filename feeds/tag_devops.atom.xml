@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_devops.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-05-05T00:00:00+00:00</updated><entry><title>RedisAI</title><link href="https://pyvideo.org/pycon-italia-2019/redisai.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Luca Antiga</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/redisai.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Taking deep learning models to production and doing so reliably is one
+of the next frontiers of DevOps. With the advent of Redis modules and
+the availability of C APIs for the major deep learning frameworks, it is
+now possible to turn Redis into a reliable runtime for deep learning
+workloads, providing a simple solution for a model serving microservice.
+In this talk we will introduce RedisAI, a joint effort by Orobix and
+RedisLabs that introduces tensors and graphs as new Redis data types and
+allows to execute graphs over tensors using multiple backends (PyTorch,
+TensorFlow, and ONNXRuntime), both on the CPU and GPU. The module also
+supports scripting with TorchScript, which provides a Python-like tensor
+language that can be used to facilitate pre- and post-processing
+operations, like input shaping or output ensambling. In addition, thanks
+to its support for the ONNX standard, including ONNX-ML, RedisAI is not
+strictly limited to deep learning, but it offers support for general
+machine learning algorithms. In this talk, we will demonstrate a full,
+Python-powered journey from fine tuning a model to a scalable Flask +
+RedisAI deployment. Last, we will lay down the roadmap for the future,
+like automated batching, sharding, integration with Redis data types
+(e.g. streams) and advanced monitoring. The talk will include sample
+code, best practices and a live demo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1756"&gt;https://python.it/feedback-1756&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="database"></category><category term="redis"></category><category term="devops"></category><category term="Machine Learning"></category><category term="deployment"></category><category term="neural network"></category></entry><entry><title>Service discovery: sai dov'è il mio microservice?</title><link href="https://pyvideo.org/pycon-italia-2019/service-discovery-sai-dove-il-mio-microservice.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Davide Setti</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/service-discovery-sai-dove-il-mio-microservice.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Quello del discovery dei servizi è un problema che sembra banale fino a
+quando non ne hai bisogno. Non serve essere (metti qui grossa azienda)
+per doverlo fare: già con un paio di servizi deployati in maniera
+dinamica (leggi cloud e/o container) bisogna inventarsi qualcosa.
+Kubernetes offre la sua visione, ma se non lo usiamo o abbiamo un
+ibrido, dobbiamo trovare un’alternativa.&lt;/p&gt;
+&lt;p&gt;In questo talk analizzeremo il problema, la soluzione che adottiamo a
+SpazioDati (basata su Consul e HAProxy) e le novità in questo campo
+(Envoy).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1788"&gt;https://python.it/feedback-1788&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Consul"></category><category term="devops"></category><category term="SRE"></category></entry><entry><title>Basta problemi con tensorflow usando Docker &amp; Nvidia Docker</title><link href="https://pyvideo.org/pycon-italia-2019/basta-problemi-con-tensorflow-usando-docker-nvidia-docker.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Nicola Landro</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/basta-problemi-con-tensorflow-usando-docker-nvidia-docker.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Di sicuro vi sarà capitato che condividendo o effettuando un progetto
+tensorflow questo non funzioni correttamente. Soprattutto non riesco a
+far scalare la mia app perchè non ho abbastanza macchine con GPU e
+eseguire lo scale su macchine con solo CPU è costoso per poi ottenere
+scarsi benefici. La soluzione è utilizzare Docker e Nvidia Docker.
+Vedremo perchè Docker è migliore di una macchina virtuale e come
+cambiano le prestazioni rispetto ad andare direttamente sulla macchina.
+Vedremo trucchi su come strutturare dei docker-compose file senza
+duplicazione per poter sviluppare agilmente sia con GPU che senza, poter
+effettuare un deploy con tranquillità e poter scalare facilmente anche
+senza GPU. Slide Link: &amp;lt;&lt;a class="reference external" href="https://www.slideshare.net/NicolaLandro/basta"&gt;https://www.slideshare.net/NicolaLandro/basta&lt;/a&gt;-
+problemicontensorflowusandodockernvidiadocker&amp;gt;&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1528"&gt;https://python.it/feedback-1528&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="OSX"></category><category term="windows"></category><category term="devops"></category><category term="Machine Learning"></category><category term="GNU/Linux"></category><category term="cuda"></category><category term="tensorflow"></category><category term="docker"></category></entry><entry><title>Python &amp; Serverless: Refactor your monolith piece by piece</title><link href="https://pyvideo.org/pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Giuseppe Vallarelli</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python &amp;amp; Serverless: Refactor your monolith piece by piece&lt;/p&gt;
+&lt;p&gt;The introduction of the Function as a Service (Serverless) technologies
+is facilitating the adoption of a microservices based architecture. In
+this talk we will discuss why this might be useful (scalability / cost
+opportunities / choosing the right tool for the job) and what strategies
+we can follow to either extract independent services or add new
+capabilities using an event driven architecture style to a django web
+application. We will end up our discussion talking about testing and
+monitoring of our freshly baked services.&lt;/p&gt;
+&lt;p&gt;In this talk we will see:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Serverless/FaaS concepts brief intro&lt;/li&gt;
+&lt;li&gt;Breaking up the monolith rationale&lt;/li&gt;
+&lt;li&gt;Extracting some modules into independent services&lt;/li&gt;
+&lt;li&gt;Adding more capabilities using events as a trigger for our FaaS&lt;/li&gt;
+&lt;li&gt;Testing &amp;amp; Monitoring&lt;/li&gt;
+&lt;li&gt;References&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The intended audience should be familiar with the concepts related to
+web applications, web apis and a smattering of serverless concepts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1591"&gt;https://python.it/feedback-1591&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="microservices"></category><category term="pyweb"></category><category term="aws"></category><category term="devops"></category><category term="django"></category><category term="lambda-functions"></category><category term="event-driven-architecture"></category><category term="cloud"></category><category term="faas"></category></entry><entry><title>batou - a multi-(component|environment|platform|.*) deployment tool</title><link href="https://pyvideo.org/europython-2013/batou-a-multi-componentenvironmentplatform-deployment-tool.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Christian Theune</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/batou-a-multi-componentenvironmentplatform-deployment-tool.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;batou is a service deployment utility inspired by tools like Puppet,
+Fabric, and other modern tools. It made a short appearance in a
+lightning talk and at the sprints during EP 2012.&lt;/p&gt;
+&lt;p&gt;The talk gives an overview and demonstrates with practical examples how
+we deploy web applications with many complex components:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;modelling service components with Python&lt;/li&gt;
+&lt;li&gt;multiple environments&lt;/li&gt;
+&lt;li&gt;multiple platforms&lt;/li&gt;
+&lt;li&gt;development environments&lt;/li&gt;
+&lt;li&gt;convergent behaviour&lt;/li&gt;
+&lt;li&gt;remote deployments&lt;/li&gt;
+&lt;li&gt;secrets management (database passwords, SSL certificates, …)&lt;/li&gt;
+&lt;li&gt;no additional run-time dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will show how the real-life requirements in our projects led us to
+develop a general model that integrates existing practices without
+building a huge stack of technologies.&lt;/p&gt;
+</summary><category term="fabric"></category><category term="hosting"></category><category term="deploy"></category><category term="devops"></category><category term="integration"></category><category term="service-orchestration"></category><category term="deployment"></category><category term="best-practices"></category><category term="webapp"></category><category term="servers"></category></entry><entry><title>Will ipython replace bash?</title><link href="https://pyvideo.org/europython-2013/will-ipython-replace-bash.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/will-ipython-replace-bash.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While python is widely used for automating administration tasks, it’s
+not still widely known and used between system administrators.&lt;/p&gt;
+&lt;p&gt;iPython is an interactive python shell that embeds bash functionalities.
+We’ll show how to :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;replace some bash tasks avoiding common errors&lt;/li&gt;
+&lt;li&gt;resembling some bash behaviour&lt;/li&gt;
+&lt;li&gt;create testing (nose) and monitoring scripts&lt;/li&gt;
+&lt;li&gt;reuse existing python modules (eg.iotop, psutil, …)&lt;/li&gt;
+&lt;li&gt;use flask to expose those scripts on HTTP&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Wanna see something specific? Leave a comment! We’ll tune the talk
+agenda on the audience interests!&lt;/p&gt;
+&lt;div class="section" id="there-is-also-a-teaser-video"&gt;
+&lt;h4&gt;There is also a teaser video.&lt;/h4&gt;
+&lt;/div&gt;
+</summary><category term="flask"></category><category term="testing"></category><category term="devops"></category><category term="sysadmin"></category><category term="linux"></category><category term="iPython"></category><category term="bash"></category></entry><entry><title>Beyond Jupyter Notebooks - Building your own Data Science platform with Python &amp; Docker</title><link href="https://pyvideo.org/pycon-de-2018/beyond-jupyter-notebooks-building-your-own-data-science-platform-with-python-docker.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Joshua Görner</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/beyond-jupyter-notebooks-building-your-own-data-science-platform-with-python-docker.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Interactive notebooks like Jupyter have become more and more popular in
+the recent past and build the core of many data scientist's workplace.
+Being accessed via web browser they allow scientists to easily structure
+their work by combining code and documentation.&lt;/p&gt;
+&lt;p&gt;Yet notebooks often lead to isolated and disposable analysis artefacts.
+Keeping the computation inside those notebooks does not allow for
+convenient concurrent model training, model exposure or scheduled model
+retraining.&lt;/p&gt;
+&lt;p&gt;Those issues can be addressed by taking advantage of recent developments
+in the discipline of software engineering. Over the past years
+containerization became the technology of choice for crafting and
+deploying applications. Building a data science platform that allows for
+easy access (via notebooks), flexibility and reproducibility (via
+containerization) combines the best of both worlds and addresses Data
+Scientist's hidden needs.&lt;/p&gt;
+</summary><category term="Artificial Intelligence"></category><category term="Algorithms"></category><category term="Data Science"></category><category term="DevOps"></category><category term="Infrastructure"></category><category term="Jupyter"></category><category term="Machine Learning"></category><category term="Programming"></category><category term="Python"></category></entry><entry><title>Cloud chat bot for lazy people</title><link href="https://pyvideo.org/pycon-de-2018/cloud-chat-bot-for-lazy-people.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Björn Meier</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/cloud-chat-bot-for-lazy-people.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At work we established Slack years ago as our chat application and by
+now quite a percentage of communication goes through it. As a result it
+got much easier to contact one person or a group simultaneously. And
+this is good as we can share our knowledge save each other time. But it
+also introduced a category of questions in the chat which only require
+simple tedious tasks to get the answer and then post it as a response.
+One possibility is to educate and point others to the place where they
+can find the answer or what tasks they have to do. The other one is use
+a chat bot for this. Both ways have advantages and for the bot it is
+that you can import a specific type of response more easily into a
+conversation without first gathering the information and copy and paste
+it. I am a developer and service operator and one category of questions
+which fits this is the category of service health questions, like &amp;quot;Does
+service X has a problem right now?&amp;quot;. Hence, I will use a bot to answer
+them. First I will show you how you can create a python bot for the
+Azure bot service. With it the questioner then can either directly use
+the bot to answer his question or you can just create the response for
+him without going to the service health monitoring. In this case the
+service health information has to be obtained from a Prometheus
+monitoring service and then transformed into a chat message.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="Infrastructure"></category></entry><entry><title>Introduction to Docker for Pythonistas</title><link href="https://pyvideo.org/pycon-de-2018/introduction-to-docker-for-pythonistas.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Jan Wagner</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/introduction-to-docker-for-pythonistas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;My Talk aims to introduce you to Docker and how it works, how you can
+use prebuild Images from the Docker-Hub and how you can make your own
+Images.&lt;/div&gt;
+&lt;div class="line"&gt;In more Detail, the following Points will be covered:&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Big Data"></category><category term="Data Science"></category><category term="DevOps"></category><category term="Jupyter"></category><category term="Machine Learning"></category></entry><entry><title>Observe all your applications</title><link href="https://pyvideo.org/pycon-de-2018/observe-all-your-applications.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/observe-all-your-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You just deployed your new version of an application or micro-service;
+how do you know everything works as expected? You run your comprehensive
+test suite to verify functional correctness for known scenarios and
+performance tests before deploying, but does your application really
+work at the moment or is it just responding with error messages to all
+incoming requests?&lt;/p&gt;
+&lt;p&gt;I’m part of the team that runs a huge infrastructure for the SAP HANA
+development. This infrastructure is vital for nearly all development &amp;amp;
+testing activities of SAP HANA. As this infrastructure is powered by
+multiple in-house developed applications, we immediately want to know if
+an application starts to fail and we need to be able to quickly diagnose
+what caused the failure.&lt;/p&gt;
+&lt;p&gt;This talk will give you an overview how we monitor our full stack from
+the 2000 physical machines up to the 10,000 parallel running Python
+application processes, micro-service instances and batch processing
+jobs. It includes a review about the used tools, bad and good examples
+of instrumentation in Python code, the resulting visualisation and an
+outlook on upcoming improvements.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="Infrastructure"></category><category term="Networks"></category><category term="Programming"></category><category term="Python"></category></entry><entry><title>Python with and without Pants</title><link href="https://pyvideo.org/pycon-de-2018/python-with-and-without-pants.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Stephan Erb</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/python-with-and-without-pants.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What is the best outfit for comfortable, but highly productive
+programming at home? While this is definitely an important question,
+this talk will focus on a topic that is slightly more controversial:
+monorepos and their build tools. Specifically, the talk will have a
+closer look at Pants (&lt;a class="reference external" href="https://www.pantsbuild.org"&gt;https://www.pantsbuild.org&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Pants is a build system for large or rapidly growing code bases. It
+supports all stages of a typical build ( bootstrapping, dependency
+resolution, compilation, linting, ...) and allows users to organize
+their code via targets for binaries, libraries, and tests. For Python
+programmers, pants is especially interesting, as it makes the
+manipulation and distribution of hermetically sealed Python environments
+painless - so called PEXes.&lt;/p&gt;
+&lt;p&gt;The talk will motivate Pants and its usage in the context of a large
+company- wide monorepo. It will then focus on important Python-centric
+features, and shortly explain how those work under the hood. The talk
+will conclude with a discussion of usecases for Pants outside of a
+monorepo, i.e. for the rest of us.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="Infrastructure"></category></entry><entry><title>What's new in Python 3.7?</title><link href="https://pyvideo.org/pycon-de-2018/whats-new-in-python-37.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Stephane Wirtel</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/whats-new-in-python-37.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scheduled for release in mid-June after the conference, Python 3.7 is
+shaping up to be a feature-packed release! This talk will cover all the
+new features of Python 3.7, including the Data Classes and the Context
+Variables for the asynchronous programming with asyncio.&lt;/p&gt;
+</summary><category term="Community"></category><category term="Django"></category><category term="DevOps"></category></entry><entry><title>Where the heck is my memory?</title><link href="https://pyvideo.org/pycon-de-2018/where-the-heck-is-my-memory.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Florian Jetter</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/where-the-heck-is-my-memory.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory management is something the common Python user doesn’t need to
+bother with because the gory details of it are hidden deep within the
+interpreter itself. The garbage collector takes out the trash and we can
+spend our precious time bothering with more important things on our
+minds. Living in this encapsulated utopia is nice but sometimes it is
+worth it to peak behind the curtains to unleash the full power of your
+application. In this talk I want to show you when it is necessary to
+face this harsh world and convince you that it is in fact not as scary
+as it may seem. Using real life examples, I’m going to show you how to
+use the garbage collector and open source tooling to get control over
+the memory you might not even know you had at your disposal.&lt;/p&gt;
+</summary><category term="Big Data"></category><category term="DevOps"></category><category term="Infrastructure"></category></entry><entry><title>Binder - lowering the bar to sharing interactive software</title><link href="https://pyvideo.org/pycon-de-2018/binder-lowering-the-bar-to-sharing-interactive-software.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Tim Head</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/binder-lowering-the-bar-to-sharing-interactive-software.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Binder project drastically lowers the bar to sharing and re-using
+software. As a user wanting to try out someone else’s work I only have
+to click a single link. As the author preparing a binder-ready project
+is much easier than having to support many different platforms and for
+many projects involves little additional work.&lt;/p&gt;
+&lt;p&gt;In this talk I will introduce the audience to the concepts and ideas
+behind the Binder project. I will showcase examples from the community
+to illustrate use-cases and show off the power of Binder.&lt;/p&gt;
+&lt;p&gt;Three pieces of software power Binder:
+&lt;a class="reference external" href="http://repo2docker.readthedocs.io/en/latest/"&gt;repo2docker&lt;/a&gt;,
+&lt;a class="reference external" href="https://binderhub.readthedocs.io/en/latest/"&gt;BinderHub&lt;/a&gt; and
+&lt;a class="reference external" href="http://jupyterhub.readthedocs.io/en/stable/"&gt;JupyterHub&lt;/a&gt;. Using an
+example repository I will go through the steps required to make a
+repository binder- ready and what happens when a user launches it. At
+each step I will illustrate the role that each of the three software
+components play and how they interact.&lt;/p&gt;
+&lt;p&gt;Binder is a project created by its community. I will present pathways
+for getting involved with the community.&lt;/p&gt;
+&lt;p&gt;To wrap up I will highlight plans for future developments and features
+of Binder.&lt;/p&gt;
+</summary><category term="Community"></category><category term="Data Science"></category><category term="DevOps"></category><category term="Jupyter"></category><category term="Science"></category><category term="Web"></category></entry><entry><title>Distributed Hyperparameter search with sklearn and kubernetes</title><link href="https://pyvideo.org/pycon-de-2018/distributed-hyperparameter-search-with-sklearn-and-kubernetes.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Jakob Karalus</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/distributed-hyperparameter-search-with-sklearn-and-kubernetes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While sklearn provides a good interface to do hyperparameter search on
+large &amp;amp; complex model (pipelines), doing these can take up a lot of
+time. The traditional way usually includes one beefy machine and a lot
+of waiting. In other cases, people tend to “manually” schedule parameter
+ranges between nodes, but that can also be problematic since these won't
+talk to each other. Kubernetes itself is currently the most prominent
+scheduler and shines at distributing task, but is a pretty complex
+system in itself.&lt;/p&gt;
+&lt;p&gt;In this talk, I will show how you can harness the scheduling of
+kubernetes for distributing hyperparameter search with sklearn onto a
+cluster of nodes. This can be achieved quite easily and with just a few
+changes to the original code, so the Data Scientist won't be bothered by
+complex kubernetes internals.&lt;/p&gt;
+</summary><category term="Algorithms"></category><category term="Big Data"></category><category term="Data Science"></category><category term="DevOps"></category><category term="Infrastructure"></category><category term="Machine Learning"></category></entry><entry><title>IoT using Python on Linux: Lessons Learned</title><link href="https://pyvideo.org/pycon-de-2018/iot-using-python-on-linux-lessons-learned.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Thomas Keppler</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/iot-using-python-on-linux-lessons-learned.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In a distributed sensor network system with a Java based Cloud
+application, mobile apps and a proprietary radio protocol accompanying
+it we developed an IoT appliance that connects the existing radio
+infrastructure to the Cloud service developed in-house.&lt;/p&gt;
+&lt;p&gt;Using CPython 3.5 + Debian GNU/Linux 9 on an ARMv7 platform, we
+developed the following features:&lt;/p&gt;
+&lt;p&gt;Over the course of this project, we learned a lot about Test Driven
+Development of Python apps in teams and DevOps in the IoT space. We
+would now like to share our experience developing a Python application
+for a headless IoT device and the things we would liked to have known
+upfront.&lt;/p&gt;
+&lt;p&gt;The talk is held both by Matthias Schmidt (Senior Architect at diva-e)
+and Thomas Keppler (Software Developer at diva-e).&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="Infrastructure"></category><category term="Networks"></category><category term="Programming"></category><category term="Python"></category></entry><entry><title>In git we trust</title><link href="https://pyvideo.org/pycon-italia-2018/in-git-we-trust.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Simone Basso</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/in-git-we-trust.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tutti giorni molti di noi usano git avendo a che fare con la sua
+complessità.&lt;/p&gt;
+&lt;p&gt;Alzi la mano chi non ha mai avuto un conflitto su un merge. O chi ha
+iniziato a sudare freddo pensando di aver perso ore di lavoro.&lt;/p&gt;
+&lt;p&gt;L’obbiettivo di questo talk è quello di provare a togliere il velo di
+mistero a ciò che succede sotto il cofano quando utilizziamo git, per
+usarlo con maggior consapevolezza e produttività, soprattutto quando le
+cose prendono una piega sbagliata.&lt;/p&gt;
+&lt;p&gt;Il tutto strizzando l’occhio al nostro linguaggio preferito: Python&lt;/p&gt;
+&lt;p&gt;Il tour comprenderà:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;introduzione&lt;/li&gt;
+&lt;li&gt;objects&lt;/li&gt;
+&lt;li&gt;reference&lt;/li&gt;
+&lt;li&gt;esempi&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Un minimo di conoscenza di git è consigliata :) .&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="git"></category><category term="#amicodialessia"></category><category term="devops"></category></entry><entry><title>Monitoraggio di applicazioni Django con Prometheus (e Grafana)</title><link href="https://pyvideo.org/pycon-italia-2018/monitoraggio-di-applicazioni-django-con-prometheus-e-grafana.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Davide Setti</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/monitoraggio-di-applicazioni-django-con-prometheus-e-grafana.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Prometheus.io è un sistema di whitebox monitoring creato a Soundcloud da
+ex- googlers. Non serve essere google per usarlo e in questa talk vorrei
+mostrare come sia semplice (e utile!) integrarlo in un’applicazione
+Django. Non monitori i tuoi website? Purtroppo sono non violento ma
+cercherò in qualche modo di convincerti a farlo.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="monitoring"></category><category term="devops"></category><category term="django"></category><category term="prometheus"></category><category term="performance"></category><category term="grafana"></category></entry><entry><title>DevOps di applicazioni Python (e non solo) su OpenShift</title><link href="https://pyvideo.org/pycon-italia-2018/devops-di-applicazioni-python-e-non-solo-su-openshift.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Francesco Fiore</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/devops-di-applicazioni-python-e-non-solo-su-openshift.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;OpenShift Origin è la Platform-as-a-Service opensource di riferimento.
+Basata su Kubernetes e Docker, contiene features aggiuntive e
+integrazioni con altri componenti che semplificano le pratiche di
+DevOps.&lt;/p&gt;
+&lt;p&gt;Dopo una breve introduzione ad Openshift ed alla sua architettura,
+vedremo come:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;fare il setup di infrastrutture applicative microservice-based (es.
+microservizi Python Flask/Django, single page application Angular,
+ecc…)&lt;/li&gt;
+&lt;li&gt;creare una piattaforma di Continuous Integration e Continuous
+Delivery&lt;/li&gt;
+&lt;li&gt;implementare e gestire la CI/CD di microservice-based application
+sfruttando l’integrazione con Git e Jenkins&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="agenda"&gt;
+&lt;h4&gt;Agenda&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;architettura di base di OpenShift&lt;/li&gt;
+&lt;li&gt;come costruire un &lt;em&gt;project&lt;/em&gt; OpenShift: &lt;em&gt;builds&lt;/em&gt; e &lt;em&gt;deployments&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;automatizzare il setup mediante &lt;em&gt;template&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;utilizzare Git, Jenkins e Openshift per creare una semplice pipeline
+di CI/CD&lt;/li&gt;
+&lt;li&gt;strategie di deployment avanzate: &lt;em&gt;blue-green deployment&lt;/em&gt; , &lt;em&gt;A/B
+deployment&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prerequisiti"&gt;
+&lt;h4&gt;Prerequisiti&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;conoscenza base di Git e Jenkins&lt;/li&gt;
+&lt;li&gt;conoscenza base dei concetti CI/CD e DevOps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="microservices"></category><category term="continuous-integration"></category><category term="git"></category><category term="continuous-delivery"></category><category term="kubernetes"></category><category term="devops"></category><category term="jenkins"></category><category term="docker"></category><category term="OpenShift"></category></entry><entry><title>Our DevOps journey, is SRE the next stop?</title><link href="https://pyvideo.org/pycon-sk-2018/our-devops-journey-is-sre-the-next-stop.html" rel="alternate"></link><published>2018-03-10T00:00:00+00:00</published><updated>2018-03-10T00:00:00+00:00</updated><author><name>Martin Strycek</name></author><id>tag:pyvideo.org,2018-03-10:pycon-sk-2018/our-devops-journey-is-sre-the-next-stop.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over past few years we see significant raise in technology requirements,
+complexity of managing and delivering high reliability systems. Based on
+our first-hand experience we see that there does not exist one silver
+bullet way of doing DevOps and way how you manage Continuous Delivery
+features. At Kiwi.com the transformation went from small applications to
+complex micro services architectures. This change did also impact the
+infrastructure not only by numbers of servers, also on complexity of the
+system and ended with hybrid model of cloud and bare metal solution. In
+this talk I will cover how our team of DevOps and Engineers battles with
+tasks such as deployment to many enviroments, infrastructure changes,
+monitoring and also creation of processes and runbooks. We believe that
+this talk can inspire you to adapt changes within your teams and never
+stop improving how you manage your infrastructure.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="PyCon SK"></category><category term="Python"></category><category term="SRE"></category></entry><entry><title>Skynet your Infrastructure with QUADS</title><link href="https://pyvideo.org/pycon-sk-2018/skynet-your-infrastructure-with-quads.html" rel="alternate"></link><published>2018-03-10T00:00:00+00:00</published><updated>2018-03-10T00:00:00+00:00</updated><author><name>Will Foster</name></author><id>tag:pyvideo.org,2018-03-10:pycon-sk-2018/skynet-your-infrastructure-with-quads.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The very small 2-person DevOps team within Red Hat Performance/Scale
+Engineering has developed a set of Open Source Python-based systems and
+network automation provisioning tools designed to end-to-end automate
+the provisioning of large-scale systems and network switches using tools
+like Foreman, Ansible, and other Open Source bits.&lt;/p&gt;
+&lt;p&gt;QUADS – or “quick and dirty scheduler” allows a normally overburdened
+DevOps warrior to fully automate large swaths of systems and network
+devices based on a schedule, even set systems provisioning to fire off
+in the future so they can focus on important things like Netflix and
+popcorn or not reading your emails while your datacenter burns in an
+inferno of rapid, automated skynet provisioning. QUADS will also
+auto-generate up-to-date infrastructure documentation, track scheduling,
+systems assignments and more.&lt;/p&gt;
+&lt;p&gt;In this talk we’ll show you how we’re using QUADS (backed by Foreman) to
+empower rapid, meaningful performance and scale testing of Red Hat
+products and technologies. While QUADS is a new project and under
+constant development, the design approach to handling large-scale
+systems provisioning as well as the current codebase is consumable for
+others interested in improving the efficiency and level of automation
+within their infrastructure.&lt;/p&gt;
+&lt;p&gt;We'll also dive into purposeful development design choices, how some of
+these choices might not scale for the future (but work well at present)
+and provide a future roadmap of a new redesign based on Flask, Celery,
+Sqlite and friends.&lt;/p&gt;
+</summary><category term="DevOps"></category><category term="PyConSK"></category><category term="Python"></category><category term="Quads"></category></entry><entry><title>How to Write Deployment-friendly Applications</title><link href="https://pyvideo.org/pycon-us-2018/how-to-write-deployment-friendly-applications.html" rel="alternate"></link><published>2018-05-12T00:00:00+00:00</published><updated>2018-05-12T00:00:00+00:00</updated><author><name>Hynek Schlawack</name></author><id>tag:pyvideo.org,2018-05-12:pycon-us-2018/how-to-write-deployment-friendly-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The DevOps movement gave us many ways to put Python applications into production.  But should your &lt;em&gt;application&lt;/em&gt; care?  Should it need to know whether it’s running on your notebook, on a server, in a Docker container, or in some cloud platform as a service?&lt;/p&gt;
+&lt;p&gt;It should not, because environment-agnostic applications are easier to &lt;strong&gt;test&lt;/strong&gt;, easier to &lt;strong&gt;deploy&lt;/strong&gt;, easier to &lt;strong&gt;handle&lt;/strong&gt;, and easier to &lt;strong&gt;scale&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But how can you &lt;em&gt;practically&lt;/em&gt; structure and configure your applications to make them indifferent to the environment they run in?  How do secrets fit into the picture?  And where do you put that log file?&lt;/p&gt;
+&lt;p&gt;By the end of this talk you’ll know the tools and techniques that enable you to write such Python applications and you’ll be ready for the next big change.&lt;/p&gt;
+</summary><category term="devops"></category></entry><entry><title>Devops com Python</title><link href="https://pyvideo.org/caipyra-2016/devops-com-python.html" rel="alternate"></link><published>2016-06-26T00:00:00+00:00</published><updated>2016-06-26T00:00:00+00:00</updated><author><name>Humberto Diógenes</name></author><id>tag:pyvideo.org,2016-06-26:caipyra-2016/devops-com-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Palestra do Humberto Diógenes no Caipyra 2016:&lt;/p&gt;
+&lt;p&gt;Devops com Python&lt;/p&gt;
+</summary><category term="devops"></category></entry><entry><title>Containerize all the things</title><link href="https://pyvideo.org/caipyra-2016/containerize-all-the-things.html" rel="alternate"></link><published>2016-06-25T00:00:00+00:00</published><updated>2016-06-25T00:00:00+00:00</updated><author><name>Andrews Medina</name></author><id>tag:pyvideo.org,2016-06-25:caipyra-2016/containerize-all-the-things.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Palestra do Andrews Medina no Caipyra 2016:&lt;/p&gt;
+&lt;p&gt;Containerize all the things&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://talks.godoc.org/github.com/andrewsmedina/containerize-all-the-things/sample.slide#1"&gt;http://talks.godoc.org/github.com/andrewsmedina/containerize-all-the-things/sample.slide#1&lt;/a&gt;&lt;/p&gt;
+</summary><category term="docker"></category><category term="devops"></category></entry><entry><title>An Admin's Cornucopia - Python Is More Than Just A Better Bash</title><link href="https://pyvideo.org/pycon-de-2017/an-admins-cornucopia-python-is-more-than-just-a-better-bash.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Christian Theune</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/an-admins-cornucopia-python-is-more-than-just-a-better-bash.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Christian Theune&lt;/strong&gt; (&amp;#64;theuni)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python's versatility is known to admins - in this talk I'd like to show how it fits for many small and big challenges I meet regularly: from tiny scripts to large systems. Also, I'll show how using the languages' advanced and/or newer features makes scripts more compact and robust.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DRAFT Unfortunately I got sick just a few days before the CFP date, so hopefully you can live with a draft description for now. I'll be happy to update this during or after the review as needed.&lt;/p&gt;
+&lt;p&gt;I'd like to give a hands-on approach for how to use Python in a mixed environment where you may be writing very small standalone scripts, small integration programs and/or larger systems. As an admin bash is always a very close friend and one quickly uses it and then ends up with large scripts that should never have seen the day of light. Also, admins nowadays might be writing larger software bases that are actual software projects and the lines between &amp;quot;ops&amp;quot; and &amp;quot;devs&amp;quot; are - on purpose - more and more blurry. However, there are some differences in &amp;quot;application development&amp;quot; and &amp;quot;system development&amp;quot;. Those are more of a mindset issue, however, and Python as a technology fits in both situations quite well and allows one to transition between those modes rather seamlessly.&lt;/p&gt;
+&lt;p&gt;I'll be reviewing specific pieces of code from our infrastructure, ranging from smaller scripts to subsystems to a full-born Pyramid application that we use for inventory management. All of those will use different versions of Python, different libraries and different approaches how to solve certain problems. I will likely show how not to do things as well.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="python"></category><category term="devops"></category></entry><entry><title>Automated testing with 400TB memory</title><link href="https://pyvideo.org/pycon-de-2017/automated-testing-with-400tb-memory.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Christoph Heer</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/automated-testing-with-400tb-memory.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Christoph Heer&lt;/strong&gt; (&amp;#64;ChristophHeer)&lt;/p&gt;
+&lt;p&gt;I’m an Infrastructure Engineer in the team behind SAP’s huge test infrastructure for SAP HANA. In my spare time, I develop web applications with Django or playing around with new programming languages like Rust.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SAP operates a dedicated test infrastructure with more than 400TB main memory for its in-memory database SAP HANA. All custom implementations like improved scheduling, caching of artifacts and monitoring were implemented in our favorite programming language Python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SAP operates a large test infrastructure to test its in-memory database SAP HANA. In 2010, we started with a single Jenkins master with ten nodes. But to keep our testing time acceptable for the growing number of developers we had to scale up, which led to multiple different scaling challenges. The current test infrastructure is powered by more than thousand physical servers and provides different services like continuous integration, code coverage and code linting for a huge C++ project. These services are essential for developing and shipping new SAP HANA versions.&lt;/p&gt;
+&lt;p&gt;This talk provides insights into how we scaled and improved our test infrastructure. All custom implementations like improved scheduling, expressive test configuration and caching of artifacts were implemented in our favorite programming language Python. With the flexibility and power of Python it has been easier to extend, optimize and adapt the infrastructure for new requirements like different CPU architectures and newer operating system versions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="python"></category><category term="use-case"></category><category term="devops"></category><category term="business"></category></entry><entry><title>Building your own SDN with Debian Linux, Salt Stack and Python</title><link href="https://pyvideo.org/pycon-de-2017/building-your-own-sdn-with-debian-linux-salt-stack-and-python.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Maximilian Wilhelm</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/building-your-own-sdn-with-debian-linux-salt-stack-and-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Maximilian Wilhelm&lt;/strong&gt; (&amp;#64;BarbarossaTM)&lt;/p&gt;
+&lt;p&gt;By day Maximilian Wilhelm is working as a Senior Infrastructure Architect in the central computing department of the University of Paderborn, by night he's hacking on the infrastructure of the Freifunk Hochstift network and some Open Source projects. Since the early 2000s he has a heart for Linux and Open Source, developed a weaknes for networking, IPv6 and routing a long while a go and has beed a speaker and tutor at the #Routingdays. Lately he got his hands dirty with ifupdown2, VXLAN, Linux VRFs, infrastructure automation with Salt Stack and &amp;quot;kommunistischen Frickelnetzen&amp;quot; and is afraid of SDNs ever since. In his spare time he likes playing piano and the organ, taking pictures of natures and cute animals, and trying to stay on the board while Windsurfing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In this talk you will get an overview about some awesome features of comtemporary Linux networking, how to easily integrate them with some cool open source tools, and glueing all this together with Salt Stack and some Python to get your very own SDN controller for a service-provider style network.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Topics like Infrastructure Automation / Orchestration, Cloud, and Software Defined Networks are on everyones tongue and nearly all network vendors who think highly of themselves provide products and maybe even solutions in this sphere of buzzwords.&lt;/p&gt;
+&lt;p&gt;Within the last years there has been a paradigm shift towards host and segment routing – think »IP Fabric« – as well as a focus on open protocols and standards like OSPF, IS-IS, BGP &amp;amp; MPLS not only in the data center. This even brought us some new standards like VXLAN and a bunch of open source based “open networking” platforms. Now we aren't always locked to the operating systems of a networking vendor but can choose the control plane software from a variety of Linux based solutions which can be managed and orchestrated by lots of different means.&lt;/p&gt;
+&lt;p&gt;Thanks to the Linux basis and the Open Source spirit of some vendors, some features (VRFs, MPLS forwarding plane, …) today are part of the upstream Linux kernel and available for everyone! Most notable are the contributions of the Debian Linux based platform from Cumulus Networks, which include the VRF support for Linux, some MPLS patches for FRR and ifupdown2 (which is written in Python :-)).&lt;/p&gt;
+&lt;p&gt;Putting a bunch of these technologies and ideas together will open up a lot of powerful options for building low budget yet mighty networks. This talk will lay out how to build a SDN based service provide like infrastructure with the help of Salt Stack, some 1000 lines of Python and a bunch of affordable hardware where overlay networks and anycast aren't things to be scared of. The Freifunk Hochstift network and server infrastructure will be used as an example.&lt;/p&gt;
+&lt;p&gt;The target audience mainly consists of (Linux-) system and network engineers / architects, who already have some experience with the other world. A positive attitude towards automation and magic is a plus.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="sdn"></category><category term="saltstack"></category><category term="linux"></category><category term="debian"></category><category term="networking"></category><category term="devops"></category><category term="use-case"></category><category term="netops"></category><category term="netdevops"></category></entry><entry><title>From 0 to Continuous Delivery in 30 minutes.</title><link href="https://pyvideo.org/pycon-de-2017/from-0-to-continuous-delivery-in-30-minutes.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>David Wölfe</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/from-0-to-continuous-delivery-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;An introduction and hands on example how to start Continuous Delivery for python (or whatever) projects with conda and gitlab, which are open source, free to use, and if you wish even available as a cloud service.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So, you wrote this neat software, which uses one or two cool 3rd party packages and now you have to get it running on your test or prod servers. Now you could check out your code and install the dependencies manually but that seems like a lot of wasted time, right? Shouldn't there be a more convenient way of doing this?&lt;/p&gt;
+&lt;p&gt;Yes! And it's easier than you think! In this talk you'll learn how to build a Continuous Delivery pipeline for your python (or whatever) projects in 30 Minutes.&lt;/p&gt;
+&lt;p&gt;In the beginning you'll get a quick introduction into the topic and the used tools, which are open source and free to use. For those who know a little about the subject: We will use conda (&lt;a class="reference external" href="https://conda.io"&gt;https://conda.io&lt;/a&gt;) to build the software package and for the dependency handling. GitLab.com will process the actual pipeline for us and Anaconda.com serves us with a package distribution channel.&lt;/p&gt;
+&lt;p&gt;After that it's &amp;quot;hands on&amp;quot; time. We will go step by step trough the process. Starting with the creation of a little dummy program. Then extending the dummy in such manner that it can be build into a package. Afterwards we will create the pipeline and finally do a demo deploy. And if the gods of conference internet are merciful, you see all this as a live demonstration.&lt;/p&gt;
+</summary><category term="hands on"></category><category term="continuous delivery"></category><category term="devops"></category><category term="python"></category><category term="gitlab"></category><category term="conda"></category></entry><entry><title>Keeping the grip on decoupled code using CLIs</title><link href="https://pyvideo.org/pycon-de-2017/keeping-the-grip-on-decoupled-code-using-clis.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Anne Matthies</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/keeping-the-grip-on-decoupled-code-using-clis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Anne Matthies&lt;/strong&gt; (&amp;#64;babeltron)&lt;/p&gt;
+&lt;p&gt;Anne Matthies has been coding data stuff professionally since 1996. She switched to Python 2 in 2000, to Python 3 in 2015. Currently, she’s working at Babbel, Berlin, responsible for building and operating the data platform – and developing the next generation.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;So you’ve decoupled your code monolith into all those micro chunks. When someone asks &amp;quot;How can I…&amp;quot; you want to answer: &amp;quot;That’s easy! We’ve built that.&amp;quot; Actually, you’ve built all parts needed for that. Who plugs them together? And how?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Keeping the grip on decoupled code using CLIs&lt;/p&gt;
+&lt;p&gt;So you’ve decoupled your monolith spaghetti code into micro chunks. You’ve switched to infrastructure as code, and you’re confident that it scales horizontally. Your data pipelines are pretty resilient, your CI pipeline runs tests on every single git push.&lt;/p&gt;
+&lt;p&gt;And then, you get a new team member. Or your CTO wants to plot data of his brandnew sandbox project that isn’t integrated into your pipelines. Or someone just asks &amp;quot;How can I…&amp;quot; and you want to answer: &amp;quot;That’s easy! We’ve built that… – Well, actually, we’ve built all parts needed for that.&amp;quot; Who plugs them together? And how?&lt;/p&gt;
+&lt;p&gt;In my talk, I’d like to show how lightweight CLIs can be Ariadne Threads through the labyrinth of micro components. How at Babbel we use conda, setuptools entrypoints and simple CLI scripts to keep the grip on our data platform code chunks&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="pydata"></category><category term="devops"></category><category term="cli"></category><category term="python"></category></entry><entry><title>No Compromise: Use Ansible properly or stick to your scripts</title><link href="https://pyvideo.org/pycon-de-2017/no-compromise-use-ansible-properly-or-stick-to-your-scripts.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Björn Meier</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/no-compromise-use-ansible-properly-or-stick-to-your-scripts.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Bjoern Meier&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bjoern is a software engineer at Blue Yonder GmbH since 2016 after graduating in Computer Science. More correctly you could say he is a DevOps engineer at Blue Yonder where he is developing and operating - among other things - the services for the external data interfaces, preprocessing and data storage to enable the data scientists to run their prediction models. He loves the versatility and ecosystem of python to write e.g. production web apps, data analysis tools or operational scripts. If there was more free time he would like to spent it to dive deeper into functional programming languages like elixir to have a different view on things.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What you do in Ansible should be clean an simple. What we did was not. So I will show what we did wrong but also what we have changed or still have to, to make our life easier again. But I will also show how we progressively utilize Ansible to deploy our Data Science infrastructure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ansible should help you to orchestrate your systems, automate the deployments and set up well defined infrastructures. But if you want to make something work quickly in Ansible the chances are high that you fall back to shell/command tasks, the mother of all evil. Those tasks usually prevent you from running dry runs where you would see the upcoming changes and you prevent Ansible to shine. So, we went blindly into every deployment and hoped the best. But we wanted to see what would change, we wanted to make ansible --check work again and therefore in this talk I will show you what we did wrong and what we changed to get there.&lt;/p&gt;
+&lt;p&gt;More precisely, I will show what you can do to replace the nasty shell tasks with proper modules, plugins and filters, how they are developed, tested and included in your project.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="infrasturcture"></category><category term="business"></category><category term="devops"></category><category term="ansible"></category></entry><entry><title>Python with Apache OpenWhisk</title><link href="https://pyvideo.org/pycon-de-2017/python-with-apache-openwhisk.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Ansgar Schmidt</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/python-with-apache-openwhisk.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Ansgar Schmidt&lt;/strong&gt; (&amp;#64;ansi)&lt;/p&gt;
+&lt;p&gt;I am a full time nerd. Really thrilled by technology and love to make and hack. From PCB design, soldering, embedded development to server- backend hacking. Beside way to many small projects I work on a mobile robot based on ROS and try to add human interaction to it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;OpenWhisk is an opensource implementation of a so called serverless computing platform. At a live presentation I will show how to write an serverless application and how to deal with libraries and events. OpenWhisk is an open source alternative to AWS lambda or MS functions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Hi, I am a developer advocate working for IBM. Meaning I am a technician and geek not a salesman. In my talk I will give a live demo on how to use the open source implementation of a serverless compute platform called OpenWhisk and help python developers on how to use it and write serverless applications.&lt;/p&gt;
+</summary><category term="devops"></category><category term="use-case"></category><category term="python"></category><category term="web"></category><category term="business"></category></entry><entry><title>Sport analysis with Python</title><link href="https://pyvideo.org/pycon-de-2017/sport-analysis-with-python.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Thuy Le</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/sport-analysis-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Give an example data of the IoT sport case for instance the information of football match of a team (the positions, velocities of each player with are recorded in every 20 millisecond).&lt;/li&gt;
+&lt;li&gt;We use Python to analysis and processing data (calculate the match time, analyst the activities of each player such as time in the bench, time in the pitch, ... )&lt;/li&gt;
+&lt;li&gt;We use Tableau to visualize data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="devops"></category><category term="analytics"></category><category term="data-science"></category><category term="python"></category></entry><entry><title>Infrastructure as Code with Terraform</title><link href="https://pyvideo.org/pycon-italia-2017/infrastructure-as-code-with-terraform.html" rel="alternate"></link><published>2017-04-08T00:00:00+00:00</published><updated>2017-04-08T00:00:00+00:00</updated><author><name>Justyna Janczyszyn</name></author><id>tag:pyvideo.org,2017-04-08:pycon-italia-2017/infrastructure-as-code-with-terraform.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;what is infrastructure as code&lt;/li&gt;
+&lt;li&gt;best practices&lt;/li&gt;
+&lt;li&gt;benefits&lt;/li&gt;
+&lt;li&gt;introduction to terraform&lt;/li&gt;
+&lt;li&gt;practical demo for a sample flask application&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/tramwaj29/iac-with-terraform"&gt;https://github.com/tramwaj29/iac-with-terraform&lt;/a&gt;&lt;/p&gt;
+</summary><category term="infrastructure"></category><category term="devops"></category><category term="provisioning"></category><category term="terraform"></category><category term="deployment"></category><category term="infrastructure-as-code"></category></entry><entry><title>Taking care of PostgreSQL with Ansible</title><link href="https://pyvideo.org/pycon-italia-2017/taking-care-of-postgresql-with-ansible.html" rel="alternate"></link><published>2017-04-08T00:00:00+00:00</published><updated>2017-04-08T00:00:00+00:00</updated><author><name>Rubens Souza</name></author><id>tag:pyvideo.org,2017-04-08:pycon-italia-2017/taking-care-of-postgresql-with-ansible.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Ansible&lt;/strong&gt; is a powerful automation tool written in &lt;strong&gt;Python&lt;/strong&gt;. With
+its modules already built for &lt;strong&gt;PostgreSQL&lt;/strong&gt;, we can easily manage the
+most advanced open source database, making sure the configuration is
+exact in every detail and repeatable as many times as it is needed. In
+this talk we will understand how &lt;strong&gt;Ansible&lt;/strong&gt; works, see some of its main
+modules for system/cloud administration, and learn how it can be used to
+orchestrate &lt;strong&gt;PostgreSQL&lt;/strong&gt; deployments, managing all parts of the
+process at ease. A &lt;strong&gt;PostgreSQL&lt;/strong&gt; test environment configuration, using
+&lt;strong&gt;Ansible&lt;/strong&gt; and &lt;strong&gt;Vagrant&lt;/strong&gt;, will be shown as an example.&lt;/p&gt;
+</summary><category term="postgresql"></category><category term="database"></category><category term="devops"></category><category term="automation"></category><category term="ansible"></category></entry><entry><title>Deploy automatizzato di un progetto Python 3/Django con Ansible</title><link href="https://pyvideo.org/pycon-italia-2017/deploy-automatizzato-di-un-progetto-python-3django-con-ansible.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Marco Santamaria</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/deploy-automatizzato-di-un-progetto-python-3django-con-ansible.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La mia applicazione è pronta e funziona senza problemi sulla mia
+macchina con il server di sviluppo, ma non ho chiaro come portarla in un
+ambiente di produzione. Ci sono parecchi servizi che permettono il
+deploy con un solo click, adatti soprattutto a semplici siti, ma essi
+non sono pienamente configurabili e nascondono il modo in cui il server
+è effettivamente organizzato. Anche se molti usano ingegnose soluzioni
+PaaS, vale ancora la pena capire come costruire da zero un ambiente di
+produzione con Linux, Python 3, Django e uWSGI. Nel talk questo classico
+stack verrà brevemente introdotto e si mostrerà poi come automatizzare
+la configurazione e la procedura di deploy con un &lt;a class="reference external" href="https://github.com/marco-santamaria/django-%20ansible-deploy"&gt;playbook
+Ansible&lt;/a&gt;
+che verrà messo a disposizione. Una particolare enfasi verrà data
+all’uso di variabili d’ambiente per la configurazione del progetto
+seguendo l’approccio delle twelve-factor-app. Inoltre verranno spiegati
+i concetti più importanti di Ansible (playbook, ruoli, template, moduli,
+inventari).&lt;/p&gt;
+</summary><category term="deploy"></category><category term="devops"></category><category term="automation"></category><category term="nginx"></category><category term="ansible"></category><category term="best-practices"></category><category term="django"></category><category term="uwsgi"></category></entry><entry><title>Scaling up to Big Data Devops for Data Science</title><link href="https://pyvideo.org/pydata-dc-2016/scaling-up-to-big-data-devops-for-data-science.html" rel="alternate"></link><published>2016-10-08T00:00:00+00:00</published><updated>2016-10-08T00:00:00+00:00</updated><author><name>Marck Vaisman</name></author><id>tag:pyvideo.org,2016-10-08:pydata-dc-2016/scaling-up-to-big-data-devops-for-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;Scaling up R/Python from a single machine to a cluster environment can be tricky. While there are many tools available that make the launching of a cluster relatively easy, they are not focused or optimized to the specific use case of analytics but mostly on operations. Come and learn about devops tips and tricks to optimize your transition into the big data world as a data scientist.&lt;/p&gt;
+</summary><category term="big data"></category><category term="Data"></category><category term="data science"></category><category term="devops"></category><category term="scaling"></category><category term="science"></category></entry><entry><title>Getting started with chatops in python with errbot</title><link href="https://pyvideo.org/pycon-israel-2016/getting-started-with-chatops-in-python-with-errbot.html" rel="alternate"></link><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><author><name>Guillaume Binet</name></author><id>tag:pyvideo.org,2016-09-20:pycon-israel-2016/getting-started-with-chatops-in-python-with-errbot.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ChatOps is about bringing your devops tools into your team chatroom. The recent rise of professional chatting services like Slack or Hipchat shows that people are embracing a new way of collaborating. Bringing your tools within those conversations tightens the feedback loop, improves information sharing and onboarding new people in your team. Some common operations implemented with chatops includes deployments, provisioning, monitoring, graphs, development tracking... Those are often implemented with the help of a chat bot like in this presentation Errbot. If your chatops system can be easily extended, for example here in Python, we will see that a team culture can crystallize around it with fun additions. This presentation's goal is to show you how easy it is to get started with chatops in Python, with some technical tips (installation, security, architecture...) but also some social tips to make your company understand better its potential for your team.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://il.pycon.org/2016/static/sessions/guillaume-binet.pdf"&gt;http://il.pycon.org/2016/static/sessions/guillaume-binet.pdf&lt;/a&gt;&lt;/p&gt;
+</summary><category term="errbot"></category><category term="chatops"></category><category term="devops"></category></entry><entry><title>Building a Production Quality Project in Python</title><link href="https://pyvideo.org/pytexas-2015/building-a-production-quality-project-in-python.html" rel="alternate"></link><published>2015-10-09T00:00:00+00:00</published><updated>2015-10-09T00:00:00+00:00</updated><author><name>Clifton Houck</name></author><id>tag:pyvideo.org,2015-10-09:pytexas-2015/building-a-production-quality-project-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This presentation focuses on a variety of tools which can help Python
+developers rapidly create production worthy projects by drawing on my
+own experience in creating and deploying a Python project called Arsenal
+at Rackspace in the space of a few months.&lt;/p&gt;
+&lt;p&gt;Arsenal is an open-source service designed to manage and direct a cache
+of operating system images on bare-metal nodes. The goal being to
+drastically reduce the time it takes to provision a node for
+end-users/customers of a bare-metal cloud.&lt;/p&gt;
+&lt;p&gt;Links to information about arsenal:
+&lt;a class="reference external" href="https://github.com/rackerlabs/arsenal"&gt;https://github.com/rackerlabs/arsenal&lt;/a&gt;
+&lt;a class="reference external" href="https://arsenal.readthedocs.org/en/latest/"&gt;https://arsenal.readthedocs.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="deployment"></category><category term="devops"></category></entry><entry><title>A Common Scientific Compute Environment for Research and Education</title><link href="https://pyvideo.org/scipy-2014/a-common-scientific-compute-environment-for-resea.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Dav Clark</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/a-common-scientific-compute-environment-for-resea.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;I provide an overview of the challenges we’ve tackled at UC Berkeley
+deploying scientific compute environments in both educational and
+research contexts. After a discussion of how these needs can be served
+by devops tools like Docker and Ansible, I argue that a coherent,
+easy-to-understand philosophy around reproducible compute environments
+is fundamental.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As the line between developer and researcher becomes ever more blurred,
+the challenge of sharing your compute environment with students and
+colleagues becomes ever more complex. Large, private organizations have
+been grappling with this issue for a while, spawning a great deal of
+enthusiasm around tools like Docker, Puppet, Vagrant, and Packer. And
+let’s not forget notable python-based upstarts, Ansible and Salt! These
+tools can generate immense enthusiasm, followed by the question, “Why
+are we doing this?”&lt;/p&gt;
+&lt;p&gt;The problem is that researcher / developers can become overwhelmed by
+the complexity and variety inherent in devops tools - all the while
+losing sight of the real reason for using these tools: a philosophy of
+documenting your research compute environments in a reproducible
+fashion, with a focus on scripting as much as is reasonable.&lt;/p&gt;
+&lt;p&gt;At UC Berkeley, members of the D-Lab, the Statistical Compute Facility,
+Computer Science and Research IT have organized a project to develop the
+Berkeley Common Environment (BCE). I’ll provide an overview of the
+challenges we’ve tackled in both educational and research contexts, and
+the needs served by the above-mentioned devops tools. In the end, I
+argue that a coherent, easy-to-understand philosophy around scientific
+compute environments is fundamental - the tools are just a way to make
+your collaboration architecture a little easier for the people building
+these environments a few times a year. What we should focus on, though,
+is end-user experience and research community buy-in.&lt;/p&gt;
+</summary><category term="devops"></category><category term="reproducible research"></category></entry><entry><title>Practical DevOps</title><link href="https://pyvideo.org/pycon-de-2012/practical-devops.html" rel="alternate"></link><published>2012-10-31T00:00:00+00:00</published><updated>2012-10-31T00:00:00+00:00</updated><author><name>Schlomo Schapiro</name></author><id>tag:pyvideo.org,2012-10-31:pycon-de-2012/practical-devops.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;DevOps ist eine aktuelle Bewegung in der IT, die sich zur Aufgabe macht,
+ein Umdenken in den klassischen Lagern Entwicklung und Betrieb
+einzuleiten. Der Vortrag wirft einen Blick auf die noch junge Bewegung
+und zeigt mit Geschichten aus dem wahren Leben, wie sich die agile
+Denkweise fortschreiben lässt, die mit SCRUM ins allgemeine Bewusstsein
+getreten ist.&lt;/p&gt;
+&lt;p&gt;Schlomo gibt einen Überblick über das Thema und berichtet über die
+DevOps Erfolge bei der
+&lt;a class="reference external" href="http://www.immobilienscout24.de"&gt;ImmobilienScout24&lt;/a&gt;. Nach 2 Jahren
+agilem Umdenken in der Entwicklung zeigte sich, dass die klassische
+Gewaltenteilung Plan - Build - Run einfach nicht mehr gut funktioniert
+weil sich die Anforderungen und Erwartungen sowohl in der Entwicklung
+als auch im Betrieb ändern und daher auch eine neue Form der
+Zusammenarbeit nahe legen.&lt;/p&gt;
+&lt;p&gt;Die Ideen aus der DevOps Bewegung lassen sich fast überall einsetzen, wo
+bisher ein &amp;quot;über den Zaun werfen&amp;quot; gespielt wird und haben das primäre
+Ziel, alle Beteiligten gemeinsam an einem Strang ziehen zu lassen. Mit
+den Ideen und Erfahrungen aus dem Vortrag lassen sich sicher die ersten
+Schritte in die richtige Richtung einleiten.&lt;/p&gt;
+</summary><category term="agile"></category><category term="devops"></category><category term="kanban"></category><category term="open source"></category><category term="python"></category><category term="scrum"></category><category term="web"></category></entry></feed>

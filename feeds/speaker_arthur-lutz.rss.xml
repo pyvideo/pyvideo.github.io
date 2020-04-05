@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 02 Nov 2019 00:00:00 +0000</lastBuildDate><item><title>TDID − « Test Driven Infrastructure Developpement » avec Salt, GitLab, Kitchen et Testinfra</title><link>https://pyvideo.org/pycon-fr-2019/tdid-test-driven-infrastructure-developpement-avec-salt-gitlab-kitchen-et-testinfra.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Déployer une infrastructure avec SaltStack avec l'assurance qualité assurée dans Gitlab avec des linters, et des tests en machine virtuelle avec Kitchen et testinfra.&lt;/p&gt;
+&lt;p&gt;Pour une infrastructure complexe géré en infrastructure-as-code avec SaltStack, comment nous avons mis en place de l'assurance qualité, des tests pour faciliter l'intégration de modifications, ainsi que l'assurance que la description de l'infrastructure peux s'appliquer. Retour d’expérience de travaux effectué avec un hébergeur utilisant Salt pour sa gestion d'infrastructure et ses déploiements.&lt;/p&gt;
+&lt;p&gt;Composants exposés :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;saltstack  pour décrire son infrastructure&lt;/li&gt;
+&lt;li&gt;salt-formulas pour un déploiement de services avec du code mutualisé&lt;/li&gt;
+&lt;li&gt;yamllint pour tester la syntaxe et les conventions du yaml&lt;/li&gt;
+&lt;li&gt;flake8 pour le code python (pep8 compliance)&lt;/li&gt;
+&lt;li&gt;pytest pour tester certains templates jinja&lt;/li&gt;
+&lt;li&gt;doc8 pour tester la documentation d'infrastructure&lt;/li&gt;
+&lt;li&gt;tox pour lancer les tests dans des environnements reproductibles&lt;/li&gt;
+&lt;li&gt;kitchen (ruby) pour piloter le cycle de test (création machine virtuelle, application de l'état désiré, lancement des tests, destruction de la machine virtuelle)&lt;/li&gt;
+&lt;li&gt;testinfra pour écrire des tests d'infrastructure en python&lt;/li&gt;
+&lt;li&gt;gitlab pour lancer l'ensemble en intégration continue&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Arthur Lutz</dc:creator><pubDate>Sat, 02 Nov 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-11-02:pycon-fr-2019/tdid-test-driven-infrastructure-developpement-avec-salt-gitlab-kitchen-et-testinfra.html</guid></item><item><title>Python tooling for continuous deployment</title><link>https://pyvideo.org/pyparis-2018/python-tooling-for-continuous-deployment.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Arthur Lutz</dc:creator><pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-11-14:pyparis-2018/python-tooling-for-continuous-deployment.html</guid></item><item><title>Déployer des applications python dans un cluster openshift</title><link>https://pyvideo.org/pycon-fr-2018/deployer-des-applications-python-dans-un-cluster-openshift.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Quelles sont les particularités et les avantages pour pouvoir livrer des
+applications web python dans un cluster OpenShift (qui a du Kubernetes
+en dessous).&lt;/p&gt;
+&lt;p&gt;Nous verrons les mécanismes suivants :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;s2image (source to image Docker) dans openshift : comment construire
+l'application simplement avec un requirements.txt et du WSGI&lt;/li&gt;
+&lt;li&gt;Comment livrer du django avec Postgresql&lt;/li&gt;
+&lt;li&gt;Comment livrer une application CubicWeb&lt;/li&gt;
+&lt;li&gt;Les mécanismes de sécurités associés&lt;/li&gt;
+&lt;li&gt;Les URL automatiques pour tester des contributions ou des branches
+nommées&lt;/li&gt;
+&lt;li&gt;Parallèles avec repo2docker de l’écosystème jupyter
+&lt;a class="reference external" href="https://github.com/jupyter/repo2docker"&gt;https://github.com/jupyter/repo2docker&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nous exposerons aussi les avantages et inconvénients de déployer des
+applications web python sur un cluster type openshift ou kubernetes.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.openshift.org/"&gt;https://www.openshift.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://kubernetes.io/"&gt;https://kubernetes.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/openshift/source-to-image"&gt;https://github.com/openshift/source-to-image&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Arthur Lutz</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:pycon-fr-2018/deployer-des-applications-python-dans-un-cluster-openshift.html</guid></item><item><title>Faire de la domotique libriste avec Python</title><link>https://pyvideo.org/pycon-fr-2018/faire-de-la-domotique-libriste-avec-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Comment faire de la domotique avec des outils libres auto-hébergés et en
+partie avec du python.&lt;/p&gt;
+&lt;p&gt;Avec un retour d'experience sur les outils suivants :&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;home-assistant.io&lt;/li&gt;
+&lt;li&gt;graphite-api&lt;/li&gt;
+&lt;li&gt;micropython&lt;/li&gt;
+&lt;li&gt;wipy&lt;/li&gt;
+&lt;li&gt;et d'autres trucs pas python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Arthur Lutz</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:pycon-fr-2018/faire-de-la-domotique-libriste-avec-python.html</guid></item><item><title>Marre de faire du C++ sur une Arduino ? Faites du Python avec MicroPython sur une PyBoard</title><link>https://pyvideo.org/pycon-fr-2015/marre-de-faire-du-c-sur-une-arduino-faites-du-python-avec-micropython-sur-une-pyboard.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Introduction et démo de MicroPython sur une PyBoard.&lt;/p&gt;
+&lt;p&gt;MicroPython est une implémentation de Python3.4 pour microcontrôleurs
+(principalement la PyBoard carte en OpenHardware).&lt;/p&gt;
+&lt;p&gt;Venez faire clignoter des LEDs et bouger des moteurs directement depuis
+le prompt python !&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Présentation de l'historique du projet&lt;/p&gt;
+&lt;p&gt;Détails de l'architecture matérielle&lt;/p&gt;
+&lt;p&gt;Démonstrations sur une carte&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Arthur Lutz</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-18:pycon-fr-2015/marre-de-faire-du-c-sur-une-arduino-faites-du-python-avec-micropython-sur-une-pyboard.html</guid></item></channel></rss>

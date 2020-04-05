@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_richard-m-murray.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-07-19T00:00:00+00:00</updated><entry><title>TuLiP: a toolbox for hybrid and reactive systems research</title><link href="https://pyvideo.org/scipy-2012/tulip-a-toolbox-for-hybrid-and-reactive-systems.html" rel="alternate"></link><published>2012-07-19T00:00:00+00:00</published><updated>2012-07-19T00:00:00+00:00</updated><author><name>Richard M. Murray</name></author><id>tag:pyvideo.org,2012-07-19:scipy-2012/tulip-a-toolbox-for-hybrid-and-reactive-systems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We present a toolbox for the creation and study of controllers for
+hybrid systems. It contains modules for&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;working with n-dimensional polytopes,&lt;/li&gt;
+&lt;li&gt;refining continuous state space partitions to satisfy
+reachability properties,&lt;/li&gt;
+&lt;li&gt;synthesizing, manipulating, and visualizing finite automata as
+winning strategies for a class of temporal logic-based games,&lt;/li&gt;
+&lt;li&gt;simulating hybrid executions, and&lt;/li&gt;
+&lt;li&gt;reading and writing problem solutions to an XML format.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The toolbox is named TuLiP (for &amp;quot;Temporal Logic Planning&amp;quot;) and written
+almost entirely in Python, making critical use of NumPy, SciPy, CVXOPT,
+and matplotlib. While software for hybrid systems research is commonly
+written in Matlab scripts or otherwise requires the end-user to build
+from source for her particular platform, TuLiP requires neither. For a
+standard scientific Python environment, the only additional library may
+be CVXOPT. Code (re)use and experimentation are easy, and because of
+this, TuLiP has provided a natural basis for further research and
+development.&lt;/p&gt;
+&lt;p&gt;Source code and documentation are currently available at &lt;a class="reference external" href="http://tulip-control.sourceforge.net"&gt;http://tulip-
+control.sourceforge.net&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this talk we will describe the problem domain addressed by TuLiP,
+various use cases, and lessons learning in the Python implementation. We
+shall include a full example making use of all components and show ways
+that individual modules are useful more broadly. Major items of the talk
+will be&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;related work, and the paucity of Python use in hybrid control
+research, which we argue is a matter of inheritance rather than
+best practices;&lt;/li&gt;
+&lt;li&gt;overview of the type of hybrid systems represented in TuLiP and
+relevance to other fields;&lt;/li&gt;
+&lt;li&gt;summary of the major steps going from problem statement to
+solution;&lt;/li&gt;
+&lt;li&gt;using only the &amp;quot;polytope computations&amp;quot; module;&lt;/li&gt;
+&lt;li&gt;using only &amp;quot;discrete reactive synthesis&amp;quot; related modules, with a
+brief description about temporal logic synthesis to provide
+background for those not working on computer aided verification;&lt;/li&gt;
+&lt;li&gt;snippets about recent research using and building on TuLiP; and&lt;/li&gt;
+&lt;li&gt;discussion about the Python-based implementation and lessons
+learned.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For the last item, we will describe challenges faced while developing
+TuLiP, given its role of &amp;quot;stitching together&amp;quot; several external tools,
+e.g., Gephi &amp;lt;&lt;a class="reference external" href="http://gephi.org/"&gt;http://gephi.org/&lt;/a&gt;&amp;gt; for large graph visualization and gr1c
+&amp;lt;&lt;a class="reference external" href="http://scottman.net/2012/gr1c"&gt;http://scottman.net/2012/gr1c&lt;/a&gt;&amp;gt; for game solving. We will also touch
+on liberation from a Matlab-only tool (Mult- Parametric Toolbox; see
+&lt;a class="reference external" href="http://control.ee.ethz.ch/~mpt/"&gt;http://control.ee.ethz.ch/~mpt/&lt;/a&gt;), achieved by creating our own Python
+module for working with polytopes, using NumPy and CVXOPT for
+computations and matplotlib for visualization.&lt;/p&gt;
+&lt;p&gt;A tool paper describing an earlier version of TuLiP was presented at the
+conference Hybrid Systems: Computation and Control (HSCC) in April 2011.
+There have since been substantial additions and improvements.
+Furthermore, a broader audience can be reached at SciPy 2012, with new
+opportunity to address designs issues likely shared by other scientific
+Python developers.&lt;/p&gt;
+&lt;p&gt;Development of TuLiP has been supported in part by the AFOSR through the
+MURI program, the Multiscale Systems Center (MuSyC) and the Boeing
+Company.&lt;/p&gt;
+</summary><category term="General"></category></entry></feed>

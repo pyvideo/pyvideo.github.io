@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate><item><title>Untitled12.ipynb</title><link>https://pyvideo.org/pydata-eindhoven-2019/untitled12ipynb.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks are great but they're causing bad habits. This talk will be a
+live coding exercise where we clean up some pandas code such that it
+behaves like lego. The goal is to uncover a great pattern for pandas
+that will prevent loads of scrolling.&lt;/p&gt;
+&lt;p&gt;These are the main habits I'll address;&lt;/p&gt;
+&lt;p&gt;how to construct pandas pipelines how to construct stateless ETL how to
+create proper decorators how to make your system debugable how to write
+pandas such that it is immediately ready for prod&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/untitled12ipynb.html</guid></item><item><title>Winning with Simple, even Linear, Models</title><link>https://pyvideo.org/pydata-london-2018/winning-with-simple-even-linear-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Simple models work. Linear models work. No need for deep learning or
+complex ensembles, you can often keep it simple. In this talk I'll
+discuss and demonstrate some winning tricks that you can apply on
+simple, even linear models.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-28:pydata-london-2018/winning-with-simple-even-linear-models.html</guid></item><item><title>TNaaS - Tech Names as a Service</title><link>https://pyvideo.org/pydata-berlin-2017/tnaas-tech-names-as-a-service.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will explain how I built a service that generates Pokemon names. You'd be surprised how hard it is to do this properly and how easy it is to do it practically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;TNaaS - Tech Names as a Service Deploying a Random Generator that's Phonetically Pokemon&lt;/p&gt;
+&lt;p&gt;There is a striking phonetic similarity between big data technology and pokemon names. This has caused some hilarious conversations with recruiters on linkedin: &lt;a class="reference external" href="https://www.linkedin.com/in/vincentwarmerdam/"&gt;https://www.linkedin.com/in/vincentwarmerdam/&lt;/a&gt; but it also made me wonder. Can I create a service that generates strings that sound like potential pokemon names and what might be the simplest possible way to make that into a service? Also, would it be possible to generate pokemon names that start with three random characters and end with 'base' (KREBASE, MONBASE would be appropriate but IEYBASE would not be).&lt;/p&gt;
+&lt;p&gt;Turns out that this is an interesting problem from a ML standpoint and that it is rediculously easy to build in the cloud. In my talk I will explain the ML behind it;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;markov chains&lt;/li&gt;
+&lt;li&gt;probibalistic graphs&lt;/li&gt;
+&lt;li&gt;rnn/lstm&lt;/li&gt;
+&lt;li&gt;bidirectional lstm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During the talk I will also do a deep dive on the pros and cons of these methods.&lt;/p&gt;
+&lt;p&gt;I currently have a 101 version of the service live here: &lt;a class="reference external" href="https://dyccxmwpz9.execute-api.eu-west-1.amazonaws.com/pokemon/poke-names/v2"&gt;https://dyccxmwpz9.execute-api.eu-west-1.amazonaws.com/pokemon/poke-names/v2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By the time of the conference it will have a proper front end and I have already bought the domain name of tnaas.com.&lt;/p&gt;
+&lt;p&gt;I've talked about a similar topic in the past: &lt;a class="reference external" href="https://youtu.be/TkHT3sLwtkY?t=22m10s"&gt;https://youtu.be/TkHT3sLwtkY?t=22m10s&lt;/a&gt;. The goal of this talk is to spend more time explaining how I actually built the service; both from a coding perspective as well as a deployment perspective.&lt;/p&gt;
+&lt;p&gt;Let me know if there are any questions. I am submitting multiple talks that I think are interesting and relevant to the PyData crowd, I'll gladly leave it to the committee which (or if any) of them are relevant to the local community.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-06-30:pydata-berlin-2017/tnaas-tech-names-as-a-service.html</guid></item><item><title>SaaaS - Sampling as an Algorithm Service</title><link>https://pyvideo.org/pydata-london-2017/saaas-sampling-as-an-algorithm-service.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Description
+In this talk I will explain the idea of sampling to get to your model and I will demonstrate it with examples. The goal is to start with a for loop and to end with understanding how MCMC algorithms work.&lt;/p&gt;
+&lt;p&gt;Abstract
+A lot of people understand the scikit-learn models of todays world but feel uneasy about the whole MCMC method of training. Why are these algorithms different? How is it that you don't use a gradient method but a sampler instead? It can feel a bit misterious if you've not properly been introduced to this other way of thinking.&lt;/p&gt;
+&lt;p&gt;In this talk I will explain the idea of sampling to get to your model and I will demonstrate it with examples. The goal is to start with a for loop and to end with understanding how MCMC algorithms work. As a consequence the audience will also get a proper introduction to PyMC3. In particular I will discuss the following;&lt;/p&gt;
+&lt;p&gt;why markov chain sampling can be equivalent to direct sampling
+how to build your own MCMC sampler with a for loop
+how this for loop can be run faster by using PyMC3 instead
+the key idea of inference and how i was briefly able apply it in a santa kaggle competition
+how to analyse timeseries with MCMC in PyMC3
+Parts of this talk are readily available on my blog;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://koaning.io/switching-to-sampli"&gt;http://koaning.io/switching-to-sampli&lt;/a&gt;...
+&lt;a class="reference external" href="http://koaning.io/elimination-via-inf"&gt;http://koaning.io/elimination-via-inf&lt;/a&gt;...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-06:pydata-london-2017/saaas-sampling-as-an-algorithm-service.html</guid></item><item><title>The Duct Tape of Heroes Bayesian statistics</title><link>https://pyvideo.org/pydata-london-2016/vincent-d-warmerdam-the-duct-tape-of-heroes-bayesian-statistics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016&lt;/p&gt;
+&lt;p&gt;In this talk I will give many examples of when Bayes rule will help you in your day to day work. I'll quickly show many examples of bayesian statistical thinking in action; the pleasure of inference, probabilistic graphs, model selection, feature generation, even operations research! I'll finish with a dataset from Heroes of the Storm and I'll show why Bayesian models can outperform randomforests.&lt;/p&gt;
+&lt;p&gt;My talk is made up of the following examples;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;basic disease example: what is the value of adding an extra test to a patient&lt;/li&gt;
+&lt;li&gt;give an example of an inference task that is very hard to do properly without bayesian thinking&lt;/li&gt;
+&lt;li&gt;creating simple probibalistic models with pandas and showing how they are robust against missing data&lt;/li&gt;
+&lt;li&gt;demo the daft, corner and pomegrenate library&lt;/li&gt;
+&lt;li&gt;show how you can use bayes rule to pick models&lt;/li&gt;
+&lt;li&gt;demo a bayesian probablistic approach to finding overpowered characters in the Heroes of the Storm video game.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://koaning.io/theme/notebooks/bayes.pdf"&gt;http://koaning.io/theme/notebooks/bayes.pdf&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D  Warmerdam</dc:creator><pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-11:pydata-london-2016/vincent-d-warmerdam-the-duct-tape-of-heroes-bayesian-statistics.html</guid></item></channel></rss>

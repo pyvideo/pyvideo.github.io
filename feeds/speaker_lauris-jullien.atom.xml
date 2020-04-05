@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_lauris-jullien.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-24T00:00:00+00:00</updated><entry><title>Productionizing your ML code seamlessly</title><link href="https://pyvideo.org/pycon-de-2018/productionizing-your-ml-code-seamlessly.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Lauris Jullien</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/productionizing-your-ml-code-seamlessly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Data science and Machine Learning are hot topics right now for Software
+Engineers and beyond. There are a lot of python tools that allow you to
+hack together a notebook to quickly get insight on your data, or train a
+model to predict or classify. Or you might have inherited some data
+wrangling and modeling {Jupyter/Zeppelin} notebook code from someone
+else, like the resident data scientist.&lt;/p&gt;
+&lt;p&gt;The code works on test data, when you run the cells in the right order
+(skipping cell 22), and you believe that the insight gained from this
+work would be a valuable game changer. But now how do you take this
+experimental code into production, and keep it up-to-date with a regular
+retraining schedule? And what do you need to do after that, to ensure
+that it remains reliable and brings value in the long term?&lt;/p&gt;
+&lt;p&gt;These will be the questions this talk will answer, focusing on 2 main
+themes: What does running an ML model in production involve? How to
+improve your development workflow to make the path to production easier?&lt;/p&gt;
+&lt;p&gt;This talk will draw examples from real projects at Yelp, like migrating
+a pandas/sklearn classification project into production with pyspark,
+while aiming to give advice that is not dependent on specific
+frameworks, or tools, and is useful for listeners from all backgrounds.&lt;/p&gt;
+</summary><category term="Artificial Intelligence"></category><category term="Data Science"></category><category term="Machine Learning"></category></entry><entry><title>Productionizing your ML code seamlessly</title><link href="https://pyvideo.org/europython-2018/productionizing-your-ml-code-seamlessly.html" rel="alternate"></link><published>2018-07-27T00:00:00+00:00</published><updated>2018-07-27T00:00:00+00:00</updated><author><name>Lauris Jullien</name></author><id>tag:pyvideo.org,2018-07-27:europython-2018/productionizing-your-ml-code-seamlessly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Data science and Machine Learning are hot topics right now for Software
+Engineers and beyond. And there are a lot of python tools that allow you
+to hack together a notebook to quickly get insight on your data, or
+train a model to predict, or classify. Or you might have inherited some
+data wrangling and modeling {Jupyter/Zeppelin} notebook code from
+someone else, like the resident data scientist.&lt;/p&gt;
+&lt;p&gt;The code works on test data, when you run the cells in the right order
+(skipping cell 22), and you believe that the insight gained from this
+work would be a valuable game changer. But now how do you take this
+experimental code into production, and keep it up-to-date with a regular
+retraining schedule? And what do you need to do after that, to ensure
+that it remains reliable and brings value in the long term?&lt;/p&gt;
+&lt;p&gt;These will be the questions this talk will answer, focusing on 2 main
+themes: 1. What does running an ML model in production involve? 2. How
+to improve your development workflow to make the path to production
+easier?&lt;/p&gt;
+&lt;p&gt;This talk will draw examples from real projects at Yelp, like migrating
+a pandas/sklearn classification project into production with pyspark,
+while aiming to give advice that is not dependent on specific
+frameworks, or tools, and is useful for listeners from all backgrounds.&lt;/p&gt;
+</summary></entry><entry><title>Verified fakes with OpenAPI</title><link href="https://pyvideo.org/pycon-de-2017/verified-fakes-with-openapi.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Lauris Jullien</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/verified-fakes-with-openapi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Lauris Jullien&lt;/strong&gt; (&amp;#64;herrbot_DE)&lt;/p&gt;
+&lt;p&gt;I am a backend engineer &amp;#64;Yelp in Hamburg for 3 years. Before that I was working with robots &amp;#64;Aldebaran Robotics. And before that I was doing my own startup :) I like clean APIs, all you can do with data, and as a good French, wine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It can be hard to test code that depends on external services. Often such services are mocked, but with time, it can be challenging to keep these mocks up to date. Verified fakes can solve this problem, and we will see how to set them up using OpenAPI and python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When your code depends on an external (third-party) service, testing it can be challenging. It may be expensive, slow or unreliable to call that service in tests. A classic approach is to mock such service or its network calls. But then the challenge becomes keeping the mocks up to date with the third-party services. Using verified fakes allows us to replace a service while guaranteeing that it stays up to date. This can be achieved in different ways: using recent network recordings (e.g. vcrpy), running a test suite against the mock and the real service to compare the results, or relying on an API contract like OpenAPI, or avro.&lt;/p&gt;
+&lt;p&gt;OpenAPI* is a specification that documents how a service API works and enforces it by validating requests and responses for the service. We can then check the mocks against the OpenAPI specification to make sure they are up to date.&lt;/p&gt;
+&lt;p&gt;In this talk, I will explain how to set up such verified fakes with OpenAPI, and present a new open-source library, pyramid_mock_server. Here are the 3 main focuses:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Quick introduction on OpenAPI and how to use it with bravado, the python OpenAPI client&lt;/li&gt;
+&lt;li&gt;How to set up Verified Fakes: using pyramid_mock_server&lt;/li&gt;
+&lt;li&gt;Usage &amp;#64;Yelp: usage of fakes and OpenAPI for unit tests, acceptance tests, and documentation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk focuses on OpenAPI, but the learnings and methodology can be extended to any other API specification languages (or python web frameworks).&lt;/p&gt;
+&lt;p&gt;The OpenAPI initiative is a cross-vendor consortium focused on creating, evolving and promoting a vendor neutral description format for APIs. As an open governance structure under the Linux Foundation, its members include Google, IBM, Atlassian and PayPal.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="use-case"></category><category term="python"></category><category term="web"></category></entry><entry><title>Asynchronous network requests in a web application</title><link href="https://pyvideo.org/europython-2016/asynchronous-network-requests-in-a-web-application.html" rel="alternate"></link><published>2016-08-04T00:00:00+00:00</published><updated>2016-08-04T00:00:00+00:00</updated><author><name>Lauris Jullien</name></author><id>tag:pyvideo.org,2016-08-04:europython-2016/asynchronous-network-requests-in-a-web-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lauris Jullien - Asynchronous network requests in a web application
+[EuroPython 2016]
+[21 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/asynchronous-network-requests-in-a-web-application"&gt;https://ep2016.europython.eu//conference/talks/asynchronous-network-requests-in-a-web-application&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Introducing  asynchronous calls from within an endpoint in a web app
+can be desirable but hard to achieve.
+This talk will explore different solutions for this (running Twisted
+event loop, Co-Routines, Asyncio, …) and how well they play with the
+different parallelization models of common WSGI web servers.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;In the more and more popular SOA paradigm, it’s common for services to
+have to compose responses with resources from many different services.
+Everyone’s first idea will probably be to call each service
+synchronously with your favorite python HTTP library. This
+unfortunately doesn’t scale well and tens of successive network calls
+will make your endpoints painfully slow.&lt;/p&gt;
+&lt;p&gt;One solution is to parallelize these network calls. If you are already
+using an asynchronous web app (such as Tornado or Twisted), more
+asynchronous in your asynchronous shouldn’t be much of a challenge.
+But if you chose not to dive into the madness of chained Deferred
+calls, and used a standard prefork/threaded WSGI web server (such as
+Gunicorn or uWSGI) to run your Django/Flask/Pyramid application, you
+might find yourself wondering how to manage these asynchronous calls.&lt;/p&gt;
+&lt;p&gt;This talk will explore different solutions (running Twisted event
+loop, Co-Routines, Asyncio, …) and how well they play with the
+different parallelization models of WSGI web servers.&lt;/p&gt;
+</summary></entry></feed>

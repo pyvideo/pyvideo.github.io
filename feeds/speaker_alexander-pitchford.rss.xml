@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate><item><title>QuTiP: the quantum toolbox in Python as an ecosystem for quantum physics exploration and quantum information science</title><link>https://pyvideo.org/euroscipy-2019/qutip-the-quantum-toolbox-in-python-as-an-ecosystem-for-quantum-physics-exploration-and-quantum-information-science.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;QuTiP is emerging as a library at the center of a lively ecosystem. In
+this talk you will learn about the ongoing projects that have invested
+this project, from providing the framework to simulate quantum machine
+learning for quantum computers to the development of efficient numerical
+solvers tackling dynamical problems that are inherently hard to simulate
+classically.
+
+It can be noted that
+`Astropy &lt;https://www.astropy.org/affiliated/index.html&gt;`__ is a
+community effort to develop a common core package for Astronomy in
+Python and "foster an ecosystem of interoperable astronomy packages",
+
+It seems an interesting model for the quantum tech landscape.
+`Qiskit &lt;&gt;`__ did build its own ecosystem of sub-libraries for quantum
+computing. The physics library for quantum tech is http://qutip.org .
+
+About the idea of QuTiP as a super-library, here are some details:
+
+-  | ``krotov``, a very recent package for optimal control built on top
+     of QuTiP ( https://arxiv.org/abs/1902.11284).
+   | [https://github.com/qucontrol/krotov].
+
+-  ``piqs``, the permutational invariant quantum solver, now a QuTiP
+   module (see also https://arxiv.org/abs/1805.05129 );
+
+-  ``matsubara``, a plugin to study the ultrastrong coupling regime with
+   structured baths, http://matsubara.readthedocs.io/
+
+-  ``QNET``, a computer algebra package for quantum mechanics and
+   photonic quantum networks, which actually calls QuTiP as a plugin,
+   mainly developed at Stanford in Mabuchi Lab
+   https://github.com/mabuchilab/QNET
+
+-  ``qptomographer``,
+   https://qptomographer.readthedocs.io/en/latest/install, a library to
+   derive error bars for experiments in quantum computing and quantum
+   information processing.
+
+-  ``tiqs``, a library to study open quantum systems on extended
+   lattices exploiting the symmetries of such systems,
+   https://github.com/fminga/tiqs
+
+-  other upcoming integrations relative to pulse control, such as
+   ``qupulse``,
+   https://github.com/qutech/qupulse/wiki/Architecture-Proposal
+
+This talk will be of interest to the curious coder and researcher,
+analyzing how QuTiP's impact in the research community has fostered a
+`*lingua franca* for quantum tech
+research &lt;https://twitter.com/goerz/status/1118739088595652611&gt;`__. We
+will also draw comparisons with other larger ecosystems in Python-based
+scientific projects, such as astropy and scikit-learn.
+
+More about QuTiP
+================
+
+-  QuTiP is the open-source software to study quantum physics. It
+   develops both an intuitive playground to understand quantum mechanics
+   and cutting-edge tools to investigate it.
+-  QuTiP provides the most comprehensive toolbox to characterize noise
+   and dissipation –realistic processes– affecting quantum systems, as
+   well as tools not only to monitor but also to minimize their impact
+   (quantum optimal control, description of decoherence-free spaces).
+-  For this reason QuTiP is a software born out of the quantum optics
+   community and that has become increasingly relevant for the quantum
+   computing community, as current quantum computing devices are noisy
+   (NISQ definition by Preskill).
+-  ``pypinfo`` data shows that QuTiP is popular in countries that are
+   strong in quantum tech and quantum computing research, eg, The
+   Netherlands in the top five, as well as countries that benefit in the
+   use of open source software (OSS) for university coursework, eg,
+   India.
+-  In the past three years, there has been an evolution in the quantum
+   tech community, which has embraced OSS.
+-  OSS libraries are used as a means to grow the user base, as well as
+   in a more structural way for quantum computers, as they provide cloud
+   access to quantum devices, e.g., IBM Q.
+-  QuTiP is the only major library that has continued to thrive in this
+   ecosystem, competing with other library packages that are funded by
+   corporations or VC-backed startups/
+-  Since the tools of QuTiP provide a common ground to study quantum
+   mechanics, it is important that this independent project is provided
+   with the necessary support to thrive
+-  As access to quantum computers becomes more and more widespread also
+   for the use of data scientist and QuTiP's popularity grows even more
+   for undergraduate and graduate courses, becoming the de-facto
+   standard OSS to study quantum optical systems, it is imperative that
+   the QuTiP library makes a quality jump to provide a comprehensive
+   introduction to its tools for a much broader community of users.
+
+-  QuTiP website: http://www.qutip.org/
+
+-  GitHub repository: https://github.com/qutip
+-  GitHub repository (QuTiP code): https://github.com/qutip/qutip
+-  GitHub repository (QuTiP documentation):
+   https://github.com/qutip/qutip-doc
+-  GitHub repository (QuTiP tutorials):
+   https://github.com/qutip/qutip-notebooks
+-  | Latest version of the documetnation:
+   | http://qutip.org/docs/latest/index.html
+
+-  Historical archive of released documentation:
+   http://qutip.org/documentation.html
+
+QuTiP core development team
+---------------------------
+
+QuTiP core development team: (Alex Pitchford, alex.pitchford@gmail.com).
+Additional mentors will be the project's core contributors Nathan
+Shammah (nathan.shammah@gmail.com), Shahnawaz Ahmed
+(shahnawaz.ahmed95@gmail.com) and Eric Giguere
+(eric.giguere@usherbrooke.ca).
+
+QuTiP is a project started by Robert J. Johansson and Paul Nation. Other
+core developers have been Arne Grimso, Chris Granade and over other 44
+contributors.
+
+References
+----------
+
+[1] J. R. Johansson, P. D. Nation, and F. Nori: “QuTiP: An open-source
+Python framework for the dynamics of open quantum systems.”, Comp. Phys.
+Comm. 183, 1760–1772 (2012)
+
+[2] J. Robert Johansson, Paul D. Nation, and Franco Nori: “QuTiP 2: A
+Python framework for the dynamics of open quantum systems.”, Comp. Phys.
+Comm. 184, 1234 (2013)
+
+[3] J. Preskill, "Quantum Computing in the NISQ era and beyond." Quantum
+**2** , 79 (2018)
+
+[4] Mark Fingerhuth, Tomáš Babej, and Peter Wittek, Open source software
+in quantum computing, PLoS ONE 13 (12): e0208561 (2018).
+
+[5] N. Shammah, S. Ahmed, N. Lambert, S. De Liberato, and F. Nori, "Open
+quantum systems with local and collective incoherent processes:
+Efficient numerical simulation using permutational invariance " Phys.
+Rev. A 98, 063815 (2018). Code at http://piqs.readthedocs.io
+
+[6] N. Lambert, S. Ahmed, M. Cirio, and F. Nori, "Virtual excitations in
+the ultra-strongly-coupled spin-boson model: physical results from
+unphysical modes", arXiv preprint arXiv:1903.05892. Also
+http://matsubara.readthedocs.io
+
+**Other relevant material** :
+
+-  Slides on QuTiP and the quantum-tech open source ecosystem (Nathan
+   Shammah @ Berkeley Lab, 2019).
+   `PDF &lt;https://conferences.lbl.gov/event/195/session/6/contribution/13/material/slides/0.pdf&gt;`__
+
+-  `"The rise of open source in quantum physics
+   research" &lt;http://blogs.nature.com/onyourwavelength/2019/01/09/the-rise-of-open-source-in-quantum-physics-research/&gt;`__,
+   Nathan Shammah and Shahnawaz Ahmed, Nature's physics blog, January 9,
+   2019.
+
+-  "Bit to QuBit: Data in the age of quantum computers", Shahnawaz
+   Ahmed, PyData 2018, Warsaw, Poland, 2019. `YouTube
+   video &lt;https://www.youtube.com/watch?v=6GAXJhL1mSs&gt;`__.
+
+In this talk you will learn how QuTiP, the quantum toolbox in Python
+(http://qutip.org), has emerged from a library to an *ecosystem*. QuTiP
+is used for education, to teach quantum physics. In research and
+industry, for quantum computing simulation.
+&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nathan Shammah</dc:creator><pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-09-04:euroscipy-2019/qutip-the-quantum-toolbox-in-python-as-an-ecosystem-for-quantum-physics-exploration-and-quantum-information-science.html</guid></item></channel></rss>

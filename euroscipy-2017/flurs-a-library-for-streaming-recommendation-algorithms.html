@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; FluRS - A Library for Streaming Recommendation Algorithms</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_euroscipy-2017.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_euroscipy-2017.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="FluRS - A Library for Streaming Recommendation Algorithms" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/euroscipy-2017/flurs-a-library-for-streaming-recommendation-algorithms.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/nARfsX63nDc/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/nARfsX63nDc/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/euroscipy-2017/flurs-a-library-for-streaming-recommendation-algorithms.html" rel="bookmark"
+         title="Permalink to FluRS - A Library for Streaming Recommendation Algorithms">FluRS - A Library for Streaming Recommendation Algorithms
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2017-08-31T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 31 August 2017
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/takuya-kitazawa.html">Takuya Kitazawa</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/nARfsX63nDc" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><div class="section" id="overview">
+<h4>Overview</h4>
+<p><a class="reference external" href="https://github.com/takuti/flurs">FluRS</a> is a Python library for streaming recommendation algorithms
+which enables you to efficiently and flexibly build a recommendation
+model from complex user-item data. By focusing around the library, this
+talk discusses each aspect of <strong>past</strong>, <strong>present</strong> and <strong>future</strong> as
+follows:</p>
+<ul class="simple">
+<li><strong>Past</strong>: Challenges in classical recommendation engines (with their
+Python implementation),</li>
+<li><strong>Present</strong>: How the speaker designed and implemented new kinds of
+recommendation algorithms as the Python library,</li>
+<li><strong>Future</strong>: The feasibility of fast, real-time recommendation at
+scale with or without FluRS.</li>
+</ul>
+<p>Note that, in order to learn the basic concept underlying the FluRS
+library, you can refer to the following article: <a class="reference external" href="https://takuti.me/note/flurs/">FluRS: A Python
+Library for Online Item Recommendation</a>. In short, implementation of
+FluRS takes advantage of the dependency injection technique, and
+developers do not need to worry much about recommender-specific code
+which commonly appears regardless of algorithm.</p>
+</div>
+<div class="section" id="target">
+<h4>Target</h4>
+<p>This talk is designed for people who have fundamental knowledge of
+machine learning (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">matrix computations</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Gradient_descent">gradient descent</a>,
+<a class="reference external" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">cross validation</a>) and Python coding with the NumPy &amp; SciPy libraries;
+that is, audience does not have to be a professional machine learning
+researcher or Python developer. In particular, since the speaker
+explains the field of recommender systems from basics, people can enjoy
+without previous knowledge of recommendation techniques.</p>
+<p>Eventually, the speaker expects audiences to become able to teach their
+friends the basic of recommender systems and implement recommendation
+algorithms by themselves.</p>
+</div>
+<div class="section" id="background">
+<h4>Background</h4>
+<p>Recommendations nowadays play an important role in real-world
+applications such as e-commerce and social networking services in order
+to improve customers’ satisfaction, but the widely-developed systems
+pose a crucial challenge which cannot be properly handled by the
+classical techniques. More concretely, even though users’ interests and
+item properties change dynamically over time on modern systems, there is
+a lack of effective ways and empirical studies to catch up with the
+dynamic data.</p>
+<p>In that context, throughout his master’s program and experience in the
+industry, the speaker fully realized how building real-world recommender
+systems is difficult over the past years. Thus, he ultimately invented
+two novel recommendation techniques to tackle the challenging scenario,
+and published corresponding research papers:</p>
+<ul class="simple">
+<li><strong>Incremental Factorization Machines for Persistently Cold-starting
+Online Item Recommendation</strong> [<a class="reference external" href="https://arxiv.org/abs/1607.02858">Paper</a>] [<a class="reference external" href="https://speakerdeck.com/takuti/incremental-factorization-machines">Slides</a>] [<a class="reference external" href="https://github.com/takuti/stream-recommender/tree/v0.3.1-recprofile-2016">GitHub</a>]</li>
+<li><strong>Sketching Dynamic User-Item Interactions for Online Item
+Recommendation</strong> [<a class="reference external" href="http://dl.acm.org/citation.cfm?id=3022152">Paper.</a>] [<a class="reference external" href="https://takuti.me/docs/chiir-2017-poster.pdf">Poster.</a>] [<a class="reference external" href="https://github.com/takuti/stream-recommender/tree/v0.5.0-chiir-2017-and-thesis">GitHub.</a>]</li>
+</ul>
+<p>Notice that, as the GitHub links suggest, these inventions have been
+achieved along with the development of FluRS. So, one of the main topics
+of this talk is to dig deep into the experience.</p>
+<p>For the reasons mentioned above, FluRS is a “package” of things what the
+speaker has experienced in both academia and industry, and hence he
+decided to give a talk on the library from a practical point of view.</p>
+<p><em>Note: All contents are based on the speaker’s own thought, and they do
+not reflect the view of any of his previous and current affiliations.</em></p>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/euroscipy-2017.html">EuroSciPy 2017</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=nARfsX63nDc" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://www.euroscipy.org/2017/program.html">
+schedule                </a></li><li><a href="https://github.com/takuti/flurs">
+FluRS                </a></li><li><a href="https://takuti.me/note/flurs/">
+Blog entry: FluRS: A Python Library for Online Item Recommendation                </a></li><li><a href="https://en.wikipedia.org/wiki/Matrix_(mathematics)">
+matrix computations                </a></li><li><a href="https://en.wikipedia.org/wiki/Gradient_descent">
+gradient descent                </a></li><li><a href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">
+cross validation                </a></li><li><a href="https://arxiv.org/abs/1607.02858">
+Paper: Incremental Factorization Machines for Persistently Cold-starting Online Item Recommendation                </a></li><li><a href="https://speakerdeck.com/takuti/incremental-factorization-machines">
+Slides: Incremental Factorization Machines for Persistently Cold-starting Online Item Recommendation                </a></li><li><a href="https://github.com/takuti/stream-recommender/tree/v0.3.1-recprofile-2016">
+GitHub: Incremental Factorization Machines for Persistently Cold-starting Online Item Recommendation                </a></li><li><a href="http://dl.acm.org/citation.cfm?id=3022152">
+Paper: Sketching Dynamic User-Item Interactions for Online Item Recommendation                </a></li><li><a href="https://takuti.me/docs/chiir-2017-poster.pdf">
+Poster: Sketching Dynamic User-Item Interactions for Online Item Recommendation                </a></li><li><a href="https://github.com/takuti/stream-recommender/tree/v0.5.0-chiir-2017-and-thesis">
+GitHub: Sketching Dynamic User-Item Interactions for Online Item Recommendation                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/euroscipy-2017/videos/euroscipy-2017-flurs-a-library-for-streaming-recommendation-algorithms.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

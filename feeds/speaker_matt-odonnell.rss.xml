@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>Stateless / Immutable Webapps - Stealing Ideas from Functional Patterns</title><link>https://pyvideo.org/djangocon-us-2013/stateless-immutable-webapps-stealing-ideas-from.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;STATELESS / IMMUTABLE WEBAPPS - STEALING IDEAS FROM FUNCTIONAL PATTERNS&lt;/p&gt;
+&lt;p&gt;Thursday 10 a.m.--10:45 a.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION What would happen if we replaced Django's orm with an
+analogous but immutable equivalent. This is where my story begins...&lt;/p&gt;
+&lt;p&gt;ABSTRACT This talk started after I heard a talk by Gary Bernhart at a
+conference in Chicago(SCNA). There he talked about a hypothetical
+programming structure that held many functional principles(SOC,
+data-in-data-out functions, etc...), but included enough latitude to
+keep non-functional tools and structures.&lt;/p&gt;
+&lt;p&gt;So I decided to write my next
+project(&lt;a class="reference external" href="https://github.com/MattyO/trackerCharts"&gt;https://github.com/MattyO/trackerCharts&lt;/a&gt;) in this style to see
+how things would play out in the real world. And it turned out great.
+This style of a &amp;quot;functional core surrounded by an imperative ring&amp;quot;
+pushed me towards more and simpler unit tests, the ability to push back
+many data decisions much later into the process, and a really speedy
+test suite for little to no extra work. However, this program had no
+database; being that there was so little data that it fit into a
+document style store so nicely, everything was held on the file system.&lt;/p&gt;
+&lt;p&gt;With the next project being written in Django instead of Flask I was
+pushed into trying this structure while dealing with Django's ORM. In
+the process of trying to turn django's ORM calls into more pure forms of
+straight data, I wrote some code to turn turn the ORM query object into
+something that had an equivalent DSL, but without the ability to make
+further calls to the database. ORM's ended up being abstracted into a db
+module that returned this new type of data. Some more great things
+happened: Data access was much easier to see in views, db integration
+tests only covered the specified uses cases in the module, what data a
+view or function actually needs is readably apparent, mocking database
+calls become completely unnecessary (due to the makeup of the new data
+models), other kinda data sources were trivial to convert; so data just
+looked like data no matter where it came from(the file system, an ORM,
+redis, mongo).&lt;/p&gt;
+&lt;p&gt;I would like to share some of this journey, talk about separating data
+from functionality(the good times, the bad times), some of the code that
+emerged form my journey, and things we can take away from this grand
+experiment. Thanks !! -Matt&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt ODonnell</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/stateless-immutable-webapps-stealing-ideas-from.html</guid></item></channel></rss>

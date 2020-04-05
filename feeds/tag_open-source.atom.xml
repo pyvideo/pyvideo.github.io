@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_open-source.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>Evolving a helper script into a 180,000-lines-of-Python-code project</title><link href="https://pyvideo.org/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Mikhail Bushkov</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GRR Rapid Response (&lt;a class="reference external" href="https://github.com/google/grr"&gt;https://github.com/google/grr&lt;/a&gt;) is an incident
+response framework focused on remote live forensics.&lt;/p&gt;
+&lt;p&gt;It consists of a Python client (agent) that is installed on target
+systems, and Python server infrastructure that can manage and talk to
+clients. The goal of GRR is to support forensics and investigations in a
+fast, scalable manner to allow analysts to quickly triage attacks and
+perform analysis remotely.&lt;/p&gt;
+&lt;p&gt;GRR was started at Google in 2009 as a simple Python helper script used
+by Incident Response engineers. Eventually a little Python script got a
+little server component, was adapted to run on multiple systems (Mac,
+Linux, Windows), then a little UI was added and a few nice features were
+introduced (large-scale hunts, collection of predefined artifacts,
+memory analysis). A helper script has eventually evolved into a
+sophisticated framework with 180,000 lines of Python code.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In the presentation we’ll talk about the process of evolving a small
+prototype-like Python project into a production-ready system, using
+GRR as an example. The topics that we’ll cover are:&lt;/div&gt;
+&lt;div class="line"&gt;* Taking shortcuts - both in terms of design and implementation.
+Reasons for taking them and their eventual costs.&lt;/div&gt;
+&lt;div class="line"&gt;* Relying on Python’s power features (i.e. meta-classes, mixins)?
+Long-term consequences on maintainability and readability.&lt;/div&gt;
+&lt;div class="line"&gt;* Organising the project into separate PyPI packages - benefits of
+doing that.&lt;/div&gt;
+&lt;div class="line"&gt;* Continuous integration, testing and automated builds for various
+platforms - implementation costs and maintainability effects.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Databases"></category><category term="Deployment/Continuous Integration and Delivery"></category><category term="Development"></category><category term="Open-Source"></category><category term="Security"></category></entry><entry><title>Zen of Python Dependency Management</title><link href="https://pyvideo.org/europython-2019/zen-of-python-dependency-management.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Justin Mayer</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/zen-of-python-dependency-management.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ensuring reliably repeatable dependency installation has long been an
+unsolved problem for many Python projects. Pinning dependencies via
+setup.py and requirements.txt has historically been met with extra work
+and unexpected results, particularly when managing the dependencies of
+dependencies.&lt;/p&gt;
+&lt;p&gt;Thanks to PEP 518, Python projects can now more easily manage
+dependencies via the new pyproject.toml file specification. In its wake,
+a number of useful tools have arisen that use this file to provide
+enhanced dependency resolution, including Poetry, Hatch, and Pipenv.&lt;/p&gt;
+&lt;p&gt;Attendees of this talk will take home the following knowledge and
+skills:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how to replace three files (setup.py, requirements.txt, and
+MANIFEST.ini) with just one: pyproject.toml&lt;/li&gt;
+&lt;li&gt;why dependency resolution is hard and why it matters&lt;/li&gt;
+&lt;li&gt;how Poetry, Hatch, and Pipenv differ and when to use each&lt;/li&gt;
+&lt;li&gt;why one might use a less magical alternative: pip-tools&lt;/li&gt;
+&lt;li&gt;how to use pipx to isolate system-wide Python tools&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Deployment/Continuous Integration and Delivery"></category><category term="Open-Source"></category><category term="Packaging"></category><category term="PyPi"></category></entry><entry><title>Maintaining a Python Project When It’s Not Your Job</title><link href="https://pyvideo.org/europython-2019/maintaining-a-python-project-when-its-not-your-job.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Hynek Schlawack</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/maintaining-a-python-project-when-its-not-your-job.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPI is a gold mine of great packages but those packages have to be
+written first. More often than not, projects that millions of people
+depend on are written and maintained by only one person. If you’re
+unlucky, that person is you!&lt;/p&gt;
+&lt;p&gt;So how do you square delivering a high quality Python package you can be
+proud of and having only limited time at your disposal? The answer is
+not “try harder,” the answer is to do less.&lt;/p&gt;
+&lt;p&gt;This talk will help you get there by talking about how you can make your
+life easier, remove causes of friction with your contributors, and
+empower said contributors to take over tasks that you can’t make time
+for anymore.&lt;/p&gt;
+</summary><category term="Best Practice"></category><category term="Open-Source"></category></entry><entry><title>PlotVR - walk through your data</title><link href="https://pyvideo.org/europython-2019/plotvr-walk-through-your-data.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Philipp Thomann</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/plotvr-walk-through-your-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you bored by 3D-plots that only give you a simple rotatable
+2d-projection? plotVR is an open source package that provides a simple
+way for data scientists to plot data, pick up a phone, get a real 3d
+impression - either by VR or by AR - and use the computer's keyboard to
+walk through the scatter plot:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.github.com/thomann/plotVR"&gt;https://www.github.com/thomann/plotVR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After installing and plotting your dataframe open your phone's browser
+and use your GoogleVR Cardboard. Furthermore performant Android- and
+iOS-apps are available - both support VR-Cardboard and the iOS-Version
+also AR.&lt;/p&gt;
+&lt;p&gt;Once you are immersed in your Cardboard how do you navigate through the
+scatter? plotVR lets you use the computer's keyboard to walk as you
+would in any first person game.&lt;/p&gt;
+&lt;p&gt;You want to share your impression? Just save the HTML and publish it.&lt;/p&gt;
+&lt;p&gt;The technologies beneath this project are: a web server that handles the
+communication between the DataScience-session and the phone, WebSockets
+to quickly proxy the keyboard events, QR-codes facilitate the simple
+pairing of both, and an HTML-Page on the computer to grab the keyboard
+events. And the translation of these keyboard events into 3D terms is a
+nice exercise in three.js, OpenGL, and SceneKit for HTML, Android, and
+iOS resp.&lt;/p&gt;
+&lt;p&gt;Ready to see your data as you have never seen before? Join the talk!&lt;/p&gt;
+</summary><category term="3D"></category><category term="Augmented Reality"></category><category term="Data Science"></category><category term="Open-Source"></category><category term="Visualization"></category></entry><entry><title>Opt Out of Online Sexism – Open Source Activism</title><link href="https://pyvideo.org/europython-2019/opt-out-of-online-sexism-open-source-activism.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Teresa Ingram</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/opt-out-of-online-sexism-open-source-activism.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;Although people of all genders can experience violence and abuse
+online, the abuse experienced by women is often sexist or misogynistic
+in nature, and online threats of violence against women are often
+sexualized and include specific references to women’s bodies. &amp;quot; -
+Amnesty International. This abuse pushes women offline, affecting their
+social well-being, representation and economic potential.&lt;/p&gt;
+&lt;p&gt;In this talk I will discuss how we plan to help resolve this with our
+browser extension, Opt Out. I will discuss the online global tragedy
+that is online sexual harassment, our idea and where we’re at with
+current implementation. I will also talk about what it’s like to build
+an open source activism project, one which aims to be lead by the
+community it’s trying to protect.&lt;/p&gt;
+&lt;p&gt;We will cover current research and results from our own engagement with
+the community, where the idea came from and challenges we have faced and
+plan to face in the future. I will also dive into the intricate world of
+natural language processing (NLP) for online harassment and talk about
+balancing state-of-the-art data science with web development in an open
+source community, one being managed by someone relatively new to tech.&lt;/p&gt;
+</summary><category term="Communication"></category><category term="Data Science"></category><category term="Open-Source"></category><category term="TDD"></category><category term="Web"></category></entry><entry><title>Supercharge your Deep Learning algorithms with optimized software</title><link href="https://pyvideo.org/europython-2019/supercharge-your-deep-learning-algorithms-with-optimized-software.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Shailen Sobhee</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/supercharge-your-deep-learning-algorithms-with-optimized-software.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, you will learn various optimization techniques to improve
+the runtime performance of your deep learning algorithms on Intel
+architecture. The presentation will cover how to accelerate the training
+of your deep neural networks with Tensorflow thanks to the highly
+optimized Intel® Math Kernel Library (Intel® MKL) and how we boost
+inferencing with Intel® nGraph and with the Intel® Distribution of
+OpenVINO™.&lt;/p&gt;
+</summary><category term="Data Science"></category><category term="Deep Learning"></category><category term="Open-Source"></category></entry><entry><title>Real world Graphene - lessons learned from building a GraphQL API on top of a large Django project</title><link href="https://pyvideo.org/pycon-italia-2019/real-world-graphene-lessons-learned-from-building-a-graphql-api-on-top-of-a-large-django-project.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Marcin Gębala</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/real-world-graphene-lessons-learned-from-building-a-graphql-api-on-top-of-a-large-django-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Graphene is currently the most popular framework for building a GraphQL
+in Python and it’s also an obvious choice for adding a GraphQL layer to
+Django applications. Over the course of a year, we successfully built an
+API with about 50 queries and over 100 mutations on top of existing
+Django project (Saleor), but we also learned some hard lessons and had
+to overcome several shortcomings of the framework along the way.&lt;/p&gt;
+&lt;p&gt;In this talk, I’d like to share some practical tips to overcome the most
+common problems that a Django developer might face when building an
+optimized and maintainable API with Graphene, such as: - using useful
+abstractions to build queries and mutations faster - optimizing database
+queries in a graph - structuring a large Graphene project - unified
+error handling&lt;/p&gt;
+&lt;p&gt;I’d also like to bring up a few limitations of the framework that we
+discovered as we were working on the project and then end the talk with
+the most important benefits that adoption of GraphQL brings to modern
+web applications development - both for the backend and frontend.&lt;/p&gt;
+&lt;p&gt;Prerequisites: - Intermediate knowledge of Django - Familiarity with API
+design and concepts in terms of web development - Basic knowledge of
+GraphQL or interest in it&lt;/p&gt;
+&lt;p&gt;I think the talk would be of great value to anyone working with a
+Graphene framework and those who want to know more about building
+GraphQL in Python.&lt;/p&gt;
+&lt;p&gt;All code examples in the presentation would be based on Saleor
+(&lt;a class="reference external" href="https://github.com/mirumee/saleor"&gt;https://github.com/mirumee/saleor&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1644"&gt;https://python.it/feedback-1644&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="API Design"></category><category term="e-commerce"></category><category term="graphql"></category><category term="open-source"></category><category term="django"></category></entry><entry><title>Open Sourcing at Work</title><link href="https://pyvideo.org/pycon-ca-2018/open-sourcing-at-work.html" rel="alternate"></link><published>2018-11-11T00:00:00+00:00</published><updated>2018-11-11T00:00:00+00:00</updated><author><name>Faisal Dosani</name></author><id>tag:pyvideo.org,2018-11-11:pycon-ca-2018/open-sourcing-at-work.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We just open sourced 2 projects (datacompy, and locopy) with roots in Data Science and Engineering which we will showcase. While is it exciting and rewarding to share your ideas with the world it isn't always easy. Thinking about licenses, copyrights, and protecting confidential information is a must!&lt;/p&gt;
+&lt;p&gt;Working in a large organization which is embracing the mantra 'open source first' is really exciting. Part of this journey is to make sure we give back to the open source community when we can. Two of our projects had gained traction internally: datacompy, and locopy. As part of our commitment we wanted to make sure we could open source these projects for others to use and contribute back to. DataComPy is a package to compare two Pandas DataFrames. Originally started to be something of a replacement for SAS's PROC COMPARE for Pandas DataFrames with some more functionality than just Pandas.DataFrame.equals(Pandas.DataFrame) (in that it prints out some stats, and lets you tweak how accurate matches have to be). Then extended to carry that functionality over to Spark Dataframes. Locopy helps load flat files to S3 and then to Amazon Redshift, and assist with ETL processing. It is DB Driver (Adapter) agnostic, provides basic functionality to move data to S3 buckets, execute COPY commands to load data to S3, and into Redshift, and UNLOAD commands to unload data from Redshift into S3. While building these products was exciting and fun, some of the legal considerations were as interesting, complex, and required collaboration between many teams, from security, licensing, brand, and IP/copyright. We'll explore the projects, and some of these other considerations which can make or break if you decide to release a project into the wild, along with the road blocks we faced with in these areas.&lt;/p&gt;
+</summary><category term="open source"></category><category term="licensing"></category><category term="copyright"></category><category term="data"></category><category term="security"></category><category term="testing"></category><category term="best practices"></category><category term="data science"></category></entry><entry><title>An optimizing static Python compiler</title><link href="https://pyvideo.org/europython-2013/an-optimizing-static-python-compiler.html" rel="alternate"></link><published>2013-07-04T00:00:00+00:00</published><updated>2013-07-04T00:00:00+00:00</updated><author><name>Kay Hayen</name></author><id>tag:pyvideo.org,2013-07-04:europython-2013/an-optimizing-static-python-compiler.html</id><summary type="html"></summary><category term="performance"></category><category term="scientific-computing"></category><category term="optimization"></category><category term="open-source"></category><category term="python3"></category></entry><entry><title>Costruisci la tua piattaforma open-source di video-sharing in Python</title><link href="https://pyvideo.org/europython-2013/costruisci-la-tua-piattaforma-open-source-di-video-sharing-in-python.html" rel="alternate"></link><published>2013-07-04T00:00:00+00:00</published><updated>2013-07-04T00:00:00+00:00</updated><author><name>Simone Orsi</name></author><id>tag:pyvideo.org,2013-07-04:europython-2013/costruisci-la-tua-piattaforma-open-source-di-video-sharing-in-python.html</id><summary type="html"></summary><category term="video"></category><category term="sharing"></category><category term="youtube"></category><category term="open-source"></category><category term="community"></category></entry><entry><title>SimpleManagement: come semplificare la gestione progetti con Python</title><link href="https://pyvideo.org/europython-2013/simplemanagement-come-semplificare-la-gestione-progetti-con-python.html" rel="alternate"></link><published>2013-07-04T00:00:00+00:00</published><updated>2013-07-04T00:00:00+00:00</updated><author><name>Maurizio Delmonte</name></author><id>tag:pyvideo.org,2013-07-04:europython-2013/simplemanagement-come-semplificare-la-gestione-progetti-con-python.html</id><summary type="html"></summary><category term="project-management"></category><category term="open-source"></category><category term="teamwork"></category><category term="zope"></category><category term="plone"></category><category term="case-study"></category></entry><entry><title>Take Back Control Over Your Work. Agile Tips For Python Developers.</title><link href="https://pyvideo.org/europython-2013/take-back-control-over-your-work-agile-tips-for-python-developers.html" rel="alternate"></link><published>2013-07-04T00:00:00+00:00</published><updated>2013-07-04T00:00:00+00:00</updated><author><name>Andrew Mleczko</name></author><id>tag:pyvideo.org,2013-07-04:europython-2013/take-back-control-over-your-work-agile-tips-for-python-developers.html</id><summary type="html"></summary><category term="web"></category><category term="pyramid"></category><category term="postgresql"></category><category term="open-source"></category><category term="trac"></category><category term="framework"></category><category term="teamwork"></category></entry><entry><title>Lost in OAuth? Learn Velruse And Get Your Life Back!</title><link href="https://pyvideo.org/europython-2013/lost-in-oauth-learn-velruse-and-get-your-life-back.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Andrew Mleczko</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/lost-in-oauth-learn-velruse-and-get-your-life-back.html</id><summary type="html"></summary><category term="web"></category><category term="pyramid"></category><category term="HTTP"></category><category term="open-source"></category><category term="case-study"></category></entry><entry><title>Celery and Social Networks. 5 Things I Have Learned During Earthquake Hackathon.</title><link href="https://pyvideo.org/europython-2013/celery-and-social-networks-5-things-i-have-learned-during-earthquake-hackathon.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Andrew Mleczko</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/celery-and-social-networks-5-things-i-have-learned-during-earthquake-hackathon.html</id><summary type="html"></summary><category term="celery"></category><category term="security"></category><category term="open-source"></category><category term="case-study"></category><category term="social"></category></entry><entry><title>Integration tests ready to use with pytest-play</title><link href="https://pyvideo.org/pycon-italia-2018/integration-tests-ready-to-use-with-pytest-play.html" rel="alternate"></link><published>2018-04-22T00:00:00+00:00</published><updated>2018-04-22T00:00:00+00:00</updated><author><name>Serena Martinetti</name></author><id>tag:pyvideo.org,2018-04-22:pycon-italia-2018/integration-tests-ready-to-use-with-pytest-play.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In my talk I will introduce a new pytest plugin with which it is very
+easy (even for non-technical) go to create and run new integration
+testing at any level of IOT complex systems.&lt;/p&gt;
+&lt;p&gt;pytest-play is a pytest plugin that allows you to play a JSON file that
+describes some actions and assertions. We can use actions like: -
+Selenium, driving the browser for the UI test - MQTT messages,
+simulating a device - API calls - queries to Cassandra or PostgresSQL
+(in the future) - custom commands, thanks to the pluggable architecture
+Other advantages: - UI tests more reliable with implicit waits before
+interacting with the elements - BDD support to make the scenario more
+legible - reusability of steps&lt;/p&gt;
+&lt;p&gt;I will show you how easy it is to create a json and execute it on the
+fly on a Continuous Integration system. So let’s start having fun in
+testing with pytest-play.&lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="continuous-integration"></category><category term="open source"></category><category term="Python"></category><category term="testing"></category><category term="selenium"></category><category term="integration"></category><category term="api"></category><category term="pytest"></category><category term="Functional Testing"></category></entry><entry><title>My story with Python and Open Source</title><link href="https://pyvideo.org/pycon-italia-2018/my-story-with-python-and-open-source.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Nicola Iarocci</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/my-story-with-python-and-open-source.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is the story of how I went from lonely, introvert, C# developer to
+open- source Python author and maintainer, speaker, trainer, consultant
+and all- around community junkie. With some luck, in the process you
+will also hear a few hints on how to become a good open source
+contributor and have a chance to ponder on the pros and cons (yes, there
+are cons too) of going full monty with open source.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="open-source"></category></entry><entry><title>Working for FOSS can make you a better programmer: Insights into my Outreachy internship with Fedora</title><link href="https://pyvideo.org/pycon-italia-2018/working-for-foss-can-make-you-a-better-programmer-insights-into-my-outreachy-internship-with-fedora.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Alisha Aneja</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/working-for-foss-can-make-you-a-better-programmer-insights-into-my-outreachy-internship-with-fedora.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Outreachy program offers three-month internships for people from groups
+underrepresented in tech. Interns are paid a stipend of $5,500 and have
+a $500 travel stipend available to them. Interns work remotely with
+mentors from Free and Open Source Software (FOSS) communities on
+projects not limited to just programming but also user experience,
+documentation, illustration and graphical design.&lt;/p&gt;
+&lt;p&gt;I am currently interning with Fedora under the Outreachy program, where
+my task is to is to develop administrative tools for the 389 Directory
+Server, an enterprise class LDAP (Lightweight Directory Access Protocol)
+server, used in businesses globally to authenticate and identify people.
+LDAP is a standard application protocol for accessing and maintaining
+distributed directory information services over an Internet Protocol
+(IP) network. I am helping Fedora improve the Directory Servers Python
+command line tools. In addition to this, the team at Fedora is also
+investigating into integrating existing C code with Rust (watch here:
+Integrating Rust with existing C) to improve performance and
+maintainability. Hence, I am also working on establishing proof of
+concept for using Rust instead of C and also using Rust with existing C.&lt;/p&gt;
+&lt;p&gt;I started with fixing bugs in the Directory Server and it enabled me to
+get more understanding about LDAP concepts, since LDAP has a steep
+learning curve. My first task was to add the command line support for
+automember plugin to the Directory Server. Automembership allows a
+static group to act like a dynamic group, for adding new members to the
+group. Different automembership definitions create searches that are
+automatically run on all new directory entries. The automembership rules
+search for and identify matching entries and then explicitly add those
+entries as members to the group. I started by added the classes (Auto
+Membership Plugin, Auto Member Definition, Auto Member Definitions),
+methods and the tests for these classes and methods (Pull Request). Then
+I added the support for automember by command line which included
+creating, removing, editing and showing the automember definitions. This
+included writing the tests as well. By the end of this task, I learnt
+about Python decorators, lazy evaluation in Python, using pytest testing
+tool and writing command line parser and arguments using the argparse
+library. (This will be shown with live coding and screenshots).&lt;/p&gt;
+&lt;p&gt;I am currently working on another task which involves building an LRU
+cache in Rust which stores C allocated strings and can retrieve them.
+This project will be built using the meson build system. I will also
+provide tests and asan builds. This task will act as a proof of concept
+for investigating if meson can replace autotools as the Directory Server
+build system. During this task, I hope to learn about build systems, LRU
+caching concept and Rust types and safety.&lt;/p&gt;
+&lt;p&gt;As you can deduce from my tasks and the key learnings, doing this
+Outreachy internship with Fedora is helping me to stand at the forefront
+of technology, learning about LDAP, Python and Rust (polyglot!), which
+will definitely enable me to become a better programmer and a
+collaborative community member for Fedora. And I hope to inspire other
+underrepresented people in tech with my talk about the Outreachy
+internship and my progress.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 14:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="open source"></category><category term="#remote"></category><category term="#community"></category><category term="user-groups"></category></entry><entry><title>Design Your Open Source Project</title><link href="https://pyvideo.org/pycon-philippines-2012/design-your-open-source-project.html" rel="alternate"></link><published>2012-06-30T00:00:00+00:00</published><updated>2012-06-30T00:00:00+00:00</updated><author><name>Bryan Veloso</name></author><id>tag:pyvideo.org,2012-06-30:pycon-philippines-2012/design-your-open-source-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Closing Keynote - a practical walkthrough of what to consider when creating an open source project, and several resources to get you started (especially with documentation)&lt;/p&gt;
+</summary><category term="open source"></category><category term="keynote"></category><category term="tooling"></category><category term="documentation"></category></entry><entry><title>Rasa: open source conversational AI to build next generation chatbots</title><link href="https://pyvideo.org/pycon-de-2017/rasa-open-source-conversational-ai-to-build-next-generation-chatbots.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Joey Faulkner</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/rasa-open-source-conversational-ai-to-build-next-generation-chatbots.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Joey Faulkner&lt;/strong&gt; (&amp;#64;JoeyMFaulkner)&lt;/p&gt;
+&lt;p&gt;I am a PhD student in machine learning/astronomy, and an AI researcher at Rasa. We make open source libraries for conversational AI.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Soon you will primarily communicate with your computer through conversation. At Rasa, we believe that this revolution in user experience should be available to everyone. In this spirit we have developed open source tools that use machine learning to make chatbots in a developer-friendly interface.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The revolution-in-waiting for user experience is conversational AI, and this revolution should be available to everyone. The ability to communicate with your computer via a fulfilling and useful conversation will change the way we approach user interaction. Recent advances in machine learning have made this goal not only possible to reach, but possible to bring to the developer community at large. At Rasa we have developed a set of open-source Python libraries which can comprehend natural language and handle complex, interesting conversations. We utilise deep learning to bypass existing rigid conversational norms (state machines, if/else statements, etc.) and allow developers to make awesome bots simply by talking to them.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="python"></category><category term="machine learning"></category><category term="deep learning"></category><category term="open source"></category><category term="chatbot"></category><category term="natural language"></category><category term="ai"></category><category term="business"></category></entry><entry><title>Keeping up with the pace of a fast growing community without dying</title><link href="https://pyvideo.org/pycon-italia-2017/keeping-up-with-the-pace-of-a-fast-growing-community-without-dying.html" rel="alternate"></link><published>2017-04-09T00:00:00+00:00</published><updated>2017-04-09T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2017-04-09:pycon-italia-2017/keeping-up-with-the-pace-of-a-fast-growing-community-without-dying.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;New open source communities are born everyday. Some of them are meant to
+last long and some others aren’t. There’s a moment in every community
+where it needs to outgrow itself, expand its limits and aim way higher
+than ever. This is no necesarily related to its goals but the ecosystem
+it needs to stay alive.&lt;/p&gt;
+&lt;p&gt;Once a community has gone beyond its limits, the community members,
+consumers and leaders will have to keep up with its pace. How do we help
+it to remain sane? How do we keep our goals on track while allowing for
+further growth? How do we allow it to keep expanding without further
+damaging the community?&lt;/p&gt;
+&lt;p&gt;These are all questions we ask ourselves everyday in the OpenStack
+community and that we’ve managed to work on without killing ourselves on
+the way.&lt;/p&gt;
+</summary><category term="Python"></category><category term="open-source"></category><category term="community"></category></entry><entry><title>ENVIFATE: plugin per QGIS per la valutazione del rischio di inquinamento ambientale</title><link href="https://pyvideo.org/pycon-italia-2017/envifate-plugin-per-qgis-per-la-valutazione-del-rischio-di-inquinamento-ambientale.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Francesco Geri</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/envifate-plugin-per-qgis-per-la-valutazione-del-rischio-di-inquinamento-ambientale.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Negli ultimi anni è cresciuto in maniera considerevole l’interesse per i
+fenomeni di inquinamento ambientale causati da sostanze tossiche e altre
+fonti di disturbo. La pericolosità di ciascuna di tali sostanze si
+manifesta laddove sia superata una certa soglia di concentrazione che la
+rende tossica. Per proteggere la salute pubblica e gli ecosistemi
+occorre mantenere le concentrazioni di tali inquinanti al di sotto di
+una soglia di sicurezza e risulta di particolare importanza essere in
+grado di prevedere in maniera sufficientemente attendibile le
+concentrazioni che si vengono a stabilire nei diversi comparti
+ambientali. In questo contesto, sia per le PA che per gli operatori
+privati, sta diventando sempre più importante poter disporre di
+strumenti semplici ma efficaci che consentano di effettuare analisi di
+screening tali da individuare le possibili criticità in quest’ambito. Il
+software ENVIFATE viene sviluppato nell’ambito di un progetto di ricerca
+ancora in corso finanziato al DICAM (Università di Trento) dalla Regione
+Veneto proprio per operare analisi di screening per valutare la
+possibilità di rischi di inquinamento ambientale nelle aree protette a
+seguito di pianificazione di potenziali sorgenti inquinanti. Il progetto
+ha previsto lo sviluppo di un’applicazione con i seguenti requisiti: i)
+open-source ii) multipiattaforma iii) user friendly iv) GIS oriented. Si
+è scelto di sviluppare una famiglia di plugin di QGIS, utilizzando un
+linguaggio python multipiattaforma e realizzando un modulo per ciascuna
+matrice ambientale considerata: fiumi, laghi, dispersione atmosferica,
+dispersione in falda, rumore. I plugin sono stati sviluppati a partire
+da una libreria di moduli lanciabili da linea di comando o da
+applicazioni di terze parti con un elevato livello di modularità e
+scalabilità. E’ così anche possibile concatenare i diversi moduli in
+flussi di dati personalizzati. Tutti i plugin forniscono risultati di
+tipo numerico e cartografico. In particolare i tool da linea di comando
+forniscono un risultato “statico”, ovvero collegato ad un particolare
+stato spaziale e temporale, mentre all’interno dei plugin il modulo
+viene reiterato nello spazio e nel tempo allo scopo di fornire mappe
+georiferite e risultati relazionati temporalmente, propedeutici alle
+diverse valutazioni ambientali. I futuri sviluppi del plugin ne
+estenderanno le funzionalità affinché verifichi quando gli effetti
+calcolati causino scostamenti significativi e misurabili dello status
+delle matrici ambientali in relazione a ciò che è tutelato. Questo in
+prima istanza rispetto agli habitat e alle specie della rete Natura 2000
+all’interno di valutazioni di incidenza, ma anche con la prospettiva di
+estendere tali analisi a VIA e VAS o ad una integrazione con i Life
+Cycle Inventories (LCI).&lt;/p&gt;
+&lt;p&gt;Autori: Francesco Geri, Oscar Cainelli, Paolo Zatelli, Gianluca Salogni,
+Marco Ciolli&lt;/p&gt;
+</summary><category term="risk-management"></category><category term="open-source"></category><category term="Python"></category><category term="matplotlib"></category><category term="environment"></category><category term="Qgis"></category><category term="gis"></category><category term="impact-assessment"></category><category term="gdal"></category><category term="pollution"></category></entry><entry><title>A Year of Pyxley: My First Open Source Adventure</title><link href="https://pyvideo.org/pydata-chicago-2016/a-year-of-pyxley-my-first-open-source-adventure.html" rel="alternate"></link><published>2016-08-28T00:00:00+00:00</published><updated>2016-08-28T00:00:00+00:00</updated><author><name>Nicholas Kridler</name></author><id>tag:pyvideo.org,2016-08-28:pydata-chicago-2016/a-year-of-pyxley-my-first-open-source-adventure.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Chicago 2016&lt;/p&gt;
+&lt;p&gt;Last year, I created my first Flask-powered web application utilizing React.js and D3. I refactored it into reusable components and released it as Pyxley. In this talk, I’ll introduce the basics of Pyxley and discuss what has and hasn’t worked. More importantly, I’ll talk about what it’s like to maintain an open-source project for the first time.&lt;/p&gt;
+</summary><category term="adventure"></category><category term="Open Source"></category></entry><entry><title>When Dependencies between Test Cases are Inevitable</title><link href="https://pyvideo.org/pycon-israel-2016/when-dependencies-between-test-cases-are-inevitable.html" rel="alternate"></link><published>2016-09-21T00:00:00+00:00</published><updated>2016-09-21T00:00:00+00:00</updated><author><name>Irina Gulina</name></author><id>tag:pyvideo.org,2016-09-21:pycon-israel-2016/when-dependencies-between-test-cases-are-inevitable.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You need to test your images on various instance types in the cloud, but which tools do you use? How to run dozens of thousands of test cases on hundreds of machines in the cloud in parallel? Is it OK to have dependencies between test cases to make this task less expensive?&lt;/p&gt;
+&lt;p&gt;Dva is an open source validation tool which is applicable to various images and instance types. Using your image, it will launch instances of different types in defined regions and will execute test cases in parallel. How?&lt;/p&gt;
+&lt;p&gt;All test cases are represented as a Directed Acyclic Graph structure – parents and children. Then these test cases are assigned to workers by a modified BFS algorithm that allows processing of sibling test cases in parallel. It includes test result processing tools such as a Bugzilla module to report bugs for you. 3rd-party test case modules are supported too.&lt;/p&gt;
+&lt;p&gt;This tool is used by Red Hat QE for RHEL image release sanity testing in EC2, however Fedora images and OpenStack cloud are supported too. To test a RHEL release, Dva launches hundreds of machines of various types in all EC2 regions and executes a set of nearly 70 test cases with dependencies on every machine in parallel.&lt;/p&gt;
+&lt;p&gt;Source Code/Home page: &lt;a class="reference external" href="https://github.com/RedHatQE/dva/"&gt;https://github.com/RedHatQE/dva/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Topics: Open Source, Cloud, QA/QE, Automation, Python&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://il.pycon.org/2016/static/sessions/irina-igulina.pdf"&gt;http://il.pycon.org/2016/static/sessions/irina-igulina.pdf&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Open Source"></category><category term="Cloud"></category><category term="QA/QE"></category><category term="Automation"></category></entry><entry><title>eGenix PyRun - Python Laufzeitumgebung in einer Datei</title><link href="https://pyvideo.org/pycon-de-2012/egenix-pyrun-python-laufzeitumgebung-in-einer.html" rel="alternate"></link><published>2012-10-31T00:00:00+00:00</published><updated>2012-10-31T00:00:00+00:00</updated><author><name>Marc-André Lemburg</name></author><id>tag:pyvideo.org,2012-10-31:pycon-de-2012/egenix-pyrun-python-laufzeitumgebung-in-einer.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;eGenix PyRun kondensiert eine komplette Python Laufzeitumgebung mit
+Interpreter und Standardbibliothek in eine einzige sehr kompakte
+ausführbare pyrun Programmdatei.&lt;/p&gt;
+&lt;p&gt;Da PyRun keine Installation benötigt und unabhängig von einer Python
+System Installation arbeitet, bietet es sich damit als portable Lösung
+für Skripte, Applikationen und in der Entwicklung als virtualenv Ersatz
+an.&lt;/p&gt;
+&lt;p&gt;PyRun ist nur 12-13MB groß, enthält aber den größten Teil einer
+üblicherweise ca. 100MB großen Python Installation. Die Größe kann per
+gzexe oder upx auf unter 4MB reduziert werden.&lt;/p&gt;
+&lt;p&gt;Es bietet damit eine ganze Reihe von Vorteilen gegenüber einer regulären
+Python Installation. Hier die wichtigsten Aspekte:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sehr kompakt&lt;/li&gt;
+&lt;li&gt;Keine Installation oder Root Rechte notwendig&lt;/li&gt;
+&lt;li&gt;Kann unabhängig von einer System Python Installation verwendet werden&lt;/li&gt;
+&lt;li&gt;Bessere Startzeit als reguläres Python&lt;/li&gt;
+&lt;li&gt;Kompatibel mit distutils/setuptools/pip/etc.&lt;/li&gt;
+&lt;li&gt;virtualenv Ersatz&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Derzeit unterstützte Systeme sind Linux, Mac OS X und FreeBSD. Es sollte
+aber auch auf anderen Unix Systemen verwendbar sein. PyRun wird von
+eGenix unter einer Open Source Lizenz verfügbar gemacht.&lt;/p&gt;
+&lt;p&gt;Der Vortrag wird das Projekt vorstellen, eine Anwendungsdemo zeigen und
+je nach verfügbarer Zeit auch die Übersetzung demonstrieren.&lt;/p&gt;
+</summary><category term="interpreter"></category><category term="kompakt"></category><category term="laufzeitumgebung"></category><category term="open-source"></category><category term="python"></category><category term="virtualenv"></category></entry><entry><title>Practical DevOps</title><link href="https://pyvideo.org/pycon-de-2012/practical-devops.html" rel="alternate"></link><published>2012-10-31T00:00:00+00:00</published><updated>2012-10-31T00:00:00+00:00</updated><author><name>Schlomo Schapiro</name></author><id>tag:pyvideo.org,2012-10-31:pycon-de-2012/practical-devops.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;DevOps ist eine aktuelle Bewegung in der IT, die sich zur Aufgabe macht,
+ein Umdenken in den klassischen Lagern Entwicklung und Betrieb
+einzuleiten. Der Vortrag wirft einen Blick auf die noch junge Bewegung
+und zeigt mit Geschichten aus dem wahren Leben, wie sich die agile
+Denkweise fortschreiben lässt, die mit SCRUM ins allgemeine Bewusstsein
+getreten ist.&lt;/p&gt;
+&lt;p&gt;Schlomo gibt einen Überblick über das Thema und berichtet über die
+DevOps Erfolge bei der
+&lt;a class="reference external" href="http://www.immobilienscout24.de"&gt;ImmobilienScout24&lt;/a&gt;. Nach 2 Jahren
+agilem Umdenken in der Entwicklung zeigte sich, dass die klassische
+Gewaltenteilung Plan - Build - Run einfach nicht mehr gut funktioniert
+weil sich die Anforderungen und Erwartungen sowohl in der Entwicklung
+als auch im Betrieb ändern und daher auch eine neue Form der
+Zusammenarbeit nahe legen.&lt;/p&gt;
+&lt;p&gt;Die Ideen aus der DevOps Bewegung lassen sich fast überall einsetzen, wo
+bisher ein &amp;quot;über den Zaun werfen&amp;quot; gespielt wird und haben das primäre
+Ziel, alle Beteiligten gemeinsam an einem Strang ziehen zu lassen. Mit
+den Ideen und Erfahrungen aus dem Vortrag lassen sich sicher die ersten
+Schritte in die richtige Richtung einleiten.&lt;/p&gt;
+</summary><category term="agile"></category><category term="devops"></category><category term="kanban"></category><category term="open source"></category><category term="python"></category><category term="scrum"></category><category term="web"></category></entry><entry><title>Grundlagen des Open-Source-Lizenzrechts</title><link href="https://pyvideo.org/pycon-de-2012/grundlagen-des-open-source-lizenzrechts.html" rel="alternate"></link><published>2012-10-30T00:00:00+00:00</published><updated>2012-10-30T00:00:00+00:00</updated><author><name>Andreas Schreiber</name></author><id>tag:pyvideo.org,2012-10-30:pycon-de-2012/grundlagen-des-open-source-lizenzrechts.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Ein kompakter Überblick über die rechtlichen Aspekte von
+Open-Source-Software. Neben den rechtlichen Grundlagen werden die
+wesentlichen Eigenschaften von Open-Source-Lizenzen vorgestellt.
+Außerdem werden einige verbreitete Lizenzen detaillierter erläutert.&lt;/p&gt;
+&lt;p&gt;Inhalt:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Rechtliche Grundlagen: Urheberrecht und Lizenzrecht&lt;/li&gt;
+&lt;li&gt;Open-Source-Software: Lizenzarten von Software, Definition
+Open-Source-Software, Open-Source-Lizenzmodelle, Copyleft vs.
+Non-Copyleft&lt;/li&gt;
+&lt;li&gt;Ausgewählte Open-Source-Lizenzen: Apache License, GPL, AGPL, LGPL,
+BSD License, Eclipse Public License, ...&lt;/li&gt;
+&lt;li&gt;Praktische Nutzung von Open-Source-Software: Lizenzkompatibilität,
+Nutzung von Open-Source-Software in eigenen Programmen, Auswahl einer
+Open-Source-Lizenz für eigene Programme&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="open-source"></category><category term="recht"></category></entry><entry><title>Introduction to django CMS</title><link href="https://pyvideo.org/pycon-de-2013/introduction-to-django-cms.html" rel="alternate"></link><published>2013-10-16T00:00:00+00:00</published><updated>2013-10-16T00:00:00+00:00</updated><author><name>Benjamin Wohlwend</name></author><id>tag:pyvideo.org,2013-10-16:pycon-de-2013/introduction-to-django-cms.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Wir werden das Open Source Content Management System «django CMS»
+vorstellen. Einerseits zeigen wir das Backend, aber auch das Frontend,
+geben Erfahrungen von Developern weiter und von CMS-Verwendern. Patrick
+Lauber, als Senior Web Developer geht in die Tiefe, Stefanie Weilenmann
+wir das CMS anhand einer kurzen Schulung zeigen.&lt;/p&gt;
+</summary><category term="django"></category><category term="django cms"></category><category term="open source"></category><category term="python"></category><category term="website"></category></entry><entry><title>Sponsoring von Open-Source - und damit den Chef überzeugen</title><link href="https://pyvideo.org/pycon-de-2013/sponsoring-von-open-source-und-damit-den-chef-u.html" rel="alternate"></link><published>2013-10-15T00:00:00+00:00</published><updated>2013-10-15T00:00:00+00:00</updated><author><name>Schlomo Schapiro</name></author><id>tag:pyvideo.org,2013-10-15:pycon-de-2013/sponsoring-von-open-source-und-damit-den-chef-u.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Nutzen Sie Open-Source-Software?&lt;/p&gt;
+&lt;p&gt;Haben Sie schon einmal eine Kleinigkeit ändern wollen?&lt;/p&gt;
+&lt;p&gt;Konnten Sie für “Einwurf kleiner Münzen” diese Änderung machen lassen?&lt;/p&gt;
+&lt;p&gt;Open-Source-Software zeichnet sich unter anderem durch die leichte
+Anpassbarkeit an die eigenen Bedürfnisse aus. Doch nicht jeder kann oder
+möchte die Software selbst ändern. Lieber würde man die Autoren oder
+andere Spezialisten damit beauftragen.&lt;/p&gt;
+&lt;p&gt;Der Vortrag gibt Einblick in die praktische Arbeit mit dem Sponsoring
+von Open-Source-Projekten und beantwortet die Frage, wie man mit Hilfe
+von Sponsoring seine eigenen Probleme schneller und günstiger lösen
+kann: Nach der Vorstellung typischer Entwicklungsmodelle von
+Open-Source-Projekten erfahren Besucher, wie sie Kontakte zu Open-Source
+Projekten knüpfen können und damit jemanden finden, der ihnen weiter
+hilft.&lt;/p&gt;
+&lt;p&gt;Weitere Themen sind&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;rechtliche Aspekte wie ein Werksvertrag, Gewährleistung und einfache
+Abwicklung&lt;/li&gt;
+&lt;li&gt;Anforderungen so formulieren, dass der Kundennutzen und die
+Nachhaltigkeit im Vordergrund steht&lt;/li&gt;
+&lt;li&gt;Abnahmekriterien für den Auftrag&lt;/li&gt;
+&lt;li&gt;Wirtschaftlichkeitsberechnung und Kosten-Nutzen-Abwägung&lt;/li&gt;
+&lt;li&gt;Nachhaltige Lösungen statt ewigen Workarounds&lt;/li&gt;
+&lt;li&gt;Mehrwert für sich und die Open-Source-Gemeinschaft schaffen&lt;/li&gt;
+&lt;li&gt;Imagepflege über Open-Source-Sponsoring&lt;/li&gt;
+&lt;li&gt;Eigene Open-Source Projekte durch Externe weiterentwickeln lassen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Als konkrete Beispiele dienen diverse in Python entwickelte Open-Source
+Projekte der ImmobilienScout24.&lt;/p&gt;
+</summary><category term="geld"></category><category term="kultur"></category><category term="open-source"></category><category term="politik"></category><category term="wirtschaft"></category></entry></feed>

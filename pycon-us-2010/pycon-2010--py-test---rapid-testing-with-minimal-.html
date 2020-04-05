@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; py.test - Rapid Testing with Minimal Effort</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2010.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2010.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="py.test - Rapid Testing with Minimal Effort" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-us-2010/pycon-2010--py-test---rapid-testing-with-minimal-.html" />
+    <meta property="og:image" content="https://archive.org/services/img/pyvideo_259___py-test-rapid-testing-with-minimal-effort" />
+    <meta property="og:image:secure_url" content="https://archive.org/services/img/pyvideo_259___py-test-rapid-testing-with-minimal-effort" />
+
+
+    <meta name="tags" content="pycon" />
+    <meta name="tags" content="pycon2010" />
+    <meta name="tags" content="py.test" />
+    <meta name="tags" content="tutorial" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-us-2010/pycon-2010--py-test---rapid-testing-with-minimal-.html" rel="bookmark"
+         title="Permalink to py.test - Rapid Testing with Minimal Effort">py.test - Rapid Testing with Minimal Effort
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2010-02-19T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 19 February 2010
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/holger-krekel.html">Holger Krekel</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#archive.org" aria-controls="archive.org" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> ARCHIVE.ORG
+    </a></li>
+    <li class="" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+    <li class="" role="presentation"><a href="#ogv" aria-controls="ogv" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> OGV
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="archive.org">
+        <a class="reference external image-reference"
+           href="https://archive.org/details/pyvideo_259___py-test-rapid-testing-with-minimal-effort">
+            <img alt=""
+                 src="https://archive.org/services/img/pyvideo_259___py-test-rapid-testing-with-minimal-effort">
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2010/259_py-test-rapid-testing-with-minimal-effort.m4v" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="ogv">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2010/259_py-test-rapid-testing-with-minimal-effort.ogv" type="video/ogv">
+            </video>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>py.test I - rapid testing with minimal effort</p>
+<p>Presented by Holger Krekel</p>
+<p>Want to learn writing tests in Python? This tutorial introduces basic
+practises using the popular py.test (<a class="reference external" href="http://pytest.org">http://pytest.org</a>) tool. We start
+with an overview on testing and tools in Python and then discuss and
+exercise basic idioms in a step-by-step manner. We cover the basic
+writing, organisation and running of tests and debugging options. In the
+second part we discuss setup and teardown of test state, usage and
+configuration of test functions arguments and introduce coverage
+testing. We will close with time to answer questions and discuss topics
+from the participants.</p>
+<p>Intended Audience</p>
+<p>beginner programmers</p>
+<p>Perequisites/knowledge: basic knowledge of python programming</p>
+<p>Requirements: Laptop with Python 2.4 or greater installed. Pairing
+welcome. outline</p>
+<ul class="simple">
+<li>why automated testing?</li>
+<li>Developer oriented automated tests</li>
+<li>The test tool question</li>
+<li>py.test basics</li>
+<li>py.test fundamental features</li>
+<li>cross-project test tool</li>
+<li>A Typical Python test layout</li>
+<li>Another typical test layout</li>
+<li>Choosing a test layout</li>
+<li>automatic test discovery</li>
+<li>mind the <strong>init</strong>.py files</li>
+<li>no boilerplate python test code</li>
+<li>assert introspection</li>
+<li>asserting expected exceptions</li>
+<li>print() debugging / output capturing</li>
+<li>Getting Started, basic usage [0]</li>
+<li>Failure / Traceback Demo [0]</li>
+<li>Skipping tests</li>
+<li>Dynamically skipping tests</li>
+<li>Marking test functions</li>
+<li>Marking a test for conditional skip</li>
+<li>Marking a test as expected to fail</li>
+<li>Conditional expected to fail</li>
+<li>Marking / Skipping exercise [0]</li>
+<li>Applying Marks to classes or modules</li>
+<li>break</li>
+<li>warm up: boilerplate test code</li>
+<li>&quot;myscan&quot; Exercises of this tutorial</li>
+<li>sketching our &quot;myscan&quot; project</li>
+<li>Starting Exercise [1]</li>
+<li>The example Solution [1]</li>
+<li>The &quot;test setup&quot; and fixture Problem</li>
+<li>test functions and funcargs</li>
+<li>How do funcargs work?</li>
+<li>funcarg factory notes</li>
+<li>builtin funcargs</li>
+<li>usage example: per-test temporary directory</li>
+<li>next step: adding more tests [2]</li>
+<li>observation on new tmpdir-using tests</li>
+<li>The mysetup pattern</li>
+<li>How the mysetup pattern works</li>
+<li>next step: introducing &quot;mysetup&quot; pattern [3]</li>
+<li>The new test function using &quot;mysetup&quot;</li>
+<li>a simple hook: adding a command line opt</li>
+<li>the py.test config object</li>
+<li>exercise: implement a new command line option [4]</li>
+<li>myscan example completed</li>
+<li>py.test hooks and plugins</li>
+<li>Installing &quot;global&quot; plugins</li>
+<li>exercise: use the &quot;figleaf&quot; plugin</li>
+<li>local plugins: conftest.py</li>
+<li>a simple config: ignoring directories</li>
+<li>a simple default option: verbose</li>
+<li>quick discussion of advanced usages</li>
+<li>Summary / questions and answers</li>
+</ul>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-us-2010.html">PyCon US 2010</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://archive.org/details/pyvideo_259___py-test-rapid-testing-with-minimal-effort" rel="external">ARCHIVE.ORG</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2010/259_py-test-rapid-testing-with-minimal-effort.m4v" rel="external">MP4</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2010/259_py-test-rapid-testing-with-minimal-effort.ogv" rel="external">OGV</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/pycon/">pycon</a>, <a href="https://pyvideo.org/tag/pycon2010/">pycon2010</a>, <a href="https://pyvideo.org/tag/pytest/">py.test</a>, <a href="https://pyvideo.org/tag/tutorial/">tutorial</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://pytest.org)">
+http://pytest.org)                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-us-2010/videos/pycon-2010--py-test---rapid-testing-with-minimal-.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

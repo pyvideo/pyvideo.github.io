@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 10 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Using Git and GitHub to safely store your code</title><link>https://pyvideo.org/python-frederick/using-git-and-github-to-safely-store-your-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Python Frederick for July 2019, I presented on the fundamentals of #Git and #GitHub for storing your code safely and sharing it with others. This talk is aimed at beginners with no prior knowledge of Git.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Layman</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:python-frederick/using-git-and-github-to-safely-store-your-code.html</guid><category>git</category><category>github</category></item><item><title>CPython loves your Pull Requests</title><link>https://pyvideo.org/pycon-italia-2018/cpython-loves-your-pull-requests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;p&gt;CPython, what’s CPython. CPython is the official implementation of
+Python, written in C. And it’s not just a implementation, it is a group
+of volunteers and where they daily work on the project but there is no
+many active contributors.&lt;/p&gt;
+&lt;p&gt;In this talk, I would like to prove to you than you can become an active
+contributor of CPython.&lt;/p&gt;
+&lt;p&gt;The core developers of CPython need your help, for example, with the
+review of some patches, you can comment a patch or try to reproduce a
+bug.&lt;/p&gt;
+&lt;p&gt;In the past, when you wanted to contribute to CPython, you had to use
+the bug tracker interface and send a patch, this patch was reviewed if
+you were lucky and after commented etc…. but this process was really
+long and time consuming.&lt;/p&gt;
+&lt;p&gt;Now with the new process based on GitHub and Git, you can create a new
+branch on your local repository and just send a Pull Request. The Pull
+Request is just awesome, it will be reviewed really quickly, we will
+comment your Pull Request and if the code is correct and the tests pass,
+then you PR will be merged in CPython.&lt;/p&gt;
+&lt;p&gt;We love and need your Pull Requests for CPython.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="audience"&gt;
+&lt;h4&gt;Audience&lt;/h4&gt;
+&lt;p&gt;For new comers to CPython and the future contributors and of course for
+the regular contributors and core-dev of CPython.&lt;/p&gt;
+&lt;p&gt;With this migration to GitHub, I will show the work done by the
+migration team, the benefits of this migration and the new
+tools/workflow. Few tools have been developed to help the core-dev. For
+example, Miss Islington has been developed for an automatic back-port of
+a branch from Python ‘master’ to Python 3.6 or 3.5, just with a “label”
+on the Pull Request&lt;/p&gt;
+&lt;p&gt;I will show some stats about the contributors and the contributions on
+the CPython project. For example, in November 2017, 4207 pull requests
+from the community since the migration in Feb 2017.&lt;/p&gt;
+&lt;p&gt;The talk is explained with a story “Once upon a time” and with humour.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h4&gt;Outline&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction&lt;ul&gt;
+&lt;li&gt;small history about the beginning of Python, the status and the
+challenges.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Former workflows, former tools:&lt;ul&gt;
+&lt;li&gt;the CLA (PSF Contributor Agreement)&lt;/li&gt;
+&lt;li&gt;the bug tracker&lt;/li&gt;
+&lt;li&gt;patch review with the Rietveld tool&lt;/li&gt;
+&lt;li&gt;typical workflow&lt;/li&gt;
+&lt;li&gt;conclusion: We have an issue for the new comers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;New workflow, new tools&lt;ul&gt;
+&lt;li&gt;Git, why?&lt;/li&gt;
+&lt;li&gt;Github, why?&lt;/li&gt;
+&lt;li&gt;Web interface, Pull Requests, Dashboards&lt;/li&gt;
+&lt;li&gt;REST API, GraphQL API for the statistics&lt;/li&gt;
+&lt;li&gt;Automation with Travis, AppVeyor&lt;/li&gt;
+&lt;li&gt;New Bots: Bedevere, Miss Islington, “The Knights who say ni!”&lt;/li&gt;
+&lt;li&gt;New tool: Blurb&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Comparison between the former and new workflow&lt;/li&gt;
+&lt;li&gt;Statistics (between Feb 2017, and Nov 2017)&lt;ul&gt;
+&lt;li&gt;Number of Pull Requests (4204)&lt;/li&gt;
+&lt;li&gt;Number of Contributors (586) vs Core Dev&lt;/li&gt;
+&lt;li&gt;Merge time, Top, Average, etc….&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Q&amp;amp;A ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="additional-notes"&gt;
+&lt;h4&gt;Additional notes&lt;/h4&gt;
+&lt;p&gt;This talk has been presented at PyCon Canada in November 2017 at
+Montreal in front of two core-devs of Python, Brett Cannon and Mariatta
+Wijaya. Also reviewed by Victor Stinner core-dev python&lt;/p&gt;
+&lt;p&gt;My talk has been shared on the python-dev mailing list by Victor
+Stinner:
+&lt;a class="reference external" href="https://mail.python.org/pipermail/python-dev/2017-December/151051.html"&gt;https://mail.python.org/pipermail/python-dev/2017-December/151051.html&lt;/a&gt;
+because the statistics were interesting for the core-dev.&lt;/p&gt;
+&lt;p&gt;Presentation at PyCon Canada 2017: &lt;a class="reference external" href="https://2017.pycon.ca/schedule/4/"&gt;https://2017.pycon.ca/schedule/4/&lt;/a&gt;
+Slides:
+&lt;a class="reference external" href="https://speakerdeck.com/matrixise/cpython-loves-your-pull-requests"&gt;https://speakerdeck.com/matrixise/cpython-loves-your-pull-requests&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My experience, speaker at PyCon Canada 2015, 2016 and 2017 Python FOSDEM
+2013, 2014, 2015 and 2017 PyCon Ireland 2015, 2016, and 2017 PyCon
+France 2012, 2014, 2016, 2017 PyCon UK 2015 EuroPython 2015, 2016 and
+2017. Montreal Python September 2015 and November 2017.&lt;/p&gt;
+&lt;p&gt;Organizer of Python FOSDEM (+- 600 people) in Belgium Co-Organizer of
+EuroPython 2015, 2016 and 2017 (as member of the Web workgroup).&lt;/p&gt;
+&lt;p&gt;Fellow Member of the Python Software Foundation since 2013 Member of the
+Fellow Workgroup for the PSF Member of the Marketing Workgroup for the
+PSF&lt;/p&gt;
+&lt;p&gt;Of course, contributor of CPython, mainly on Devguide and sometimes on
+the main repository with some fixes, new features.&lt;/p&gt;
+&lt;p&gt;For my contribution to the migration of Python.
+&lt;a class="reference external" href="https://mail.python.org/pipermail/python-committers/2017-February/004220.html"&gt;https://mail.python.org/pipermail/python-committers/2017-February/004220.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Others presentations where I explain the interpreter and the bytecode of
+Python &lt;a class="reference external" href="https://speakerdeck.com/matrixise/architecture-of-cpython-part-1"&gt;https://speakerdeck.com/matrixise/architecture-of-cpython-part-1&lt;/a&gt;
+&lt;a class="reference external" href="https://speakerdeck.com/matrixise/exploring-our-python-interpreter"&gt;https://speakerdeck.com/matrixise/exploring-our-python-interpreter&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stéphane Wirtel</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/cpython-loves-your-pull-requests.html</guid><category>statistics</category><category>core-programming</category><category>CPython</category><category>community</category><category>github</category><category>git</category></item><item><title>Heroku: come deployare un'app Django in 10 minuti!</title><link>https://pyvideo.org/pycon-italia-2018/heroku-come-deployare-unapp-django-in-10-minuti.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Se sei stanco di occuparti di &lt;em&gt;load balancing&lt;/em&gt; , &lt;em&gt;routing&lt;/em&gt; e &lt;em&gt;cloud
+monitoring&lt;/em&gt; e vorresti dedicarti solo a &lt;em&gt;lambda function&lt;/em&gt; , &lt;em&gt;list
+comprehension&lt;/em&gt; o &lt;em&gt;class-based view&lt;/em&gt; allora questo è il talk che fa per
+te.&lt;/p&gt;
+&lt;p&gt;Heroku è la piattaforma PaaS ( &lt;em&gt;Platform as a Service&lt;/em&gt; ) che consente
+agli sviluppatori di creare, eseguire e gestire applicazioni interamente
+nel cloud. Ad essere fornito come servizio non c’è solo l’hardware, ma
+anche la piattaforma che astrae l’hardware stesso e permette di
+usufruire di funzionalità che consentono di ottenere bilanciamenti
+automatici, gestione del deployment e altro ancora.&lt;/p&gt;
+&lt;p&gt;Il vantaggio per l’utente è quello di concentrarsi solo ed
+esclusivamente sullo sviluppo dell’applicazione senza perdersi
+nell’analisi di problematiche legate all’ambiente in cui essa deve
+essere distribuita ottenendo così la scalabilità e l’affidabilità
+necessaria.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 15:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sabatino Severino</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/heroku-come-deployare-unapp-django-in-10-minuti.html</guid><category>paas</category><category>continuous-integration</category><category>github</category><category>continuous-delivery</category><category>Python</category><category>pipeline</category><category>django</category><category>heroku</category><category>git</category><category>deployment</category><category>web development</category></item><item><title>Usare Odoo come framework</title><link>https://pyvideo.org/pycon-italia-2018/usare-odoo-come-framework.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il framework Odoo offre agli sviluppatori la possibilità di estendere
+Odoo per raggiungere gli obiettivi di business e (si spera) rendere Odoo
+più adatto al flusso di lavoro aziendale. In questo talk tratteremo come
+realizzare: La struttura di base di un modulo Odoo. Lo sviluppo di un
+modulo Odoo base. Creazione e modifica di un Report Qweb in Odoo.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 16:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eliumara López</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/usare-odoo-come-framework.html</guid><category>github</category><category>postgresql</category><category>postgres</category><category>#Python</category><category>Python</category><category>#Odoo</category><category>Qweb</category><category>git</category><category>#OCA</category><category>#PostrgreSQL</category><category>#github</category></item><item><title>Usare Odoo come framework</title><link>https://pyvideo.org/pycon-italia-2018/usare-odoo-come-framework.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il framework Odoo offre agli sviluppatori la possibilità di estendere
+Odoo per raggiungere gli obiettivi di business e (si spera) rendere Odoo
+più adatto al flusso di lavoro aziendale. In questo talk tratteremo come
+realizzare: La struttura di base di un modulo Odoo. Lo sviluppo di un
+modulo Odoo base. Creazione e modifica di un Report Qweb in Odoo.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;venerdì 20 aprile&lt;/strong&gt; at 16:45 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eliumara López</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/usare-odoo-come-framework.html</guid><category>github</category><category>postgresql</category><category>postgres</category><category>#Python</category><category>Python</category><category>#Odoo</category><category>Qweb</category><category>git</category><category>#OCA</category><category>#PostrgreSQL</category><category>#github</category></item><item><title>7 Steps to a Clean Issue Tracker</title><link>https://pyvideo.org/pycon-sk-2018/7-steps-to-a-clean-issue-tracker.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A lot of open source maintainers suffer from having to maintain the
+flood of incoming issues/tikets on their project. We've scraped more
+than 10000 GitHub projects and interviewed more than 100 software
+developers and project managers of companies like GitLab. As a result,
+we have identified a few simple steps that can help managing the load of
+issues.&lt;/p&gt;
+&lt;p&gt;This talk sums up the steps and approaches needed to deal with this as
+well as automate it.&lt;/p&gt;
+&lt;p&gt;For a full summary, check out &lt;a class="reference external" href="https://about.gitlab.com/2017/10/26/triage-issues-gitmate/"&gt;our blog post with
+GitLab&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="who-and-why"&gt;
+&lt;h4&gt;Who and Why&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;The talk is for project managers and open source maintainers or
+software developers that deal with issues every day. This includes
+specifically people working in teams with more than 30 issues a
+month opened.&lt;/li&gt;
+&lt;li&gt;There's no background knowledge needed. The talk will be best for
+people who have triaged issues before at least in a small scale and
+recognize the problem, they will be able to pick up the approaches
+better and faster.&lt;/li&gt;
+&lt;li&gt;On an emotional level, I expect the audience to get to know the
+&amp;quot;attitude&amp;quot; needed to get rid of noise when triaging issues. After
+the talk, they should have a few concrete steps in mind that they
+can try using in the first days and eventually deduct their own
+process from it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lasse Schuirmann</dc:creator><pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-03-10:pycon-sk-2018/7-steps-to-a-clean-issue-tracker.html</guid><category>GitHub</category><category>GitLab</category><category>PyCon SK</category><category>Python</category></item><item><title>Continuous Delivery for Iot with Python and Iottly</title><link>https://pyvideo.org/pycon-italia-2017/continuous-delivery-for-iot-with-python-and-iottly.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We know, continuous delivery is one of the current buzzwords (much like
+IoT was a couple of years ago). But think of an industrial IoT project
+connecting thousands of remote and inaccessible devices which should be
+kept secure and updated over time. Now, imagine you can just write
+Python code for your devices, test it over-the-internet both locally in
+the lab, and in a real test environment simply by pushing your code to
+specific branches and finally just pushing to master to update the
+entire fleet.&lt;/p&gt;
+&lt;p&gt;During the talk we will use Iottly to showcase this continuous delivery
+pattern for the internet of things, with live code and connected devices
+(Raspberry Pi).&lt;/p&gt;
+&lt;p&gt;Iottly is a Development and Management Cloud Service for IoT Projects,
+built by TomorrowData. Iottly is written in Python and is open source
+(github). It features a Python sandbox for the devices, an online editor
+to program the devices over-the-internet, and the integration with git
+as the base for continuous delivery.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefano Terna</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/continuous-delivery-for-iot-with-python-and-iottly.html</guid><category>raspberrypi</category><category>git</category><category>continuous-delivery</category><category>iot</category><category>over-the-air firmware upgrade</category><category>InternetOfThings</category><category>InternetDelleCose</category><category>github</category><category>IDE</category></item></channel></rss>

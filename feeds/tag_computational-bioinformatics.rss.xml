@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 19 Jul 2012 00:00:00 +0000</lastBuildDate><item><title>Fcm - A python library for flow cytometry</title><link>https://pyvideo.org/scipy-2012/fcm-a-python-library-for-flow-cytometry.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cellular populations in biology are often heterogeneous, and aggregate
+assays such as expression arrays can obscure the small differences
+between these populations. Examples where these differences can be
+highly significant include the identification of antigen-specific immune
+cells, stem cells and circulating cancer cells. As the frequency of such
+cells in the blood can be vanishingly small, assays to detect signals at
+the single cell level are essential. Flow cytometry is probably the best
+established single cell assay, and has been an integral tool in
+immunology and biology for decades, able to measure cellular marker
+levels for individual cells, as well as population statistics over
+millions of cells.&lt;/p&gt;
+&lt;p&gt;Recent technological innovations in flow cytometry have increased the
+number of cell markers capable of being resolved simultaneously, and
+visual analysis (gating) is difficult and error prone with increasing
+data dimensionality. Hence there is increasing demand for tools to
+automate the analysis and management of flow data, so as to increase
+accuracy and reproducibility. However, essentially all software used by
+flow cytometry laboratories is commercial and based on the visual
+analysis paradigm. With the exception of the R BioConductor project, we
+are not aware of any other full-featured open source tools for analyzing
+flow data. The few open source flow software modules that exist simply
+extracts data from FCS (flow cytometry standard) files into tabular/csv
+format, losing all metadata associated with the file, and provide no
+additional tools for analysis. We therefore decided to develop the &lt;em&gt;fcm&lt;/em&gt;
+library in python that would provide a foundation for flow cytometry
+data management and analysis.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;fcm&lt;/em&gt; library provides functions to load fcs files, apply spectral
+compensation, and perform standard log and log-like transforms for
+visualization. The library also provides objects and methods for
+traditional gating-based analysis, including standard polygon,
+threshold, interval, and quadrant gates. Using &lt;em&gt;fcm&lt;/em&gt; and other common
+python libraries, one can quickly write scripts for doing large scale
+batch analysis. In addition to gating- based analysis, &lt;em&gt;fcm&lt;/em&gt; provides
+methods to do model-based analysis, utilizing GPU-optimized statistical
+models to identify cell subsets. These statistical models provide a
+data-driven way to construct generative probability models that scale
+well with the increasing dimensionality of flow data and do not require
+expert input to identify cell subsets. High performance computational
+routines to fit statistical models are optimized using cython and
+pycuda. More specialized tools for the analysis of flow data include the
+use of a novel information measure to optimize reagent panels and
+analysis strategies, and optimization methods for automatic
+determination of positivity thresholds.&lt;/p&gt;
+&lt;p&gt;We are currently using the &lt;em&gt;fcm&lt;/em&gt; library for the analysis of tetramer
+assays for cancer immunotherapy, as well as intracellular expression of
+effector molecules in the NIAID-sponsored External Quality Assurance
+Policy Oversight Laboratory (EQAPOL) program to standardize flow
+cytometry assays in HIV studies. An illustrative example is the use of
+&lt;em&gt;fcm&lt;/em&gt; in building a pipeline for the Cytostream application to automate
+the analysis of 459 FCS files from 12 laboratories, reducing the
+analysis time of one month to a single evening.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jacob Frelinger</dc:creator><pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-19:scipy-2012/fcm-a-python-library-for-flow-cytometry.html</guid><category>Computational Bioinformatics</category></item><item><title>nmrglue: a Python Module for Working with NMR Data.</title><link>https://pyvideo.org/scipy-2012/nmrglue-a-python-module-for-working-with-nmr-dat.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nuclear magnetic resonance (NMR) spectroscopy is a key analytical
+technique in the biomedical field, finding uses in drug discovery,
+metabolomics, and imaging as well as being the primary method for the
+determination of the structures of biological macromolecules in
+solution. In the course of a modern NMR structural or dynamic study of
+proteins and other biomolecules, experiments typically generate multiple
+gigabytes of 2D, 3D and even 4D data sets which must be collected,
+processed, analyzed, and visualized to extract useful information. The
+field has developed a number of software products to perform these
+functions, but few software suites exist that can perform all of the
+tasks which a typical scientist requires. For example, it is not
+uncommon for NMR data to be collected using software provided by the
+spectrometer vendor, processed and visualized using software from the
+NIH, and analyzed using software from a University, collaborator or
+developed in house. Complicating this process is the lack of a standard
+format for storing NMR data; each software program typically uses its
+own format for data storage.&lt;/p&gt;
+&lt;p&gt;nmrglue is an open source Python module for working with NMR data which
+acts as the &amp;quot;glue&amp;quot; to tie together existing NMR programs, and can be
+used to rapidly develop new NMR processing, analysis or visualization
+methods. With nmrglue, spectral data from a number of common NMR file
+formats can be accessed as numpy arrays. This data can be sliced,
+rearranged or modified as needed and written out to any of the supported
+file formats for later use in existing NMR software programs. In this
+way, nmrglue can act as the &amp;quot;glue&amp;quot; to tie together NMR workflows which
+employ existing NMR software.&lt;/p&gt;
+&lt;p&gt;In addition, nmrglue can be used in conjunction with other scientific
+python libraries to rapidly test, prototype, and develop new methods for
+processing, analyzing, and visualizing NMR data. The nmrglue package
+provides a number of common NMR processing functions, as well as
+implementation of scientific routines which may be of interest to other
+Python projects including peak pickers, multidimensional lineshape
+fitting routines, linear prediction functions, and a bounded least
+squares optimization. These functions together, with the ability to
+read, write and convert between a number of common file formats, allow
+developers to harness nmrglue for established routines while focusing on
+the novel portion of the new method being created. In addition, the
+numerical routines in numpy and scipy can be used to further speed this
+process. If these packages are used with the Ipython shell and
+matplotlib, a robust, interpreted environment for exploring and
+visualizing NMR data can be created using only open source software.&lt;/p&gt;
+&lt;p&gt;nmrglue is distributed under the New BSD license. Documentation,
+tutorials, examples, and downloadable install files and source code are
+available at &lt;a class="reference external" href="http://code.google.com/p/nmrglue/"&gt;http://code.google.com/p/nmrglue/&lt;/a&gt;. Despite a limited
+exposure in the scientific field, nmrglue is already used in a number of
+university research labs and portions of the package have been adapted
+for use in VeSPA, a software suite for magnetic resonance spectroscopy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jonathan J. Helmus</dc:creator><pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-19:scipy-2012/nmrglue-a-python-module-for-working-with-nmr-dat.html</guid><category>Computational Bioinformatics</category></item></channel></rss>

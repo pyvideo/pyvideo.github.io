@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 18 Jul 2012 00:00:00 +0000</lastBuildDate><item><title>OpenMG: A New Multigrid Implementation in Python</title><link>https://pyvideo.org/scipy-2012/openmg-a-new-multigrid-implementation-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Here, include a talk summary of no longer than 500 words. Aspects such
+as relevance to Python in science, applicability, and novelty will be
+considered by the program committee.&lt;/p&gt;
+&lt;p&gt;In most large-scale computations, systems of equations arise in the form
+Au=b, where A is a linear operation to be performed on the unknown data
+u, producing the known right-hand-side, b, which represents some
+constraint of known or assumed behavior of the system being modeled.
+Since u can have a many millions to billions elements, direct solution
+is too slow. A multigrid solver solves partially at full resolution, and
+then solves directly only at low resolution. This creates a correction
+vector, which is then interpolated to full resolution, where it corrects
+the partial solution.&lt;/p&gt;
+&lt;p&gt;This project aims to create an open-source multigrid solver library,
+written only in Python. The existing PyAMG multigrid implementation–a
+highly versatile, highly configurable, black-box solver–is fully
+sequential, and is difficult to read and modify due to its C core.
+OpenMG is a pure Python experimentation environment for developing
+multigrid optimizations, not a new production solver library. By making
+the code simple and modular, we make the alogrithmic details clear. We
+thereby create an opportunity for education and experimental
+optimization of the partial solver (Jacobi, Gauss Seidel, SOR, etc.),
+the restriction mechanism, the prolongation mechanism, and the direct
+solver, using GPGPU, multiple CPUs, MPI, or grid computing. The
+resulting solver is tested on an implicit pressure reservoir simulation
+problem with satisfactory results.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Akand W. Islam</dc:creator><pubDate>Wed, 18 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-18:scipy-2012/openmg-a-new-multigrid-implementation-in-python.html</guid><category>hpc</category></item></channel></rss>

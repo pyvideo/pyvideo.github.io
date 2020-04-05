@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 04 Aug 2019 00:00:00 +0000</lastBuildDate><item><title>Automated Large Scale Forecasting for 1000+ products</title><link>https://pyvideo.org/pydata-delhi-2019/automated-large-scale-forecasting-for-1000-products.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Forecasting is very critical to businesses. It helps them plan for the
+future and gives them an opportunity to be prepared for upcoming demand.
+It is often required in practice to estimate demand for thousands of
+products, e.g SKUs in retail stores. It s not humanly possible to create
+these many models. In this session, we show how we did this for a large
+retailer.&lt;/p&gt;
+&lt;div class="section" id="outline-of-talk"&gt;
+&lt;h4&gt;Outline of Talk&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Importance of Forecasting&lt;/li&gt;
+&lt;li&gt;Overview of Time series Forecasting Techniques&lt;ul&gt;
+&lt;li&gt;ARIMA&lt;/li&gt;
+&lt;li&gt;Exponential Smoothing&lt;/li&gt;
+&lt;li&gt;XGBoost&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Generating Prediction Intervals for the Forecast&lt;/li&gt;
+&lt;li&gt;Our approach for forecasting large number of products&lt;ul&gt;
+&lt;li&gt;Problem Statement&lt;/li&gt;
+&lt;li&gt;Solution Methodology&lt;/li&gt;
+&lt;li&gt;Code Walk through&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Questions and Answers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aanish Singla</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/automated-large-scale-forecasting-for-1000-products.html</guid></item><item><title>Closing Notes PyData Delhi 2019</title><link>https://pyvideo.org/pydata-delhi-2019/closing-notes-pydata-delhi-2019.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;#PyDataDelhi19 is a wrap. Huge thanks to all the attendees, speakers, sponsors, reviewers and awesome volunteers. See you in 2020.&lt;/p&gt;
+&lt;p&gt;After Video - &lt;a class="reference external" href="https://youtu.be/P1PeTLfnEYo"&gt;https://youtu.be/P1PeTLfnEYo&lt;/a&gt;
+Attendees Experience - &lt;a class="reference external" href="https://youtu.be/yldx0gFnHLY"&gt;https://youtu.be/yldx0gFnHLY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/closing-notes-pydata-delhi-2019.html</guid></item><item><title>Deep Sequence Models for Attribute Extraction from Product Titles</title><link>https://pyvideo.org/pydata-delhi-2019/deep-sequence-models-for-attribute-extraction-from-product-titles.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We are working on extracting attributes (brand, shape, color etc) from
+raw product descriptions. The text is short and noisy and highly
+contextual and the labeling of attributes for training ML models is
+costly. I discuss how we build a deep sequence CNN-BiLSTM-CRF model in
+Pytorch to extract attributes from noisy text with minimum labeling
+using an active learning approach.&lt;/p&gt;
+&lt;p&gt;At Clustr, I am working on converting raw product data available with
+SMEs to structured catalog. One of the key tasks of building catalogue
+is extracting attributes from raw product titles. Typical attributes
+include Brands, Color, Shape, measurement etc. Product titles are
+usually very short text describing the product without any significant
+grammar. The titles are very dependent on the user which generates very
+noisy text with abbreviations, spelling mistakes, omiitted text,
+improper spaces, transliteration etc. The additional challenge is
+availability of labeled data to train a machine learning model on this.
+The product data we receive is not labeled and labeling is a costly
+excercise. I show how we built a deep sequence model with CNN, BiLSTM
+and CRF architecture and tuned it using active learning methods for this
+task.&lt;/p&gt;
+&lt;p&gt;I will discuss various deep sequence models combined with conditional
+random fields to label attributes from such text and outline pros and
+cons of different architectures. The model uses pretrained word
+embeddings. I will outtine some of the challenges of sparse tokens and
+noise while building our domain specific word embeddings. A key aspect
+of the problem is the lack of labeled data and high cost of getting this
+data. To minimize the cost of labeling I trained our model using an
+active learning approach. The active labeling requires sampling
+strategies such that minimum labeling can have maximum improvement in
+model performance. I implemented both model confidence based sampling
+and data coverage based sampling such that we are able to label examples
+which the model is least confident about and which are very different
+from the existing training examples. The active learning examples in a
+single training iteration were only about 1000 examples. Training models
+with such few examples required us to be very careful about overfitting
+in training. I will also talk about how I regularized the model.&lt;/p&gt;
+&lt;p&gt;To rapidly iterate in experiments I created an experimental setup which
+allowed rapid changes and traceability. It was challenging to measure
+the performance of the model and understand the limitations of the
+model. To do this more effectively, I tracked various metrics to measure
+the performance of the model including various metrics relevant to the
+Named Entity Tasks. These metrics were very informative in identifying
+the gaps in the model. I will discuss these in detail.&lt;/p&gt;
+&lt;p&gt;Overall this talk will provide audience a good in depth understanding of
+how deep sequence models are built in Pytorch for challenging
+information extraction tasks. They will understand the pros and cons of
+different architectures, things to keep in mind while tuning such deep
+models and how active learning is performed in deep sequence models.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Deepak Sharma</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/deep-sequence-models-for-attribute-extraction-from-product-titles.html</guid></item><item><title>Differentiable Programming: An Exciting Generalization of Deep Neural Networks</title><link>https://pyvideo.org/pydata-delhi-2019/differentiable-programming-an-exciting-generalization-of-deep-neural-networks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Delhi 2019 Keynote on Differentiable Programming - An exciting generalization of deep neural networks by Dr Viral B. Shah.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dr Viral B. Shah</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/differentiable-programming-an-exciting-generalization-of-deep-neural-networks.html</guid></item><item><title>How I Used Data Visualization in My Quest for the Perfect Wine</title><link>https://pyvideo.org/pydata-delhi-2019/how-i-used-data-visualization-in-my-quest-for-the-perfect-wine.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For many, wine is a taste acquired over many years; others use data. In
+this talk, I recite the story of how I uncovered the constituents of a
+good wine using Data Visualization while discussing the nuances of
+Exploratory Data Analysis (EDA) – the process of taking the first glance
+at data.&lt;/p&gt;
+&lt;div class="section" id="idea-behind-the-talk"&gt;
+&lt;h4&gt;Idea Behind The Talk&lt;/h4&gt;
+&lt;p&gt;With the rise of tools allowing for smooth implementation of powerful
+algorithms, it is tempting to skip EDA. However, &lt;strong&gt;EDA is just as
+important as any part of a data project; if you don't know your data
+well enough, you can end up doing very shallow work&lt;/strong&gt; , i.e., inaccurate
+models, choosing wrong variables, inefficient use of resources, or all
+of the above. Sometimes, EDA uncovers more than what the confirmatory
+study would've done otherwise.&lt;/p&gt;
+&lt;p&gt;Exploratory Data Analysis is what one should do when first encountering
+a dataset. However, it's not a one-off process: there are setbacks,
+multiple iterations, and the process sets the tone for a more formal
+analysis of data in hand. &lt;strong&gt;With a story-like format, the presentation
+mentions the setbacks one faces when performing a real data study.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The motivation behind creating this talk is to impart the idea of
+Exploratory Data Analysis, and how Data Visualizations help uncover
+patterns (not limited to the findings of the wine study). Moreover, I
+believe the format of a sharing a real story with the idea of &amp;quot;how to
+reach and infer from a specific plot&amp;quot; would help the audience understand
+data visualization better than talking about syntactic sugar of a
+particular visualization library. Moreover, the ideas can be further
+generalized to any other visualization library.&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline-of-the-talk"&gt;
+&lt;h4&gt;Outline of the Talk&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;History of Wine &amp;amp; Data Science&lt;/li&gt;
+&lt;li&gt;Introduction to Exploratory Data Analysis (EDA)&lt;/li&gt;
+&lt;li&gt;Why Data Visualization? – Anscombe's Quartet&lt;/li&gt;
+&lt;li&gt;The Grammar of Graphics: Why I used ggplot2?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="wine-project-finding-constituents-of-good-red-white-wines"&gt;
+&lt;h5&gt;Wine Project: Finding Constituents of Good Red &amp;amp; White Wines&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;About the Project &amp;amp; How to Replicate It?&lt;/li&gt;
+&lt;li&gt;How to Quantify ‘Artistic’ Measures?&lt;/li&gt;
+&lt;li&gt;Principles of Data Visualization to Uncover Patterns&lt;/li&gt;
+&lt;li&gt;Inspecting Data Using Univariate, Bivariate &amp;amp; Multivariate Plots&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="aspects-of-eda-not-used-in-the-wine-project"&gt;
+&lt;h5&gt;Aspects of EDA Not Used In the Wine Project&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to Prepare Your Dataset? – Data Aggregation&lt;/li&gt;
+&lt;li&gt;How to Remove Outliers Using Data Visualization&lt;/li&gt;
+&lt;li&gt;How to Decide the Best Fit During EDA&lt;/li&gt;
+&lt;li&gt;When to Transform Variables&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pranav Suri</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/how-i-used-data-visualization-in-my-quest-for-the-perfect-wine.html</guid></item><item><title>Image Manipulation Detection using Neural Networks</title><link>https://pyvideo.org/pydata-delhi-2019/image-manipulation-detection-using-neural-networks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the present world of social networking, image manipulation is the
+easiest and the scariest job! This requires an utter need of efficient
+image manipulation detection techniques. Moving from the traditional
+image manipulation detection techniques to the present scenario, CNN can
+be the perfect deep learning model as the human visual cortex has the
+ability to detect tampered areas in an image!&lt;/p&gt;
+&lt;p&gt;With the advent of social networking services like Facebook and
+Instagram in the past few decades, the sharing of digital images has
+substantially increased. Also, these images can be easily modified these
+days by using easily available image processing softwares like Adobe
+Photoshop. These modified images are used for fake news, mob incitement,
+etc. Hence there is a crucial need for image authentication schemes that
+can verify if the image is authentic or manipulated. Earlier, most of
+the research in this direction has been done in pixel based, format
+based, camera based, physics based and geometry based schemes. All these
+schemes work upon the visual information of the image. Recently, CNN’s
+came into picture that are inspired by visual cortex. It was analyzed
+that it is possible for a human visual cortex to detect tampered areas
+in an image. Thus CNN can be the perfect deep learning model for this
+job! Content to be discussed: Traditional Image Manipulation Detection
+Techniques Various datasets available for Image Manipulation Detection
+Experimentation Learning Rich Features for Image Manipulation Detection
+CNN based Image Manipulation Detection Techniques&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sonal Kukreja</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/image-manipulation-detection-using-neural-networks.html</guid></item><item><title>Improving Model Lifecycle Management for Machine Learning Models</title><link>https://pyvideo.org/pydata-delhi-2019/improving-model-lifecycle-management-for-machine-learning-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk presents a systematic approach to improve model lifecycle
+management for machine learning models, using Python/DevOps tools and
+processes to enable self-served model development and deployment; a
+four-step workflow guides the developer/modeler to develop, automate,
+test and implement the model in a virtual environment in a
+production-ready manner.&lt;/p&gt;
+&lt;p&gt;Statistical/machine-learning modeling is often subject to regulatory
+mandates on model development, validation, deployment and monitoring.
+These mandates are liable to require that production models are
+fit-for-purpose, are accurately implemented and obey with local laws and
+regulations. However in many environment complying with such mandates is
+extremely onerous and time consuming, e.g. due to the use of legacy
+technologies and workflows or unstructured model development by data
+scientists.&lt;/p&gt;
+&lt;p&gt;This talk presents a systematic approach to this challenge, using
+Python/DevOps tools and processes to enable self-served model
+development and deployment; a four-step workflow guides the modeler to
+develop, automate, test and implement the model in a virtual environment
+in a production-ready manner. The approach is in use by the Quantitative
+Analytics team at Barclays bank, but we believe that the issues and
+potential solutions are relevant to the other regulated industries.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pankaj Gupta</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/improving-model-lifecycle-management-for-machine-learning-models.html</guid></item><item><title>Knowledge Graph made simple using NLP and Transfer Learning</title><link>https://pyvideo.org/pydata-delhi-2019/knowledge-graph-made-simple-using-nlp-and-transfer-learning.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In 30 years, dunnhumby has built a huge knowledge base. GRAKN.AI is a
+powerful Knowledge Graph database that provides automated reasoning to
+connect information together and derive powerful insights. The challenge
+is that it has its own query language. We present here a solution based
+on NLP and transfer learning that converts any questions into a GRAKN
+query, making its content accessible to all.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;dunnhumby&lt;/strong&gt; , the world’s first data science platform has around 400+
+Data Scientist, delivering 1000+ projects yearly using 50+ analytical
+solutions. This huge knowledge base has an abundance of information
+which can be explored to extract useful insights to help employees and
+stakeholders better the processes and progress in right direction.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GRAKN&lt;/strong&gt; : GRAKN.AI is knowledge graph, a database to organise complex
+networks of data and make it queryable, by performing knowledge
+engineering. Grakn provides the knowledge foundation for cognitive and
+intelligent (e.g. AI) systems, by providing an intelligent language for
+modelling, transactions and analytics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Graql&lt;/strong&gt; : GRAKN’s query language provides an enhanced
+entity-relationship schema to model complex datasets. It performs
+logical inference through entity and relationship type deductive
+reasoning, as well as rule-based reasoning. This allows the discovery of
+facts and patterns that would otherwise be too hard to find.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The issue&lt;/strong&gt; : As mentioned above GRAKN has its own query language
+called graql. Naïve users cannot efficiently leverage the power of GRAKN
+directly due to lack of technical knowledge.&lt;/p&gt;
+&lt;p&gt;An example of query to find an expert at the algorithm XGBoost:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+match
+$ expert isa employee, has name $name_expert;
+$algorithm isa algorithm, has name=’XGBoost’;
+($expert, $algorithm) isa leverage;
+get $name_expert;
+&lt;/pre&gt;
+&lt;p&gt;But what if they could express their question or request in their
+natural language?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt; : We have developed a solution which convert the
+natural language text into GRAKN queries and act as a precursor to the
+GRAKN input interface. Hence making knowledge graphs explorable to users
+who want to focus on insights rather than technicality.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Our Solution&lt;/strong&gt; : Algorithm is explained below:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Take input text string&lt;/li&gt;
+&lt;li&gt;Identify nouns and verbs from the string by using Word2Vec and
+Transfer Learning&lt;/li&gt;
+&lt;li&gt;Infer the nouns in the entity list available in Knowledge database&lt;/li&gt;
+&lt;li&gt;Similarly, infer verbs in the relations list available in Knowledge
+database&lt;/li&gt;
+&lt;li&gt;Also, match exact entity values with the nouns in the database.&lt;/li&gt;
+&lt;li&gt;Using the collection of similar entity, relations generate a match
+query containing entity and relations.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Eg.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;User&lt;/em&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+“Tell me who is an expert at ‘XGBoost’ ”
+&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;Text2GQL&lt;/em&gt;&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+match
+$ expert isa employee, has name $name_expert;
+$algorithm isa algorithm, has name=’XGBoost’;
+($expert, $algorithm) isa leverage;
+get $name_expert;
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Future enhancement&lt;/strong&gt; : Idea is to make the tool generic which takes
+schema, data source (json) and input string and generates a grakn query
+which would be used an input to grakn interface. Also we can use similar
+approach to automate the process of parsing documents and identifying
+entities and relations which could be inserted in the graph database.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Suyog Swami</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/knowledge-graph-made-simple-using-nlp-and-transfer-learning.html</guid></item><item><title>Panel Discussion @ PyData Delhi 2019</title><link>https://pyvideo.org/pydata-delhi-2019/panel-discussion-pydata-delhi-2019.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Panel Discussion at PyData Delhi19.The speakers provided a diverse perspective on topics such as women in tech platforms and a comparison between the oriental and the western education system.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/panel-discussion-pydata-delhi-2019.html</guid></item><item><title>Understanding user churn in GoPay (Sponsored Talk)</title><link>https://pyvideo.org/pydata-delhi-2019/understanding-user-churn-in-gopay-sponsored-talk.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to identify customers who are dissatisfied with your product? How to
+understand what churning users need &amp;amp; provide them the right incentives?
+At GoPay we have created a marketing channel using incentive offers to
+bring back churning users. The key elements of our strategy are: 1.
+Identifying users who are most likely to churn 2. Providing the right
+incentives for the churning population&lt;/p&gt;
+&lt;p&gt;In this talk we will discuss our experience at GoPay on using incentives
+to win some churners back. The talk will have 4 components:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Defining churn mathematically&lt;/li&gt;
+&lt;li&gt;Modelling probability of a user churning in a given timeframe&lt;/li&gt;
+&lt;li&gt;Finding the right incentives to bring back churned users&lt;/li&gt;
+&lt;li&gt;Software infrastructure for the end-to-end process&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We will also discuss some next steps we are developing:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Experimentation framework to test custom incentive structures&lt;/li&gt;
+&lt;li&gt;Moving from a fixed timeframe to a continuous monitoring system&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Karthik Vijayakumar</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/understanding-user-churn-in-gopay-sponsored-talk.html</guid></item><item><title>Using NLP for disaster management</title><link>https://pyvideo.org/pydata-delhi-2019/using-nlp-for-disaster-management.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;During disasters, it is extremely crucial that the right resources are
+received to the victims within time. Disaster relief NGO's revealed that
+there is often mismanagement and lack of coordination. Also, often
+identifying right resources takes up a lot of crucial time. To aid this,
+we developed an algorithm that identifies locations from microblogs,
+upto 100x faster than SoTA StanfordNLP.&lt;/p&gt;
+&lt;p&gt;We first developed an algorithm to identify location from microblogs in
+a real time situation, which was 100 times faster than state of the art
+StanfordNLP. The proposed algorithm is also faster than other tools. We
+used NLP tools like dependency paring, Named Entity Recognition, and
+other rules to identify the location. This resulted into a research
+paper at WWW2018, WebConf held at France. To further assist disaster
+relief attempts, we developed a platform that could identify crucial
+information like Resources, location, quantity etc thus effectively
+using social media to aid disaster mitigation. The proposed platform
+emerged first in Microsoft's code.fun.do Hackathon out of 242
+participants, and was one of 21 student projects to be demonstrated on a
+national level at Microsoft's AXLE, 2019.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kaustubh Hiware</dc:creator><pubDate>Sun, 04 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-04:pydata-delhi-2019/using-nlp-for-disaster-management.html</guid></item><item><title>Auria Kathi - The power of Multi Model Machine Learning Pipelines</title><link>https://pyvideo.org/pydata-delhi-2019/auria-kathi-the-power-of-multi-model-machine-learning-pipelines.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Considering the current state of art deep learning algorithms, we might
+not be able to come up with a single algorithm or network which can
+build an advanced creative application. But the components of the
+application can be emulated using individual state of art algorithms.
+This is called a Multi-model Pipeline architecture for Auria.&lt;/p&gt;
+&lt;div class="section" id="basic-outline-of-the-talk"&gt;
+&lt;h4&gt;Basic outline of the talk&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Basic Machine Learning Pipelines [3-5mins]&lt;/li&gt;
+&lt;li&gt;Using multiple models in a Machine Learning Pipeline [5-7mins]&lt;ul&gt;
+&lt;li&gt;Why multiple models?&lt;/li&gt;
+&lt;li&gt;How it is different from the single model pipelines?&lt;/li&gt;
+&lt;li&gt;What are the challenges?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Case study - Auria Kathi the first poet artist [10-15mins]&lt;ul&gt;
+&lt;li&gt;Auria Kathi introduction&lt;/li&gt;
+&lt;li&gt;Engineering Pipeline of Auria Kathi&lt;/li&gt;
+&lt;li&gt;Azure Machine Learning Pipelines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conclusion and Q&amp;amp;A session [2mins]&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="auria-kathi-ai-poet-artist"&gt;
+&lt;h4&gt;Auria Kathi - AI Poet Artist&lt;/h4&gt;
+&lt;p&gt;Auria Kathi is an artificial artist and poet completely living online.
+&amp;quot;Auria Kathi&amp;quot; is an anagram for &amp;quot;AI Haiku Art&amp;quot;. Auria generates a short
+poem, draws an abstract art based on the poem, and then colors the
+picture depending upon a mood. All these creative tasks are achieved
+using a multi-model ML pipeline.&lt;/p&gt;
+&lt;p&gt;Work of Auria is available in both Instagram and Twitter and will be
+posting daily for next year.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Instagram Handle: &lt;a class="reference external" href="https://www.instagram.com/auriakathi/"&gt;https://www.instagram.com/auriakathi/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter Handle: &lt;a class="reference external" href="https://twitter.com/AuriaKathi"&gt;https://twitter.com/AuriaKathi&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-engineering-pipeline-of-auria"&gt;
+&lt;h4&gt;The engineering pipeline of Auria&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;An LSTM based language model, trained on 3.5 lakhs Haikus scraped
+from Reddit. The model is used to generate artificial poetry.&lt;/li&gt;
+&lt;li&gt;A text to image network, called AttnGAN from Microsoft Research,
+which converts the generated Haiku to an abstract image.&lt;/li&gt;
+&lt;li&gt;A photorealistic style transfer algorithm which selects a random
+style image from WikiArt dataset, and transfer color and brush
+strokes to the generated image. The WikiArt dataset is a collection
+of 4k+ curated artworks, which are aggregated on the basis of
+emotions induced on human beings when the artwork is shown to them.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="Engineering Pipeline of Auria" src="https://sleebapaul.github.io/assets/auria_aml/auria_pipeline.png" /&gt;
+&lt;p class="caption"&gt;Engineering Pipeline of Auria&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="auria-on-news-and-publications"&gt;
+&lt;h4&gt;Auria on news and publications&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Creative Applications Network -
+&lt;a class="reference external" href="https://www.creativeapplications.net/member-submissions/auria-kathi-an-ai-artist-living-in-the-cloud/"&gt;https://www.creativeapplications.net/member-submissions/auria-kathi-an-ai-artist-living-in-the-cloud/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Coding Blues -
+&lt;a class="reference external" href="https://codingblues.com/2019/01/11/fabin-sleeba-and-wonderful-auria/"&gt;https://codingblues.com/2019/01/11/fabin-sleeba-and-wonderful-auria/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Creative AI Newsletter -
+&lt;a class="reference external" href="https://us15.campaign-archive.com/?u=c7e080421931e2a646364e3ef&amp;amp;id=d1a15e8502"&gt;https://us15.campaign-archive.com/?u=c7e080421931e2a646364e3ef&amp;amp;id=d1a15e8502&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Towards Datascience -
+&lt;a class="reference external" href="https://towardsdatascience.com/auriakathi-596dfb8710d6"&gt;https://towardsdatascience.com/auriakathi-596dfb8710d6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Towards Datascience -
+&lt;a class="reference external" href="https://towardsdatascience.com/auria-kathi-powered-by-microsoft-azure-machine-learning-pipelines-385de55de062"&gt;https://towardsdatascience.com/auria-kathi-powered-by-microsoft-azure-machine-learning-pipelines-385de55de062&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="florence-biennale-2019"&gt;
+&lt;h4&gt;Florence Biennale 2019&lt;/h4&gt;
+&lt;p&gt;At the 12th edition of Florence Biennale happens in October 2019, Auria
+is exhibiting her work under the contemporary digital art section. Being
+an international platform for Art, the presence of Auria's work produced
+by AI will be discussed in Florence Biennale with greater importance.
+Furthermore, how creative machines are going to build our future by
+inspiring artists to come up with novel ideas is also a crucial part of
+the discussion.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collaboration-with-microsoft"&gt;
+&lt;h4&gt;Collaboration with Microsoft&lt;/h4&gt;
+&lt;p&gt;Auria is a perfect use case of Microsoft envisioned Azure Machine
+Learning Pipelines, where each step can be conceived as a containerized
+computation step. Multiple models developed in diverse environments can
+be incorporated in the reproducible pipelines and it can be easily
+deployed as an API. Collaborating with Microsoft, Auria's creative
+pursuit is coming to a wider audience.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sleeba Paul</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/auria-kathi-the-power-of-multi-model-machine-learning-pipelines.html</guid></item><item><title>Automating Data Pipeline using Apache Airflow</title><link>https://pyvideo.org/pydata-delhi-2019/automating-data-pipeline-using-apache-airflow.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Manually running scripts to extract, transform and load data is a
+trade-off with time, is tedious and cumbersome. The process of building
+a data pipeline can be automated. Scripts to extract data can be
+scheduled using crontab. However, using crontab has its own drawbacks.
+One major challenge is monitoring. Airflow is a platform to
+programmatically author, schedule and monitor workflows.&lt;/p&gt;
+&lt;p&gt;Today, we are moving towards machine learning. Making predictions,
+finding out insights based on data. For the same purpose, the initial
+step is to have efficient processes in place which help us in collecting
+data from various different data sources. Using traditional ways to
+collect data is tedious and cumbersome. Manually running scripts to
+extract, transform and load data is a trade-off with time.&lt;/p&gt;
+&lt;p&gt;To make the process efficient. The data pipeline can be automated.
+Scripts to extract data can be auto-scheduled using crontab. However,
+using crontab has its own drawbacks. One major challenge comes in
+monitoring. This is where an open source tool built by AirBnB
+engineering team - Apache airflow helps. Airflow is a platform to
+programmatically author, schedule and monitor workflows.&lt;/p&gt;
+&lt;p&gt;The talk aims at introducing the attendees to.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Airflow - overview of the tool. Advantages, disadvantages&lt;/li&gt;
+&lt;li&gt;Directed acyclic graph - Examples of directed acyclic graph and
+directed cyclic graphs&lt;/li&gt;
+&lt;li&gt;Operators a. Bash Operator b. Python Operator c. Email Operator&lt;/li&gt;
+&lt;li&gt;Python context manager&lt;/li&gt;
+&lt;li&gt;Examples&lt;/li&gt;
+&lt;li&gt;Demo&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mridu Bhatnagar</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/automating-data-pipeline-using-apache-airflow.html</guid></item><item><title>Because You Can't Run, You Can't Hide: Some Musings on API Design</title><link>https://pyvideo.org/pydata-delhi-2019/because-you-cant-run-you-cant-hide-some-musings-on-api-design.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Because You Can't Run, You Can't Hide: Some Musings on API Design by James Powell &amp;#64; PyData Delhi 2019&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Powell</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/because-you-cant-run-you-cant-hide-some-musings-on-api-design.html</guid></item><item><title>Deepening Democracy through Data: Learnings from Indian Politics and Policy</title><link>https://pyvideo.org/pydata-delhi-2019/deepening-democracy-through-data-learnings-from-indian-politics-and-policy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deepening Democracy through Data: Learnings from Indian Politics and Policy by Roshan Shankar &amp;#64; PyData Delhi 2019&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roshan Shankar</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/deepening-democracy-through-data-learnings-from-indian-politics-and-policy.html</guid></item><item><title>Enhancing credit decision making for new applications using ML and Python</title><link>https://pyvideo.org/pydata-delhi-2019/enhancing-credit-decision-making-for-new-applications-using-ml-and-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This topic discusses the details of an application scorecard, a key risk decisioning tool used across all financial institutions. The talk will cover the aspects of model development on Python leveraging machine learning algorithms. Additionally, a bokeh based interactive visualization tool will be discussed, that will enable the risk officers to take the most profitable decisions.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rachita Das</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/enhancing-credit-decision-making-for-new-applications-using-ml-and-python.html</guid></item><item><title>Fundamental Results in ML and How to Use Them</title><link>https://pyvideo.org/pydata-delhi-2019/fundamental-results-in-ml-and-how-to-use-them.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ve all heard terms like Bayes error, perceptron learning theorem, the
+fundamental theorem of statistical learning, VC dimension, etc. This
+talk is about using the math-heavy fundamentals of machine learning to
+understand the very solvability of classification problems. By the end
+of the talk, you will get a clear picture of how these ideas can be
+practically applied to classification problems.&lt;/p&gt;
+&lt;p&gt;Why does a classifier not fit? This can only happen for two reasons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Because the model is not smart enough, or&lt;/li&gt;
+&lt;li&gt;Because the training data itself is not “classifiable”.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Unfortunately, the only obvious way to determine the &lt;em&gt;classifiability&lt;/em&gt;
+or &lt;em&gt;separability&lt;/em&gt; of a training dataset is to use a variety of
+classification models with a variety of hyperparameters. In other words,
+separability of classes in a dataset is usually expressed only in terms
+of which model worked on that dataset.&lt;/p&gt;
+&lt;p&gt;Unfortunately, this does not answer the fundamental question of whether
+a dataset is classifiable or not. If we keep on increasing the
+complexity of models and trying them out on a dataset without success,
+all we can infer from this is that the set of models we have tried out
+&lt;em&gt;so far&lt;/em&gt; are incapable of learning the classification problem. It does
+not necessarily mean that the problem is unsolvable.&lt;/p&gt;
+&lt;p&gt;Fortunately, many shallow learning models have been widely studied and
+are well understood. As such, it is quite possible to place theoretical
+bounds on their performance in the context of a dataset. There are a
+variety of statistics that we can use &lt;em&gt;a priori&lt;/em&gt; to determine the
+likelihood of a model fitting a dataset.&lt;/p&gt;
+&lt;p&gt;This talk is about how we can use these results towards developing a
+strategy, a structured approach for carrying out machine learning
+experiments, instead of blindly running models and hoping that one of
+them works. Starting from elementary results like Bayes theorem and the
+perceptron learning rule all the way up to complex ideas like kernel
+methods and VC dimension, this talk develops a framework for the
+analysis of data in the context of separability of classes.&lt;/p&gt;
+&lt;p&gt;While the talk might sound theoretical, major focus will be on how to
+make practical, hands-on use of these concepts to better understand your
+data and your models. By the end of the talk, you will have learnt how
+to &lt;em&gt;prioritize&lt;/em&gt; which models to use on which dataset, and how to compute
+the likelihood of them fitting on the data. This rigorous analysis of
+models and data saves a lot of effort and money, as the talk will
+demonstrate with real-world examples.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jaidev Deshpande</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/fundamental-results-in-ml-and-how-to-use-them.html</guid></item><item><title>Generating tabla note sequences with Markov Chains and Processing/p5.js</title><link>https://pyvideo.org/pydata-delhi-2019/generating-tabla-note-sequences-with-markov-chains-and-processingp5js.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A fun little web-app that generates random tabla-note sequences, using a
+JSON file, Markov chains and processing (p5.js). All you need to
+customise this is your own note-sound files and note-to-note transition
+probability distributions.&lt;/p&gt;
+&lt;div class="section" id="intro"&gt;
+&lt;h4&gt;Intro&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Concept: An intuitive, interactive exploration of tabla notes and
+patterns&lt;/li&gt;
+&lt;li&gt;Who I am: my background&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="demo"&gt;
+&lt;h4&gt;Demo&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Listening to saved patterns, tabla samples&lt;/li&gt;
+&lt;li&gt;Random tabla-note generation&lt;/li&gt;
+&lt;li&gt;Design choices&lt;/li&gt;
+&lt;li&gt;how the parts connect with p5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-why-markov-chains"&gt;
+&lt;h4&gt;What/Why Markov chains&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tabla states&lt;/li&gt;
+&lt;li&gt;Tabla note-sequence JSON&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-is-p5-js"&gt;
+&lt;h4&gt;What is p5.js&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;code-architecture&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="related-work"&gt;
+&lt;h4&gt;Related Work&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;tabla apps&lt;/li&gt;
+&lt;li&gt;tabla research&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="todo-other-sequence-generators"&gt;
+&lt;h4&gt;TODO: Other sequence generators&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Changing how we sample from the Markov model&lt;/li&gt;
+&lt;li&gt;RNNs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="todo-design-and-new-features"&gt;
+&lt;h4&gt;TODO: Design and new features&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;more sliders!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Keshav Joshi</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/generating-tabla-note-sequences-with-markov-chains-and-processingp5js.html</guid></item><item><title>How GPU Computing literally saved me at work</title><link>https://pyvideo.org/pydata-delhi-2019/how-gpu-computing-literally-saved-me-at-work.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Distributed/Parallel computing is at the heart of new technology. Every
+company, big or small want to make most of the technology available to
+them. One such niche technology is GPU computing. Here, I present to you
+a real- world application on how GPU can save computing efforts and
+reduce the computation time from 2 days to 20 seconds. Shared is a live
+application from Retail domain utilizing GPU.&lt;/p&gt;
+&lt;p&gt;Distributed/Parallel computing is at the heart of new technology. Every
+company, big or small want to make most of the technology available to
+them. One such niche technology is GPU computing. If used cautiously can
+save a lot of computing efforts and time across the applications.
+Business, with the boom in Machine learning/Deep learning techniques,
+are on the way to leverage this technology in their day to day work.
+Here, I present to you a real-time application on how GPU can save
+computing efforts and reduce the computation time from 2 days to 20
+seconds. The talk will cover the best case scenarios and use case for
+the GPU implementing for recommendations at scale. The talk will start
+with the overview of the problem at hand, comparing CPU and GPU
+processing time and best fit to utilize GPU for the task in hand or any
+other scenario.&lt;/p&gt;
+&lt;p&gt;For those, interested in delving into the detailed code utilized for the
+same, here’s the link to my blog containing the same,
+&lt;a class="reference external" href="https://medium.com/walmartlabs/how-gpu-computing-literally-saved-me-at-work"&gt;https://medium.com/walmartlabs/how-gpu-computing-literally-saved-me-at-work&lt;/a&gt;-
+fc1dc70f48b6&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Abhishek Mungoli</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/how-gpu-computing-literally-saved-me-at-work.html</guid></item><item><title>How not to ask questions</title><link>https://pyvideo.org/pydata-delhi-2019/how-not-to-ask-questions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Raman Tehlan</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/how-not-to-ask-questions.html</guid></item><item><title>Intelligent recruitment using NLP and machine learning to identify the most suitable candidates</title><link>https://pyvideo.org/pydata-delhi-2019/intelligent-recruitment-using-nlp-and-machine-learning-to-identify-the-most-suitable-candidates.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It is very common to get 100s of applicants for a role, which is
+becoming difficult for recruiters to shortlist the most relevant
+candidates. We present here a solution developed at dunnhumby that
+leverages Natural Language Processing to assist our recruitment team. By
+simply providing a reference resume, our tool helps identifying similar
+candidates, helping us focus on the right candidates.&lt;/p&gt;
+&lt;p&gt;The talk presents a real-life example of application of machine learning
+and natural language processing for the industry.&lt;/p&gt;
+&lt;p&gt;For every role we advertise, we get 100s if not 1000s of applicants.
+Shortlisting the most relevant candidates becomes therefore very
+difficult, and no recruitment team has the capacity and time to go
+through all the CV of the candidates who applied for a role. It also
+increases the chances to miss the ideal candidate. We present here a
+solution developed internally that leverages natural language processing
+to shortlist the most relevant candidates.&lt;/p&gt;
+&lt;p&gt;Very often, the hiring manager provides the recruitment team with a
+reference CV of the ideal profile he or she is looking for. The way we
+have designed the tool is as follows: The text from all the CVs is
+extracted and converted into a vector format using Word2Vec. This
+generates a vector representation of the candidate’s CV, which are then
+compared using cosine-similarities with the vector of the reference CV.
+This returns the CV that are the most similar to our reference profile.&lt;/p&gt;
+&lt;p&gt;The methodology has proven to give good results, particularly efficient
+at shortlisting the most promising candidates. It still does not replace
+an actual interview, but it has the potential of greatly reducing the
+hiring time and ensuring only the most promising candidates are
+interviewed, saving time for both the manager and the candidates.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Robin</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/intelligent-recruitment-using-nlp-and-machine-learning-to-identify-the-most-suitable-candidates.html</guid></item><item><title>Opening Notes PyData Delhi 2019</title><link>https://pyvideo.org/pydata-delhi-2019/opening-notes-pydata-delhi-2019.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Conference deemed open by the Conference Chair Mr.Sanket Verma  &amp;#64;PyData Delhi 2019&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/opening-notes-pydata-delhi-2019.html</guid></item><item><title>Predicting Real-Time Transaction Fraud Using Python and spark (Sponsored Talk)</title><link>https://pyvideo.org/pydata-delhi-2019/predicting-real-time-transaction-fraud-using-python-and-spark-sponsored-talk.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Predicting transaction fraud in real-time is an important challenge due
+to large data size, imbalanced target class, ever changing fraud MOs &amp;amp;
+strict requirement for prediction inference speed which machine learning
+models can help to solve. Using open source technologies &amp;amp; distributed
+computing, Barclays has been developing solutions to reduce fraud losses
+and limit adverse customer experience.&lt;/p&gt;
+&lt;div class="section" id="transaction-fraud-model-development"&gt;
+&lt;h4&gt;Transaction Fraud Model Development&lt;/h4&gt;
+&lt;p&gt;Predicting transaction fraud of debit and credit card payments in
+real-time is an important challenge, which new technologies and
+state-of-art supervised machine learning models can help to solve. While
+different supervised learning techniques, like Logistic Regression and
+Neural Networks, have been used for many years, recent developments in
+Deep Learning, Gradient Boosted Machines, and Recurrent Neural Networks,
+have opened up a wealth of options that can provide significant
+improvements over the existing models.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advantages-of-distributed-computing"&gt;
+&lt;h4&gt;Advantages of Distributed Computing&lt;/h4&gt;
+&lt;p&gt;While the transaction volumes are humongous (billions of transaction per
+year), non-distributed packages like numpy or pandas easily run out of
+memory. Distributed computing solves this problem. Spark serves as a
+solution to Raw data processing, Data Quality and Reconciliation and
+most importantly Feature engineering where thousands of features are
+being created and tested.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="real-challenges-with-fraud-data"&gt;
+&lt;h4&gt;Real Challenges with fraud data&lt;/h4&gt;
+&lt;p&gt;Machine Learning techniques are in general well-suited for transaction
+fraud, however, large data volumes (billions of transaction per year),
+very imbalanced target class (rare events), ever changing fraud MOs, and
+strict requirements for the prediction inference speed, mean that some
+methods are better suited than others. With the help of open source
+technologies like python and distributed computing using spark, Barclays
+has been developing and testing different solutions to reduce fraud
+losses and limit adverse customer experience.&lt;/p&gt;
+&lt;p&gt;The main emphasis of the talk is to show how to train supervised
+transaction fraud models that can be implemented and how these models
+improve both customer experience and help to reduce fraud losses. The
+presentation will show results of a machine learning model that is
+operating in production.&lt;/p&gt;
+&lt;p&gt;The audience will learn - how real-time transaction fraud models work
+and the main challenges in transactions fraud modelling - how
+distributed computing can come to an advantage - which supervised
+machine learning techniques are most applicable&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mayank Jain</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/predicting-real-time-transaction-fraud-using-python-and-spark-sponsored-talk.html</guid></item><item><title>Research @ MIDAS, IIIT-D</title><link>https://pyvideo.org/pydata-delhi-2019/research-midas-iiit-d.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Research &amp;#64; MIDAS, IIIT-D by Hitkul&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://delhi.pydata.org"&gt;https://delhi.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hitkul</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/research-midas-iiit-d.html</guid></item><item><title>The Power of Data Science to Measure Unmeasured Parameters in Emerging Markets</title><link>https://pyvideo.org/pydata-delhi-2019/the-power-of-data-science-to-measure-unmeasured-parameters-in-emerging-markets.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Delhi 2019 Keynote - The power of data science to measure unmeasured parameters in Emerging Markets by Prukalpa Sankar.&lt;/p&gt;
+&lt;p&gt;PyData is an educational program of NumFOCUS, a 501(c)3 non-profit organization in the United States. PyData provides a forum for the international community of users and developers of data analysis tools to share ideas and learn from each other. The global PyData network promotes discussion of best practices, new approaches, and emerging technologies for data management, processing, analytics, and visualization. PyData communities approach data science using many languages, including (but not limited to) Python, Julia, and R.&lt;/p&gt;
+&lt;p&gt;PyData conferences aim to be accessible and community-driven, with novice to advanced level presentations. PyData tutorials and talks bring attendees the latest project features along with cutting-edge use cases. #PyDataDelhi2019 #PyData #DataScience&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Prukalpa Sankar</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/the-power-of-data-science-to-measure-unmeasured-parameters-in-emerging-markets.html</guid></item><item><title>Transfer Learning in Natural Language Processing</title><link>https://pyvideo.org/pydata-delhi-2019/transfer-learning-in-natural-language-processing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Transfer learning refers to the methods that leverage a trained model in
+one domain to achieve better results on tasks in a related domain i.e.
+we transfer the knowledge gained in one domain to a new domain. This
+talk is centered on recent developments in deep learning to facilitate
+transfer learning in NLP. We will discuss the transformer architecture
+and its extensions like GPT and BERT.&lt;/p&gt;
+&lt;p&gt;The classic supervised machine learning paradigm is based on learning in
+isolation a single predictive model for a task using a single dataset.
+This approach requires a large number of training examples and performs
+best for well-defined and narrow tasks. Transfer learning refers to the
+methods that leverage a trained model in one domain to achieve better
+results on tasks in a related domain. The model thus trained also show
+better generalization properties.&lt;/p&gt;
+&lt;p&gt;Computer vision has seen great success of transfer learning, model
+trained on the Imagenet data have been 'fine-tuned' to achieve
+State-of-thee-art in many other problems. In last two years, NLP has
+also witnessed the emergence of several transfer learning methods and
+architectures, which significantly improved upon the state-of-the-art on
+a wide range of NLP tasks.&lt;/p&gt;
+&lt;p&gt;We will present an overview of modern transfer learning methods in NLP,
+how models are pre-trained, what information the representations they
+learn capture, and review examples and case studies on how these models
+can be integrated and adapted in downstream NLP tasks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Janu Verma</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/transfer-learning-in-natural-language-processing.html</guid></item><item><title>Understanding Opacity in Machine Learning Models</title><link>https://pyvideo.org/pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Opacity is one of the biggest challenges in machine learning/deep
+learning solutions in the real world. Any basic deep learning model can
+contain dozens of hidden layers and millions of neurons interacting with
+each other. Explaining the Deep Learning model solutions can be a bit
+challenging. Our proposal explain some Approaches that can help to make
+ML/DL models more interpretable.&lt;/p&gt;
+&lt;div class="section" id="model-interpretability-background"&gt;
+&lt;h4&gt;Model Interpretability Background&lt;/h4&gt;
+&lt;p&gt;Data Science/AI models are still often perceived as a black box capable
+of performing magic. As we are solving more complex problems using
+advanced algorithms, the situation is such that more sophisticated the
+model, lower is the explainability level.&lt;/p&gt;
+&lt;p&gt;Without a reasonable understanding of how DS/AI model works, real-world
+projects rarely succeed. Also, business may not know the intricate
+details of how a model might work and as model will be making a lot of
+decisions for them in the end, they do have a right to pose the
+question.&lt;/p&gt;
+&lt;p&gt;A lot of real-world scenarios where biased models might have really
+adverse effects e.g. predicting potential criminals
+(&lt;a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal"&gt;https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal&lt;/a&gt;-
+sentencing), judicial sentencing risk scores
+(&lt;a class="reference external" href="https://www.propublica.org/article/making-algorithms-accountable"&gt;https://www.propublica.org/article/making-algorithms-accountable&lt;/a&gt;),
+credit scoring, fraud detection, health assessment, loan lending,
+self-driving.&lt;/p&gt;
+&lt;p&gt;Many researchers are actively working on making DS/AI models
+interpretable (Skater, ELI5, SHAP etc).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-model-interpretability-is-important"&gt;
+&lt;h4&gt;Why Model Interpretability is important?&lt;/h4&gt;
+&lt;p&gt;DS/AI models are used to make critical decisions on behalf of business.
+For the decisions taken by DS/AI models, business needs to cover these
+three aspects as well:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fairness - How fair are the predictions? What drives model
+predictions?&lt;/li&gt;
+&lt;li&gt;Accountability - Why did the model take a certain decision?&lt;/li&gt;
+&lt;li&gt;Transparency - How can we trust model predictions?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-make-models-interpretable"&gt;
+&lt;h4&gt;How to make models interpretable?&lt;/h4&gt;
+&lt;p&gt;In order to make models interpretable, following approaches/techniques
+can be used:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Feature Importance&lt;/li&gt;
+&lt;li&gt;Partial Dependence Plot&lt;/li&gt;
+&lt;li&gt;SHAP Values&lt;/li&gt;
+&lt;li&gt;LIME&lt;/li&gt;
+&lt;li&gt;Skater&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Lets have a look at these approaches/techniques one by one:&lt;/p&gt;
+&lt;div class="section" id="feature-importance"&gt;
+&lt;h5&gt;1. Feature Importance&lt;/h5&gt;
+&lt;p&gt;For Machine Learning Models like XGBoost, Random Forest, Machine
+Learning Feature Importance helps Business Analysts drive Logical
+Conclusion out of it.&lt;/p&gt;
+&lt;p&gt;We measure the importance of a feature by calculating the increase in
+the model’s prediction error after permuting the feature. A feature is
+“important” if shuffling its values increases the model error, because
+in this case the model relied on the feature for the prediction. A
+feature is “unimportant” if shuffling its values leaves the model error
+unchanged, because in this case the model ignored the feature for the
+prediction.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh6.googleusercontent.com/6QlWI_TX3B40v5uvcwB3A0ADF3y4JDNUEJFtaRMCoCdn7QouTqB4M4bgTPzukoXT5PN4YAnphqqavM_yreeHCI1ObwYZqnHmeYn9AGhtkC-1zCmb9W55mhdqS66J3quq9DeRS8FE" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="partial-dependence-plot"&gt;
+&lt;h5&gt;2. Partial Dependence Plot&lt;/h5&gt;
+&lt;p&gt;Partial dependence plots show how a feature affects predictions. Partial
+dependence plots (PDP) show the dependence between the target response
+and a set of ‘target’ features, marginalizing over the values of all
+other features (the ‘complement’ features). Intuitively, we can
+interpret the partial dependence as the expected target response as a
+function of the ‘target’ features.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh3.googleusercontent.com/SpyncU_BRXeMhocCaird59qXmIoLGISyPOQA1KEqj_IUHYxP58yu4yZuMwGL5C1VOWvHl_UOgvK7VgRzCuOh9OhAxqk7cZZodut9CaygiWWvxLcBYLFWQQ_L0iHMUugv5DrbA8Xc" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shap-shapley-additive-explanations-values"&gt;
+&lt;h5&gt;3. SHAP (SHapley Additive exPlanations) Values&lt;/h5&gt;
+&lt;p&gt;SHAP Values break down a prediction to show the impact of each feature.
+These are the scenarios where we need this technique:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A model says a bank shouldn't loan someone money, and the bank is
+legally required to explain the basis for each loan rejection&lt;/li&gt;
+&lt;li&gt;A healthcare provider wants to identify what factors are driving each
+patient's risk of some disease so they can directly address those
+risk factors with targeted health interventions.&lt;/li&gt;
+&lt;li&gt;&lt;img alt="image0" src="https://lh5.googleusercontent.com/lWsT9o5da1242Caaqqj66lWpY9yND6vEy4_3eT4dY_5Juyysnv3ZE4etya20rQMGzJ5E5PgJNUP05lLQZCuDUiAC0dfPlWjwZq-1m2p8SBylGDytFYRQCSBilE6pBVl7kRdjcdpV" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We predicted 0.7, whereas the base_value is 0.4979. Feature values
+causing increased predictions are in pink, and their visual size shows
+the magnitude of the feature's effect. Feature values decreasing the
+prediction are in blue. The biggest impact comes from Goal Scored being
+2. Though the ball possession value has a meaningful effect decreasing
+the prediction.&lt;/p&gt;
+&lt;p&gt;The SHAP package has explainers for every type of model. -
+shap.DeepExplainer works with Deep Learning models. -
+shap.KernelExplainer works with all models, though it is slower than
+other Explainers and it offers an approximation rather than exact Shap
+values.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lime-local-interpretable-model-agnostic-explanations"&gt;
+&lt;h5&gt;4. LIME (Local Interpretable Model-Agnostic Explanations)&lt;/h5&gt;
+&lt;p&gt;LIME (&lt;a class="reference external" href="https://github.com/marcotcr/lime"&gt;https://github.com/marcotcr/lime&lt;/a&gt;) can be used on anything from a
+polynomial regression model to a deep neural network.&lt;/p&gt;
+&lt;p&gt;LIME’s approach is to perturb most of the features of a single
+prediction instance — essentially zeroing-out these features — and then
+to test the resulting output. By running this process repeatedly, LIME
+is able to determine a linear decision boundary for each feature
+indicating its predictive importance (e.g. which pixels contributed the
+most to the classification of a specific image).&lt;/p&gt;
+&lt;p&gt;Interpretation of Lime :--&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Local - Local refers to local fidelity - i.e., we want the
+explanation to really reflect the behaviour of the classifier
+&amp;quot;around&amp;quot; the instance being predicted.&lt;/li&gt;
+&lt;li&gt;Interpretable - Lime explain output of Classifiers which are
+interpretable by humans. For e.g. Representing words for a Model
+which is built on word embeddings.&lt;/li&gt;
+&lt;li&gt;Model Agnostic - Lime is able to explain a Machine Learning Model
+without understanding it in deep.&lt;/li&gt;
+&lt;li&gt;Explanation - Lime explanations are not too long so that it is
+difficult for Humans to understand it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh4.googleusercontent.com/JmXlS0qJNYOvbLlmA53X42_WIGHp9uzDCItBtGpmPM8YHqgqlYzJ077VU0EjNVna6LNZHvgFHRWry6c_CUMCZ_-%20WnoZh2F3RoLE4Xalh_aimWw8QDkLFPzxPYjLtCZ8Ws7DZzPcW" /&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh3.googleusercontent.com/g-nAKqqfemQR17DhBKzdYUDQJQYo7Q54Nzyf4rtTNInn8ZyI16l9VM8LmfaAclj40v5IhZHserrJY-%20qR-gA5_r6bwWlIat24sjdiuW085pkggHgrOgSbq_VQzZJnht-FyHChp9Zr" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="skater"&gt;
+&lt;h5&gt;5. Skater&lt;/h5&gt;
+&lt;p&gt;Skater is a Python library designed to demystify the inner workings of
+complex or black-box models. Skater uses a number of techniques,
+including partial dependence plots and local interpretable model
+agnostic explanation (LIME), to clarify the relationships between the
+data a model receives and the outputs it produces.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ankit Rathi</dc:creator><pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-03:pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html</guid></item></channel></rss>

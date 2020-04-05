@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_ronan-lamy.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-05T00:00:00+00:00</updated><entry><title>PyPy meets SciPy</title><link href="https://pyvideo.org/euroscipy-2019/pypy-meets-scipy.html" rel="alternate"></link><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2019-09-05:euroscipy-2019/pypy-meets-scipy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and compliant implementation of Python. In other words,
+it's an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython. It's optimised to
+enable efficient just-in- time compilation of Python code to machine
+code, and has releases matching versions 2.7, and 3.6. It now also
+supports the main pillars of the scientific ecosystem (numpy, Cython,
+scipy, pandas, ...) thanks to its emulation layer for the C API of
+CPython.&lt;/p&gt;
+&lt;p&gt;Performance is a major concern for Python programmers. When using
+CPython, this leads to splitting out the performance-sensitive parts of
+the computation and rewriting them in a faster, but less convenient,
+language such as C or Cython. With PyPy, there is no need to choose
+between clear, Pythonic code and good performance. This talk aims to
+convince the audience that PyPy should be part of every scientific
+programmer's toolbox.&lt;/p&gt;
+&lt;p&gt;PyPy, the fast and compliant alternative implementation of Python, is
+now compatible with the SciPy ecosystem. We'll explore how scientific
+programmers can use it.&lt;/p&gt;
+</summary></entry><entry><title>Opening PyPy's magic black box</title><link href="https://pyvideo.org/europython-2019/opening-pypys-magic-black-box.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/opening-pypys-magic-black-box.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and compliant implementation of Python. In other words,
+it's an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython. It's optimised to
+enable efficient just-in- time (JIT) compilation of Python code to
+machine code, and has releases matching versions 2.7, and 3.6. It now
+also supports the main pillars of the scientific ecosystem (numpy,
+Cython, scipy, pandas, ...) thanks to its emulation layer for the C API
+of CPython.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The PyPy JIT is often just described as &amp;quot;magically running your code
+faster&amp;quot;, but is actually what is known as a &amp;quot;meta-tracing JIT&amp;quot;.&lt;/div&gt;
+&lt;div class="line"&gt;A tracing JIT optimises loops by recording and optimising a single,
+hopefully representative, execution of the loop. While crude, that
+approach is known to be effective for just-in-time compiler.
+Additionally, PyPy's JIT is &amp;quot;meta&amp;quot; in the sense that it traces the
+execution of the interpreter while it runs some user-code instead of
+tracing the user-code directly. This again simplifies the compiler. We
+will explore how all this works together and is implemented (spoiler:
+it's Python all the way down!).&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk assumes no prior knowledge of compiler theory nor of PyPy
+internals, and should be of interest to anybody who wishes that their
+pure-Python code would run faster. The audience will gain a firmer
+understanding of how PyPy operates and optimises code, and how to how to
+get the most out of the PyPy JIT.&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="PyPy"></category></entry><entry><title>A song of compatibility and performance</title><link href="https://pyvideo.org/pycon-uk-2018/a-song-of-compatibility-and-performance.html" rel="alternate"></link><published>2018-09-16T00:00:00+00:00</published><updated>2018-09-16T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2018-09-16:pycon-uk-2018/a-song-of-compatibility-and-performance.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is the story of how PyPy achieves compatibility with CPython
+together with high performance.&lt;/p&gt;
+&lt;p&gt;PyPy is an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython, with releases
+matching versions 2.7 and 3.5. It’s implemented in RPython, a statically
+compilable subset of Python, and uses just-in-time compilation to run
+Python code efficiently. The PyPy project also developed cffi as a clean
+and fast way of interfacing with C code.&lt;/p&gt;
+&lt;p&gt;However, many libraries in the Python ecosystem are implemented as C
+extensions, which target CPython’s C API. Many others use Cython, which
+builds C extensions under the hood. Therefore, PyPy needs an emulation
+layer for the C API: cpyext. It bridges the differences between the
+implementation languages and the object models of CPython and PyPy and
+allows most extensions to work (as long as they stay within the fuzzily
+defined boundaries of the public API) just by recompiling against the
+PyPy headers. Thanks to this, PyPy now supports numpy, scipy, pandas,
+scikit-learn, and many more.&lt;/p&gt;
+</summary></entry><entry><title>Adventures in compatibility: emulating CPython's C API in PyPy</title><link href="https://pyvideo.org/europython-2018/adventures-in-compatibility-emulating-cpythons-c-api-in-pypy.html" rel="alternate"></link><published>2018-07-25T00:00:00+00:00</published><updated>2018-07-25T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2018-07-25:europython-2018/adventures-in-compatibility-emulating-cpythons-c-api-in-pypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and compliant implementation of Python. In other words,
+it’s an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython. It’s optimised to
+enable efficient just-in- time compilation of Python code to machine
+code, and has releases matching versions 2.7, 3.5 and soon(ish) 3.6. The
+PyPy project also developed cffi as a clean and efficient way of
+interfacing with C code.&lt;/p&gt;
+&lt;p&gt;However, many libraries in the Python ecosystem are implemented as C
+extensions, which target CPython’s C API. Many others use Cython, which
+builds C extensions under the hood. Therefore, PyPy needs an emulation
+layer for the C API.&lt;/p&gt;
+&lt;p&gt;This emulation needs to bridge the differences between the
+implementation languages and the object models of CPython and PyPy. The
+solution is called cpyext. It’s implemented in a mixture of RPython and
+C, with most of the API functions and macros implemented in RPython.
+cpyext exposes PyObjects to the extension code that appear similar to
+CPython objects (as long as extension writers stay within the fuzzily
+defined boundaries of the public API) but are merely ‘shadows’ of the
+real PyPy objects.&lt;/p&gt;
+&lt;p&gt;After a brief presentation of PyPy, its goals, and its current statuts
+and roadmap, this talk will dive into the vexed topic of its handling of
+C extensions. By the end of it, the audience should understand the
+operating principles of cpyext and have a clearer understanding of what
+happens when you install and run numpy, for instance, on top of PyPy.
+Some basic familiarity with CPython internals and how C extensions are
+made will be assumed.&lt;/p&gt;
+</summary></entry><entry><title>PyPy and it's ecosystem</title><link href="https://pyvideo.org/pycon-uk-2014/pypy-and-its-ecosystem.html" rel="alternate"></link><published>2014-10-14T00:00:00+00:00</published><updated>2014-10-14T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2014-10-14:pycon-uk-2014/pypy-and-its-ecosystem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presented by: Ronan Lamy&lt;/p&gt;
+&lt;p&gt;PyPy is a fast, compliant alternative implementation of the Python language (2.7.6 and 3.2.5). I will give an overview of the current status of and the on-going development efforts on all the pieces that combine to make it a compelling Python platform. In particular, I will mention the RPython toolchain, CFFI, the JIT, garbage collection, the numpy port, Python 3 support, software transactional memory.&lt;/p&gt;
+</summary></entry><entry><title>PyPy for mediocre programmers</title><link href="https://pyvideo.org/pycon-uk-2015/pypy-for-mediocre-programmers.html" rel="alternate"></link><published>2015-09-18T00:00:00+00:00</published><updated>2015-09-18T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2015-09-18:pycon-uk-2015/pypy-for-mediocre-programmers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a talk for mediocre Python programmers by a mediocre programmer.
+PyPy is an alternative implementation of Python. It is notorious for
+being fast, but also for using clever algorithms pertaining to advanced
+concepts such as type inference, garbage collection, just-in-time
+compilation, etc. So, can we, mediocre programmers, realistically use
+PyPy?&lt;/p&gt;
+&lt;p&gt;Yes, absolutely. In fact, PyPy developers did all that hard work so that
+we wouldn't have to. As we'll see, it runs most Python code exactly like
+CPython does, save that it magically makes it faster.&lt;/p&gt;
+&lt;p&gt;Porting existing applications is always more involved than running a
+simple script, so we'll also examine likely difficulties such as code
+relying on CPython implementation details, and dependencies on C
+extensions, and explore simple principles to let PyPy run your code even
+faster.&lt;/p&gt;
+&lt;p&gt;Finally, we'll have a glimpse of the future by looking at what's brewing
+in the PyPy lair, such as software transactional memory, new speed
+optimisations, better support for Python 3 and NumPy, ...&lt;/p&gt;
+</summary></entry><entry><title>PyPy: Python faster than Python</title><link href="https://pyvideo.org/pycon-fr-2016/pypy-python-faster-than-python.html" rel="alternate"></link><published>2016-10-15T00:00:00+00:00</published><updated>2016-10-15T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2016-10-15:pycon-fr-2016/pypy-python-faster-than-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and highly-compatible alternative implementation of Python. Its just-in-time compiler, backed by a state-of-the art garbage collector, allow it to run pure-Python(2) code on average 7 times faster than CPython 2.7, the reference implementation.&lt;/p&gt;
+&lt;p&gt;This presentation will give a tour of PyPy's goals, history and features with special emphasis on recent developments:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;cpyext, PyPy's emulation layer for CPython's C API, has been overhauled in order to soon allow full compatibility with all C extensions.&lt;/li&gt;
+&lt;li&gt;Python 3 support is steadily improving with a recent 3.3-compatible release and development being started on a 3.5 version.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>The state of PyPy</title><link href="https://pyvideo.org/pycon-uk-2016/the-state-of-pypy.html" rel="alternate"></link><published>2016-09-17T00:00:00+00:00</published><updated>2016-09-17T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2016-09-17:pycon-uk-2016/the-state-of-pypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The state of PyPy&lt;/p&gt;
+&lt;p&gt;Ronan Lamy&lt;/p&gt;
+&lt;p&gt;PyPy is a fast and highly-compatible alternative implementation of Python. Its just-in-time compiler, backed by a state-of-the art garbage collector, allow it to run pure-Python(2) code on average 7 times faster than CPython 2.7, the reference implementation.&lt;/p&gt;
+&lt;p&gt;This presentation will give a tour of PyPy's features with special emphasis on recent developments:&lt;/p&gt;
+&lt;p&gt;cpyext, PyPy's emulation layer for CPython's C API, has been overhauled in order to soon allow full compatibility with all C extensions.
+Python 3 support is steadily improving with a recent 3.3-compatible release and development being started on a 3.5 version.&lt;/p&gt;
+</summary></entry></feed>

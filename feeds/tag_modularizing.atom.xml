@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_modularizing.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2010-09-09T00:00:00+00:00</updated><entry><title>Rethinking the Reusable Application Paradigm</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--rethinking-the-reusable-applicati.html" rel="alternate"></link><published>2010-09-09T00:00:00+00:00</published><updated>2010-09-09T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--rethinking-the-reusable-applicati.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For the past few years the reusable application paradigm has been
+considered one of the major selling points of Django, however the common
+wisdom about what it means to make an application reusable isn't really
+accurate. This talk is going to discuss ways to truly make your
+applications reusable across &lt;em&gt;any&lt;/em&gt; project.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The common wisdom about reusable application says to do things like let
+your views take arguments for things like the form class or the template
+name. However, that doesn't satisfy most of the real need for
+extendability: changing the business logic or altering models. This talk
+is going to look at ways to combat these limitations:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Class based views&lt;/li&gt;
+&lt;li&gt;By making everything overidable in a view you can absolutely minimize
+the need to &amp;quot;copy-paste&amp;quot; when changing the logic of things around.&lt;/li&gt;
+&lt;li&gt;As seen in the admin.&lt;/li&gt;
+&lt;li&gt;Do less&lt;/li&gt;
+&lt;li&gt;brabeion&lt;/li&gt;
+&lt;li&gt;Provide the absolute minimum at the model layer, and only small
+wrappers for the business logic users can implement their own logic
+to control how things happen.&lt;/li&gt;
+&lt;li&gt;Related to the idea of &amp;quot;application frameworks&amp;quot;. Providing the tools
+for others to build their logic around various helpers.&lt;/li&gt;
+&lt;li&gt;Flexibility&lt;/li&gt;
+&lt;li&gt;django-taggit&lt;/li&gt;
+&lt;li&gt;Provide a concrete implementation, but allow swapping out of various
+layers.&lt;/li&gt;
+&lt;li&gt;Don't like the Tag model, swap it out, want a new intermediary model,
+swap it out.&lt;/li&gt;
+&lt;li&gt;django-registration&lt;/li&gt;
+&lt;li&gt;Providing swappable backends to change behavior.&lt;/li&gt;
+&lt;li&gt;Libraries&lt;/li&gt;
+&lt;li&gt;django-filter&lt;/li&gt;
+&lt;li&gt;django-fixture-generator&lt;/li&gt;
+&lt;li&gt;django-templatetag-sugar&lt;/li&gt;
+&lt;li&gt;django-compressor&lt;/li&gt;
+&lt;li&gt;Providing tools for others to build around.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By using these techniques you can develop reusable application that work
+beyond any single use case. Of course there are cases where you don't
+need any of these, and just need something that fits &amp;quot;traditional&amp;quot;
+reusable application paradigm, so this talk will cover when that works
+as well.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2010"></category><category term="modularizing"></category><category term="reuse"></category><category term="reusing"></category></entry></feed>

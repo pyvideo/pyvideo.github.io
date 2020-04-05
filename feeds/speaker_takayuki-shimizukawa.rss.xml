@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 20 Sep 2016 00:00:00 +0000</lastBuildDate><item><title>Sphinxを使って本を書こう</title><link>https://pyvideo.org/pycon-japan-2012/sphinxwoshi-tsuteben-woshu-kou.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;私の過去2冊の翻訳・執筆した本の経験から、Sphinxを活用して執筆環境を自動化したときの手順とそのメリットなどを紹介します。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">清水川 貴之</dc:creator><pubDate>Sun, 16 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-16:pycon-japan-2012/sphinxwoshi-tsuteben-woshu-kou.html</guid><category>sphinx</category><category>automation</category></item><item><title>Python入門者のコードをリファクタリングしてみた</title><link>https://pyvideo.org/pycon-japan-2012/pythonru-men-zhe-nokodoworihuakutaringushitemita.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;C/C++やJavaの経験者がPythonコードを書くと、なにかPythonっぽくないコードができあがります。 そのコード、Pythonっぽく書き換えませんか？&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">清水川 貴之</dc:creator><pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-15:pycon-japan-2012/pythonru-men-zhe-nokodoworihuakutaringushitemita.html</guid><category>refactoring</category></item><item><title>Easy contributable internationalization process with Sphinx</title><link>https://pyvideo.org/pycon-singapore-2015/easy-contributable-internationalization-process-with-sphinx.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sphinx can extract paragraphs from sphinx document and store them into gettext format translation catalog files. Gettext format translation catalog is easy to translate from one language to other languages. Also Sphinx support internationalization by using such catalog files. You can use your favorite editors or services to translate your sphinx docs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Thu, 18 Jun 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-06-18:pycon-singapore-2015/easy-contributable-internationalization-process-with-sphinx.html</guid><category>sphinx</category><category>i18n</category></item><item><title>Sphinx autodoc: automated API documentation</title><link>https://pyvideo.org/pycon-korea-2015/sphinx-autodoc-automated-api-documentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sphinx can extract paragraphs from sphinx document and store them into
+gettext format translation catalog files.&lt;/p&gt;
+&lt;p&gt;Gettext format translation catalog is easy to translate from one
+language to other languages.&lt;/p&gt;
+&lt;p&gt;Also Sphinx support internationalization by using such catalog files.&lt;/p&gt;
+&lt;p&gt;You can use your favorite editors or services to translate your sphinx
+docs.&lt;/p&gt;
+&lt;p&gt;In this session, I'll explain 3 things; (1) entire process to translate
+sphinx docs. (2) automation mechanism for the process. (3) tips, tricks
+and traps for writing docs and translating.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/sphinx-autodoc-automated-api-documentation.html</guid><category>sphinx</category></item><item><title>仕事で使うちょっとしたコードをOSSとして開発メンテしていく - Django Redshift Backend の開発</title><link>https://pyvideo.org/pycon-japan-2016/shi-shi-deshi-uchiyotsutoshitakodowoosstoshitekai-fa-menteshiteiku-django-redshift-backend-nokai-fa.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AWSの「Redshift」は、Postgresqlベースで作られたデータウェアハウスです。ポスグレベースなのでpsqlで接続したりPythonのpostgres用ドライバが使えます。Djangoもポスグレ用ドライバで使えます、と思ったら色々問題あった。仕事で必要なんですけど。しょうがないので、Djangoに不慣れな私が手探りでDjangoのバックエンドを作って、公開して、バグレポに対応して、テストを書いて、テスト自動化して。OSS活動の各段階でどうやって進めてきたのか、紹介します。&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;手探りでDjangoのバックエンドを作って、公開して、バグレポに対応して、テストを書いて、テスト自動化して。OSS活動の各段階でどうやって進めてきたのか、紹介します。&lt;/p&gt;
+&lt;p&gt;DjangoのRedshift用データベースバックエンドを実装したのは、仕事で必要だったからです。 最初はSELECTでのみ動作確認していて、使える使える～と思ってたんですが、Django Adminでレコードを追加しようとしたら問題が起きました。Djangoが発行するSQLにRedshiftが対応してなかったんです。もうプロジェクトは進んでいて、そこ確認してなかったのかよ！状態。さてどうする？ということでDjangoのRedshift用バックエンドを実装しました。データベース接続する「ドライバー」はデータベースサーバーと通信しないといけないので実装とか大変そうに見えるんですが、今回作ったのはドライバではなくバックエンド。DjangoのデータベースバックエンドはDjangoのORMのやりたいことをSQLで組み立ててドライバに伝える中間層です。つまり、DjangoのコードどこかにあるSQL組み立て部分をハックして別のSQLを組み立てさせれば良い、ということです。それくらいなら、と思って作ってみたらコメント空白行除いて30行程度でした。しかもほとんど元コードのコピペです。これが django-redshift-backend の最初のバージョンでした。&lt;/p&gt;
+&lt;p&gt;そういったコードをどうして業務外の時間で実装したのか、どうしてPyPIに公開したのか、どうやって育てていったのか。また、自分が使っていない用途に対する利用者からの要望にどう対応していったのか。OSSコードを書いてメンテナンスしていくモチベーションは何か。Djangoのdatabase backendがどういう仕組みで書かれているのか、Djangoのようなフレームワークの中身のテストの書き方はどう調べたのか。django-redshift-backendの開発を題材に紹介します。&lt;/p&gt;
+&lt;p&gt;アウトライン&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;DjangoとRedshiftの紹介&lt;/li&gt;
+&lt;li&gt;Redshiftはポスグレ互換！からの～&lt;/li&gt;
+&lt;li&gt;django-redshift-backend 紹介&lt;/li&gt;
+&lt;li&gt;最初の実装、最初のPull Request、PyPIへの公開&lt;/li&gt;
+&lt;li&gt;なぜ仕事で使うコードを個人の時間で実装してOSSで公開したの？&lt;/li&gt;
+&lt;li&gt;OSS開発とどうやってつきあっていくのか&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Tue, 20 Sep 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-09-20:pycon-japan-2016/shi-shi-deshi-uchiyotsutoshitakodowoosstoshitekai-fa-menteshiteiku-django-redshift-backend-nokai-fa.html</guid></item><item><title>Easy contributable internationalization process with Sphinx</title><link>https://pyvideo.org/pycon-apac-2016/easy-contributable-internationalization-process-with-sphinx.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;발표자:  Takayuki Shimizukawa / shimizukawa
+슬라이드: &lt;a class="reference external" href="http://www.slideshare.net/shimizukawa/easy-contributable-internationalization-process-with-sphinx-at-pycon-apac-2016"&gt;http://www.slideshare.net/shimizukawa/easy-contributable-internationalization-process-with-sphinx-at-pycon-apac-2016&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Tue, 30 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-30:pycon-apac-2016/easy-contributable-internationalization-process-with-sphinx.html</guid></item><item><title>Python 2.5 から 3.3 で動作するツールの作り方 by Takayuki Shimizukawa</title><link>https://pyvideo.org/pycon-apac-2013-in-japan/python-25-kara-33-dedong-zuo-surutsurunozuo-rifang-by-takayuki-shimizukawa.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;sphinx-intl を題材に、Python 2.5 から Python 3.3 までの環境で動作するプログラムの書き方について紹介します。&lt;/p&gt;
+&lt;p&gt;sphinx-intl は Sphinx の国際化機能を楽に使えるようにするためのサポートツールです。Sphinx が Python 2.5 から 3.3 まで対応しているため、同じバージョン対応が必要でしたが、2to3 でコード変換する方法ではテストなど手間がかかるので、sphinx-intl では Python 2 でも 3 でも同じソースコードで変換なしに動作するように実装しました。そのために six を利用しましたが、six でもサポートしていない一部の非互換コードについては自分で互換性を保つように工夫しています。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Sat, 14 Sep 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-09-14:pycon-apac-2013-in-japan/python-25-kara-33-dedong-zuo-surutsurunozuo-rifang-by-takayuki-shimizukawa.html</guid></item><item><title>Sphinx autodoc: automated API documentation</title><link>https://pyvideo.org/europython-2015/sphinx-autodoc-automated-api-documentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Takayuki Shimizukawa - Sphinx autodoc: automated API documentation
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;Using the automated documentation feature of Sphinx, you can make with
+ease the extensive documentation of Python program.
+You just write python function documents (docstrings), Sphinx
+organizes them into the document, can be converted to a variety of
+formats.
+In this session, I'll explain a documentation procedure that uses with
+sphinx autodoc and autosummary extensions.&lt;/p&gt;
+&lt;p&gt;Description:&lt;/p&gt;
+&lt;p&gt;Sphinx provides autodoc feature that generate document from docstring
+in your python sources.
+The docstring that contains description and example of the use of
+function written near the program, makes doc easy to update.
+In addition, the output of the Sphinx will make you understand what to
+write in docstring. As a result, this will improve your motivation of
+doc writing.&lt;/p&gt;
+&lt;p&gt;To use the autodoc, you must specify python modules to automodule
+directive one by one. This is a tedious task, hoswever autosummary
+extension automate this task.
+In most cases, once developers have developed the API, you only need
+to run the make html of Sphinx, you get a nicely formatted document.&lt;/p&gt;
+&lt;p&gt;Sphinx also has coverage and doctest extentions.
+These support writing the documentation to work with autodoc.
+This allow you to check the APIs that have not been documented or you
+can verify each doctest part is correct or not.&lt;/p&gt;
+&lt;p&gt;If you use such autodoc-related extensions, you can create a Sphinx
+API documentation in the following procedure.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;make coverage; you can get the APIs that have not been documented.&lt;/li&gt;
+&lt;li&gt;Write docstrings that includes the doctest format how to use the API.&lt;/li&gt;
+&lt;li&gt;make doctest; you can verify each doctest part is correct or not.&lt;/li&gt;
+&lt;li&gt;make html; you can generate the HTML or your favorite format.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this session, I'll explain a documentation procedure that uses with
+sphinx autodoc, autosummary, coverage and doctest extensions.&lt;/p&gt;
+&lt;p&gt;Target:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python programmer who is struggling with documentation.&lt;/li&gt;
+&lt;li&gt;Python library author who want to generate API docs automatically.&lt;/li&gt;
+&lt;li&gt;Python library author who want to create a clear documentation which contains python snippets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Self introduction (2 min)&lt;/li&gt;
+&lt;li&gt;Sphinx introduction (2 min)&lt;/li&gt;
+&lt;li&gt;What is Sphinx?&lt;/li&gt;
+&lt;li&gt;Sphinx examples&lt;/li&gt;
+&lt;li&gt;Have you written API docs for your code? (2 min)&lt;/li&gt;
+&lt;li&gt;I don't know what/where should I write.&lt;/li&gt;
+&lt;li&gt;Docstrings is needed? Are there some specific format?&lt;/li&gt;
+&lt;li&gt;Getting start Sphinx (2 min)&lt;/li&gt;
+&lt;li&gt;How to install Sphinx&lt;/li&gt;
+&lt;li&gt;How to start a Sphinx project&lt;/li&gt;
+&lt;li&gt;Generate API docs from your python code (5 min)&lt;/li&gt;
+&lt;li&gt;setup autodoc extension&lt;/li&gt;
+&lt;li&gt;write docstrings for yuor python module&lt;/li&gt;
+&lt;li&gt;&amp;quot;automodule &amp;amp; make html&amp;quot; will generate API docs from python code&lt;/li&gt;
+&lt;li&gt;autodoc pros &amp;amp; cons: docs for many modules&lt;/li&gt;
+&lt;li&gt;Listing APIs automatically (5 mins)&lt;/li&gt;
+&lt;li&gt;setup autosummary extension&lt;/li&gt;
+&lt;li&gt;how to use autosummary directive&lt;/li&gt;
+&lt;li&gt;no more autodoc directive&lt;/li&gt;
+&lt;li&gt;Discovering undocumented APIs (5 min)&lt;/li&gt;
+&lt;li&gt;setup coverage extension&lt;/li&gt;
+&lt;li&gt;make coverage&lt;/li&gt;
+&lt;li&gt;Detect deviations of the impl and doc (5 min)&lt;/li&gt;
+&lt;li&gt;setup doctest extension&lt;/li&gt;
+&lt;li&gt;make doctest&lt;/li&gt;
+&lt;li&gt;Overall picture, tips, Q&amp;amp;A (10 min)&lt;/li&gt;
+&lt;li&gt;Overall picture of the process&lt;/li&gt;
+&lt;li&gt;Options for autodoc&lt;/li&gt;
+&lt;li&gt;translate them into other langs&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-03:europython-2015/sphinx-autodoc-automated-api-documentation.html</guid></item><item><title>R0 D2-03 Easy contributable i18n process with Sphinx - Takayuki Shimizukawa (PyCon APAC 2015)</title><link>https://pyvideo.org/pycon-apac-2015/r0-d2-03-easy-contributable-i18n-process-with-apac.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Takayuki Shimizukawa&lt;/p&gt;
+&lt;p&gt;Sphinx can extract paragraphs from sphinx document and store them into gettext format translation catalog files.
+Gettext format translation catalog is easy to translate from one language to other languages.
+Also Sphinx support internationalization by using such catalog files.
+You can use your favolite editors or services to translate your sphinx docs.
+In this session, I'll explain 3 things; (1) entier process to translate sphinx docs. (2) automation mechanism for the process. (3) tips, tricks and traps for wrinting docs and translating.&lt;/p&gt;
+&lt;p&gt;About the speaker&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sphinx co-maintainer since 2011&lt;/li&gt;
+&lt;li&gt;&amp;quot;Let's start Sphinx&amp;quot; Japanese ebook author&lt;/li&gt;
+&lt;li&gt;Sphinx-users.jp account&lt;/li&gt;
+&lt;li&gt;PyCon JP organizer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;個人網頁連結 &lt;a class="reference external" href="http://about.me/shimizukawa"&gt;http://about.me/shimizukawa&lt;/a&gt;
+Twitter &amp;#64;shimizukawa
+組織/公司 BePROUD corp / PyCon JP / Sphinx-usres.jp
+頭銜 Python developer&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://tw.pycon.org/2015apac/zh/program/50"&gt;https://tw.pycon.org/2015apac/zh/program/50&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-24:pycon-apac-2015/r0-d2-03-easy-contributable-i18n-process-with-apac.html</guid></item><item><title>R0 DAY3-04 Sphinx autodoc: automated API documentation - Takayuki Shimizukawa (PyCon APAC 2015)</title><link>https://pyvideo.org/pycon-apac-2015/r0-day3-04-sphinx-autodoc-automated-api-takayuki.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Takayuki Shimizukawa&lt;/p&gt;
+&lt;p&gt;Using the automated documentation feature of Sphinx, you can make with ease the extensive documentation of Python program.
+You just write python function documents (docstrings), Sphinx organizes them into the document, can be converted to a variety of formats.
+In this session, I'll explain a documentation procedure that uses with sphinx autodoc and autosummary extensions.&lt;/p&gt;
+&lt;p&gt;About the speaker&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Sphinx co-maintainer since 2011&lt;/li&gt;
+&lt;li&gt;&amp;quot;Let's start Sphinx&amp;quot; Japanese ebook author&lt;/li&gt;
+&lt;li&gt;Sphinx-users.jp account&lt;/li&gt;
+&lt;li&gt;PyCon JP organizer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;個人網頁連結 &lt;a class="reference external" href="http://about.me/shimizukawa"&gt;http://about.me/shimizukawa&lt;/a&gt;
+Twitter &amp;#64;shimizukawa
+組織/公司 BePROUD corp / PyCon JP / Sphinx-usres.jp
+頭銜 Python developer&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://tw.pycon.org/2015apac/zh/program/69"&gt;https://tw.pycon.org/2015apac/zh/program/69&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Takayuki Shimizukawa</dc:creator><pubDate>Mon, 24 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-24:pycon-apac-2015/r0-day3-04-sphinx-autodoc-automated-api-takayuki.html</guid></item></channel></rss>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Understanding Opacity in Machine Learning Models</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-delhi-2019.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-delhi-2019.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Understanding Opacity in Machine Learning Models" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/bAoJnCeKFZA/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/bAoJnCeKFZA/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html" rel="bookmark"
+         title="Permalink to Understanding Opacity in Machine Learning Models">Understanding Opacity in Machine Learning Models
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2019-08-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sat 03 August 2019
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/ankit-rathi.html">Ankit Rathi</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/yatin-bhatia.html">Yatin Bhatia</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bAoJnCeKFZA" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Opacity is one of the biggest challenges in machine learning/deep
+learning solutions in the real world. Any basic deep learning model can
+contain dozens of hidden layers and millions of neurons interacting with
+each other. Explaining the Deep Learning model solutions can be a bit
+challenging. Our proposal explain some Approaches that can help to make
+ML/DL models more interpretable.</p>
+<div class="section" id="model-interpretability-background">
+<h4>Model Interpretability Background</h4>
+<p>Data Science/AI models are still often perceived as a black box capable
+of performing magic. As we are solving more complex problems using
+advanced algorithms, the situation is such that more sophisticated the
+model, lower is the explainability level.</p>
+<p>Without a reasonable understanding of how DS/AI model works, real-world
+projects rarely succeed. Also, business may not know the intricate
+details of how a model might work and as model will be making a lot of
+decisions for them in the end, they do have a right to pose the
+question.</p>
+<p>A lot of real-world scenarios where biased models might have really
+adverse effects e.g. predicting potential criminals
+(<a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal">https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal</a>-
+sentencing), judicial sentencing risk scores
+(<a class="reference external" href="https://www.propublica.org/article/making-algorithms-accountable">https://www.propublica.org/article/making-algorithms-accountable</a>),
+credit scoring, fraud detection, health assessment, loan lending,
+self-driving.</p>
+<p>Many researchers are actively working on making DS/AI models
+interpretable (Skater, ELI5, SHAP etc).</p>
+</div>
+<div class="section" id="why-model-interpretability-is-important">
+<h4>Why Model Interpretability is important?</h4>
+<p>DS/AI models are used to make critical decisions on behalf of business.
+For the decisions taken by DS/AI models, business needs to cover these
+three aspects as well:</p>
+<ul class="simple">
+<li>Fairness - How fair are the predictions? What drives model
+predictions?</li>
+<li>Accountability - Why did the model take a certain decision?</li>
+<li>Transparency - How can we trust model predictions?</li>
+</ul>
+</div>
+<div class="section" id="how-to-make-models-interpretable">
+<h4>How to make models interpretable?</h4>
+<p>In order to make models interpretable, following approaches/techniques
+can be used:</p>
+<ol class="arabic simple">
+<li>Feature Importance</li>
+<li>Partial Dependence Plot</li>
+<li>SHAP Values</li>
+<li>LIME</li>
+<li>Skater</li>
+</ol>
+<p>Lets have a look at these approaches/techniques one by one:</p>
+<div class="section" id="feature-importance">
+<h5>1. Feature Importance</h5>
+<p>For Machine Learning Models like XGBoost, Random Forest, Machine
+Learning Feature Importance helps Business Analysts drive Logical
+Conclusion out of it.</p>
+<p>We measure the importance of a feature by calculating the increase in
+the model’s prediction error after permuting the feature. A feature is
+“important” if shuffling its values increases the model error, because
+in this case the model relied on the feature for the prediction. A
+feature is “unimportant” if shuffling its values leaves the model error
+unchanged, because in this case the model ignored the feature for the
+prediction.</p>
+<div class="figure">
+<img alt="" src="https://lh6.googleusercontent.com/6QlWI_TX3B40v5uvcwB3A0ADF3y4JDNUEJFtaRMCoCdn7QouTqB4M4bgTPzukoXT5PN4YAnphqqavM_yreeHCI1ObwYZqnHmeYn9AGhtkC-1zCmb9W55mhdqS66J3quq9DeRS8FE" />
+</div>
+</div>
+<div class="section" id="partial-dependence-plot">
+<h5>2. Partial Dependence Plot</h5>
+<p>Partial dependence plots show how a feature affects predictions. Partial
+dependence plots (PDP) show the dependence between the target response
+and a set of ‘target’ features, marginalizing over the values of all
+other features (the ‘complement’ features). Intuitively, we can
+interpret the partial dependence as the expected target response as a
+function of the ‘target’ features.</p>
+<div class="figure">
+<img alt="" src="https://lh3.googleusercontent.com/SpyncU_BRXeMhocCaird59qXmIoLGISyPOQA1KEqj_IUHYxP58yu4yZuMwGL5C1VOWvHl_UOgvK7VgRzCuOh9OhAxqk7cZZodut9CaygiWWvxLcBYLFWQQ_L0iHMUugv5DrbA8Xc" />
+</div>
+</div>
+<div class="section" id="shap-shapley-additive-explanations-values">
+<h5>3. SHAP (SHapley Additive exPlanations) Values</h5>
+<p>SHAP Values break down a prediction to show the impact of each feature.
+These are the scenarios where we need this technique:</p>
+<ul class="simple">
+<li>A model says a bank shouldn't loan someone money, and the bank is
+legally required to explain the basis for each loan rejection</li>
+<li>A healthcare provider wants to identify what factors are driving each
+patient's risk of some disease so they can directly address those
+risk factors with targeted health interventions.</li>
+<li><img alt="image0" src="https://lh5.googleusercontent.com/lWsT9o5da1242Caaqqj66lWpY9yND6vEy4_3eT4dY_5Juyysnv3ZE4etya20rQMGzJ5E5PgJNUP05lLQZCuDUiAC0dfPlWjwZq-1m2p8SBylGDytFYRQCSBilE6pBVl7kRdjcdpV" /></li>
+</ul>
+<p>We predicted 0.7, whereas the base_value is 0.4979. Feature values
+causing increased predictions are in pink, and their visual size shows
+the magnitude of the feature's effect. Feature values decreasing the
+prediction are in blue. The biggest impact comes from Goal Scored being
+2. Though the ball possession value has a meaningful effect decreasing
+the prediction.</p>
+<p>The SHAP package has explainers for every type of model. -
+shap.DeepExplainer works with Deep Learning models. -
+shap.KernelExplainer works with all models, though it is slower than
+other Explainers and it offers an approximation rather than exact Shap
+values.</p>
+</div>
+<div class="section" id="lime-local-interpretable-model-agnostic-explanations">
+<h5>4. LIME (Local Interpretable Model-Agnostic Explanations)</h5>
+<p>LIME (<a class="reference external" href="https://github.com/marcotcr/lime">https://github.com/marcotcr/lime</a>) can be used on anything from a
+polynomial regression model to a deep neural network.</p>
+<p>LIME’s approach is to perturb most of the features of a single
+prediction instance — essentially zeroing-out these features — and then
+to test the resulting output. By running this process repeatedly, LIME
+is able to determine a linear decision boundary for each feature
+indicating its predictive importance (e.g. which pixels contributed the
+most to the classification of a specific image).</p>
+<p>Interpretation of Lime :--</p>
+<ul class="simple">
+<li>Local - Local refers to local fidelity - i.e., we want the
+explanation to really reflect the behaviour of the classifier
+&quot;around&quot; the instance being predicted.</li>
+<li>Interpretable - Lime explain output of Classifiers which are
+interpretable by humans. For e.g. Representing words for a Model
+which is built on word embeddings.</li>
+<li>Model Agnostic - Lime is able to explain a Machine Learning Model
+without understanding it in deep.</li>
+<li>Explanation - Lime explanations are not too long so that it is
+difficult for Humans to understand it.</li>
+</ul>
+<div class="figure">
+<img alt="" src="https://lh4.googleusercontent.com/JmXlS0qJNYOvbLlmA53X42_WIGHp9uzDCItBtGpmPM8YHqgqlYzJ077VU0EjNVna6LNZHvgFHRWry6c_CUMCZ_-%20WnoZh2F3RoLE4Xalh_aimWw8QDkLFPzxPYjLtCZ8Ws7DZzPcW" />
+</div>
+<div class="figure">
+<img alt="" src="https://lh3.googleusercontent.com/g-nAKqqfemQR17DhBKzdYUDQJQYo7Q54Nzyf4rtTNInn8ZyI16l9VM8LmfaAclj40v5IhZHserrJY-%20qR-gA5_r6bwWlIat24sjdiuW085pkggHgrOgSbq_VQzZJnht-FyHChp9Zr" />
+</div>
+</div>
+<div class="section" id="skater">
+<h5>5. Skater</h5>
+<p>Skater is a Python library designed to demystify the inner workings of
+complex or black-box models. Skater uses a number of techniques,
+including partial dependence plots and local interpretable model
+agnostic explanation (LIME), to clarify the relationships between the
+data a model receives and the outputs it produces.</p>
+</div>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pydata-delhi-2019.html">PyData Delhi 2019</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=bAoJnCeKFZA" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pydata-delhi-2019/videos/understanding-opacity-in-machine-learning-models-by-ankit-rathi-yatin-bhatia.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

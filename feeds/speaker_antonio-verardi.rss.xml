@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 25 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>How to write Rust instead of C, and get away with it (yes, it's a Python talk)</title><link>https://pyvideo.org/europython-2018/how-to-write-rust-instead-of-c-and-get-away-with-it-yes-its-a-python-talk.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you ever tried optimizing a super-slow Python application and
+thought: “Oh! I wish I could just write this bit it in Rust”? Well,
+turns out you can! We will show you how Rust is a better alternative
+than C to make your programs lightning fast, and how to get away with
+it; without your users even noticing.&lt;/p&gt;
+&lt;p&gt;As Infrastructure Engineers at Yelp, the challenge we face everyday is:
+scale. Yelp is mostly a Python shop and while this is great for
+development velocity, our work often revolves around making Python
+applications run faster. Until now, we have been using different
+techniques: faster interpreters, or, more often, C code.&lt;/p&gt;
+&lt;p&gt;Given its safety guarantees, performance and promise of better tooling
+than C, we decided we had to give Rust a try. The initial results helped
+reinforce that there was a lot of opportunity for Rust to play an
+important role in our production code.&lt;/p&gt;
+&lt;p&gt;Yelp heavily relies on the Apache Avro (&lt;a class="reference external" href="https://avro.apache.org/"&gt;https://avro.apache.org/&lt;/a&gt;)
+serialization format for its internal infrastructure. During the talk,
+we will show how we implemented an Avro serialization/deserialization
+library in Rust, how we were able to call it from Python (and in theory
+from any other language) with very little code, using tools such as
+cbindgen (&lt;a class="reference external" href="https://github.com/eqrion/cbindgen/"&gt;https://github.com/eqrion/cbindgen/&lt;/a&gt;), CFFI
+(&lt;a class="reference external" href="https://cffi.readthedocs.io/en/latest/"&gt;https://cffi.readthedocs.io/en/latest/&lt;/a&gt;) and Milksnake
+(&lt;a class="reference external" href="https://github.com/getsentry/milksnake/"&gt;https://github.com/getsentry/milksnake/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;This talk would outline how easy it is to write performant code in a
+language like Rust and call it from Python applications without users
+even realizing it, making this a great solution for production services.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Verardi</dc:creator><pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-25:europython-2018/how-to-write-rust-instead-of-c-and-get-away-with-it-yes-its-a-python-talk.html</guid></item><item><title>Write more decorators (and fewer classes)</title><link>https://pyvideo.org/europython-2017/write-more-decorators-and-fewer-classes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the wake of famous talk “Stop Writing Classes” by Jack Diederich
+(&lt;a class="reference external" href="https://www.youtube.com/watch?v=o9pEzgHorH0"&gt;https://www.youtube.com/watch?v=o9pEzgHorH0&lt;/a&gt;), I’d like to present a
+pattern that can be used to design clean and pythonic interfaces for
+programmers based on replacing single-method classes with decorated
+functions.&lt;/p&gt;
+&lt;p&gt;This pattern is already used by some famous frameworks and libraries,
+like Pyramid (&lt;a class="reference external" href="https://trypyramid.com/"&gt;https://trypyramid.com/&lt;/a&gt;), but I believe it isn’t that
+well-known to many (even experienced) Python developers and is not as
+widely used as it deserves.&lt;/p&gt;
+&lt;p&gt;I’ll show how this pattern can be employed to improve a programming
+interface which is used by an internal log processing framework at
+Yelp. This will demonstrate how a more functional approach,
+leveraging the power of Python decorators, can lead to simpler, more
+beautiful and easier to understand code.&lt;/p&gt;
+&lt;p&gt;However, this talk doesn’t suggest giving up classes altogether, but
+making use of them only when they are truly useful. In fact, the
+use-case I’m going to analyze will combine classes, functions, and
+decorators to make the best out of these tools.&lt;/p&gt;
+&lt;p&gt;Given that the presentation is going to be very code-oriented, the
+talk is intended for an audience of developers who are already
+familiar with most Python constructs, including decorators, even
+though the concept will be briefly introduced at the beginning of the
+talk. But, if you are one of these people, I promise you that the
+code will speak for itself.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Verardi</dc:creator><pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-11:europython-2017/write-more-decorators-and-fewer-classes.html</guid></item></channel></rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 05 Dec 2019 00:00:00 +0000</lastBuildDate><item><title>Building Named Entity Recognition Models Efficiently using NERDS</title><link>https://pyvideo.org/pydata-la-2019/building-named-entity-recognition-models-efficiently-using-nerds.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Named Entity Recognition (NER) is foundational for many downstream NLP
+tasks. The Open Source NERDS toolkit provides algorithms that can be
+used to quickly build and evaluate NER models from labeled data such as
+IOB. New algorithms can be added with minimal effort. This presentation
+will demonstrate how to create and evaluate new NER models using NERDS,
+as well as add new NER algorithms to it.&lt;/p&gt;
+&lt;p&gt;Named Entity Recognition (NER) is foundational for many downstream NLP
+tasks such as Information Retrieval, Relation Extraction, Question
+Answering, and Knowledge Base Construction. While many high-quality
+pre-trained NER models exist, they usually cover a small subset of
+popular entities such as people, organizations, and locations. But what
+if we need to recognize domain specific entities such as proteins,
+chemical names, diseases, etc? The Open Source Named Entity Recognition
+for Data Scientists (NERDS) toolkit, from the Elsevier Data Science
+team, was built to address this need.&lt;/p&gt;
+&lt;p&gt;NERDS aims to speed up development and evaluation of NER models by
+providing a set of NER algorithms that are callable through the familiar
+scikit-learn style API. The uniform interface allows reuse of code for
+data ingestion and evaluation, resulting in cleaner and more
+maintainable NER pipelines. In addition, customizing NERDS by adding new
+and more advanced NER models is also very easy, just a matter of
+implementing a standard NER Model class.&lt;/p&gt;
+&lt;p&gt;Our presentation will describe the main features of NERDS, then walk
+through a demonstration of developing and evaluating NER models that
+recognize biomedical entities. We will then describe a Neural Network
+based NER algorithm (a Bi-LSTM seq2seq model written in Pytorch) that we
+will then integrate into the NERDS NER pipeline.&lt;/p&gt;
+&lt;p&gt;We believe NERDS addresses a real need for building domain specific NER
+models quickly and efficiently. NER is an active field of research, and
+the hope is that this presentation will spark interest and contributions
+of new NER algorithms and Data Adapters from the community that can in
+turn help to move the field forward.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sujit Pal</dc:creator><pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-12-05:pydata-la-2019/building-named-entity-recognition-models-efficiently-using-nerds.html</guid></item><item><title>Applying the four step "Embed, Encode, Attend, Predict" framework to predict document similarity</title><link>https://pyvideo.org/pydata-seattle-2017/applying-the-four-step-embed-encode-attend-predict-framework-to-predict-document-similarity.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This presentation will demonstrate Matthew Honnibal's four-step &amp;quot;Embed, Encode, Attend, Predict&amp;quot; framework to build Deep Neural Networks to do document classification and predict similarity between document and sentence pairs using the Keras Deep Learning Library.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;A new framework for building Natural Language Processing (NLP) models in the Deep Learning era has been proposed by Matthew Honnibal (creator of the SpaCy NLP toolkit). It is composed of the following four steps - Embed, Encode, Attend and Predict. Embed converts incoming text into dense word vectors that encode its meaning as well as its context; Encode adapts the vector to the target task; Attend forces the network to focus on the most important parts of the data; and Predict produces the network's output representation. Word Embeddings have revolutionized many NLP tasks, and today it is the most effective way of representing text as vectors. Combined with the other three steps, this framework provides a principled way to make predictions starting from unstructured text data. This presentation will demonstrate the use of this four step framework to build Deep Neural Networks that do document classification and predict similarity between sentence and document pairs, using the Keras Deep Learning Library for Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sujit Pal</dc:creator><pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-06:pydata-seattle-2017/applying-the-four-step-embed-encode-attend-predict-framework-to-predict-document-similarity.html</guid></item><item><title>Measuring Search Engine Quality using Spark and Python</title><link>https://pyvideo.org/pydata-amsterdam-2016/measuring-search-engine-quality-using-spark-and-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Amsterdam 2016&lt;/p&gt;
+&lt;p&gt;We describe a system built using Python and Apache Spark which measured the effectiveness of different query configurations of an Apache Solr search platform, using click logs for a reference query set of 80,000+ user queries. The system replays the click logs against the engine to compute the Average Click Rank (ACR) metric as a proxy for user satisfaction, providing a way to identify improvements in quality without having to do a production deployment, and ensuring that only improved configurations are submitted to a slow and expensive A/B testing process.&lt;/p&gt;
+&lt;p&gt;For each search engine configuration, the ACR is recomputed by replaying the query logs against it and finding the position (or click rank) for the user's selected document. The ACR is computed by averaging those positions across all user queries in the query log. Lower click ranks are indicative of better engine configuration for that query, since it implies that the user found what they were looking for nearer the top of the results. Similarly, a low ACR across all queries is an indicator of good search engine configuration as a whole.&lt;/p&gt;
+&lt;p&gt;This system has also been used to analyze user behavior, by partitioning the results across content types, response times, etc, and analyzing differences in click rank distribution. It has also been used to identify and investigate slow queries, resulting in improvements in which have also benefited the search application.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://www.slideshare.net/sujitpal/measuring-search-engine-quality-using-spark-and-python"&gt;http://www.slideshare.net/sujitpal/measuring-search-engine-quality-using-spark-and-python&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sujit Pal</dc:creator><pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-03-26:pydata-amsterdam-2016/measuring-search-engine-quality-using-spark-and-python.html</guid></item></channel></rss>

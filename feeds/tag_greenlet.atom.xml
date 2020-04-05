@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_greenlet.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2013-07-03T00:00:00+00:00</updated><entry><title>Greenlet-based concurrency</title><link href="https://pyvideo.org/europython-2013/greenlet-based-concurrency.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Goran Peretin</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/greenlet-based-concurrency.html</id><summary type="html"></summary><category term="parallelization"></category><category term="optimization"></category><category term="gevent"></category><category term="greenlet"></category><category term="concurrency"></category><category term="performance"></category></entry><entry><title>Taming greenlets using eventlet</title><link href="https://pyvideo.org/europython-2013/taming-greenlets-using-eventlet.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Floris Bruynooghe</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/taming-greenlets-using-eventlet.html</id><summary type="html"></summary><category term="async"></category><category term="eventlet"></category><category term="greenlet"></category><category term="socket"></category><category term="networking"></category></entry><entry><title>Emulating Stackless and greenlet with each other</title><link href="https://pyvideo.org/europython-2011/emulating-stackless-and-greenlet-with-each-other.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Péter Szabó</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/emulating-stackless-and-greenlet-with-each-other.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Peter Szabo - 20 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python and the greenlet package for CPython are two different
+implementations of coroutine support for Python. (Coroutines are
+fundamental building blocks of I/O frameworks like gevent, Eventlet,
+Concurrence and Syncless to conveniently handle thousands of socket
+connections at a time without creating threads.) Stackless and greenlet
+implement a different interface. However, each is powerful enough so
+that it can be used to emulate the other one. In this talk we explore
+the differences and discuss design decisions and testing strategies of
+the emulations we have implemented.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/slides_2011-06-20/pts_em%20u_coro_2011-06-20.html"&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/s%20lides_2010-11-29/pts_coro_2010-11-29.html"&gt;Slides for the bonus
+sub-talk&lt;/a&gt;&lt;/p&gt;
+</summary><category term="concurrence"></category><category term="cpython"></category><category term="design"></category><category term="greenlet"></category><category term="stackless"></category><category term="testing"></category></entry><entry><title>Eventlet: Asynchronous I/O with a synchronous interface (#141)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--eventlet--asynchronous-i-o-with-a-syn.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Donovan Preston</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--eventlet--asynchronous-i-o-with-a-syn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Eventlet: Asynchronous I/O with a synchronous interface&lt;/p&gt;
+&lt;p&gt;Presented by Donovan Preston&lt;/p&gt;
+&lt;p&gt;Network servers which scale to thousands of simultaneous connections
+have always been possible in Python thanks to libraries such as asyncore
+and twisted. More recently, FriendFeed's new open source project Tornado
+has stirred debate in this area. These libraries allow a Python process
+to scale to many simultaneous connections using non-blocking I/O (also
+known as asynchronous I/O). However these projects require that the
+programmer learn a custom API to abstract away the complexities of using
+a callback-style API.&lt;/p&gt;
+&lt;p&gt;Eventlet uses greenlet, which provides coroutines as described in &amp;quot;The
+Art of Computer Programming&amp;quot;, to implement efficient cooperative
+concurrency while retaining synchronous semantics. Eventlet also
+provides an implementation of the standard library's socket module. Code
+written to use Python's standard socket library can be transparently
+converted to use nonblocking I/O and green threads with eventlet. This
+leads to much greater code reuse and programmer efficiency.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.eventlet.net/"&gt;http://www.eventlet.net/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="asynchronous"></category><category term="eventlet"></category><category term="greenlet"></category><category term="i/o"></category><category term="pycon"></category><category term="pycon2010"></category></entry></feed>

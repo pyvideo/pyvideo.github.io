@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 12 May 2018 00:00:00 +0000</lastBuildDate><item><title>HOWTO Write a Function</title><link>https://pyvideo.org/pycon-us-2018/howto-write-a-function.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A function is a small chunk of code that does useful work. Your job when writing a function is to do it in a way that it easy to read. Based on over 15 years of code reviews here are some tips and guidelines I give again and again.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-12:pycon-us-2018/howto-write-a-function.html</guid></item><item><title>Name Things Once</title><link>https://pyvideo.org/pygotham-2015/name-things-once-0.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Naming things is hard so you should do as little of it as possible. Your
+coworkers will thank you for it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Sat, 15 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-15:pygotham-2015/name-things-once-0.html</guid></item><item><title>Deleting Code Is Hard And You Should Do It</title><link>https://pyvideo.org/pyohio-2012/deleting-code-is-hard-and-you-should-do-it.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Adding code is easy. Everyone gets their start by cut-n-pasting some
+else's code. But every line of code you don't need is a burden. Delete
+that s++t.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Sun, 29 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-29:pyohio-2012/deleting-code-is-hard-and-you-should-do-it.html</guid></item><item><title>Name Things Once</title><link>https://pyvideo.org/pyohio-2015/name-things-once.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Naming things is hard so you should do as little of it as possible. Your
+coworkers will thank you for it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Sat, 01 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-01:pyohio-2015/name-things-once.html</guid><category>talk</category></item><item><title>Python's Dusty Corners (#182)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--python--39-s-dusty-corners---182.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python's Dusty Corners&lt;/p&gt;
+&lt;p&gt;Presented by Jack Diederich&lt;/p&gt;
+&lt;p&gt;The talk will be a brief overview of all the features in python that you
+don't need to know about right up until the moment you do. The list
+includes how comparisons work, descriptors, iterators, context managers,
+namespaces, else clauses on for/while loops (suggested by Hettinger).
+The narrative of the talk is that these are features that you don't need
+and/or shouldn't use in your day-to-day code but that you need to keep
+in the back of your mind because other people's code and the stdlib do
+use them. As Alex Martelli pointed out in his wonderful talk
+&amp;quot;Abstractions as Leverage&amp;quot; you can't successfully function at one level
+of abstraction if you don't know what is going on at the next level
+down. This talk is a whirlwind tour of the next level down.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--python--39-s-dusty-corners---182.html</guid><category>contextmanagers</category><category>descripters</category><category>else</category><category>iterators</category><category>namespaces</category><category>pycon</category><category>pycon2010</category></item><item><title>Useful Namespaces: Context Managers and Decorators</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--useful-namespaces--context-managers-a.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Useful Namespaces: Context Managers and Decorators&lt;/p&gt;
+&lt;p&gt;Presented by Jack Diederich&lt;/p&gt;
+&lt;p&gt;Python has two useful conventions for &amp;quot;I mean it, but only here&amp;quot; and you
+can say it with Context Managers and Decorators. Both give you the power
+to define a push/pop of a resource for a set period inside a namespace,
+be it a function or a level of indentation. This talk is a list of
+patterns that are implemented by one or the other (including some clever
+functions that are both).&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Decorators, formal definition.&lt;/li&gt;
+&lt;li&gt;Context Managers, formal definition.&lt;/li&gt;
+&lt;li&gt;Informal definition: both have the opportunity to do and then undo. -
+very similar to C++ RIIA &amp;quot;Resource Acquisition Is Initialization.&amp;quot; -
+Context Managers were designed to do that but decorators are
+frequently just as good.&lt;/li&gt;
+&lt;li&gt;Which one to use use when is all about namespaces. - Context Managers
+manipulate at the block level. - Function Decorators manipulate the
+function level. - Class Decorators manipulate at the class level.&lt;/li&gt;
+&lt;li&gt;Recipes on writing decorators and context managers - Familiar
+examples from Django and Mock.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--useful-namespaces--context-managers-a.html</guid><category>contextmanagers</category><category>decorators</category><category>namespaces</category><category>pycon</category><category>pycon2011</category></item><item><title>Stop Writing Classes</title><link>https://pyvideo.org/pycon-us-2012/stop-writing-classes.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Classes are great but they are also overused. This talk will describe
+examples of class overuse taken from real world code and refactor the
+unnecessary classes, exceptions, and modules out of them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Diederich</dc:creator><pubDate>Fri, 09 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-09:pycon-us-2012/stop-writing-classes.html</guid></item></channel></rss>

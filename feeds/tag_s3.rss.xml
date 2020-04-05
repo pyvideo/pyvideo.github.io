@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate><item><title>Genropy e lo storage di file in cloud</title><link>https://pyvideo.org/pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Con la transizione dagli applicativi su server proprietari agli
+applicativi in cloud nasce l’esigenza di separare i dati dal loro
+storage fisico sul server dove risiede l’applicazione.&lt;/p&gt;
+&lt;p&gt;Per soddisfare questa esigenza abbiamo provveduto a implementare in
+Genropy delle API per rendere trasparente l’accesso al filesystem e
+consentire quindi di scrivere procedure che possano funzionare
+indifferentemente appoggiandosi in locale o in cloud
+(&lt;a class="reference external" href="https://aws.amazon.com/it/s3/"&gt;S3&lt;/a&gt; o simili)&lt;/p&gt;
+&lt;p&gt;Esamineremo brevemente la gestione dei servizi di Genropy e parleremo in
+particolare del servizio di Storage che consente di astrarre delle
+directory logiche su cui operare nell’applicativo, potendo decidere
+durante l’istallazione la corrispondenza con una directory locale o nel
+cloud.&lt;/p&gt;
+&lt;p&gt;Nel talk vedremo come rimpiazzare tutte le chiamate al FileSystem con le
+corrispondenti chiamate alle API del servizio di Storage. Ci
+soffermeremo sulla classe StorageNode che implementa sia i metodi
+necessari per le operazioni di scrittura, lettura e cancellazione di
+File e Directory indipendentemente dalla loro collocazione locale o in
+cloud sia un metodo che fornisce l’URL da servire per vedere o scaricare
+il contenuto statico.&lt;/p&gt;
+&lt;p&gt;Nel caso di servizi S3 o simili viene gestita automaticamente la
+gestione di un token di autorizzazione temporaneo basato sui privilegi
+dell’utente che effettua la richiesta. Questo consente di servire
+direttamente i file statici direttamente dal cloud invece di farli
+transitare dal server applicativo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1761"&gt;https://python.it/feedback-1761&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Porcari</dc:creator><pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-03:pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</guid><category>S3</category><category>genropy</category><category>cloud</category><category>deploy</category></item><item><title>Scaling your Data infrastructure</title><link>https://pyvideo.org/pycon-italia-2018/scaling-your-data-infrastructure.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;This talk aims to answer a few questions:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What do you do when you need to move your model from your laptop to
+production?&lt;/li&gt;
+&lt;li&gt;Is &lt;tt class="docutils literal"&gt;big data == I need to use JVM&lt;/tt&gt; the right assumption?&lt;/li&gt;
+&lt;li&gt;How can I put my jupyter notebook in production?&lt;/li&gt;
+&lt;li&gt;How do you apply the best software engineering practices (testing and
+ci for example) inside your data science process?&lt;/li&gt;
+&lt;li&gt;How do you “decouple” your data scientists, developers and devops
+teams?&lt;/li&gt;
+&lt;li&gt;How do you guarantee the reproducibility of your models?&lt;/li&gt;
+&lt;li&gt;How do you scale your training process when does not fit in memory
+anymore?&lt;/li&gt;
+&lt;li&gt;How do you serve your models and provide an easy rollback system?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The Agenda:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The Data Science workflow&lt;/li&gt;
+&lt;li&gt;Scaling is not just a matter of the size of your Data&lt;/li&gt;
+&lt;li&gt;Scaling when the size of your Data matters&lt;/li&gt;
+&lt;li&gt;DDS, Dockerized Data Science&lt;/li&gt;
+&lt;li&gt;Cassiny&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll share my experience highlighting some of the challenges I faced and
+the solutions I came up to answer these questions.&lt;/p&gt;
+&lt;p&gt;During this presentation I will mention libraries like jupyter, atom,
+scikit- learn, dask, ray, parquet, arrow and many others.&lt;/p&gt;
+&lt;p&gt;The principles and best practices I will share are something that you
+can apply, more or less easily, if you are running or in the process to
+run a production system based on the Python stack.&lt;/p&gt;
+&lt;p&gt;This talk will focus on (my) best practices to run the Python Data stack
+together and I will also talk about Cassiny, an open source project I
+started, that aims to simplify your life if you want to use a completely
+Python based solution in your data science workflow.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 20 April&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Barra</dc:creator><pubDate>Fri, 20 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-20:pycon-italia-2018/scaling-your-data-infrastructure.html</guid><category>Jupyter</category><category>CloudComputing</category><category>pydata</category><category>#lessonslearned</category><category>Big-Data</category><category>S3</category><category>Data-Scientist</category><category>#amicodialessia</category><category>java</category><category>docker</category><category>cloud</category></item></channel></rss>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_stefan-schwarzer.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-10-10T00:00:00+00:00</updated><entry><title>Commenting code — beyond common wisdom</title><link href="https://pyvideo.org/pycon-de-2019/commenting-code-beyond-common-wisdom.html" rel="alternate"></link><published>2019-10-10T00:00:00+00:00</published><updated>2019-10-10T00:00:00+00:00</updated><author><name>Stefan Schwarzer</name></author><id>tag:pyvideo.org,2019-10-10:pycon-de-2019/commenting-code-beyond-common-wisdom.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Stefan Schwarzer&lt;/p&gt;
+&lt;p&gt;Track:PyConDE
+Good code comments are important for software maintenance. This talk
+goes beyond the common wisdom you find in most books and online and
+explains when this common wisdom falls short.&lt;/p&gt;
+&lt;p&gt;Recorded at the PyConDE &amp;amp; PyData Berlin 2019 conference.
+&lt;a class="reference external" href="https://pycon.de"&gt;https://pycon.de&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More details at the conference page: &lt;a class="reference external" href="https://de.pycon.org/program/SUC9VW"&gt;https://de.pycon.org/program/SUC9VW&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pydataberlin"&gt;https://twitter.com/pydataberlin&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pyconde"&gt;https://twitter.com/pyconde&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Concurrency in Python - concepts, frameworks and best practices</title><link href="https://pyvideo.org/pycon-de-2018/concurrency-in-python-concepts-frameworks-and-best-practices.html" rel="alternate"></link><published>2018-10-26T00:00:00+00:00</published><updated>2018-10-26T00:00:00+00:00</updated><author><name>Stefan Schwarzer</name></author><id>tag:pyvideo.org,2018-10-26:pycon-de-2018/concurrency-in-python-concepts-frameworks-and-best-practices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you run in situations where concurrent execution could speed up
+your Python code? Are you using a GUI toolkit?&lt;/p&gt;
+&lt;p&gt;This talk gives you the background to use concurrency in your code
+without shooting yourself in the foot - which is quite easy if you don't
+understand how concurrent execution differs from linear execution!&lt;/p&gt;
+&lt;p&gt;The presentation starts with explaining some concepts like concurrency,
+parallelism, resources, atomic operations, race conditions and
+deadlocks.&lt;/p&gt;
+&lt;p&gt;Then we discuss the commonly-used approaches to concurrency:
+multithreading with the &lt;tt class="docutils literal"&gt;threading&lt;/tt&gt; module, multiprocessing with the
+&lt;tt class="docutils literal"&gt;multiprocessing&lt;/tt&gt; module, and event loops (which include the
+&lt;tt class="docutils literal"&gt;asyncio&lt;/tt&gt; framework). Each of these approaches has its typical use
+cases, which are explained.&lt;/p&gt;
+&lt;p&gt;You can implement concurrency on a number of abstraction levels. The
+lowest level consists of primitives like locks, events, semaphores and
+so on. A higher abstraction level is using queues, typically with worker
+threads or processes. Even higher abstraction levels are active objects
+(hiding primitives or queues behind an API; this includes &amp;quot;actors&amp;quot; if
+you heard of them), the thread and process pools in
+&lt;tt class="docutils literal"&gt;concurrent.futures&lt;/tt&gt; and the &lt;tt class="docutils literal"&gt;asyncio&lt;/tt&gt; framework. Finally, you can
+&amp;quot;outsource&amp;quot; concurrency by leaving it to a message broker, which is a
+distinct process that receives and distributes messages.&lt;/p&gt;
+&lt;p&gt;The talk closes with some tips and best practices, mainly:&lt;/p&gt;
+</summary><category term="Parallel Programming"></category><category term="Programming"></category><category term="Python"></category></entry><entry><title>Support Python 2 and 3 with the same code</title><link href="https://pyvideo.org/europython-2014/support-python-2-and-3-with-the-same-code.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Stefan Schwarzer</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/support-python-2-and-3-with-the-same-code.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Your library supports only Python 2, - but your users keep nagging you
+about Python 3 support?&lt;/p&gt;
+&lt;p&gt;As Python 3 gets adopted more and more, users ask for Python 3 support
+in existing libraries for Python 2. Although there are several
+approaches, this talk focuses on using the very same code for a Python 2
+and a Python 3 version.&lt;/p&gt;
+&lt;p&gt;The talk discusses the main problems when supporting Python 3 and best
+practices to apply for compatibility with Python 2 and 3.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Your library supports only Python 2, - but your users keep nagging you
+about Python 3 support?&lt;/p&gt;
+&lt;p&gt;As Python 3 gets adopted more and more, users ask for Python 3 support
+in existing libraries for Python 2. This talk mentions some approaches
+for giving users a Python 3 version, but will quickly focus on using the
+very same code for a Python 2 and a Python 3 version.&lt;/p&gt;
+&lt;p&gt;This is much easier if you require Python 2.6 and up, and yet a bit
+easier if you require Python 3.3 as the minimum Python 3 version.&lt;/p&gt;
+&lt;p&gt;The talk discusses main problems when supporting Python 3 (some are
+easily solved):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;print&lt;/tt&gt; is a function.&lt;/li&gt;
+&lt;li&gt;More Python APIs return iterators that used to return lists.&lt;/li&gt;
+&lt;li&gt;There's now a clear distinction between bytes and unicode (text)
+strings.&lt;/li&gt;
+&lt;li&gt;Files are opened as text by default, requiring an encoding to apply
+on reading and writing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk also explains some best practices:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Start with a good automatic test coverage.&lt;/li&gt;
+&lt;li&gt;Deal with many automatic conversions with a one-time 2to3 run.&lt;/li&gt;
+&lt;li&gt;Think about how your library should handle bytes and unicode strings.
+(Rule of thumb: Decode bytes as early as possible; encode unicode
+text as late as possible.)&lt;/li&gt;
+&lt;li&gt;Should you break compatibility with your existing Python 2 API? (Yes,
+if there's no other way to design a sane API for Python 2 and 3. If
+you do it, raise the first part of the version number.)&lt;/li&gt;
+&lt;li&gt;Try to keep code that's different for Python 2 and 3 minimal. Put
+code that needs to be different for Python 2 and 3 into a &lt;tt class="docutils literal"&gt;compat&lt;/tt&gt;
+module. Or use third-party libraries like &lt;tt class="docutils literal"&gt;six&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;future&lt;/tt&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, the talk will mention some helpful resources on the web.&lt;/p&gt;
+</summary></entry><entry><title>Debugging mit Python</title><link href="https://pyvideo.org/pycon-de-2012/debugging-mit-python.html" rel="alternate"></link><published>2012-10-31T00:00:00+00:00</published><updated>2012-10-31T00:00:00+00:00</updated><author><name>Stefan Schwarzer</name></author><id>tag:pyvideo.org,2012-10-31:pycon-de-2012/debugging-mit-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Manche Fehler in Python-Programmen lassen sich mit Print-Anweisungen
+aufdecken, in komplizierteren Fällen ist aber ein Debugger gefragt.&lt;/p&gt;
+&lt;p&gt;Der Vortrag behandelt Grundlagen für die Fehlersuche in
+Python-Programmen. Zunächst soll es - für die einfachen Fälle - um
+Print-Anweisungen gehen. Danach kommt die Verwendung des mit Python
+gelieferten Debuggers pdb. Dazu werden Grundbegriffe wie Programmzeiger
+und Breakpoint erklärt und gezeigt, wie man die Befehle des Debuggers
+für die Fehlersuche benutzt (zum Beispiel Setzen von Breakpoints,
+schrittweise Ausführung ohne und mit Funktionsaufrufen sowie natürlich
+die Untersuchung von Objekten).&lt;/p&gt;
+&lt;p&gt;Ich kann den Vortrag wahlweise als 55- oder 25-Minuten-Version halten.
+Im ersten Fall würde ich auch noch auf andere Debugger wie pudb, pdb++
+und WinPdb eingehen.&lt;/p&gt;
+</summary><category term="breakpoint"></category><category term="debugger"></category><category term="debugging"></category><category term="fehler"></category><category term="fehlersuche"></category><category term="print"></category><category term="programmzeiger"></category><category term="unterbrechungspunkt"></category></entry><entry><title>Nebenläufige Programme mit Python</title><link href="https://pyvideo.org/pycon-de-2012/nebenlaufige-programme-mit-python.html" rel="alternate"></link><published>2012-10-30T00:00:00+00:00</published><updated>2012-10-30T00:00:00+00:00</updated><author><name>Stefan Schwarzer</name></author><id>tag:pyvideo.org,2012-10-30:pycon-de-2012/nebenlaufige-programme-mit-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In diesem Vortrag soll es um Grundlagen nebenläufiger Programme gehen,
+wie sie mit den Modulen threading und multiprocessing möglich sind.&lt;/p&gt;
+&lt;p&gt;Zuerst wird erklärt, in welchen Fällen Nebenläufigkeit sinnvoll ist.
+Danach wird auf die grundsätzlichen Probleme nebenläufiger Programme
+eingegangen, insbesondere Änderungen an gemeinsam genutzten Ressourcen
+(zum Beispiel Dateien oder auch &amp;quot;nur&amp;quot; Objekte im Speicher) durch mehrere
+Threads oder Prozesse. Schließlich wird gezeigt, wie man solche
+Ressourcen-Zugriffe durch Locks oder Queues entschärfen kann.&lt;/p&gt;
+</summary><category term="deadlock"></category><category term="gil"></category><category term="multiprocessing"></category><category term="nebenläufigkeit"></category><category term="queue"></category><category term="threading"></category></entry></feed>

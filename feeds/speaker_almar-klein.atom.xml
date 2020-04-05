@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_almar-klein.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-07-25T00:00:00+00:00</updated><entry><title>Let’s embrace WebAssembly!</title><link href="https://pyvideo.org/europython-2018/lets-embrace-webassembly.html" rel="alternate"></link><published>2018-07-25T00:00:00+00:00</published><updated>2018-07-25T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2018-07-25:europython-2018/lets-embrace-webassembly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;WebAssembly (WASM) is an open, low level binary format designed to be
+compact and run at native speed, while being memory-safe. WASM is
+primarily intended to run code in browsers, but its by no means limited
+to this. This makes it an interesting intermediate language (IR); code
+that compiles to WASM will (in the future) run basically anywhere. In
+short: WASM is coming and its great!&lt;/p&gt;
+&lt;p&gt;Unsurprisingly, WASM is being embraced by many communities, such as C++,
+Rust, Lua, and .NET. Sadly, there does not seem to be a lot of
+enthusiasm from the Python community yet…&lt;/p&gt;
+&lt;p&gt;Perhaps this is because Python is interpreted and can therefore not
+(easily) use WASM as a compilation target. It should be possible to
+compile a Python interpreter (like CPython or Pypy) to WASM and thereby
+run Python code in a browser. But the result would be pretty
+heavy-weight, so it would arguably not be a very practical.&lt;/p&gt;
+&lt;p&gt;Within the PPCI project (a pure Python compiler infrastructure) tooling
+has been developed to load, inspect, compile and even run WASM modules.
+This allows combining WASM and Python in new ways. In this talk we
+discuss two approaches by which the Python community might embrace WASM.&lt;/p&gt;
+&lt;p&gt;Firstly, various projects already exist that compile Python functions to
+other languages (e.g. Numba, PScript), and we have type annotations. If
+Python functions would be compiled to WASM, the resulting code would run
+in any WASM runtime (e.g. the browser). This will be demonstrated with
+an example, for which the resulting code can be run either in a browser
+or inside Python itself. In either case, it’s pretty darn fast.&lt;/p&gt;
+&lt;p&gt;Secondly, rather than &lt;em&gt;using&lt;/em&gt; WASM, it might be interesting for Python
+to function as a platform to &lt;em&gt;run&lt;/em&gt; and &lt;em&gt;bind&lt;/em&gt; WASM modules. Two of
+Python’s greater strengths are its rich ecosystem and its ability to
+glue things together. Let’s build on that! Imagine creating an
+application that consists of multiple WASM modules, perhaps compiled
+from different languages, and binding these together into a single
+Python app.&lt;/p&gt;
+&lt;p&gt;This will be demonstrated with a game, which is written in Rust,
+compiled to WASM, and running inside a Python process. The WASM module
+consumes a drawing API, which is in this case provided by Python, and
+Python feeds the WASM module with user input.&lt;/p&gt;
+&lt;p&gt;I hope that this talk inspires other Pythonistas to think about the
+advantages that WASM can bring to our ecosystem, and also about the role
+that Python can play in the growing WASM ecosystem.&lt;/p&gt;
+</summary></entry><entry><title>Getting the hang of WASM</title><link href="https://pyvideo.org/euroscipy-2017/getting-the-hang-of-wasm.html" rel="alternate"></link><published>2017-08-31T00:00:00+00:00</published><updated>2017-08-31T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2017-08-31:euroscipy-2017/getting-the-hang-of-wasm.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://webassembly.org/"&gt;Web Assembly&lt;/a&gt; (WASM) is a new open standard
+developed by representatives from all major browsers. It is a low level
+binary format designed to be compact and run at native speed, while
+being memory-safe.&lt;/p&gt;
+&lt;p&gt;WASM is primarily intended to run code in browsers, but will also run in
+other environments like desktop, mobile and more. This makes it
+interesting to use as an intermediate language (IR); code that compiles
+to WASM will (in the future) run basically anywhere.&lt;/p&gt;
+&lt;p&gt;A proof of concept was released early this year and works out of the box
+in recent Firefox and Chrome browsers. In order to play with WASM
+myself, I wrote a &lt;a class="reference external" href="https://github.com/almarklein/pywasm"&gt;tiny Python
+library&lt;/a&gt; that makes it
+relatively easy to generate WASM modules.&lt;/p&gt;
+&lt;p&gt;In this talk I will briefly explain what WASM is, describe the anatomy
+of a WASM module, how it fits in the host environment (e.g. JavaScript
+or a C++ program), and the kinds of opportunities that this provides.
+Via live coding in a notebook, I will first write a simple WASM program
+by hand, compile it to binary WASM, and execute it in the notebook
+itself. We will then move to higher levels (including a Mindfuck to WASM
+compiler) and end with compiling a simple Python program to WASM, which
+will find the 10001st prime much faster than Python does. As a side
+effect, this talk is also a crash course on how compilers work.&lt;/p&gt;
+&lt;p&gt;I expect WASM to have a major impact. Although it is currently in its
+early infancy, we can already play with it, and I hope to give a glimpse
+of the awesome things that it can do.&lt;/p&gt;
+</summary><category term="web assembly"></category><category term="wasm"></category></entry><entry><title>Running (snippets of) Python in the browser</title><link href="https://pyvideo.org/pydata-amsterdam-2016/running-snippets-of-python-in-the-browser.html" rel="alternate"></link><published>2016-03-26T00:00:00+00:00</published><updated>2016-03-26T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2016-03-26:pydata-amsterdam-2016/running-snippets-of-python-in-the-browser.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Amsterdam 2016&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll start with an overview of solutions to run Python in the browser. Then we’ll explain how our solution (PyScript) works and what its advantages/disadvantages are. Next, we’ll demonstrate its use in a few real-world projects.&lt;/p&gt;
+&lt;p&gt;It is evident that “the web” is becoming an increasingly important place to publish research findings. Apart from the obvious advantage of being able to reach a wide audience at negligible cost, browser technology allows for increasingly sophisticated means to present your data and findings in various interactive ways.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the language of the web (JavaScript) is a language that is notorious for its many flaws. It seems that Pythonistas are especially repelled by the language, since the number of projects that try to “run Python in the browser” is steadily growing.&lt;/p&gt;
+&lt;p&gt;In our approach (PyScript), we do not aim to run the full Python language in the browser. It’s rather a way to write JavaScript using a Python syntax, making it as Pythonic as we can. There are a few pitfalls, but these have been reduced over time, which makes writing PyScript feel almost like writing Python.&lt;/p&gt;
+&lt;p&gt;One advantage of our approach is that one can generate snippets of JavaScript code that can interact as-is with other JavaScript libraries. Combined with the fact that PyScript is valid Python, it allows for a natural way to define client-side reactivity inside common Python modules. Also, it makes PyScript faster than most other Python-in-the-browser solutions.&lt;/p&gt;
+&lt;p&gt;One of its use-cases is Bokeh’s new capability to define client-side callbacks in Python. There are plans to use a similar approach to allow users to define custom Bokeh models. The Flexx project is a pure Python widget toolkit, that renders in the browser. All widgets are implemented with PyScript (wrapping PhosphorJS for some layouts). In a project with Clinical Graphics, PyScript is used in a system that allows visualization and user-annotations of medical images, with plans for 3D visualizations.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1X069udByOTw3d4-NVU14XwhTANCdECvjY0R7fDuXTpA/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000"&gt;https://docs.google.com/presentation/d/1X069udByOTw3d4-NVU14XwhTANCdECvjY0R7fDuXTpA/pub?start=false&amp;amp;loop=false&amp;amp;delayms=3000&lt;/a&gt;&lt;/p&gt;
+</summary><category term="pyscript"></category></entry><entry><title>A Pure Python GUI Tookit Based on Web Technology</title><link href="https://pyvideo.org/euroscipy-2015/a-pure-python-gui-tookit-based-on-web-technology.html" rel="alternate"></link><published>2015-10-05T00:00:00+00:00</published><updated>2015-10-05T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2015-10-05:euroscipy-2015/a-pure-python-gui-tookit-based-on-web-technology.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk describes a cross-platform, pure Python toolkit for creating graphical user interfaces (GUI's), that uses web technology for its rendering. You can use it to create desktop applications, web apps, and add widgets to the IPython/Jupyter notebook.&lt;/p&gt;
+</summary></entry><entry><title>Running Python Apps in the Browser</title><link href="https://pyvideo.org/scipy-2016/running-python-apps-in-the-browser-almar-klein-scipy-2016.html" rel="alternate"></link><published>2016-07-14T00:00:00+00:00</published><updated>2016-07-14T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2016-07-14:scipy-2016/running-python-apps-in-the-browser-almar-klein-scipy-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The web is becoming an increasingly important place to publish research findings, but JavaScript is a language that is broken by design, and Pythonistas seem particularly repelled by the language.&lt;/p&gt;
+&lt;p&gt;Flexx is a tool to create web apps, for which the client-side is completely implemented in Python and transpiled to JavaScript. It’s easy to extend Flexx’ functionality by writing Python classes, which will be demonstrated in this talk.&lt;/p&gt;
+</summary><category term="flexx"></category></entry><entry><title>Introducing Vispy's high level modules: easy, powerful visualization</title><link href="https://pyvideo.org/euroscipy-2014/introducing-vispys-high-level-modules-easy-pow.html" rel="alternate"></link><published>2014-10-22T00:00:00+00:00</published><updated>2014-10-22T00:00:00+00:00</updated><author><name>Almar Klein</name></author><id>tag:pyvideo.org,2014-10-22:euroscipy-2014/introducing-vispys-high-level-modules-easy-pow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vispy is an OpenGL-based interactive visualization library in Python.
+Its goal is to make it easy to create beautiful and fast dynamic
+visualizations. For example, scientific plotting of tens of millions of
+points, interacting with complex polygonial models, and (dynamic) volume
+rendering.&lt;/p&gt;
+&lt;p&gt;Vispy is a young library and very actively developed. Until recently, a
+user would have to know OpenGL in order to work with Vispy. Now that the
+higher levels of the package take shape, this is no longer the case.
+When these layers are finalized, the number of people that can benefit
+from vispy will significantly increase.&lt;/p&gt;
+&lt;p&gt;We will give a brief overview of the Vispy package, and focus on the
+higher level modules that will make it easy to visualize images, lines,
+etc., and organize these object in a scene graph. Of course we will
+demonstrate this with several examples.&lt;/p&gt;
+&lt;p&gt;We will also talk about our progress in other areas, such as a browser
+backend and integration with the IPython notebook.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://vispy.org/"&gt;http://vispy.org/&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

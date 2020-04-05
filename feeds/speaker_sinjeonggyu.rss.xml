@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 29 Aug 2016 00:00:00 +0000</lastBuildDate><item><title>Designing a Python-based Data Analysis / Online Coding Platform for Researchers and Educators</title><link>https://pyvideo.org/pycon-korea-2015/designing-a-python-based-data-analysis-online-coding-platform-for-researchers-and-educators.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In modern science and engineering, it is essential to use data analysis
+and calculation using computers. However, large-scale computing is
+labor-intensive to achieve extensibility and manageability of computing
+resources. We are designing and implementing a cloud platform that
+standardizes development, running, and sharing of the data processing
+tasks using cloud technologies and Python 3. We are also adding
+research/education services on top of it.&lt;/p&gt;
+&lt;p&gt;In this talk, we are going to share what we have learned during 2 months
+of development experiences. In particular, it will include the
+architecture of our platform, experiences in the design and
+implementation process, and common caveats to care when you do a similar
+work. We hope to share our motivation that allowed our pathway over such
+a mine field with you.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Modern science and Python&lt;ul&gt;
+&lt;li&gt;Online programming playground for researchers and educators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Technical challenges&lt;ul&gt;
+&lt;li&gt;Sandboxing!&lt;/li&gt;
+&lt;li&gt;Resource consolidation&lt;/li&gt;
+&lt;li&gt;Fast uploads/downloads of data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Choice of tech stack&lt;ul&gt;
+&lt;li&gt;Advantages and disadvantages of Python&lt;/li&gt;
+&lt;li&gt;It's time to go Python 3&lt;/li&gt;
+&lt;li&gt;On-premise vs. Hosting vs. Cloud (AWS / Azure / GCE)&lt;/li&gt;
+&lt;li&gt;Docker containers 와 kubernetes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;quot;Shoveling&amp;quot;&lt;ul&gt;
+&lt;li&gt;Warring states of Javascript frameworks + UI frontends&lt;/li&gt;
+&lt;li&gt;Entangling Waltz of Polymer, webcomponents, and Django&lt;/li&gt;
+&lt;li&gt;Backends: Mad-max around Docker&lt;/li&gt;
+&lt;li&gt;Security holes in ipython/Jupyter in the perspective of developer
+and hacker&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">신정규</dc:creator><pubDate>Sat, 29 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-29:pycon-korea-2015/designing-a-python-based-data-analysis-online-coding-platform-for-researchers-and-educators.html</guid></item><item><title>Creating AI chat bot with Python 3 and TensorFlow</title><link>https://pyvideo.org/pycon-apac-2016/creating-ai-chat-bot-with-python-3-and-tensorflow.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;발표자: 신정규 ( Jeongkyu Shin )
+슬라이드: &lt;a class="reference external" href="https://speakerdeck.com/inureyes/building-ai-chat-bot-using-python-3-and-tensorflow"&gt;https://speakerdeck.com/inureyes/building-ai-chat-bot-using-python-3-and-tensorflow&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Recently, chat bot has become the center of public attention as a new mobile user interface since 2015. Chat bots are widely used to reduce human-to-human interaction, from consultation to online shopping and negotiation, and still expanding the application coverage. Also, chat bot is the basic of conversational interface and non-physical input interface with combination of voice recognition.&lt;/p&gt;
+&lt;p&gt;Traditional chat bots were developed based on the natural language processing (NLP) and bayesian statistics for user intention recognition and template-based response. However, since 2012, accelerated advance in deep-learning technology and NLPs using deep-learning opened the possibilities to create chat bots with machine learning. Machine learning (ML)-based chat bot development has advantages, for instance, ML-based bots can generate (somewhat non-sense but acceptable) responses to random asks that has no connection with the context once the model is constructed with appropriate learning level.&lt;/p&gt;
+&lt;p&gt;In this talk, I will introduce the garage chat bot creation process step-by-step. First, get the data and preprocess it with Python 3 and pandas. Also, data is modified to more trainable form. With preprocessed data, design the deep learning model with TensorFlow which is suitable for sentence-type input / output and train it. After training, serve the model with messenger interface created by using telegram API and Python 3, and demonstrate the result.&lt;/p&gt;
+&lt;p&gt;In the process, we have to solve several problems. First is the preprocessing the Korean sentences with natural language processors, and tokenizing the sentences with proper length and types. Also, we have to solve the ‘josa (postpositions in Korean) hell” and conjunction problems to construct TensorFlow model. In addition to preprocessing, model architecture to recognize the conversational context is also needed. To serve bot with Python HTTP server and telegram API, some points demand deliberation. I’ll share my multi-modal bot model idea, implementation and tips to solve these problems.&lt;/p&gt;
+&lt;p&gt;(Korean)&lt;/p&gt;
+&lt;p&gt;chat bot은 2015년부터 모바일을 중심으로 새로운 사용자 UI로 주목받고 있다. 챗 봇은 상담시 인간-인간 인터랙션을 줄이는 용도부터 온라인 쇼핑 구매에 이르기까지 다양한 분야에 활용되고 있으며 그 범위를 넓혀 나가고 있다. 챗 봇은 대화형 인터페이스의 기초이면서 동시에 (음성 인식과 결합을 통한) 무입력 방식 인터페이스의 기반 기술이기도 하다.&lt;/p&gt;
+&lt;p&gt;기존의 챗 봇들은 자연어 분석과 베이지안 통계에 기반한 사용자 의도 패턴 인식과 그에 따른 템플릿 응답을 기본 원리로 하여 개발되었다. 그러나 2012년 이후 급속도로 발전한 딥러닝 및 그에 기초한 자연어 인식 기술은 기계 학습을 이용해 챗 봇을 만들 수 있는 가능성을 열었다. 기계학습을 통해 챗 봇을 개발할 경우, 충분한 학습도의 모델을 구축한 후에는 학습 데이터에 따라 컨텍스트에서 벗어난 임의의 문장 입력에 대해서도 적당한 답을 생성할 수 있다는 장점이 있다.&lt;/p&gt;
+&lt;p&gt;이 발표에서는 Python 3 를 이용하여 실제 사용할 수 있는 챗 봇을 만드는 과정을 단계별로 진행한다. 우선 데이터를 구한 후 Python 3 와 Pandas를 사용하여 데이터를 전처리한다. 이렇게 전처리한 데이터를 학습에 적당한 형태로 재가공한다. 그 후 컴퓨터에 TensorFlow의 python 3 패키지를 설치한다. 이후 TensorFlow 를 이용하여 문장형 입출력에 적절한 딥러닝 모델을 설계한 후, 앞에서 전처리한 데이터를 이용하여 학습시킨 모델을 만든다. 이렇게 만든 모델을 telegram API 를 이용해 인터페이스를 만든 후, telegram에 봇을 친구로 등록하여 대화를 시연한다.&lt;/p&gt;
+&lt;p&gt;이 과정에서 여러 문제들을 해결해야 한다. 우선 한국어 자연어 처리를 위해 데이터를 적절히 전처리하는 과정과, 모델 학습을 위해 문장의 길이 및 형태를 적절히 토크나이징하는 과정이 필요하다. 그 다음 Tensorflow 로 모델을 설계하고 딥러닝 모델로 학습하는 단계에서 장애가 되는 조사 및 접속사 처리, 오타 처리등의 문제를 해결해야 한다. 또한 연속 대화 구현을 위하여 문장 단위의 입출력이 아니라 컨텍스트를 인식하기 위한 모델 설계 또한 필요하다. 학습한 결과를 파이썬 HTTP 서버 및 telegram API를 이용해 서빙하는 부분에서 몇가지 고려할 부분들도 있다. 이러한 부분들에 대한 아이디어 및 구현과 팁을 공유하고자 한다.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">신정규</dc:creator><pubDate>Mon, 29 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-29:pycon-apac-2016/creating-ai-chat-bot-with-python-3-and-tensorflow.html</guid><category>tensorflow</category></item></channel></rss>

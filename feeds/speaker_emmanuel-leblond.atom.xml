@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_emmanuel-leblond.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-06T00:00:00+00:00</updated><entry><title>Trio: rendre l'asynchrone Pythonique</title><link href="https://pyvideo.org/pycon-fr-2018/trio-rendre-lasynchrone-pythonique.html" rel="alternate"></link><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><author><name>Emmanuel Leblond</name></author><id>tag:pyvideo.org,2018-10-06:pycon-fr-2018/trio-rendre-lasynchrone-pythonique.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La programmation concurrente est un paradigme très utiles: site web
+jonglant avec une multitude de websockets, bot de chat gérant plusieurs
+conversations, web crawler travaillant sur plusieurs pages en parallèle
+etc.&lt;/p&gt;
+&lt;p&gt;Toutefois écrire un programme concurrent n'est jamais une balade de
+santé, et ce même pour un développeur expérimenté.&lt;/p&gt;
+&lt;p&gt;Python étant connu pour sa capacité à rendre simple les choses
+complexes, il devrait y avoir une façon Pythonique d'écrire des
+programmes asynchrones. Et c'est justement ce que Trio tente d’accomplir
+!&lt;/p&gt;
+&lt;p&gt;Trio est une bibliothèque de programmation asynchrone se basant sur les
+dernières fonctionnalités fournit par Python3 (async/await, boucles et
+context manager asynchrones etc.) tout en définissant un nouveau jeu de
+primitives rendant l'écriture de programmes asynchrones plus simple,
+plus testable, plus fun... bref plus Pythonique ;-)&lt;/p&gt;
+</summary></entry><entry><title>Trio: A pythonic way to do async programming</title><link href="https://pyvideo.org/europython-2018/trio-a-pythonic-way-to-do-async-programming.html" rel="alternate"></link><published>2018-07-25T00:00:00+00:00</published><updated>2018-07-25T00:00:00+00:00</updated><author><name>Emmanuel Leblond</name></author><id>tag:pyvideo.org,2018-07-25:europython-2018/trio-a-pythonic-way-to-do-async-programming.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Concurrent programs are super useful: think of web apps juggling lots of
+simultaneous downloads and websocket connections, chat bots tracking
+multiple concurrent conversations, or web spiders fetching pages in
+parallel. But writing concurrent programs is complicated, intimidating
+to newcomers, and often challenging even for experts.&lt;/p&gt;
+&lt;p&gt;Does it have to be? Python is famous for being simple and
+straightforward; can Python make concurrent programming simple and
+straightforward too? Trio is an attempt to address this question by the
+positive !&lt;/p&gt;
+&lt;p&gt;By taking advantage of new Python 3 features (async/await keywords,
+async loops and context managers etc.) while dropping legacy concepts
+that older asynchronous frameworks has to maintain, Trio defines a new
+set of primitives that make it dramatically easier to write correct
+concurrent programs.&lt;/p&gt;
+&lt;p&gt;In this talk, we will describe those primitives, and demonstrate how to
+use them to implement a basic algorithm for speeding up TCP connections.
+Compared to the best previous Python implementation, our version turns
+out to be easier to understand, more correct, and dramatically shorter.&lt;/p&gt;
+</summary></entry><entry><title>Bringing Python to Godot game engine</title><link href="https://pyvideo.org/europython-2017/bringing-python-to-godot-game-engine.html" rel="alternate"></link><published>2017-07-10T00:00:00+00:00</published><updated>2017-07-10T00:00:00+00:00</updated><author><name>Emmanuel Leblond</name></author><id>tag:pyvideo.org,2017-07-10:europython-2017/bringing-python-to-godot-game-engine.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://godotengine.org/"&gt;https://godotengine.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Godot is an advanced, feature-packed, multi-platform 2D and 3D open
+source game engine. The project has joined the Software Freedom
+Conservancy project and it growing community makes it hopes to become
+a real alternative to Unity &amp;amp; GameMaker.&lt;/p&gt;
+&lt;p&gt;This talk cover a year long journey of the port of Python as a
+scripting language for the engine, starting from a rant against
+Godot's Python-like proprietary language.&lt;/p&gt;
+&lt;p&gt;We will have a look at Godot's internal architecture as  is it itself
+a real interpreter with it garbage collector, dynamic typing,
+introspection and even builtin custom scripting language. All of this
+having to work next to our Python interpreter and communicate back
+and forth with it.&lt;/p&gt;
+&lt;p&gt;Finally we will see the different approaches that have been tried to
+bind Python to Godot each with there own pros &amp;amp; cons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Using Micropython interpreter instead of CPython&lt;/li&gt;
+&lt;li&gt;Using PyBind11 to statically bind to Godot C++ API&lt;/li&gt;
+&lt;li&gt;Using CFFI and rely on a 3rd party C API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The audience should have some basic knowledge of C level computing
+(static vs dynamic language, compilation &amp;amp; linking).&lt;/p&gt;
+</summary></entry><entry><title>À la découverte du bytecode CPython !</title><link href="https://pyvideo.org/pycon-fr-2016/a-la-decouverte-du-bytecode-cpython.html" rel="alternate"></link><published>2016-10-15T00:00:00+00:00</published><updated>2016-10-15T00:00:00+00:00</updated><author><name>Emmanuel Leblond</name></author><id>tag:pyvideo.org,2016-10-15:pycon-fr-2016/a-la-decouverte-du-bytecode-cpython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Le bytecode est au cœur de l'interpréteur CPython. Toutefois du point du vu de l'utilisateur il se limite à l'apparition (horripilante ?) de fichiers &amp;quot;.pyc&amp;quot; une fois un code exécuté.
+Dans cette présentation, nous partirons à l'aventure au cœur de la machine virtuelle CPython
+pour découvrir ce qui l'anime tout en répondant à des questions existentielles comme&amp;nbsp;:
+- d'où viennent et à quoi servent les fameux fichiers .pyc
+- à quoi ressemble le bytecode et quels sont ses instructions les plus courantes
+- comment le désassembler grâce au module &lt;cite&gt;dis&lt;/cite&gt;
+- comment tout cela fonctionne-t-il au sein du système de piles et de frames de la machine virtuelle CPython
+- et bien sûr à quoi tout cela peut-il bien servir dans la vrai vie ;-)&lt;/p&gt;
+</summary></entry></feed>

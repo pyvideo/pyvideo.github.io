@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 18 Oct 2015 00:00:00 +0000</lastBuildDate><item><title>Importer des données en Python avec CubicWeb 3.21</title><link>https://pyvideo.org/pycon-fr-2015/importer-des-donnees-en-python-avec-cubicweb-321.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Nous introduirons une nouvelle méthode pour importer des données
+externes (service REST, fichier, etc.) dans une application. Simple et
+flexible, elle favorise la réutilisation des composants afin de se
+concentrer sur ce qui est spécifique à chaque cas. Un exemple
+d'implémentation sera donné avec le framework CubicWeb 3.21 qui
+introduit une API d'import de données fondée sur cette méthode.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il est courant pour un développeur de devoir implémenter des
+fonctionnalités d'import de données. Les utilisateurs peuvent en effet
+avoir besoin de données disponibles par ailleurs, dans un tableur par
+exemple, dans une autre base, ou accessibles par des services web. Nous
+introduisons ici une méthode simple pour réaliser cela en favorisant la
+généricité et la ré-utilisabilité des composants développés.&lt;/p&gt;
+&lt;div class="section" id="un-flux-personnalisable-d-entites"&gt;
+&lt;h4&gt;Un flux personnalisable d'entités&lt;/h4&gt;
+&lt;p&gt;L'idée est de transformer petit à petit les données externes afin de les
+rendre compatibles avec le schéma de l'application et donc insérables en
+base.&lt;/p&gt;
+&lt;p&gt;Le principe est de commencer par stocker les données de la source sur
+une «[HTML_REMOVED]entité externe[HTML_REMOVED]». Puis on utilise des
+générateurs Python pour créer un «[HTML_REMOVED]flux[HTML_REMOVED]»
+d'entités[HTML_REMOVED]: chaque entité passe de fonction en fonction,
+ce qui va la transformer peu à peu pour la rapprocher du modèle attendu
+et qu'elle soit finalement prête à être insérée, ou au contraire rejetée
+si ce n'est pas possible.&lt;/p&gt;
+&lt;p&gt;L'étape d'insertion est alors identique, quelle que soit la source d'où
+proviennent les données.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemple-avec-cubicweb-3-21"&gt;
+&lt;h4&gt;Exemple avec CubicWeb 3.21&lt;/h4&gt;
+&lt;p&gt;Avec sa version 3.21 sortie en 2015, le framework CubicWeb dispose d'une
+toute nouvelle API fondée sur cette méthode. Elle permet au développeur
+de se concentrer sur le flux de données provenant des sources qui
+l'intéressent.&lt;/p&gt;
+&lt;p&gt;De plus, l'étape d'insertion offre plusieurs composants
+interchangeables. En fonction du compromis qu'il souhaite faire entre
+sécurité et rapidité, le développeur peut choisir entre une insertion
+sûre mais lente, où chaque entité à insérer est préalablement vérifiée
+quant au type de ses données et la validité de ses relations, et une
+insertion plus rapide mais pouvant échouer, où les entités sont insérées
+en masse.&lt;/p&gt;
+&lt;p&gt;Tout cela sera illustré par le moissonnage des données de portails &lt;em&gt;Open
+Data&lt;/em&gt;. La diversité des formats (RDF (open-data.europa.eu), REST
+(data.gouv.fr, OpenDataSoft), CSW (geocatalogue.fr), etc.) ainsi que des
+modèles de données impose de créer des flux différents afin que toutes
+ces données puissent être importées dans un schéma unique de CubicWeb.&lt;/p&gt;
+&lt;p&gt;De la même façon, un autre exemple sera l'import de données SKOS où des
+thesaurus entiers sont importés dans CubicWeb grâce à cette API.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yann Voté</dc:creator><pubDate>Sun, 18 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-18:pycon-fr-2015/importer-des-donnees-en-python-avec-cubicweb-321.html</guid></item></channel></rss>

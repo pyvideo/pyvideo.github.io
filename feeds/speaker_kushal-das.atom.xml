@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_kushal-das.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-05-04T17:10:00+00:00</updated><entry><title>Building reproducible Python applications for secured environments</title><link href="https://pyvideo.org/pycon-us-2019/building-reproducible-python-applications-for-secured-environments.html" rel="alternate"></link><published>2019-05-04T17:10:00+00:00</published><updated>2019-05-04T17:10:00+00:00</updated><author><name>Kushal Das</name></author><id>tag:pyvideo.org,2019-05-04:pycon-us-2019/building-reproducible-python-applications-for-secured-environments.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We all have to package Python based applications for various
+environments, starting from command line tools, to web applications. And
+depending on the users, it can be installed on thousands on computers or
+on a selected few systems. &lt;a class="reference external" href="https://pypi.org"&gt;https://pypi.org&lt;/a&gt; is our goto place for
+finding any dependencies and also in most of the time we install binary
+wheels directly from there, thus saving a lot time.&lt;/p&gt;
+&lt;p&gt;But, Python is also being used in many environments where security is
+the utter most important, and validating the dependencies of project is
+also very critical along with the actual project source code. Many of
+noticed the recent incident where people were being able to &lt;a class="reference external" href="https://www.theregister.co.uk/2018/11/26/npm_repo_bitcoin_stealer/"&gt;steal
+bticoins using a popular
+library&lt;/a&gt;.This
+talk will take &lt;a class="reference external" href="https://github.com/freedomofpress/securedrop-client"&gt;SecureDrop client
+application&lt;/a&gt; for
+journalists as an example project and see how we tried to tackle the
+similar problem. SecureDrop is an Open Source whistleblower system which
+is deployed over 75 news organizations all over the world. Our threat
+model has nation state actors as possible threats, so, security and
+privacy of the users of the system is a very important point of the
+whole project. The tools in this case are build and packaged into
+reproducible Debian deb packages and are installed on Qubes OS in the
+final end user systems.&lt;/p&gt;
+&lt;p&gt;There are two basic ways we handle Python project dependencies, for most
+of the development work, we use a virtualenv, and directly install the
+dependencies using wheels built from pypi.org. When we package the
+application for the end users, many times we package them using a
+operating system based package manager and ask the users to install
+using those (say RPM or Debian's deb package). In the second case, all
+the dependencies come as separate packages (and most of the time from
+the OS itself). The dependency is being handled by the OS package
+manager itself. That case, we can not update the dependencies fast
+enough if required, it depends on the packagers from the community who
+maintains those said packages in the distribution.&lt;/p&gt;
+&lt;p&gt;We use &lt;a class="reference external" href="https://dh-virtualenv.readthedocs.io/en/1.0/"&gt;dh-virtualenv&lt;/a&gt;
+project to help us to use our own wheels + a virtualenv for the project
+to be packaged inside the debian .deb package. This talk will go throuh
+&lt;a class="reference external" href="https://github.com/freedomofpress/securedrop-client"&gt;the process&lt;/a&gt; of
+building wheels from known (based on sha256sum) source tarballs, and
+then having a gpg signed list of updated wheels and &lt;a class="reference external" href="https://github.com/freedomofpress/securedrop-debian-packaging/tree/master/simple"&gt;a private
+index&lt;/a&gt;
+for the same. And also how we are verifying the wheels' sha256sum (and
+the signature of that list) during the build process. The final output
+is reproducible Debian packages.&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>Friday Education Panel</title><link href="https://pyvideo.org/pycon-uk-2017/friday-education-panel.html" rel="alternate"></link><published>2017-10-27T16:30:00+01:00</published><updated>2017-10-27T16:30:00+01:00</updated><author><name>Daniel Pope</name></author><id>tag:pyvideo.org,2017-10-27:pycon-uk-2017/friday-education-panel.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a panel of four experts answering pre-submitted questions from the assembled audience under the guidance of a chairperson. Audience participation will be encouraged.&lt;/p&gt;
+&lt;p&gt;Are you a student learning Python? Do you teach using Python? Perhaps you support teachers or create educational resources? You may even be a parent with a perspective on how your own children are taught programming! Our panel of experts would love to hear from you!&lt;/p&gt;
+&lt;p&gt;Think &amp;quot;Question Time&amp;quot; on BBC1 at 10:30pm on a Thursday and you have a pretty good idea of what it will be like.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dan Pope (Chair)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Daniel is a hobbyist games programmer and two-time winner of the Pyweek games programming contest. He is author of Pygame Zero and adventurelib, both educational games frameworks for Python. He works for Two Sigma, a NYC hedge fund, from London.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Carrie Anne Philbin&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Carrie Anne Philbin is an award winning Computing &amp;amp; ICT Teacher, Author and YouTuber. Currently working as Director of Education for the Raspberry Pi Foundation to put the power of computing and digital making into the hands of people all over the world. She also volunteers on the board for Computing At School and as a Fellow of the Python Software Foundation. Alongside her work in formal education in the UK, Carrie Anne also hosts a Computer Science series on popular educational YouTube channel Crash Course and creates technology tutorials on her own channel the Geek Gurl Diaries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cat Lamin&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Former UK primary school teacher and real-life geek girl, Cat is enthusiastic about getting teachers and children interested in coding and computing. She is a Raspberry Pi Certified Educator, CAS Master Teacher and Google Certified Educator; in her spare time, she performs in for an amateur theatre group, Q2 Players. Recent work has included work for the National STEM centre, travelling to Brazil to train elementary school teachers in basic computational thinking and computer science as well as working part-time for pi-top.&lt;/p&gt;
+&lt;p&gt;Cat also founded Coding Evening for teachers, a network of social events to encourage teachers and community members to get together and share best practice for computing teaching. She runs Raspberry Jam events in Wimbledon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Kushal Das&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Kushal Das is a developer of SecureDrop at Freedom of the Press Foundation. He is a long time contributor to various upstream Free Software projects including the Fedora project. He is a core developer of CPython, and also a director of the Python Software Foundation. For the last 10 years he has been organizing online summer training to help people to become upstream contibutors, and wrote an online book to help in the same.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tom Crick&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Tom Crick is Professor of Computer Science &amp;amp; Public Policy and Deputy Director of Innovation at Cardiff Metropolitan University. His interests sit at the research/policy interface, solving data-driven and computationally-intensive problems, as well as science/innovation policy, public service innovation, STEM education and skills/infrastructure for the digital economy. In 2013, he chaired the Welsh Government’s review of the ICT curriculum and chaired the development of a Digital Competence Framework for all schools in 2016. He was recently announced as the chair of the new National Network for Excellence in Science &amp;amp; Technology. He is Vice-President of BCS, The Chartered Institute for IT, Chair of CAS Wales and a non-executive director of Dŵr Cymru/Welsh Water. Twitter: &amp;#64;ProfTomCrick&lt;/p&gt;
+</summary></entry><entry><title>Python in Redhat by Kushal Das 30:35</title><link href="https://pyvideo.org/pycon-india-2016/python-in-redhat-by-kushal-das-3035.html" rel="alternate"></link><published>2016-09-23T00:00:00+00:00</published><updated>2016-09-23T00:00:00+00:00</updated><author><name>Kushal Das</name></author><id>tag:pyvideo.org,2016-09-23:pycon-india-2016/python-in-redhat-by-kushal-das-3035.html</id><summary type="html"></summary></entry><entry><title>[Poster] Darkserver: Help to Debug Userspace</title><link href="https://pyvideo.org/pycon-us-2013/darkserver-help-to-debug-userspace.html" rel="alternate"></link><published>2013-03-17T00:00:00+00:00</published><updated>2013-03-17T00:00:00+00:00</updated><author><name>Kushal Das</name></author><id>tag:pyvideo.org,2013-03-17:pycon-us-2013/darkserver-help-to-debug-userspace.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Darkserver is a set of tools and service written in Python to help
+developers to debug their applications &amp;amp; libraries. Darkserver project
+was started to use Build-ID feature of compiler toolchains and help
+developer tools to identify exact package builds from which process
+images (e.g. core dumps) come. This can enable their analysis, debugging
+profiling.&lt;/p&gt;
+</summary><category term="poster"></category></entry><entry><title>Lightning Talks - Saturday morning</title><link href="https://pyvideo.org/pycon-us-2013/saturday-morning-lightning-talks-0.html" rel="alternate"></link><published>2013-03-16T00:00:00+00:00</published><updated>2013-03-16T00:00:00+00:00</updated><author><name>Jesse Jiryu Davis</name></author><id>tag:pyvideo.org,2013-03-16:pycon-us-2013/saturday-morning-lightning-talks-0.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Lightning talks from Saturday morning.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=0s"&gt;00:00&lt;/a&gt; - ToRo (Tornado Coroutines) - Jesse Jiryu Davis&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=4m45s"&gt;04:45&lt;/a&gt; - Retask: Queue for Humans - Kushal Das&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=9m15s"&gt;09:15&lt;/a&gt; - Pythonic Andragogy: Python for Adults - Kirby
+Urner&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=16m"&gt;16:00&lt;/a&gt; - How and why a Java expert switched to Python -
+Ron Cox&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=22m10s"&gt;22:10&lt;/a&gt; - Coding across America - Andrew&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=25m9s"&gt;25:05&lt;/a&gt; - gitstreams.com - Justin Abrahms&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=26m58s"&gt;26:58&lt;/a&gt; - Jesse Noller interlude&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=30m30s"&gt;30:30&lt;/a&gt; - PyCharm - Dmitry Jemerov&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=36m10s"&gt;36:10&lt;/a&gt; - NASperry Pi - Mark Ransom&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=41m30s"&gt;41:30&lt;/a&gt; - NES, JavaScript and a Browser - Guto Maia&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=46m5s"&gt;46:05&lt;/a&gt; - EuroSciPy 2013: Come to our conference! - Mike
+Müller&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=48m7s"&gt;48:07&lt;/a&gt; - PyWeek: Join our week and write a game! -
+Richard Jones&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=51m13s"&gt;51:13&lt;/a&gt; - Don't make people watch what you type -
+Stuart Williams&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=54m"&gt;54:00&lt;/a&gt; - Job Security (in Python) - Christopher
+Neugebauer&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=59m9s"&gt;59:09&lt;/a&gt; - Using Python to make universal education truly
+universal: KA Lite - Jamie Alexandre&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>Teaching Python: To Infinity and Beyond</title><link href="https://pyvideo.org/pycon-us-2014/teaching-python-to-infinity-and-beyond.html" rel="alternate"></link><published>2014-04-12T00:00:00+00:00</published><updated>2014-04-12T00:00:00+00:00</updated><author><name>Kushal Das</name></author><id>tag:pyvideo.org,2014-04-12:pycon-us-2014/teaching-python-to-infinity-and-beyond.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Dgplug summer training is a free online IRC based course which aims to
+teach FOSS ideas and programming in general using Python to new
+programmers/stduents. In this talk we share our experiences, lesson
+learned, hoping that people will be able to replicate this in other
+parts of the world.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_mihai-iachimovschi.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-07-12T00:00:00+00:00</updated><entry><title>Teach your (micro)services speak Protocol Buffers with gRPC.</title><link href="https://pyvideo.org/europython-2017/teach-your-microservices-speak-protocol-buffers-with-grpc.html" rel="alternate"></link><published>2017-07-12T00:00:00+00:00</published><updated>2017-07-12T00:00:00+00:00</updated><author><name>Mihai Iachimovschi</name></author><id>tag:pyvideo.org,2017-07-12:europython-2017/teach-your-microservices-speak-protocol-buffers-with-grpc.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When it comes to microservices, there're a lot of things worth
+keeping in mind. Designing such fine-grained, loosely-coupled
+services requires paying lots of attention to various patterns and
+approaches to make them future-proof. A very important thing to
+consider, is the way those services will communicate with each-other
+in production. Usually the communication is done over the network
+using a technology-agnostic protocol. At the next level the service
+should provide an API for its friend services. Then, the data should
+be serialized without altering its meaning and transferred to the
+picked endpoint.&lt;/p&gt;
+&lt;p&gt;Nowadays, exposing a REST API that operates with JSON over plain HTTP
+is a usual way to lay the grounds of communication for the services.
+It is easy to accomplish, but it has some drawbacks. First of all,
+JSON is a human readable format, and it’s not as other serialization
+approaches. Also, with JSON it’s not possible to natively enforce the
+schema, and evolving the API may be painful.&lt;/p&gt;
+&lt;p&gt;This talk’s purpose is to describe in deep detail the benefits of
+protocol buffers, that offer us for free an easy way to define the
+API messages in the proto format, and then reuse them inside
+different services, without even being locked to use the same
+programming language for them. Moreover, with gRPC we can define the
+API’s endpoints easily in the same proto format. All these offer us a
+robust schema enforcement, compact binary serialization, and easy
+backward compatibility.&lt;/p&gt;
+</summary></entry><entry><title>Real virtual environments without virtualenv</title><link href="https://pyvideo.org/europython-2016/real-virtual-environments-without-virtualenv.html" rel="alternate"></link><published>2016-08-04T00:00:00+00:00</published><updated>2016-08-04T00:00:00+00:00</updated><author><name>Mihai Iachimovschi</name></author><id>tag:pyvideo.org,2016-08-04:europython-2016/real-virtual-environments-without-virtualenv.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mihai Iachimovschi - Real virtual environments without virtualenv
+[EuroPython 2016]
+[21 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/real-virtual-environments-without-virtualenv"&gt;https://ep2016.europython.eu//conference/talks/real-virtual-environments-without-virtualenv&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Virtualenv is a great tool for the development environment but it's
+definitely not suitable for every use case. Also, Docker is great for
+running the application in production, but not everyone that use it in
+production tried to use it in the development environment. Why not use
+the same tool from the beginning of the project and until it hits the
+production in a uniform stack of tooling? This talk will show use
+cases of using Docker in the process of development as well.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;The process of developing using Python is very straightforward and
+easy. Still, each and every developer has his own style of developing
+and building his entire dev environment. Most of us use virtualenvs
+which are reliable and comfortable to use. But there are some issues.
+For instance, the repeatability and immutability of the built
+environment are not guaranteed.&lt;/p&gt;
+&lt;p&gt;Virtualenv does a lot of work that targets the direction of somehow
+isolated and independent environments. They are &lt;em&gt;almost&lt;/em&gt; &lt;em&gt;fully&lt;/em&gt;
+repeatable. In any team, we can hear the notorious expression &amp;quot;It
+works for me!&amp;quot;.&lt;/p&gt;
+&lt;p&gt;For some time now, I am using Docker instead of virtualenv for
+building custom and really-virtual environments that are entirely
+isolated. The containers are immutable and consistent, so this
+workflow guarantees repeatability.  Using such technique, not only
+enables the user to have unique and immutable environments, it also
+allows de developer to create full app architecture that can then be
+tested and deployed as is. So the production version will be in
+identical conditions as the one from the development environment.
+These features are not provided by virtualenv at all.&lt;/p&gt;
+&lt;p&gt;The goal of this exercise is to try to use totally different tooling
+for building the application from its first line of code until the
+production.&lt;/p&gt;
+</summary></entry></feed>

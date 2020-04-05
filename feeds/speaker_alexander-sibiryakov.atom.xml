@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_alexander-sibiryakov.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-07-17T00:00:00+00:00</updated><entry><title>Scrapy internals</title><link href="https://pyvideo.org/pycon-russia-2017/scrapy-internals.html" rel="alternate"></link><published>2017-07-17T00:00:00+00:00</published><updated>2017-07-17T00:00:00+00:00</updated><author><name>Alexander Sibiryakov</name></author><id>tag:pyvideo.org,2017-07-17:pycon-russia-2017/scrapy-internals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scrapy itself is a good example of modern asynchronous application. Moreover it's a swiss army knife with all kinds of extensions: Item pipelines, HTML/CSS selectors, Middlewares. In this talk, I’m going to explain how the Scrapy’s internal processing pipeline works, the design of it’s downloader queue and all the things needed to debug it: Scrapy shell, telnet console, memory consumption debugging.&lt;/p&gt;
+&lt;p&gt;Scrapy is a 100% asynchronous web scraping framework built with Twisted event loop with 21K GitHub stars!&lt;/p&gt;
+</summary></entry><entry><title>Frontera: распределенный робот для обхода интернета в больших объемах</title><link href="https://pyvideo.org/pycon-russia-2015/frontera-raspredelennyi-robot-dlia-obkhoda-interneta-v-bolshikh-obemakh.html" rel="alternate"></link><published>2015-09-19T00:00:00+00:00</published><updated>2015-09-19T00:00:00+00:00</updated><author><name>Alexander Sibiryakov</name></author><id>tag:pyvideo.org,2015-09-19:pycon-russia-2015/frontera-raspredelennyi-robot-dlia-obkhoda-interneta-v-bolshikh-obemakh.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;В этом докладе я собираюсь представить новый open source фреймворк, разработанный в Scrapinghub. Frontera позволяет построить распределенного робота, для скачивания страниц из интернета в больших объемах в реальном времени. Также он может быть использован для построения сфокусированных роботов для выкачивания подмножества заранее известных веб-сайтов.&lt;/p&gt;
+&lt;p&gt;Фреймворк предлагает:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;настраиваемое хранилище URL документов (RDBMS или Key Value),&lt;/li&gt;
+&lt;li&gt;управление стратегиями обхода,&lt;/li&gt;
+&lt;li&gt;абстракцию транспортного уровня,&lt;/li&gt;
+&lt;li&gt;абстракцию модуля загрузки.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Помимо описания фреймворка и системных требований, я расскажу о нашем опыте скачивания испанского интернета с помощью Fronter'ы и представлю небольшую статистику.&lt;/p&gt;
+</summary></entry><entry><title>Автоматическое разрешение заявок о ложных срабатываниях в антивирусе Avast</title><link href="https://pyvideo.org/pycon-russia-2016/avtomaticheskoe-razreshenie-zaiavok-o-lozhnykh-srabatyvaniiakh-v-antiviruse-avast.html" rel="alternate"></link><published>2016-07-04T00:00:00+00:00</published><updated>2016-07-04T00:00:00+00:00</updated><author><name>Alexander Sibiryakov</name></author><id>tag:pyvideo.org,2016-07-04:pycon-russia-2016/avtomaticheskoe-razreshenie-zaiavok-o-lozhnykh-srabatyvaniiakh-v-antiviruse-avast.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ложными срабатываниями в антивирусной терминологии называются срабатывания на чистых файлах, не являющихся зловредными. Когда пользователь видит красный поп-ап, запрещающий запуск файла антивирусом, ему предлагается сообщить о ложном срабатывании в лабораторию. С такими заявками будут разбираться вирусные аналитики.&lt;/p&gt;
+&lt;p&gt;Тема ложных срабатываний очень важна для производителей антивирусов. Любимая игра или браузер, который используется повседневно, после обновления может начать «ловиться» антивирусом. У популярных антивирусов от этого страдают миллионы пользователей. Если системный файл ОС будет заблокирован, то такое срабатывание может закончится сервисом компьютера пользователя.&lt;/p&gt;
+&lt;p&gt;Моей задачей было построить автоматический классификатор заявок для того, чтобы разгрузить вирусную лабораторию от ручного труда.&lt;/p&gt;
+&lt;p&gt;Классификатор использовал на входе данные из 4-х бэкендов, рассчитывал около 120 сигналов и по ним вычислял вероятность зловредности файла. У классификатора были очень высокие требования к качеству. Для обучения использовались деревья решения с градиентным бустингом (GBDT), а обучающая выборка содержала 10000 примеров размеченных вручную аналитиками.&lt;/p&gt;
+&lt;p&gt;Проект занял около полугода, для него была построена специальная инфраструктура и разработан бизнес-процесс аналитика на этапе внедрения. На данный момент классификатор используется уже два года.&lt;/p&gt;
+</summary></entry><entry><title>Frontera: open source, large scale web crawling framework</title><link href="https://pyvideo.org/pydata-berlin-2016/frontera-open-source-large-scale-web-crawling-framework.html" rel="alternate"></link><published>2016-05-31T00:00:00+00:00</published><updated>2016-05-31T00:00:00+00:00</updated><author><name>Alexander Sibiryakov</name></author><id>tag:pyvideo.org,2016-05-31:pydata-berlin-2016/frontera-open-source-large-scale-web-crawling-framework.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Berlin 2016&lt;/p&gt;
+&lt;p&gt;We've tried to crawl the Spanish (.es zone) internet, containing about ~600K websites to collect stats about hosts and their sizes. I'll describe the crawler architecture, storage, problems we faced with during the crawl and solutions found. Finally we released our solution as Frontera framework, allowing to build an online, scalable web crawlers using Python.&lt;/p&gt;
+&lt;p&gt;In this talk I'm going to share our experience crawling the Spanish web. We aimed at crawling about ~600K websites in .es zone, to collect statistics about hosts and their sizes. I'll describe crawler architecture, storage, problems we faced during the crawl and solutions found.&lt;/p&gt;
+&lt;p&gt;Our solution is accessible in open source, as Frontera framework. It provides pluggable document and queue storage: RDBMS or Key-Value based, crawling strategy management, communication bus to choose: Kafka or ZeroMQ, using Scrapy as a fetcher, or plugging your own fetching component.&lt;/p&gt;
+&lt;p&gt;Frontera allows to build a scalable, distributed web crawler to crawl the Web at high rates and large volumes. Frontera is online by design, allowing to modify the crawler components without stopping the whole process. Also Frontera can be used to build a focused crawlers to crawl and revisit a finite set of websites.&lt;/p&gt;
+&lt;p&gt;Talk is organized in fascinating form: problem description, solution proposed, and issues appeared during the development and running the crawl.&lt;/p&gt;
+&lt;p&gt;Github Repo: &lt;a class="reference external" href="https://github.com/scrapinghub/frontera"&gt;https://github.com/scrapinghub/frontera&lt;/a&gt;&lt;/p&gt;
+</summary><category term="frontera"></category></entry><entry><title>Frontera: open source large-scale web crawling framework</title><link href="https://pyvideo.org/europython-2015/frontera-open-source-large-scale-web-crawling-framework.html" rel="alternate"></link><published>2015-08-02T00:00:00+00:00</published><updated>2015-08-02T00:00:00+00:00</updated><author><name>Alexander Sibiryakov</name></author><id>tag:pyvideo.org,2015-08-02:europython-2015/frontera-open-source-large-scale-web-crawling-framework.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alexander Sibiryakov - Frontera: open source large-scale web crawling framework
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk I'm going to introduce Scrapinghub's new open source
+framework [Frontera][1].  Frontera allows to build real-time
+distributed web crawlers and website focused ones.&lt;/p&gt;
+&lt;p&gt;Offering:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;customizable URL metadata storage (RDBMS or Key-Value based),&lt;/li&gt;
+&lt;li&gt;crawling strategies management,&lt;/li&gt;
+&lt;li&gt;transport layer abstraction.&lt;/li&gt;
+&lt;li&gt;fetcher abstraction.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Along with framework description I'll demonstrate how to build a
+distributed crawler using [Scrapy][2], Kafka and HBase, and hopefully
+present some statistics of Spanish internet collected with newly built
+crawler.  Happy EuroPythoning!&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="https://github.com/scrapinghub/frontera"&gt;https://github.com/scrapinghub/frontera&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://scrapy.org/"&gt;http://scrapy.org/&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

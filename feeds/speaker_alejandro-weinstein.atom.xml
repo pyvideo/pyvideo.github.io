@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_alejandro-weinstein.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-07-18T00:00:00+00:00</updated><entry><title>A tale of four libraries</title><link href="https://pyvideo.org/scipy-2012/a-tale-of-four-libraries.html" rel="alternate"></link><published>2012-07-18T00:00:00+00:00</published><updated>2012-07-18T00:00:00+00:00</updated><author><name>Alejandro Weinstein</name></author><id>tag:pyvideo.org,2012-07-18:scipy-2012/a-tale-of-four-libraries.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In addition to bringing efficient array computing and standard
+mathematical tools to Python, the NumPy/SciPy libraries provide an
+ecosystem where multiple libraries can coexist and interact. This talk
+describes a success story where we integrate several libraries,
+developed by different groups, to solve our research problems. A brief
+description of our research and how we use these components follows.&lt;/p&gt;
+&lt;p&gt;Our research focuses on using Reinforcement Learning (RL) to gather
+information in domains described by an underlying linked dataset. For
+instance, we are interested in problems such as the following: given a
+Wikipedia article as a seed, finding other articles that are interesting
+relative to the starting point. Of particular interest is to find
+articles that are more than one-click away from the seed, since these
+articles are in general harder to find by a human.&lt;/p&gt;
+&lt;p&gt;In addition to the staples of scientific Python computing NumPy, SciPy,
+Matplotlib, and IPython, we use the libraries RL-Glue/RL-Library,
+NetworkX, Gensim, and scikit-learn.&lt;/p&gt;
+&lt;p&gt;Reinforcement Learning considers the interaction between a given
+environment and an agent. The objective is to design an agent able to
+learn a policy that allows it to maximize its total expected reward. We
+use the RL-Glue/RL-Library libraries for our RL experiments. This
+libraries provide the infrastructure to connect an environment and an
+agent, each one described by an independent Python program.&lt;/p&gt;
+&lt;p&gt;We represent the linked datasets we work with as graphs. For this we use
+NetworkX, which provides data structures to efficiently represent graphs
+together with implementations of many classic graph algorithms. We use
+NetworkX graphs to describe the environments implemented in RL-Glue/RL-
+Library. We also use these graphs to create, analyze and visualize
+graphs built from unstructured data.&lt;/p&gt;
+&lt;p&gt;One of the contributions of our research is the idea of representing the
+items in the datasets as vectors belonging to a linear space. To this
+end, we build a Latent Semantic Analysis (LSA) model to project
+documents onto a vector space. This allows us, in addition to being able
+to compute similarities between documents, to leverage a variety of RL
+techniques that require a vector representation. We use the Gensim
+library to build the LSA model. This library provides all the machinery
+to build, among other options, the LSA model. One place where Gensim
+shines is in its capability to handle big data sets, like the entire
+Wikipedia, that do not fit in memory. We also combine the vector
+representation of the items as property of the NetworkX nodes.&lt;/p&gt;
+&lt;p&gt;Finally, we also use the manifold learning capabilities of sckit-learn,
+like the ISOMAP algorithm, to perform some exploratory data analysis. By
+reducing the dimensionality of the LSA vectors obtained using Gensim
+from 400 to 3, we are able to visualize the relative position of the
+vectors together with their connections.&lt;/p&gt;
+&lt;p&gt;In summary, this talk shows, by combining a variety of libraries to
+solve our research problems, that the NumPy/SciPy ecosystem has become
+the lingua-franca of scientific Python computing.&lt;/p&gt;
+</summary><category term="General"></category></entry></feed>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate><item><title>Fulfilling Apache Arrow's Promises: Pandas on JVM memory without a copy</title><link>https://pyvideo.org/pycon-de-2018/fulfilling-apache-arrows-promises-pandas-on-jvm-memory-without-a-copy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Apache Arrow established a standard for columnar in-memory analytics to
+redefine the performance and interoperability of most Big Data
+technologies in early 2016. Since then implementations in Java, C++,
+Python, Glib, Ruby, Go, JavaScript and Rust have been added. Although
+Apache Arrow (&lt;tt class="docutils literal"&gt;pyarrow&lt;/tt&gt;) is already known to many Python/Pandas users
+for reading Apache Parquet files, its main benefit is the cross-language
+interoperability. With feather and PySpark, you can already benefit from
+this in Python and R/Java via the filesystem or network. While they
+improve data sharing and remove serialization overhead, data still needs
+to be copied as it is passed between processes.&lt;/p&gt;
+&lt;p&gt;In the 0.23 release of Pandas, the concept of ExtensionArrays was
+introduced. They allow the extension of Pandas DataFrames and Series
+with custom, user- defined typed. The most prominent example is
+&lt;tt class="docutils literal"&gt;cyberpandas&lt;/tt&gt; which adds an IP dtype that is backed by the appropriate
+representation using NumPy arrays. These ExtensionArrays are not limited
+to arrays backed by NumPy but can take an arbitrary storage as long as
+they fulfill a certain interfaces. Using Apache Arrow we can implement
+ExtensionArrays that are of the same dtype as the built-in types of
+Pandas but memory management is not tied to Pandas' internal
+BlockManager. On the other hand Apache Arrow has a much more wider set
+of efficient types that we can also expose as an ExtensionArray. These
+types include a native string type as well as a arbitrarily nested types
+such as &lt;tt class="docutils literal"&gt;list of …&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;struct of (…, …, …)&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;To show the real-world benefits of this, we take the example of a data
+pipeline that pulls data from a relational store, transforms it and then
+passes it into a machine learning model. A typical setup nowadays most
+likely involves a data lake that is queried with a JVM based query
+engine. The machine learning model is then normally implemented in
+Python using popular frameworks like CatBoost or Tensorflow.&lt;/p&gt;
+&lt;p&gt;While sometimes these query engines provide Python clients, their
+performance is normally not optimized for large results sets. In the
+case of a machine learning model, we will do some feature
+transformations and possibly aggregations with the query engine but feed
+as many rows as possible into the model. This will lead then to result
+sets that have above a million rows. In contrast to the Python clients,
+these engines often come with efficient JDBC drivers that can cope with
+result sets of this size but then the conversion from Java objects to
+Python objects in the JVM bridge will slow things down again. In our
+example, we will show how to use Arrow to retrieve a large result in the
+JVM and then pass it on to Python without running into these
+bottlenecks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-25:pycon-de-2018/fulfilling-apache-arrows-promises-pandas-on-jvm-memory-without-a-copy.html</guid><category>Algorithms</category><category>Big Data</category><category>Data Science</category><category>Parallel Programming</category></item><item><title>Scalable Scientific Computing using Dask</title><link>https://pyvideo.org/pycon-de-2018/scalable-scientific-computing-using-dask.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/scalable-scientific-computing-using-dask.html</guid><category>Algorithms</category><category>Big Data</category><category>Data Science</category><category>Parallel Programming</category><category>Python</category></item><item><title>Extending Pandas using Apache Arrow and Numba</title><link>https://pyvideo.org/pydata-berlin-2018/extending-pandas-using-apache-arrow-and-numba.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With the latest release of Pandas the ability to extend it with custom
+dtypes was introduced. Using Apache Arrow as the in-memory storage and
+Numba for fast, vectorized computations on these memory regions, it is
+possible to extend Pandas in pure Python while achieving the same
+performance of the built-in types. In the talk we implement a native
+string type as an example.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Sun, 08 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-08:pydata-berlin-2018/extending-pandas-using-apache-arrow-and-numba.html</guid></item><item><title>Building customer-visible data science dashboards with Altair / Vega / Vue</title><link>https://pyvideo.org/pydata-amsterdam-2018/building-customer-visible-data-science-dashboards-with-altair-vega-vue.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are several tools to build ML dashboards and visulisations. Their focus is often on making it as simple as possible for a (Python) data scientist. Shipp ing them as part of our product means that other roles like frontend developers get involved. Aspects that ease development for one role, create pains for oth ers. We want to show how balance this using Altair, Vega and Vue.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L  Korn</dc:creator><pubDate>Sat, 26 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-26:pydata-amsterdam-2018/building-customer-visible-data-science-dashboards-with-altair-vega-vue.html</guid></item><item><title>Connecting PyData to other Big Data Landscapes using Arrow and Parquet</title><link>https://pyvideo.org/pycon-de-2017/connecting-pydata-to-other-big-data-landscapes-using-arrow-and-parquet.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Uwe L. Korn&lt;/strong&gt; (&amp;#64;xhochy)&lt;/p&gt;
+&lt;p&gt;Uwe Korn is a Data Scientist at the Karlsruhe-based RetailTec company Blue Yonder. His expertise is on building architectures for machine learning services that are scalably usable for multiple customers aiming at high service availability as well as rapid prototyping of solutions to evaluate the feasibility of his design decisions. As part of his work to provide an efficient data interchange he became a core committer to the Apache Parquet and Apache Arrow projects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;While Python itself hosts a wide range of machine learning and data tools, other ecosystems like the Hadoop world also provide beneficial tools that can be either connected via Apache Parquet files or in memory using Arrow. This talks shows recent developments that allow interoperation at speed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python has a vast amount of libraries and tools in its machine learning and data analysis ecosystem. Although it is clearly in competition with R here about the leadership, the world that has sprung out of the Hadoop ecosystem has established itself in the space of data engineering and also tries to provide tools for distributed machine learning. As these stacks run in different environments and are mostly developed by distinct groups of people, using them together has been a pain. While Apache Parquet has already proven itself as the gold standard for the exchange of DataFrames serialized to files, Apache Arrow recently got traction as the in-memory format for DataFrame exchange between different ecosystems.&lt;/p&gt;
+&lt;p&gt;This talk will outline how Apache Parquet files can be used in Python and how they are structured to provide efficient DataFrame exchange. In addition to small code sample, this also includes an explanation of some interesting details of the file format. Additionally, the idea of Apache Arrow will be presented and taking Apache Spark (2.3) as an example to showcase how performance increases once DataFrames can be efficiently shared between Python and JVM processes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-25:pycon-de-2017/connecting-pydata-to-other-big-data-landscapes-using-arrow-and-parquet.html</guid><category>data-science</category><category>hadoop</category><category>apache</category><category>arrow</category><category>parquet</category><category>pandas</category><category>pydata</category></item><item><title>Efficient and portable DataFrame storage with Apache Parquet</title><link>https://pyvideo.org/pydata-london-2017/efficient-and-portable-dataframe-storage-with-apache-parquet.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Filmed at PyData London 2017
+www.pydata.org&lt;/p&gt;
+&lt;p&gt;Description
+Apache Parquet is the most used columnar data format in the big data processing space and recently gained Pandas support. It leverages various techniques to store data in a CPU and I/O efficient way and provides capabilities to push-down queries to the I/O layer. In this talk, it is shown how to use it in Python, detail its structure and present the portable usage with other tools.&lt;/p&gt;
+&lt;p&gt;Abstract
+Since its creation in 2013, Apache Parquet has risen to be the most widely used binary columnar storage format in the big data processing space. While supporting basic attributes of a columnar format like reading a subset of columns, it also leverages techniques to store the data efficiently while providing fast access. In addition the format is structured in such a fashion that when supplied to a query engine, Parquet provides indexing hints and statistics to quickly skip over chunks of irrelevant data.&lt;/p&gt;
+&lt;p&gt;In recent months, efficient implementations to load and store Parquet files in Python became available, bringing the efficiency of the format to Pandas DataFrames. While this provides a new option to store DataFrames, it especially allows us to share data between Pandas and a lot of other popular systems like Apache Spark or Apache Impala. In this talk we will show the improvements that Parquet bring performance-wise but also will highlight important aspects of the format that make it portable and efficient for queries on large amount of data. As not all features are yet available in Python, an overview of the upcoming Python-specific improvements and how the Parquet format will be extended in general is given at the end of the talk&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Sun, 07 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-07:pydata-london-2017/efficient-and-portable-dataframe-storage-with-apache-parquet.html</guid></item><item><title>How Apache Arrow and Parquet boost cross-language interop</title><link>https://pyvideo.org/pydata-paris-2016/how-apache-arrow-and-parquet-boost-cross-language-interop.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How Apache Arrow and Parquet boost cross-language interop
+by Uwe L. Korn (Blue Yonder)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Uwe L. Korn</dc:creator><pubDate>Tue, 14 Jun 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-06-14:pydata-paris-2016/how-apache-arrow-and-parquet-boost-cross-language-interop.html</guid></item></channel></rss>

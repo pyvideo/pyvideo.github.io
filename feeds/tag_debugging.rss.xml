@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>AsyncIO in production - War Stories</title><link>https://pyvideo.org/europython-2019/asyncio-in-production-war-stories.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My team has been running AsyncIO in production for over 2 years now and
+the only thing I can say about my experience with it is: &amp;quot;Oh boy, what a
+rollercoaster of feelings&amp;quot;. I've experienced laughs and tears, sweat and
+blood but also sang songs of glory. AsyncIO is currently the biggest
+buzzword in the Python world advertised as a silver bullet capable of
+solving all Python's shortcomings in the field of performance. However,
+it also brings a burden of being a completely new approach with a fresh
+implementation which is not often mentioned and taken into
+consideration. In some of my team's projects we've achieved a great
+success thanks to AsyncIO, but there's been a few where we decided to
+get rid of it and replace it with a more traditional fork-join
+architecture. I'd like to share my experience with AsyncIO, tell some
+War Stories and discuss which projects it suits perfectly and which ones
+should avoid it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michal Wysokinski</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/asyncio-in-production-war-stories.html</guid><category>ASYNC / Concurrency</category><category>Debugging</category><category>Python 3</category><category>Use Case</category></item><item><title>Python Standard Library, The Hidden Gems</title><link>https://pyvideo.org/europython-2019/python-standard-library-the-hidden-gems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python Standard Library is a very rich toolset, which is the reason
+why Python is stated to come with &amp;quot;batteries included&amp;quot;. In such an
+amount of features and tools it's easy to get lost and miss some of the
+less unknown modules or gems hidden within the whole load of functions
+and classes.&lt;/p&gt;
+&lt;p&gt;This talk aims at showcasing some recipes, snippets and usages of
+standard library modules and functions that are less known or that are
+not covered in the most common books and tutorials available for Python.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk will try to showcase a bunch of short examples in the hope to
+foster the &amp;quot;oh, wow! I didn't think about that&amp;quot; reaction at least once
+in the audience.&lt;/div&gt;
+&lt;div class="line"&gt;We will see how frequently for tasks where you used third party
+libraries or frameworks a solution bultin into the standard library is
+already available, and such solution is guaranteed to be maintained
+and well working for the years to come thanks to the standard library
+reliability and stability.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The showcased examples are took from the “Modern Python Standard Library
+Cookbook” book that I authored.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Molina</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/python-standard-library-the-hidden-gems.html</guid><category>CPython</category><category>Debugging</category><category>Development</category><category>General</category><category>python</category></item><item><title>From days to minutes, from minutes to milliseconds with SQLAlchemy</title><link>https://pyvideo.org/europython-2019/from-days-to-minutes-from-minutes-to-milliseconds-with-sqlalchemy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Object Relational Mappers (ORMs) are awesome enhancers of developer
+productivity. The freedom of having the library write that SQL and give
+you back a useful, rich model instance (or a bunch of them) instead of
+just a tuple or a list of records is simply amazing.&lt;/p&gt;
+&lt;p&gt;But if you forget you have an actual database behind all that
+convenience, then it'll bite you back, usually when you've been in
+production for a while, after you've accumulated enough data that your
+once speedy application starts slowing down do a crawl.&lt;/p&gt;
+&lt;p&gt;Databases work best when you ask them once for (or to do) a bunch of
+stuff, instead of asking them lots of times for small stuff.&lt;/p&gt;
+&lt;p&gt;We'll discuss how innocent looking attribute accesses on your model
+instances translate to sequential queries (the infamous N+1 problem).&lt;/p&gt;
+&lt;p&gt;Then we'll go through some practical solutions, taken from real cases,
+that resulted in massive speed ups. We'll cover how changes in Python
+code resulted in changes to the resulting SQL Queries.&lt;/p&gt;
+&lt;p&gt;We'll see solutions not only for queries, but also for inserts and
+updates, which tend to be less well documented.&lt;/p&gt;
+&lt;p&gt;Though this talk focuses on SQLAlchemy, the lessons should be applicable
+to most ORMs in most programing languages. The ideas discussed, and
+solutions proposed are also valid for any storage back-end, not only SQL
+databases.&lt;/p&gt;
+&lt;p&gt;This talk is geared towards Python developers with systems that talk to
+databases. It should be accessible to anyone who already programs in
+Python (early intermediary level), but will be most useful for
+developers with projects talking to SQL databases, specially using an
+ORM like SQLAlchemy. Attendees will learn to detect how N+1 query
+situations arise and how to work around them effectively. They will also
+learn how to do mass inserts and mass updates with SQLAlchemy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Leonardo Rochael Almeida</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/from-days-to-minutes-from-minutes-to-milliseconds-with-sqlalchemy.html</guid><category>Debugging</category><category>Performance</category><category>SQL Alchemy</category><category>python</category></item><item><title>Visual debugger for Jupyter Notebooks: Myth or Reality?</title><link>https://pyvideo.org/europython-2019/visual-debugger-for-jupyter-notebooks-myth-or-reality.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many Python developers like Jupyter Notebooks for their flexibility:
+they are very useful for interactive prototyping, scientific
+experiments, visualizations and many other tasks. There are different
+development tools which make working with Jupyter Notebooks easier and
+smoother, but all of them lack very important feature: visual debugger.
+Since Jupyter Kernel is a usual Python process, it looks reasonably to
+use one of existing Python debuggers with it. But is it really possible?&lt;/p&gt;
+&lt;p&gt;In this talk we’ll try to understand how Python debugger should be
+changed to work with Jupyter cells and how these changes are already
+implemented in the PyCharm IDE. After that we’ll look into the whole
+Jupyter architecture and try to understand which bottlenecks in it
+prevent creation of universal Jupyter debugger at the moment.&lt;/p&gt;
+&lt;p&gt;This talk requires a basic knowledge of Jupyter Notebooks and
+understanding of Python functions and objects. It will be interesting
+for people who want to learn internals of the tools they use every day.
+Also it might be an inspiration for people who want to implement a
+visual debugger in their favourite IDE.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Elizaveta Shashkova</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/visual-debugger-for-jupyter-notebooks-myth-or-reality.html</guid><category>Debugging</category><category>Jupyter</category><category>Python general</category><category>Tooling</category></item><item><title>What a Bug can Teach You about Python</title><link>https://pyvideo.org/pycon-ca-2018/what-a-bug-can-teach-you-about-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ll take a look at some Python code that has a strange bug in it. You’ll learn why it’s a bug and why it only occurs with larger numbers. We’ll cover fixes, dive into how Python works and look at some CPython source code. You’ll learn about “is” vs “==” and how to prevent bugs.&lt;/p&gt;
+&lt;p&gt;We’ll take a look at some Python code that has a strange integer bug in it. You’ll learn about how the bug was discovered, and by the end of the talk you’ll understand why it’s a bug and why the bug only occurs with larger integers. You’ll see a one character fix to the bug, and then an even better fix. We’ll look at CPython's longobject.c source code to understand how smaller integers are handled differently than larger ones. We’ll explore the difference between comparing values in Python versus testing for identity. Hopefully you’ll gain an appreciation that bugs can be your best teachers and be able to prevent more bugs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brad Dettmer</dc:creator><pubDate>Sun, 11 Nov 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-11-11:pycon-ca-2018/what-a-bug-can-teach-you-about-python.html</guid><category>cpython</category><category>debugging</category></item><item><title>Python: da programmatore a domatore</title><link>https://pyvideo.org/europython-2013/python-da-programmatore-a-domatore.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Pisa</dc:creator><pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-05:europython-2013/python-da-programmatore-a-domatore.html</guid><category>debugging</category><category>testing</category><category>integration</category><category>scalability</category><category>tdd</category><category>optimization</category><category>design</category><category>software-engineering</category><category>best-practices</category><category>architecture</category></item><item><title>Meta Programming - Some Use Cases for Everyday Programming</title><link>https://pyvideo.org/europython-2013/meta-programming-some-use-cases-for-everyday-programming.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-04:europython-2013/meta-programming-some-use-cases-for-everyday-programming.html</guid><category>debugging</category><category>metaprogramming</category><category>testing</category><category>principles</category><category>refactoring</category><category>application-design</category><category>architecture</category><category>validation</category><category>software-engineering</category></item><item><title>Python: from programmer to tamer</title><link>https://pyvideo.org/europython-2013/python-from-programmer-to-tamer.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alessandro Pisa</dc:creator><pubDate>Wed, 03 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-03:europython-2013/python-from-programmer-to-tamer.html</guid><category>debugging</category><category>testing</category><category>integration</category><category>scalability</category><category>tdd</category><category>optimization</category><category>design</category><category>software-engineering</category><category>best-practices</category><category>architecture</category></item><item><title>Bug hunting for dummies</title><link>https://pyvideo.org/europython-2013/bug-hunting-for-dummies.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Cuni</dc:creator><pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-02:europython-2013/bug-hunting-for-dummies.html</guid><category>debugging</category><category>testing</category><category>programming</category><category>tdd</category><category>gdb</category><category>code generation</category><category>pdb</category></item><item><title>Debugging python applications for profit</title><link>https://pyvideo.org/pycon-nigeria-2018/debugging-python-applications-for-profit.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Damilare Onajole</dc:creator><pubDate>Thu, 13 Sep 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-09-13:pycon-nigeria-2018/debugging-python-applications-for-profit.html</guid><category>debugging</category></item><item><title>The Glory of pdb's set_trace</title><link>https://pyvideo.org/pycon-us-2017/the-glory-of-pdbs-set_trace.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Everyone needs to debug code, and it can take up a non-trivial portion
+of our time to wait for code to complete execution and write print
+messages to stdout. There’s one function in particular in the python
+debugger (pdb) library that can give you a much clearer understanding of
+what’s going on in your code, much more quickly; pdb.set_ trace(). In
+this talk, we’ll identify the most useful things you can do when you use
+set trace, that can make debugging exponentially more efficient and
+enjoyable.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nicole Zuckerman</dc:creator><pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-19:pycon-us-2017/the-glory-of-pdbs-set_trace.html</guid><category>debugging</category><category>tools</category></item><item><title>What the Heck Went Wrong?</title><link>https://pyvideo.org/djangocon-us-2009/djangocon-2009--what-the-heck-went-wrong.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What the heck went wrong?&lt;/p&gt;
+&lt;p&gt;Andy McKay&lt;/p&gt;
+&lt;p&gt;Talks about how to debug Django.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: audio in left speaker]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Mckay</dc:creator><pubDate>Tue, 08 Sep 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-09-08:djangocon-us-2009/djangocon-2009--what-the-heck-went-wrong.html</guid><category>debugging</category><category>djangocon</category><category>djangocon2009</category></item><item><title>Large Problems in Django, Mostly Solved</title><link>https://pyvideo.org/djangocon-us-2010/djangocon-2010--large-problems-in-django--mostly-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is based on my popular series of blog posts highlighting
+applications from the community. I will highlight some of the best
+applications that the Django/Python community has put together, talk
+about places that are lacking, and talk about what these popular
+applications have in common.&lt;/p&gt;
+&lt;p&gt;Part 1&lt;/p&gt;
+&lt;p&gt;I have written a series of blog posts about &amp;quot;Large problems&amp;quot; in the
+community, and how they have been solved by members of our community
+with reusable apps. Previously I have covered:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Delayed Execution&lt;/li&gt;
+&lt;li&gt;Search&lt;/li&gt;
+&lt;li&gt;APIs&lt;/li&gt;
+&lt;li&gt;Documentation&lt;/li&gt;
+&lt;li&gt;Database Migrations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will update my thoughts on these issues, as well as talking about a
+couple of other new issues that I think that have been solved in a
+decent way. These include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Remote Command Execution&lt;/li&gt;
+&lt;li&gt;Debugging in Development&lt;/li&gt;
+&lt;li&gt;Continuous Integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Part 2&lt;/p&gt;
+&lt;p&gt;In this part I will highlight issues that are still headaches for the
+Community. These are places where there is a good chance for growth for
+third party apps, and places where I have personally found some friction
+in my development. A couple examples of this are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Deployment&lt;/li&gt;
+&lt;li&gt;Class Based Views / Thread Safety&lt;/li&gt;
+&lt;li&gt;Debugging Production Environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Part 3&lt;/p&gt;
+&lt;p&gt;From the above applications that are well done, what makes a popular
+reusable app? This won't be my thoughts, but more looking at apps that
+have been successful and trying to see what they have in common. A good
+app and a good reusable app are necessarily different, and I think it
+will be interesting to look at what traits make reusable apps popular.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://ericholscher.com/tag/largeproblems/"&gt;Large problems posts&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eric Holscher</dc:creator><pubDate>Wed, 08 Sep 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-09-08:djangocon-us-2010/djangocon-2010--large-problems-in-django--mostly-.html</guid><category>api</category><category>ci</category><category>continuousintegration</category><category>databasemigrations</category><category>debugging</category><category>delayedexecutions</category><category>deployment</category><category>djangocon</category><category>djangocon2010</category><category>documentation</category><category>migrations</category><category>safety</category><category>search</category></item><item><title>Debugging Live Python Web Applications</title><link>https://pyvideo.org/djangocon-us-2012/debugging-live-python-web-applications.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Monitoring tools record the result of what happened to your web
+application when a problem arises, but for some classes of problems,
+monitoring systems are only a starting point. Sometimes it is necessary
+to take more intrusive steps to plan for the unexpected by embedding
+mechanisms that will allow you to interact with a live deployed web
+application and extract even more detailed information.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will go over some of the ways in which a monitoring system
+such as New Relic can be used to focus in on where problems are arising
+in a Python web application using a framework such as Django. It will
+also describe how you can then use that information to drill down even
+further by applying separate debugging tools and techniques rather than
+monitoring systems. Debugging tools aren't generally associated with
+production systems however and even mentioning them in relation to
+production systems often makes DevOps people rather nervous.&lt;/p&gt;
+&lt;p&gt;The main purpose of the talk therefore is to look at a range of
+debugging tools and techniques which can be applied to web applications
+but also separate them into what might and might not be realistically
+used on live production web applications. It will then describe the use
+of an embedded interactive console port as a gateway into a live web
+application, how one may setup a set of predefined commands that could
+be issued against a live web application, or for the brave, how it could
+be used to fire up an embedded Python interpreter prompt or pdb session.&lt;/p&gt;
+&lt;p&gt;Topics to be touched on would include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Browser viewable error pages.&lt;/li&gt;
+&lt;li&gt;Browser based debuggers.&lt;/li&gt;
+&lt;li&gt;Python interactive debuggers.&lt;/li&gt;
+&lt;li&gt;Post-mortem exception analysis.&lt;/li&gt;
+&lt;li&gt;Methods for dumping Python stack traces&lt;/li&gt;
+&lt;li&gt;Methods for dumping C stack traces.&lt;/li&gt;
+&lt;li&gt;Methods for analyzing thread utilization.&lt;/li&gt;
+&lt;li&gt;Interactive process introspection tools.&lt;/li&gt;
+&lt;li&gt;Error reporting and logging services.&lt;/li&gt;
+&lt;li&gt;Performance monitoring services.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Amjith Ramanujam</dc:creator><pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-04:djangocon-us-2012/debugging-live-python-web-applications.html</guid><category>debugging</category><category>django</category></item><item><title>Python 103: Mmmm... Understanding Python's Memory Model, Mutability, and Methods</title><link>https://pyvideo.org/europython-2011/python-103-mmmm-understanding-pythons-memory.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] wesley chun - 22 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In Python 101, you learned basic Python syntax, what its flow control
+mechanisms and basic data types are and how they work. You learned how
+to write functions and developed executable Python scripts that actually
+work! You probably also learned how to create files, how to open, read
+from or write to them, and close them. Perhaps you've even learned a
+little bit of object- oriented programming, developed a couple of Python
+classes, most with user- defined methods, and have no problems creating
+instances to use in your applications.&lt;/p&gt;
+&lt;p&gt;In Python 102 (or equivalent in experience), you explored further, using
+default values and variable arguments for functions, discovered how to
+catch exceptions and write handlers for them… perhaps you've even
+created your own exceptions. You have found some useful Python standard
+library modules and using them actively in your own applications. You've
+quite comfortable with OOP, creating classes and using instances
+regularly in your programs. In fact, you've been coding Python for 6
+months to a couple of years now. You're much more serious about Python
+now because you're no longer a &amp;quot;beginner.&amp;quot; You've even taken notice at
+the growing number of jobs requesting or requiring Python skills.&lt;/p&gt;
+&lt;p&gt;As an aspiring Python developer, you are starting to be more aware of
+the entire ecosystem around you, and think you may be ready for
+&amp;quot;prime-time&amp;quot; and feel able to take on a full-time position as a Python
+programmer. However, if you have experienced one or more of the below
+questions or problems, this talk may be for you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Throughout this time, you've experienced strange bugs in your code.
+In particular, you notice that things don't always behave the way you
+expect and have spent a good amount of time debugging various parts
+of your software that you thought were actually correct - you work
+around them but are disturbed and don't have the time nor committment
+to fully investigate.&lt;/li&gt;
+&lt;li&gt;You've created classes and objects just fine but wish that you could
+use some of Python's operators (like +, in, len(), etc.) with your
+objects, which feel like they're &amp;quot;2nd-class&amp;quot; citizens compared to the
+standard data types.&lt;/li&gt;
+&lt;li&gt;Do you know what functional evaluation strategy means? Have you been
+asked or considered whether Python is &amp;quot;call-by-value&amp;quot; or
+&amp;quot;call-by-reference&amp;quot;? It is important to you, and can you clearly
+explain your answer?&lt;/li&gt;
+&lt;li&gt;What does &amp;quot;mutability&amp;quot; mean? What is the difference between mutable
+and immutable objects? Which Python objects are mutable and which
+aren't?&lt;/li&gt;
+&lt;li&gt;Can you clearly explain both the output in the two code snippets
+below, and even more importantly, &lt;em&gt;why&lt;/em&gt; the output is the way it is?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SNIPPET A x = 42 y = x x += 1 print x print y&lt;/p&gt;
+&lt;p&gt;SNIPPET B x = [1, 2, 3] y = x x[0] = 4 print x print y&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Have you seen odd behavior in container or collection objects like
+lists or dictionaries? For example, you may have copied those types
+of objects and discovered weird things happening to both the original
+and the copy, or that you seen something not quite right if you loop
+through it and remove items from it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is what Python 103 is for… to fill in all the missing gaps, to
+answer all the questions (including those above) that do not seem to
+have easy-to-find answers on Google, but only if you have the desire to
+learn more about the interpreter to take your Python skills to the next
+level.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wesley J. Chun</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/python-103-mmmm-understanding-pythons-memory.html</guid><category>debugging</category><category>exceptions</category><category>memory</category><category>scripts</category></item><item><title>Debugging and profiling techniques</title><link>https://pyvideo.org/europython-2011/debugging-and-profiling-techniques.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Giovanni Bajo - 22 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will give on overview over some common problems related to
+profiling and debugging CPython applications (especially desktop-based
+ones).&lt;/p&gt;
+&lt;p&gt;The following subjects will be covered:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Debugging of memory/resource leaks (circular references, &lt;strong&gt;del&lt;/strong&gt;,
+weakref, garbage collector, etc.). We will show in details how the
+memory management of Python objects work and we will show a few
+tricks to track memory leaks&lt;/li&gt;
+&lt;li&gt;Python code profiling (profile/hotshots/cProfile, design of small
+tests, etc.). We will show how to measure, profile, and analyse an
+application to spot performance problems and solve them.&lt;/li&gt;
+&lt;li&gt;Post-mortem step-by-step debugging of C/C++ extension under Windows.
+We will show how to setup Visual Studio for debugging, how to see a
+traceback in case of an unexpected segfault, and how to further debug
+and solve the crash.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is aimed at intermediate Python programmers, who have already
+developed non-trivial Python applications but have never &amp;quot;jumped
+through&amp;quot; the interpreter abstraction layer. If you feel a little lost
+when you see a segfault from a Python program or you don't have a clear
+idea how memory is collected in Python, this talk is perfect for you.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Giovanni Bajo</dc:creator><pubDate>Wed, 20 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-20:europython-2011/debugging-and-profiling-techniques.html</guid><category>cpython</category><category>debugging</category><category>design</category><category>memory</category><category>performance</category><category>profiling</category><category>python,</category></item><item><title>Robert Coup - Monitoring and debugging your live applications</title><link>https://pyvideo.org/kiwi-pycon-2009/robert-coup---monitoring-and-debugging-your-live-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Monitoring and debugging your live application&lt;/p&gt;
+&lt;p&gt;Presented by Robert Coup&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Ever wondered what is going on inside your app? Learn some tools and
+ideas you can use for sussing it out.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;Debugging issues in live applications can be a real nightmare. Add some
+more logging, restart it, wait for the failure/load case and try and
+deduce a bit more. Even with awesome test coverage you still need to
+debug those tricky problems. This talk will introduce some ideas for
+monitoring and debugging your live applications. The key things to cover
+are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;the standard logging module and learning how to drive it well. How to
+log effectively so it makes sense later, and what sorts of things we
+should be instrumenting and measuring.&lt;/li&gt;
+&lt;li&gt;how to set up a remote console session into our running application,
+so we can interrogate variables and run code to figure out what's
+going on.&lt;/li&gt;
+&lt;li&gt;how to incorporate IRC or IM bots so we can interact with our apps
+from the desktop, and how they can interact with us.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Robert Coup</dc:creator><pubDate>Sat, 07 Nov 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/robert-coup---monitoring-and-debugging-your-live-.html</guid><category>debugging</category><category>im</category><category>irc</category><category>kiwipycon</category><category>kiwipycon2009</category><category>logging</category></item><item><title>Debugging mit Python</title><link>https://pyvideo.org/pycon-de-2012/debugging-mit-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Manche Fehler in Python-Programmen lassen sich mit Print-Anweisungen
+aufdecken, in komplizierteren Fällen ist aber ein Debugger gefragt.&lt;/p&gt;
+&lt;p&gt;Der Vortrag behandelt Grundlagen für die Fehlersuche in
+Python-Programmen. Zunächst soll es - für die einfachen Fälle - um
+Print-Anweisungen gehen. Danach kommt die Verwendung des mit Python
+gelieferten Debuggers pdb. Dazu werden Grundbegriffe wie Programmzeiger
+und Breakpoint erklärt und gezeigt, wie man die Befehle des Debuggers
+für die Fehlersuche benutzt (zum Beispiel Setzen von Breakpoints,
+schrittweise Ausführung ohne und mit Funktionsaufrufen sowie natürlich
+die Untersuchung von Objekten).&lt;/p&gt;
+&lt;p&gt;Ich kann den Vortrag wahlweise als 55- oder 25-Minuten-Version halten.
+Im ersten Fall würde ich auch noch auf andere Debugger wie pudb, pdb++
+und WinPdb eingehen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Schwarzer</dc:creator><pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-31:pycon-de-2012/debugging-mit-python.html</guid><category>breakpoint</category><category>debugger</category><category>debugging</category><category>fehler</category><category>fehlersuche</category><category>print</category><category>programmzeiger</category><category>unterbrechungspunkt</category></item><item><title>Praktische Anwendung von Metaklassen</title><link>https://pyvideo.org/pycon-de-2012/praktische-anwendung-von-metaklassen.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Metaklassen (metaclasses) in Python werden oft als exotische
+Spracheigenschaft betrachtet. Der Vortrag zeigt anhand konkreter
+Beispiele, wie sich Metaklassen in realen Projekten zum Debuggen und zum
+Code vereinfachen einsetzen lassen.&lt;/p&gt;
+&lt;div class="section" id="praktische-anwendungen-von-metaklassen"&gt;
+&lt;h4&gt;Praktische Anwendungen von Metaklassen&lt;/h4&gt;
+&lt;p&gt;Python besitzt mit den Metaklassen ein sehr mächtiges Werkzeug, um
+orthogonale Eigenschaften eines Programms zu Implementieren. Das
+Stichwort dazu lautet &amp;quot;aspektorientiertes Programmieren&amp;quot;. Leider werden
+Metaklassen aber oft als komplex und schwierig angesehen.&lt;/p&gt;
+&lt;p&gt;Der Vortrag zeigt an einem konkreten Beispiel, wie sich durch die
+Verwendung von Metaklassen Programmentwicklung vereinfachen kann.
+Konkret wird die Implementation eines einfachen Debug- und Trace
+Frameworks vorgestellt.&lt;/p&gt;
+&lt;p&gt;Dieses erlaubt das nachträgliche instrumentieren von Klassen-Methoden,
+um eine selektive Ablaufverfolgung von Methodenaufrufen auf Objekten
+ermöglicht. Dies wird erreicht, ohne das diese Debug Aufrufe im normalen
+Quellcode erscheinen oder bei nicht Benutzung Performance Auswirkungen
+haben.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mirko Dziadzka</dc:creator><pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-30:pycon-de-2012/praktische-anwendung-von-metaklassen.html</guid><category>debugging</category><category>metaclasses</category></item><item><title>Plenary: Saturday Evening Lightning Talks</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--plenary--saturday-evening-lightning-t.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Saturday Evening Lightning Talks&lt;/p&gt;
+&lt;p&gt;(00:00) Jacob Kaplan-Moss - Introduction&lt;/p&gt;
+&lt;p&gt;(00:30) Guido van Rossum - PSF community service awards&lt;/p&gt;
+&lt;p&gt;(02:42) Ka-Ping Yee - Using scrape.py to test your web apps&lt;/p&gt;
+&lt;p&gt;(07:35) Ayman Hourieh - Python debugging techniques&lt;/p&gt;
+&lt;p&gt;(12:28) Robin Mills - Geo-tagging and Phatch&lt;/p&gt;
+&lt;p&gt;(17:30) Allen Short - Big brother's design rules&lt;/p&gt;
+&lt;p&gt;(21:25) David Goodger - PyCon swag&lt;/p&gt;
+&lt;p&gt;(25:00) David Ewing - Python in tiny embedded systems for the Smart Grid
+and beyond&lt;/p&gt;
+&lt;p&gt;(30:15) Dmitry Jemerov - Introducing PyCharm&lt;/p&gt;
+&lt;p&gt;(33:50) Dirkjan Ochtman - PEP 385: hg conversion&lt;/p&gt;
+&lt;p&gt;(37:30) Jesse Noller - Python: Hell Yeah.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--plenary--saturday-evening-lightning-t.html</guid><category>lightning talks</category><category>debugging</category><category>embedded</category><category>hg</category><category>phatch</category><category>pycharm</category><category>pycon</category><category>pycon2010</category><category>scrape.py</category></item></channel></rss>

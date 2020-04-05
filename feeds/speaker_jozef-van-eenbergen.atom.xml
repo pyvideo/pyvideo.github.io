@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jozef-van-eenbergen.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-22T00:00:00+00:00</updated><entry><title>Amanda: A New Generation of Distributed Services Framework</title><link href="https://pyvideo.org/europython-2014/amanda-a-new-generation-of-distributed-services.html" rel="alternate"></link><published>2014-07-22T00:00:00+00:00</published><updated>2014-07-22T00:00:00+00:00</updated><author><name>Jozef van Eenbergen</name></author><id>tag:pyvideo.org,2014-07-22:europython-2014/amanda-a-new-generation-of-distributed-services.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;To help create award winning visual effects, MPC developed a distributed
+service-oriented platform, Amanda. Amanda allows developers of any level
+to write a service that is presented to users across 8 facilities
+globally without them requiring any knowledge of building large
+concurrent systems. It allows artists and developers across different
+domains to work with clearly defined API's and gives the service
+developer control over what and how data can and should be accessed. The
+talk will cover how to set up such a platform from the ground up.
+Starting at the service level building it out with additional modules
+and technologies until the fully distributed system, covering topics
+such as concurrency, componetisation and monitoring that allow the fine
+tuning of setups depending on the type of work being undertaken and
+changing business needs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We'll start off with a quick overview of a movie production pipeline
+which will set the stage for how Amanda provides artists with the tools
+they need to develop and streamline the production process as well as
+Amanda's crucial function as a robust framework for the support and
+development teams. Going over some stats, up to 250.000 service calls a
+minute during World War Z for example (for frame of reference this is
+twice the average rate of stackoverflow.com), I'll highlight some of the
+problems encountered with the 1st generation. Initially developed in
+2007 and replaced last year it had several flaws in regards to
+scalability, maintainability and future proofing. From there I'll
+introduce the 2nd generation which is build on the principle of
+componentisation and building blocks. Every part of the system needs to
+be replaceable and this needs to be possible from the configuration.&lt;/p&gt;
+&lt;p&gt;During the presentation we will be stepping through the different
+building blocks, how they have been set up, how they slot together and
+how we monitor, trace and test the system from the ground up. Starting
+at the lowest level with services we'll slowly step through the
+different blocks necessary to build a fault tolerant, distributed and
+scalable platform. We made sure that the platform is not tied into any
+specific technology but allows the use of the best technologies
+depending on the type of work being undertaken and changing business
+needs and technological advances.&lt;/p&gt;
+&lt;div class="section" id="service-development-and-testing"&gt;
+&lt;h4&gt;Service development and testing&lt;/h4&gt;
+&lt;p&gt;Our development teams build applications for artists creating visual
+effects through to management teams coordinating productions. A
+service-based architecture was chosen to provide consistent interfaces
+across the many different environments where this is required. We
+provide an ecosystem where developers of any level can safely write a
+service (a set of instructions regarding a specific topic) that are
+presented to developers and technical artists globally. To write a
+service the developer doesn't need any knowledge in regards to building
+large concurrent systems. The service is implemented through a simple
+Python API and the provided ecosystem allows services to exist in a
+standalone manner. The service concept was separated from the platform
+hosting it. This allows hosting in any application that provides a
+standard container (a service provider). Extracting this allowed for
+more rigorous and simple testing of services; it also allows developers
+to provide fake versions of their services publicly against which client
+code can be tested. The adage Ê»everything as a serviceÊ¼ was applied to
+the development of internal facilities. This includes our management
+tools and the developer console, which presents the documentation of
+services and methods available to developers through a web interface.
+Infrastructure services were introduced to present an interface to
+facilities provided to a regular service, for example databases,
+configuration and centralized logging. Services can call other services
+and, similarly to infrastructures, services can be replaced with
+different services depending on the configuration. Services are exposed
+to a service (or client as we will see later) via a service provider
+just like in applications. Setting services up with the above patterns
+allows developers to iterate quickly and to include services within
+testing frameworks. It has also provided a standardized form across
+projects allowing developers to support and add to unfamiliar code
+easily. And last but not least it has given us full abstractions at all
+levels, users of services do not need to know the code underneath the
+hood be it at a service level or at an infrastructure level.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="building-the-cluster"&gt;
+&lt;h4&gt;Building the cluster&lt;/h4&gt;
+&lt;p&gt;Rather than building a single system, the new architecture defines a set
+of building blocks for constructing a distributed service platform.
+These can provide adapters for best of breed third party tools or, where
+necessary, custom implementations of functionality. Configuration is
+used to determine the number and types of modules to use and the
+parameters with which to initialize them. This allows the same platform
+to be used for small instances at a developerÊ¼s desk up to a production
+environment of many nodes. The design enables improved components to be
+swapped into the existing system whilst forming the basis for an
+entirely new design.&lt;/p&gt;
+&lt;p&gt;Most practical applications require the service provider to handle
+multiple requests at the same time. Amanda provides a set of
+interchangeable concurrency modules. This allows the most appropriate
+Python model for parallel processing to be chosen. For work involving
+heavy I/O work we choose approaches that avoid waiting for the GIL, for
+example multiple processes and greenlets/coroutines, whilst for CPU
+bound work we can use threads which may prove more performant. Having
+the option to choose between mechanisms is important since there is not
+a solution that neatly fits all use cases. A pluggable concurrency
+abstraction also allows integration of new libraries as they become
+available. In future this might include the new asyncio (formerly Tulip)
+core library for Python 3.3+.&lt;/p&gt;
+&lt;p&gt;To benefit from concurrency, resource pooling, caching etc. we don't
+always want to execute the service locally to the service provider.
+Service proxies implement this behavior; they take the service, method
+and arguments of a request as their input and return the result. The
+proxy should be transparent to the service and service provider
+components. By chaining proxies, complex routing schemes can be built or
+analysis performed on the results returned. Some similarity can be drawn
+with middle-ware in the Web Services Gateway Interface (WSGI)
+specification. Communication between proxy and service provider is
+served by the transport. This abstraction provides an asynchronous
+interface to underlying technologies â€“ Current implementations include
+queue based AMQP, ontop of RabbitMQ, and Ã˜MQ and more naÃ¯ve
+communications with standard UDP and TCP sockets. Most transports define
+both client and server parts of the system â€“ however some,
+particularly HTTP-based transports, are designed to accept requests
+directly from external clients. Requests from external applications
+commonly use XMLRPC, JSONRPC or straight JSON. Transport implementations
+can be interchanged without impacting other components of Amanda or
+service developers.&lt;/p&gt;
+&lt;p&gt;In production, a request gateway implemented as a WSGI application
+fronts the HTTP protocols. Using the standard web components NGINX and
+Î¼WSGI we can build a very scalable front end which internally uses the
+service provider, proxy, transport pattern to offload the requests to a
+backend. The gateway can also provide standard web facilities such as
+template rendering (through the Jinja2 library1) for general web
+clients. The gateway was a requirement as requests originate from
+applications written in many languages including C++, Python, JavaScript
+and domain specific languages such as mel. For us it was important that
+the client used across all those languages was a proven standard and
+lightweight. Most requests are served in near realtime (6ms round trip
+times) and are presented to the client in a synchronous way so using a
+frontend that supports a large number of HTTP like protocols allowed us
+to keep the clients simple and present the platform to an extremely wide
+variety of languages. Additionally, through the frontend, we can render
+a web page and present that directly if the requests was made from a
+browser.&lt;/p&gt;
+&lt;p&gt;The final behavior of the platform is defined in configuration. This
+allows the platform to be tuned to suit the work that a particular
+service is performing (I/O vs CPU bound). It is important to remember
+that every single component mentioned above be it the concurrency,
+transport, proxies or frontend can be changed, removed, updated without
+it impacting the service, the developer or any of the other components
+that make up the platform.&lt;/p&gt;
+&lt;p&gt;Also important to mention that internally and externally everything is a
+queue and presented as a queue. Going from the client to the frontend
+there is a queue, from the frontend onto the backend there is a queue
+etc. all the way down to a request being read of the transport and
+stored inside a queue until a concurrency object is ready to handle the
+request with the service provider.&lt;/p&gt;
+&lt;p&gt;This is where we think our platform might take a different approach.
+Rather than building the platform on top of a single great technology we
+didn't want to limit ourselves and be able to use all the other great
+technologies out there. There is no perfect solution for all problems
+but allowing to fine tune the platform according to different problems.
+The setup can now evolve in line with technological advancements and
+changes to the industry.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="maintenance-and-monitoring-5-mins"&gt;
+&lt;h4&gt;Maintenance and Monitoring (5 mins)&lt;/h4&gt;
+&lt;p&gt;We will walk through how we are using the same setup with services,
+service providers, proxies and transports to manage clusters around the
+globe. Once again for our maintenance and monitoring we made sure
+everything is done as a service so that if there is a better tool in the
+future we could adopt it.&lt;/p&gt;
+&lt;p&gt;Through leveraging the configuration management and remote execute
+platform Salt, a new cluster can now be provisioned quickly. Management
+is itself provided as a service. Through this system, the current state
+is available and configuration changed across all servers globally. This
+has reduced routine maintenance tasks from a half day to a five-minute
+task, with less chance of human error. Monitoring and introspection are
+provided, as a service, to aid in day-to-day support, tuning and to help
+support analysis for future development.&lt;/p&gt;
+&lt;p&gt;Developers of services can trace requests from when they enter the
+system, producing a report of the sequence of methods being called, with
+the supplied arguments. For each call the time spent to fulfill each
+request is presented. Care was taken to minimize the impact of this on
+return result of the request. Due to everything being a queue we can
+collect the metrics after the result has been put back onto the
+transport and send to the user and thus minimize the impact of this
+collection on returning the result of the request This means that there
+is no requirement to put the system into a debug mode in order to obtain
+execution metrics.&lt;/p&gt;
+&lt;p&gt;With logging being a service we can dynamically change the logging
+configuration on a per service basis by making a request to the logging
+service taking away the need of changing configuration and restarting
+the service which often means a problem might have disappeared due to
+the reset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="future-conclusion-1-min"&gt;
+&lt;h4&gt;Future/Conclusion (1 min)&lt;/h4&gt;
+&lt;p&gt;Whilst developing the new generation of the platform there have been a
+number of possible applications that have emerged. The way in which we
+are able to scale the system would be suitable to run in a cloud
+environment â€“ especially with the improvements to management allowing
+new nodes to be provisioned quickly. The ease of writing and integrating
+new components would allow integration with infrastructure provided by
+third-party cloud vendors. Other areas of interest include a smaller
+version of the platform running locally on a userÊ¼s workstation and
+services for management of generic processes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="main-technologies-and-libraries-currently-used"&gt;
+&lt;h4&gt;Main technologies and libraries currently used:&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Threading&lt;/li&gt;
+&lt;li&gt;Gevent&lt;/li&gt;
+&lt;li&gt;Eventlet&lt;/li&gt;
+&lt;li&gt;Multiprocessing&lt;/li&gt;
+&lt;li&gt;ZeroMQ&lt;/li&gt;
+&lt;li&gt;RabbitMQ&lt;/li&gt;
+&lt;li&gt;uwsgi&lt;/li&gt;
+&lt;li&gt;Flask&lt;/li&gt;
+&lt;li&gt;Salt&lt;/li&gt;
+&lt;li&gt;nginx&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary></entry></feed>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 25 Oct 2015 00:00:00 +0000</lastBuildDate><item><title>Pylint - an overview of the static analysis tool for Python</title><link>https://pyvideo.org/pycon-ireland-2015/pylint-an-overview-of-the-static-analysis-tool-for-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;Given the dynamic nature of Python, some bugs tend to creep in our codebases. Innocents NameError or hard-to-find bugs with variables used in a closure, but defined in a loop, they all stand no chance in front of Pylint (&lt;a class="reference external" href="http://pylint.org/"&gt;http://pylint.org/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk, I’ll present one of the oldest static analysis tools for Python, with emphasis on what it can do to understand your Python code. Pylint is both a style checker, enforcing PEP 8 rules, as well as a code checker in the vein of pyflakes and pychecker, but its true power isn’t always obvious in the eye of beholder, especially when it's hidden through its verbosity. Interpreting its results can be a daunting task, but there are tricks which can be used to improve its user experience, such as enabling only structural checking with the -E flag or disabling unwanted category checks.&lt;/p&gt;
+&lt;p&gt;Pylint can detect simple bugs such as unused variables and imports, but it can also detect more complicated cases such as invalid arguments passed to functions, it understands the method resolution order of your classes, generators, contexts managers and what special methods aren’t implemented correctly.&lt;/p&gt;
+&lt;p&gt;Starting from abstract syntax trees, we’ll go through its inference engine and we’ll see how Pylint understands the logical flow of your program and what sort of type hinting techniques are used to improve its inference, including PEP 484 type hints. Pylint's roadmap includes better understanding of Python code, by improving its flow control analysis, escape analysis, understanding metaclasses and descriptors and having a better type checker, as well as improving the user experience, by reducing the number of false positives it currently has. As a bonus, I’ll show how it can be used to help you port your long-forgotten library to Python 3, using its new –py3k mode, which emits warnings regarding Python 3 compatibility.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Claudiu Popa</dc:creator><pubDate>Sun, 25 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-25:pycon-ireland-2015/pylint-an-overview-of-the-static-analysis-tool-for-python.html</guid></item><item><title>Analyzing Python with Pylint</title><link>https://pyvideo.org/pycon-uk-2015/analyzing-python-with-pylint.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Given the dynamic nature of Python, some bugs tend to creep in our
+codebases. Innocents NameErrors or hard-to-find bugs with variables used
+in a closure, but defined in a loop, they all stand no chance in front
+of Pylint (&lt;a class="reference external" href="http://pylint.org/"&gt;http://pylint.org/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk, I’ll present one of the oldest static analysis tools for
+Python, with emphasis on what it can do to understand your Python code.
+Pylint is both a style checker, enforcing PEP 8 rules, as well as a code
+checker in the vein of pyflakes and pychecker, but its true power isn’t
+always obvious in the eye of beholder, especially when it's hidden
+through its verbosity. Interpreting its results can be a daunting task,
+but there are tricks which can be used to improve its user experience,
+such as enabling only structural checking with the -E flag or disabling
+unwanted category checks.&lt;/p&gt;
+&lt;p&gt;Pylint can detect simple bugs such as unused variables and imports, but
+it can also detect more complicated cases such as invalid arguments
+passed to functions, it understands the method resolution order of your
+classes, generators, contexts managers and what special methods aren’t
+implemented correctly.&lt;/p&gt;
+&lt;p&gt;Starting from abstract syntax trees, we’ll go through its inference
+engine and we’ll see how Pylint understands the logical flow of your
+program and what sort of type hinting techniques are used to improve its
+inference, including PEP 484 type hints. Pylint's roadmap includes
+better understanding of Python code, by improving its flow control
+analysis, escape analysis, understanding metaclasses and descriptors and
+having a better type checker, as well as improving the user experience,
+by reducing the number of false positives it currently has. As a bonus,
+I’ll show how it can be used to help you port your long-forgotten
+library to Python 3, using its new –py3k mode, which emits warnings
+regarding Python 3 compatibility.&lt;/p&gt;
+&lt;p&gt;The participants should have a basic understanding of Python. No other
+prerequisite is necessary, since the other concepts will be explained
+during the talk.&lt;/p&gt;
+&lt;p&gt;The following concepts will be explained during this talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;abstract syntax trees&lt;/li&gt;
+&lt;li&gt;static analysis and why using static analysis for your code&lt;/li&gt;
+&lt;li&gt;what is inference and what forms an inference engine&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Claudiu Popa</dc:creator><pubDate>Fri, 18 Sep 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-09-18:pycon-uk-2015/analyzing-python-with-pylint.html</guid></item><item><title>12 years of Pylint (or How I learned to stop worrying about bugs)</title><link>https://pyvideo.org/europython-2015/12-years-of-pylint-or-how-i-learned-to-stop-worrying-about-bugs.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Claudiu Popa - 12 years of Pylint (or How I learned to stop worrying about bugs)
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Given the dynamic nature of Python, some bugs tend to creep in our
+codebases. Innocents NameErrors or hard-to-find bugs with variables
+used in a closure, but defined in a loop, they all stand no chance in
+front of Pylint (&lt;a class="reference external" href="http://pylint.org/"&gt;http://pylint.org/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk, I'll present one of the oldest static analysis tools for
+Python, with emphasis on what it can do to understand your Python
+code.  Pylint is both a style checker, enforcing PEP 8 rules, as well
+as a code checker in the vein of pyflakes and the likes, but its true
+power isn't always obvious to the eye of beholder.  It can detect
+simple bugs such as unused variables and imports, but it can also
+detect more complicated cases such as invalid arguments passed to
+functions, it understands the method resolution order of your classes
+and what special methods aren't implemented correctly. Starting from
+abstract syntax trees, we'll go through its inference engine and we'll
+see how Pylint understands the logical flow of your program and what
+sort of type hinting techniques are used to improve its inference,
+including PEP 484 type hints. As a bonus, I'll show how it can be used
+to help you port your long-forgotten library to Python 3, using its
+new --py3k mode.&lt;/p&gt;
+&lt;p&gt;Link to presentation: &lt;a class="reference external" href="http://pcmanticore.github.io/pylint-talks/#slide:1"&gt;http://pcmanticore.github.io/pylint-talks/#slide:1&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Claudiu Popa</dc:creator><pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-03:europython-2015/12-years-of-pylint-or-how-i-learned-to-stop-worrying-about-bugs.html</guid></item></channel></rss>

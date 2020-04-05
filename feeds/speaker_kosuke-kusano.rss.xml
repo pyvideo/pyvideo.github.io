@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 21 Sep 2016 00:00:00 +0000</lastBuildDate><item><title>複数の言語からなるプロジェクトを作るということ</title><link>https://pyvideo.org/pycon-japan-2016/fu-shu-noyan-yu-karanarupuroziekutowozuo-rutoiukoto.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;1つのプロジェクトが1つのプログラミング言語で完結することが少なくなっています。言語的にキメラ(chimera)なプログラミング技法についてこれまであまり議論されてきませんでした。PythonとRustを用いたmulti-threaddingについて取り上げながら、Pythonの不得意とする処理を他の言語に委譲する方法論を議論し、chimeraに対する議論を深めようと思います。&lt;/p&gt;
+&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;div class="section" id="intro"&gt;
+&lt;h5&gt;intro&lt;/h5&gt;
+&lt;p&gt;私の研究の中でNP困難な問題を解く必要がでてきました。並列計算をする必要がありGILのあるPythonのみでは困難でした。これまでの研究はすべてPythonとIPython notebook上で行っており、これまでの資産がありました。この資産を捨て、Python以外の言語で再実装するのはナンセンスです。そのため、NP困難な問題のソルバーをRust・C++/Cythonを用いて構築し、Pythonから実行可能にすることを考えます。&lt;/p&gt;
+&lt;p&gt;より抽象的に考えた際に、プログラミング言語の仕様・ライブラリ・文化に対し、得意な処理/不得意な処理があるということです。先の例では、Pythonの不得意な処理(並列計算)に対し、並列計算の得意なRustで実装するという手段を取りました。同様に分散処理をactor modelで組もうと考えた際は、Pythonよりerlangのほうで実装したくなります。そのような状況では、あるコンポーネントはある言語で書きたいが別のコンポーネントは違う言語で書きたいという欲求がでてきます。&lt;/p&gt;
+&lt;p&gt;この1つのプロジェクトに対し複数の言語が混ざった(この状態をchimeraと命名)場合に考えるべきことを、実際に実装を行った上で議論します。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h5&gt;事例&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;li&gt;CORBA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="chimera"&gt;
+&lt;h5&gt;実際にchimeraでいくつかのプログラムを実装する&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python,Rust&lt;/li&gt;
+&lt;li&gt;Python,C++,Cython&lt;/li&gt;
+&lt;li&gt;Python,erlang&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h5&gt;設計上の考慮点&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;コンポーネント間の関係(対等/所有)
+-   host/process/thread?&lt;/li&gt;
+&lt;li&gt;コンポーネントのインターフェイス&lt;/li&gt;
+&lt;li&gt;結合度&lt;/li&gt;
+&lt;li&gt;基本的に従来の設計と考えることは変わらない
+-   各言語仕様や文化を考慮する必要はあるが&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h5&gt;実装上の考慮点&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;コンポーネント依存グラフのrootをだれにするか(人?setup.py?)&lt;/li&gt;
+&lt;li&gt;build toolはどうするか?&lt;/li&gt;
+&lt;li&gt;依存しているライブラリの数が言語により爆発する、debugの難しさ
+-   dockerによる環境の固定化&lt;/li&gt;
+&lt;li&gt;serializeは如何にするか
+-   protocol buffers
+-   json&lt;/li&gt;
+&lt;li&gt;通信手段は如何にするか(host/process/thread間?)
+-   zmq
+-   shared memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h5&gt;保守上の考慮点&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;全員がすべての言語を理解する必要があるのか&lt;/li&gt;
+&lt;li&gt;現状では十分なノウハウがない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h5&gt;現状の問題点&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;ノウハウがない(best practice, anti-pattern)&lt;/li&gt;
+&lt;li&gt;議論してる人が居ない(ようにみえる)&lt;/li&gt;
+&lt;li&gt;本当の意味でのglue言語&lt;/li&gt;
+&lt;li&gt;build tool(no setup.py)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="chimera-python"&gt;
+&lt;h5&gt;(chimeraから見た)Pythonの今後&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pythonの長所/短所を把握する必要性&lt;/li&gt;
+&lt;li&gt;如何にPythonの資産を活かすか&lt;/li&gt;
+&lt;li&gt;容易にPythonの短所を委任できるようにできるか&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kosuke Kusano</dc:creator><pubDate>Wed, 21 Sep 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-09-21:pycon-japan-2016/fu-shu-noyan-yu-karanarupuroziekutowozuo-rutoiukoto.html</guid></item></channel></rss>

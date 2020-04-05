@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; SOLVCON: A New Python-Based Software Framework for Massively Parallelized Numerical Simulations</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="SOLVCON: A New Python-Based Software Framework for Massively Parallelized Numerical Simulations" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-us-2011/pycon-2011--solvcon--a-new-python-based-software-.html" />
+    <meta property="og:image" content="https://archive.org/services/img/pyvideo_382___solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simu" />
+    <meta property="og:image:secure_url" content="https://archive.org/services/img/pyvideo_382___solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simu" />
+
+
+    <meta name="tags" content="gpgpu" />
+    <meta name="tags" content="numericalsimulations" />
+    <meta name="tags" content="parallelcomputing" />
+    <meta name="tags" content="pycon" />
+    <meta name="tags" content="pycon2011" />
+    <meta name="tags" content="simulations" />
+    <meta name="tags" content="solvcon" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-us-2011/pycon-2011--solvcon--a-new-python-based-software-.html" rel="bookmark"
+         title="Permalink to SOLVCON: A New Python-Based Software Framework for Massively Parallelized Numerical Simulations">SOLVCON: A New Python-Based Software Framework for Massively Parallelized Numerical Simulations
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2011-03-11T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 11 March 2011
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/yung-yu-chen.html">Yung-Yu Chen</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#archive.org" aria-controls="archive.org" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> ARCHIVE.ORG
+    </a></li>
+    <li class="" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="archive.org">
+        <a class="reference external image-reference"
+           href="https://archive.org/details/pyvideo_382___solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simu">
+            <img alt=""
+                 src="https://archive.org/services/img/pyvideo_382___solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simu">
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/382_solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simulations.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>SOLVCON: A New Python-Based Software Framework for Massively
+Parallelized Numerical Simulations</p>
+<p>Presented by Yung-Yu Chen</p>
+<p>SOLVCON is the first Python-based software framework for high-resolution
+simulations of multi-physics conservation laws. More than ninety
+percents of the codes are done in Python. Performance hot-spots are
+optimized by C and glued by ctypes library. SOLVCON is high-performance
+in nature and has been able to utilize 512 4-core nodes at Ohio
+Supercomputer Center.</p>
+<p>Abstract</p>
+<p>In this decade, performance improvements of scientific computing will
+mainly come from major changes in the computing hardware. A
+well-organized software structure is imperative to accommodate such
+changes. Based on Python, SOLVCON (<a class="reference external" href="http://solvcon.net/">http://solvcon.net/</a>) is designed as a
+software framework to develop conservation-law solvers by segregating
+solving kernels from various supportive functionalities. Being the
+governing equations for the physical world, conservation laws are
+applied everywhere in science and engineering. Although it is well known
+that the numerical algorithms and physical models form the kernel of any
+conservation-law solver, few if not none code can cleanly separate those
+core components from supportive functionalities. The lack of
+organization has hindered the development of legacy codes. To address
+the issues, the supportive functionalities are internalized in the
+framework of SOLVCON. Aided by the framework, both multi- physics and
+hybrid parallelism can be implemented in an organized way. To date,
+SOLVCON has utilized up to 512 4-core nodes at Ohio Supercomputer Center
+for high-resolution simulations of computational fluid dynamics (CFD).
+SOLVCON targets to concurrently utilize thousands of computer nodes for
+high- resolution simulations using over one billion mesh points.</p>
+<p>One of the major purposes of SOLVCON is to resolve the complicated
+programming efforts for GPU clusters. Supercomputing is undergoing the
+third revolution by the emerging GPU computing. To date, the fastest
+supercomputer in the Top 500 list, Tianhe-1A, is a GPU cluster. GPU
+computing promises numerical analysts to reduce the time for the
+high-resolution simulations from months to days. In order to use GPU
+computing to accelerate such large-scale problems, GPU nodes must be
+networked together to form a GPU cluster. As such, shared-memory and
+distributed-memory parallelization must be simultaneously utilized to
+achieve the so-called hybrid parallelism. Parallel computing is
+difficult, and hybrid parallel computing is more difficult. By using
+Python to develop the fundamental software structure, GPU or
+multi-threaded programming for shared- memory parallelization are locked
+in solving kernels. Complex message-passing is implemented in SOLVCON
+and isolated from solving-kernel developers. Highly optimized C and GPU
+codes are glued into SOLVCON without loss of performance by using the
+ctypes package. Othere important features of SOLVCON include:</p>
+<ul class="simple">
+<li>Pluggable multi-physics.</li>
+<li>Built-in <a class="reference external" href="http://www.grc.nasa.gov/WWW/microbus/">CESE</a> solvers.</li>
+<li>Unstructured mesh consisting of mixed elements.</li>
+<li>Interface to Message-Passing Interface (MPI) libraries.</li>
+<li>Socket communication layer: working without MPI installed.</li>
+<li>Automatic distributed-memory parallelization by domain decomposition.</li>
+<li>Parallel I/O.</li>
+<li>In situ visualization by <a class="reference external" href="http://vtk.org">VTK</a> library.</li>
+<li>Standalone writers to VTK legacy and XML file formats.</li>
+<li>Integration to supercomputer (cluster) batch systems.</li>
+</ul>
+<p>SOLVCON has been applied to computation fluid dynamics and computational
+mechanics. More physical solvers are being developed for various
+propagating wave problems, e.g., electromagnetic waves. By using Python
+as the foundation in SOLVCON, performance and extensibility are well
+balanced, and computational research is being done in the most
+productive way. In this talk, the author of SOLVCON will make an
+introduction to the software framework by including the following
+topics:</p>
+<ol class="arabic simple">
+<li>Simulations of conservation laws and hybrid parallelism for
+supercomputing.</li>
+<li>Issues in legacy codes and challenges to code for emerging
+supercomputer hardware.</li>
+<li>Using SOLVCON in the simple way by pre-defined modules.</li>
+<li>Fixed parts in SOLVCON.<ol class="arabic">
+<li>Distributed computing.</li>
+<li>Multi-thread utilities.</li>
+</ol>
+</li>
+<li>Customizable parts in SOLVCON.<ol class="arabic">
+<li>Pluggable multi-physics and GPGPU computing.</li>
+<li>Supercomputer batch system and bootstrapping.</li>
+<li>In situ visualization.</li>
+</ol>
+</li>
+<li>Conclusion.</li>
+</ol>
+<p>The talk will take 30 minutes.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-us-2011.html">PyCon US 2011</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://archive.org/details/pyvideo_382___solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simu" rel="external">ARCHIVE.ORG</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/382_solvcon-a-new-python-based-software-framework-for-massively-parallelized-numerical-simulations.mp4" rel="external">MP4</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/gpgpu/">gpgpu</a>, <a href="https://pyvideo.org/tag/numericalsimulations/">numericalsimulations</a>, <a href="https://pyvideo.org/tag/parallelcomputing/">parallelcomputing</a>, <a href="https://pyvideo.org/tag/pycon/">pycon</a>, <a href="https://pyvideo.org/tag/pycon2011/">pycon2011</a>, <a href="https://pyvideo.org/tag/simulations/">simulations</a>, <a href="https://pyvideo.org/tag/solvcon/">solvcon</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://solvcon.net/)">
+http://solvcon.net/)                </a></li><li><a href="http://vtk.org">
+http://vtk.org                </a></li><li><a href="http://www.grc.nasa.gov/WWW/microbus/">
+http://www.grc.nasa.gov/WWW/microbus/                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-us-2011/videos/pycon-2011--solvcon--a-new-python-based-software-.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

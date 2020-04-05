@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_francesc-alted.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-11-05T00:00:00+00:00</updated><entry><title>Caterva: A Compressed And Multidimensional Container For Big Data</title><link href="https://pyvideo.org/euroscipy-2019/caterva-a-compressed-and-multidimensional-container-for-big-data.html" rel="alternate"></link><published>2019-09-04T00:00:00+00:00</published><updated>2019-09-04T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2019-09-04:euroscipy-2019/caterva-a-compressed-and-multidimensional-container-for-big-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/Blosc/Caterva"&gt;Caterva&lt;/a&gt; is a C library on top of
+&lt;a class="reference external" href="https://github.com/Blosc/c-blosc2"&gt;C-Blosc2&lt;/a&gt; that implements a
+simple multidimensional container for compressed binary data. It adds
+the capability to store, extract, and transform data in these
+containers, either in-memory or on-disk.&lt;/p&gt;
+&lt;p&gt;While there are several existing solutions for this scenario (HDF5 is
+one of the most known), Caterva brings novel features that, when taken
+toghether, set it appart from them:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Leverage important features of C-Blosc2&lt;/strong&gt;. C-Blosc2 is the next
+generation of the well-know, high performance C-Blosc compression
+library (see below for a more in-depth description).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fast and seamless interface with the compression engine&lt;/strong&gt;. While in
+other solutions compression seems an after-thought and can implies
+several copies of buffers internally, the interface of Caterva and
+C-Blosc2 (its internal compression engine) is meant to be as direct
+as possible minimizing copies and hence, increasing performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Both in-memory and on-disk paradigms are supported the same way&lt;/strong&gt;.
+This allows for using the same API for data that can be either
+in-memory or on-disk.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Support for a plain buffer data layout&lt;/strong&gt;. This allows for
+essentially no-copy data sharing among existing libraries (NumPy),
+allowing to use existing functionality to be used directly in Caterva
+without loosing performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Along this features, there is an important 'mis-feature': Caterva is
+&lt;strong&gt;type- less&lt;/strong&gt;. Lacking the notion of data type means that Caterva
+containers are not meant to be used in computations directly, but rather
+in combination with other higher-level libraries. While this can be seen
+as a drawback, it actually favors simplicity and leaves up to the user
+the addition of the types that he is more interested in, which is far
+more flexible than typed-aware libraries (HDF5, NumPy and many others).&lt;/p&gt;
+&lt;p&gt;During our talk, we will describe all these Caterva features by using
+&lt;a class="reference external" href="https://github.com/Blosc/cat4py"&gt;cat4py&lt;/a&gt;, a Python wrapper for
+Caterva. Among the points to be discussed would be:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to the main features of Caterva.&lt;/li&gt;
+&lt;li&gt;Description of the basic data container and its usage.&lt;/li&gt;
+&lt;li&gt;Short discussion of different use cases:&lt;/li&gt;
+&lt;li&gt;Create and fill high dimensional arrays.&lt;/li&gt;
+&lt;li&gt;Get multi-dimensional slices out of the arrays.&lt;/li&gt;
+&lt;li&gt;How different compression codecs and filters in the pipeline affect
+store/retrieval performance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We have been using Caterva in one of our internal projects for several
+months now, and we are pretty happy with the flexibility and easy-of-use
+that it brings to us. This is why we decided to open-source it in the
+hope that it would benefit others, but also that others may help us in
+developing it further ;-)&lt;/p&gt;
+&lt;div class="section" id="about-c-blosc-and-c-blosc2"&gt;
+&lt;h4&gt;About C-Blosc and C-Blosc2&lt;/h4&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/Blosc/c-blosc"&gt;C-Blosc&lt;/a&gt; is a high performance
+compressor optimized for binary data. It has been designed to transmit
+data to the processor cache faster than the traditional, non-compressed,
+direct memory fetch approach via a memcpy() OS call. Blosc is the first
+compressor (that we are aware of) that is meant not only to reduce the
+size of large datasets on- disk or in-memory, but also to accelerate
+memory-bound computations.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/Blosc/c-blosc2"&gt;C-Blosc2&lt;/a&gt; is the new major
+version of C-Blosc, with a revamped API and support for new compressors
+and new filters (data transformations), including filter pipelining,
+that is, the capability to apply different filters during the
+compression pipeline, allowing for more adaptability to the data to be
+compressed. Dictionaries are also introduced, allowing better handling
+of redundancies among independent blocks and generally increasing
+compression ratio and performance. Last but not least, there are new
+data containers that are meant to overcome the 32-bit limitation of the
+original C-Blosc. Furthermore, the new data containers are available in
+various formats, including in-memory and on-disk implementations.&lt;/p&gt;
+&lt;p&gt;Caterva is a library on top of the Blosc2 compressor that implements a
+simple multidimensional container for compressed binary data. It adds
+the capability to store, extract, and transform data in these
+containers, either in-memory or on-disk.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Improve the efficiency of your Big Data application</title><link href="https://pyvideo.org/pydata-new-york-city-2019/improve-the-efficiency-of-your-big-data-application.html" rel="alternate"></link><published>2019-11-05T00:00:00+00:00</published><updated>2019-11-05T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2019-11-05:pydata-new-york-city-2019/improve-the-efficiency-of-your-big-data-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you're using NumPy and your data uses too much memory or requires too much computational resources this talk is for you! We'll introduce Caterva and IronArray, two libraries that, when used together, can greatly improve the efficiency and reduce the cost of your big data applications.&lt;/p&gt;
+</summary></entry><entry><title>Squeeze (gently) your data</title><link href="https://pyvideo.org/pydata-barcelona-2017/squeeze-gently-your-data.html" rel="alternate"></link><published>2017-05-21T10:30:00+02:00</published><updated>2017-05-21T10:30:00+02:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2017-05-21:pydata-barcelona-2017/squeeze-gently-your-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Coping with the growing rate of data sources is becoming a big challenge, not only in terms of efficiently storing it, but also (and most specially) in doing more general computations with them. Compressing your data may help in many (and sometimes unexpected) ways in this task. This talk will introduce several ways in which you can benefit from highly efficient compression libraries.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Nowadays CPUs are fast; they are coming with more and more cores and, in comparison, memory speed is not keeping this race in terms of speed. As a result, this opening gap is what is making of compression a valuable technique, not only for storing the same data by using less storage but also to accelerate data handling operations in an increasing number of cases.&lt;/p&gt;
+&lt;p&gt;My talk will start by introducing the technological reasons behind the increasing benefit of using compression in data science, and then will show some practical cases where data compression can lead to much more efficient data pipelines. For this, I will be using well-proven compression libraries like &lt;a class="reference external" href="http://www.blosc.org/"&gt;Blosc&lt;/a&gt;, &lt;a class="reference external" href="https://github.com/facebook/zstd"&gt;Zstandard&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/lz4/lz4"&gt;LZ4&lt;/a&gt; that, either in combination with data handling libraries (like &lt;a class="reference external" href="http://www.pytables.org/"&gt;PyTables&lt;/a&gt;, &lt;a class="reference external" href="http://bcolz.blosc.org/en/latest/"&gt;bcolz&lt;/a&gt; or &lt;a class="reference external" href="http://zarr.readthedocs.io/en/latest/"&gt;zarr&lt;/a&gt;), or used for handling high-speed data streams (transmitted e.g. via &lt;a class="reference external" href="http://www.grpc.io/"&gt;gRPC&lt;/a&gt;).&lt;/p&gt;
+</summary><category term="keynote"></category></entry><entry><title>Tratando datos más allá de los límites de la memoria</title><link href="https://pyvideo.org/pycon-es-2015/tratando-datos-mas-alla-de-los-limites-de-la-memoria.html" rel="alternate"></link><published>2016-02-02T00:00:00+00:00</published><updated>2016-02-02T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2016-02-02:pycon-es-2015/tratando-datos-mas-alla-de-los-limites-de-la-memoria.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;En la era del 'Big Data' se necesitan cantidades cada vez más grandes de memoria (RAM) para tratar y analizar estos datos. Pero tarde o temprano se llega a unos límites por encima de los cuales no se puede (o es muy caro) pasar.&lt;/p&gt;
+&lt;p&gt;El compresor Blosc (blosc.org) y el contenedor de datos bcolz (bcolz.blosc.org), usan las capacidades de los ordenadores modernos (caches, procesadores multihilo y SSDs) para permitir tratar datos más allá los límites de la memoria.&lt;/p&gt;
+</summary><category term="workshop"></category><category term="big data"></category><category term="blosc"></category><category term="bcolz"></category></entry><entry><title>Usando contenedores para Big Data</title><link href="https://pyvideo.org/pycon-es-2015/usando-contenedores-para-big-data.html" rel="alternate"></link><published>2016-02-02T00:00:00+00:00</published><updated>2016-02-02T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2016-02-02:pycon-es-2015/usando-contenedores-para-big-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;En la actualidad existe una variedad bastante grande de contenedores de datos para almacenar grandes cantidades de datos en Python, tanto en memoria como en disco. En mi taller pasaremos revista a unos cuantos de los más útiles, empezando por los más básicos y generales (listas, diccionarios, NumPy/ndarray, pandas/DataFrames) a los más especializados (RDBMS, PyTables/Table/HDF5, bcolz/carray/ctable). Durante el camino se darán pistas de cuando usar unos u otros dependiendo del caso de uso.&lt;/p&gt;
+</summary><category term="workshop"></category><category term="big data"></category><category term="numpy"></category><category term="pandas"></category><category term="pytables"></category><category term="bcolz"></category></entry><entry><title>New Trends In Storing Large Data Silos With Python</title><link href="https://pyvideo.org/europython-2015/new-trends-in-storing-large-data-silos-with-python.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/new-trends-in-storing-large-data-silos-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Francesc Alted - New Trends In Storing Large Data Silos With Python
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;My talk is meant to provide an overview of our current set of tools
+for storing data and how we arrived to these.  Then, in the light of
+the current bottlenecks, and how hardware and software are evolving,
+provide a brief overview of the emerging technologies that will be
+important for handling Big Data within Python.  Although I expect my
+talk to be a bit prospective, I won't certainly be trying to predict
+the future, but rather showing a glimpse on what I expect we would be
+doing in the next couple of years for properly leveraging modern
+architectures (bar unexpected revolutions ;).&lt;/p&gt;
+&lt;p&gt;As an example of library adapting to recent trends in hardware, I will
+be showing bcolz (&lt;a class="reference external" href="https://github.com/Blosc/bcolz"&gt;https://github.com/Blosc/bcolz&lt;/a&gt;), which implements a
+couple of data containers (and specially a chunked, columnar 'ctable')
+meant for storing large datasets efficiently.&lt;/p&gt;
+</summary></entry><entry><title>New Computer Trends and How This Affects Us</title><link href="https://pyvideo.org/pydata-madrid-2016/new-computer-trends-and-how-this-affects-us.html" rel="alternate"></link><published>2016-04-29T00:00:00+00:00</published><updated>2016-04-29T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2016-04-29:pydata-madrid-2016/new-computer-trends-and-how-this-affects-us.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Madrid 2016&lt;/p&gt;
+&lt;p&gt;Most of the talks and workshop tutorials can be found here: &lt;a class="reference external" href="https://github.com/PyDataMadrid2016/Conference-Info"&gt;https://github.com/PyDataMadrid2016/Conference-Info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Nowadays computers are being designed quite differently as they were made more than a decade ago; however, very little in software architecture has changed in order to accommodate for the changes in the hardware architecture. During my talk I am going to describe which those fundamental changes are and how to deal with them from the point of view of a long-time developer.&lt;/p&gt;
+&lt;p&gt;During the last decade the evolution of the computers has been much different than before. Instead of seeing acceleration in CPU clock speeds we are seeing more cores in CPUs, and instead of having plain simple architectures with a CPU, memory and hard disk, we are seeing computer facilities with several CPUs, several levels of caches and several persistent layers of storage.&lt;/p&gt;
+&lt;p&gt;It is unfortunate that not many libraries are being designed nowadays with this shift in mind. My intention is to explain how to tackle with this efficiently during the making of libraries for handling big datasets. We will see that the election of a good language is important too, and how Python, complemented with others (like Cyhton, C or Julia), is a good match for this.&lt;/p&gt;
+</summary></entry><entry><title>Using Containers for Big Data</title><link href="https://pyvideo.org/pydata-madrid-2016/using-containers-for-big-data.html" rel="alternate"></link><published>2016-04-08T00:00:00+00:00</published><updated>2016-04-08T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2016-04-08:pydata-madrid-2016/using-containers-for-big-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Madrid 2016&lt;/p&gt;
+&lt;p&gt;Most of the talks and workshop tutorials can be found here: &lt;a class="reference external" href="https://github.com/PyDataMadrid2016/Conference-Info"&gt;https://github.com/PyDataMadrid2016/Conference-Info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;En nuestro trabajo de análisis normalmente nos centramos en usar algoritmos que nos permitan ejecutar nuestros objetivos de la manera más eficiente posible. Sin embargo, cuando estamos usando grandes cantidades de datos, los contenedores de esos datos resultan tan importantes o más que los propios algoritmos. En este taller veremos algunos de los más contenedores para Big Data más importantes.&lt;/p&gt;
+&lt;p&gt;En la actualidad existe una variedad bastante grande de contenedores de datos para almacenar grandes cantidades de datos en Python, tanto en memoria como en disco. En mi taller pasaremos revista a unos cuantos de los más útiles, empezando por los más básicos y generales (listas, diccionarios, NumPy/ndarray, pandas/DataFrames) a los más especializados (RDBMS, PyTables/Table/HDF5, bcolz/carray/ctable). Durante el camino se darán pistas de cuando usar unos u otros dependiendo del caso de uso.&lt;/p&gt;
+&lt;p&gt;Los asistentes deben asistir con un portatil y con los requisitos listados en &lt;a class="reference external" href="https://github.com/FrancescAlted/PyConES2015"&gt;https://github.com/FrancescAlted/PyConES2015&lt;/a&gt; debidamente instalados.&lt;/p&gt;
+</summary></entry><entry><title>Boosting NumPy with Numexpr and Cython</title><link href="https://pyvideo.org/pydata/boosting-numpy-with-numexpr-and-cython.html" rel="alternate"></link><published>2012-03-02T00:00:00+00:00</published><updated>2012-03-02T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2012-03-02:pydata/boosting-numpy-with-numexpr-and-cython.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this video from the 2012 PyData Workshop Francesc Alted from
+Continuum Analytics is going to show you how you can boost NumPy with
+Numexpr and Cython.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Topics covered include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The era of Big Data&lt;/li&gt;
+&lt;li&gt;NumPy and its ecosystem&lt;/li&gt;
+&lt;li&gt;Numexpr&lt;/li&gt;
+&lt;li&gt;Cython&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cython"></category><category term="numexpr"></category><category term="numpy"></category></entry><entry><title>Data Oriented Programming</title><link href="https://pyvideo.org/pydata-berlin-2014/data-oriented-programming.html" rel="alternate"></link><published>2014-07-26T00:00:00+00:00</published><updated>2014-07-26T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2014-07-26:pydata-berlin-2014/data-oriented-programming.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Computers have traditionally been thought as tools for performing
+computations with numbers. Of course, its name in English has a lot to
+do with this conception, but in other languages, like the french
+'ordinateur' (which express concepts more like sorting or classifying),
+one can clearly see the other side of the coin: computers can also be
+used to extract (usually new) information from data. Storage, reduction,
+classification, selection, sorting, grouping, among others, are typical
+operations in this 'alternate' goal of computers, and although carrying
+out all these tasks does imply doing a lot of computations, it also
+requires thinking about the computer as a different entity than the view
+offered by the traditional von Neumann architecture (basically a CPU
+with memory). In fact, when it is about programming the data handling
+efficiently, the most interesting part of a computer is the so-called
+hierarchical storage, where the different levels of caches in CPUs, the
+RAM memory, the SSD layers (there are several in the market already),
+the mechanical disks and finally, the network, are pretty much more
+important than the ALUs (arithmetic and logical units) in CPUs. In data
+handling, techniques like data deduplication and compression become
+critical when speaking about dealing with extremely large datasets.
+Moreover, distributed environments are useful mainly because of its
+increased storage capacities and I/O bandwidth, rather than for their
+aggregated computing throughput. During my talk I will describe several
+programming paradigms that should be taken in account when programming
+data oriented applications and that are usually different than those
+required for achieving pure computational throughput. But specially, and
+in a surprising turnaround, how the amazing amount of computational
+power in modern CPUs can also be useful for data handling as well.&lt;/p&gt;
+</summary></entry><entry><title>Closing Keynote - Francesc Alted, UberResearch GmbH</title><link href="https://pyvideo.org/pydata-paris-2015/closing-keynote-francesc-alted-uberresearch-gm.html" rel="alternate"></link><published>2015-04-10T00:00:00+00:00</published><updated>2015-04-10T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2015-04-10:pydata-paris-2015/closing-keynote-francesc-alted-uberresearch-gm.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Teacher, developer and consultant in a wide variety of business
+applications. Particularly interested in the field of very large
+databases, with special emphasis in squeezing the last drop of
+performance out of computer as whole, i.e. not only the CPU, but the
+memory and I/O subsystems.&lt;/p&gt;
+</summary></entry><entry><title>Out-of-Core Columnar Datasets</title><link href="https://pyvideo.org/europython-2014/out-of-core-columnar-datasets.html" rel="alternate"></link><published>2014-07-25T00:00:00+00:00</published><updated>2014-07-25T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2014-07-25:europython-2014/out-of-core-columnar-datasets.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tables are a very handy data structure to store datasets to perform data
+analysis (filters, groupings, sortings, alignments...).&lt;/p&gt;
+&lt;p&gt;But it turns out that &lt;em&gt;how the tables are actually implemented&lt;/em&gt; makes a
+large impact on how they perform.&lt;/p&gt;
+&lt;p&gt;Learn what you can expect from the current tabular offerings in the
+Python ecosystem.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It is a fact: we just entered in the Big Data era. More sensors, more
+computers, and being more evenly distributed throughout space and time
+than ever, are forcing data analyists to navigate through oceans of data
+before getting insights on what this data means.&lt;/p&gt;
+&lt;p&gt;Tables are a very handy and spreadly used data structure to store
+datasets so as to perform data analysis (filters, groupings, sortings,
+alignments...). However, the actual table implementation, and
+especially, whether data in tables is stored row-wise or column-wise,
+whether the data is chunked or sequential, whether data is compressed or
+not, among other factors, can make a lot of difference depending on the
+analytic operations to be done.&lt;/p&gt;
+&lt;p&gt;My talk will provide an overview of different libraries/systems in the
+Python ecosystem that are designed to cope with tabular data, and how
+the different implementations perform for different operations. The
+libraries or systems discussed are designed to operate either with
+on-disk data (&lt;a class="reference external" href="http://www.pytables.org"&gt;PyTables&lt;/a&gt;, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Relational_database"&gt;relational
+databases&lt;/a&gt;,
+&lt;a class="reference external" href="http://blz.pydata.org"&gt;BLZ&lt;/a&gt;, &lt;a class="reference external" href="http://blaze.pydata.org"&gt;Blaze&lt;/a&gt;...)
+as well as in-memory data containers (&lt;a class="reference external" href="http://www.numpy.org/"&gt;NumPy&lt;/a&gt;,
+&lt;a class="reference external" href="https://github.com/ContinuumIO/dynd-python"&gt;DyND&lt;/a&gt;,
+&lt;a class="reference external" href="http://pandas.pydata.org/"&gt;Pandas&lt;/a&gt;, &lt;a class="reference external" href="http://blz.pydata.org"&gt;BLZ&lt;/a&gt;,
+&lt;a class="reference external" href="http://blaze.pydata.org"&gt;Blaze&lt;/a&gt;...).&lt;/p&gt;
+&lt;p&gt;A special emphasis will be put in the on-disk (also called out-of-core)
+databases, which are the most commonly used ones for handling extremely
+large tables.&lt;/p&gt;
+&lt;p&gt;The hope is that, after this lecture, the audience will get a better
+insight and a more informed opinion on the different solutions for
+handling tabular data in the Python world, and most especially, which
+ones adapts better to their needs.&lt;/p&gt;
+</summary></entry></feed>

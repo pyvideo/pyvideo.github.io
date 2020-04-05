@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_dict.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-12-08T00:00:00+00:00</updated><entry><title>Modern Dictionaries</title><link href="https://pyvideo.org/san-francisco-python/modern-dictionaries.html" rel="alternate"></link><published>2016-12-08T00:00:00+00:00</published><updated>2016-12-08T00:00:00+00:00</updated><author><name>Raymond Hettinger</name></author><id>tag:pyvideo.org,2016-12-08:san-francisco-python/modern-dictionaries.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;Python's dictionaries are stunningly good. Over the years, many great ideas have combined together to produce the modern implementation in Python 3.6. This fun talk is given by Raymond Hettinger, the Python core developer responsible for the set implementation and who designed the compact-and-ordered dict implemented in CPython for Python 3.6 and in PyPy for Python 2.7. He will use pictures and little bits of pure python code to explain all of the key ideas and how they evolved over time. He will also include newer features such as key-sharing, compaction, and versioning. This talk is important because it is the only public discussion of the state of the art as of Python 3.6. Even experienced Python users are unlikely to know the most recent innovations.
+Who and Why (Audience)
+----------------------
+This talk is for all Python programmers. It is designed to be fully understandable for a beginner (it starts from first principles) but to have new information even for Python experts (how key-sharing works, how the compact-ordered patch works, how dict versioning works). At the end of this talk, you can confidently say that you know how modern Python dictionaries work and what it means for your code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bio"&gt;
+&lt;h4&gt;Bio&lt;/h4&gt;
+&lt;p&gt;Raymond Hettinger has also served as a director of the Python Software Foundation, and has mentored many people over the years on their contributions to the python-dev community. He is also well known for his contributions to the Python Cookbook, and shares many pieces of Python wisdom on Twitter. He is a frequent keynote speaker at Python Conferences around the world and has received the Distinguished Service Award at PyCon 2014 for his exceptional contributions to the python community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="other-info"&gt;
+&lt;h4&gt;Other info&lt;/h4&gt;
+&lt;p&gt;This talk is delivered at SF Python's 2nd Annual Holiday Party for Python Devs in SF Bay Area, CA. In you are in San Francisco area looking to meet other python devs, please check our schedule for meetups on &lt;a class="reference external" href="http://sfpython.org"&gt;http://sfpython.org&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="coredev"></category><category term="dict"></category></entry><entry><title>PyOhio 2010: Building your own kind of dictionary</title><link href="https://pyvideo.org/pyohio-2010/pyohio-2010--building-your-own-kind-of-dictionary.html" rel="alternate"></link><published>2010-07-31T00:00:00+00:00</published><updated>2010-07-31T00:00:00+00:00</updated><author><name>W. Matthew Wilson</name></author><id>tag:pyvideo.org,2010-07-31:pyohio-2010/pyohio-2010--building-your-own-kind-of-dictionary.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Building your own kind of dictionary&lt;/p&gt;
+&lt;p&gt;Presented by W. Matthew Wilson&lt;/p&gt;
+&lt;p&gt;My talk is based on a project that seemed very simple at first. I wanted
+an object like the regular python dictionary, but with a few small
+tweaks:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;values for some keys should be restricted to elements of a set&lt;/li&gt;
+&lt;li&gt;values for some keys should be restricted to instances of a type&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For example, pretend I want a dictionary called favorites, and I want
+the value for the &amp;quot;color&amp;quot; key to be any instance of my Color class.
+Meanwhile, for the &amp;quot;movie&amp;quot; key, I want to make sure that the value
+belongs to my set of movies.&lt;/p&gt;
+&lt;p&gt;In the talk, I'll walk through how I used tests to validate my different
+implementations until I came up with a winner.&lt;/p&gt;
+&lt;p&gt;Unlike my talk last year on metaclass tomfoolery, and the year before
+that on fun with decorators (and decorator factories) I'm hoping to make
+this talk straightforward and friendly to beginning programmers.&lt;/p&gt;
+&lt;p&gt;You'll see:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how I use tests to solve a real-world problem&lt;/li&gt;
+&lt;li&gt;a few little gotchas with the super keyword&lt;/li&gt;
+&lt;li&gt;a little about how python works under the hood.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="dict"></category><category term="dictionaries"></category><category term="pyohio"></category><category term="pyohio2010"></category></entry><entry><title>The Mighty Dictionary (#55)</title><link href="https://pyvideo.org/pycon-us-2010/the-mighty-dictionary-55.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Brandon Rhodes</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/the-mighty-dictionary-55.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Mighty Dictionary&lt;/p&gt;
+&lt;p&gt;Presented by Brandon Craig Rhodes&lt;/p&gt;
+&lt;p&gt;Both newcomers and experienced developers alike love Python's built-in
+data types â€” especially dictionaries! But how do dictionaries work?
+What do they do better than other container types, and where, on the
+other hand, are their weaknesses? Using simple, vivid diagrams that show
+the secrets of how the dictionary is implemented, and a series of
+progressively interesting examples of its behavior, we will train the
+Python developer's mind to picture what the dictionary is doing in just
+enough detail to make good decisions, as your data sets get larger,
+about when to use dictionaries and when other data structures might be
+more appropriate.&lt;/p&gt;
+</summary><category term="dict"></category><category term="pycon"></category><category term="pycon2010"></category></entry><entry><title>The Data Structures of Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--the-data-structures-of-python.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--the-data-structures-of-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Data Structures of Python&lt;/p&gt;
+&lt;p&gt;Presented by Alex Gaynor&lt;/p&gt;
+&lt;p&gt;Any Python programmer knows about the major builtin data strcutres,
+lists, dicts, tuples, but do you always remember when you're supposed to
+use them? Do you know about all the cool data structures hidden in the
+standard library? This talk will be a review of the characteristics of
+the different data structures, and a tour of idiomatic ways to use some
+of the structures in the standard library.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;First, as a note this talk borders between survey and discuss in depth.
+For each data structure I want to cover their implementation,
+performance characteristics, and idiomatic usage (e.g. tuples vs.
+lists), a lot of them have similar implementations so idiomatic usage
+will dominate for some of them.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The builtins (10 minutes)&lt;ul&gt;
+&lt;li&gt;lists&lt;/li&gt;
+&lt;li&gt;Ordered collections of any type of objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as an array of pointers&lt;/li&gt;
+&lt;li&gt;tuples&lt;/li&gt;
+&lt;li&gt;Ordered collections of any type of objects&lt;/li&gt;
+&lt;li&gt;Immutable*&lt;/li&gt;
+&lt;li&gt;Implemented as a fixed-length array of pointers&lt;/li&gt;
+&lt;li&gt;dicts&lt;/li&gt;
+&lt;li&gt;Unordered mapping of hashable objects to any objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;ul&gt;
+&lt;li&gt;Why no immutable variant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implemented as an open-addressed hash table.&lt;/li&gt;
+&lt;li&gt;sets&lt;/li&gt;
+&lt;li&gt;Unordered collection of hashable objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;ul&gt;
+&lt;li&gt;frozenset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implemented as an open-addressed hash table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Standard Library (10 minutes)&lt;ul&gt;
+&lt;li&gt;OrderedDict&lt;/li&gt;
+&lt;li&gt;Ordered mapping of hashable objects to any objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as a dict with a doubly-linked list running through
+it.&lt;/li&gt;
+&lt;li&gt;deque&lt;/li&gt;
+&lt;li&gt;Ordered collection of any type of objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as an unrolled, doubly-linked list&lt;/li&gt;
+&lt;li&gt;namedtuple&lt;/li&gt;
+&lt;li&gt;Ordered collection of any type of objects, &lt;em&gt;also&lt;/em&gt; addressable by
+name.&lt;/li&gt;
+&lt;li&gt;Immutable&lt;/li&gt;
+&lt;li&gt;Implemented as a tuple with extra properties&lt;/li&gt;
+&lt;li&gt;array&lt;/li&gt;
+&lt;li&gt;Like a list... but limited to &amp;quot;primitve&amp;quot; types.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Performance characteristics.&lt;/li&gt;
+&lt;li&gt;Writing your own (5 minutes)&lt;ul&gt;
+&lt;li&gt;Abstract Base Classes&lt;/li&gt;
+&lt;li&gt;Duck typing&lt;ul&gt;
+&lt;li&gt;Why would you want to use them!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What's available.&lt;/li&gt;
+&lt;li&gt;OrderedSet&lt;/li&gt;
+&lt;li&gt;An ordered collection of hashable objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as a set with a doubly-linked list running through it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Questions (5 minutes)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="abc"></category><category term="datastructures"></category><category term="dequearray"></category><category term="dict"></category><category term="ducktyping"></category><category term="frozenset"></category><category term="list"></category><category term="namedtuple"></category><category term="ordereddict"></category><category term="orderedset"></category><category term="pycon"></category><category term="pycon2011"></category><category term="set"></category><category term="tuple"></category></entry></feed>

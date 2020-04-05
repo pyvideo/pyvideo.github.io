@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_valerio-maggio.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-05T00:00:00+00:00</updated><entry><title>Kubeflow Kale: from Jupyter Notebook to Complex Pipelines</title><link href="https://pyvideo.org/euroscipy-2019/kubeflow-kale-from-jupyter-notebook-to-complex-pipelines.html" rel="alternate"></link><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2019-09-05:euroscipy-2019/kubeflow-kale-from-jupyter-notebook-to-complex-pipelines.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will present a new solution to automatically scale
+Jupyter notebooks to complex and reproducibility pipelines based on
+Kubernetes and KubeFlow.&lt;/p&gt;
+&lt;p&gt;Nowadays, most of the High Performance Computing (HPC) tasks are carried
+out in the Cloud, and this is as much as in industry as in research.&lt;/p&gt;
+&lt;p&gt;Main advantages provided by the adoption of Cloud services include (a)
+constant up-to-date hardware resources; (b) automated infrastructure
+setup; (c) simplified resource management. Therefore, new solutions have
+been recently released to the community (e.g. &lt;em&gt;Kubernetes&lt;/em&gt; by Google)
+providing custom integrations to specifically support the migration of
+existing Machine/Deep Learning pipelines to the Cloud.&lt;/p&gt;
+&lt;p&gt;However, a shift towards a complete Cloud-based computational paradigm
+imposes new challenges in terms of data and model reproducibility,
+privacy, accountability, and (efficient) resource configuration and
+monitoring. Moreover, the adoption of these technologies still imposes
+additional workloads requiring significant software and system
+engineering expertise (e.g. set up of containerised environments,
+storage volumes, clusters nodes).&lt;/p&gt;
+&lt;p&gt;In this talk, I will present &lt;strong&gt;kale&lt;/strong&gt; (&lt;tt class="docutils literal"&gt;/ˈkeɪliː/&lt;/tt&gt;) - a new Python
+solution to ease and support ML workloads for HPC in the Cloud is
+presented.&lt;/p&gt;
+&lt;p&gt;Kale leverages on the combination of Jupyter &lt;tt class="docutils literal"&gt;notebooks&lt;/tt&gt;, and
+&lt;em&gt;Kubernetes/Kubeflow Pipelines&lt;/em&gt; (&lt;tt class="docutils literal"&gt;KFP&lt;/tt&gt;) as core components in order
+to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;(&lt;tt class="docutils literal"&gt;R1&lt;/tt&gt;) automate the setup and deployment procedures by automating
+the creation of (distributed) computation environments in the Cloud;&lt;/li&gt;
+&lt;li&gt;(&lt;tt class="docutils literal"&gt;R2&lt;/tt&gt;) democratise the execution of machine learning models at
+scale by instrumented and reusable environments;&lt;/li&gt;
+&lt;li&gt;(&lt;tt class="docutils literal"&gt;R3&lt;/tt&gt;) provide a simple interface (UI, and SDK) to enable
+researchers to deploy ML models without requiring extensive
+engineering expertise.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Technical features of Kale as well as open challenges and future
+development will be presented, along with working examples integrating
+&lt;tt class="docutils literal"&gt;kale&lt;/tt&gt; with the complete ML/DL workflows for pipeline reproducibility.&lt;/p&gt;
+&lt;div class="section" id="domains"&gt;
+&lt;h4&gt;Domains:&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Jupyter&lt;/li&gt;
+&lt;li&gt;Machine Learning&lt;/li&gt;
+&lt;li&gt;DevOps&lt;/li&gt;
+&lt;li&gt;Parallel Computing/HPC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github"&gt;
+&lt;h4&gt;GitHub:&lt;/h4&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/orgs/kubeflow-kale"&gt;https://github.com/orgs/kubeflow-kale&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Reproducibility, and Selection Bias in Machine Learning</title><link href="https://pyvideo.org/pycon-de-2018/reproducibility-and-selection-bias-in-machine-learning.html" rel="alternate"></link><published>2018-10-25T00:00:00+00:00</published><updated>2018-10-25T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2018-10-25:pycon-de-2018/reproducibility-and-selection-bias-in-machine-learning.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;em&gt;Reproducibility&lt;/em&gt; - the ability to recompute results — and
+&lt;em&gt;replicability&lt;/em&gt; — the chances other experimenters will achieve a
+consistent result[1]- are among the main important beliefs of the
+&lt;em&gt;scientific method&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Surprisingly, these two aspects are often underestimated or not even
+considered when setting up scientific experimental pipelines. In this,
+one of the main threat to replicability is the &lt;em&gt;selection bias&lt;/em&gt; , that
+is the error in choosing the individuals or groups to take part in a
+study. Selection bias may come in different flavours: the selection of
+the population of samples in the dataset ( &lt;em&gt;sample bias&lt;/em&gt; ); the
+selection of features used by the learning models, particularly sensible
+in case of high dimensionality; the selection of hyper parameter best
+performing on specific dataset(s). If not properly considered, the
+selection bias may strongly affect the validity of derived conclusions,
+as well as the reliability of the learning model.&lt;/p&gt;
+&lt;p&gt;In this talk I will provide a solid introduction to the topics of
+reproducibility and selection bias, with examples taken from the
+biomedical research, in which reliability is paramount.&lt;/p&gt;
+&lt;p&gt;From a more technological perspective, to date the scientific Python
+ecosystem still misses tools to consolidate the experimental pipelines
+in in research, that can be used together with Machine and Deep learning
+frameworks (e.g. &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;keras&lt;/tt&gt;). In this talk, I will
+present &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;reproducible-lern&lt;/span&gt;&lt;/tt&gt;, a new Python frameworks for reproducible
+research to be used for machine and deep learning.&lt;/p&gt;
+&lt;p&gt;During the talk, the main features of the framework will be presented,
+along with several examples, technical insights and implementation
+choices to be discussed with the audience.&lt;/p&gt;
+&lt;p&gt;The talk is intended for &lt;em&gt;intermediate&lt;/em&gt; PyData researchers and
+practitioners. Basic prior knowledge of the main Machine Learning
+concepts is assumed for the first part of the talk. On the other hand,
+good proficiency with the Python language and with scientific python
+libraries (e.g. &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;) are required for the second
+part.&lt;/p&gt;
+&lt;p&gt;-- &lt;a class="reference external" href="http://www.pnas.org/content/112/6/1645.full"&gt;1&lt;/a&gt; &lt;em&gt;Reproducible
+research can still be wrong: Adopting a prevention approach&lt;/em&gt; by Jeffrey
+T. Leek, and Roger D. Peng&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.cancer.gov/publications/dictionaries/cancer-terms?CdrID=44087"&gt;2&lt;/a&gt;
+Dictionary of Cancer Terms -&amp;gt; &amp;quot;selection bias&amp;quot;&lt;/p&gt;
+</summary><category term="Algorithms"></category><category term="Machine Learning"></category><category term="Science"></category></entry><entry><title>PyRant</title><link href="https://pyvideo.org/pycon-de-2018/pyrant.html" rel="alternate"></link><published>2018-10-24T00:00:00+00:00</published><updated>2018-10-24T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2018-10-24:pycon-de-2018/pyrant.html</id><summary type="html"></summary><category term="lightning talk"></category></entry><entry><title>Reproducibility, and Selection Bias in Learning: when just Cross Validation is not enough!</title><link href="https://pyvideo.org/pycon-italia-2018/reproducibility-and-selection-bias-in-learning-when-just-cross-validation-is-not-enough.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2018-04-21:pycon-italia-2018/reproducibility-and-selection-bias-in-learning-when-just-cross-validation-is-not-enough.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;em&gt;Reproducibility&lt;/em&gt; - the ability to recompute results — and
+&lt;em&gt;replicability&lt;/em&gt; — the chances other experimenters will achieve a
+consistent result[1]- are among the main important beliefs of the
+&lt;em&gt;scientific method&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Surprisingly, these two aspects are often underestimated or not even
+considered when setting up scientific experimental pipelines. In this,
+one of the main threat to replicability is the &lt;em&gt;selection bias&lt;/em&gt; , that
+is the error in choosing the individuals or groups to take part in a
+study. Selection bias may come in different flavours: the selection of
+the population of samples in the dataset ( &lt;em&gt;sample bias&lt;/em&gt; ); the
+selection of features used by the learning models, particularly sensible
+in case of high dimensionality; the selection of hyper parameter best
+performing on specific dataset(s). If not properly considered, the
+selection bias may strongly affect the validity of derived conclusions,
+as well as the reliability of the learning model.&lt;/p&gt;
+&lt;p&gt;In this talk I will provide a solid introduction to the topics of
+reproducibility and selection bias, with examples taken from the
+biomedical research, in which reliability is paramount.&lt;/p&gt;
+&lt;p&gt;From a more technological perspective, to date the scientific Python
+ecosystem still misses tools to consolidate the experimental pipelines
+in in research, that can be used together with Machine and Deep learning
+frameworks (e.g. &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;keras&lt;/tt&gt;). In this talk, I will
+present &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;reproducible-learn&lt;/span&gt;&lt;/tt&gt;, a new Python frameworks for reproducible
+research to be used for machine and deep learning.&lt;/p&gt;
+&lt;p&gt;During the talk, the main features of the framework will be presented,
+along with several examples, technical insights and implementation
+choices to be discussed with the audience.&lt;/p&gt;
+&lt;p&gt;The talk is intended for &lt;em&gt;intermediate&lt;/em&gt; PyData researchers and
+practitioners. Basic prior knowledge of the main Machine Learning
+concepts is assumed for the first part of the talk. On the other hand,
+good proficiency with the Python language and with scientific python
+libraries (e.g. &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;) are required for the second
+part.&lt;/p&gt;
+&lt;p&gt;– &lt;a class="reference external" href="http://www.pnas.org/content/112/6/1645.full"&gt;1&lt;/a&gt; &lt;em&gt;Reproducible
+research can still be wrong: Adopting a prevention approach&lt;/em&gt; by Jeffrey
+T. Leek, and Roger D. Peng&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.cancer.gov/publications/dictionaries/cancer-terms?CdrID=44087"&gt;2&lt;/a&gt;
+Dictionary of Cancer Terms -&amp;gt; “selection bias”&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 18:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Deep-Learning"></category><category term="Reproducibility"></category><category term="Machine Learning"></category></entry><entry><title>The unconventional Introduction to Deep Learning</title><link href="https://pyvideo.org/pycon-italia-2017/the-unconventional-introduction-to-deep-learning.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/the-unconventional-introduction-to-deep-learning.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you are into Deep Learning, sooner or later, it inevitbly happens
+that you’re asked at least once to explain what actually means &lt;strong&gt;Deep
+Learning&lt;/strong&gt; , and what’s all the fuss about it.&lt;/p&gt;
+&lt;p&gt;Indeed, answering this question in a proper way, may vary (and it has
+to) depending on the kind of audience you’ve been talking to.&lt;/p&gt;
+&lt;p&gt;If you are talking to a machine learning experts, you have to
+concentrate on what &lt;em&gt;deep&lt;/em&gt; means, for the multiple learning models you
+can come up with. Most importarly, you have to convince them that a deep
+learning model would work by far better than a more standard and robust
+Random Forest or Support Vector Machine.&lt;/p&gt;
+&lt;p&gt;On the other hand, if your audience is made up of engineers, they
+[STRIKEOUT:don’t give a damn..] are definitely more interested in how
+you implement your Artificial Neural Networks (ANN) rather than
+understanding what are the implications of different &lt;em&gt;activations&lt;/em&gt; and
+&lt;em&gt;optimizers&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Finally, if your audience is made up of data scientists - who are a good
+mixture of the previous two, according to &lt;a class="reference external" href="http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram"&gt;Drew
+Conway&lt;/a&gt;
+- they are more or less interested in both the two aspects.&lt;/p&gt;
+&lt;p&gt;The other way, that is the &lt;em&gt;unconventional way&lt;/em&gt;, to explain what Deep
+Learning means, is from the perspective of the computational model it
+requires to be properly effective. Therefore, you may want to talk about
+ANN in terms of matrix multiplications algorithms, running on a (series
+of) GPUs in parallel. And this is &lt;strong&gt;exactly&lt;/strong&gt; the perspecitve I intend
+to pursue in this talk.&lt;/p&gt;
+&lt;p&gt;This talk is for PyData scientists who are interested in understanding
+Deep Learning models from this unconventional perspective, learning what
+are the libraries and tools they may leverage for their experiments on
+GPUs. Experienced engineers may likely benefit from this talk as well,
+learning how they can make their models run fast(er).&lt;/p&gt;
+</summary><category term="Keras"></category><category term="rumba"></category><category term="Deep-Learning"></category><category term="machine-learning"></category><category term="Theano"></category><category term="GPU"></category><category term="tensorflow"></category></entry><entry><title>Deep Learning for Fraud Detection</title><link href="https://pyvideo.org/euroscipy-2017/deep-learning-for-fraud-detection.html" rel="alternate"></link><published>2017-08-31T00:00:00+00:00</published><updated>2017-08-31T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2017-08-31:euroscipy-2017/deep-learning-for-fraud-detection.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will discuss Machine Learning pipeline set up to prevent frauds in user authentications. The analysis relies on keystroke dynamics to learn from user's behavioural patterns and detect anomalous access. Results obtained on data of real users accessing their bank accounts will be presented, along with code examples in scikit-learn and Keras.&lt;/p&gt;
+</summary></entry><entry><title>Keras</title><link href="https://pyvideo.org/euroscipy-2017/keras.html" rel="alternate"></link><published>2017-08-31T00:00:00+00:00</published><updated>2017-08-31T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2017-08-31:euroscipy-2017/keras.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Goal of the Tutorial&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Introduce&lt;/strong&gt; main features of Keras APIs to build Neural Networks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learn&lt;/strong&gt; how to implement simple and complex Deep Neural Networks
+Architectures using Keras.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Discover&lt;/strong&gt; Keras Implementation and Internals.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt;: examples and hands-on exercises will be provided along the
+way.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;em&gt;Multi-layer Fully Connected Networks (and the ``backends``)&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Bottleneck features and Embeddings&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Convolutional Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Transfer Learning and Fine Tuning&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Residual Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Recursive Neural Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;[Variational] AutoEncoders and Adversarials&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Multi-Modal Networks&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Custom Layers and Optimisers&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Interactive Networks and Callbacks&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr class="docutils" /&gt;
+&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Multi-layer Fully Connected Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this notebook we will learn the basic building blocks of Keras
+APIs to create deep neural networks. We will learn how to use the
+&lt;tt class="docutils literal"&gt;Sequential&lt;/tt&gt; object as well as &lt;em&gt;Functional&lt;/em&gt; and &lt;tt class="docutils literal"&gt;keras.backend&lt;/tt&gt;
+APIs. First examples of MLP and Fully Connected Networks will be
+presented.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Bootleneck Features and Embeddings&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;After having played a bit with Keras APIs for building networks, we
+start learn how to inspect network's internals. In details, we will
+learn (1) how to iterate over layers; (2) how to initialise and get
+weights; (3) how to extract bottleneck features and create
+embeddings.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Convolutional Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will teach how to build CNN (Convolutional Neural
+Networks). Convolutional, Pooling, DropOut layers will be
+presented, along with clear description on how to properly apply
+convolutions on images, depending on &lt;tt class="docutils literal"&gt;image_dim_ordering&lt;/tt&gt;
+setting.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Transfer Learning and Fine Tuning&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;The Keras implementation of some famous Deep Convolutional Networks
+will be presented (i.e. &lt;tt class="docutils literal"&gt;keras.applications.vgg16&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;keras.applications.vgg19&lt;/tt&gt;, and
+&lt;tt class="docutils literal"&gt;keras.applications.inceptionv3&lt;/tt&gt;). We will learn how to leverage
+on these models for transfer learning and fine tuning using Keras
+&lt;tt class="docutils literal"&gt;Layer&lt;/tt&gt; APIs.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Residual Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this notebook, Residual Networks will be presented. In
+particular, the Keras implementation of the residual network
+topology will be explained. Then, ResNet
+(&lt;tt class="docutils literal"&gt;keras.applications.resnet50&lt;/tt&gt;) Keras implementation will be
+detailed.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Recurrent Neural Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Recurrent Neural Networks (i.e. LSTM and GRU) are the main topic of
+this notebook. The Keras implementation of these two types of
+network will be presented along with working examples combining
+Word Embeddings and Convolutional Layers (i.e.
+&lt;tt class="docutils literal"&gt;keras.layers.convolutional_recurrent&lt;/tt&gt;)&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;[Variational] AutoEncoders and Adversarials&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will be devoted to show how to implement AutoEncoders
+in Keras. In particular, the implementation of Stacked
+AutoEncoders, Variational AutoEncoders and Generative Adversarial
+Networks will be presented.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Multi-Modal Networks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;Multi-Input and Multi-task Networks are the fundamental steps for
+advanced deep networks. This notebook will provide implementation
+recipes and examples.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Custom Layers and Optimisers&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;This notebook will provide details and examples of Keras internals.
+In particular, we will learn how to implement a Custom Layer in
+Keras, and custom Activation functions, and custom optimisers.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;&lt;em&gt;Interactive Networks and Callbacks&lt;/em&gt;&lt;/div&gt;
+&lt;div class="line"&gt;In this last notebook, &lt;tt class="docutils literal"&gt;keras.callbacks&lt;/tt&gt; will be explained.
+Callbacks to track and monitor network performances during the
+training process will be built and integrated inside a web app.
+Finally, an example of &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;keras-js&lt;/span&gt;&lt;/tt&gt; will be described, detailing
+functions in Keras to export models and weights (in &lt;tt class="docutils literal"&gt;json&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;hdf5&lt;/tt&gt; formats).&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="requirements"&gt;
+&lt;h4&gt;Requirements&lt;/h4&gt;
+&lt;p&gt;This tutorial requires the following packages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;div class="first line-block"&gt;
+&lt;div class="line"&gt;Python version 3.5.x&lt;/div&gt;
+&lt;div class="line"&gt;- Python 3.4 is fine as well&lt;/div&gt;
+&lt;div class="line"&gt;- likely Python 2.7 would also be fine, but &lt;em&gt;who knows&lt;/em&gt;? :P&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; version 1.10 or later: &lt;a class="reference external" href="http://www.numpy.org/"&gt;http://www.numpy.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt; version 0.16 or later: &lt;a class="reference external" href="http://www.scipy.org/"&gt;http://www.scipy.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;matplotlib&lt;/tt&gt; version 1.4 or later: &lt;a class="reference external" href="http://matplotlib.org/"&gt;http://matplotlib.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt; version 0.16 or later: &lt;a class="reference external" href="http://pandas.pydata.org"&gt;http://pandas.pydata.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;scikit-learn&lt;/span&gt;&lt;/tt&gt; version 0.15 or later: &lt;a class="reference external" href="http://scikit-learn.org"&gt;http://scikit-learn.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;keras&lt;/tt&gt; version 1.0 or later: &lt;a class="reference external" href="http://keras.io"&gt;http://keras.io&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;tensorflow&lt;/tt&gt; version 0.9 or later: &lt;a class="reference external" href="https://www.tensorflow.org"&gt;https://www.tensorflow.org&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;&lt;tt class="docutils literal"&gt;ipython&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;jupyter&lt;/tt&gt; version 4.0 or later, with notebook support&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Optional but recommended):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;pyyaml&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;hdf5&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;h5py&lt;/tt&gt; (required if you use model saving/loading
+functions in keras)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The easiest way to get (most) these is to use an all-in-one installer
+such as &lt;a class="reference external" href="http://www.continuum.io/downloads"&gt;Anaconda&lt;/a&gt; from Continuum.
+These are available for multiple architectures.&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="tutorial"></category></entry><entry><title>Ten Steps to Keras</title><link href="https://pyvideo.org/pydata-london-2017/ten-steps-to-keras.html" rel="alternate"></link><published>2017-05-05T00:00:00+00:00</published><updated>2017-05-05T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2017-05-05:pydata-london-2017/ten-steps-to-keras.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Filmed at PyData London 2017&lt;/p&gt;
+&lt;p&gt;Description
+In this tutorial we will learn Keras in ten steps (a.k.a. Jupyter Notebooks). We will warm up by learning how to create a multi layer network, and then we will go through more sophisticated topics such as implementing different types of networks (e.g. RNN, CNN), creating custom layers and discovering Keras internals. numpy proficiency and basic knowledge of Machine/Deep Learning are assumed.&lt;/p&gt;
+&lt;p&gt;Abstract
+Goal of the Tutorial&lt;/p&gt;
+&lt;p&gt;Introduce main features of Keras APIs to build Neural Networks.
+Learn how to implement simple and complex Deep Neural Networks Architectures using Keras.
+Discover Keras Implementation and Internals.&lt;/p&gt;
+&lt;p&gt;Note: examples and hands-on exercises will be provided along the way.&lt;/p&gt;
+&lt;p&gt;Outline (in ten Notebooks)
+Multi-layer Fully Connected Networks (and the backends)
+Bottleneck features and Embeddings
+Convolutional Networks
+Transfer Learning and Fine Tuning
+Residual Networks
+Recursive Neural Networks
+[Variational] AutoEncoders and Adversarials
+Multi-Modal Networks
+Custom Layers and Optimisers
+Interactive Networks and Callbacks
+Description
+Multi-layer Fully Connected Networks In this notebook we will learn the basic building blocks of Keras APIs to create deep neural networks. We will learn how to use the Sequential object as well as Functional and keras.backend APIs. First examples of MLP and Fully Connected Networks will be presented.&lt;/p&gt;
+</summary></entry><entry><title>Matplotlib recipes for your graphical "soups"</title><link href="https://pyvideo.org/pycon-italia-2014/matplotlib-recipes-for-your-graphical-soups.html" rel="alternate"></link><published>2014-05-25T00:00:00+00:00</published><updated>2014-05-25T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-05-25:pycon-italia-2014/matplotlib-recipes-for-your-graphical-soups.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The term Data Visualization (a.k.a. data viz) refers to any visual representation of data that is algorithmically drawn[Illinsky &amp;amp; Steele, 2011]. In particular, data viz is easy to regenerate (with different data); it is often aesthetically barren; and it is relatively data-rich, usually representing large volume of data [Illinsky &amp;amp; Steele, 2011].&lt;/p&gt;
+&lt;p&gt;Data viz approaches are further distinguished in two distinct categories, namely static and interactive visualizations.&lt;/p&gt;
+&lt;p&gt;Static visualizations can offer only precomposed views of data, so multiple static views are often needed to present a variety of perspectives on the same information [Murray, 2013]. On the other hand, (dynamic) interactive visualization tools allow the users to customize the way they want to view the plotted data.&lt;/p&gt;
+&lt;p&gt;Matplotlib is a very powerful data visualization library, being so far the de-facto standard data viz library for Python code.&lt;/p&gt;
+&lt;p&gt;Matplotlib offers a wide variety of 2D and 3D plots, graphics and maps (matplotlib.basemap) typically useful in case of (but not limited to) data analysis in scientific contexts. All the generated plots may be further customized (e.g., annotating charts with LateX formulas, changing fonts and colors ) in order to make them perfectly suited for the different requirements we may have.&lt;/p&gt;
+&lt;p&gt;Last but not least, recent versions of the library started supporting creation of animated graphics and charts (i.e., matplotlib.animations)&lt;/p&gt;
+&lt;p&gt;Most of the charts provided out-of-the-box by the library belongs to the static data viz category. However, the new MLPD3project aims at integrating Matplotlib with the D3js, the popular Javascript library to generate data-driven web pages.&lt;/p&gt;
+&lt;p&gt;This talk is going to present the main features and capabilities provided by the matplotlib library in a very recipe-oriented and practical fashion. The main goal of the talk is to emphasize when and how the different Matplotlib charts could be effectively used, depending on the considered problem to tackle.&lt;/p&gt;
+&lt;p&gt;To this end, several code recipes will be discussed during the presentation. Recipes using mpld3 and matplotlib.animations for the interactive data viz will be presented as well, and will conclude the talk&lt;/p&gt;
+&lt;p&gt;This talk assumes a good knowledge of the Python language. Basic knowledge of numpy and scipy is also a plus.&lt;/p&gt;
+</summary></entry><entry><title>Ricette di Data Viz con Matplotlib</title><link href="https://pyvideo.org/pycon-italia-2014/ricette-di-data-viz-con-matplotlib.html" rel="alternate"></link><published>2014-05-25T00:00:00+00:00</published><updated>2014-05-25T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-05-25:pycon-italia-2014/ricette-di-data-viz-con-matplotlib.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il termine Data Visualizaiton (lett. visualizzazione dei dati), altrimenti noto come data viz, si riferisce a qualsiasi rappresentazione visuale di dati, generata in modo automatico (da un algoritmo) [Illinsky &amp;amp; Steele, 2011]. In particolare, data viz ha il pregio di essere facilmente replicabile (anche con dati differenti), e pone maggiore enfasi alla visualizzazione di (molti) dati, piuttosto che curare preminentemente l'aspetto estetico.&lt;/p&gt;
+&lt;p&gt;Le tecniche di data viz sono ulteriormente distinte in due categorie, vale a dire visualizzazioni statiche e interattive. Le prime si basano su rappresentazioni di dati &amp;quot;pre-definite&amp;quot;, spesso replicate in differenti &amp;quot;formati&amp;quot; e angolazioni per fornire diversi punti di vista (e di analisi) delle medesime informazioni [Murray, 2013].&lt;/p&gt;
+&lt;p&gt;Al contrario, una visualizzazione interattiva permette all'utente di personalizzazione il modo in cui si intende mostrare e analizzare i dati.&lt;/p&gt;
+&lt;p&gt;Matplotlib è una libreria Python molto nota e molto potente, che rappresenta oramai lo strumento di riferimento per data viz nella comunità.&lt;/p&gt;
+&lt;p&gt;Matplolib offre un'ampia varietà di strumenti per il plotting 2D e 3D, grafici, mappe (matplotlib.basemap) che trovano ampio utilizzo (ma non sono limitate a) l'analisi dei dati scientifici. Tutti i grafici generati con matplotlib possono essere ulteriormente personalizzati (ad esempio, &amp;quot;possono essere annotati con formule LateX&amp;quot;, &amp;quot;è possibile modificare font e colori&amp;quot;, &amp;quot;aggiungere note&amp;quot;, ecc.) in modo che possano essere perfettamente adatti a specifici utilizzi.&lt;/p&gt;
+&lt;p&gt;Ultimo, ma non ultimo per importanza, le ultime versioni di matplotlib hanno aggiuto il supporto alle animazioni e grafici animati (matplotlib.animations).&lt;/p&gt;
+&lt;p&gt;La maggior parte dei grafici disponibili in Matplotlib appartengono alla categoria degli strumenti di data viz statici. Tuttavia, il nuovo project MLPD3 mira ad integrare Matplotlib con D3js, popolare libreria Javascript per la generazione di pagine web data-driven.&lt;/p&gt;
+&lt;p&gt;Questo talk ha l'intento di mostrare una serie di ricette per data viz, facendo uso di Matplotlib. In particolare, i contenuti (e le diverse ricette) saranno presentate con taglio estremamente pratico e orientato al problema, al fine di comprendere come e quando utilizzare i differenti grafici di Matplotlib.&lt;/p&gt;
+&lt;p&gt;A tale scopo, differenti esempi di codice saranno descritti e discussi durante la presentazione. Esempi e ricette con mpld3 e matplotlib.animations per data viz interattivo costituiranno l'ultima parte della presentazione.&lt;/p&gt;
+&lt;p&gt;Questo talk assume una buona conoscenza del linguaggio Python. Conoscenza di numpy e scipy è preferibile, ma non propedeutica.&lt;/p&gt;
+</summary></entry><entry><title>Machine Learning Parallelo (e Distribuito) con Scikit-Learn</title><link href="https://pyvideo.org/pycon-italia-2014/machine-learning-parallelo-e-distribuito-con-scikit-learn.html" rel="alternate"></link><published>2014-05-24T00:00:00+00:00</published><updated>2014-05-24T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-05-24:pycon-italia-2014/machine-learning-parallelo-e-distribuito-con-scikit-learn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Le tecniche di Machine Learning (ML) si concentrano sulla definizione di algoritmi per effettuare previsioni a partire dall'analisi dei dati. Le tecniche di ML si distinguono tipicamente in due categorie: tecniche di Apprendimento con Supervisione (i.e., Supervised Learning), e tecniche di Apprendimento senza Supervisione (i.e., Unsupervised Learning).&lt;/p&gt;
+&lt;p&gt;Indistintamente dalla categoria di appartenenza, le tecniche di ML richiedono l'elaborazione di grandi quantità di dati per poter effettuare delle previsioni che siano veritiere e ragionevolmente affidabili. Pertanto, risulta necessario riportare su larga scala tali elaborazioni, affinché queste siano efficacemente utilizzate e utilizzabili.&lt;/p&gt;
+&lt;p&gt;Fino a qualche tempo fa, le elaborazioni parallele e distribuite trovavano applicazione in contesti altamente specializzati e di alto profilo.&lt;/p&gt;
+&lt;p&gt;Tuttavia, la rapida evoluzione delle architetture di calcolo, e l'avvento delle tecnologie di cloud computing, hanno favorito la proliferazione di svariate piattaforme e framework di programmazione parallela facilmente accessibili [Bekkerman et. al.].&lt;/p&gt;
+&lt;p&gt;Tali fattori hanno notevolmente contribuito al sempre crescente interesse per l'applicazione di tecniche di ML su larga scala. Il tutto motivato anche dal fatto che molteplici dataset (di grandi dimensioni), sono attualmente memorizzati in maniera distribuita su differenti piattaforme di storage (a.k.a. cloud storage).&lt;/p&gt;
+&lt;p&gt;Scikit-learn è una libreria Python attivamente sviluppata e robusta, costruita sulle solide fondamenta di numpy e scipy.&lt;/p&gt;
+&lt;p&gt;Scikit-learn (sklearn) rappresenta una soluzione software &amp;quot;tutto incluso&amp;quot;, che mette a disposizione l'implementazione di molte delle più note tecniche di ML per l'analisi di dati.&lt;/p&gt;
+&lt;p&gt;Grazie ad una API semplice ad intuitiva, tale libreria può essere agevolmente integrata in altre soluzioni Python-powered per computazioni parallele e distribuite.&lt;/p&gt;
+&lt;p&gt;In questo talk saranno presentate differenti soluzioni per l'esecuzione di algoritmi di ML su larga scala, utilizzando Scikit-learn. In particolare, la scalabilità degli algoritmi sarà presentata considerando due differenti livelli di &amp;quot;complessità&amp;quot;: (1) &amp;quot;Single Machine with Multiple Cores&amp;quot;; e (2) &amp;quot;Multiple Machines with Multiple Cores&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Durante il talk, saranno discussi diversi esempi di codice, unitamente ad una breve descrizione delle tecniche di ML considerate. Tali esempi avranno lo scopo di mostrare l'utilizzo congiunto di sklearn con librerie quali multiprocessing, e mpi4py (per il primo setting); iPython.parallel e soluzioni basate su Map-Reduce (e.g., disco (per il secondo setting).&lt;/p&gt;
+&lt;p&gt;In aggiunta, qualche accenno al GPU-computing con pycuda sarà inoltre riportato, a conclusione della presentazione.&lt;/p&gt;
+&lt;p&gt;Questo talk è pensato per un livello avanzato. Sono richieste competenze di matematica di base e una buona conoscenza del linguaggio Python. Apprezzabile una buona conoscenza di numpy e scipy.&lt;/p&gt;
+</summary></entry><entry><title>Data Formats for Data Science</title><link href="https://pyvideo.org/pycon-de-2016/data-formats-for-data-science.html" rel="alternate"></link><published>2016-10-29T00:00:00+00:00</published><updated>2016-10-29T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2016-10-29:pycon-de-2016/data-formats-for-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The plain text is one of the simplest yet most intuitive format in which data could be stored. It is easy to create, human and machine readable, storage-friendly (i.e. highly compressible), and quite fast to process. Textual data can also be easily structured; in fact to date the CSV (Comma Separated Values) is the most common data format among data scientists.
+However, this format is not properly suited in case data require any sort of internal hierarchical structure, or if data are too big to fit in a single disk.
+In these cases, other formats must be considered, according to the shape of data, and the specific constraints imposed by the context. These formats may include general purpose solutions, e.g. [No]SQL databases, HDFS (Hadoop File System); or may be specifically designed for scientific data, e.g. hdf5, ROOT, NetCDF.
+In this talk, I would like to discuss strength and flaws of each solution w.r.t. their usage for scientific computations in order to provide some practical guidelines for data scientists. The different data formats will be presented in combination with a set of related Python projects, that will be analysed and compared in terms of efficiency and features provided.&lt;/p&gt;
+</summary></entry><entry><title>Async rub an IPython notebook magic for asynchronous cell execution</title><link href="https://pyvideo.org/pycon-italia-2016/async-rub-an-ipython-notebook-magic-for-asynchronous-cell-execution.html" rel="alternate"></link><published>2016-06-22T00:00:00+00:00</published><updated>2016-06-22T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2016-06-22:pycon-italia-2016/async-rub-an-ipython-notebook-magic-for-asynchronous-cell-execution.html</id><summary type="html"></summary></entry><entry><title>Traversing mazes pythonic way and other algorithmic adventures</title><link href="https://pyvideo.org/pycon-italia-2016/traversing-mazes-pythonic-way-and-other-algorithmic-adventures.html" rel="alternate"></link><published>2016-06-22T00:00:00+00:00</published><updated>2016-06-22T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2016-06-22:pycon-italia-2016/traversing-mazes-pythonic-way-and-other-algorithmic-adventures.html</id><summary type="html"></summary></entry><entry><title>Machine Learning Under Test</title><link href="https://pyvideo.org/europython-2015/machine-learning-under-test.html" rel="alternate"></link><published>2015-08-02T00:00:00+00:00</published><updated>2015-08-02T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-08-02:europython-2015/machine-learning-under-test.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Valerio Maggio - Machine Learning Under Test
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;One point usually underestimated or omitted when dealing with
+machine learning algorithms is how to write &lt;em&gt;good quality&lt;/em&gt; code.
+The obvious way to face this issue is to apply automated testing,
+which aims at implementing (likely) less-buggy and higher quality
+code.&lt;/p&gt;
+&lt;p&gt;However, testing machine learning code introduces additional concerns
+that has to be considered. On the one hand, some constraints are
+imposed by the domain, and the risks intrinsically related to machine
+learning methods, such as handling unstable data, or avoid
+under/overfitting. On the other hand,  testing scientific code
+requires additional testing tools (e.g., &lt;cite&gt;numpy.testing&lt;/cite&gt;),
+specifically suited to handle numerical data.&lt;/p&gt;
+&lt;p&gt;In this talk, some of the most famous machine learning techniques will
+be discudded and analysed from the &lt;cite&gt;testing&lt;/cite&gt; point of view,
+emphasizing that testing would also allow for a better understanding
+of how the whole learning model works under the hood.&lt;/p&gt;
+&lt;p&gt;The talk is intended for an &lt;em&gt;intermediate&lt;/em&gt; audience.
+The content of the talk is intended to be mostly practical, and code
+oriented. Thus a good proficiency with the Python language is &lt;strong&gt;required&lt;/strong&gt;.
+Conversely, &lt;strong&gt;no prior knowledge&lt;/strong&gt; about testing nor Machine Learning
+algorithms is necessary to attend this talk.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;: [&lt;a class="reference external" href="https://speakerdeck.com/valeriomaggio/machine-learning"&gt;https://speakerdeck.com/valeriomaggio/machine-learning&lt;/a&gt;-
+under-test-at-europython2015]()&lt;/p&gt;
+</summary></entry><entry><title>Data Formats for Data Science</title><link href="https://pyvideo.org/europython-2016/data-formats-for-data-science.html" rel="alternate"></link><published>2016-08-04T00:00:00+00:00</published><updated>2016-08-04T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2016-08-04:europython-2016/data-formats-for-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Valerio Maggio - Data Formats for Data Science
+[EuroPython 2016]
+[21 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/data-science-formats-beyond-csv-and-hdfs"&gt;https://ep2016.europython.eu//conference/talks/data-science-formats-beyond-csv-and-hdfs&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The CSV is the most widely adopted data format. It used to
+store and share &lt;em&gt;not-so-big&lt;/em&gt; scientific data. However, this format is
+not particularly
+suited in case data require any sort of internal
+hierarchical structure, or if data are too big. To this end, other
+data formats must be considered.
+In this talk, the different data formats will be presented and
+compared w.r.t. their
+usage for scientific computations along with corresponding Python libraries.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;The &lt;em&gt;plain text&lt;/em&gt; is one of the simplest yet most intuitive format in
+which data could be stored.
+It is easy to create, human and machine readable,
+&lt;em&gt;storage-friendly&lt;/em&gt; (i.e. highly compressible), and quite fast to process.
+Textual data can also be easily &lt;em&gt;structured&lt;/em&gt;; in fact to date the
+CSV (&lt;em&gt;Comma Separated Values&lt;/em&gt;) is the most common data format among
+data scientists.&lt;/p&gt;
+&lt;p&gt;However, this format is not properly suited in case data require any
+sort of internal
+hierarchical structure, or if data are too big to fit in a single disk.&lt;/p&gt;
+&lt;p&gt;In these cases other formats must be considered, according to the
+shape of data, and the
+specific constraints imposed by the context.
+These formats may leverage &lt;em&gt;general purpose&lt;/em&gt; solutions, e.g. [No]SQL
+databases, HDFS (Hadoop File System);
+or may be specifically designed for scientific data, e.g. hdf5, ROOT, NetCDF.&lt;/p&gt;
+&lt;p&gt;In this talk, the strength and flaws of each solution will be
+discussed, focusing on their usage for scientific computations. The
+goal is to provide some practical guidelines for data scientists,
+derived from the the comparison of the different Pythonic solutions
+presented for the case study analysed. These will include
+&lt;cite&gt;xarray&lt;/cite&gt;,
+&lt;cite&gt;pyROOT&lt;/cite&gt; &lt;em&gt;vs&lt;/em&gt; &lt;cite&gt;rootpy&lt;/cite&gt;, &lt;cite&gt;h5py&lt;/cite&gt; &lt;em&gt;vs&lt;/em&gt; &lt;cite&gt;PyTables&lt;/cite&gt;, &lt;cite&gt;bcolz&lt;/cite&gt;, and &lt;cite&gt;blaze&lt;/cite&gt;.
+Finally, few notes about the new trends for &lt;strong&gt;columnar databases&lt;/strong&gt;
+(e.g. &lt;em&gt;MonetDB&lt;/em&gt;) will be also presented, for very fast
+in-memory analytics.&lt;/p&gt;
+</summary></entry><entry><title>Semantic Python: Mastering Linked Data with Python</title><link href="https://pyvideo.org/pydata-berlin-2014/semantic-python-mastering-linked-data-with-pytho.html" rel="alternate"></link><published>2014-07-26T00:00:00+00:00</published><updated>2014-07-26T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-07-26:pydata-berlin-2014/semantic-python-mastering-linked-data-with-pytho.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tim Berners-Lee defined the Semantic Web as a web of data that can be
+processed directly and indirectly by machines. More precisely, the
+Semantic Web can be defined as a set of standards and best practices for
+sharing data and the semantics of that data over the Web to be used by
+applications [DuCharme, 2013].&lt;/p&gt;
+&lt;p&gt;In particular, the Semantic Web is built on top of three main pillars:
+the RDF (i.e., Resource Description Framework) data model, the SPARQL
+query language, and the OWL standard for storing vocabularies and
+ontologies. These standards allows the huge amount of data on the Web to
+be available in a unique and unified standard format, contributing to
+the definition of the Web of Data (WoD) [1].&lt;/p&gt;
+&lt;p&gt;The WoD makes the web data to be reachable and easily manageable by
+Semantic Web tools, providing also the relationships among these data
+(thus practically setting up the “Web”). This collection of interrelated
+datasets on the Web can also be referred to as Linked Data [1].&lt;/p&gt;
+&lt;p&gt;Two typical examples of large Linked Dataset are FreeBase, and DBPedia,
+which essentially provides the so called Common sense Knowledge in RDF
+format. Python offers a very powerful and easy to use library to work
+with Linked Data: rdflib. RDFLib is a lightweight and functionally
+complete RDF library, allowing applications to access, create and manage
+RDF graphs in a very Pythonic fashion.&lt;/p&gt;
+&lt;p&gt;In this talk, a general overview of the main features provided by the
+rdflib package will be presented. To this end, several code examples
+will be discussed, along with a case study concerning the analysis of a
+(semantic) social graph. This case study will be focused on the
+integration between the networkx module and the rdflib library in order
+to crawl, access (via SPARQL), and analyze a Social Linked Data Graph
+represented using the FOAF (Friend of a Friend) schema.&lt;/p&gt;
+&lt;p&gt;This talk is intended for an Novice level audience, assuming a good
+knowledge of the Python language.&lt;/p&gt;
+</summary></entry><entry><title>Clone detection in python</title><link href="https://pyvideo.org/europython-2012/clone-detection-in-python.html" rel="alternate"></link><published>2012-07-05T00:00:00+00:00</published><updated>2012-07-05T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2012-07-05:europython-2012/clone-detection-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] V Maggio - 4 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The clone detection is a longstanding and very active research area in
+the field of Software Maintenance aimed at identifying duplications in
+source code. The presence of clones may affect maintenance activities.
+For example, errors in the “original” fragment of code have to be fixed
+in every clone. To make things worse, code clones are usually not
+documented and so their location in the source code is not known. In
+case of small-size software systems the clone detection may be manually
+performed, but on large software systems it can be accomplished only by
+means of automatic techniques. In this talk an approach that exploits
+structural (i.e., AST) and lexical information of the code (e.g., name
+of methods, variables) for the identification of clones will be
+presented. The main innovation of such approach is represented by the
+adoption of a Machine Learning technique based on (Tree) Kernel
+functions. Some insights on mathematical properties of these
+Kernel-based method along with its corresponding (efficient) Python
+implementation (Numpy, Scipy) will be presented. Afterwards the talk
+will be focused on the explanation of some detection results gathered on
+well-known Python systems (Eric, Plone, networkx, Zope), compared with
+other non-Python ones (Eclipse- Jdtcore, JHotDraw). The aim of this part
+will be to analyze what are the Python features that could possibly
+avoid (or allow) duplications w.r.t. other OO languages. Some snippets
+for analyzing the Python code “by itself” will be also presented,
+emphasizing the powerful Python built-in reflection capabilities,
+extremely useful in this specific code analysis task. Basic maths skill
+and basic knowledge of the Python language are the only suggested
+prerequisites for the talk.&lt;/p&gt;
+</summary></entry><entry><title>Scikit-learn to "learn them all"</title><link href="https://pyvideo.org/europython-2014/scikit-learn-to-learn-them-all.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/scikit-learn-to-learn-them-all.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Scikit-learn&lt;/strong&gt; is a powerful library, providing implementations for
+many of the most popular machine learning algorithms. This talk will
+provide an overview of the &amp;quot;batteries&amp;quot; included in Scikit-learn, along
+with working code examples and internal insights, in order to get the
+best for our machine learning code.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Machine Learning&lt;/strong&gt; is about &lt;em&gt;using the right features, to build the
+right models, to achieve the right tasks&lt;/em&gt; &lt;a class="reference external" href="http://goo.gl/BnhoHa"&gt;[Flach,
+2012]&lt;/a&gt; However, to come up with a definition of
+what actually means &lt;strong&gt;right&lt;/strong&gt; for the problem at the hand, it is
+required to analyse huge amounts of data, and to evaluate the
+performance of different algorithms on these data.&lt;/p&gt;
+&lt;p&gt;However, deriving a working machine learning solution for a given
+problem is far from being a &lt;em&gt;waterfall&lt;/em&gt; process. It is an iterative
+process where continuous refinements are required for the data to be
+used (i.e., the &lt;em&gt;right features&lt;/em&gt;), and the algorithms to apply (i.e.,
+the &lt;em&gt;right models&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;In this scenario, Python has been found very useful for practitioners
+and researchers: its high-level nature, in combination with available
+tools and libraries, allows to rapidly implement working machine
+learning code without &lt;em&gt;reinventing the wheel&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://scikit-learn.org/stable/"&gt;**Scikit-learn**&lt;/a&gt; is an actively
+developing Python library, built on top of the solid &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt; packages.&lt;/p&gt;
+&lt;p&gt;Scikit-learn (&lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;) is an &lt;em&gt;all-in-one&lt;/em&gt; software solution,
+providing implementations for several machine learning methods, along
+with datasets and (performance) evaluation algorithms.&lt;/p&gt;
+&lt;p&gt;These &amp;quot;batteries&amp;quot; included in the library, in combination with a nice
+and intuitive software API, have made scikit-learn to become one of the
+most popular Python package to write machine learning code.&lt;/p&gt;
+&lt;p&gt;In this talk, a general overview of scikit-learn will be presented,
+along with brief explanations of the techniques provided out-of-the-box
+by the library.&lt;/p&gt;
+&lt;p&gt;These explanations will be supported by working code examples, and
+insights on algorithms' implementations aimed at providing hints on how
+to extend the library code.&lt;/p&gt;
+&lt;p&gt;Moreover, advantages and limitations of the &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt; package will be
+discussed according to other existing machine learning Python libraries
+(e.g., &lt;tt class="docutils literal"&gt;`shogun&lt;/tt&gt; &amp;lt;&lt;a class="reference external" href="http://shogun-toolbox.org"&gt;http://shogun-toolbox.org&lt;/a&gt;&amp;gt;`__,
+&lt;tt class="docutils literal"&gt;`pyML&lt;/tt&gt; &amp;lt;&lt;a class="reference external" href="http://pyml.sourceforge.net"&gt;http://pyml.sourceforge.net&lt;/a&gt;&amp;gt;`__,
+&lt;tt class="docutils literal"&gt;`mlpy&lt;/tt&gt; &amp;lt;&lt;a class="reference external" href="http://mlpy.sourceforge.net"&gt;http://mlpy.sourceforge.net&lt;/a&gt;&amp;gt;`__).&lt;/p&gt;
+&lt;p&gt;In conclusion, (examples of) applications of scikit-learn to big data
+and computational intensive tasks will be also presented.&lt;/p&gt;
+&lt;p&gt;The general outline of the talk is reported as follows (the order of the
+topics may vary):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Intro to Machine Learning&lt;ul&gt;
+&lt;li&gt;Machine Learning in Python&lt;/li&gt;
+&lt;li&gt;Intro to Scikit-Learn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Overview of Scikit-Learn&lt;ul&gt;
+&lt;li&gt;Comparison with other existing ML Python libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Supervised Learning with &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;&lt;ul&gt;
+&lt;li&gt;Text Classification with SVM and Kernel Methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Unsupervised Learning with &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;&lt;ul&gt;
+&lt;li&gt;Partitional and Model-based Clustering (i.e., k-means and Mixture
+Models)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Scaling up Machine Learning&lt;ul&gt;
+&lt;li&gt;Parallel and Large Scale ML with &lt;tt class="docutils literal"&gt;sklearn&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk is intended for an intermediate level audience (i.e.,
+Advanced). It requires basic math skills and a good knowledge of the
+Python language.&lt;/p&gt;
+&lt;p&gt;Good knowledge of the &lt;tt class="docutils literal"&gt;numpy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;scipy&lt;/tt&gt; packages is also a plus.&lt;/p&gt;
+</summary></entry><entry><title>Traversing Mazes the pythonic way and other Algorithmic...</title><link href="https://pyvideo.org/europython-2014/traversing-mazes-the-pythonic-way-and-other-algor.html" rel="alternate"></link><published>2014-07-22T00:00:00+00:00</published><updated>2014-07-22T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2014-07-22:europython-2014/traversing-mazes-the-pythonic-way-and-other-algor.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Graphs&lt;/strong&gt; define a powerful mental (and mathematical) model of
+structure, representing the building blocks of formulations and/or
+solutions for many &lt;em&gt;hard problems&lt;/em&gt;. In this talk, graphs and (&lt;em&gt;some of
+the&lt;/em&gt;) main graph-related algorithms will be analysed from a &lt;strong&gt;very
+pythonic&lt;/strong&gt; angle: the &lt;a class="reference external" href="http://www.python.org/dev/peps/pep-0020/"&gt;Zen of
+Python&lt;/a&gt; (e.g., &lt;em&gt;beautiful
+is better than ugly&lt;/em&gt;, &lt;em&gt;simple is better than complex&lt;/em&gt;, &lt;em&gt;readability
+counts&lt;/em&gt;).&lt;/p&gt;
+</summary></entry><entry><title>Machine Learning Recipes for Large Scale problems</title><link href="https://pyvideo.org/pycon-italia-2015/machine-learning-recipes-for-large-scale-problems.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/machine-learning-recipes-for-large-scale-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine Learning focuses on constructing algorithms for making
+predictions from data. These algorithms usually require huge amount of
+data to analyse, thus demanding for high computational costs and
+requiring easily scalable solutions to be effectively applied. These
+factors favoured a more and more increasing interest in scaling up
+machine learning applications.&lt;/p&gt;
+&lt;p&gt;Scikit-learn is one of the most popular machine learning library in
+Python, providing implementations for several machine learning methods,
+along with datasets and (performance) evaluation algorithms.&lt;/p&gt;
+&lt;p&gt;In this talk some recipes to scale up machine learning algorithms with
+scikit-learn will be presented. The talk will go over several examples
+and case studies that will be presented in a problem-to-solution way in
+order to likely engage discussions during and after the talk.&lt;/p&gt;
+&lt;p&gt;The talk is intended for an intermediate level of audience. It requires
+(very) basic math skills and a good knowledge of the Python language.
+Good knowledge of the numpy and scipy packages is also a plus.&lt;/p&gt;
+</summary></entry><entry><title>Python 3 for Data Science: what works, what doesn't</title><link href="https://pyvideo.org/pycon-italia-2015/python-3-for-data-science-what-works-what-doesn.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/python-3-for-data-science-what-works-what-doesn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the last years, the Python programming language has engaged a major
+renovation, and Python 3.x is going to be the next generation reference
+of the language. However, despite the community strives to support the
+language switch among pythonistas, Python 3 is not yet the real de-facto
+reference version of the language and Python 2.x is still on the go.
+Moreover, as for the scientific Python community, only few years ago
+most of the scientific python packages only (or mainly) supported Python
+2. In this talk we will analyse how far the support to Python 3 extent
+to the Python scientific packages, emphasising what actually works and
+what doesn’t. The general claim of this talk is that, from a technical
+perspective, Python 3 is a more mature language from many point of view
+(w.r.t. Python 2), and the scientific community is now able more than
+ever to switch to Python 3. However, so far, the switch has not been
+done yet. Thus, some reflections on this “particular” community of
+pythonistas will conclude the talk in order to stimulate the discussion
+and derive together possible solutions and “workaround” to support this
+change.&lt;/p&gt;
+</summary></entry><entry><title>Test-driven machine learning with scikit-learn</title><link href="https://pyvideo.org/pycon-italia-2015/test-driven-machine-learning-with-scikit-learn.html" rel="alternate"></link><published>2015-05-30T00:00:00+00:00</published><updated>2015-05-30T00:00:00+00:00</updated><author><name>Valerio Maggio</name></author><id>tag:pyvideo.org,2015-05-30:pycon-italia-2015/test-driven-machine-learning-with-scikit-learn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine learning is an amazing research and application field, which
+perfectly matches math skills with coding abilities in order to define
+programs that are able to learn from data. Therefore, after having
+defined our own (mathematical) model, machine learning is about writing
+code - sometimes a lot of - to actually make the model to work. However,
+one point usually underestimated or omitted when dealing with machine
+learning algorithms is how to write good quality code.&lt;/p&gt;
+&lt;p&gt;Test-driven development (TDD) is one of the most popular agile methods,
+specifically designed to support developers in producing (potential)
+less-buggy code by writing tests before the actual code under test. The
+application of test-first programming principles to the implementation
+of Naive Bayes classifiers or Neural networks looks like a daunting
+challenge.&lt;/p&gt;
+&lt;p&gt;Conversely, the test-code-refactor cycle strategy founds its principles
+in the scientific method: make a proposition of validity, share results,
+work in feedback loops. Moreover, this kind of approach to tackle
+problems, in this particular case would also allow for a better
+understanding of how the whole learning model works under the hood.&lt;/p&gt;
+&lt;p&gt;In this talk, examples of Test-Driven implementations of some of the
+most famous machine learning algorithms will be presented using
+scikit-learn.&lt;/p&gt;
+&lt;p&gt;The talk is intended for an intermediate audience. The content of the
+talk is intended to be mostly practical, and code oriented. Thus a good
+proficiency with the Python language is required. Conversely, no prior
+knowledge about TDD nor Machine Learning algorithms is necessary to
+attend this talk.&lt;/p&gt;
+</summary></entry></feed>

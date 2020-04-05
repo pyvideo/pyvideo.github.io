@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Supercomputer and Cluster Application Performance Analysis using Python</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Supercomputer and Cluster Application Performance Analysis using Python" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-us-2011/pycon-2011--supercomputer-and-cluster-application.html" />
+    <meta property="og:image" content="https://archive.org/services/img/pyvideo_450___supercomputer-and-cluster-application-performance-analysis-using-python" />
+    <meta property="og:image:secure_url" content="https://archive.org/services/img/pyvideo_450___supercomputer-and-cluster-application-performance-analysis-using-python" />
+
+
+    <meta name="tags" content="pycon" />
+    <meta name="tags" content="pycon2011" />
+    <meta name="tags" content="pylot" />
+    <meta name="tags" content="sandianationallaboratories" />
+    <meta name="tags" content="supercomputer" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-us-2011/pycon-2011--supercomputer-and-cluster-application.html" rel="bookmark"
+         title="Permalink to Supercomputer and Cluster Application Performance Analysis using Python">Supercomputer and Cluster Application Performance Analysis using Python
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2011-03-11T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 11 March 2011
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/daniel-w-barnette.html">Daniel W. Barnette</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#archive.org" aria-controls="archive.org" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> ARCHIVE.ORG
+    </a></li>
+    <li class="" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="archive.org">
+        <a class="reference external image-reference"
+           href="https://archive.org/details/pyvideo_450___supercomputer-and-cluster-application-performance-analysis-using-python">
+            <img alt=""
+                 src="https://archive.org/services/img/pyvideo_450___supercomputer-and-cluster-application-performance-analysis-using-python">
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/450_supercomputer-and-cluster-application-performance-analysis-using-python.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>PyCon 2011: Supercomputer and Cluster Application Performance Analysis
+using Python</p>
+<p>Presented by Daniel W. Barnette, PhD</p>
+<p>Sandia National Labs analyzes high-performance computing environments to
+optimize application performance, analyze system architectures, and
+provide design guidance for future systems. We discuss 1) generating
+performance data across multiple systems using mini-applications, and 2)
+using our open source Python tools Pylot/Co-Pylot to store and analyze
+data using a MySQL database server.</p>
+<p>Abstract</p>
+<p>Sandia National Laboratories analyzes large-scale, state-of-the-art high
+performance computing environments for the Department of Energy (DOE),
+Department of Defense (DoD), and other government agencies. Execution
+efficiency is vital when dealing with datasets that require billions of
+elements or when running simulations that take millions of core-hours to
+complete.</p>
+<p>One approach to investigating execution efficiency is to instrument our
+large- scale applications and platforms to generate timings and other
+performance data. Although effective in mature computing environments,
+working directly with large-scale applications is cumbersome, time
+consuming, and even impossible in the early stages of computer system
+analysis and design. Furthermore, the software and data sets of these
+applications may be restricted, limiting our abilities to collaborate.</p>
+<p>In order to enhance our analysis capabilities far upstream from when
+large- scale applications can be used and when working with external
+collaborators, we have developed a collection of mini-applications that
+capture the essence of our much larger scientific codes, are readily
+applicable to both large and small systems, and whose run-time
+information can accurately reveal problems associated with execution
+efficiency.</p>
+<p>Generating the data is only half the problem, though. We need the
+ability to capture platform-relevant mini-app performance data at the
+convenience of the testers when and where they generate the data. We
+also need the ability to search through, filter, and visualize the
+resulting performance measurement datasets in detail to identify and
+understand trends and patterns.</p>
+<p>Sandia National Laboratories has developed a performance analysis suite
+primarily consisting of two tools written in Python, Pylot and Co-Pylot.
+Co- Pylot is a relatively simple interface that enables easy batch
+transfer of performance data to a remote MySQL database server for
+persistent storage.</p>
+<p>Once stored, the performance data is extracted, organized, filtered, and
+analyzed using Pylot, a more functionally complex interface. Pylot is
+used to present user-selected MySQL database fields in a variety of
+views including statistical data, bar and pie charts, Cartesian or
+log-log or semi-log plots, reference curves for comparisons, and Kiviat
+diagrams (also called radar charts) for multivariate datasets.</p>
+<p>A built-in storage buffer provides the ability to store, compare, and
+analyze data from multiple databases. This capability is critical for
+studying performance variations of a code running on a particular
+architecture, comparing application performance across architectures, or
+comparing multiple applications on one or more architectures. Values in
+up to four database fields at a time can be mathematically combined to
+generate a new temporary field to provide complete generality while
+accessing a database. Further, Pylot provides the ability to easily move
+MySQL databases and tables between computers, including the analyst’s
+laptop. This coherency of databases across multiple analysis platforms
+can be used, for example, to avoid network latency issues associated
+with accessing remote servers. It also serves as a distributed backup
+system.</p>
+<p>An outline of this presentation follows:</p>
+<ol class="arabic simple">
+<li>Applications at Sandia National Laboratories (6 mins)<ul>
+<li>Simulation size and runtime of typical large Sandia applications</li>
+<li>Difficulties of using large-scale applications in early computer
+system design and analysis</li>
+<li>Mantevo mini-apps – small, self-contained programs that embody
+essential performance characteristics of key applications.</li>
+</ul>
+</li>
+<li>Gathering data (4 mins)<ul>
+<li>What information Mantevo mini-apps provide</li>
+<li>Co-Pylot – getting your data into a remote database</li>
+</ul>
+</li>
+<li>Supercomputer and Cluster application analysis (10 mins)<ul>
+<li>Pylot – demo of accessing and graphing MySQL data as a method for
+analyzing performance</li>
+<li>Diagnosing performance issues</li>
+<li>Comparing different systems and different runs</li>
+</ul>
+</li>
+<li>Future Extensions of Pylot (5 mins)<ul>
+<li>Capturing compile-time and execution info</li>
+<li>Efforts to move parts of Pylot to the web</li>
+</ul>
+</li>
+</ol>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-us-2011.html">PyCon US 2011</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://archive.org/details/pyvideo_450___supercomputer-and-cluster-application-performance-analysis-using-python" rel="external">ARCHIVE.ORG</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/450_supercomputer-and-cluster-application-performance-analysis-using-python.mp4" rel="external">MP4</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/pycon/">pycon</a>, <a href="https://pyvideo.org/tag/pycon2011/">pycon2011</a>, <a href="https://pyvideo.org/tag/pylot/">pylot</a>, <a href="https://pyvideo.org/tag/sandianationallaboratories/">sandianationallaboratories</a>, <a href="https://pyvideo.org/tag/supercomputer/">supercomputer</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-us-2011/videos/pycon-2011--supercomputer-and-cluster-application.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

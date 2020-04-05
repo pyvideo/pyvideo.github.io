@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_valentin-haenal.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-23T00:00:00+00:00</updated><entry><title>Compress Me, Stupid!</title><link href="https://pyvideo.org/europython-2014/compress-me-stupid.html" rel="alternate"></link><published>2014-07-23T00:00:00+00:00</published><updated>2014-07-23T00:00:00+00:00</updated><author><name>Valentin Haenal</name></author><id>tag:pyvideo.org,2014-07-23:europython-2014/compress-me-stupid.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Compression is a general technique for reducing the size of datasets
+that normally lie on disk or that should be sent remotely. But time has
+come to use it as a means to accelerate applications that uses in-memory
+data too.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.blosc.org"&gt;Blosc&lt;/a&gt; is a high-performance meta-compressor
+that is meant to do that.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Compression is a technique to reduce the number of bits needed to
+represent a given dataset. A very common use-case in the distributed
+digital age is to reduce the size of files in order to reduce the time
+and bandwidth requirements of sending a file from one location to
+another.&lt;/p&gt;
+&lt;p&gt;There are a large variety of different algorithms and implementations of
+so called &amp;quot;codecs&amp;quot; - a term is derived from the fact that programs that
+implement a compression algorithm commonly constitute of both a
+compressor and a corresponding decompressor. There are many different
+special purpose compressors that exploit specifics in the structure of
+the input data, for example: MP3, Ogg and FLAC for audio data such as
+music, GIF, JPEG and PNG for images and MPEG for encoding video. Also,
+there are many general purpose codecs that make no assumptions about the
+structure of the data, for example: Zlib(DEFLATE), Bzip2(BWT) and LZMA.&lt;/p&gt;
+&lt;p&gt;However, and due to the ever growing divide between memory access
+latency and CPU clock speed a new use-case beyond faster file transfers
+and more efficient use of disk-space has emerged: &amp;quot;in-memory
+compression&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Keeping data in RAM that is compressed also means that the CPU has to do
+more work in order to make use of it. However, if the compressor is fast
+enough, this decompression overhead could pay off, and applications
+could work with compressed data transparently, and so not even noticing
+the slowdown due to the extra effort for compression/decompression.&lt;/p&gt;
+&lt;p&gt;This technique can be very beneficial in a variety of scenarios where
+RAM availability is critical. For example, in-memory caching systems
+like Memcached or Redis could store more data using the same resources
+thereby optimizing resource usage. Another use case is to use
+compression for in-memory data containers, à la NumPy's ndarray or
+Pandas' DataFrame, allowing for improved memory usage and potentially
+allow for accelerated computations.&lt;/p&gt;
+&lt;p&gt;In our talk, we will explain first why we are in a moment of computer
+history that &lt;a class="reference external" href="http://www.pytables.org/docs/CISE-12-2-ScientificPro.pdf"&gt;in-memory compression can be beneficial for modern
+applications&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Then, we will introduce &lt;a class="reference external" href="http://www.blosc.org"&gt;Blosc&lt;/a&gt;, a high speed
+meta-compressor, allowing other existing compressors (BloscLZ, LZ4,
+Snappy or even Zlib) to leverage the SIMD and multithreading framework
+that it provides and help achieving extremely fast operation (frequently
+faster than a plain memcpy() system call).&lt;/p&gt;
+&lt;p&gt;Finally, we will show some existing data handling libraries
+(&lt;a class="reference external" href="https://github.com/Blosc/bloscpack"&gt;Bloscpack&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.pytables.org"&gt;PyTables&lt;/a&gt;,
+&lt;a class="reference external" href="http://continuum.io/blog/blz-format"&gt;BLZ&lt;/a&gt;) -- all written in Python
+-- that already use Blosc today for fulfilling the promise of faster
+operations by doing in-memory compressing.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 06 Aug 2017 00:00:00 +0000</lastBuildDate><item><title>An introduction to nodepool</title><link>https://pyvideo.org/pycon-au-2017/an-introduction-to-nodepool.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nodepool is a system for launching single-use test nodes (VM's) on demand based on images built with cached data. It is designed to work with any OpenStack based cloud, and is part of a suite of tools that form a comprehensive test system including Jenkins and Zuul.&lt;/p&gt;
+&lt;p&gt;Nodepool works across multiple clouds and scales to launching and managing thousands of nodes per an hour.&lt;/p&gt;
+&lt;p&gt;This talk is an introduction on how to deploy and use nodepool for CI. Given time we may also touch on how it may be used to manage nodes for workloads other than just testing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joshua Hesketh</dc:creator><pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-06:pycon-au-2017/an-introduction-to-nodepool.html</guid></item><item><title>Continuous Integration Testing for Your Database Migrations by Joshua Hesketh</title><link>https://pyvideo.org/pycon-au-2014/continuous-integration-testing-for-your-database.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a talk about how OpenStack does database migration continuous
+integration, and how other projects might be able to learn from what
+we've done.&lt;/p&gt;
+&lt;p&gt;OpenStack is an interesting project in that it runs in a variety of
+different scale scenarios. There are very small deployments of only a
+few machines, and large public clouds with thousands of machines. The
+OpenStack project takes Continuous Integration (CI) very seriously, and
+runs a suite of unit and integration tests on all proposed patches.&lt;/p&gt;
+&lt;p&gt;One thing we weren't very good at testing though, was database upgrades.
+We have unit tests for many of them, but we don't know how these
+upgrades affect real users in the field. As a response, we worked on
+adding database migration testing to our CI environment. This new test
+infrastructure is open source
+(&lt;a class="reference external" href="https://github.com/stackforge/turbo-hipster"&gt;https://github.com/stackforge/turbo-hipster&lt;/a&gt;), and extensible. It
+currently runs tests on smaller databases, as well as a largish real
+user database. It has already caught two significant performance
+problems in database migrations.&lt;/p&gt;
+&lt;p&gt;This talk will cover how we built the test infrastructure (in python!).
+It will cover what we've learned from the 12 months of running it - time
+that we'll have had by the conference day. It will tell a story about
+some of the bugs we've found and how we fixed them. ..&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joshua Hesketh</dc:creator><pubDate>Mon, 11 Aug 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-08-11:pycon-au-2014/continuous-integration-testing-for-your-database.html</guid></item><item><title>Guarding the gate with Zuul</title><link>https://pyvideo.org/pycon-au-2015/guarding-the-gate-with-zuul.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Zuul is a program that is used to gate the source code repositories of a
+project so that changes are only merged if they pass tests.&lt;/p&gt;
+&lt;p&gt;By gating we mean a more proactive continuous integration suite whereby
+tests must pass in order to merge (rather than a traditional CI that
+just gives a nightly status of the master branch). This means every
+commit is tested both during review time and before it merges - in case
+the repositories have changed in the mean time.&lt;/p&gt;
+&lt;p&gt;The result of using a gating system like zuul is that it's much harder
+to break trunk and your nightly builds should nearly always work.&lt;/p&gt;
+&lt;p&gt;Zuul can be configured to react to events and run various jobs with
+success or failure results depending on the scenario. Currently Zuul is
+only integrated with the gerrit code review platform but there are
+discussions about extending it to github.&lt;/p&gt;
+&lt;p&gt;One unique and powerful feature in Zuul is its ability to run tests in a
+predictive manner across multiple programs. Zuul predicts what multiple
+repositories will look like by the time the present job is finished and
+arranges the tests to be performed in that order. This stops race
+conditions when merging code in one repository that depends on code in
+another repository.&lt;/p&gt;
+&lt;p&gt;Zuul can manage thousands of jobs across hundreds of projects as evident
+by being the gate keeper for OpenStack.&lt;/p&gt;
+&lt;p&gt;In this talk we will look at what Zuul is, how to configure it and the
+internals of how it works.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joshua Hesketh</dc:creator><pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-04:pycon-au-2015/guarding-the-gate-with-zuul.html</guid></item><item><title>OpenStack Miniconf Opening</title><link>https://pyvideo.org/pycon-au-2015/openstack-miniconf-opening.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joshua Hesketh</dc:creator><pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-04:pycon-au-2015/openstack-miniconf-opening.html</guid></item></channel></rss>

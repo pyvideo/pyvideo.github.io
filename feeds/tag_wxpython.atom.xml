@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_wxpython.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2013-10-15T00:00:00+00:00</updated><entry><title>PyOhio 2010: GUI Tools</title><link href="https://pyvideo.org/pyohio-2010/pyohio-2010--gui-tools.html" rel="alternate"></link><published>2010-07-31T00:00:00+00:00</published><updated>2010-07-31T00:00:00+00:00</updated><author><name>James Bonanno</name></author><id>tag:pyvideo.org,2010-07-31:pyohio-2010/pyohio-2010--gui-tools.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GUI Tools&lt;/p&gt;
+&lt;p&gt;Presented by James Bonanno&lt;/p&gt;
+&lt;p&gt;There are several Graphical User Interface frameworks available for
+Python. In this talk, perpahs the two most popular, wxPython and PyQt,
+are examined. The talk will focus on major differences, tools, and a
+specific example done both in wxPython and PyQt, that is a non-trivial
+production grade example.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: sound is inaudible for the first minute]&lt;/p&gt;
+</summary><category term="gui"></category><category term="pyohio"></category><category term="pyohio2010"></category><category term="pyqt"></category><category term="wxpython"></category></entry><entry><title>Experiences making CPU-bound tasks run much faster</title><link href="https://pyvideo.org/europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html" rel="alternate"></link><published>2011-07-18T00:00:00+00:00</published><updated>2011-07-18T00:00:00+00:00</updated><author><name>Ian Ozsvald</name></author><id>tag:pyvideo.org,2011-07-18:europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Ian Ozsvald - 22 June 2011 in &amp;quot;Training Pizza
+Margherita &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;UPDATE - post-event I've created a &lt;a class="reference external" href="http://ianozsvald.com/2011/06/29/high-performance-python-tutorial-v0-1%20-from-my-4-hour-tutorial-at-europython-2011/"&gt;49 page PDF write-
+up&lt;/a&gt;
+which summarises the 4 hour tutorial&lt;/p&gt;
+&lt;p&gt;As a long-time R&amp;amp;D consultant I'm often working to make slow,
+experimental code run faster for tasks like physics simulation, flood
+modeling and natural language processing. Python allows a smooth
+progression from rough-and-ready (but slow) algorithms through to finely
+tuned tasks that efficiently use as much CPU power as you can bring to
+bear. Speed-ups of 10-500* can be expected for the Mandelbrot code
+we'll use.&lt;/p&gt;
+&lt;p&gt;In this talk I'll cover a set of libraries that make CPU-bound tasks run
+much faster. We'll begin with a look at profiling using RunSnakeRun and
+line_profiler to identify our bottleneck. We'll take a look at slow
+algorithms in Python and how they can run faster using numpy and
+numexpr.&lt;/p&gt;
+&lt;p&gt;Next we'll cover the use of multiprocessing to utilise multiple CPU
+cores along with Cython or ShedSkin to easily use C code in a friendly
+Python wrapper. Multiprocessing on a quad-core system can often provide
+a 4* speed-up for the right tasks. Next parallelpython will let us run
+our code on a network of machines.&lt;/p&gt;
+&lt;p&gt;Finally we'll look at pyCUDA to utilise an NVIDIA GPU. CUDA can give the
+best improvements for mathematical problems (over 100* on the right
+tasks) but works on a narrower set of problems.&lt;/p&gt;
+&lt;p&gt;How it'll work: The tutorial will be hands on, you'll be converting
+example files from normal Python to faster variants using the tools
+below. All of it is optional, you'll get the most benefit by having
+everything installed. We'll work in groups and open discussion is
+encouraged.&lt;/p&gt;
+&lt;p&gt;NOTE - you are expected to have all these tools installed &lt;em&gt;before&lt;/em&gt; the
+tutorial (if you don't, you might find it hard to follow what's going
+on!).&lt;/p&gt;
+&lt;p&gt;I'll be using Python 2.7.1 on a Macbook (Snow Leopard). All of these
+tools run on Windows and Linux, as long as your versions are fairly
+recent everything should run just fine.&lt;/p&gt;
+&lt;p&gt;My versions (roughly ordered by importance):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python 2.7.1&lt;/li&gt;
+&lt;li&gt;RunSnakeRun 2.0.1b6 (with wxPython 2.8.12.0 Unicode)&lt;/li&gt;
+&lt;li&gt;line_profiler (1.0b2)&lt;/li&gt;
+&lt;li&gt;Cython 0.14.1&lt;/li&gt;
+&lt;li&gt;ShedSkin 0.7.1&lt;/li&gt;
+&lt;li&gt;numpy 1.5.1&lt;/li&gt;
+&lt;li&gt;numexpr 1.4.2&lt;/li&gt;
+&lt;li&gt;ParallelPython 1.6.1&lt;/li&gt;
+&lt;li&gt;pyCUDA HEAD from git as of 14th June 2011 (with CUDA 4.0 drivers)&lt;/li&gt;
+&lt;li&gt;PyPy 1.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some background reading:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/"&gt;http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/"&gt;http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cython"></category><category term="git"></category><category term="multiprocessing"></category><category term="network"></category><category term="numpy"></category><category term="nvidia"></category><category term="profiling"></category><category term="pycuda"></category><category term="runsnakerun"></category><category term="tutorial"></category><category term="windows"></category><category term="wxpython"></category></entry><entry><title>Entwicklung wissenschaftlicher Applikationen mit Python</title><link href="https://pyvideo.org/pycon-de-2013/entwicklung-wissenschaftlicher-applikationen-mit.html" rel="alternate"></link><published>2013-10-15T00:00:00+00:00</published><updated>2013-10-15T00:00:00+00:00</updated><author><name>Florian Rhiem</name></author><id>tag:pyvideo.org,2013-10-15:pycon-de-2013/entwicklung-wissenschaftlicher-applikationen-mit.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Durch Experimente und Simulationen werden im wissenschaftlichen Bereich
+große Mengen an Daten erzeugt. Diese müssen geeignet aufbereitet werden,
+um sie in eine für die Wissenschaftler verständliche Form zu überführen.
+Ein Beispiel dafür ist die Untersuchung von Phasenwechselmaterialien,
+welche in wiederbeschreibbaren optischen Medien eingesetzt werden. Der
+beim Löschen und Beschreiben eintretende Wechsel zwischen kristallinem
+und amorphen Zustand wird auf Großrechnern simuliert und die
+resultierende molekulare Struktur auf Hohlstellen hin untersucht, da
+diese Rückschlüsse auf das Verhalten des Materials zulassen. Den Kern
+der Präsentation nimmt die Entwicklung der Anwendung &lt;em&gt;pyMolDyn&lt;/em&gt; ein,
+welche die Analyse und Visualisierung der Moleküle und Hohlstellen
+übernimmt.&lt;/p&gt;
+&lt;p&gt;Dieser Vortrag gibt einen Einblick in die Erfahrungen, die während der
+mehrjährigen Entwicklung dieser Software gesammelt wurden. Zum einen
+wird dabei die rechenintensive Analyse der Daten betrachtet und wie
+diese durch Verwendung von NumPy und (py)OpenCL vereinfacht und
+beschleunigt werden kann. Zum anderen werden die grafischen
+Anwendungskomponenten beschrieben, welche mithilfe von wxPython,
+(py)OpenGL und einem gezielten Zusammenspiel dieser beiden Pakete
+umgesetzt werden konnten. Neben Performance und Einfachheit der
+Programmierung werden auch die gewonnenen Eindrücke zu
+Plattformunabhängigkeit und Interversionskompatibilität vorgestellt.
+Weiterhin werden Eigenheiten der Anwendungsentwicklung im Bereich der
+Forschung erläutert und es wird darauf eingegangen, welche Stärken und
+Schwächen Python in diesem Zusammenhang bietet. Abschließend folgt ein
+Überblick darüber, wie sich die weitere Entwicklung von &lt;em&gt;pyMolDyn&lt;/em&gt;
+gestalten wird und welche Konsequenzen die gesammelten Erfahrungen in
+Zukunft für das Projekt haben werden.&lt;/p&gt;
+</summary><category term="anwendungsentwicklung"></category><category term="numpy"></category><category term="opencl"></category><category term="opengl"></category><category term="python"></category><category term="visualisierung"></category><category term="wxpython"></category></entry><entry><title>Cross platform application development and distribution (#116)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--cross-platform-application-developmen.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Nadia Alramli</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--cross-platform-application-developmen.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cross platform application development and distribution&lt;/p&gt;
+&lt;p&gt;Presented by Stani Michiels and Nadia Alramli&lt;/p&gt;
+&lt;p&gt;You think Python gives you native cross platform applications for free?
+Think twice. Are you interested in distributing your application to
+other platforms but not sure how?&lt;/p&gt;
+&lt;p&gt;We will give tips and examples on how to enhance the native feel of your
+application: notifications, registration of file types and more. The
+talk will also help you to avoid common pitfalls and provides solutions
+for designing cross platform user interfaces. (Although we use wxPython
+as an example, the principles are valid for other toolkits as well.)
+We'll show you where to start if you want to distribute your application
+to different platforms, briefly discussing tools like py2exe, py2app and
+Debian/Ubuntu packaging ecosystem. This talk is based on our experience
+from developing Phatch (Photo Batch Processor) and SPE (Python Editor).&lt;/p&gt;
+</summary><category term="crossplatform"></category><category term="packaging"></category><category term="py2app"></category><category term="py2exe"></category><category term="pycon"></category><category term="pycon2010"></category><category term="wxpython"></category></entry><entry><title>wxPython II: Introduction to GUI Programming and MVC</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--wxpython-ii--introduction-to-gui-prog.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>David Goodger</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--wxpython-ii--introduction-to-gui-prog.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;wxPython II: Introduction to GUI Programming and MVC&lt;/p&gt;
+&lt;p&gt;Presented by David Goodger&lt;/p&gt;
+&lt;p&gt;wxPython is an open-source graphical user interface (GUI) toolkit that
+runs on multiple platforms, including Linux, Windows, and Mac OS X. By
+the end of this tutorial, attendees will understand the concepts behind
+the Model-View- Controller (MVC) design pattern and will have built a
+complex wxPython application.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;Python programmers (of any level; familiarity with Python is assumed)
+with some wxPython experience. Attending the &amp;quot;wxPython I&amp;quot; tutorial is
+recommended.&lt;/p&gt;
+&lt;p&gt;Requirements&lt;/p&gt;
+&lt;p&gt;Attendees are welcome to bring a laptop loaded with Python 2.4+ and
+wxPython 2.6+ to follow along, but this is not required.&lt;/p&gt;
+</summary><category term="pycon"></category><category term="pycon2010"></category><category term="tutorial"></category><category term="wxpython"></category></entry></feed>

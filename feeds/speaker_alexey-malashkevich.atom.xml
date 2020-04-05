@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_alexey-malashkevich.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-09-19T00:00:00+00:00</updated><entry><title>Разработка одностраничных веб-приложений с использованием PonyORM и ReactJS</title><link href="https://pyvideo.org/pycon-russia-2015/razrabotka-odnostranichnykh-veb-prilozhenii-s-ispolzovaniem-ponyorm-i-reactjs.html" rel="alternate"></link><published>2015-09-19T00:00:00+00:00</published><updated>2015-09-19T00:00:00+00:00</updated><author><name>Alexander Kozlovsky</name></author><id>tag:pyvideo.org,2015-09-19:pycon-russia-2015/razrabotka-odnostranichnykh-veb-prilozhenii-s-ispolzovaniem-ponyorm-i-reactjs.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ReactJS — современная популярная библиотека для построения Single Page Application. ReactJS позволяет создавать понятную и масштабируемую архитектуру веб-приложений, разбивать страницы на независимые компоненты, а также обеспечивает высокую скорость рендеринга. В то же время, ReactJS не описывает, каким образом должен выглядеть уровень «моделей» паттерна MVC и как должно быть организовано взаимодействие с бэкендом.&lt;/p&gt;
+&lt;p&gt;PonyORM — это объектно-реляционный маппер на языке Python, который позволяет описать модели сущностей и удобно работать с ними на бэкенде. Теперь, в дополнение к PonyORM, появилась библиотека PonyJS, которая позволяет автоматически генерировать аналогичные модели на фронтенде и работать с ними из языка JavaScript. Теперь вы можете написать запрос с помощью PonyORM, автоматически сериализовать данные в JSON, передать их на фронтенд и работать с ними как с полноценными объектами, а затем передать изменения обратно и сохранить их в базе данных.&lt;/p&gt;
+&lt;p&gt;В докладе будет рассказано, как можно создать одностраничное приложение на ReactJS, использующее объекты PonyORM/PonyJS в качестве моделей.&lt;/p&gt;
+</summary></entry><entry><title>How Pony ORM translates Python generators to SQL queries</title><link href="https://pyvideo.org/europython-2014/how-pony-orm-translates-python-generators-to-sql.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Alexey Malashkevich</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/how-pony-orm-translates-python-generators-to-sql.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pony ORM is an Object-Relational Mapper implemented in Python. It uses
+an unusual approach for writing database queries using Python
+generators. Pony analyzes the abstract syntax tree of a generator and
+translates it to its SQL equivalent. The translation process consists of
+several non-trivial stages. In this talk one of Pony ORM authors will
+reveal the internal details of this process.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://ponyorm.com"&gt;Pony ORM&lt;/a&gt; is an object-relational mapper
+implemented in Python. It allows writing advanced queries to a database
+using plain Python in the form of a generator expression. This way
+queries look very concise.&lt;/p&gt;
+&lt;p&gt;The main feature of Pony is to provide a method to write declarative
+queries to databases in pure Python using generators. For this purpose
+Pony analyzes the abstract syntax tree of a generator and translates it
+to its SQL equivalent.&lt;/p&gt;
+&lt;p&gt;Following is a sample of a query in Pony:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+select(p for p in Product if &amp;quot;iPad&amp;quot; in p.name and p.price &amp;gt;= 500)
+&lt;/pre&gt;
+&lt;p&gt;This query translates to SQL using a specific database dialect.
+Currently Pony works with SQLite, MySQL, PostgreSQL and Oracle
+databases.&lt;/p&gt;
+&lt;p&gt;In this talk one of Pony ORM authors will go through the process of the
+query translation and dig into the implementation details.&lt;/p&gt;
+&lt;p&gt;Attendees are going to walk away with the understanding of:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Principles of building a programming language translator&lt;/li&gt;
+&lt;li&gt;Python to SQL translator implementation details&lt;/li&gt;
+&lt;li&gt;Approaches for creating a pluggable translator architecture&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The presentation outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why Python generators are good for representing SQL queries&lt;/li&gt;
+&lt;li&gt;Main stages of Python to SQL translation overview&lt;/li&gt;
+&lt;li&gt;Decompiling Python bytecode into Python AST&lt;/li&gt;
+&lt;li&gt;Translating Python AST to database-independent SQL representation&lt;/li&gt;
+&lt;li&gt;Generating SQL for specific database&lt;/li&gt;
+&lt;li&gt;Pluggable translator architecture&lt;/li&gt;
+&lt;li&gt;Performance concerns: is such way of building SQL slower or faster
+then Django's and SQLAlchemy's?&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Pony Object-Relational Mapper</title><link href="https://pyvideo.org/pycon-us-2013/pony-object-relational-mapper.html" rel="alternate"></link><published>2013-03-17T00:00:00+00:00</published><updated>2013-03-17T00:00:00+00:00</updated><author><name>Alexey Malashkevich</name></author><id>tag:pyvideo.org,2013-03-17:pycon-us-2013/pony-object-relational-mapper.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pony is an object-relational mapper implemented in Python. It allows
+writing advanced SQL queries using plain Python in the form of a
+generator expression. This way queries look very concise. Pony
+implements the IdentityMap pattern, offers a solution for N+1 select
+problem, and has a visual editor for models.&lt;/p&gt;
+</summary><category term="poster"></category></entry></feed>

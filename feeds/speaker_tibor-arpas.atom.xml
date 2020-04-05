@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_tibor-arpas.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-03-11T00:00:00+00:00</updated><entry><title>“Secret” information about the code we write</title><link href="https://pyvideo.org/pycon-sk-2018/secret-information-about-the-code-we-write.html" rel="alternate"></link><published>2018-03-11T00:00:00+00:00</published><updated>2018-03-11T00:00:00+00:00</updated><author><name>Tibor Arpáš</name></author><id>tag:pyvideo.org,2018-03-11:pycon-sk-2018/secret-information-about-the-code-we-write.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Podľa môjho názoru vývojové prostredia (IDE) zanedbávaju runtime aspekt
+programov, ktoré v nich píšeme. Historicky sa tieto prostredia asi
+vyvinuli z textových editorov a postupne dostávaju viac a viac funkcií a
+umožňujú viacero pohľadov na zdrojový kód a jeho všakovaké aspekty.
+Vývojové prostredia dokážu zázraky so zdrojovými súbormi, ktoré nám
+ležia na disku.&lt;/p&gt;
+&lt;p&gt;Avšak zdrojáky nepíšeme aby ležali na disku ale kvôli tomu aby nám
+bežali ako programy. Pri behu môže vznikať kopec zaujímavých informácií
+spätne využiteľných pri programovaní. Dôraz vývojových prostredí na
+statické zdrojové kódy škodí najmä dynamickým programovacím jazykom ako
+je Python. Chcel by som odprezentovať a získať spätnú väzbu na 3-5
+nápadov ktoré majú za cieľ práve preniesť rôzne informácie z behu Python
+programu naspäť do prostredia v ktorom sa píše zdrojový kód. V ideálnom
+prípade presne na riadok alebo dokonca na výraz, ktorý programátor práve
+píše alebo sa s ním dokonca trápi.&lt;/p&gt;
+&lt;p&gt;Príklady týchto nápadov:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;prezentácia stack trace informácie v IDE, na konkrétnych riadkoch kde
+tento stack trace vznikol, intuitívna navigácia po framoch stacktrace,
+hint na hodnoty lokálnych premenných jednotlivých framov&lt;/li&gt;
+&lt;li&gt;prenos a výpis log hlášok v IDE na konkrétmych riadkoch, ktoré tento
+výpis vygenerovali&lt;/li&gt;
+&lt;li&gt;coverage informácia na riadku, ale vrátane informácie Who Tests What
+(ktorý, test vykonal tento riadok, pozri napr.
+&lt;a class="reference external" href="https://bitbucket.org/ned/coveragepy/issues/170/show-who-tests-what"&gt;https://bitbucket.org/ned/coveragepy/issues/170/show-who-tests-what&lt;/a&gt; )&lt;/li&gt;
+&lt;li&gt;použiteľnejšia reprezentácia spustených/úspešných/zlyhaných testov ako
+momentálne používaný rozbaľovací strom. Doklikať sa ku konkrétnemu
+výsledku testu v Pycharm test runneri často trvá minútu a po každom
+spustení testov sa táto manuálna práca zahodí a treba začať klikať
+odznova. Navrhnem intuitívnejší spôsob prezentácie.&lt;/li&gt;
+&lt;li&gt;meta nápad: implementovať prezentované nápady bude stáť nezanedbateľné
+úsilie. Kedže vývojových prostredí je veľké množstvo, a každé ma
+rozdielne API ideálne je navrhnúť všeobecný protokol, ktorý by oddeľoval
+IDE a zdroje runtime informácií podobne ako to robí Language Server
+Protocol (&lt;a class="reference external" href="https://microsoft.github.io/language-server-protocol/"&gt;https://microsoft.github.io/language-server-protocol/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="PyCon SK"></category><category term="Python"></category></entry><entry><title>Mashing up py.test, coverage.py and ast.py to take TDD to a new level</title><link href="https://pyvideo.org/pycon-sk-2016/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html" rel="alternate"></link><published>2016-03-11T00:00:00+00:00</published><updated>2016-03-11T00:00:00+00:00</updated><author><name>Tibor Arpáš</name></author><id>tag:pyvideo.org,2016-03-11:pycon-sk-2016/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Users and especially developers hate waiting. Computing has adapted and
+we almost never wait for the computer for more than 10 seconds. One big
+exception is running a test suite, which takes MINUTES on many projects.
+That is incredibly distracting, frustrating and dragging the whole
+concept of automated tests down.&lt;/p&gt;
+&lt;p&gt;I will present a technique and a tool (py.test plugin called “testmon&amp;quot;),
+which automatically selects only tests affected by recent changes. Does
+it sound too good to be true? Python developers rightfully have a
+suspecting attitude towards any tool, which tries to be too clever about
+their source code. Code completion and symbol searching doesn’t need to
+be 100% reliable but messing with the test suite execution? I will show
+that we can significantly reduce the test suite execution time without
+losing its reliability.&lt;/p&gt;
+</summary></entry><entry><title>Alternatívne spôsoby ako spúšťať testy a vyhodnocovať ich výsledky</title><link href="https://pyvideo.org/pycon-sk-2017/alternativne-sposoby-ako-spustat-testy-a-vyhodnocovat-ich-vysledky.html" rel="alternate"></link><published>2017-03-10T00:00:00+00:00</published><updated>2017-03-10T00:00:00+00:00</updated><author><name>Tibor Arpáš</name></author><id>tag:pyvideo.org,2017-03-10:pycon-sk-2017/alternativne-sposoby-ako-spustat-testy-a-vyhodnocovat-ich-vysledky.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Konceptuálne zamyslenie sa nad tým ako používať sadu testov a ako interpretovať jej výsledky. Čo je pri tom problematické a ako z nej získať čo najväčšiu hodnotu.&lt;/p&gt;
+&lt;p&gt;Najpoužívanejším úžívateľským rozhraním na spúštanie testov sú pravdepodobne command line, PyCharm a CI Servre. Ukážem ich výhody a limity. Predvediem alpha verziu nového nástroja na pohodlné výhľadávanie, spúštanie testov, uchovávanie výsledkov a ich prehľadné zobrazenie. Ukážem ako sa vyhnúť kilobajtom neštruktúrovaného textového výpisu.&lt;/p&gt;
+&lt;p&gt;Predvediem koncept zobrazenia stack trace inline v editore zdrojového kódu a pohodlnú navigáciu hore-dole po ňom.&lt;/p&gt;
+</summary></entry><entry><title>Mashing up py.test, coverage.py and ast.py to take TDD to a new level</title><link href="https://pyvideo.org/europython-2015/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Tibor Arpas</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tibor Arpas - Mashing up py.test, coverage.py and ast.py to take TDD to a new level
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Users and developers especially, hate waiting. Computing has adapted
+and we almost never wait for the computer for more then 10 seconds.
+One big exception is runnig a test suite which takes MINUTES on many
+projects. That is incredibly distracting, frustrating and dragging the
+whole concept of automated tests down.&lt;/p&gt;
+&lt;p&gt;I present a technique and a tool (py.test plugin called &amp;quot;testmon&amp;quot;)
+which automatically selects only tests affected by recent changes.
+Does it sound too good to be true? Python developers rightfully have a
+suspecting attitude towards any tool which tries to be too clever
+about their source code. Code completion and symbol searching doesn't
+need to be 100% reliable but messing with the test suite execution? I
+show that we can cut test suite execution time significantly but
+maintain it's reliability.&lt;/p&gt;
+</summary></entry></feed>

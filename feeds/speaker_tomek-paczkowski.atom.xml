@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_tomek-paczkowski.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-09-19T00:00:00+00:00</updated><entry><title>Dispelling py.test magic</title><link href="https://pyvideo.org/pycon-uk-2015/dispelling-pytest-magic.html" rel="alternate"></link><published>2015-09-19T00:00:00+00:00</published><updated>2015-09-19T00:00:00+00:00</updated><author><name>Tomek Paczkowski</name></author><id>tag:pyvideo.org,2015-09-19:pycon-uk-2015/dispelling-pytest-magic.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This short talk will look under the hood of how py.test uses assertion
+statement rewriting to give users a better, more pythonic testing
+experience.&lt;/p&gt;
+&lt;p&gt;Usually in Python, assertion statements are quite simple and tedious to
+work with, where a simple snippet of code like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+def double(x):
+    return x * 2
+expected = 5
+assert double(2) == expected
+&lt;/pre&gt;
+&lt;p&gt;finishes with message that does not include any context:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Traceback (most recent call last):
+  File &amp;quot;t.py&amp;quot;, line 5, in &amp;lt;module&amp;gt;
+    assert double(2) == expected
+AssertionError
+&lt;/pre&gt;
+&lt;p&gt;With py.test, we get a lot more information with all intermittent values
+nicely described:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+t.py:5: in &amp;lt;module&amp;gt;
+    assert double(2) == expected
+E   assert 4 == 5
+E    +  where 4 = &amp;lt;function double at 0x1033add08&amp;gt;(2)
+&lt;/pre&gt;
+&lt;p&gt;During this talk you will learn about all the ingredients needed to
+reverse- engineer py.test behaviour, using import hooks described in PEP
+302, and the ast module from standard library. We will try to use these
+hidden gems in a broader context, outside of testing.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 14 Nov 2018 00:00:00 +0000</lastBuildDate><item><title>How to use AsyncIO to make the most of a CPU Bound and IO Bound software with Python 3.7</title><link>https://pyvideo.org/pyparis-2018/how-to-use-asyncio-to-make-the-most-of-a-cpu-bound-and-io-bound-software-with-python-37.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rémy Hubscher</dc:creator><pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-11-14:pyparis-2018/how-to-use-asyncio-to-make-the-most-of-a-cpu-bound-and-io-bound-software-with-python-37.html</guid></item><item><title>Scripts et Services web avec Asyncio et Python 3.6</title><link>https://pyvideo.org/pycon-fr-2018/scripts-et-services-web-avec-asyncio-et-python-36.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Le fait de pouvoir utiliser asyncio en python 3.6 est une révélation.&lt;/p&gt;
+&lt;p&gt;Dans cette présentation je propose de revenir sur le concept de l'ioloop
+et les cas d'usages où j'ai eu à utiliser asyncio ces derniers temps.
+Que ce soit pour paralléliser des tâches IO-bound et CPU bound ou pour
+faire des services web.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rémy Hubscher</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:pycon-fr-2018/scripts-et-services-web-avec-asyncio-et-python-36.html</guid></item><item><title>Cliquet: un toolkit pour construire des (micro)services</title><link>https://pyvideo.org/pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Basé sur Pyramid, Cliquet est un projet qui permet de se concentrer sur
+l'essentiel lors de la conception d'APIs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;dl class="docutils"&gt;
+&lt;dt&gt;Quelle structure JSON pour mon API ? Quelle syntaxe pour filtrer la&lt;/dt&gt;
+&lt;dd&gt;liste via la querystring ? Comment gérer les écritures concurrentes
+? Et synchroniser les données dans mon application cliente ?&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Quand nous développons un (micro)service Web, nous dépensons
+généralement beaucoup d'énergie dans la conception et la validation du
+protocole HTTP, en particulier lorsqu'il s'agit d'un service qui
+manipule des données (&lt;em&gt;CRUD, offline first, pagination, ...&lt;/em&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+Comment pouvons-nous vérifier que le service est opérationnel ?
+Quels indicateurs StatsD ? Est-ce que Sentry est bien configuré ?
+Comment mettre à jour sans casser les applications clientes ?&lt;/blockquote&gt;
+&lt;p&gt;De même, nous passons beaucoup de temps (ou pire, nous ne le faisons pas
+!) à mettre en place tout l'outillage pour gérer et superviser la mise
+en production du service. Et si les bonnes pratiques évoluent, il faut
+faire suivre les projets déjà en place.&lt;/p&gt;
+&lt;p&gt;Plutôt qu'écrire un énième article de blog avec nos recommandations,
+nous avons fait le choix de mettre au point un protocole, et d'en
+fournir une implémentation en Python.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Cliquet&lt;/em&gt; est donc un kit de démarrage, basé sur Pyramid, pour
+construire des (micro)services en se concentrant sur l'essentiel.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mathieu Leplatre</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-17:pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html</guid></item><item><title>Kinto: stocker, synchroniser et partager ses données de manière générique</title><link>https://pyvideo.org/pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Kinto est outil qui suit la philosophie &amp;quot;no-backend&amp;quot;. L'idée étant
+d'avoir un backend générique, déployable très facilement, qui permette à
+tous et toutes et de stocker, requêter et partager des données sans
+avoir à déployer de service web.&lt;/p&gt;
+&lt;p&gt;Cette présentation vise à présenter Kinto, et l'écosystème que nous
+mettons en place petit à petit pour permettre a tous d'être souverain
+sur ses données.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Plan (rapide):&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Histoire:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;L'idée de départ (Mat + Alexis à Django Cong il y a 3 ans);&lt;/li&gt;
+&lt;li&gt;Les quelques sprints sur Daybed;&lt;/li&gt;
+&lt;li&gt;L’intérêt de Mozilla dans le projet;&lt;/li&gt;
+&lt;li&gt;Reboot ™;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Les choix philosophiques&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Abstraction des concepts clés;&lt;/li&gt;
+&lt;li&gt;Mettre la communauté au centre du développement;&lt;/li&gt;
+&lt;li&gt;N’implémenter que des fonctionnalités utiles (cas d'utilisation):&lt;/li&gt;
+&lt;li&gt;Ne pas faire le café&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Dans quel paysage s'inscris-ton ?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;CouchDB / PouchDB;&lt;/li&gt;
+&lt;li&gt;Remote Storage;&lt;/li&gt;
+&lt;li&gt;Hoodie;&lt;/li&gt;
+&lt;li&gt;Cas d'utilisations à Mozilla (Ops, QA);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Démo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pour comprendre de quoi on parle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Architecture du projet&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cliquet, Kinto, Resources, Schemas, Backends, Permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Quid du futur ?&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexis Métaireau</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-17:pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html</guid></item></channel></rss>

@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pycon-fr-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-10-18T00:00:00+00:00</updated><entry><title>10 ans d'astuce et d'abus, Mercurial jongle avec Python</title><link href="https://pyvideo.org/pycon-fr-2015/10-ans-dastuce-et-dabus-mercurial-jongle-avec-python.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Pierre-Yves David</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/10-ans-dastuce-et-dabus-mercurial-jongle-avec-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Depuis 10 ans, le logiciel Mercurial utilise, profite et abuse du
+language Python. Nous vous proposons une rétrospective des piégés dans
+lequel nous sommes tombé, des petits trucs pour améliorer nos
+performance et de toute les astuces pythonesques qui nous ont donner
+plus de flexibilité.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Depuis 2005, les développeurs de Mercurial profitent et abusent de
+Python. Cela laisse largement assez de temps pour explorer différent
+aspect du langage et découvrir de nombreuse blagues. Certaine des idées
+ont été de francs succès, au point d'être intégrées aux futures versions
+du langages, d'autre ont été d'affreuses erreurs que nous essayons
+encore d'éradiquer aujourd'hui.&lt;/p&gt;
+&lt;p&gt;Cette présentation se concentrera sur deux aspects de la relation entre
+Python et Mercurial. Nous traiterons d'abord des pièges et astuces à
+propos des performances de Python. Puis nous étudierons les avantages et
+inconvénients du language en termes de flexibilité (introspection,
+monkey-patching, syntaxe, etc) dans le contexte de Mercurial.&lt;/p&gt;
+</summary></entry><entry><title>Audit de sécurité d'application python avec Bandit</title><link href="https://pyvideo.org/pycon-fr-2015/audit-de-securite-dapplication-python-avec-bandit.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Michael Scherer</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/audit-de-securite-dapplication-python-avec-bandit.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pour être riche et célèbre, vous pouvez travailler beaucoup, gagner au
+loto, ou naitre riche. Mais maintenant, une autre voie est possible
+grâce à Bandit, un outil de la fondation openstack pour analyser le code
+source d'application python afin de trouver des failles de sécurité.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;À travers ce talk, découvrez comment Bandit facilite l'audit de code,
+quel type de failles courantes est ce qu'il va remonter et ce qu'il faut
+faire si ça arrive, et quoi regarder après le passage de l'outil.&lt;/p&gt;
+&lt;p&gt;Et comment trouver une faille peut ouvrir les portes de la gloire et de
+la fortune&lt;/p&gt;
+&lt;p&gt;(attention, ce résumé est non contractuel)&lt;/p&gt;
+</summary></entry><entry><title>Construire et tester des wheels sous Linux, OSX et Windows</title><link href="https://pyvideo.org/pycon-fr-2015/construire-et-tester-des-wheels-sous-linux-osx-et-windows.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Olivier Grisel</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/construire-et-tester-des-wheels-sous-linux-osx-et-windows.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Petit guide pratique pour construire et tester des paquets wheel pour
+toutes les plateformes classique en utilisant des systèmes d'intégration
+continue gratuits tels que Travis CI (Linux et OSX) et AppVeyor
+(Windows).&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les wheels sont un nouveau format &lt;a class="reference external" href="http://legacy.python.org/dev/peps/pep-0427/"&gt;standard (PEP
+427)&lt;/a&gt; de distribution de
+package Python pour remplacer les eggs. Ils sont supportés par pip &amp;gt;=
+1.4 et setuptools &amp;gt;= 0.8. Le format wheel est officiellement recommandé
+pour la distribution de projets Python sur PyPI.&lt;/p&gt;
+&lt;p&gt;Le format wheel permet d’accélérer l'installation de paquets Python sur
+toutes les plateformes. Les projets utilisant des extensions compilées
+sont packagés avec des wheel dédiée à une plateforme donnée (par exemple
+Windows 32 bit) ce qui permet de les installer sans compilateur.&lt;/p&gt;
+&lt;p&gt;En tant que release manager pour le projet scikit-learn j'ai mis en
+place une infrastructure d'intégration continue qui génère et teste des
+paquets wheel pour les plateformes Windows, OSX et Linux. Cette
+infrastructure permet de supporter les versions récentes de Python (2.6+
+et 3.3+) sur des architecture 32 bit et 64 bit.&lt;/p&gt;
+&lt;p&gt;Le but de cette présentation est de partager cette expérience et les
+outils que j'ai développer pour automatiser le fonctionnement de cette
+infrastructure.&lt;/p&gt;
+&lt;p&gt;Cette présentation sera un version actualisée de la présentation que
+j'ai donnée à PyCon 2015: &lt;a class="reference external" href="https://www.youtube.com/watch?v=d-p6lJJObLU"&gt;https://www.youtube.com/watch?v=d-p6lJJObLU&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Créer une communauté locale</title><link href="https://pyvideo.org/pycon-fr-2015/creer-une-communaute-locale.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Arthur Vuillard</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/creer-une-communaute-locale.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;D'après la liste des inscrits à l'AFPy, il y a des personnes intéressées
+par Python un peu partout en France et un peu ailleurs aussi. Et
+pourtant, très peu de villes organisent des événements réguliers. Cette
+présentation va vous aider à organiser le premier événement Python dans
+votre ville.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Organiser un événement sur Python peut paraître chronophage et intimider
+d'éventuels organisateurs.&lt;/p&gt;
+&lt;p&gt;Cette présentation va montrer comment il est simple d'organiser un
+événement autour de Python.&lt;/p&gt;
+&lt;p&gt;Nous allons donc aborder divers aspects comme : - étudier l'intérêt
+local - trouver un lieu - trouver une date - faire venir des gens - être
+accueillant pour tout le monde - recommencer&lt;/p&gt;
+&lt;p&gt;En espérant que ça vous donne des idées :)&lt;/p&gt;
+</summary></entry><entry><title>Démystifier les entrées/sorties asynchrones</title><link href="https://pyvideo.org/pycon-fr-2015/demystifier-les-entreessorties-asynchrones.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Alex Marandon</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/demystifier-les-entreessorties-asynchrones.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;La programmation basée sur les entrées/sorties asynchrones en Python :
+cas d'utilisations, fonctionnement interne, contraintes et styles de
+programmation.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Programmation asynchrone, entrées/sorties non-bloquantes, boucle
+d'événements, beaucoup de développeurs ont rencontré ces expressions
+sans forcément savoir de quoi il s'agit concrètement. Mis à la mode par
+Node.js, les serveurs web asynchrones ont des caractéristiques
+particulières et ne viennent pas sans contraintes.&lt;/p&gt;
+&lt;p&gt;Dans cette présentation, je commencerai par expliquer à l'aide
+d'analogies en quoi consiste les entrées/sorties asynchrones, quels
+problèmes elles peuvent résoudre et quels problèmes elles ne résolvent
+pas. Nous verrons ensuite quelques exemples d'utilisation simples puis
+nous étudierons le fonctionnement interne d'une boucle d'événements
+d'entrées/sorties.&lt;/p&gt;
+&lt;p&gt;Les bases étant posées, nous explorerons alors les différents styles de
+programmation possibles en nous basant sur des exemples plus avancés
+basés sur les frameworks &lt;a class="reference external" href="http://www.tornadoweb.org/"&gt;Tornado&lt;/a&gt; et
+&lt;a class="reference external" href="http://aiohttp.readthedocs.org/"&gt;aiohttp&lt;/a&gt;, jusqu'à présenter les
+nouveaux mot-clés
+&lt;a class="reference external" href="http://makina-corpus.com/blog/metier/2015/python-http-%20server-with-the-new-async-await-syntax"&gt;async/await&lt;/a&gt;
+de Python 3.5. Chaque exemple sera accompagné d'une mesure de
+performance mettant en évidence l'impact de l'utilisation des
+entrées/sorties asynchrones.&lt;/p&gt;
+&lt;p&gt;Pour illustrer les notions abordées par des cas d'utilisation réels, je
+présenterais deux projets auxquels j'ai contribué dans le cadre de ma
+mission à Météo France et qui utilisent les entrées/sorties asynchrones
+de manière atypique : le gestionnaire de processus
+&lt;a class="reference external" href="http://circus.readthedocs.org/en/latest/"&gt;Circus&lt;/a&gt; et le proxy HTTP
+&lt;a class="reference external" href="http://thr.readthedocs.org/en/latest/"&gt;THR&lt;/a&gt;.&lt;/p&gt;
+</summary></entry><entry><title>Des boucles aux tranducers</title><link href="https://pyvideo.org/pycon-fr-2015/des-boucles-aux-tranducers.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>LEMAIRE Arnaud</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/des-boucles-aux-tranducers.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les boucles, tout le monde les utilise pour transformer de large
+collection. Et si vous les abandonniez en gagnant par la même occasion
+en clarté ? Et si vous pouviez appliquer les mêmes transformations sur
+des ensembles infinis tout en améliorant drastiquement les
+performances ? Par refactoring successif, nous passerons des boucles aux
+filtres et pipelines pour clôturer sur les transducers.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Présentation de l’étude de cas&lt;/li&gt;
+&lt;li&gt;Pourquoi les boucles ne sont pas la bonne manière d’organiser son
+code ?&lt;/li&gt;
+&lt;li&gt;Introduction de la notion de fonction d’ordre supérieure&lt;/li&gt;
+&lt;li&gt;Présentation de map, et refactoring associé (sur le cas initial)&lt;/li&gt;
+&lt;li&gt;Présentation de filter, et refactoring associé (sur le cas initial)&lt;/li&gt;
+&lt;li&gt;Présentation de reduce, et refactoring associé (sur le cas initial)&lt;/li&gt;
+&lt;li&gt;Présentation de reduce sur un cas non trivial (avec accumulateur non
+scalaire)&lt;/li&gt;
+&lt;li&gt;Énumération des pattern typiques présents dans le code permettant un
+refactoring vers les fonctions déjà présentées.&lt;/li&gt;
+&lt;li&gt;Chainage des fonctions, architecture pipeline &amp;amp; filter&lt;/li&gt;
+&lt;li&gt;Expression de map en fonction de reduce&lt;/li&gt;
+&lt;li&gt;Expression de filter en fonction de reduce&lt;/li&gt;
+&lt;li&gt;Fonction de composition&lt;/li&gt;
+&lt;li&gt;Introduction aux transducers&lt;/li&gt;
+&lt;li&gt;Refactoring du code de départ à l’aide des transducers&lt;/li&gt;
+&lt;li&gt;Avantages des transducers&lt;/li&gt;
+&lt;li&gt;Transducers statefull&lt;/li&gt;
+&lt;li&gt;Questions&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Healthchecks : des "tests" en prod</title><link href="https://pyvideo.org/pycon-fr-2015/healthchecks-des-tests-en-prod.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Benoît Bryon</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/healthchecks-des-tests-en-prod.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Bug logiciel, configuration, problème du système ou service tiers en
+panne ? Hospital s'inspire des tests unitaires pour générer des
+diagnostics sur des services en cours de fonctionnement.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Après avoir déployé un projet, comment contrôler que tout est
+opérationnel ? Comment vérifier le statut d'un service en cours de
+fonctionnement ? Ou bien, quand une erreur apparaît, comment examiner le
+système et trier les bugs issus du code, les typos dans la configuration
+ou encore les pannes des services tiers ? C'est la raison d'être des
+&amp;quot;healthchecks&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&amp;quot;hospital&amp;quot; introduit les healthchecks pour Python. Découvrons ce que
+peut apporter cet outil et comment l'intégrer d'un côté dans les projets
+Python et de l'autre côté dans l'écosystème du monitoring et de la
+supervision.&lt;/p&gt;
+&lt;p&gt;Plus d'informations : &lt;a class="reference external" href="https://hospital.readthedocs.org/"&gt;https://hospital.readthedocs.org/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Importer des données en Python avec CubicWeb 3.21</title><link href="https://pyvideo.org/pycon-fr-2015/importer-des-donnees-en-python-avec-cubicweb-321.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Yann Voté</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/importer-des-donnees-en-python-avec-cubicweb-321.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Nous introduirons une nouvelle méthode pour importer des données
+externes (service REST, fichier, etc.) dans une application. Simple et
+flexible, elle favorise la réutilisation des composants afin de se
+concentrer sur ce qui est spécifique à chaque cas. Un exemple
+d'implémentation sera donné avec le framework CubicWeb 3.21 qui
+introduit une API d'import de données fondée sur cette méthode.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il est courant pour un développeur de devoir implémenter des
+fonctionnalités d'import de données. Les utilisateurs peuvent en effet
+avoir besoin de données disponibles par ailleurs, dans un tableur par
+exemple, dans une autre base, ou accessibles par des services web. Nous
+introduisons ici une méthode simple pour réaliser cela en favorisant la
+généricité et la ré-utilisabilité des composants développés.&lt;/p&gt;
+&lt;div class="section" id="un-flux-personnalisable-d-entites"&gt;
+&lt;h4&gt;Un flux personnalisable d'entités&lt;/h4&gt;
+&lt;p&gt;L'idée est de transformer petit à petit les données externes afin de les
+rendre compatibles avec le schéma de l'application et donc insérables en
+base.&lt;/p&gt;
+&lt;p&gt;Le principe est de commencer par stocker les données de la source sur
+une «[HTML_REMOVED]entité externe[HTML_REMOVED]». Puis on utilise des
+générateurs Python pour créer un «[HTML_REMOVED]flux[HTML_REMOVED]»
+d'entités[HTML_REMOVED]: chaque entité passe de fonction en fonction,
+ce qui va la transformer peu à peu pour la rapprocher du modèle attendu
+et qu'elle soit finalement prête à être insérée, ou au contraire rejetée
+si ce n'est pas possible.&lt;/p&gt;
+&lt;p&gt;L'étape d'insertion est alors identique, quelle que soit la source d'où
+proviennent les données.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exemple-avec-cubicweb-3-21"&gt;
+&lt;h4&gt;Exemple avec CubicWeb 3.21&lt;/h4&gt;
+&lt;p&gt;Avec sa version 3.21 sortie en 2015, le framework CubicWeb dispose d'une
+toute nouvelle API fondée sur cette méthode. Elle permet au développeur
+de se concentrer sur le flux de données provenant des sources qui
+l'intéressent.&lt;/p&gt;
+&lt;p&gt;De plus, l'étape d'insertion offre plusieurs composants
+interchangeables. En fonction du compromis qu'il souhaite faire entre
+sécurité et rapidité, le développeur peut choisir entre une insertion
+sûre mais lente, où chaque entité à insérer est préalablement vérifiée
+quant au type de ses données et la validité de ses relations, et une
+insertion plus rapide mais pouvant échouer, où les entités sont insérées
+en masse.&lt;/p&gt;
+&lt;p&gt;Tout cela sera illustré par le moissonnage des données de portails &lt;em&gt;Open
+Data&lt;/em&gt;. La diversité des formats (RDF (open-data.europa.eu), REST
+(data.gouv.fr, OpenDataSoft), CSW (geocatalogue.fr), etc.) ainsi que des
+modèles de données impose de créer des flux différents afin que toutes
+ces données puissent être importées dans un schéma unique de CubicWeb.&lt;/p&gt;
+&lt;p&gt;De la même façon, un autre exemple sera l'import de données SKOS où des
+thesaurus entiers sont importés dans CubicWeb grâce à cette API.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Let it crash - Que peut apporter Erlang à Python</title><link href="https://pyvideo.org/pycon-fr-2015/let-it-crash-que-peut-apporter-erlang-a-python.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Benoit Chesneau</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/let-it-crash-que-peut-apporter-erlang-a-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Que pouvons-nous apprendre de Erlang pour le développement de services
+fiables permettant de nombreuses requêtes concurrentes en Python? Cette
+talk présentera certaines techniques utilisées en Erlang et comment
+elles peuvent être utilisées pour résoudre les problèmes d'une manière
+plus efficace en Python. Elle discutera également de la manière dont
+Python pourrait évoluer en conséquence.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Auteur de nombreuses applications et librairies en Erlang et Python, je
+passe souvent d’un langage à l’autre au cours de la journée. L’usage
+d’Erlang a profondément changé la façon dont je code en Python.&lt;/p&gt;
+&lt;p&gt;Cette présentation couvrira certains techniques utilisées en Erlang et
+d’autres langages fonctionnels et comment elles peuvent résoudre des
+problèmes de manière plus performantes, robustes et efficace que les
+pratiques standards en Python. Elle discutera aussi de certains
+changements ou additions possibles à Python et la façon dont cela
+pourrait étendre son usage.&lt;/p&gt;
+</summary></entry><entry><title>L'utilisation des métaclasses</title><link href="https://pyvideo.org/pycon-fr-2015/lutilisation-des-metaclasses.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>vincent maillol</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/lutilisation-des-metaclasses.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Comprendre les métaclasses et de voir différents exemples d'utilisations&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Objet, Classe et... Métaclasse ! C'est une troisième dimension qui
+s'ouvre dans laquelle, le design pattern observateur peut devenir
+exhibitionniste, à nous de découvrir comment voyager dedans. Facilité
+l'injection de dépendance, Offrir une API plus déclarative, concevoir
+des métaframeworks. Les Métaclasses sont une fonctionnalité puissante et
+peu utilisée que nous tenterons d'apprivoiser.&lt;/p&gt;
+</summary></entry><entry><title>Marre de faire du C++ sur une Arduino ? Faites du Python avec MicroPython sur une PyBoard</title><link href="https://pyvideo.org/pycon-fr-2015/marre-de-faire-du-c-sur-une-arduino-faites-du-python-avec-micropython-sur-une-pyboard.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Arthur Lutz</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/marre-de-faire-du-c-sur-une-arduino-faites-du-python-avec-micropython-sur-une-pyboard.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Introduction et démo de MicroPython sur une PyBoard.&lt;/p&gt;
+&lt;p&gt;MicroPython est une implémentation de Python3.4 pour microcontrôleurs
+(principalement la PyBoard carte en OpenHardware).&lt;/p&gt;
+&lt;p&gt;Venez faire clignoter des LEDs et bouger des moteurs directement depuis
+le prompt python !&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Présentation de l'historique du projet&lt;/p&gt;
+&lt;p&gt;Détails de l'architecture matérielle&lt;/p&gt;
+&lt;p&gt;Démonstrations sur une carte&lt;/p&gt;
+</summary></entry><entry><title>Mise à jour à chaud d'un animal à sang froid</title><link href="https://pyvideo.org/pycon-fr-2015/mise-a-jour-a-chaud-dun-animal-a-sang-froid.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Sébastien Martinez</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/mise-a-jour-a-chaud-dun-animal-a-sang-froid.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;En temps normal, les programmes doivent être redémarrés pour être mis à
+jour. Comme c'est plutôt embêtant, nous vous proposons de mettre à jour
+des programmes sans les arrêter. Nous allons voir comment accomplir une
+telle chose en vous présentant notre version hackée de l'interpréteur
+CPython et sa très chère amie, la bibliothèque Pymoult.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mettre à jour des programmes nécessite d'habitue de les arrêter, les
+patcher puis les redémarrer. Cela devient vite un problème pour des
+programmes dont la disponibilité est critique (satellites en missions,
+serveurs ...). Une solution est alors de mettre à jour ces programmes
+pendant leur exécution, sans les redémarrer. Au cours de cette
+présentation, nous allons montrer comment une telle chose peut être
+faite en Python. Nous présenterons Cpython- Dsu, notre version de
+Cpython étendue par des mécanismes de mise à jour dynamique que nous
+utilisons en combinaison avec la bibliothèque Pymoult.&lt;/p&gt;
+</summary></entry><entry><title>Mock considered harmful</title><link href="https://pyvideo.org/pycon-fr-2015/mock-considered-harmful.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/mock-considered-harmful.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Très connu pour ses excellents travaux et ses dons, le marabout Boris
+peut soigner vos tests de leurs mocks, garantir le retour du statut vert
+aimé, réduire la durée de vos tests et améliorer vos relations avec
+votre sysadmin. Succès garanti. Paiement en bitcoin.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les mocks, si puissants, mais un grand pouvoir implique un grand chaos
+le plus souvent.&lt;/p&gt;
+&lt;p&gt;Les mocks font souvent plus de mal que de bien et ralentissent le
+développement en couplant les tests et l'implémentation. Les mocks, bien
+utilisée avec d'autres bonne pratique tel que l'inversion de dépendance
+peuvent au contraire rendre votre code plus facilement testable et ainsi
+plus robuste.&lt;/p&gt;
+&lt;p&gt;Les mocks gardent une grande importance dans les tests applicatifs et
+avec les bonnes pratiques, vous pouvez en tirer le maximum.&lt;/p&gt;
+</summary></entry><entry><title>Nova-Ideo, une boite à idées collaborative</title><link href="https://pyvideo.org/pycon-fr-2015/nova-ideo-une-boite-a-idees-collaborative.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Michael Launay</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/nova-ideo-une-boite-a-idees-collaborative.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Nova-Ideo est une solution de démocratie participative écrite avec
+Pyramid et Sustance D et implémentant un tout nouveau système de gestion
+des processus métier.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Nova-Ideo&lt;/strong&gt; est la fusion de la boite à idées et du portail
+collaboratif.&lt;/p&gt;
+&lt;p&gt;C'est une solution de &lt;strong&gt;démocratie participative&lt;/strong&gt; pour la Société, et
+d'&lt;strong&gt;innovations participatives&lt;/strong&gt; pour les entreprises, administrations
+et associations.&lt;/p&gt;
+&lt;p&gt;Nova-Ideo est écrit avec &lt;strong&gt;Pyramid&lt;/strong&gt; et &lt;strong&gt;Sustance D&lt;/strong&gt; et implémente un
+tout nouveau système de gestion des processus métier.&lt;/p&gt;
+&lt;p&gt;Le code de Nova-Ideo est en AGPL accessible sur
+&lt;a class="reference external" href="https://github.com/ecreall/nova-ideo"&gt;github&lt;/a&gt; et sur
+&lt;a class="reference external" href="https://registry.hub.docker.com/u/ecreall/novaideo"&gt;docker&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vous pouvez aussi tester l'application en ligne en allant sur
+&lt;a class="reference external" href="http%20://nova-ideo.org/"&gt;nova-ideo&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Pendule mécanique, inertie, mouvements de robot: une modélisation de la mécanique avec SymPy</title><link href="https://pyvideo.org/pycon-fr-2015/pendule-mecanique-inertie-mouvements-de-robot-une-modelisation-de-la-mecanique-avec-sympy.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>K.I.A Derouiche</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/pendule-mecanique-inertie-mouvements-de-robot-une-modelisation-de-la-mecanique-avec-sympy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Dans cet exposé, nous parlerons et présenterons sympy.physics.mechanics
+et sympy.physics.vector deux modules de la bibliothèque symbolique SymPy
+et PyDy (Multibody Dynamics) ensembles d'outils fournissant des méthodes
+et techniques pour l’enseignement et la recherche en physique,le
+contrôle optimal et l'ingénierie.Quelques exemples concrets
+d'utilisation vous seront présentés.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;SymPy.physics.mechanics&lt;/strong&gt; et &lt;strong&gt;SymPy.physics.vector&lt;/strong&gt;, modules de la
+bibliothèque symbolique SymPy, contiennent de nombreuses classes et
+méthodes de mécanique classique (cinématique, manipulations
+vectorielles, solides et points matériels, approches variationnelles,
+espace de configuration, etc.). Ces deux modules constituent le noyau de
+PyDy (Multibody Dynamics) qui est un outil combinant à la fois NumPy,
+SciPy et IPython en fournissant des méthodes et techniques pour
+l’enseignement, la recherche en physique, la cinématique en robotique,
+la navigation des vaisseaux spatiaux et des machines de fabrications
+pour l'industrie.&lt;/p&gt;
+&lt;p&gt;Pour un développeur d'application scientifique , un étudiant ou un
+chercheur, les avantages sont nombreux : l'accessibilité des sources.
+L'approche symbolique et numérique rend le calcul beaucoup plus facile
+pour de nombreux systèmes dynamiques. Les avantages pédagogiques sont
+aussi nombreux : il sera également l'occasion de voir que, en apprenant
+SymPy, Numpy et Scipy, on apprend l'algorithmique numérique et Python.
+Cette présentation montrera la facilité de modéliser des systèmes
+dynamiques à partir d'exemples concrets. SymPy permettant de tout
+connecter, PyDy, une boite à outil incluent du code pour la simulation
+et la visualisation, IPython notebook interagissent pour la publication
+des données et du code.&lt;/p&gt;
+</summary></entry><entry><title>Pyramid &amp; Cubicweb</title><link href="https://pyvideo.org/pycon-fr-2015/pyramid-cubicweb.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Christophe de Vienne</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/pyramid-cubicweb.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Profitez du meilleur de CubicWeb depuis une application Pyramid.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CubicWeb évolue et rejoint les standards du python web moderne.&lt;/p&gt;
+&lt;p&gt;CubicWeb a fait le choix de Pyramid, et les possibilités offertes par
+cette réunion de famille (tous deux sont descendants de Zope) sont
+nombreuses.&lt;/p&gt;
+&lt;p&gt;Découvrez comment embarquer une base de données sémantique, et toute la
+puissance de RQL et des permissions de CubicWeb, dans une application
+Pyramid.&lt;/p&gt;
+</summary></entry><entry><title>Python, routing et TSP</title><link href="https://pyvideo.org/pycon-fr-2015/python-routing-et-tsp.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Patrice Journaud</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/python-routing-et-tsp.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python, routing et TSP&lt;/p&gt;
+</summary></entry><entry><title>SQL Debug avec Django</title><link href="https://pyvideo.org/pycon-fr-2015/sql-debug-avec-django.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Rodolphe Quiédeville</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/sql-debug-avec-django.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Comment débuguer les problèmes de performance liés aux bases de données
+avec Django&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;L'ORM de Django est particulièrement efficace, il permet au développeur
+de complètement abstraire la couche de stockage de données au point de
+pouvoir utiliser le même code avec SQLite, PostgreSQL ou d'autres bases
+plus exotiques encore. Lorsque les problèmes de performance surviennent
+faire le chemin inverse depuis la base vers le code devient un véritable
+chemin de croix. On verra dans cette présentation comment se faciliter
+la vie avec quelques outils et méthodes.&lt;/p&gt;
+</summary></entry><entry><title>Switch, ou Se jeter à l'eau avec PyQT</title><link href="https://pyvideo.org/pycon-fr-2015/switch-ou-se-jeter-a-leau-avec-pyqt.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Julien Aupetit</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/switch-ou-se-jeter-a-leau-avec-pyqt.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Présentation du projet open-source Switch qui permet de sélectionner des
+DNS de différents pays et d'en changer en quelques clics. Le but ici est
+d'expliquer ce qu'est PyQt, qui est utilisé dans ce projet, et ses
+fondamentaux. Comment créer son interface, comment gérer les
+interactions de l'utilisateur. Le tout en prenant exemple sur le cas
+concret du projet Switch.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction-4min"&gt;
+&lt;h4&gt;Introduction ~ 4min&lt;/h4&gt;
+&lt;p&gt;présentation personnelle, présentation de Switch et de son idée,
+présentation rapide de Qt et PyQt&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="qtdesigner-8min"&gt;
+&lt;h4&gt;QtDesigner ~8min&lt;/h4&gt;
+&lt;p&gt;Comment j'ai utiliser QtDesigner pour créer mon interface. quelles sont
+les possibilités de customisation.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interaction-3min"&gt;
+&lt;h4&gt;Intéraction ~3min&lt;/h4&gt;
+&lt;p&gt;Comment j'ai connecté les actions de l'utilisateur à des
+fonctions/méthodes Tips sur la gestion de la tabulation dans une
+interface graphique&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="le-reste-moins-important-3min"&gt;
+&lt;h4&gt;Le reste moins important ~3min&lt;/h4&gt;
+&lt;p&gt;Comment je me suis servie de la barre des tâches avec PyQt (icône, menu)
+os.system() ou subprocess ?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion-2min"&gt;
+&lt;h4&gt;Conclusion ~2min&lt;/h4&gt;
+&lt;p&gt;c'est simple, lancez vous.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Utilisation de unittest</title><link href="https://pyvideo.org/pycon-fr-2015/utilisation-de-unittest.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>vincent maillol</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/utilisation-de-unittest.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Apprendre à utiliser le module unittest&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;À quoi servent les tests unitaires ? Comment les écrire ? Quand utiliser
+Mock et quand ne pas l'utiliser ?&lt;/p&gt;
+&lt;p&gt;Une conférence sur comment prendre en main le module unittest et qui
+conclue sur quelques astuces pour ne pas tomber dans le piège d'avoir
+plus de tests à maintenir que de code.&lt;/p&gt;
+</summary></entry><entry><title>Visuellement correct - tests de non régression visuels automatisés</title><link href="https://pyvideo.org/pycon-fr-2015/visuellement-correct-tests-de-non-regression-visuels-automatises.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Yann Gravrand</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/visuellement-correct-tests-de-non-regression-visuels-automatises.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les tests de différences visuelles constituent un moyen efficace pour se
+prémunir des régressions au sein des applications web. Cette
+présentation décrit les types d’application pour lesquelles ces tests
+présentent de l’intérêt, les outils que nous avons adoptés, et des
+retours d’expérience sur les avantages et inconvénients de ces outils.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Après avoir écrit des tests unitaires pour les parties métier de notre
+code, nous avons souhaité ajouter un autre niveau de vérifications
+automatisées : les tests de différences visuelles. Ce vieux rêve des
+développeurs web consiste à comparer visuellement les pages web d'une
+source reconnue comme fiable (baseline) avec la version que l'on
+s'apprête à déployer. Il est ainsi possible de vérifier l'impact des
+nouvelles fonctionnalités sur une nouvelle version, s'assurer de la non
+régression, et une fois l'impact visuel éventuel accepté, établir une
+nouvelle baseline pour non régression future. Cette présentation décrit
+des cas concrets dans lesquels ces types de vérifications présentent de
+l’intérêt. Nous verrons ensuite l’architecture et le workflow que nous
+avons adoptés afin de relever le défi, à l’aide d’une librairie python
+nommée dpxdt développée chez Google. Nous terminerons par un retour
+d’expérience sur les interactions avec notre système d’intégration
+continue, des pistes d'amélioration, et les limites du procédé.&lt;/p&gt;
+</summary></entry><entry><title>We don't need your loops</title><link href="https://pyvideo.org/pycon-fr-2015/we-dont-need-your-loops.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Serge Guelton</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/we-dont-need-your-loops.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pythran est un compilateur pour le Python scientifique qui se distingue
+par des performances importantes pour du code de haut niveau.&lt;/p&gt;
+&lt;p&gt;Cette présentation se concentre sur les boucles, ou plutôt l'absence de
+boucle dans les codes numériques, pourquoi on les évite, ce que ça
+apporte, et pourquoi ce n'est pas si grave de les utiliser.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La boucle. Un pilier de la programation impérative. Et pourtant, les
+utilisateurs avertis de Numpy l'évite comme la peste pour des raisons de
+performance. Heureusement, Numpy fournit de bonnes abstractions piur
+s'en passer dans pas mal de cas.&lt;/p&gt;
+&lt;p&gt;Le but de cette présentation est de montrer que le compilateur Pythran,
+un compilateur statique pour un langage embarqué dans le couple Python /
+Numpy et spécialisé pour le code scientifique, est compatible avec cette
+approche, et qu'il en bénéficie même pour générer du code plus efficace
+que s'il n'avait eu que les boucles à disposition.&lt;/p&gt;
+&lt;p&gt;On tordra ainsi le cou à un vieil adage qui dit que plus on est
+explicite dans sa description de l'algorithme, plus on saura tirer des
+perfs. En pratique, si on souhaite rester au niveau Python - Pythran est
+100% retro-compatible Python - rester à haut niveau n'est pas un frein.&lt;/p&gt;
+</summary></entry><entry><title>When generated code makes sense</title><link href="https://pyvideo.org/pycon-fr-2015/when-generated-code-makes-sense.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Charlie Clark</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/when-generated-code-makes-sense.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;openpyxl started largely as the reverse-engineering of existing files.
+While this allowed the project to get up and running quickly, it also
+turned out to be a dead-end when it came to supporting more advanced
+features. This talk will explain how we've shifted to using descriptors,
+code generation and possibly the world's worst parser for more reliable
+code and faster development.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Only after a great deal of public pressure did Microsoft agree to make
+the specification of Microsoft Office 2007 public and even this was
+after the fact. The result was many thousands of pages of narrative
+description and an extensive XML schema. Whatever one may think of the
+company or the format, the fact remains that for many offices Microsoft
+Excel is a standard format and we want to make it as easy as possible to
+work with the files with Python.&lt;/p&gt;
+&lt;p&gt;openpyxl started largely as the reverse-engineering of existing files.
+While this allowed the project to get up and running quickly, it also
+turned out to be a dead-end when it came to supporting more advanced
+features.&lt;/p&gt;
+&lt;p&gt;The Office Open XML Schema is, in effect, the domain-specific language
+for Microsoft Office. With tools like lxml it's even possible to work
+with this directly from Python but this requires extensive and detailed
+knowledge of something that is rarely intuitive and often downright
+confusing. Furthermore, manipulating XML in memory can be a problem on
+very large workbooks.&lt;/p&gt;
+&lt;p&gt;In openpyxl we introduced descriptors to deal with common types in the
+schema, and added class methods so that we could simplify parsing but
+keep the Python API as simple as possible. This started out as a fairly
+laborious transcription of schema to class definitions that has since
+been replaced by code generated by what might possibly be the world's
+worst parser – every library has to have some horrible code in it
+somewhere!&lt;/p&gt;
+&lt;p&gt;The result was that over 200 classes and their naive tests could be
+generated automatically to provide near complete support for the chart
+API. The process isn't perfect: code rarely runs straight out of the box
+but it has made it possible to support features that otherwise could
+only ever be partially supported at best.&lt;/p&gt;
+&lt;p&gt;The talk will cover what tools Python provides to make this kind of
+adventure succeed and where things could be improved.&lt;/p&gt;
+</summary></entry><entry><title>Anyblok</title><link href="https://pyvideo.org/pycon-fr-2015/anyblok.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Georges Racinet</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/anyblok.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Un cadre modulaire et dynamique pour réaliser vos applications métier.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Anyblok est un moteur d'applications métier à chargement dynamique de
+modules (les &lt;em&gt;bloks&lt;/em&gt;). Il est écrit en Python 3, en ayant à cœur de
+respecter les meilleures pratiques, notamment en termes d'utilisation de
+composants standard : la persistance est fondée sur SQLAlchemy, les
+bloks sont des paquets Python standard, une couche web Pyramid est
+fournie, facultative et remplaçable…&lt;/p&gt;
+</summary></entry><entry><title>Bokor: distribution de films en BitTorrent et hacking python</title><link href="https://pyvideo.org/pycon-fr-2015/bokor-distribution-de-films-en-bittorrent-et-hacking-python.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Olivier André</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/bokor-distribution-de-films-en-bittorrent-et-hacking-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Bokor est un logiciel libre (GPL v3) développé par la SCOP Bearstech en
+partenariat avec la société de distribution de films Cinego. Bokor est
+un framework permettant la distribution de fichiers sur un parc
+hétérogène de machines. L'architecture est hybride, un maître coordonne
+un ensemble d'esclaves qui vont partager des fichiers en point à point,
+avec le protocole BitTorrent.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bokor est un logiciel libre (GPL v3) développé par la SCOP Bearstech en
+partenariat avec la société de distribution de films Cinego. Bokor est
+un framework permettant la distribution de fichiers sur un parc
+hétérogène de machines. L'architecture est hybride, un maître coordonne
+un ensemble d'esclaves qui vont partager des fichiers en point à point,
+avec le protocole BitTorrent. Pour le distributeur, la bande passante
+est optimisée, et la résiliance du système maitrisée. La participation
+autoritaire aux échanges BitTorrent garantie des latences optimisées. Il
+est en production avec aujourd'hui 400 cinémas connectés, 10 super
+seeders en datacenter et 400 films, bandes-annonces et courts-métrages
+partagés.&lt;/p&gt;
+&lt;p&gt;Bokor utilise Rtorrent (avec des corrections pour Cygwin) et OpenTracker
+(avec quelques patchs), pour la partie BitTorrent. Pour la partie
+coordination, Python est utilisé, essentiellement pour des appels de
+fonctions dynamiques. Nous allons vous présenter la partie &amp;quot;Appel de
+procédure distante&amp;quot; (RPC en VO) de Bokor. Le système de RPC de Bokor a
+dû être conçu de manière extensible, la liste des fonctionnalités
+requises n'étant pas connue à l'avance. Nous avons choisi une approche
+minimaliste, pour ne pas avoir de soucis de portabilité, et pour limiter
+au maximum la consommation en CPU et bande-passante, qui seront utilisés
+par les très gourmands échanges BitTorrent.&lt;/p&gt;
+&lt;p&gt;L'utilisation des bibliothèques tiers a été réduite au maximum, seul
+py-curl a survécu, préférant l'approche &amp;quot;fourni avec des piles&amp;quot; de
+Python. Par contre, l'introspection de python a été poussée dans ces
+derniers retranchements : décorateurs de classes, de fonctions,
+modifications à chaud de classes, d'objets, méthodes abstraites...&lt;/p&gt;
+</summary></entry><entry><title>Cliquet: un toolkit pour construire des (micro)services</title><link href="https://pyvideo.org/pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Mathieu Leplatre</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Basé sur Pyramid, Cliquet est un projet qui permet de se concentrer sur
+l'essentiel lors de la conception d'APIs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;dl class="docutils"&gt;
+&lt;dt&gt;Quelle structure JSON pour mon API ? Quelle syntaxe pour filtrer la&lt;/dt&gt;
+&lt;dd&gt;liste via la querystring ? Comment gérer les écritures concurrentes
+? Et synchroniser les données dans mon application cliente ?&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Quand nous développons un (micro)service Web, nous dépensons
+généralement beaucoup d'énergie dans la conception et la validation du
+protocole HTTP, en particulier lorsqu'il s'agit d'un service qui
+manipule des données (&lt;em&gt;CRUD, offline first, pagination, ...&lt;/em&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+Comment pouvons-nous vérifier que le service est opérationnel ?
+Quels indicateurs StatsD ? Est-ce que Sentry est bien configuré ?
+Comment mettre à jour sans casser les applications clientes ?&lt;/blockquote&gt;
+&lt;p&gt;De même, nous passons beaucoup de temps (ou pire, nous ne le faisons pas
+!) à mettre en place tout l'outillage pour gérer et superviser la mise
+en production du service. Et si les bonnes pratiques évoluent, il faut
+faire suivre les projets déjà en place.&lt;/p&gt;
+&lt;p&gt;Plutôt qu'écrire un énième article de blog avec nos recommandations,
+nous avons fait le choix de mettre au point un protocole, et d'en
+fournir une implémentation en Python.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Cliquet&lt;/em&gt; est donc un kit de démarrage, basé sur Pyramid, pour
+construire des (micro)services en se concentrant sur l'essentiel.&lt;/p&gt;
+</summary></entry><entry><title>Découverte de Django</title><link href="https://pyvideo.org/pycon-fr-2015/decouverte-de-django.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Pierre CHARLET</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/decouverte-de-django.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Django est un framework web largement utilisé dans la communauté Python.
+Au cours de cette présentation, nous allons présenter Django, ses
+concepts, le cadre de travail qu'il propose, autour d'un exemple
+d'écriture d'une application web. Nous parlerons également de sa
+communauté accueillante et des ressources annexes.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django est un framework web écrit en Python largement utilisé dans cette
+communauté. Utilisant le modèle MVT, modèles, vues, templates, il
+contient tous les outils nécessaire au développement d'une application
+web, tant de petite que de grosse envergure.&lt;/p&gt;
+&lt;p&gt;Django nous fournit une palette importante d'outils supplémentaires nous
+permettant la résolution de problèmes courant tel que l'administration
+(backoffice), la gestion d'utilisateurs, la traduction ou encore la
+gestion des sessions. L'écosystème se met à jour sur les besoins du web,
+django rest- framework et django-pytest en sont deux illustrations.&lt;/p&gt;
+&lt;p&gt;La communauté, très ouverte et motrice de changements, est présente tout
+au long de l'élaboration de votre projet pour vous aider !&lt;/p&gt;
+</summary></entry><entry><title>Déploiement d'applications python dans un monde post-docker</title><link href="https://pyvideo.org/pycon-fr-2015/deploiement-dapplications-python-dans-un-monde-post-docker.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Michael Scherer</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/deploiement-dapplications-python-dans-un-monde-post-docker.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Durant cette présentation, nous verrons comment la montée en popularité
+des containeurs (comme Docker, RunC, Rkt, Warden, etc) change le
+fonctionnement des services de PaaS via l'intégration de orchestrateurs
+comme Kubernetes ou Mesos, et l'impact pour les développeurs python
+aussi bien que les administrateurs systèmes ayant déployé ce genre de
+systémes chez eux.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Depuis 2 ans, le mot containeur a remplacé cloud sur les buzzometres de
+la presse informatique. néanmoins, le vrai changement ne viens pas des
+containeurs eux mêmes (qui datent facile d'il y a 10 ans ou plus), mais
+de l'impact sur le déploiement des applications et la facilitation des
+architectures à base de microservices.&lt;/p&gt;
+&lt;p&gt;Avec la popularisation de Docker est venu le besoin de combler tout les
+manques du logiciel notamment en terme de déploiement et
+d'orchestration, via des outils comme kubernetes, mesos, fig ou
+atomic-app. Cette présentation parleras donc des concepts sous jacents,
+de l'impact pour les admins et les codeurs python de tout type, et dans
+quel cas est ce que fait sens de mettre en place ce genre de
+déploiement.&lt;/p&gt;
+&lt;p&gt;Les exemples tourneront surtout autour de la pile
+docker/kubernetes/origin /atomic-app mais les alternatives ne seront pas
+oubliés et présentés aussi.&lt;/p&gt;
+</summary></entry><entry><title>Du site dynamique au document imprimable en Python</title><link href="https://pyvideo.org/pycon-fr-2015/du-site-dynamique-au-document-imprimable-en-python.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Guillaume Ayoub</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/du-site-dynamique-au-document-imprimable-en-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Sur de nombreux sites Internet, il est courant de vouloir générer à la
+fois des pages dynamiques pour le navigateur et des documents statiques
+imprimables pour l’archivage ou l’impression. Avec une utilisation
+astucieuse de certains formats et d’outils adéquats (en Python), il est
+possible d’obtenir un résultat de qualité pour de multiples
+utilisations.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Il est courant de vouloir générer des pages à la fois dynamiques pour le
+navigateur et statiques imprimables pour l’archivage ou l’impression au
+sein d’une même application web. Que ce soit pour des diaporamas, des
+factures ou de longs rapports par exemple, on aimerait pouvoir profiter
+de l’interactivité sans sacrifier une pagination intelligente nécessaire
+aux documents imprimables de qualité.&lt;/p&gt;
+&lt;p&gt;Python offre d’innombrables outils pour réaliser la génération de pages
+et de documents. Le plus dur est aujourd’hui de choisir parmi ces outils
+pour produire les documents qui seront exploités au maximum, d’un côté
+par les navigateurs (liens, animations, adaptation aux supports,
+interactivité, etc.) et de l’autre par les clients PDF et l’impression
+(typographie avancée, en- têtes, pieds de page, pagination, etc).&lt;/p&gt;
+</summary></entry><entry><title>Fonctionnement de l'Odoo Community Association</title><link href="https://pyvideo.org/pycon-fr-2015/fonctionnement-de-lodoo-community-association.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Alexandre Fayolle</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/fonctionnement-de-lodoo-community-association.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;L'OCA (Odoo Community Association) est une association à but non
+lucratif qui fédère de nombreuses contribution à l'écosystème Odoo /
+OpenERP. Son fonctionnement peut servir d'exemple à d'autres communautés
+FLOSS qui se construisent autour d'une solution libre publiée par un
+éditeur.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;J'envisage 3 parties pour le Poster:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Présentation de l'écosystème Odoo sa (éditeur) / Partenaires &amp;amp;
+contributeurs / Utilisateurs finaux, positionnement de l'OCA, côté
+Partenaires et contributeurs, avec en parallèle la division des
+responsabilités en terme de maintenance du code (l'éditeur maintient
+le cœur, les partenaires et les contributeurs, un ensemble de
+greffons)&lt;/li&gt;
+&lt;li&gt;Gouvernance de l'OCA : le bureau, les délégués, les membres, les
+contributeurs, rôles et responsabilités&lt;/li&gt;
+&lt;li&gt;Gestion des projets sur github (assurance qualité, revue de code,
+approbation, intégration des contribution) et rôle des code sprints&lt;/li&gt;
+&lt;/ol&gt;
+</summary></entry><entry><title>from Sync to to Async Python, a AsyncIO migration</title><link href="https://pyvideo.org/pycon-fr-2015/from-sync-to-to-async-python-a-asyncio-migration.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/from-sync-to-to-async-python-a-asyncio-migration.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Migration d'une librairie de communication réseau depuis Tornado
+(python2.7) vers Asyncio (python3.4)&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Présentation de la migration de ZeroServices
+(&lt;a class="reference external" href="https://github.com/Lothiraldan/ZeroServices"&gt;https://github.com/Lothiraldan/ZeroServices&lt;/a&gt;) depuis Tornado en python2
+vers Tornado en python3.4 en passant par une version synchrone en
+python3.&lt;/p&gt;
+&lt;p&gt;Présentation des raisons de chacun de ces changements, les challenges
+qu'ils ont représenté, les compromis faits et les points positifs de ces
+changements et les évolutions dans le design.&lt;/p&gt;
+&lt;p&gt;Un gros focus sera mis sur l'intérêt d'asyncio dans une application
+réseau, l'intérêt de l'unicode partout en python3 et sur comment tester
+une application asynchrone en asyncio.&lt;/p&gt;
+</summary></entry><entry><title>GeoAlchemy : le géo-compagnon d'SQLAlchemy</title><link href="https://pyvideo.org/pycon-fr-2015/geoalchemy-le-geo-compagnon-dsqlalchemy.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Éric LEMOINE</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/geoalchemy-le-geo-compagnon-dsqlalchemy.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Présentation de GeoAlchemy, une bibliothèque Python offrant des
+extensions &amp;quot;géographiques&amp;quot; à SQLAlchemy.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GeoAlchemy fournit des extensions &amp;quot;géographiques&amp;quot; à SQLAlchemy, la
+célèbre et brillante bibliothèque Python pour interagir avec des bases
+de donnée SQL. GeoAlchemy permet de facilement utiliser les types,
+fonctions et opérateurs &amp;quot;géo&amp;quot; des bases de données géographiques, en
+bénéficiant de toute la flexibilité de SQLAlchemy. GeoAlchemy suit les
+principes et la philosophie d'SQLAlchemy, pour offrir un système
+flexible, performant et fiable.&lt;/p&gt;
+&lt;p&gt;Dans cette présentation je montrerai comment utiliser GeoAlchemy, autant
+avec l'ORM qu'avec le langage d'expression SQL de SQLAlchemy. Je
+présenterai aussi quelques bibliothèques Python &amp;quot;géo&amp;quot;, comme Shapely,
+typiquement utilisés avec GeoAlchemy.&lt;/p&gt;
+&lt;p&gt;Que vous soyez développeur ou non, venez à cette présentation pour
+savoir quand et comment utiliser GeoAlchemy dans vos projets.&lt;/p&gt;
+</summary></entry><entry><title>Guix-tox, une version fonctionnelle de tox.</title><link href="https://pyvideo.org/pycon-fr-2015/guix-tox-une-version-fonctionnelle-de-tox.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Cyril Roelandt</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/guix-tox-une-version-fonctionnelle-de-tox.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tox est un outil, très utilisé dans les projets Python, qui permet de
+lancer des tests au sein d'environnements virtuels créés par virtualenv.
+Cette approche souffre de plusieurs défauts qui affectent la
+reproductibilité des tests. Nous verrons comment il est possible de
+remplacer virtualenv par Guix et donnerons quelques exemples issus du
+quotidien d'un développeur OpenStack.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tox permet de lancer les tests d'un paquet Python dans des
+environnements virtuels. L'utilisation de ces derniers pose plusieurs
+problèmes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;seuls les paquets disponibles sur PyPI sont gérés. Ainsi, il est
+parfois nécessaire d'utiliser le gestionnaire de paquets de sa
+distribution pour installer des fichiers d'en-tête (on pense
+notamment à lib*-dev sous Debian);&lt;/li&gt;
+&lt;li&gt;lorsque plusieurs environnements ont besoin de la même dépendance,
+cette dernière est installée plusieurs fois, et est dupliquée sur le
+disque, ce qui provoque une perte d'espace disque;&lt;/li&gt;
+&lt;li&gt;mauvais niveau d'abstraction : la tendance actuelle consiste à
+utiliser des gestionnaires de paquets spécifiques à des langages
+(pip, npm, cpan...) plutôt qu'un gestionnaire de paquets robuste;&lt;/li&gt;
+&lt;li&gt;manque de reproductibilité des tests : les environnements de tests
+sont loin d'être parfaitement isolés (les variables d'environnement,
+les fichiers présents dans /usr, le choix des locales... peuvent
+influencer le déroulement des tests).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GNU Guix est un gestionnaire de paquets fonctionnel (comme dans
+&amp;quot;programmation fonctionnelle&amp;quot;) basé sur Nix. Il permet de construire des
+paquets dans un environnement complètement isolé utilisant les
+conteneurs fournis par le noyau Linux qui garantit la reproductibilité
+de l'opération. Nous ferons une présentation de cet outil et nous
+attarderons notamment sur la fonctionnalité que nous serons amenés à
+utiliser pour guix-tox : &amp;quot;guix environment&amp;quot;, qui permet de créer un
+environnement isolé contenant uniquement certains paquets.&lt;/p&gt;
+&lt;p&gt;Enfin, nous verrons comment il est possible de remplacer virtualenv par
+Guix dans tox, afin de profiter des avantages de ce gestionnaire de
+paquets de façon quasi-transparente. Nous montrerons comment il est
+possible de l'utiliser afin de travailler sur des projets OpenStack tels
+que python- keystoneclient ou encore la bibliothèque Oslo.&lt;/p&gt;
+</summary></entry><entry><title>Inventaire des spécificités de Python</title><link href="https://pyvideo.org/pycon-fr-2015/inventaire-des-specificites-de-python.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Feth Arezki</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/inventaire-des-specificites-de-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Le langage Python est taillé pour la relecture et le code source est
+souvent compréhensible par tous&amp;nbsp;; pourtant, on y trouve des choses
+inconnues ou rares dans les autres langages de programmation.&lt;/p&gt;
+&lt;p&gt;Cette conférence fait un tour d'horizon de ce que vous savez ou devez
+apprendre pour coder couramment en Python (générateurs, propriétés,
+coroutines etc).&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ceux qui ont appris à programmer en Python n'ont pas nécessairement
+conscience de la masse de connaissance acquise au fil des mois ou des
+années. Cet exposé propose un tour rapide (un point par minute) de ce
+qui fait que Python est un langage qui permet une programmation
+efficace, expressive et lisible.&lt;/p&gt;
+&lt;div class="section" id="le-sommaire"&gt;
+&lt;h4&gt;Le sommaire&lt;/h4&gt;
+&lt;p&gt;Contiendra une liste (non exhaustive) des points abordés (eux-même non
+exhaustifs) :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;décorateurs&lt;/li&gt;
+&lt;li&gt;propriétés&lt;/li&gt;
+&lt;li&gt;générateurs&lt;/li&gt;
+&lt;li&gt;objets (oui, c'est quoi un objet, une classe ?)&lt;/li&gt;
+&lt;li&gt;métaclasses&lt;/li&gt;
+&lt;li&gt;async, await...&lt;/li&gt;
+&lt;li&gt;déclarations d'encodage&lt;/li&gt;
+&lt;li&gt;etc, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;L'auteur n'est pas responsable d'une mauvaise utilisation des tournures
+du langage qu'il aura présenté, il cherche à faire prendre conscience de
+l'ensemble des organes de cet animal unique, et en creux de ce qui le
+différencie de ses cousins (C, shell, Java etc).&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>IPython vers Jupyter</title><link href="https://pyvideo.org/pycon-fr-2015/ipython-vers-jupyter.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Mike BRIGHT</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/ipython-vers-jupyter.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;IPython permet d’experimenter avec Python tout en gardant trace
+d’execution en forme de notebook. Largement utilise par des
+scientifiques pour partager, documenter leur travail de facon
+reproducible. Nous allons regarder l’evolution vers un outil
+multi-langage, Jupyter annonce en 2014. Regardons les capabilites de
+Jupyter ainsi que les evolutions et investissements dans le projet.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ce talk vise les debutants, ou debutants IPython/Jupyter, en tout cas.&lt;/p&gt;
+&lt;p&gt;Nous allons regarder les capabilites d’IPython/Jupyter. Depuis 2014
+projet Jupyter permet de faire differents langages en notebook, via des
+kernels specifiques (ils existent 49 aujourd’hui, il n’y avait que 45 il
+y a deux semaines).&lt;/p&gt;
+&lt;p&gt;Regardons d’abord les capabilites d’IPython meme avec quelques examples
+graphiques a base de Pandas, Numpy pour l’analyse de donnees. Voyons
+comment Jupyter puissent utiliser sympy/MathJAX.js pour travailler avec
+des equations et symboles mathematiques dans un notebook.&lt;/p&gt;
+&lt;p&gt;Nous ferons des choses similaires dans d’autres langages aussi utilises
+pour l’analyze de donnees, tels que R et Julia.&lt;/p&gt;
+&lt;p&gt;Regardons les projets autour de Jupyter et les evolutions en cours: *
+javascript front ends * integration avec Google Drive _ integration
+avec github _ integration avec Microsoft Azure&lt;/p&gt;
+</summary></entry><entry><title>Kinto: stocker, synchroniser et partager ses données de manière générique</title><link href="https://pyvideo.org/pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Alexis Métaireau</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Kinto est outil qui suit la philosophie &amp;quot;no-backend&amp;quot;. L'idée étant
+d'avoir un backend générique, déployable très facilement, qui permette à
+tous et toutes et de stocker, requêter et partager des données sans
+avoir à déployer de service web.&lt;/p&gt;
+&lt;p&gt;Cette présentation vise à présenter Kinto, et l'écosystème que nous
+mettons en place petit à petit pour permettre a tous d'être souverain
+sur ses données.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Plan (rapide):&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Histoire:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;L'idée de départ (Mat + Alexis à Django Cong il y a 3 ans);&lt;/li&gt;
+&lt;li&gt;Les quelques sprints sur Daybed;&lt;/li&gt;
+&lt;li&gt;L’intérêt de Mozilla dans le projet;&lt;/li&gt;
+&lt;li&gt;Reboot ™;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Les choix philosophiques&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Abstraction des concepts clés;&lt;/li&gt;
+&lt;li&gt;Mettre la communauté au centre du développement;&lt;/li&gt;
+&lt;li&gt;N’implémenter que des fonctionnalités utiles (cas d'utilisation):&lt;/li&gt;
+&lt;li&gt;Ne pas faire le café&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Dans quel paysage s'inscris-ton ?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;CouchDB / PouchDB;&lt;/li&gt;
+&lt;li&gt;Remote Storage;&lt;/li&gt;
+&lt;li&gt;Hoodie;&lt;/li&gt;
+&lt;li&gt;Cas d'utilisations à Mozilla (Ops, QA);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Démo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pour comprendre de quoi on parle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Architecture du projet&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cliquet, Kinto, Resources, Schemas, Backends, Permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Quid du futur ?&lt;/li&gt;
+&lt;/ol&gt;
+</summary></entry><entry><title>Learning Python, Learning French</title><link href="https://pyvideo.org/pycon-fr-2015/learning-python-learning-french.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Nicole Harris</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/learning-python-learning-french.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this talk, Nicole explores her experience of learning French and
+Python &amp;quot;en même temps&amp;quot; and asks the question: What can the Python
+community learn from the language learning community?&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learning to code is seen as a new literacy akin to learning a second
+spoken language - but is it? In this talk I'll explore my experiences
+learning French and Python and examine some of the common themes between
+both fields. Together we'll dismantle the myth that adults cannot learn
+as well as children and explore what it really means to be &lt;em&gt;fluent&lt;/em&gt;.
+Finally, we'll explore immersion based learning and look at how it might
+help us become better Python programmers.&lt;/p&gt;
+</summary></entry><entry><title>Micro-services késako</title><link href="https://pyvideo.org/pycon-fr-2015/micro-services-kesako.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/micro-services-kesako.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les micro-services sont la nouvelle mode ces derniers temps, qu'est-ce
+qui se cache derrière ce &amp;quot;nouveau&amp;quot; terme et comment en faire en Python ?&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les micro-services sont la nouvelle mode de ces derniers temps, mais
+qu'est-ce que terme représente donc bien ? Encore un truc à la mode du
+style full-stack developer ou DevOps ? C'est un peu lié effectivement.&lt;/p&gt;
+&lt;p&gt;Comment peut se définir une architecture micro-service, quels sont ses
+avantages, ses inconvénients. Quels sont les challenges à adresser avant
+de pouvoir passer à une architecture micro-services, quand ne faut-il ne
+pas y passer ? Quel sont les différences avec les architectures SOA
+&amp;quot;classiques&amp;quot; ?&lt;/p&gt;
+&lt;p&gt;Je donnerais un début de réponse à vos interrogations et vous
+présenterais des solutions pour développer des micro-services en Python
+grâce à principalement ZeroServices.&lt;/p&gt;
+&lt;p&gt;Ce talk se concentrera surtout sur la partie théorique puisque les
+micro- services sont une architecture agnostique sur le language de
+programmation.&lt;/p&gt;
+</summary></entry><entry><title>Optimiser l'intégration de code avec Zuul</title><link href="https://pyvideo.org/pycon-fr-2015/optimiser-lintegration-de-code-avec-zuul.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Matthieu Huin</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/optimiser-lintegration-de-code-avec-zuul.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Cette présentation s'adresse à tout développeur soucieux de la qualité
+du code, intéressé par les problématiques d'intégration et de
+développement continus, et travaillant sur un projet comptant plus de 2
+contributeurs. Elle se concentre sur Zuul, un système de &amp;quot;gating&amp;quot; des
+contributions à un ensemble de projets.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les projets de grande échelle comme OpenStack, intégrant plus d'une
+centaine de contributions par jour en moyenne, ne pourraient aboutir
+sans un contrôle rigoureux de la qualité du code. C'est pourquoi l'une
+des tâches majeures des développeurs principaux (&amp;quot;core devs&amp;quot;)
+d'OpenStack est de passer en revue les contributions (&amp;quot;code review&amp;quot;)
+puis d'éventuellement les valider pour intégration au code source. Mais
+comment gérer un tel flux de contributions en un temps raisonnable ?
+Comment être certain qu'une contribution acceptée par un core dev ne va
+pas avoir des effets de bord sur une autre contribution acceptée
+simultanément par quelqu'un d'autre, ou sur un projet connexe ?&lt;/p&gt;
+&lt;p&gt;La communauté OpenStack utilise un outil codé en Python appelé Zuul (en
+référence à Ghostbusters) pour répondre à ces problématiques, et
+permettre aux core devs de ne pas avoir à consacrer 100% de leur
+activité à la revue de code. L'intérêt de Zuul est clair pour tout
+projet, quel que soit son envergure, nécessitant un contrôle rigoureux
+pour l'intégration et le déploiement continus. Nous présentons donc ici
+les principales fonctionnalités de Zuul à travers des cas d'usage
+simples, et telles que nous les utilisons dans le projet &lt;a class="reference external" href="http://softwarefactory.enovance.com%20%22Software%20Factory%22"&gt;Software
+Factory&lt;/a&gt;,
+une suite logicielle libre &amp;quot;all in one&amp;quot; de gestion de code, poussé par
+Red Hat.&lt;/p&gt;
+&lt;p&gt;Nous couvrirons les sujets suivants:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Comment Zuul interagit avec Gerrit, le service de revue du code&lt;/li&gt;
+&lt;li&gt;Que signifie la notion de &amp;quot;pipelines&amp;quot; dans Zuul, et comment les
+utiliser&lt;/li&gt;
+&lt;li&gt;Quelle stratégie suit Zuul pour gérer la queue des contributions à
+tester ou à intégrer&lt;/li&gt;
+&lt;li&gt;Comment Zuul gère les interdépendances de projets&lt;/li&gt;
+&lt;li&gt;Exemples de workflows de CI et CD facilités par Zuul&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Pièges et bizarreries de (C)Python</title><link href="https://pyvideo.org/pycon-fr-2015/pieges-et-bizarreries-de-cpython.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Alex Marandon</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/pieges-et-bizarreries-de-cpython.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python nous réserve généralement peu de (mauvaises) surprises. Il existe
+cependant quelques recoins étranges que nous allons explorer pour nous
+amuser et nous instruire.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python est conçu pour éviter les comportements inattendus mais on en
+rencontre pourtant parfois, la plupart liés à l'implémentation de
+référence CPython. Ces comportements étranges sont autant d'opportunités
+de mieux comprendre le modèle d'exécution de Python et nous fournissent
+un beau prétexte pour inspecter son bytecode.&lt;/p&gt;
+</summary></entry><entry><title>Plus loin que la mémoization : la tabulation</title><link href="https://pyvideo.org/pycon-fr-2015/plus-loin-que-la-memoization-la-tabulation.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Serge Guelton</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/plus-loin-que-la-memoization-la-tabulation.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;La mémoisation de fonction est une optimisation classique qui permet de
+ne calculer qu'une fois une fonction appelée de façon répétée.&lt;/p&gt;
+&lt;p&gt;Cette présentation essaie d'aller plus loin : ne jamais calculer la
+fonction à l'execution et n'utiliser qu'une gigantesque lookup table à
+la place.&lt;/p&gt;
+&lt;p&gt;Et comme c'est en Python, le tout en quelques centaines de lignes de
+code !&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La mémoisation de fonction est une optimisation bien connue qui permet
+de ne calculer qu'une fois une fonction sans effet de bord pour chaque
+nouvelle combinaison de paramètre. Depuis python 3.2, cette optimisation
+est disponible dans la bibliothèque standard Python sous la forme du
+décorateur &lt;tt class="docutils literal"&gt;functools.lru_cache&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Mais voilà, il faut quand même calculer la fonction au moins une fois
+pour chaque nouvelle combinaison de paramètres, et ça peut prendre du
+temps.&lt;/p&gt;
+&lt;p&gt;Dans cette présentation, on va adopter une mesure encore plus extrème :
+calculer toutes les valeurs de la fonction pour toutes les entrées. Oui,
+remplacer un appel de fonction par un (simple) accès mémoire. Ou
+presque.&lt;/p&gt;
+&lt;p&gt;On verra que c'est parfois possible, même quand le domaine d'entrée est
+grand, que ça peut aller vite, et que cela a même des applications en
+sécurité informatique pour le moins inattendues...&lt;/p&gt;
+</summary></entry><entry><title>Scapy, application à la sécurité</title><link href="https://pyvideo.org/pycon-fr-2015/scapy-application-a-la-securite.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>ebel franck</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/scapy-application-a-la-securite.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Présentation de la bibliothèque scapy et démonstrations appliquées à des
+problèmes concrets d'administrateurs réseaux et de consultants en
+sécurité.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La présentation détaillera la bibliothèque scapy et montrera pas à pas
+son utilisation. Des notions de réseaux , surtout du modèle OSI et
+TCP/IP sera nécessaire pour comprendre certaines démonstrations et
+applications. La programmation de base en python devra être connue. Les
+démonstrations seront des cas concrets rencontrés lors des audits de
+sécurités ( pentest) et d'administration des réseaux.&lt;/p&gt;
+</summary></entry><entry><title>The Art of Doing Nothing – Using profiling to speed up your code</title><link href="https://pyvideo.org/pycon-fr-2015/the-art-of-doing-nothing-using-profiling-to-speed-up-your-code.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Charlie Clark</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/the-art-of-doing-nothing-using-profiling-to-speed-up-your-code.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;We're lucky with Python that we can concentrate on getting the job done
+and often don't have to worry about how fast our code runs. After all
+code than runs today will finish before faster code that runs tomorrow.
+But what do you do when you need to make your code run faster? This talk
+will give you an introduction into how to improve performance where you
+need it most.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We're lucky with Python that we can concentrate on getting the job done
+and often don't have to worry about how fast our code runs. Those of us
+without computer science degrees &lt;strong&gt;really&lt;/strong&gt; know how to appreciate this.
+And 9 times out of 10 you probably don't need to worry at all about the
+speed: if the program takes 10 minutes to run but saves you hours of
+work then it's a job well done. But then there is that 10th time…&lt;/p&gt;
+&lt;p&gt;Based on work done over the last couple of years with openpyxl I will
+show some tips and tricks as to how you can approach improving
+performance without having to become a mathematical genius or computer
+whizz. There is lots of good advice about performance around but it has
+to make sense within the context of your application: does it matter
+that Python loops are considered slow?&lt;/p&gt;
+&lt;p&gt;The talk will cover using tests and profiling to identify the areas that
+you need to work on, stop you breaking stuff irreparably, and what
+things you might want to research or ask about. I do promise you: the
+art of performance really is the art of doing nothing!&lt;/p&gt;
+&lt;p&gt;La présentation sera en anglais mais je parle le français assez bien et
+peu répondre aux questions en français ou peut-être le franglais!&lt;/p&gt;
+</summary></entry><entry><title>tox est amour</title><link href="https://pyvideo.org/pycon-fr-2015/tox-est-amour.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Bruno Bord</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/tox-est-amour.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;tt class="docutils literal"&gt;tox&lt;/tt&gt; est, à l'origine, un outil qui lance les tests d'une application
+ou d'une bibliothèque au sein de virtualenvs isolés. Ceci rend possible
+l'exécution des tests pour plusieurs version de Python, ou plusieurs
+versions de votre framework de développement favori, ou d'une
+combinaison de tout ceci.&lt;/p&gt;
+&lt;p&gt;Mais tox est amour, alors il sait faire bien plus encore.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Est-ce que mon application est compatible Python 2 ? Python 3 ?&lt;/div&gt;
+&lt;div class="line"&gt;Est-ce que mon app Django est compatible Django 1.7 ? 1.8 ? master ?&lt;/div&gt;
+&lt;div class="line"&gt;Est-ce que ma lib est compatible avec Postgresql ? MySQL ? SQLite ?&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Est-ce qu'il est possible de vérifier tous ces cas, et une
+&lt;strong&gt;combinaison&lt;/strong&gt; de tous ces cas ? (par exemple, une app Django
+compatible 1.7 / avec une base Postgresql en Python 3). Ou &lt;strong&gt;toutes&lt;/strong&gt;
+les combinaisons possibles ?&lt;/p&gt;
+&lt;p&gt;C'est ce que &lt;tt class="docutils literal"&gt;tox&lt;/tt&gt; sait faire. Mais il sait faire bien plus. Et il
+vous aime. Il nous aime. Les programmeurs de &lt;tt class="docutils literal"&gt;tox&lt;/tt&gt; nous aiment.&lt;/p&gt;
+&lt;p&gt;Il n'est pas rare que le Pythoniste feignant se dise tout haut &amp;quot;ah ça
+serait bien si c'était possible avec tox&amp;quot;. Et là, un des contributeurs
+de tox remonte le temps dans sa machine et implémente la fonctionnalité.
+De retour dans le présent, le Pythoniste découvre la fonctionnalité
+présente dans la doc et s'écrie &amp;quot;Mais c'est trop bien !&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Dans cette conférence, nous aurons un aperçu des potentialités de
+&lt;tt class="docutils literal"&gt;tox&lt;/tt&gt;, comment le mettre en place très simplement pour votre projet et
+de découvrir, émerveillé, comment un outil bien fait travaille à votre
+place.&lt;/p&gt;
+</summary></entry><entry><title>Votre appli web et Python: de zéro au million d'utilisateurs</title><link href="https://pyvideo.org/pycon-fr-2015/votre-appli-web-et-python-de-zero-au-million-dutilisateurs.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Martin Richard</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/votre-appli-web-et-python-de-zero-au-million-dutilisateurs.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;C'est décidé, vous vous lancez dans un nouveau projet d'appli web et
+mobile. Vous visez le million d'utilisateurs, le passage au 20h, et
+Xavier Niel rêvera de vous racheter. Maintenant, techniquement, comment
+faut-il s'y prendre ? Comment s'y retrouver dans la jungle des buzzwords
+? Que reprendre des techniques des géants ? Qu'est-ce qui va nous servir
+dans l'écosystème de Python ?&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vous avez lu tout un tas d'articles sur les microservices avec Django,
+du NoSQL, déployés avec Chef sur un cluster openstack. Maintenant, vous
+avez une idée de comment gérer un million d'utilisateurs, un bon mal de
+tête, et toujours aucune idée de comment commencer.&lt;/p&gt;
+&lt;p&gt;Votre objectif, c’est de développer une application qui fonctionne bien
+: c’est à dire avec peu de bugs (visibles), de bonnes performances et
+une bonne disponibilité. Sans cette base stable, la dette technique
+finira pas devenir un frein à votre réussite.&lt;/p&gt;
+&lt;p&gt;On verra déjà comment, dès le début du projet, on peut anticiper sur des
+problèmes futurs grâce à quelques décisions et bonnes pratiques. Puis on
+s’intéressera à la vie de l’application une fois en production : comment
+assurer sa stabilité et l’ajout de fonctionnalités et comment s’en
+sortir en cas de panne. Enfin, on verra quelques techniques qui nous
+permettront de progressivement accueillir de nouveaux utilisateurs.&lt;/p&gt;
+&lt;p&gt;Python et son écosystème seront mis à contribution à chaque étape !&lt;/p&gt;
+</summary></entry><entry><title>XPath for web scraping</title><link href="https://pyvideo.org/pycon-fr-2015/xpath-for-web-scraping.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Paul Tremberth</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/xpath-for-web-scraping.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;All you need to know about XPath 1.0 in a web scraping project: the
+different axes, attribute matching, string functions, EXSLT extensions
+plus a few other handy patterns like CSS selectors and Javascript
+parsing.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When you need to extract data from web pages, you usually parse HTML
+documents into a DOM tree and then use libraries like BeautifulSoup or
+the ElementTree API to extract data from it. Some libraries also support
+XPath expressions which can express more complex traversal and search
+patterns.&lt;/p&gt;
+&lt;p&gt;Everything about XPath 1.0 is defined in W3C lengthly specification but
+it can be obscure to read at first. The basics are quite simple to grasp
+though, and this talk will go over the most useful syntax patterns you
+need to get started.&lt;/p&gt;
+&lt;p&gt;What we'll cover: - axes and how to look for specific tags, parent
+element, children or siblings nodes - predicates and selecting nodes
+based on attribute or content values - built-in string functions that
+you should know about - EXSLT extensions supported by lxml and how they
+can solve tricky lookups&lt;/p&gt;
+&lt;p&gt;We'll end the talk with a few handy tips: - how to use CSS selectors to
+do some of the above - how to parse Javascript code with XPath&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 10 Jul 2017 00:00:00 +0000</lastBuildDate><item><title>2 + 2 = 5: Monkey-patching CPython with ctypes to conform to Party doctrine</title><link>https://pyvideo.org/europython-2017/2-2-5-monkey-patching-cpython-with-ctypes-to-conform-to-party-doctrine.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A few weeks into your tenure as a software engineer at the Ministry
+of Truth you are assigned your first real feature request: write a
+context manager that can make “2 + 2” equal 5 at runtime. Your
+solution should be written only in Python (for maximum portability).
+Absurd? Perhaps, but you know better than to ask questions. You are
+no thought-criminal.&lt;/p&gt;
+&lt;p&gt;In this talk I walk through the steps I took to modify the value of
+two plus two in CPython at runtime—using only Python and the ctypes
+module. What began for me as a silly and frivolous side project
+became an education in how the python data model works behind the
+scenes and how CPython compiles, optimizes, and executes python code.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to provide an introduction to CPython
+internals while walking through the steps needed to monkeypatch
+integer addition to make “2 + 2” equal 5. The audience should come
+away with a better understanding of how python objects and types are
+represented in memory, how references are counted, and how python
+scripts are transformed into abstract syntax trees, compiled into
+code objects, and then executed by the CPython virtual stack machine.
+And because I’ve limited myself to using ctypes, these topics can be
+explored without familiarity with C as a prerequisite.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Frankie Dintino</dc:creator><pubDate>Mon, 10 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-10:europython-2017/2-2-5-monkey-patching-cpython-with-ctypes-to-conform-to-party-doctrine.html</guid></item><item><title>High-Availability Django</title><link>https://pyvideo.org/djangocon-us-2016/high-availability-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One year ago we completed a years-long project of migrating theatlantic.com from a sprawling PHP codebase to a Python application built on Django. Our first attempt at a load-balanced Python stack had serious flaws, as we quickly learned. Since then we have completely remade our stack from the bottom up; we have built tools that improve our ability to monitor for performance and service degradation; and we have developed a deployment process that incorporates automated testing and that allows us to push out updates without incurring any downtime. I will discuss the mistakes we made, the steps we took to identify performance problems and server resource issues, what our current stack looks like, and how we achieved the holy grail of zero-downtime deploys.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Frankie Dintino</dc:creator><pubDate>Tue, 19 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-19:djangocon-us-2016/high-availability-django.html</guid></item><item><title>Building theatlantic.com homepage’s WYSIWYG admin with Django and Knockout</title><link>https://pyvideo.org/djangocon-us-2015/building-theatlantic-com-homepages-wysiwyg-admin.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Building theatlantic.com homepage’s WYSIWYG admin with Django and
+Knockout by Frankie Dintino&lt;/p&gt;
+&lt;p&gt;While the front-end of theatlantic.com was written in PHP up until its
+recent rewrite, we have relied on a robust Django-powered admin to
+manage content for nearly two years. At the time when we began coding
+the redesign we had already developed an adequate solution for curating
+content into modules on our site: a combination of Grappelli’s
+drag-and-drop sortable inline feature and django-nested-admin, a project
+we wrote for nested InlineModelAdmins. However, it soon became clear
+that our current system would not meet the needs of editors managing The
+Atlantic’s new responsive and visually-striking homepage. The workflow
+employed by the editors with our sortable nested inlines—edit, save,
+preview; adjust, save again, preview; …—would have been too burdensome.&lt;/p&gt;
+&lt;p&gt;This challenge led me to propose we build a new tool that could
+“live-edit” the homepage in a WYSIWYG interface. It occurred to me that,
+if we could find a way to bind the ModelAdmin’s formsets to a javascript
+model, and used one of the many MVC javascript frameworks, we could
+build the interface using two-way data binding to sync changes with a
+hidden form. A project that would have taken months could, with the
+right framework, be built in just a few weeks.&lt;/p&gt;
+&lt;p&gt;So why Knockout.js? I evaluated most of the popular options. Though I
+initially adopted AngularJS, I later abandoned it because, while it is a
+fine framework, it is not ideal for integrating with DOM elements that
+live outside angular. I stumbled through quite a few angular controllers
+and directives (violating their best practices every step along the way)
+before changing direction. Knockout, by comparison, turned out to be
+absolutely perfect for the task at hand.&lt;/p&gt;
+&lt;p&gt;This talk will discuss what was involved in using Knockout to build
+two-way data binding with django formsets, and how we implemented
+sorting with drag-and-drop functionality, inline editing of html, and
+image uploads and cropping. It will also touch briefly on the challenges
+we faced making everything testable, and feature a live demo of updating
+theatlantic.com homepage using our new modular Django CMS.&lt;/p&gt;
+&lt;p&gt;Help us caption &amp;amp; translate this video!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://amara.org/v/HH6g/"&gt;http://amara.org/v/HH6g/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Frankie Dintino</dc:creator><pubDate>Mon, 21 Sep 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-09-21:djangocon-us-2015/building-theatlantic-com-homepages-wysiwyg-admin.html</guid></item></channel></rss>

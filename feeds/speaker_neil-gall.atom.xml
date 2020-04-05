@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_neil-gall.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-07-27T00:00:00+00:00</updated><entry><title>System testing with Pytest, Docker, and Flask</title><link href="https://pyvideo.org/europython-2018/system-testing-with-pytest-docker-and-flask.html" rel="alternate"></link><published>2018-07-27T00:00:00+00:00</published><updated>2018-07-27T00:00:00+00:00</updated><author><name>Neil Gall</name></author><id>tag:pyvideo.org,2018-07-27:europython-2018/system-testing-with-pytest-docker-and-flask.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The composability of fixtures in pytest is an improvement over
+traditional xUnit setup/teardown, reducing the incentive to commit
+testing crimes such as multi-stage and stepwise tests. This is great out
+of the box for unit tests, but I’m going to show how to combine the
+power of pytest fixtures with Docker to build high-level integration
+tests for microservices or other complex systems with multiple
+components. I’ll then build on that to show how to embed mock web
+services written with Flask right into the test code.&lt;/p&gt;
+&lt;p&gt;With a sample Java application that makes use of some external resources
+to offer a data processing service I’ll first quick an overview of
+Pytest, Docker, and Flask. Then I’ll mix some pre-built code with live
+test coding to demonstrate how to build high-level system tests which
+spin up the application and its dependencies in Docker. I’ll then mock
+one of the external dependencies using Flask, allowing the test to
+control and verify interaction between the system components. Finally
+I’ll show how to wrap the Flask application in a WSGI middleware that
+lets the test inspect interaction with the mocked service.&lt;/p&gt;
+&lt;p&gt;From a learning and development point of view, building your own is
+better than re-using someone else’s code so I’ll show how the support
+code for these features is relatively simple and how the audience can
+build it themselves to exactly meet their own needs. And I’ll do it all
+with a sense of fun, a joke or two and maybe a little storytelling.&lt;/p&gt;
+</summary></entry></feed>

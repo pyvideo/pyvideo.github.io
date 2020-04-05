@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 17 Feb 2017 00:00:00 +0000</lastBuildDate><item><title>Django on Steroids -- Lessons from Scale</title><link>https://pyvideo.org/pycon-pune-2017/django-on-steroids-lessons-from-scale.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk summarizes my learnings (best practices and gotchas) by using
+Django as the core application engine in a production application for
+the past two years at DoSelect. I’ll discuss about the common, and
+&lt;em&gt;not-so-common&lt;/em&gt; patterns you should take care of when you hit scale with
+Django, complete with real- life scenarios. Topics include
+(non-exhaustive) – production server configuration, best practices when
+using Django as provider for an SPA (Single-page app), caching, query
+optimization while using the ORM, gotchas while using async tasks, et
+al.&lt;/p&gt;
+&lt;p&gt;The talk is intended for people who have a basic knowlegde of Python /
+Django, know how web applications work in general. Key take-aways would
+be things you can directly drop into your production Django application
+for better performance.&lt;/p&gt;
+&lt;div class="section" id="the-usual-suspects"&gt;
+&lt;h4&gt;The Usual Suspects&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tuning your web server configuration (using Nginx and Gunicorn as
+example)&lt;/li&gt;
+&lt;li&gt;Caching whatever you can, but no more&lt;/li&gt;
+&lt;li&gt;How to write Django ORM queries that scale&lt;/li&gt;
+&lt;li&gt;When NOT to write Django ORM queries&lt;/li&gt;
+&lt;li&gt;Async tasks while maintaining data consistency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-non-usual-suspects"&gt;
+&lt;h4&gt;The Non-usual Suspects&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Using Django with an SPA front-end&lt;/li&gt;
+&lt;li&gt;Scaling Postgres while scaling Django&lt;/li&gt;
+&lt;li&gt;Optmizing async task runners (more stuff to be added)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk will include real-world code examples while illustating the
+points above – explaining what we faced in production, and how we solved
+it (and then realized that’s what we should have done in the first
+place). I plan to have a bit longer Q&amp;amp;A session, due to the nature of
+this talk.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sanket Saurav</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/django-on-steroids-lessons-from-scale.html</guid></item><item><title>Feedback session and Closing Address</title><link>https://pyvideo.org/pycon-pune-2017/feedback-session-and-closing-address.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Feedback session and Closing Address of PyCon Pune&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/feedback-session-and-closing-address.html</guid></item><item><title>[Keynote] Is Open Source Software Really More Secure?</title><link>https://pyvideo.org/pycon-pune-2017/keynote-is-open-source-software-really-more-secure.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote by Terri Oda&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Terri Oda</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/keynote-is-open-source-software-really-more-secure.html</guid></item><item><title>[Keynote] Opportunities and Challenges in Open Collaboration</title><link>https://pyvideo.org/pycon-pune-2017/keynote-opportunities-and-challenges-in-open-collaboration.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Nick Coghlan&lt;/p&gt;
+&lt;p&gt;About Speaker:
+Nick Coghlan works on software supply chain management tools for Red Hat, and has been a CPython core developer since 2005. Prior to joining Red Hat in June 2011, Nick spent over 12 years working as a software developer, system integrator and system architect in Australia's aerospace &amp;amp; defence sector.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nick Coghlan</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/keynote-opportunities-and-challenges-in-open-collaboration.html</guid></item><item><title>Pagure: Past, Present and Future</title><link>https://pyvideo.org/pycon-pune-2017/pagure-past-present-and-future.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about Pagure - A free and open source git collaboration
+software written in python. Pagure is brainchild of Pierre-Yves Chibon
+(pingou) and it’s open to all for use on &lt;a class="reference external" href="https://www.pagure.io"&gt;https://www.pagure.io&lt;/a&gt;. Pagure
+is currently being used as home for all Fedora projects. This talk will
+focus on the technical aspect of Pagure, the features that make it
+different and awesome and the ones that are going to come in. How and
+why we are writing those features and how a lot of new contributors come
+in and help us make Pagure cooler.&lt;/p&gt;
+&lt;div class="section" id="flow"&gt;
+&lt;h4&gt;Flow&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What is pagure ?&lt;/li&gt;
+&lt;li&gt;How did it start ?&lt;/li&gt;
+&lt;li&gt;Progit: Initial days of pagure&lt;/li&gt;
+&lt;li&gt;Why pagure ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="present"&gt;
+&lt;h4&gt;Present&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Awesome Features in Issue Tracker&lt;ul&gt;
+&lt;li&gt;Custom Closed Status&lt;/li&gt;
+&lt;li&gt;Custom Fields&lt;/li&gt;
+&lt;li&gt;Blocking/Depending issues&lt;/li&gt;
+&lt;li&gt;Priorities&lt;/li&gt;
+&lt;li&gt;Roadmaps, Milestones and More…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Awesome Features in Pull Request Integration&lt;ul&gt;
+&lt;li&gt;Assignee of Pull Request&lt;/li&gt;
+&lt;li&gt;Minimum score to merge Pull Request&lt;/li&gt;
+&lt;li&gt;Enforce to Sign-off commits&lt;/li&gt;
+&lt;li&gt;Feature to allow only the assignee to merge the PR&lt;/li&gt;
+&lt;li&gt;Block Non-Fast Forward Pushes and More…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Other Awesome Features&lt;ul&gt;
+&lt;li&gt;Watch Repo&lt;/li&gt;
+&lt;li&gt;Project ACL&lt;/li&gt;
+&lt;li&gt;Pagure CI&lt;/li&gt;
+&lt;li&gt;Heat Maps&lt;/li&gt;
+&lt;li&gt;Docs Hosting&lt;/li&gt;
+&lt;li&gt;Tools built for Pagure&lt;/li&gt;
+&lt;li&gt;Libpagure - A python library for pagure api&lt;/li&gt;
+&lt;li&gt;Gopagure - A go library for pagure api&lt;/li&gt;
+&lt;li&gt;Pag - A command line tool to use pagure.io&lt;/li&gt;
+&lt;li&gt;Pagure Importer - A command line tool to import issues/PRs to
+pagure&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="future"&gt;
+&lt;h4&gt;Future&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Private Repo&lt;/li&gt;
+&lt;li&gt;Code Search&lt;/li&gt;
+&lt;li&gt;Saved Replies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vivek Anand</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/pagure-past-present-and-future.html</guid></item><item><title>Testing native binaries using CFFI</title><link>https://pyvideo.org/pycon-pune-2017/testing-native-binaries-using-cffi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This a quick intro to the idea of FFI in Python and one practical use
+case based on my own experiences with a personal project.&lt;/p&gt;
+&lt;p&gt;I’ve been working a native cross platform library to gather system
+information. The long term intention is to make bindings for it in
+various languages. The whole thing is written in C and it’s somewhat
+hard to write unit tests for these kinds of libraries.&lt;/p&gt;
+&lt;p&gt;This talk is about using a combination of cffi and py.test to write unit
+tests for the library in Python.&lt;/p&gt;
+&lt;p&gt;The talk will cover some basics of writing python bindings using CFFI
+and then writing unit tests using these. As a bonus, a small py.test
+plugin which can be used to measure the unit tests coverage of the C
+library will be presented.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The presentation is and outline are at
+&lt;a class="reference external" href="https://github.com/nibrahim/presentation-cffi/blob/master/outline.org"&gt;https://github.com/nibrahim/presentation-cffi/blob/master/outline.org&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;I might tweak it a little for stlyistic purposes but this is what I’ll
+be presenting&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Noufal Ibrahim</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/testing-native-binaries-using-cffi.html</guid></item><item><title>You Can Help Develop Python - and You Should!</title><link>https://pyvideo.org/pycon-pune-2017/you-can-help-develop-python-and-you-should.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python-Dev is a world-wide distributed software development community.
+At the core are great language designers and programmers, but there’s
+plenty to do for anyone and everyone. It’s natural to be uneasy about
+offering your ideas and effort to a large community with a long history,
+so I’ll explain how the process works and how to fit in. Python-Dev is
+consciously evolving itself to produce better software and mentor new
+developers. Grow with us!&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;A brief history of the Python language and development community&lt;/li&gt;
+&lt;li&gt;The evolution of the development process&lt;/li&gt;
+&lt;li&gt;Channels, PEPs, patches, review&lt;/li&gt;
+&lt;li&gt;Developer development: Code of Conduct, core-mentorship, diversity
+and inclusion&lt;/li&gt;
+&lt;li&gt;Opportunities for participation&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephen Turnbull</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:pycon-pune-2017/you-can-help-develop-python-and-you-should.html</guid></item><item><title>Building Trust in Releases</title><link>https://pyvideo.org/pycon-pune-2017/building-trust-in-releases.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Releasing an open source project is easy. Push code on Github and
+(optionally) release the package on PyPI and distribution packages. How
+do you build trust into releases so that your users can trust your
+product? If your product is critical to someone’s infrastructure, trust
+is even more critical. This talk aims to lay down basic guidelines for
+releases. I’ll be specifically taking examples of requests, Gluster, and
+Gerrit to talk about trust.&lt;/p&gt;
+&lt;p&gt;This talk is intended to remind the audience about their users. A good
+product is not only about good code. It’s also about good experience and
+empathy for solving your user’s problems. For instance, your users are
+not going to be happy if you force large changes after an upgrade.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Trust and importance of trust in releases&lt;/li&gt;
+&lt;li&gt;What not to do.&lt;/li&gt;
+&lt;li&gt;Importance of publically visible tests: Linting, Unit tests,
+Functional tests, API tests.&lt;/li&gt;
+&lt;li&gt;Everything cannot be tested, some things may need to be manually
+done. Build your pipeline so you &lt;em&gt;only&lt;/em&gt; test what cannot be
+automated.&lt;/li&gt;
+&lt;li&gt;The need for Release notes and Upgrade guides.&lt;/li&gt;
+&lt;li&gt;Remember to create a good experience for all your consumers - end
+users, sysadmins, and developers.&lt;/li&gt;
+&lt;li&gt;Lessons from &lt;tt class="docutils literal"&gt;requests&lt;/tt&gt; for developer experience.&lt;/li&gt;
+&lt;li&gt;Lessons from &lt;tt class="docutils literal"&gt;ansible&lt;/tt&gt; for for sysadmin experience.&lt;/li&gt;
+&lt;li&gt;Lessons from Gerrit for user experience and upgrade experience.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nigel Babu</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/building-trust-in-releases.html</guid></item><item><title>Create an impact with "Good Documentation"</title><link>https://pyvideo.org/pycon-pune-2017/create-an-impact-with-good-documentation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The quality of a project document makes or breaks the image of a
+project. A document (be it a release note, or just a usage guideline)
+is the first thing one gives a user before even selling the idea of
+the project.&lt;/div&gt;
+&lt;div class="line"&gt;This session is for all those people who have a great project and want
+to learn how to create a greater impact through documentation.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;-Why documentation? What is in it for me? -How to plan, start,
+structure and write an effective document? -Use cases&lt;/div&gt;
+&lt;div class="line"&gt;-Tips and Tricks for making an everlasting impact and immediate
+connect with the user&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vidya Iyengar</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/create-an-impact-with-good-documentation.html</guid></item><item><title>Hacking Mailing Lists - The Mailman 3 API Ecosystem</title><link>https://pyvideo.org/pycon-pune-2017/hacking-mailing-lists-the-mailman-3-api-ecosystem.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mailman, the well-known and trusted Mailing list manager, introduced a
+number of APIs in version 3.0 that make it a much more modular system
+than previous versions. These APIs can be used to manage your Mailman
+instance and to access mailing list posts as they travel through the
+system. This talk is an introduction to those APIs and how you can use
+them to integrate Mailman 3 into your own applications and integrate it
+with your own business processes and systems.&lt;/p&gt;
+&lt;p&gt;In this talk you will learn:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;About Mailman 3’s basic architecture and which LMTP-, REST- and
+Python-based APIs are available&lt;/li&gt;
+&lt;li&gt;How Mailman 3 uses its APIs internally for its management web UI
+(Postorius) and archiver (HyperKitty)&lt;/li&gt;
+&lt;li&gt;How you can use Mailman 3’s REST API to programatically create new
+lists, subscribe users, change settings and preferences and much more&lt;/li&gt;
+&lt;li&gt;How you can access list posts for further processing before they
+leave the system&lt;/li&gt;
+&lt;li&gt;Learn about some interesting new sub projects that use and enhance
+these APIs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll sprint on Mailman at the developer sprints - come hack with me!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Florian Fuchs</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/hacking-mailing-lists-the-mailman-3-api-ecosystem.html</guid></item><item><title>[Keynote] From 0kmph to Blinking LED</title><link>https://pyvideo.org/pycon-pune-2017/keynote-from-0kmph-to-blinking-led.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote by John ‘warthog9’ Hawley&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John 'warthog9' Hawley</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/keynote-from-0kmph-to-blinking-led.html</guid></item><item><title>[Keynote] Learning adventures with Python in my Physics Class</title><link>https://pyvideo.org/pycon-pune-2017/keynote-learning-adventures-with-python-in-my-physics-class.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Praveen Patil&lt;/p&gt;
+&lt;p&gt;About Speaker:
+Praveen has been Google Summer of Code alumnus (GSoC 2014, 2015 and 2016). He is also mentor for Google Code-In and proud Fedora volunteer. Actively involved in ExpEYES project (&lt;a class="reference external" href="http://expeyes.in"&gt;http://expeyes.in&lt;/a&gt;), teacher training programs and in the free time develops e-content for National Repository of Open Educational Resources (NROER). Experimenting and exploring the use of Python to actively engage the students and help them visualize the concepts of science and maths and have better understanding.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Praveen Patil</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/keynote-learning-adventures-with-python-in-my-physics-class.html</guid></item><item><title>[Keynote] (MY) OSS Life</title><link>https://pyvideo.org/pycon-pune-2017/keynote-my-oss-life.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote by Honza Král&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Honza Král</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/keynote-my-oss-life.html</guid></item><item><title>Writing Beautiful Code</title><link>https://pyvideo.org/pycon-pune-2017/writing-beautiful-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing code is hard. Writing beautiful code is even more so.&lt;/p&gt;
+&lt;p&gt;How to write code that is pleasant to read, easy to understand and joy
+to maintain?&lt;/p&gt;
+&lt;p&gt;Simple things like using right variable names, avoiding to much nesting,
+using white space and comments etc. makes a lot difference to
+readability of the code. Even though these things look very simple, it
+is very hard to put them in practice.&lt;/p&gt;
+&lt;p&gt;In this talk, I’ll try summarise the age old wisdom of writing beautiful
+code using python examples.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Choose meaningful variable names&lt;/div&gt;
+&lt;div class="line"&gt;Avoid generic names&lt;/div&gt;
+&lt;div class="line"&gt;Give names to magic numbers&lt;/div&gt;
+&lt;div class="line"&gt;Avoid too many nested levels&lt;/div&gt;
+&lt;div class="line"&gt;Avoid too many branches&lt;/div&gt;
+&lt;div class="line"&gt;Use “telephone test” for readability&lt;/div&gt;
+&lt;div class="line"&gt;Use idioms of the language&lt;/div&gt;
+&lt;div class="line"&gt;Avoid superficial comments&lt;/div&gt;
+&lt;div class="line"&gt;Add comments to explain complex piece of software&lt;/div&gt;
+&lt;div class="line"&gt;Avoid writing comments by writing code clearly&lt;/div&gt;
+&lt;div class="line"&gt;Avoid side effects&lt;/div&gt;
+&lt;div class="line"&gt;Try to make functions stateless&lt;/div&gt;
+&lt;div class="line"&gt;Let one function do one thing well&lt;/div&gt;
+&lt;div class="line"&gt;Write smaller functions - the 7 plus or minus 2 rule&lt;/div&gt;
+&lt;div class="line"&gt;Separate “what” from “how”&lt;/div&gt;
+&lt;div class="line"&gt;Don’t sacrifice clarity for efficiency&lt;/div&gt;
+&lt;div class="line"&gt;The Zen of Python&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anand Chitipothu</dc:creator><pubDate>Thu, 16 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-16:pycon-pune-2017/writing-beautiful-code.html</guid></item></channel></rss>

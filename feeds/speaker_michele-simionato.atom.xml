@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_michele-simionato.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-11T00:00:00+00:00</updated><entry><title>Tips for the scientific programmer</title><link href="https://pyvideo.org/europython-2019/tips-for-the-scientific-programmer.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Michele Simionato</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/tips-for-the-scientific-programmer.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a talk for people who need to perform large numeric
+calculations. They could be scientists, developers working in close
+contact with scientists, or even people working on finance and other
+quantitative fields. Such people are routinely confronted with issues
+like&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;1 parallelism: how to parallelize calculations efficiently&lt;/div&gt;
+&lt;div class="line"&gt;2 data: how to store and manage large amounts of data efficiently&lt;/div&gt;
+&lt;div class="line"&gt;3 memory: how to avoid running out of memory&lt;/div&gt;
+&lt;div class="line"&gt;4 performance: how to be fast&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The goal of the talk is to teach some lessons learned after several
+years of doing numeric simulations in a context were micro-optimizations
+are the least important factor, while overall architecture, design
+choices and good algorithms are of paramount importance.&lt;/p&gt;
+</summary><category term="Algorithms"></category><category term="Architecture"></category><category term="Big Data"></category><category term="Case Study"></category><category term="Performance"></category></entry><entry><title>Python in scientific computing: what works and what doesn't</title><link href="https://pyvideo.org/europython-2018/python-in-scientific-computing-what-works-and-what-doesnt.html" rel="alternate"></link><published>2018-07-25T00:00:00+00:00</published><updated>2018-07-25T00:00:00+00:00</updated><author><name>Michele Simionato</name></author><id>tag:pyvideo.org,2018-07-25:europython-2018/python-in-scientific-computing-what-works-and-what-doesnt.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There is no want of technologies for doing scientific calculations in
+Python. In this talk I will share some hard-learned knowledge about what
+works and what doesn’t with the libraries we are using at GEM (the
+Global Earthquake Model foundation). I will show how the following
+libraries fare with respect to our main concerns of performance,
+simplicity, reliability and portability&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;h5py&lt;/li&gt;
+&lt;li&gt;celery/rabbitmq&lt;/li&gt;
+&lt;li&gt;PyZMQ&lt;/li&gt;
+&lt;li&gt;numpy/scipy&lt;/li&gt;
+&lt;li&gt;rtree&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and I will talk about several library bugs we found and had to work
+around. I will also talk about some libraries that we do not use (such
+as cython, numba, dask, pytables, …) and the reason why we do not use
+them. Hopefully this will be useful to people using or planning to use a
+similar software stack.&lt;/p&gt;
+&lt;p&gt;My slides are here: &lt;a class="reference external" href="https://gitpitch.com/micheles/papers/europython2018"&gt;https://gitpitch.com/micheles/papers/europython2018&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Lessons learned in X years of parallel programming</title><link href="https://pyvideo.org/europython-2017/lessons-learned-in-x-years-of-parallel-programming.html" rel="alternate"></link><published>2017-07-14T00:00:00+00:00</published><updated>2017-07-14T00:00:00+00:00</updated><author><name>Michele Simionato</name></author><id>tag:pyvideo.org,2017-07-14:europython-2017/lessons-learned-in-x-years-of-parallel-programming.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There is a lot more to parallel programming in Python than
+multiprocessing.Pool().map.&lt;/p&gt;
+&lt;p&gt;In this talk I will share some hard-learned knowledge gained in
+several years of parallel programming.&lt;/p&gt;
+&lt;p&gt;Covered topics will include performance, ways to measure the
+performance, memory occupation, data transfer and ways to reduce the
+data transfer, how to debug parallel programs and useful libraries.&lt;/p&gt;
+&lt;p&gt;I will give some practical examples, both in enterprise programming
+(importing CSV files in a database) and in scientific programming
+(numerical simulations). The initial part of the talk will be
+pedagogical, advocating the convenience of parallel programming in
+the small (i.e. in single machine environment); the second part will
+be more advanced and will touch a few things to know when writing
+parallel programs for medium-sized clusters.&lt;/p&gt;
+&lt;p&gt;I will also briefly discuss the compatibility layer that we have
+developed at GEM to be independent from the underlying
+parallelization technology (multiprocessing, concurrent.futures,
+celery, ipyparallel, grid engine...).&lt;/p&gt;
+</summary></entry><entry><title>How to migrate from PostgreSQL to HDF5 and live happily ever after</title><link href="https://pyvideo.org/europython-2016/how-to-migrate-from-postgresql-to-hdf5-and-live-happily-ever-after.html" rel="alternate"></link><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><author><name>Michele Simionato</name></author><id>tag:pyvideo.org,2016-08-05:europython-2016/how-to-migrate-from-postgresql-to-hdf5-and-live-happily-ever-after.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Michele Simionato - How to migrate from PostgreSQL to HDF5 and live happily ever after
+[EuroPython 2016]
+[22 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/how-to-migrate-from-postgresql-to-hdf5-and-live-happily-ever-after"&gt;https://ep2016.europython.eu//conference/talks/how-to-migrate-from-postgresql-to-hdf5-and-live-happily-ever-after&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;This talk is for people who have a lot of floating numbers inside
+PostgreSQL tables. I will bring as an example my personal experience
+with a scientific project that used PostgreSQL as storage for a rather
+complex set of composite multidimensional arrays and ran into all
+sorts of performances issues, both in reading and writing the data. I
+will explain how I solved all that by dropping the database in favor
+of an HDF5 file, while keeping the application running and the users
+happy.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;This talk is for people who have a lot of floating numbers inside
+PostgreSQL tables and have problems with that. I will narrate my
+experience with a scientific project that used PostgreSQL as storage
+for a rather complex set of composite multidimensional arrays and ran
+into all sorts of performances issues, both in reading and writing the
+data.  I will discuss the issues and the approach that was taken first
+to mitigate them (unsuccessfully) and then to remove them
+(successfully) by a complete rethinking of the underlying architecture
+and eventually the removal of the database. I will talk about the
+migration strategies that were employed in the transition period and
+how to live with a mixed environment of metadata in PostgreSQL and
+data in an HDF5 file. I will also talk about concurrency, since the
+underlying application is distributed and massively parallel, and
+still it uses the purely sequential version of HDF5. Questions from
+the audience are expected and welcome.
+The talk is of interest to a large public, since it is mostly about
+measuring things, monitoring and testing a legacy system,
+making sure that the changes do not break the previous behavior
+and keeping the users happy, while internally rewriting
+all of the original code. And doing that in a small enough number of years!&lt;/p&gt;
+</summary></entry><entry><title>Lightning Talks 2016-07-18</title><link href="https://pyvideo.org/europython-2016/lightning-talks-2016-07-18.html" rel="alternate"></link><published>2016-07-28T00:00:00+00:00</published><updated>2016-07-28T00:00:00+00:00</updated><author><name>Harald Massa</name></author><id>tag:pyvideo.org,2016-07-28:europython-2016/lightning-talks-2016-07-18.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Various speakers - Lightning Talks
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Lightning talks, presented by Harald Massa&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Larry Hastings  - My life as a MEME&lt;/li&gt;
+&lt;li&gt;Javier Domingo - Python exp!&lt;/li&gt;
+&lt;li&gt;Danielle Procida - Python Adventures in Namibia&lt;/li&gt;
+&lt;li&gt;Radomes Dopiralski - Win Fabulous Prizes&lt;/li&gt;
+&lt;li&gt;Thomas Waldmann - Borg Backup&lt;/li&gt;
+&lt;li&gt;Lasse Schuirmann - Cola - Lint and Fix All Code&lt;/li&gt;
+&lt;li&gt;Tuna Vargi - argüman.org&lt;/li&gt;
+&lt;li&gt;Harry Percival &amp;amp; Fabian Kreutz - Sponsored Massage Training, in Aid of The Python Software Foundation&lt;/li&gt;
+&lt;li&gt;Michele Simionato - Thanks for the Python3 Statement&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>plac: more than just another command-line arguments parser</title><link href="https://pyvideo.org/europython-2011/plac-more-than-just-another-command-line-argumen.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Michele Simionato</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/plac-more-than-just-another-command-line-argumen.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Michele Simionato - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;plac is general purpose tool than can be used to define command-oriented
+domain specific languages (DSLs). In its simplest form it can be used as
+a command-line arguments parser with an easier-to-use API than argparse.
+It can also be used to replace the cmd module in the standard library.
+Moreover it can be used to automatize functional tests and for much
+more. The talk will touch upon many use cases where plac can make your
+life as a developer simpler and better. Technically Plac is a wrapper
+over argparse and works in all versions of Python starting from Python
+2.3 up to Python 3.2. In Python 3.X it takes advantage of function
+annotations to define the parser in a declarative way, instead of the
+imperative way of argparse. In Python 2.X it uses decorators instead, to
+reach the same goal. The talk is a hands-on interactive demonstration of
+plac capabilities.&lt;/p&gt;
+</summary><category term="api"></category><category term="argparse"></category><category term="cmd"></category><category term="decorators"></category><category term="parser"></category></entry></feed>

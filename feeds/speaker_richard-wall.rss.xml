@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 02 Aug 2015 00:00:00 +0000</lastBuildDate><item><title>Faking It - The Art of Testing Using Verified Fakes</title><link>https://pyvideo.org/europython-2015/faking-it-the-art-of-testing-using-verified-fakes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Richard Wall - Faking It - The Art of Testing Using Verified Fakes
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Have you ever worried that your tests aren't as good because they're
+running against a fake or mock instead of the real thing?
+Verified fakes solve this problem.
+Verified fakes allow for simplified testing using fakes while still
+providing the assurance that code tested using a fake implementation
+will behave the same way when used with a real implementation.&lt;/p&gt;
+&lt;p&gt;The talk will begin with a case-study, demonstrating what it means to
+write a &amp;quot;verified fake&amp;quot; implementation of a public API.
+I will show how to write tests that verify a fake implementation of a
+well defined API
+and I will show how those same tests can be re-used to verify and test
+real implementations of the same API.&lt;/p&gt;
+&lt;p&gt;The talk will end with a proposal that more libraries should include
+verified fakes.
+I will show, with real-world examples, how verified fakes can be used
+by integrators
+and discuss how they are superior to ad-hoc, unverified, mocking.&lt;/p&gt;
+&lt;p&gt;During the talk I will refer to various real world, Open Source
+examples. Including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Flocker's Pluggable &amp;quot;Block Device Backend&amp;quot; [1]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This API allows Flocker to manipulate file systems on OpenStack
+Cinder Blocks and AWS EBS devices.
+It also makes it easy for third parties to implement their own
+Flocker block device backends.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Eliot's Memory Logger - and its use in testing and verifying logged messages.&lt;/li&gt;
+&lt;li&gt;LibCloud's DummyNodeDriver - and its limitations.&lt;/li&gt;
+&lt;li&gt;Boto - as an example of a library that could benefit from a verified, introspectable fake.&lt;/li&gt;
+&lt;li&gt;Docker-py - as an example of a library for which we have written a verified fake.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There will be at least 5 minutes for discussion at the end of the talk.&lt;/p&gt;
+&lt;p&gt;[1] Flocker is an Open Source Docker orchestration system written in Python by ClusterHQ&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Richard Wall</dc:creator><pubDate>Sun, 02 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-02:europython-2015/faking-it-the-art-of-testing-using-verified-fakes.html</guid></item><item><title>Twisted Names: DNS Building Blocks for Python Programmers</title><link>https://pyvideo.org/europython-2014/twisted-names-dns-building-blocks-for-python-pro.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In this talk I will report on my efforts to update the DNS components of
+Twisted and discuss some of the things I've learned along the way. I'll
+demonstrate the EDNS0, DNSSEC and DANE client support which I have been
+working on and show how these new Twisted Names components can be glued
+together to build novel DNS servers and clients.&lt;/p&gt;
+&lt;p&gt;Twisted is an event-driven networking engine written in Python and
+licensed under the open source MIT license. It is a platform for
+developing internet applications.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My talk will consist of four main sections. Given the 30 minute time
+constraint, I may shorten or drop the two introductory parts in favour
+of the narrative and demonstration of interesting new APIs and code
+examples in the final two parts. My experience of delivering a similar
+talk at PyconUK 2013 is that those are the parts that will most interest
+the audience and prompt most audience questions.&lt;/p&gt;
+&lt;p&gt;Here are my proposed sections with rough time allocations and
+descriptions:&lt;/p&gt;
+&lt;div class="section" id="introducing-twisted-names-0-5"&gt;
+&lt;h4&gt;Introducing Twisted Names (0-5)&lt;/h4&gt;
+&lt;p&gt;Twisted includes a comprehensive set of DNS components, collectively
+known as Twisted Names.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://twistedmatrix.com/trac/wiki/TwistedNames"&gt;https://twistedmatrix.com/trac/wiki/TwistedNames&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will begin the talk with a quick introduction to Twisted Names and its
+capabilities, including one or two simple code examples.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="introducing-my-project-0-5"&gt;
+&lt;h4&gt;Introducing My Project (0-5)&lt;/h4&gt;
+&lt;p&gt;With generous funding from The NLnet Foundation I am adding EDNS(0) and
+DNSSEC client support in Twisted Names, including full DNSSEC
+verification and DANE support.&lt;/p&gt;
+&lt;p&gt;In the talk I will quickly summarise the steps taken and lessons learned
+in securing that funding, and hope to encourage the audience to seek
+funding to support there own pet OSS projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-s-new-in-twisted-names-project-progress-report-10"&gt;
+&lt;h4&gt;What's New in Twisted Names / Project Progress Report (10)&lt;/h4&gt;
+&lt;p&gt;My project plan is divided into the following broad milestones.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;EDNS(0)&lt;ol class="arabic"&gt;
+&lt;li&gt;OPT record&lt;/li&gt;
+&lt;li&gt;Extended Message object with additional EDNS(0) items&lt;/li&gt;
+&lt;li&gt;EDNS Client&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;RRSET handling&lt;ol class="arabic"&gt;
+&lt;li&gt;Canonical Form and Order of Resource Records&lt;/li&gt;
+&lt;li&gt;Receiving RRSETs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;DNSSEC&lt;ol class="arabic"&gt;
+&lt;li&gt;New DNSSEC Records and Lookup Methods&lt;/li&gt;
+&lt;li&gt;Security-aware Non-validating Client&lt;/li&gt;
+&lt;li&gt;Validating Client&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;DANE&lt;ol class="arabic"&gt;
+&lt;li&gt;A twistd dns authoritative server capable of loading and serving
+TLSA records.&lt;/li&gt;
+&lt;li&gt;A Twisted web client Agent wrapper which performs TLSA lookup and
+verification of a server certificate.&lt;/li&gt;
+&lt;li&gt;A HostnameClientEndpoint which performs TLSA lookup and
+verification of a server certificate.&lt;/li&gt;
+&lt;li&gt;A command line tool for debugging TLSA records and for verifying a
+certificate file against a domain name.&lt;/li&gt;
+&lt;li&gt;A TLSA Record class for encoding and decoding TLSA bytes.&lt;/li&gt;
+&lt;li&gt;A TLSA lookup method which accepts port, protocol and hostname and
+constructs a suitable TLSA domain name.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In the talk I will quickly outline these goals, report on my progress so
+far, and show running code examples to demonstrate the new APIs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="future-developments-5"&gt;
+&lt;h4&gt;Future Developments (5)&lt;/h4&gt;
+&lt;p&gt;The aim of my project is to lay foundations that will eventually allow
+end-to-end DNSSEC verification in all the core Twisted networking
+components, including Twisted Conch (SSH), Mail (SMTP, POP3),
+Perspective Broker (RPC), Web (HTTP, XML-RPC, SOAP), Words (XMPP, IRC).&lt;/p&gt;
+&lt;p&gt;Additionally I hope that this foundation work will encourage the
+development of end-to-end DNSSEC verification in many of the Open Source
+and commercial projects built on top of Twisted.&lt;/p&gt;
+&lt;p&gt;I will end the talk by outlining these exciting possibilities, and
+demonstrate some code examples that illustrate these possibilities.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="q-a-5-10"&gt;
+&lt;h4&gt;Q &amp;amp; A (5-10)&lt;/h4&gt;
+&lt;p&gt;I'm determined to leave at least five minutes at the end for audience
+questions. At PyconUK 2013 I was frustrated because I ran out of time
+and ended up answering questions outside the lecture theatre; questions
+which would have been interesting to the whole audience.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Richard Wall</dc:creator><pubDate>Fri, 25 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-25:europython-2014/twisted-names-dns-building-blocks-for-python-pro.html</guid></item></channel></rss>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 01 Nov 2012 00:00:00 +0000</lastBuildDate><item><title>dev --+ qual --+ prod</title><link>https://pyvideo.org/pycon-de-2012/dev-qual-prod.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Es wird das Konzept vorgestellt, wie man Projekte strukturieren kann um
+von der ersten Minute an eine mind. dreistufige Landschaft (Entwicklung,
+Qualitätssicherung, Produktiv) vorzusehen.&lt;/p&gt;
+&lt;p&gt;Die zentrale Rolle spielen getrennte Systemnutzer um isolierte
+Umgebungen zu erstellen. Dieser Ansatz ist für Python-Server-Anwendungen
+wie z.B Django- Anwendungen sehr gut anwendbar.&lt;/p&gt;
+&lt;p&gt;Seit einiger Zeit setzen wir getrennte Linux-Nutzer anstatt virtualenv
+ein. Das zentrale Merkmal, ist der Name des Systemnutzers:&lt;/p&gt;
+&lt;p&gt;Namensschema des Linux-Nutzers: app_customer_stage&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;app ist die Anwendung (zB cms)&lt;/li&gt;
+&lt;li&gt;customer ist ein Kürzel für den Kunden&lt;/li&gt;
+&lt;li&gt;stage ist d, q, p (dev, qual, prod).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Beispiel:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;mycms_customer1_d Entwicklungssystem&lt;/li&gt;
+&lt;li&gt;mycms_customer1_q Qualitätssicherung&lt;/li&gt;
+&lt;li&gt;mycms_customer1_p Produktivsystem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In einer zentralen Datei wird konfiguriert auf welchem Host welches
+System läuft. Jedes System kennt das nächste System (Bsp dev-&amp;gt;qual), so
+dass ein Abgleich relativ einfach möglich ist.&lt;/p&gt;
+&lt;p&gt;Das simple System hat viele Vorteile, die ich in dem Vortrag vorstellen
+möchte.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Güttler</dc:creator><pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-01:pycon-de-2012/dev-qual-prod.html</guid><category>deployment</category><category>linux</category><category>virtualenv</category></item></channel></rss>

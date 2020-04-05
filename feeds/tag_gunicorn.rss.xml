@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 15 Sep 2012 00:00:00 +0000</lastBuildDate><item><title>Gunicorn what's next? The new web challenge</title><link>https://pyvideo.org/pycon-japan-2012/gunicorn-whats-next-the-new-web-challenge.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gunicorn was designed in view of easing the deployment of your python web application on the web hand have some success to do it. With the new challenges of the web (SPDY, Websockets, Green computing...), it’s time to improve its design. This talk will cover the current design of Gunicorn, what need to be fixed and the new features that will be introduced in the future major release.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Benoit Chesneau</dc:creator><pubDate>Sat, 15 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-15:pycon-japan-2012/gunicorn-whats-next-the-new-web-challenge.html</guid><category>gunicorn</category></item><item><title>Safely deploying on the cutting edge</title><link>https://pyvideo.org/djangocon-us-2011/djangocon-2011--safely-deploying-on-the-cutting-e.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Safely deploying on the cutting edge&lt;/p&gt;
+&lt;p&gt;Eric Holscher&lt;/p&gt;
+&lt;p&gt;This talk will go through the deployment system that we have built at
+Urban Airship. It will cover the process that allows us to automate our
+deployments, making it safe to deploy at any time. It's built on Fabric,
+Gunicorn, Virtualenv, Rsync, Supervisord, and Python. We end up with
+fully isolated environments for our services that are easy to manage.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Mon, 05 Sep 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--safely-deploying-on-the-cutting-e.html</guid><category>deploying</category><category>djangocon</category><category>djangocon2011</category><category>fabric</category><category>gunicorn</category><category>virtualenv</category><category>web</category></item><item><title>Using Coroutines to Create Efficient, High-Concurrency Web Applications</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using Coroutines to Create Efficient, High-Concurrency Web Applications&lt;/p&gt;
+&lt;p&gt;Presented by Matt Spitz&lt;/p&gt;
+&lt;p&gt;Creating high-concurrency python web applications is inherently
+difficult for a variety of reasons. In this talk, I'll discuss the
+various iterations of application server paradigms we've used at meebo,
+the advantages/disadvantages of each approach, and why we've settled on
+a coroutine-based WSGI setup to handle our high-concurrency web
+applications going forward.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There are a number of ways in which to create a web application in
+python. Some examples include a straight-up CGI scripts that run anew
+with each request, preforked Apache workers that each handle multiple
+requests, and using an asynchronous web framework like Twisted.&lt;/p&gt;
+&lt;p&gt;At meebo, we've settled on using gunicorn, a lightweight WSGI server,
+which supports gevent, a coroutine-based network library for python.
+Gevent monkeypatches python's system modules to make network requests
+asynchronous using an event loop based on libevent. This trick allows
+the developer to use a simple blocking CGI as a non-blocking web
+application that can handle many concurrent requests.&lt;/p&gt;
+&lt;p&gt;I'll discuss our iteration process through these approaches to building
+web applications, why we ended up choosing gunicorn+gevent, the
+challenges this new framework presents, and how we've dealt with them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Spitz</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html</guid><category>coroutines</category><category>gevent</category><category>gunicorn</category><category>highconcurrency</category><category>libevent</category><category>pycon</category><category>pycon2011</category><category>wsgi</category></item></channel></rss>

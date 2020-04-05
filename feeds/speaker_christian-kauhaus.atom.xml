@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_christian-kauhaus.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2013-10-16T00:00:00+00:00</updated><entry><title>IPv6-Socketprogrammierung mit Python</title><link href="https://pyvideo.org/pycon-de-2011/ipv6-socketprogrammierung-mit-python.html" rel="alternate"></link><published>2011-10-07T00:00:00+00:00</published><updated>2011-10-07T00:00:00+00:00</updated><author><name>Christian Kauhaus</name></author><id>tag:pyvideo.org,2011-10-07:pycon-de-2011/ipv6-socketprogrammierung-mit-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Vortrag befasst sich mit der Low-Level-Programmierung von
+IPv6-Clients und -Servern unter Python. Es werden Muster für
+RFC-konformen und Dual-Stack-fähigen Code diskutiert und mögliche
+Stolperfallen erläutert. Weiterhin wird die String-Repräsentation von
+IPv6-Adressen angesprochen. Der Vortrag richtet sich an Entwickler, die
+Komponenten IPv6-fähig machen wollen oder Netzwerkcode warten.&lt;/p&gt;
+</summary></entry><entry><title>nagiosplugin - eine Python-Bibliothek für Monitoring-Plugins</title><link href="https://pyvideo.org/pycon-de-2012/nagiosplugin-eine-python-bibliothek-fur-monitor.html" rel="alternate"></link><published>2012-10-31T00:00:00+00:00</published><updated>2012-10-31T00:00:00+00:00</updated><author><name>Christian Kauhaus</name></author><id>tag:pyvideo.org,2012-10-31:pycon-de-2012/nagiosplugin-eine-python-bibliothek-fur-monitor.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Auch wenn in der letzten Zeit sehr viel Bewegung in die Monitoring-Szene
+gekommen ist (#monitoringsucks etc.), werden die Platzhirsche
+Nagios/Icinga und ihre Standards auf absehbare Zeit nicht verschwinden.
+Das Nagios-Plugin- API stellt eine sehr weit verbreitete Schnittstelle
+zur Anbindung einzelner Checks an Monitoring-Systeme dar. Obwohl das API
+in den Grundzügen sehr einfach ist, ist der Programmieraufwand für
+vollständig konforme Plugins erstaunlich hoch.&lt;/p&gt;
+&lt;p&gt;Die
+&lt;a class="reference external" href="http://pypi.python.org/pypi/nagiosplugin/"&gt;*nagiosplugin*-Bibliothek&lt;/a&gt;
+nimmt dem Entwickler viele Details ab, so dass er sich auf den Inhalt
+seiner Checks konzentrieren kann. Der Vortrag führt in das Schreiben von
+Nagios- kompatiblen Plugins ein, zeigt den typischen Aufbau von
+Nagios-Plugins und das Grundprinzip eigener Plugins. Die Konfiguration
+und der Betrieb von Monitoring-Systemen im Großen sollen nicht
+thematisiert werden.&lt;/p&gt;
+&lt;p&gt;Eine Einführung stellt die notwendigen Elemente wie Klassengerüst,
+Messwerterhebung, Ranges, Statusausgabe und Performancedaten sukzessive
+in aufeinander aufbauenden Beispielen vor, so dass am Ende ein
+einfacher, aber praktisch einsetzbarer Check entsteht.&lt;/p&gt;
+&lt;p&gt;Der Teil über fortgeschrittene Aspekte und Stolperfallen reißt
+Einzelbeispiele zu Themen wie mehrere Datenquellen, Timeouts, Auswertung
+wachsender Logfiles und Checks mit &amp;quot;Gedächtnis&amp;quot; an und zeigt typischen
+Fehlerquellen auf.&lt;/p&gt;
+&lt;p&gt;Den Abschluss bildet ein kurzer Ausblick auf die weitere Entwicklung der
+&lt;em&gt;nagiosplugin&lt;/em&gt;-Bibliothek.&lt;/p&gt;
+</summary><category term="icinga"></category><category term="monitoring"></category><category term="nagios"></category><category term="plugin"></category></entry><entry><title>File-I/O ist doch ganz einfach, oder?</title><link href="https://pyvideo.org/pycon-de-2013/file-io-ist-doch-ganz-einfach-oder.html" rel="alternate"></link><published>2013-10-16T00:00:00+00:00</published><updated>2013-10-16T00:00:00+00:00</updated><author><name>Christian Kauhaus</name></author><id>tag:pyvideo.org,2013-10-16:pycon-de-2013/file-io-ist-doch-ganz-einfach-oder.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Vortrag soll Bewusstsein dafür schaffen, wann man sich aus einer
+komfortablen Umgebung (z.B. einem Application-Framework) in eine
+systemspezifische Domäne begibt. Aus meiner Erfahrung im DevOps-Umfeld
+sind mir viele Fälle bekannt, in denen Code auf Entwickler-Maschinen
+keine Probleme macht, sich aber auf produktiven Servern nicht
+ausreichend robust verhält. Die Eigenschaften von File-I/O in Python
+dienen dabei als durchgehendes Anwendungsbeispiel.&lt;/p&gt;
+&lt;p&gt;Der Vortrag gliedert sich in zwei Teile. Im ersten Teil möchte ich
+anhand von ausgewählten &amp;quot;Pannen&amp;quot; zeigen, wann ein &lt;em&gt;with open(...)&lt;/em&gt;
+allein nicht ausreicht, da z.B. die Python-Standardfunktionen keine
+Zuverlässigkeit im Sinne der ACID-Eigenschaften gewährleisten. Im
+zweiten Teil geht um konkrete Programmiertechniken wie
+Write-Replace-Updates, Locking oder fsync, die die Robustheit von I/O
+ggf. unter Einschränkung der Plattformunabhängigkeit erhöhen.&lt;/p&gt;
+&lt;p&gt;Der Anwendungsteil des Vortrags basiert auf Material aus meinem
+&lt;a class="reference external" href="http://blog.gocept.com/2013/07/15/reliable-file-updates-with-python/"&gt;Blogpost&lt;/a&gt;
+zum gleich Thema.&lt;/p&gt;
+</summary><category term="acid"></category><category term="plattformunabhängigkeit"></category><category term="systemprogrammierung"></category><category term="zuverlässigkeit"></category></entry></feed>

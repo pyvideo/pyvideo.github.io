@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_douglas-bagnall.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-09-14T00:00:00+00:00</updated><entry><title>Douglas Bagnall - pyserf - a shortcut for writing C extensions in C</title><link href="https://pyvideo.org/kiwi-pycon-2009/douglas-bagnall---pyserf---a-shortcut-for-writing.html" rel="alternate"></link><published>2009-11-07T00:00:00+00:00</published><updated>2009-11-07T00:00:00+00:00</updated><author><name>Douglas Bagnall</name></author><id>tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/douglas-bagnall---pyserf---a-shortcut-for-writing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;pyserf - a shortcut for writing C extensions in C&lt;/p&gt;
+&lt;p&gt;Presented by Douglas Bagnall&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There are many clever ways of connecting Python and C code together, and
+pyserf is one of those. It is just a short script that parses a module
+outline and produces an idiomatic template for a C extension providing
+the same signatures, so all you need to do is write the bits that
+actually do stuff.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;Pyserf is a tiny project that I wrote for my own use years ago and never
+released because it is so obvious that dozens of better versions must
+exist. The idea is simple -- you write an outline of a module like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+&amp;quot;&amp;quot;&amp;quot;module documentation&amp;quot;&amp;quot;&amp;quot;
+def top_level_function(int_a, float_b):
+   &amp;quot;function documentation&amp;quot;
+   return float_c
+
+class SomeModule:
+   &amp;quot;&amp;quot;&amp;quot;class documentation&amp;quot;&amp;quot;&amp;quot;
+   def foo(self, int_ants obj_zoo):
+      &amp;quot;&amp;quot;&amp;quot;method documentation&amp;quot;&amp;quot;&amp;quot;
+      return float_frogs
+&lt;/pre&gt;
+&lt;p&gt;and pyserf uses the parsing modules in the standard library to generate
+a C file that will compile to an extension providing the interface it
+describes, with the documentation appearing in the right place and the
+type conversions all properly handled. The generated file is not a
+hideous unreadable mess, rather it is within a few characters of best
+practise according to the official tutorial. Once you have this
+template, you abandon your outline and write the middles of each
+function in C. In describing what pyserf does, this talk will
+demonstrate what is required to write an extension in C by hand, and
+show you some ways of using the standard libraries parsing modules.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</summary><category term="extensions"></category><category term="kiwipycon"></category><category term="kiwipycon2009"></category><category term="pyserf"></category></entry><entry><title>Douglas Bagnall - Te Tuhi Video Game System</title><link href="https://pyvideo.org/kiwi-pycon-2009/douglas-bagnall---te-tuhi-video-game-system.html" rel="alternate"></link><published>2009-11-07T00:00:00+00:00</published><updated>2009-11-07T00:00:00+00:00</updated><author><name>Douglas Bagnall</name></author><id>tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/douglas-bagnall---te-tuhi-video-game-system.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Te Tuhi Video Game System&lt;/p&gt;
+&lt;p&gt;Presented by Douglas Bagnall&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Tetuhi is a python program that turns drawings on paper into 2D top-down
+early 80s style video games. This talk describes how.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;Te Tuhi Video Game System is not a game in itself; rather it creates
+games based on arbitrary images that it is given. To use it, you draw a
+picture of the game you want to play, and it will give you the game that
+you really drew. The software was originally written for an art exhibit
+using slightly specialised hardware, but it has been released under the
+GPL and runs on ordinary computers. It uses Pygame, PIL, and custom C
+extensions that allow it to evolve a playable game from a wide variety
+of pictures. This talk will discuss the techniques used (both refined
+algorithms and hacky heuristics) and cover topics such as image
+analysis, machine learning, and interface design. There will be a
+demonstration.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</summary><category term="c"></category><category term="gpl"></category><category term="kiwipycon"></category><category term="kiwipycon2009"></category><category term="pil"></category><category term="pygame"></category></entry><entry><title>Lightning talks</title><link href="https://pyvideo.org/kiwi-pycon-2009/lightning-talks.html" rel="alternate"></link><published>2009-11-07T00:00:00+00:00</published><updated>2009-11-07T00:00:00+00:00</updated><author><name>Morris Jones</name></author><id>tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Morris Jones (Simple robot using python on a wifi router)&lt;/li&gt;
+&lt;li&gt;John Graves (Voice interaction)&lt;/li&gt;
+&lt;li&gt;Charles Manning (A noob does ctypes)&lt;/li&gt;
+&lt;li&gt;Raazesh Sainudiin (Computational Statistical Laboratories with SAGE
+Notebook Server)&lt;/li&gt;
+&lt;li&gt;Juergen Brendel (WSGI is easy)&lt;/li&gt;
+&lt;li&gt;Michael Hoppe (Basic data acquisition and analysis)&lt;/li&gt;
+&lt;li&gt;Carl Cerecke (A faster, cleaner goto statement)&lt;/li&gt;
+&lt;li&gt;Douglas Bagnall (Booki, Objavi, Espri: the FLOSS Manuals publishing
+suite)&lt;/li&gt;
+&lt;li&gt;Peter Harrison (Introduction to Autonomous Systems)&lt;/li&gt;
+&lt;li&gt;Jim Tittsler (Educational Content Packaging)&lt;/li&gt;
+&lt;li&gt;David Hood (Little lies to tell when teaching Python Programming)&lt;/li&gt;
+&lt;li&gt;Dylan Jay (How to host Python app for $20 in 20mins -
+collective.hostout)&lt;/li&gt;
+&lt;li&gt;Greg Hewgill (PSIL - Python S-expression Intermediate Language)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="ctypes"></category><category term="flossmanuals"></category><category term="goto"></category><category term="kiwipycon"></category><category term="kiwipycon2009"></category><category term="packaging"></category><category term="psil"></category><category term="robot"></category><category term="wsgi"></category></entry><entry><title>Lightning Talks</title><link href="https://pyvideo.org/kiwi-pycon-2014/lightning-talks-12.html" rel="alternate"></link><published>2014-09-14T00:00:00+00:00</published><updated>2014-09-14T00:00:00+00:00</updated><author><name>Jen Zajac</name></author><id>tag:pyvideo.org,2014-09-14:kiwi-pycon-2014/lightning-talks-12.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;01 - Jen Zajac - PRIZE DRAW - 1:44 02 - Steven Ellis - LCA Auckland 2015
+- 5:43 03 - Jay Gattuso - Heritage Preserve; #WeWantJam - 8:54 04 -
+James Polly - Fewer Boilerplate! - 12:07 05 - Aurynn Shaw - Let me show
+you the world - 16:19 06 - Ronen Baram - MySQL Performance Schema -
+19:41 07 - Douglas Bagnall - Julia - 22:14 08 - Grant Paton-Simpson /
+Richard Shea - NZ Python Promotion Pamhplet 24:50 09 - Elliot
+Paton-Simpson - Blackbox - 27:23 10 - Danny Adair / Thomi Richards - New
+Zealand Python User Group - 30:45 11 - Ben Olsen - Docker &amp;amp; Python -
+35:37 12 - Tim Penhey - Object Factories for TDD - 40:46 13 - Hamish
+Campbell - Horrible Python Obfuscation Tricks - 43:20 14 - Nick Wareing
+- Arduino Pull Request Notifier - 48:35 15 - Giovanni Moretti -
+Dynamically creating Python tutorials and presentations - 53:12 16 -
+Robert Coup - Bad-ass Postgres Tricks - 58:36 17 - Juergen Brendel -
+&amp;quot;One button&amp;quot; test and deploy on AWS - 1:03:59 18 - Tobi Wulff - Python
+Anti-Patterns - 1:09:14 19 - Sanjay Wadhwa - Map Production using Python
+scripts - 1:14:32 20 - Chris McDowall - Making weird maps with Python -
+1:19:34&lt;/p&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>Multimedia programming using Gstreamer (and, of course, Python)</title><link href="https://pyvideo.org/kiwi-pycon-2014/multimedia-programming-using-gstreamer-and-of-c.html" rel="alternate"></link><published>2014-09-14T00:00:00+00:00</published><updated>2014-09-14T00:00:00+00:00</updated><author><name>Douglas Bagnall</name></author><id>tag:pyvideo.org,2014-09-14:kiwi-pycon-2014/multimedia-programming-using-gstreamer-and-of-c.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gstreamer is a multimedia framework consisting of hundreds of
+interchangeable elements that can be plugged together like toy train
+tracks to create efficient processing pipelines. This talk will show how
+easy it is to put together reasonably complex Gstreamer pipelines with
+Python, and indicate why you might want to. It covers Gstreamer 1.x and
+both versions of CPython.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gstreamer [1] is a mature framework for developing applications that
+decode, encode, play, analyse, broadcast, or otherwise manipulate audio
+and video streams. It is used on phones and embedded devices, all over
+the linux desktop [2], and in giant multimedia displays.&lt;/p&gt;
+&lt;p&gt;It is easy to create simple Gstreamer pipelines using shell one-liners,
+but with Python it is possible to go beyond that, dealing with multiple
+parallel streams and reconfiguring pipelines on the fly. Examples drawn
+from real life problems include interleaving several hundred audio
+streams into one multi-channel stream and splitting a video stream into
+4 parts and sending each to a different projector for perfect
+syncronisation.&lt;/p&gt;
+&lt;p&gt;It is also possible to write a Gstreamer plugin in Python, which will be
+briefly touched on.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="http://gstreamer.freedesktop.org/"&gt;http://gstreamer.freedesktop.org/&lt;/a&gt; [2]
+&lt;a class="reference external" href="http://gstreamer.freedesktop.org/apps/"&gt;http://gstreamer.freedesktop.org/apps/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://speakerdeck.com/nzpug/douglas-bagnall-multimedia-programming-using-gstreamer-and-of-course-python"&gt;https://speakerdeck.com/nzpug/douglas-bagnall-multimedia-programming-using-gstreamer-and-of-course-python&lt;/a&gt;&lt;/p&gt;
+</summary><category term="talk"></category></entry></feed>

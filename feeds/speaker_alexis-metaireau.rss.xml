@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate><item><title>Une introduction à Circus, un process watcher en python</title><link>https://pyvideo.org/djangocon-toulouse-2012/une-introduction-a-circus-un-process-watcher-en-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Circus est un programme capable de gérer la vie et la mort des processus et des sockets sur votre machine. L'idée est de pouvoir gérer ceux-cis facilement, depuis une interface python, et de recevoir des informations sur leur état: consommation mémoire, processeur, etc, pour choisir de faire quelque chose à partir de là (par exemple ajouter de nouveaux process web si les existants sont déjà tous utilisés et occupés).&lt;/p&gt;
+&lt;p&gt;Il est possible de contrôler Circus depuis python, depuis des sockets zeromq ou depuis une interface web, selon vos besoin. Cette présentation est une introduction au projet: comment vous pouvez l'utiliser et comment celui-ci est conçu pour être facilement extensible pour vos propres besoins.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexis Métaireau</dc:creator><pubDate>Sat, 24 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-24:djangocon-toulouse-2012/une-introduction-a-circus-un-process-watcher-en-python.html</guid><category>circus</category></item><item><title>Cliquet: un toolkit pour construire des (micro)services</title><link>https://pyvideo.org/pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Basé sur Pyramid, Cliquet est un projet qui permet de se concentrer sur
+l'essentiel lors de la conception d'APIs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;dl class="docutils"&gt;
+&lt;dt&gt;Quelle structure JSON pour mon API ? Quelle syntaxe pour filtrer la&lt;/dt&gt;
+&lt;dd&gt;liste via la querystring ? Comment gérer les écritures concurrentes
+? Et synchroniser les données dans mon application cliente ?&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Quand nous développons un (micro)service Web, nous dépensons
+généralement beaucoup d'énergie dans la conception et la validation du
+protocole HTTP, en particulier lorsqu'il s'agit d'un service qui
+manipule des données (&lt;em&gt;CRUD, offline first, pagination, ...&lt;/em&gt;).&lt;/p&gt;
+&lt;blockquote&gt;
+Comment pouvons-nous vérifier que le service est opérationnel ?
+Quels indicateurs StatsD ? Est-ce que Sentry est bien configuré ?
+Comment mettre à jour sans casser les applications clientes ?&lt;/blockquote&gt;
+&lt;p&gt;De même, nous passons beaucoup de temps (ou pire, nous ne le faisons pas
+!) à mettre en place tout l'outillage pour gérer et superviser la mise
+en production du service. Et si les bonnes pratiques évoluent, il faut
+faire suivre les projets déjà en place.&lt;/p&gt;
+&lt;p&gt;Plutôt qu'écrire un énième article de blog avec nos recommandations,
+nous avons fait le choix de mettre au point un protocole, et d'en
+fournir une implémentation en Python.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Cliquet&lt;/em&gt; est donc un kit de démarrage, basé sur Pyramid, pour
+construire des (micro)services en se concentrant sur l'essentiel.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mathieu Leplatre</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-17:pycon-fr-2015/cliquet-un-toolkit-pour-construire-des-microservices.html</guid></item><item><title>Kinto: stocker, synchroniser et partager ses données de manière générique</title><link>https://pyvideo.org/pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Kinto est outil qui suit la philosophie &amp;quot;no-backend&amp;quot;. L'idée étant
+d'avoir un backend générique, déployable très facilement, qui permette à
+tous et toutes et de stocker, requêter et partager des données sans
+avoir à déployer de service web.&lt;/p&gt;
+&lt;p&gt;Cette présentation vise à présenter Kinto, et l'écosystème que nous
+mettons en place petit à petit pour permettre a tous d'être souverain
+sur ses données.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Plan (rapide):&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Histoire:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;L'idée de départ (Mat + Alexis à Django Cong il y a 3 ans);&lt;/li&gt;
+&lt;li&gt;Les quelques sprints sur Daybed;&lt;/li&gt;
+&lt;li&gt;L’intérêt de Mozilla dans le projet;&lt;/li&gt;
+&lt;li&gt;Reboot ™;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Les choix philosophiques&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Abstraction des concepts clés;&lt;/li&gt;
+&lt;li&gt;Mettre la communauté au centre du développement;&lt;/li&gt;
+&lt;li&gt;N’implémenter que des fonctionnalités utiles (cas d'utilisation):&lt;/li&gt;
+&lt;li&gt;Ne pas faire le café&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Dans quel paysage s'inscris-ton ?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;CouchDB / PouchDB;&lt;/li&gt;
+&lt;li&gt;Remote Storage;&lt;/li&gt;
+&lt;li&gt;Hoodie;&lt;/li&gt;
+&lt;li&gt;Cas d'utilisations à Mozilla (Ops, QA);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Démo&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pour comprendre de quoi on parle.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Architecture du projet&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cliquet, Kinto, Resources, Schemas, Backends, Permissions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Quid du futur ?&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexis Métaireau</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-17:pycon-fr-2015/kinto-stocker-synchroniser-et-partager-ses-donnees-de-maniere-generique.html</guid></item><item><title>Mercurial, avec des vrais morceaux de python</title><link>https://pyvideo.org/pycon-fr-2013/mercurial-avec-des-vrais-morceaux-de-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Mercurial, avec des vrais morceaux de python dedans&lt;/p&gt;
+&lt;p&gt;En 2005 Matt Mackall choisissait Python pour écrire un gestionnaire de
+version. 8 ans plus tard Mercurial est un projet reussi. Grâce à Python
+? Voyons ensemble ce que python apporte aux developeurs mais aussi, à
+travers son système d'extensions, aux utilisateurs.&lt;/p&gt;
+&lt;p&gt;En 2005 Matt Mackall choisissait Python pour écrire un gestionnaire de
+version. 8 ans plus tard Mercurial est un projet reussi. Grâce à Python
+? Dans cette présentation, nous aborderons d'abord les atouts de Python
+pour les developpeurs de Mercurial.&lt;/p&gt;
+&lt;p&gt;Nous prendrons ensuite le point de vue de l'utilisateur en montrant
+comment le systéme d'extensions tire parti du language. Certaines
+limitations de l'interpréteur python posent parfois problème. Nous
+presenterons comment celles-cis peuvent être contournées grace à des
+extension écrites en C ou des algorithmes adaptés.&lt;/p&gt;
+&lt;p&gt;Pour finir nous detaillerons des cas d'utilisation avancés que seul
+python à rendu possible.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexis Métaireau</dc:creator><pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-11-30:pycon-fr-2013/mercurial-avec-des-vrais-morceaux-de-python.html</guid></item><item><title>Retour sur Daybed (Form validation as a service)</title><link>https://pyvideo.org/pycon-fr-2013/retour-sur-daybed-form-validation-as-a-service.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;L'an dernier, à PyconFR, nous avions présenté rapidement une preuve de
+concept de Daybed, un système de validation de formulaires proposé &amp;quot;as a
+service&amp;quot;.&lt;/p&gt;
+&lt;p&gt;J'aurais aimé proposer un retour sur le produit, sur comment l'utiliser
+mais aussi sur comment on l'à implémenté.&lt;/p&gt;
+&lt;p&gt;Daybed est construit par dessus pyramid, qui nous à permis de faire des
+choses vraiment interessantes de manière efficace.&lt;/p&gt;
+&lt;p&gt;J'aimerais présenter certains aspects interessants, par exemple comment
+nous avons impléménté les ACLs grace au système proposé par pyramid, ou
+comment daybed réutilise Colander pour la validation de données.&lt;/p&gt;
+&lt;p&gt;Cette présentation montrera aussi comment daybed peut vous aider à créér
+des applications &amp;quot;full javascript&amp;quot; de manière rapide et efficace.&lt;/p&gt;
+&lt;p&gt;Le projet est disponible à l'adresse
+&lt;a class="reference external" href="https://github.com/spiral-project/daybed"&gt;https://github.com/spiral-project/daybed&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexis Métaireau</dc:creator><pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-11-30:pycon-fr-2013/retour-sur-daybed-form-validation-as-a-service.html</guid></item></channel></rss>

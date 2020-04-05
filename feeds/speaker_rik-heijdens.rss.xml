@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 30 Nov 2019 00:00:00 +0000</lastBuildDate><item><title>Airflow and Kubernetes at JW Player, a match made in heaven?</title><link>https://pyvideo.org/pydata-eindhoven-2019/airflow-and-kubernetes-at-jw-player-a-match-made-in-heaven.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn how JW Player leverages Apache Airflow and Kubernetes to author,
+schedule, execute and monitor workflows containing thousands of tasks on
+a monthly basis. In this talk we'll provide an overview of our
+architecture, best practices for designing jobs and share some of the
+lessons that we learned.&lt;/p&gt;
+&lt;p&gt;At JW Player multiple teams use Apache Airflow to author, schedule and
+monitor workflows defined as acyclic graphs (DAGs) of tasks. Every
+single month we use Apache Airflow to run thousands of tasks. Our tasks
+are very heterogeneous: we have tasks that perform conventional ETL, but
+also more complicated tasks that train and evaluate Machine Learning
+models, or use existing Machine Learning models to analyze new data that
+flows into our systems at a daily basis. Our tasks interact with many
+different systems ranging from databases (PostgreSQL, Snowflake), to
+machine learning frameworks (TensorFlow), to storage systems (S3), to
+Hadoop clusters running Spark on EMR.&lt;/p&gt;
+&lt;p&gt;While the tasks that we run through Apache Airflow are very diverse and
+touch many different systems, they have one thing in common: every
+single task that we run at JW Player through Airflow is packaged as a
+Docker image. This has several benefits, but the most important one is
+that it allows us to leverage Kubernetes' JobController to execute our
+tasks through a (custom variant of) the KubernetesPodOperator. This
+allows us to use and scale our compute resources more effectively while
+also providing engineers certain guarantees around reproducibility and
+isolation due to the nature of Docker containers.&lt;/p&gt;
+&lt;p&gt;In this talk aimed at Software Engineers and Data Scientists we will
+provide an overview of the architecture that we adopted for Apache
+Airflow at JW Player. We will share some insights into the engineering
+decisions that we have made and we will share best practices for
+designing and testing jobs themselves.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rik Heijdens</dc:creator><pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/airflow-and-kubernetes-at-jw-player-a-match-made-in-heaven.html</guid></item></channel></rss>

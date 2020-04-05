@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_christian-heimes.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-11T00:00:00+00:00</updated><entry><title>Gentle introduction to TLS, PKI, and Python's ssl module</title><link href="https://pyvideo.org/pylondinium-2019/gentle-introduction-to-tls-pki-and-pythons-ssl-module.html" rel="alternate"></link><published>2019-06-15T00:00:00+00:00</published><updated>2019-06-15T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2019-06-15:pylondinium-2019/gentle-introduction-to-tls-pki-and-pythons-ssl-module.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;TLS is an ubiquitous protocol for secure communication. It's used in HTTPS, email (IMAP, POP3, SMTP), LDAP, FTP, and more. Some recent protocols like HTTP/2 are not defined for unencrypted channels. TLS offers more than just encryption with symmetric cryptography. It also ensures data integrity and strong authentication with the help of X.509 certificates and public key infrastructure (PKI).&lt;/p&gt;
+&lt;p&gt;Did you ever wonder what's the difference between SSL, TLS, and StartTLS? Or what is the meaning of cryptic terms and names like Server Name Indication, Subject Alternative Name, or TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384? What is perfect forward secrecy and why is it so important for privacy? Does HTTPS make my website slow? What is the difference between a root CA, intermediate CA and end-entity certificate? My talk explains how a client and a server establish a secure connection, why a certificate is required, and how TLS 1.3 has improved the handshake.&lt;/p&gt;
+&lt;p&gt;Some prior knowledge of cryptography and networking basics are helpful but not required to follow this talk.&lt;/p&gt;
+</summary></entry><entry><title>Introduction to low-level profiling and tracing</title><link href="https://pyvideo.org/europython-2019/introduction-to-low-level-profiling-and-tracing.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/introduction-to-low-level-profiling-and-tracing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has built-in tracing and profiling facilities in form of callback
+hooks in the sys module. The settrace and setprofile callbacks have
+several drawbacks. They slow down the Python interpreter considerable
+and only allow tracing of Python code. Modern OS and CPUs come with a
+variety of APIs for efficient and low-level tracing down to system
+calls, Kernel space code, and hardware events. Some tools even create
+code that runs in Kernel space.&lt;/p&gt;
+&lt;p&gt;This talks is an introduction and comparison of various low and high
+level tools for profiling and tracing as well as visualization tools
+like flame graphs. It covers ptrace, perf, SystemTap, and BCC/eBPF.
+Ptrace based commands like strace are easy to use but slow. Perf allows
+lightweight profiling of hardware events and CPU instructions. SystemTap
+is a powerful toolkit plus DSL to instrument probe points inside the
+Kernel as well as static SystemTap/DTrace markers in libs and languages
+like Java, PHP, and Python. CPython comes with a set of instrumentations
+for SystemTap. BCC is a collection of tools that run as JIT optimized
+eBPF code in Kernel space.&lt;/p&gt;
+&lt;p&gt;The talk is an introduction to basic concepts of low-level tracing and
+profiling on Linux. The main goal is the show the potential of the
+tools.&lt;/p&gt;
+</summary><category term="CPython"></category><category term="DevOps general"></category><category term="Performance"></category></entry><entry><title>Everyday security issues and how to avoid them</title><link href="https://pyvideo.org/pycon-italia-2018/everyday-security-issues-and-how-to-avoid-them.html" rel="alternate"></link><published>2018-04-20T00:00:00+00:00</published><updated>2018-04-20T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-04-20:pycon-italia-2018/everyday-security-issues-and-how-to-avoid-them.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security is hard, yet vital for any software these days. After all you
+don’t want to become the laughing stock on hacker news or cause your
+company to loose billions in shareholder value. This talk won’t turn you
+into a security specialist over night, but you will learn how to avoid
+common mistakes in your daily work as developer or administrator. I’m
+going to take you on a brief tour in secure software design, illustrate
+various attack vectors, and point you to helpful tools and resources.
+Topics include threat analysis, deployment, parsing, authentication,
+TLS/SSL, crypto, and user interaction, with some real life examples from
+my daily work.&lt;/p&gt;
+&lt;div class="section" id="note"&gt;
+&lt;h4&gt;Note&lt;/h4&gt;
+&lt;p&gt;&lt;em&gt;The talk will be an extended version of my PyCon UK 2017 and DevConf.CZ
+2018 info sec talk. Slides are recordings of my PyCon UK talk are
+available at
+https://speakerdeck.com/tiran/pycon-uk-2017-everyday-security-issues-and-how-
+to-avoid-them .&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 20 April&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="security"></category><category term="infosec"></category><category term="Cryptography"></category></entry><entry><title>Everyday security issues and how to avoid them</title><link href="https://pyvideo.org/pygotham-2018/everyday-security-issues-and-how-to-avoid-them.html" rel="alternate"></link><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-10-05:pygotham-2018/everyday-security-issues-and-how-to-avoid-them.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;These days virtually all software and computer hardware is connected to the
+internet. Ultimately the internet is a hostile place and filled with people
+that will attempt to abuse any vulnerability for fun, profit or more
+sinister reasons. Therefore every software developer and administrator
+should have at least a basic understanding how to develop and run code
+securely. After all you don’t want to become the laughing stock on hacker
+news or cause your company to loose billions in shareholder value.&lt;/p&gt;
+&lt;p&gt;This talk won’t turn you into a security specialist over night, but you will
+learn how to avoid common mistakes in your daily work. I will introduce you
+to best practices and prevalent security bugs, hilarious anecdotes and some
+real life examples from my daily work as security engineer. The presentation
+features airplanes, squirrels, ducks, and the most efficient password
+cracking method: not as brutucal as XKCD 538 and much more delicious.&lt;/p&gt;
+</summary></entry><entry><title>SSLError, now what?</title><link href="https://pyvideo.org/europython-2018/sslerror-now-what.html" rel="alternate"></link><published>2018-07-25T00:00:00+00:00</published><updated>2018-07-25T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-07-25:europython-2018/sslerror-now-what.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;TLS/SSL is the most important and widely-used protocol for secure and
+encrypted communication, e.g. HTTPS. It offers more than just
+encryption. TLS also ensures data integrity and strong authentication
+with X.509 certificates. But it provides merely a false sense of
+security, if you use it wrong.&lt;/p&gt;
+&lt;p&gt;Have you ever encountered ssl.SSLError: [SSL: CERTIFICATE &lt;em&gt;VERIFY&lt;/em&gt;
+FAILED], while connecting to a server, but you didn’t understand what is
+going on? Are you running production code without TLS/SSL protection or
+with certificate validation disabled, because you couldn’t figure out
+how to make it work correctly?&lt;/p&gt;
+&lt;p&gt;I’ll give you the rundown of the basic cryptographic building blocks,
+protocol handshake, inner structure of certificates, and PKI. You’ll
+learn about the best practices, debugging tools and tips how to diagnose
+TLS/SSL and how to deal with certificates.&lt;/p&gt;
+</summary></entry><entry><title>SSLError, now what?</title><link href="https://pyvideo.org/pycon-russia-2018/sslerror-now-what.html" rel="alternate"></link><published>2018-06-22T00:00:00+00:00</published><updated>2018-06-22T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-06-22:pycon-russia-2018/sslerror-now-what.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Christian Heimes&lt;/strong&gt; , Red Hat&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pycon.ru/2018/en/program/content/Heimes/"&gt;**SSLError, now what?**&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;TLS/SSL is the most important and widely-used protocol for secure and
+encrypted communication, e.g. HTTPS. It offers more than just
+encryption. TLS also ensures data integrity and strong authentication
+with X.509 certificates. But it provides merely a false sense of
+security if you use it wrong.&lt;/p&gt;
+&lt;p&gt;Have you ever encountered SSLError while connecting to a server, but you
+didn’t understand what is going on? Are you running production code
+without TLS/SSL protection or with certificate validation disabled,
+because you couldn’t figure out how to make it work correctly?&lt;/p&gt;
+&lt;p&gt;I’ll give you the rundown of the basic cryptographic building blocks,
+protocol handshake, inner structure of certificates, and PKI. You’ll
+learn about the best practices, debugging tools and tips how to diagnose
+TLS/SSL and how to deal with certificates.&lt;/p&gt;
+&lt;p&gt;This talk is suitable for both beginner and advanced Pythonistas.&lt;/p&gt;
+</summary></entry><entry><title>SSLError, now what?</title><link href="https://pyvideo.org/pycon-cz-2018/sslerror-now-what.html" rel="alternate"></link><published>2018-06-03T00:00:00+00:00</published><updated>2018-06-03T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2018-06-03:pycon-cz-2018/sslerror-now-what.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;TLS/SSL is the most important and widely-used protocol for secure and encrypted communication, e.g. HTTPS. It offers more than just encryption. TLS also ensures data integrity and strong authentication with X.509 certificates. But it provides merely a false sense of security if you use it wrong.&lt;/p&gt;
+&lt;p&gt;Have you ever encountered SSLError while connecting to a server, but you didn’t understand what is going on? Are you running production code without TLS/SSL protection or with certificate validation disabled, because you couldn’t figure out how to make it work correctly?&lt;/p&gt;
+&lt;p&gt;I’ll give you the rundown of the basic cryptographic building blocks, protocol handshake, inner structure of certificates, and PKI. You’ll learn about the best practices, debugging tools and tips how to diagnose TLS/SSL and how to deal with certificates.&lt;/p&gt;
+</summary></entry><entry><title>Identity management, single sign-on and certificates with FreeIPA</title><link href="https://pyvideo.org/europython-2017/identity-management-single-sign-on-and-certificates-with-freeipa.html" rel="alternate"></link><published>2017-07-13T00:00:00+00:00</published><updated>2017-07-13T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2017-07-13:europython-2017/identity-management-single-sign-on-and-certificates-with-freeipa.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authentication, authorization and public key infrastructure are
+complicated and hard to get right, yet crucial for every
+infrastructure. Manifold user databases in each application as well
+as ad-hoc self-signed TLS/SSL certificates don't scale and are hard
+to administrate. Users don't want to remember a password for each
+service, admins prefer a centralized PKI, and developers struggle
+with correct handling of password.&lt;/p&gt;
+&lt;p&gt;FreeIPA is an Open Source, Python-based identity management solution.
+It is much more than a simple user database. FreeIPA combines
+multiple mature products under an easy-to-use installer, command line
+and web interface: 389-DS LDAP server, MIT Kerberos, Dogtag PKI
+certificate system, BIND DNS with DNSSEC, SSSD, certmonger and more.
+It provides identities for users, services and machines with single
+sign-on (optionally 2FA) and role or host based ACL. Keycloak and
+Ipsilon IdP can be integrated to offer OpenIDC or SAML. Mutual trust
+with Active Directory is possible, too.&lt;/p&gt;
+&lt;p&gt;Installation of a FreeIPA server and integration with a WSGI
+application is much simpler than you might think.  At the end of my
+talk you will know how to deploy a FreeIPA server with just one
+command, how to add replicas for redundancy, how to authenticate
+users and access user data like name, email and group membership
+without adding a single line of Kerberos or LDAP code to your
+application, and how to issue TLS certificates with auto-renewal and
+OCSP.&lt;/p&gt;
+</summary></entry><entry><title>Tales from Python Security</title><link href="https://pyvideo.org/pycon-pl-2016/tales-from-python-security.html" rel="alternate"></link><published>2016-10-13T00:00:00+00:00</published><updated>2016-10-13T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2016-10-13:pycon-pl-2016/tales-from-python-security.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk explores how programming changes your brain, and the power of
+translating the free software mindset to domains outside of open source.&lt;/p&gt;
+</summary></entry><entry><title>Core Developers' Panel</title><link href="https://pyvideo.org/europython-2016/core-developers-panel.html" rel="alternate"></link><published>2016-08-01T00:00:00+00:00</published><updated>2016-08-01T00:00:00+00:00</updated><author><name>Victor Stinner</name></author><id>tag:pyvideo.org,2016-08-01:europython-2016/core-developers-panel.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Victor Stinner/Larry Hastings/Christian Heimes/Yury Selivanov - Core Developers' Panel
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Q&amp;amp;A session with Python core developers&lt;/p&gt;
+</summary></entry><entry><title>File descriptors, Unix sockets and other POSIX wizardry</title><link href="https://pyvideo.org/pycon-us-2016/christian-heimes-file-descriptors-unix-sockets-and-other-posix-wizardry-pycon-2016.html" rel="alternate"></link><published>2016-05-30T00:00:00+00:00</published><updated>2016-05-30T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2016-05-30:pycon-us-2016/christian-heimes-file-descriptors-unix-sockets-and-other-posix-wizardry-pycon-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Christian Heimes&lt;/p&gt;
+&lt;p&gt;Have you ever wondered how the OS manages open files and network connections, what this 'file descriptor' thing actually is all about, or what's so special about Unix sockets? In my talk I will give you a quick tour into the I/O layer and process model of Unix-like operating systems. You will learn how to securely identify and efficiently share resources between processes.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Schwachstellen und Sicherheitslücken</title><link href="https://pyvideo.org/pycon-de-2013/schwachstellen-und-sicherheitslucken.html" rel="alternate"></link><published>2013-10-15T00:00:00+00:00</published><updated>2013-10-15T00:00:00+00:00</updated><author><name>Christian Heimes</name></author><id>tag:pyvideo.org,2013-10-15:pycon-de-2013/schwachstellen-und-sicherheitslucken.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In diesem Vortrag werden eine Reihe von Schwachstellen behandeln, die in
+der Vergangenheit in CPython oder prominenten Pythonprojekten
+aufgetreten sind. Als Python Kernentwickler und Mitglied des Python
+Security Response Team war ich in die Analyse und Korrektur, zum Teil
+auch in die Entdeckung dieser Lücken involviert.&lt;/p&gt;
+&lt;p&gt;Jede Schwachstelle zählt exemplarisch einen oder mehrere typische
+Programmierfehler auf. Mit Hilfe von best practices wird gezeigt, wie
+man sicher mit Betriebsystemressourcen und Daten aus nicht
+vertrauenswürdigen Quellen umgeht, kryptographischen Algorithmen korrekt
+verwendet und side channel attacks verhindert.&lt;/p&gt;
+&lt;p&gt;Desweiteren werde ich einen Ausblick auf geplante Änderungen und
+sicherheitsrelevante Verbesserungen in Python 3.4 geben. Jenseits von
+Python wird der Vortrag auch beleuchten, welche Fallstricke und Probleme
+Compiler, Betriebsysteme und moderne CPU-Architekturen mit sich bringen
+und sie sogar die Entwicklung sicherer Software verhindern können.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Experimental Machine Learning with HoloViz and PyTorch in Jupyterlab</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-la-2019.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-la-2019.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Experimental Machine Learning with HoloViz and PyTorch in Jupyterlab" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pydata-la-2019/experimental-machine-learning-with-holoviz-and-pytorch-in-jupyterlab.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/xdux2jwoNw4/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/xdux2jwoNw4/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pydata-la-2019/experimental-machine-learning-with-holoviz-and-pytorch-in-jupyterlab.html" rel="bookmark"
+         title="Permalink to Experimental Machine Learning with HoloViz and PyTorch in Jupyterlab">Experimental Machine Learning with HoloViz and PyTorch in Jupyterlab
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2019-12-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Tue 03 December 2019
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/hayley-song.html">Hayley Song</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xdux2jwoNw4" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><pre>This tutorial introduces how to make your data exploration and neural
+network training process more interactive and exploratory by using the
+combination of JupyterLab, HoloViews, and PyTorch. I will first
+introduce the basic concepts behind HoloViews, and walk through how to
+embellish each step of your machine learning workflow with HoloVie to
+emphasize the experimental nature of modeling.
+
+**Update** : Please visit `this
+repo <https://github.com/cocoaaa/PyData-%20LA-2019>`__ for tutorial
+materials
+
+-  Subtitle: A guide through multi-class road detection on satellite
+   images with interactive visualization and explorative model building
+-  Author: Hayley Song (`[email
+   protected] </cdn-cgi/l/email-protection>`__)
+-  Category: step-by-step tutorial
+-  Prereq:
+
+   -  Basic understanding of visaulization with python (eg. previously
+      have used matplotlib.pyplot library)
+   -  | Basic understanding of neural network training process
+      | I'll give a brief overview of the workflow, assuming audiences'
+        previous experience with the following concepts
+
+   -  mini-batch training
+   -  forward-pass, backword-pass
+   -  gradient, gradient descent algorithm
+   -  classification, semantic segmentation
+   -  image as numpy ndarray
+
+-  Material distribution
+
+   -  All materials needed to follow the tutorial will be shared in a
+      self-containing GitHub repo, as well as a Binder environment
+   -  **Update** : Please visit `this
+      repo <https://github.com/cocoaaa/PyData-LA-2019>`__ for tutorial
+      materials
+   -  Links to extra resources will be provided as appropriate
+
+Overview
+--------
+
+This tutorial introduces how to make your data exploration and model
+building process more interactive and exploratory by using the
+combination of JupyterLab, HoloViews, and PyTorch.
+`HoloViews <https://HoloViews.org/>`__ is a set of Python libraries that
+offers simple yet powerful visualization and GUI building tools which,
+together with other data analysis libraries (eg. ``pandas``,
+``geopandas``, ``numpy``) and machine learning framework (eg.
+``PyTorch``, ``Tensorflow``) can make your modeling procedure more
+interactive and exploratory. I will start by introducing four core
+HoloViews libraries (Holoviews, GeoViews, Panel and Param) and
+demonstrate basic examples on how we can essentially replace any
+"Matplotlib.pyplot" calls with equivalents in ``HoloViews``. You will
+see how this opens up the possibilities to directly interact with your
+visualization by eg. hovering over the graph to inspect values, querying
+RGB values of an image, or Lat/Lon values on your map.
+
+Following the introduction of the HoloViews libraries, I will
+demonstrate how to embellish each step of your machine learning workflow
+with HoloViews. First, you will learn to easily turn your PyTorch codes
+into a simple GUI that encaptulates the state of your model (or
+alternatively, the state of your training session). This GUI explicitly
+exposes your model parameters and training hyperparameters (eg. learning
+rate, optimizer settings, batch size) as directly tunable parameters.
+Compared to conventional ways of specifying the hyperparameter settings
+with the help of 'argparse' library or config files, this GUI approach
+focuses on the experimental nature of modeling and integrates seamlessly
+with Jupyter notebooks. After training a neural network model using our
+own GUI in the notebook, I will demonstrate how to understand the model
+by visualizing the intermediate layers with HoloViews and test the model
+with test images directly sampled from HoloViews visualization.
+
+To illustrate these steps, I will focus on the problem of classfying
+different types of roads on satellite images, defined as a multi-class
+semantic segmentation problem. Starting from the data exploration to the
+trained model understanding, you will learn different ways to explore
+the data and models by easily building simple GUIs in a Jupyter
+notebook.
+
+In summary, by the end of the talk you will have learned: - how to make
+your data exploration more intuitive and experimental using HoloViews
+libraries - how to turn your model script into a simple GUI that allows
+interactive hyperparameter tuning and model exploration - how to monitor
+the training process in realtime - how to quickly build a GUI tool to
+inspect the trained models in the same Jupyter notebook
+
+The provided example codes will be a great starting point to experiment
+these tools on your own datasets and tasks.
+
+Outline
+-------
+
+This tutorial will consists of five main sections. I will first
+introduce the basic concepts behind ``Holoviews/Geoviews`` and ``Panel``
+which are the main libraries we are going to use to add interactive
+exploration tools for data exploration and model training/evaluation,
+all in a single Jupyter notebook. This will take ~15 minutes. The rest
+of the tutorial will flow in the order of the general neural network
+training workflow, while integrating these libraries at each step. I
+will leave the last <10 minutes for questions.
+
+-  Step 0: Introduction to ``Holoviews``/``Geoviews`` and ``Panel``
+   [15mins]
+-  Step 1: Explore your dataset with ``Holoviews``/``Geoviews`` [15mins]
+-  Step 2: Build an easily-configurable neural network model with
+   ``param`` [15mins]
+-  Step 3: Monitor your training process through an interactive GUI
+   [15mins]
+-  Step 4: Analyze your learned model on new images + Understand what
+   your model has learned by looking at intermediate feature maps with
+   ``Holoviews`` and ``Panel`` [15mins]
+-  Q/A [5~10 mins]
+
+Step 0: Introduction to ``HoloViews`` libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this introductory section, I will go over the basic concepts behind
+the ``HoloViews`` libraries. I will provide simple examples that show
+how we can replace any ``Matplotlib`` plot calls with equivalent calls
+in ``Holoviews/Geoviews`` with no hassle, and build easy tools to
+interact with your data.
+
+Step 1: Explore your dataset
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The first step in building a machine learning model is to understand
+your dataset. For the scope of this tutorial (ie.semantic segmentation
+of road types from satellite images), we will use the SpaceNet datasets.
+More details on how to get the data as well as how the data are
+collected and annotated can be found
+`here <https://spacenetchallenge.github.io/datasets/datasetHomePage.html>`__.
+The original dataset is very large (>100GB) and requires a lot of
+preprocessing to be useful for training. For example, the RGB images are
+16bits of size 1300x1300, and the "target" roads are vector lines (as
+opposed to raster images), which means they need to be rasterized. I
+have prepared a smaller sample dataset consisting of the RGB images
+converted to 8bits and cropped to 520x520 size, as well as road buffers
+as rasters which can be easily used as the target images. I will share
+the dataset to accompany my tutorial. The shared dataset will consists
+of input RGB images and target mask images. Each pixel of a target image
+will contain one of the labels in {'highway', 'track', 'dirt', 'others'}
+(as ``uint8``).
+
+The focus of this section is to show how to build a GUI-like
+visualization of a satellite dataset within a Jupyter notebook using
+``Holoviews``/``Geoviews``. See Figure 1 (in the shared Google Drive)
+for an example. Unlike a static plot (eg. one that is generated from
+Matplotlib), one can hover over the ``Holoviews`` plot to inspect the
+labels at each pixel of the mask image or to check the lat/lon
+locations. Furthermore I will show how you can trigger more complicated
+computations (eg. compute road length within a selected zone), while
+interacting with the plot directly, eg. selecting a region by mouse
+drag, clicking a lat/lon by mouse click.
+
+The second example will show how this interactive plot can extended to
+incorporate external information (eg. roadlines from OpenStreetMap) to
+easily compare with your own dataset. See Figure 2 (in the shared Google
+Drive) for a snapshot of such tool. In this example, as you select
+different RGB filenames (of your dataset), you have an option to click
+on the 'click to download OSM' to download the corresponding region's
+OSM road data, and visualize it as an interactive map.
+
+Step 2: Monitor the training process
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this section, I will show how to wrap around a ``PyTorch``'s NN model
+with ``param``'s \`Parametrized' class to expose its hyperparameters as
+tunable parameters. Using the GUI representation of the NN model, we can
+control the (hyper)parameter configurations more intuitively, and study
+their effects. Its seamless integration into a Jupyter notebook
+facilitates the experimental side of machine learning training pocess.
+
+Step 3: Interactively test your trained model on the new data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Step 4: Understand what the model has learned
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+--------------
+
+I will conclude the tutorial by summarzing the main takeaways and
+providing pointers to useful resources:
+
+-  General
+
+   -  Github repo for this talk
+   -  Link to HoloViews libraries
+   -  more: DataShader
+   -  PyTorch, torchvision
+
+-  Geospatial Data
+
+   -  remote sensing data: google-earth-engine
+   -  libraries: xarray, dash, rasterio, geopandas
+</pre>
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pydata-la-2019.html">PyData LA 2019</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=xdux2jwoNw4" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pydata-la-2019/videos/hayley-song-experimental-machine-learning-with-holoviz-and-pytorch-in-jupeyterlab-pydata-la-2019.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

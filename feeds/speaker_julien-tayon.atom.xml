@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_julien-tayon.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-06T00:00:00+00:00</updated><entry><title>La cartographie c'est simple et "complexe"</title><link href="https://pyvideo.org/pycon-fr-2018/la-cartographie-cest-simple-et-complexe.html" rel="alternate"></link><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><author><name>Julien Tayon</name></author><id>tag:pyvideo.org,2018-10-06:pycon-fr-2018/la-cartographie-cest-simple-et-complexe.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Contexte : J'ai commencé à faire des cartes avec les données INSEE
+disponibles sur opendata il y a 2 semaines.&lt;/p&gt;
+&lt;p&gt;J'ai trouvé quelques outils comme qGIS, mais ayant une machine
+asthmatique, j'ai fini par construire les cartes depuis rien, juste en
+regardant les fichiers sources, et les cartes SVG et c'est facile : tout
+le monde peut y arriver.&lt;/p&gt;
+&lt;p&gt;C'est si simple avec les bons outils (python + SVG + HTML + matplotlib
+et une connaissance minimale en math), que ce serait bien de rendre ce
+savoir disponible pour tous.&lt;/p&gt;
+&lt;p&gt;La plupart des difficultés techniques comme : un point est il dans un
+polygone ?&lt;/p&gt;
+&lt;p&gt;Quel sont les points minimum et le maximum dans une carte ?&lt;/p&gt;
+&lt;p&gt;Sont résolues simplement sans classe avec un outil mal aimé de python :
+les nombres complexes.&lt;/p&gt;
+&lt;p&gt;(Ceci au passage est un &amp;quot;rant&amp;quot; contre la classe point 2D qui est donnée
+en exemple comme la classe pour apprendre, et une réaffirmation que les
+maths sont une abstraction plus importante que l'objet.)&lt;/p&gt;
+&lt;p&gt;Dans un premier temps on va prendre un fichier source, le regarder, et
+tenter naïvement de construire une carte.&lt;/p&gt;
+&lt;p&gt;On va rappeler &lt;em&gt;très&lt;/em&gt; rapidement ce qu'est un nombre complexe.&lt;/p&gt;
+&lt;p&gt;On va prendre un fichier de destination et le regarder, et sans
+connaissance du SVG tenter de le construire.&lt;/p&gt;
+&lt;p&gt;Ensuite on va utiliser matplotlib pour automatiser la coloration par
+gradient.&lt;/p&gt;
+&lt;p&gt;On va y arriver.&lt;/p&gt;
+&lt;p&gt;On va aussi découvrir une méthode de résolution des problèmes de
+contraste par &amp;quot;non linéarisation&amp;quot; des niveaux de couleurs (tri ordonné)
+qui marche à quasiment tous les coups (merci les OrderedDict et les
+sets).&lt;/p&gt;
+&lt;p&gt;On va utiliser un algo simple pour trouver le polygone qui contient un
+point et le mettre en œuvre. Parler de distance et éviter en beauté le
+problème des projections en cartographie car j'y connais rien.&lt;/p&gt;
+&lt;p&gt;On va peut être comparer avec qgis en terme de vitesse pour la
+génération de carte SVG, et aux tutos disponibles sur internet, et se
+dire que ça vaut le coup de partager ce savoir.&lt;/p&gt;
+&lt;p&gt;Enfin on va montrer que la complexité afférente à écrire un cadricel
+étant supérieure à la 100 aine de ligne de codes pour faire le travail
+sans se fatiguer, c'est peut être pas nécessaire de faire un cadriciel.&lt;/p&gt;
+&lt;p&gt;Et évidemment, je vais conclure sur les quaternions, et leur utilisation
+par les riggers dans l'industrie du jeu plutôt que les matrices pour la
+3D et souligner qu'on a des modules pour les quaternions en python,
+parce qu'on a une communauté de qualité avec des scientifiques qui
+contribuent et que sans eux, ce serait bien plus dur de faire le kakou
+en 100 lignes de codes. Remercions aussi les initiatives d'opendata sans
+lesquelles on pourrait rien faire et rendons hommage à la qualité de
+données si simple que leur mise en œuvre est aisée.&lt;/p&gt;
+&lt;p&gt;Et voilà comment on construit une carte de représentation de données
+sans rien y connaître en cartographie. Parce qu'il y a des gars biens
+qui partagent les données sans les &amp;quot;obscurcir&amp;quot; et d'autres leur code et
+qu'il y a une communauté au milieu pour mettre les savoirs en relation.&lt;/p&gt;
+</summary></entry><entry><title>The power of duck typing and linear algrebra How linear algebra and python make a good fit</title><link href="https://pyvideo.org/fosdem-2017/the-power-of-duck-typing-and-linear-algrebra-how-linear-algebra-and-python-make-a-good-fit.html" rel="alternate"></link><published>2017-02-05T00:00:00+00:00</published><updated>2017-02-05T00:00:00+00:00</updated><author><name>Julien Tayon</name></author><id>tag:pyvideo.org,2017-02-05:fosdem-2017/the-power-of-duck-typing-and-linear-algrebra-how-linear-algebra-and-python-make-a-good-fit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Algebraic operator are every where in python. + = * /Dict are every where in python.What can we achieve by combining both of them?Slides are here&lt;/p&gt;
+</summary></entry></feed>

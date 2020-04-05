@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jerome-kieffer.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-10-22T00:00:00+00:00</updated><entry><title>PyFAI: a Python library for high performance azimuthal integration on GPU</title><link href="https://pyvideo.org/euroscipy-2014/pyfai-a-python-library-for-high-performance-azim.html" rel="alternate"></link><published>2014-10-22T00:00:00+00:00</published><updated>2014-10-22T00:00:00+00:00</updated><author><name>Giannis Ashiotis</name></author><id>tag:pyvideo.org,2014-10-22:euroscipy-2014/pyfai-a-python-library-for-high-performance-azim.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the field of X-Ray diffraction, 2D area detectors like ccd or pixel
+detectors have become popular in the last 15 years for diffraction
+experiments thanks to the large solid-angle coverage and to their better
+signal linearity. These detectors have a large sensitive area of
+millions of pixels with high spatial resolution and are getting fast:
+one kilo-Hertz is expected this year. The software package pyFAI we
+present here has been designed to reduce X-ray 2D-diffraction images
+into 1D curves (azimuthal integration) usable by other software for
+in-depth analysis such as Rietveld refinement, ... Other averaging
+patterns like 2D integration, image distortion, ... are also available.
+PyFAI is a library featuring a clean pythonic interface and aiming at
+being integrated into other software. But it also needs to cope with the
+data deluge coming from the detector...&lt;/p&gt;
+&lt;p&gt;In this contribution, we would like to highlight the performance reached
+by this library. To get today’s computers best performances, one needs
+to have parallelized code and azimuthal integration is not directly
+parallelizable. After a scatter-to-gather transformation of the
+algorithm, it got parallel (Cython implementation). Other optimizations
+have been used to get the best performances out of GPU (compensated
+summation, partial parallel reductions, ...).&lt;/p&gt;
+</summary></entry></feed>

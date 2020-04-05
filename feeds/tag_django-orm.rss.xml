@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 21 Apr 2018 00:00:00 +0000</lastBuildDate><item><title>Quando Django incontra PostgreSQL!</title><link>https://pyvideo.org/pycon-italia-2018/quando-django-incontra-postgresql.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vi siete mai chiesti cosa succede quando due strumenti potenti si
+completano?&lt;/p&gt;
+&lt;p&gt;Vedremo come ottenere un ambiente di sviluppo molto veloce e come
+analizzare i tempi delle query in produzione per isolare i colli di
+bottiglia. Analizzeremo cosa ci offre Django per gestire i pool di
+connessioni e l’uso di pgbouncer.&lt;/p&gt;
+&lt;p&gt;Esploreremo le strade che si aprono utilizzando i campi JSON ed i campi
+ARRAY, che sono i più comunemente usati, ma anche di come utilizzare
+PostgreSQL come un gestore di code.&lt;/p&gt;
+&lt;p&gt;Requisiti: conoscenze basilari di Python, di Django ed uso di PostgreSQL&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Leonardo Cecchi</dc:creator><pubDate>Sat, 21 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-21:pycon-italia-2018/quando-django-incontra-postgresql.html</guid><category>MessageQueues</category><category>django-orm</category><category>database</category><category>postgresql</category><category>django</category></item><item><title>Crash test of Django ORM</title><link>https://pyvideo.org/pycon-italia-2017/crash-test-of-django-orm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The world is swimming in articles and books about Django and Django ORM
+itself. All this sources cover only basic use cases of Django ORM
+comparing to real world examples. This talk is dedicated to the
+proposition to crash test Django ORM 80% of functionalities in 20% of
+the time. Also I’m going to show the important features and capabilities
+of Django ORM compare to most of SQL features. Traditionally, ORM is
+presented in a “bottom-up” fashion, but I would like to propose
+approach, on the other hand, is “top-down”. We begin by identifying a
+rather short list of standard questions, or precisely types of
+questions, that are often asked of relations databases. We then show how
+these standard questions are posted in Django ORM, introducing and
+motivating the use of its capabilities and features as they become
+relevant.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrii Soldatenko</dc:creator><pubDate>Sun, 09 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-09:pycon-italia-2017/crash-test-of-django-orm.html</guid><category>django-orm</category><category>performance</category><category>postgresql</category><category>python3</category><category>django</category></item><item><title>Python e PostgreSQL, un connubio perfetto</title><link>https://pyvideo.org/pycon-italia-2017/python-e-postgresql-un-connubio-perfetto.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PostgreSQL ha come obiettivi primari l’integrità dei dati,
+l’affidabilità e le caratteristiche integrate orientate agli
+sviluppatori. Per questo molti progetti lo scelgono fin dall’inizio. In
+questo talk vedremo come PostgreSQL e Python si integrano su più
+livelli, e come sia possibile sfruttare in Python le caratteristiche
+avanzate di questo database.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://prezi.com/5kvmyfmqp1mt/"&gt;http://prezi.com/5kvmyfmqp1mt/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marco Nenciarini</dc:creator><pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-08:pycon-italia-2017/python-e-postgresql-un-connubio-perfetto.html</guid><category>django-orm</category><category>psycopg2</category><category>pl/python</category><category>postgresql</category><category>database</category></item><item><title>The Dungeon Master's guide to Django's ORM</title><link>https://pyvideo.org/djangocon-us-2012/the-dungeon-masters-guide-to-djangos-orm.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;If you've ever been curious about Django's ORM implementation, you will
+have noticed the required learning curve. Some of the code is fairly
+complicated. Other bits are worse. Here comes a 30 or 40 minute guided
+tour of the uncharted realms: how the pieces fit together, where to look
+for things, why the current design is what it is. A portion of this is
+my fault; I should probably explain myself.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django's database layer is a necessarily complicated piece of code. It
+is a very powerful API that works more or less seamlessly across
+multiple database storage systems, smoothing over many of the
+inconsistencies and implementation differences that go with the
+territory. This is great for developers who use Django.&lt;/p&gt;
+&lt;p&gt;It's a little less awesome for the maintainers of that code; working in
+that environment is fairly difficult. Still, we all like a challenge.
+Problem is: where to start? Coming to grips with the ORM code isn't
+easy. The code is well written and documented, but the entry points are
+particularly well highlighted and, really, the sheer mass of code is an
+obstacle to be overcome.&lt;/p&gt;
+&lt;p&gt;This talk will look at the various layers of the ORM, from the public
+gateways, to the semi-public doors into the implementation, to the
+deeper internals and down to the interaction with databases. In effect,
+following the journey of a couple of adventurous young queries as they
+traverse the pathways to bring back some data, smelted into just the
+right format.&lt;/p&gt;
+&lt;p&gt;The goal is to provide some kind of mental map of the code. Some tips
+for orienting yourself in the future and how to examine new nooks and
+corners without losing your mind. We obviously cannot cover everything,
+but let's go over the common paths and show how the other pieces hang
+off that backbone.&lt;/p&gt;
+&lt;p&gt;Along the way, we'll put some of the details into historical
+perspective. Getting inside the mind of previous adventurers might help
+understand why things are the way they are.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Malcolm Tredinnick</dc:creator><pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-05:djangocon-us-2012/the-dungeon-masters-guide-to-djangos-orm.html</guid><category>django</category><category>django-orm</category></item></channel></rss>

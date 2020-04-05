@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 05 Oct 2017 00:00:00 +0000</lastBuildDate><item><title>RevDB, a Reverse Debugger</title><link>https://pyvideo.org/swiss-python-summit-2017/revdb-a-reverse-debugger.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;RevDB is an experimental &amp;quot;reverse debugger&amp;quot; for Python, similar to UndoDB-GDB or LL for C. You run your program once, in &amp;quot;record&amp;quot; mode, producing a log file; once you get buggy behavior, you start the reverse-debugger on the log file. It gives an (improved) pdb-like experience, but it is replaying your program exactly as it ran---all input/outputs are replayed from the log file instead of being redone.&lt;/p&gt;
+&lt;p&gt;The main point is that you can then go backward as well as forward in time: from a situation that looks really buggy you can go back and discover how it came to be. You also get &amp;quot;watchpoints&amp;quot;, which are very useful to find when things change. Watchpoints work both forward and backward.&lt;/p&gt;
+&lt;p&gt;I will show on small examples how you can use it, and also give an idea about how it works. It is based on PyPy, not CPython, so you need to ensure your program works on PyPy in the first place (but chances are that it does).&lt;/p&gt;
+&lt;p&gt;Talk recorded at the Swiss Python Summit on February 17th, 2017.&lt;/p&gt;
+&lt;p&gt;Licensed as Creative Commons Attribution 4.0 International&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Fri, 17 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-17:swiss-python-summit-2017/revdb-a-reverse-debugger.html</guid><category>revdb</category></item><item><title>PyPy meets Python 3 and Numpy</title><link>https://pyvideo.org/europython-2017/pypy-meets-python-3-and-numpy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is an alternative Python implementation whose JIT often gives
+seriously better performance than CPython.  Now PyPy supports, in
+beta version, two major new application domains: Python 3.x, and
+Numpy and the rest of the scientific stack.  These are each an
+important milestone for a subset of the Python community.&lt;/p&gt;
+&lt;p&gt;Thanks to a grant by Mozilla, &amp;quot;PyPy3&amp;quot; now largely supports Python
+3.5 with one or two extensions from Python 3.6.  Full support should
+be  very close.  (Note that PyPy2 will not disappear, if only because
+PyPy itself  is written in Python 2.7.) Numpy and the major packages
+of the scientific stack are now starting to work well with PyPy
+(PyPy2 mostly, but also PyPy3).  This is thanks to progress in
+&amp;quot;cpyext&amp;quot; emulating the CPython C API, as well as fixes to the
+packages in collaboration with the upstream developers.&lt;/p&gt;
+&lt;p&gt;We will also mention some more &amp;quot;what's new in PyPy&amp;quot; topics from the
+last couple of years.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-14:europython-2017/pypy-meets-python-3-and-numpy.html</guid></item><item><title>How to benchmark code</title><link>https://pyvideo.org/pycon-pl-2014/how-to-benchmark-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tytuł/Topic: How to benchmark code
+Prelegent/Speaker: Maciej Fijałkowski, Armin Rigo&lt;/p&gt;
+&lt;p&gt;In this talk, we would like to present basics of how the Python virtual machines like CPython or PyPy work and how to use that knowledge to write meaningful benchmarks for your programs. We'll show what's wrong with microbenchmarks and how to improve the situation.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pl.pycon.org/2014/pl/agenda"&gt;http://pl.pycon.org/2014/pl/agenda&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Maciej Fijałkowski</dc:creator><pubDate>Sun, 19 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-19:pycon-pl-2014/how-to-benchmark-code.html</guid></item><item><title>PyPy, an alternative Python implementation</title><link>https://pyvideo.org/pycon-pl-2014/pypy-an-alternative-python-implementation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tytuł/Topic: PyPy, an alternative Python implementation
+Prelegenci/Speakers: Maciej Fijałkowski, Armin Rigo&lt;/p&gt;
+&lt;p&gt;The current status of PyPy, with a particular focus on what happened in the last two years. We will give a brief overview of the current speed and the on-going development efforts on the JIT, the GC, NumPy, Python 3 compatibility, CFFI, STM...&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pl.pycon.org/2014/pl/agenda"&gt;http://pl.pycon.org/2014/pl/agenda&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Maciej Fijałkowski</dc:creator><pubDate>Fri, 17 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-17:pycon-pl-2014/pypy-an-alternative-python-implementation.html</guid></item><item><title>Armin Rigo – CFFI: Call C from Python – SPS16</title><link>https://pyvideo.org/swiss-python-summit-2016/armin-rigo-cffi-call-c-from-python-sps16.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;I will introduce CFFI, a way to call C libraries from Python. It was designed in 2012 to get away from Python's C extension modules, which require hand-written CPython-specific C code. CFFI is arguably simpler to use: you call C from Python directly, instead of going through an intermediate layer. It is not tied to CPython's internals, and works natively on two different Python implementations: CPython and PyPy. (It is also a big success, according to the download statistics.)&lt;/p&gt;
+&lt;p&gt;PyPy is an alternative Python implementation, which is highly compatible with CPython but rewritten from scratch – in Python. It is much faster than the standard CPython on long-running tasks thanks to its Just-in-Time compiler. I will talk about it during the later part of the talk.&amp;quot;&lt;/p&gt;
+&lt;p&gt;Talk recorded at the Swiss Python Summit on February 5th, 2016.&lt;/p&gt;
+&lt;p&gt;Licensed as Creative Commons Attribution 4.0 International.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Fri, 05 Feb 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-02-05:swiss-python-summit-2016/armin-rigo-cffi-call-c-from-python-sps16.html</guid></item><item><title>The GIL is dead: PyPy-STM</title><link>https://pyvideo.org/europython-2015/the-gil-is-dead-pypy-stm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Armin Rigo - The GIL is dead: PyPy-STM
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Take a big, non-multithreaded program, and run in on multiple cores!&lt;/p&gt;
+&lt;p&gt;PyPy, the Python implementation written in Python, experimentally
+supports Software Transactional Memory (STM).  It runs without the
+Global Interpreter Lock (GIL).&lt;/p&gt;
+&lt;p&gt;The strength of STM is not only to remove the GIL, but to also enable
+a novel use of multithreading, inheritently safe, and more useful in
+the general case than other approaches like OpenMP.  The main news
+from last year's presentation is that there is now a way to get
+reports about the &amp;quot;STM conflicts&amp;quot;, which is essential to go past toy
+examples.  With it, you can incrementally remove conflicts from large
+code bases until you see a benefit from PyPy-STM.  The goal of the
+talk is to give several concrete examples of doing that.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Mon, 03 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-03:europython-2015/the-gil-is-dead-pypy-stm.html</guid></item><item><title>CFFI: calling C from Python</title><link>https://pyvideo.org/europython-2016/cffi-calling-c-from-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Armin Rigo - CFFI: calling C from Python
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/cffi-calling-c-from-python"&gt;https://ep2016.europython.eu//conference/talks/cffi-calling-c-from-python&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;In this talk, we will see an intro to CFFI, an alternative to using the standard C API to extend Python. CFFI works on CPython and on PyPy. It is a possible solution to a problem that hits notably PyPy --- the CPython C API.&lt;/p&gt;
+&lt;p&gt;The CPython C API was great and contributed to the present-day success of Python, together with tools built on top of it like Cython and SWIG. I will argue that it may be time to look beyond it, and present CFFI as such an example.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I will introduce CFFI, a way to call C libraries from Python.     &lt;a class="reference external" href="http://cffi.readthedocs.org/"&gt;http://cffi.readthedocs.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;CFFI was designed in 2012 to get away from Python's C extension modules, which require hand-written CPython-specific C code.  CFFI is arguably simpler to use: you call C from Python directly, instead of going through an intermediate layer.  It is not tied to CPython's internals, and works natively on two different Python implementations: CPython and PyPy.  It could be ported to more implementations.&lt;/p&gt;
+&lt;p&gt;It is also a big success, according to the download statistics.  Some high-visibility projects like Cryptography have switched to it.&lt;/p&gt;
+&lt;p&gt;Part of the motivation for developing CFFI is that it is a minimal layer that allows direct access to C from Python, with no fixed intermediate C API.  It shares ideas from Cython, ctypes, and LuaJIT's ffi, but the non-dependence on any fixed C API is a central point.&lt;/p&gt;
+&lt;p&gt;It is a possible solution to a problem that hits notably PyPy --- the CPython C API.  The CPython C API was great and, we can argue, it contributed a lot to the present-day success of Python, together with tools built on top of it like Cython and SWIG.  However, it may be time to look beyond it.  This talk will thus present CFFI as such an example. This independence is what lets CFFI work equally well on CPython and on PyPy (and be very fast on the latter thanks to the JIT compiler).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Mon, 08 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-08:europython-2016/cffi-calling-c-from-python.html</guid></item><item><title>PyPy hands-on</title><link>https://pyvideo.org/europython-2011/pypy-hands-on.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &amp;quot;Training
+Pizza Margherita&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.&lt;/p&gt;
+&lt;p&gt;The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.&lt;/p&gt;
+&lt;div class="section" id="part-1-run-your-application-under-pypy"&gt;
+&lt;h4&gt;Part 1: Run your application under PyPy&lt;/h4&gt;
+&lt;p&gt;This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-2-write-your-own-interpreter-with-pypy"&gt;
+&lt;h4&gt;Part 2: Write your own interpreter with PyPy&lt;/h4&gt;
+&lt;p&gt;PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.&lt;/p&gt;
+&lt;p&gt;The students will be given the source code for a toy language
+implemented in RPython. They will learn:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &amp;quot;hints&amp;quot; needed by the JIT generator, and how to place them
+&lt;/pre&gt;
+&lt;p&gt;Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THINGS TO DO BEFORE THE TRAINING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You are encouraged to bring your laptop to the training session.&lt;/p&gt;
+&lt;p&gt;Make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Install PyPy 1.5:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/download.html"&gt;http://pypy.org/download.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy"&gt;http://doc.pypy.org/en/latest/getting-started.html#installing-pypy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;distribute&lt;/tt&gt; are installed (look
+at the URL above for instructions)&lt;/li&gt;
+&lt;li&gt;Clone the pypy repository, and update to the 1.5 version:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/pypy"&gt;http://bitbucket.org/pypy/pypy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd pypy&lt;/p&gt;
+&lt;p&gt;$ hg up -r release-1.5&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Clone the jitviewer repository and install it on pypy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/jitviewer"&gt;http://bitbucket.org/pypy/jitviewer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd jitviewer&lt;/p&gt;
+&lt;p&gt;$ /path/to/pypy-1.5/bin/pypy setup.py develop&lt;/p&gt;
+&lt;p&gt;If you intend to follow also the second part (&amp;quot;Write your own
+interpreter with PyPy&amp;quot;), you need to make sure you have a working
+&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter"&gt;developing
+environment&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Cuni</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/pypy-hands-on.html</guid><category>cd</category><category>cpython</category><category>extensions</category><category>hg</category><category>jit</category><category>optimize</category><category>pypy</category><category>setup.py</category><category>tutorial</category></item><item><title>PyPy in production</title><link>https://pyvideo.org/europython-2011/pypy-in-production.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 23 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The PyPy project has recently gathered a lot of attention for its
+progress in speeding up the Python language - it is the fastest Python
+interpreter, and the most compatible and most stable 'alternative´ one.
+No longer merely a research project, PyPy is now suitable for production
+use. We are working on improvements on calling into C libraries and
+generally integrating with the existing Python extensions ecosystem.&lt;/p&gt;
+&lt;p&gt;We will give an overview on how the tracing Just-in-Time compiler works
+in PyPy. From there, we will then focus on what the PyPy project has
+achieved, particularly in the past two years:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;most Python benchmarks run much faster than with CPython or Psyco&lt;/li&gt;
+&lt;li&gt;the real-world PyPy compiler toolchain itself (200 KLocs) runs twice
+as fast&lt;/li&gt;
+&lt;li&gt;already supports 32 and 64bit x86 and is in the process of supporting
+ARM&lt;/li&gt;
+&lt;li&gt;full compatibility with CPython (more than Jython/IronPython)&lt;/li&gt;
+&lt;li&gt;full (and JIT-ed) ctypes support to call C libraries from Python&lt;/li&gt;
+&lt;li&gt;supports Stackless Python (in-progress)&lt;/li&gt;
+&lt;li&gt;new &amp;quot;cpyext&amp;quot; layer which integrates existing CPython C extensions&lt;/li&gt;
+&lt;li&gt;an experimental super-fast JIT-compilation of calls to C++ libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We want to reserve time for discussing potential future work like SWIG
+and/or Cython compatibility and other areas brought up by the audience.
+There are many interesting details that can be explored further; we will
+focus on the points the audience is most interested in.&lt;/p&gt;
+&lt;p&gt;For more info:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/"&gt;http://pypy.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Our blog: &lt;a class="reference external" href="http://morepypy.blogspot.com/"&gt;http://morepypy.blogspot.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eureka program: &lt;a class="reference external" href="http://www.eurostars-eureka.eu/"&gt;http://www.eurostars-eureka.eu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Eurostars Eureka is our funding source since 2009. It is a
+cross-European funding collaboration that targets small firms which
+produce research.&lt;/em&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Cuni</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/pypy-in-production.html</guid><category>cpython</category><category>ctypes</category><category>cython</category><category>extensions</category><category>pypy</category><category>stackless</category></item><item><title>The story of stackless Python</title><link>https://pyvideo.org/europython-2012/the-story-of-stackless-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] C Tismet A Rigo - 4 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk gives a good overview of the status of Stackless Python: Its
+history from the beginning, its current status and its future
+development to be expected. A discussion and comparison with similar
+approaches like Greenlet, Eventlet and how they relate is also included.
+Stackless Python 1.0 was started in 1998 as an implementation of true
+continuations, with all implied complications. In 2002, Stackless 2.0
+was born, a complete rewrite. Continuations were abandoned in favor of
+the much easier to comprehend tasklets - one-shot continuations that
+could resume their current state just once, like Coroutines. In 2004,
+Stackless 3.0 was created, which merged the 2.0 features with a new
+concept: so-called “Soft-Switching”, which made the Pickling of Program
+State” possible. As a consequence, a few recent application make solely
+use of Program State Pickling, which changes the purpose of Stackless
+Python quite a bit. One example of this is the “Nagare Web Framework”
+which will be shown in examples. In the light of the popularity of a
+Stackless spin-off, called “Greenlet”, the concept of a new Stackless
+branch will be depicted: Stackless, written as a pure extension module
+on top of Greenlets, which includes State Pickling - a feature that
+seemed to be impossible to implement without changing CPython. But the
+impossible and ways to get around it was always a major topic in this
+project, which is going to augment what Stackless on PyPy already can
+do. Christian Tismer, creator of Stackless Python Perhaps with Armin
+Rigo as a guest, talking about Stackless status in PyPy. Otherwise, I
+will insert this myself. cheers – Chris&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Thu, 05 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-05:europython-2012/the-story-of-stackless-python.html</guid></item><item><title>Pypy: current status and gil-less future</title><link>https://pyvideo.org/europython-2012/pypy-current-status-and-gil-less-future.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] A. Rigo, A. Cuni, M. Fijalkowski - 2 JULY 2012 in
+&amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the first part of the keynote we will present the current status of
+PyPy, with a particular focus on what happened in the last year. We will
+give a brief overview of the current speed and the on-going development
+efforts. The second part of the keynote is about one particular feature
+whose development is in progress in PyPy: Automatic Mutual Exclusion.
+What it is needs some explanation: The GIL, or Global Interpreter Lock,
+is a well-known issue for Python programmers that want to have a single
+program using the multiple cores of today’s machines. This keynote is
+not about writing a GIL-less Python interpreter; although hard, this has
+been done before, notably in Jython. The real issue is that writing each
+and every multi-threaded Python programs is hard too. The threading
+module offers locks in several variants, conditions, events, semaphores…
+But using them correctly without missing one case is difficult,
+impossible to seriously test, often impossible to retrofit into existing
+programs, and arguably doesn’t scale. (Other solutions like the
+multiprocessing module are at best workarounds, suffering some of the
+same issues plus their own ones.) Instead, this keynote is about an
+alternate solution: a minimal thread-less API that lets programs use
+multiple cores, without worrying about races. This may sound impossible,
+but is in fact similar to the API simplification of using a garbage
+collected language over an explicitly managed one — what is not minimal
+is “just” the internal implementation of that API. I will explain how it
+can actually be done using Automatic Mutual Exclusion, a technique based
+on Transactional Memory. I will give preliminary results on a modified
+version of the PyPy Python interpreter that show that it can actually
+work. I will also explain how the API is used, e.g. in a modified
+Twisted reactor that gives multi-core capability to any existing,
+non-thread-based Twisted program.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">A Cuni</dc:creator><pubDate>Wed, 04 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-04:europython-2012/pypy-current-status-and-gil-less-future.html</guid></item><item><title>PyPy JIT under the hood</title><link>https://pyvideo.org/europython-2012/pypy-jit-under-the-hood.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] A Rigo - A Cuni - 4 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is probably the fastest Python implementation around, thanks to its
+automatically generated JIT compiler. This talk explains how the JIT
+works internally: in particular, it shows all the intermediate steps
+which lead to the compilation of the Python source into fast machine
+code, and how to use the right tools to inspect the output of the JIT
+compiler. By examining the internals of the JIT, you will also learn why
+some code is more “JIT friendly” than other, and how to write programs
+which exploits its full potential.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">A Cuni</dc:creator><pubDate>Wed, 04 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-04:europython-2012/pypy-jit-under-the-hood.html</guid></item><item><title>Using All These Cores: Transactional Memory in PyPy</title><link>https://pyvideo.org/europython-2014/using-all-these-cores-transactional-memory-in-py.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyPy, the Python implementation written in Python, experimentally
+supports Transactional Memory (TM). The strength of TM is to enable a
+novel use of multithreading, inheritently safe, and not limited to
+special use cases like other approaches. This talk will focus on how it
+works under the hood.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast alternative Python implementation. Software Transactional
+Memory (STM) is a current academic research topic. Put the two together
+--brew for a couple of years-- and we get a version of PyPy that runs on
+multiple cores, without the infamous Global Interpreter Lock (GIL).&lt;/p&gt;
+&lt;p&gt;The current research is based on a recent new insight that promises to
+give really good performance. The speed of STM is generally measured by
+two factors: the ability to scale with the number of CPUs, and the
+amount of overhead when compared with other approaches in a single CPU
+(in this case, with the regular PyPy with the GIL). Scaling is not
+really a problem here, but single-CPU performance is --or used to be.
+This new approach gives a single-threaded overhead that should be very
+low, maybe 20%, which would definitely be news for STM systems. Right
+now (February 2014) we are still implementing it, so we cannot give
+final numbers yet, but early results on a small interpreter for a custom
+language are around 15%. This looks like a deal-changer for STM.&lt;/p&gt;
+&lt;p&gt;In the talk, I will describe our progress, hopefully along with real
+numbers and demos. I will then dive under the hood of PyPy to give an
+idea about how it works. I will conclude with a picture of how the
+future of multi-threaded programming might looks like, for high-level
+languages like Python. I will also mention CPython: how hard (or not) it
+would be to change the CPython source code to use the same approach.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Wed, 23 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-23:europython-2014/using-all-these-cores-transactional-memory-in-py.html</guid></item><item><title>Why PyPy by example</title><link>https://pyvideo.org/pycon-us-2012/why-pypy-by-example.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;One of the goals of PyPy is to make existing Python code faster, however
+an even broader goal was to make it possible to write things in Python
+that previous would needed to be written in C or other low-level
+language. This talk will show examples of this, and describe how they
+represent the tremendous progress PyPy has made, and what it means for
+people looking to use PyPy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Gaynor</dc:creator><pubDate>Sat, 10 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-10:pycon-us-2012/why-pypy-by-example.html</guid></item><item><title>How to get the most out of your PyPy</title><link>https://pyvideo.org/pycon-us-2012/how-to-get-the-most-out-of-your-pypy.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;For many applications PyPy can provide performance benefits right out of
+the box. However, little details can push your application to perform
+much better. In this tutorial we'll give you insights on how to push
+pypy to it's limites. We'll focus on understanding the performance
+characteristics of PyPy, and learning the analysis tools in order to
+maximize your applications performance.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Gaynor</dc:creator><pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-07:pycon-us-2012/how-to-get-the-most-out-of-your-pypy.html</guid></item><item><title>PyPy without the GIL</title><link>https://pyvideo.org/pycon-us-2013/pypy-without-the-gil.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyPy has a version without the Global Interpreter Lock (GIL). It can run
+multiple threads concurrently. But the real benefit is that you have
+other, new ways of using all your cores. In this talk I will describe
+how it is possible (STM) and then focus on some of these new
+opportunities, e.g. show how we used multiple cores in a single really
+big program without adding thread locks everywhere.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-15:pycon-us-2013/pypy-without-the-gil.html</guid><category>talk</category></item><item><title>PyConZA 2012: PyPy</title><link>https://pyvideo.org/pycon-za-2012/pyconza-2012-pypy.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyPy: Armin Rigo's talk at PyConZA 2012&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Thu, 04 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-04:pycon-za-2012/pyconza-2012-pypy.html</guid><category>pyconza</category><category>pyconza2012</category></item><item><title>Software Transactional Memory with PyPy</title><link>https://pyvideo.org/pycon-za-2013/software-transactional-memory-with-pypy.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:pycon-za-2013/software-transactional-memory-with-pypy.html</guid><category>pyconza</category><category>pyconza2013</category></item><item><title>RevDB, a reverse debugger</title><link>https://pyvideo.org/pycon-za-2016/revdb-a-reverse-debugger.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;RevDB is an experimental &amp;quot;reverse debugger&amp;quot; for Python, similar to
+UndoDB-GDB or LL for C. You run your program once, in &amp;quot;record&amp;quot; mode,
+producing a log file; once you get buggy behavior, you start the
+reverse-debugger on the log file. It gives an (improved) pdb-like
+experience, but it is replaying your program exactly as it ran---all
+input/outputs are replayed from the log file instead of being redone.&lt;/p&gt;
+&lt;p&gt;The main point is that you can then go &lt;em&gt;backward&lt;/em&gt; as well as forward in
+time: from a situation that looks really buggy you can go back and
+discover how it came to be. You also get &amp;quot;watchpoints&amp;quot;, which are very
+useful to find when things change. Watchpoints work both forward and
+backward.&lt;/p&gt;
+&lt;p&gt;I will show on small examples how you can use it, and also give an idea
+about how it works. It is based on PyPy, not CPython, so you need to
+ensure your program works on PyPy in the first place (but chances are
+that it does).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Armin Rigo</dc:creator><pubDate>Thu, 06 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-06:pycon-za-2016/revdb-a-reverse-debugger.html</guid></item><item><title>PyPy3, Numpy, and maybe a GIL-less future</title><link>https://pyvideo.org/pycon-za-2017/pypy3-numpy-and-maybe-a-gil-less-future.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a Python implementation, alternative to the standard CPython.
+PyPy comes with a JIT (Just-in-Time compiler). We'll see the recent
+developments:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;PyPy now supports either Python 2.7 or (in beta) Python 3.5.&lt;/li&gt;
+&lt;li&gt;Numpy and the scientific stack are getting ever closer to fully
+working.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will also mention a potential future direction: getting rid of the
+GIL (Global Interpreter Lock). The Python community has been discussing
+removing the GIL for a long time, with no success so far. Targeting PyPy
+instead of CPython would still be quite involved, but more doable.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Maciej Fijalkowski</dc:creator><pubDate>Thu, 05 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-05:pycon-za-2017/pypy3-numpy-and-maybe-a-gil-less-future.html</guid></item></channel></rss>

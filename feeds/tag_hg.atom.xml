@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_hg.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-21T00:00:00+00:00</updated><entry><title>PyPy hands-on</title><link href="https://pyvideo.org/europython-2011/pypy-hands-on.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/pypy-hands-on.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &amp;quot;Training
+Pizza Margherita&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.&lt;/p&gt;
+&lt;p&gt;The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.&lt;/p&gt;
+&lt;div class="section" id="part-1-run-your-application-under-pypy"&gt;
+&lt;h4&gt;Part 1: Run your application under PyPy&lt;/h4&gt;
+&lt;p&gt;This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-2-write-your-own-interpreter-with-pypy"&gt;
+&lt;h4&gt;Part 2: Write your own interpreter with PyPy&lt;/h4&gt;
+&lt;p&gt;PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.&lt;/p&gt;
+&lt;p&gt;The students will be given the source code for a toy language
+implemented in RPython. They will learn:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &amp;quot;hints&amp;quot; needed by the JIT generator, and how to place them
+&lt;/pre&gt;
+&lt;p&gt;Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THINGS TO DO BEFORE THE TRAINING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You are encouraged to bring your laptop to the training session.&lt;/p&gt;
+&lt;p&gt;Make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Install PyPy 1.5:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/download.html"&gt;http://pypy.org/download.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy"&gt;http://doc.pypy.org/en/latest/getting-started.html#installing-pypy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;distribute&lt;/tt&gt; are installed (look
+at the URL above for instructions)&lt;/li&gt;
+&lt;li&gt;Clone the pypy repository, and update to the 1.5 version:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/pypy"&gt;http://bitbucket.org/pypy/pypy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd pypy&lt;/p&gt;
+&lt;p&gt;$ hg up -r release-1.5&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Clone the jitviewer repository and install it on pypy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/jitviewer"&gt;http://bitbucket.org/pypy/jitviewer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd jitviewer&lt;/p&gt;
+&lt;p&gt;$ /path/to/pypy-1.5/bin/pypy setup.py develop&lt;/p&gt;
+&lt;p&gt;If you intend to follow also the second part (&amp;quot;Write your own
+interpreter with PyPy&amp;quot;), you need to make sure you have a working
+&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter"&gt;developing
+environment&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="cd"></category><category term="cpython"></category><category term="extensions"></category><category term="hg"></category><category term="jit"></category><category term="optimize"></category><category term="pypy"></category><category term="setup.py"></category><category term="tutorial"></category></entry><entry><title>Hg and Git : Can't we all just get along? (#154)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--hg-and-git---can--39-t-we-all-just-ge.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Scott Chacon</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--hg-and-git---can--39-t-we-all-just-ge.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hg and Git: Can't we all just get along?&lt;/p&gt;
+&lt;p&gt;Presented by Scott Chacon&lt;/p&gt;
+&lt;p&gt;There is a fair amount of unnecessary animosity between developers about
+version control systems, especially between Mercurial and Git users. In
+reality, these two systems are very similar and can actually cooperate
+pretty well. In this talk we will show just how similar Git and
+Mercurial are, look at some of their technical differences, and see how
+they can work together by looking at hg-git, the bidirectional
+Git/Mercurial bridge, implemented in Python.&lt;/p&gt;
+</summary><category term="git"></category><category term="hg"></category><category term="mercurial"></category><category term="pycon"></category><category term="pycon2010"></category></entry><entry><title>Modern version control: Mercurial internals (#113)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--modern-version-control--mercurial-int.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Dirkjan Ochtman</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--modern-version-control--mercurial-int.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Modern version control: Mercurial internals&lt;/p&gt;
+&lt;p&gt;Presented by Dirkjan Ochtman&lt;/p&gt;
+&lt;p&gt;In this talk, I'd like to talk a bit about Mercurial. This will not be a
+beginner-level talk on DVCS or hg; it aims to be a higher-level
+discussion of the concepts employed in Mercurial. After having discussed
+these, I'd also like to compare Mercurial and git based on UI,
+performance and underlying concepts.&lt;/p&gt;
+</summary><category term="hg"></category><category term="mercurial"></category><category term="pycon"></category><category term="pycon2010"></category></entry><entry><title>Plenary: Saturday Evening Lightning Talks</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--plenary--saturday-evening-lightning-t.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--plenary--saturday-evening-lightning-t.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Saturday Evening Lightning Talks&lt;/p&gt;
+&lt;p&gt;(00:00) Jacob Kaplan-Moss - Introduction&lt;/p&gt;
+&lt;p&gt;(00:30) Guido van Rossum - PSF community service awards&lt;/p&gt;
+&lt;p&gt;(02:42) Ka-Ping Yee - Using scrape.py to test your web apps&lt;/p&gt;
+&lt;p&gt;(07:35) Ayman Hourieh - Python debugging techniques&lt;/p&gt;
+&lt;p&gt;(12:28) Robin Mills - Geo-tagging and Phatch&lt;/p&gt;
+&lt;p&gt;(17:30) Allen Short - Big brother's design rules&lt;/p&gt;
+&lt;p&gt;(21:25) David Goodger - PyCon swag&lt;/p&gt;
+&lt;p&gt;(25:00) David Ewing - Python in tiny embedded systems for the Smart Grid
+and beyond&lt;/p&gt;
+&lt;p&gt;(30:15) Dmitry Jemerov - Introducing PyCharm&lt;/p&gt;
+&lt;p&gt;(33:50) Dirkjan Ochtman - PEP 385: hg conversion&lt;/p&gt;
+&lt;p&gt;(37:30) Jesse Noller - Python: Hell Yeah.&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="debugging"></category><category term="embedded"></category><category term="hg"></category><category term="phatch"></category><category term="pycharm"></category><category term="pycon"></category><category term="pycon2010"></category><category term="scrape.py"></category></entry></feed>

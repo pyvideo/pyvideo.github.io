@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_pypy.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-11T00:00:00+00:00</updated><entry><title>Opening PyPy's magic black box</title><link href="https://pyvideo.org/europython-2019/opening-pypys-magic-black-box.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/opening-pypys-magic-black-box.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and compliant implementation of Python. In other words,
+it's an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython. It's optimised to
+enable efficient just-in- time (JIT) compilation of Python code to
+machine code, and has releases matching versions 2.7, and 3.6. It now
+also supports the main pillars of the scientific ecosystem (numpy,
+Cython, scipy, pandas, ...) thanks to its emulation layer for the C API
+of CPython.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The PyPy JIT is often just described as &amp;quot;magically running your code
+faster&amp;quot;, but is actually what is known as a &amp;quot;meta-tracing JIT&amp;quot;.&lt;/div&gt;
+&lt;div class="line"&gt;A tracing JIT optimises loops by recording and optimising a single,
+hopefully representative, execution of the loop. While crude, that
+approach is known to be effective for just-in-time compiler.
+Additionally, PyPy's JIT is &amp;quot;meta&amp;quot; in the sense that it traces the
+execution of the interpreter while it runs some user-code instead of
+tracing the user-code directly. This again simplifies the compiler. We
+will explore how all this works together and is implemented (spoiler:
+it's Python all the way down!).&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk assumes no prior knowledge of compiler theory nor of PyPy
+internals, and should be of interest to anybody who wishes that their
+pure-Python code would run faster. The audience will gain a firmer
+understanding of how PyPy operates and optimises code, and how to how to
+get the most out of the PyPy JIT.&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="PyPy"></category></entry><entry><title>Solving Google Code Jam problems with PyPy - Part 1</title><link href="https://pyvideo.org/europython-2013/solving-google-code-jam-problems-with-pypy-part-1.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/solving-google-code-jam-problems-with-pypy-part-1.html</id><summary type="html"></summary><category term="numpy"></category><category term="JIT"></category><category term="networkx"></category><category term="performance"></category><category term="scientific-computing"></category><category term="pypy"></category></entry><entry><title>Solving Google Code Jam problems with PyPy - Part 2</title><link href="https://pyvideo.org/europython-2013/solving-google-code-jam-problems-with-pypy-part-2.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/solving-google-code-jam-problems-with-pypy-part-2.html</id><summary type="html"></summary><category term="numpy"></category><category term="JIT"></category><category term="networkx"></category><category term="performance"></category><category term="scientific-computing"></category><category term="pypy"></category></entry><entry><title>Coding competitions with PyPy aka "Python for the win!"</title><link href="https://pyvideo.org/europython-2013/coding-competitions-with-pypy-aka-python-for-the-win.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/coding-competitions-with-pypy-aka-python-for-the-win.html</id><summary type="html"></summary><category term="numpy"></category><category term="JIT"></category><category term="networkx"></category><category term="performance"></category><category term="scientific-computing"></category><category term="pypy"></category></entry><entry><title>Programmazione competitiva con PyPy: "Vincere con Python!"</title><link href="https://pyvideo.org/europython-2013/programmazione-competitiva-con-pypy-vincere-con-python.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/programmazione-competitiva-con-pypy-vincere-con-python.html</id><summary type="html"></summary><category term="numpy"></category><category term="JIT"></category><category term="networkx"></category><category term="performance"></category><category term="scientific-computing"></category><category term="pypy"></category></entry><entry><title>PyPy Status Update</title><link href="https://pyvideo.org/pycon-italia-2017/pypy-status-update.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/pypy-status-update.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The goal of this talk is to present the latest news in the PyPy world.
+In particular, I will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;the current status of PyPy, including performance and compatibility
+w.r.t CPython&lt;/li&gt;
+&lt;li&gt;the status of NumPy and in general of the scientific stack: what
+works, what doesn’t, the speed and compatibility tradeoffs, etc.&lt;/li&gt;
+&lt;li&gt;the status Python 3 on PyPy&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="performance"></category><category term="JIT"></category><category term="pypy"></category><category term="python3"></category><category term="numpy"></category></entry><entry><title>Using PyPy instead of Python for speed</title><link href="https://pyvideo.org/pycon-se-2017/using-pypy-instead-of-python-for-speed.html" rel="alternate"></link><published>2017-09-06T00:00:00+00:00</published><updated>2017-09-06T00:00:00+00:00</updated><author><name>Niklas Bivald</name></author><id>tag:pyvideo.org,2017-09-06:pycon-se-2017/using-pypy-instead-of-python-for-speed.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using PyPy - a faster version of Python for long running applications - as a first step to speed up your application.&lt;/p&gt;
+</summary><category term="pypy"></category></entry><entry><title>CPython, Grumpy, PyPy - When, How, Why</title><link href="https://pyvideo.org/pycon-israel-2017/cpython-grumpy-pypy-when-how-why.html" rel="alternate"></link><published>2017-06-12T00:00:00+00:00</published><updated>2017-06-12T00:00:00+00:00</updated><author><name>Itay Weiss</name></author><id>tag:pyvideo.org,2017-06-12:pycon-israel-2017/cpython-grumpy-pypy-when-how-why.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I will talk about the differences between the three implementations. Focusing on use cases in which each of them should be used and how each environment tackles performance issues (GIL, just-in-time and Goroutines). I will also evaluate performance impact in real life scenario.&lt;/p&gt;
+</summary><category term="cpython"></category><category term="grumpy"></category><category term="pypy"></category></entry><entry><title>PyPy &amp; Us Could Be PyPy &amp; You</title><link href="https://pyvideo.org/pygotham-2016/pypy-us-could-be-pypy-you.html" rel="alternate"></link><published>2016-07-16T00:00:00+00:00</published><updated>2016-07-16T00:00:00+00:00</updated><author><name>Julian Berman</name></author><id>tag:pyvideo.org,2016-07-16:pygotham-2016/pypy-us-could-be-pypy-you.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've probably heard of PyPy. It's an interpreter that can make your Python fast. Really fast. We'll talk about some fundamentals &amp;amp; lessons learned from running PyPy in large scale production deployments for the last ~3 years.&lt;/p&gt;
+</summary><category term="pypy"></category></entry><entry><title>Speed without drag</title><link href="https://pyvideo.org/pycon-es-2014/speed-without-drag.html" rel="alternate"></link><published>2015-04-06T00:00:00+00:00</published><updated>2015-04-06T00:00:00+00:00</updated><author><name>Saul Díez Guerra</name></author><id>tag:pyvideo.org,2015-04-06:pycon-es-2014/speed-without-drag.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recorrido práctico a través de las opciones que Python ofrece para la optimización de código númerico de baja fricción (esto es, sin dejar de escribir Python), incluyendo: agotando CPython, NumPy, Numba, Parakeet, Cython, Theano, PyPy/NumPyPy, Pyston y Blaze.&lt;/p&gt;
+</summary><category term="NumPy"></category><category term="Numba"></category><category term="Parakeet"></category><category term="Cython"></category><category term="Theano"></category><category term="PyPy"></category><category term="NumPyPy"></category><category term="Pyston"></category><category term="Blaze"></category></entry><entry><title>PyOhio 2010: PyPy and Unladen Swallow: Making your Python Fast</title><link href="https://pyvideo.org/pyohio-2010/pyohio-2010--pypy-and-unladen-swallow--making-you.html" rel="alternate"></link><published>2010-07-31T00:00:00+00:00</published><updated>2010-07-31T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2010-07-31:pyohio-2010/pyohio-2010--pypy-and-unladen-swallow--making-you.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy and Unladen-Swallow: Making your Python Fast&lt;/p&gt;
+&lt;p&gt;Presented by Alex Gaynor&lt;/p&gt;
+&lt;p&gt;Python has a reputation for being a bit slow, but it doesn't have to be
+that way. This talk will cover why Python is slow, and what two of the
+most exciting virtual machines are doing about it.&lt;/p&gt;
+</summary><category term="optimizing"></category><category term="pyohio"></category><category term="pyohio2010"></category><category term="pypy"></category><category term="unladenswallow"></category></entry><entry><title>Object oriented Programming with NumPy using CPython &amp; PyPy</title><link href="https://pyvideo.org/scipy-2014/object-oriented-programming-with-numpy-using-cpyt.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Dorota Jarecka</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/object-oriented-programming-with-numpy-using-cpyt.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In the paper we compare object-oriented implementations of an advection
+algorithm written in Python, C++ and modern FORTRAN. The main angles of
+comparison are code brevity and syntax clarity (and hence
+maintainability and auditability) as well as performance. A notable
+performance gain when switching from CPython to PyPy will be
+exemplified, and the reasons for it will be briefly explained.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the paper we compare object-oriented implementations of an advection
+algorithm written in Python, C++ and modern FORTRAN. The MPDATA
+advection algorithm (Multidimensional Positive-Definite Advective
+Transport Algorithm) used as a core of weather, ocean and climate
+modelling systems serves as an example.&lt;/p&gt;
+&lt;p&gt;In the context of scientific programming, employment of object-oriented
+programming (OOP) techniques may help to improve code readability, and
+hence its auditability and maintainability. OOP offers, in particular,
+the possibility to reproduce in the program code the mathematical
+&amp;quot;blackboard abstractions&amp;quot; used in the literature. We compare how the
+choice of a particular language influences syntax clarity, code length
+and the performance: CPU time and memory usage.&lt;/p&gt;
+&lt;p&gt;The Python implementation of MPDATA is based on NumPy. Its performance
+is compared with C++/Blitz++ and FORTRAN implementations. A notable
+performance gain when switching from the standard CPython to PyPy will
+be exemplified, and the reasons for it will be briefly explained.
+Discussion of other selected solutions for improving the NumPy’s
+relatively poor performance will be also presented.&lt;/p&gt;
+&lt;p&gt;This talk will describe and extend on the key findings presented in
+&lt;a class="reference external" href="http://arxiv.org/abs/1301.1334"&gt;http://arxiv.org/abs/1301.1334&lt;/a&gt;.&lt;/p&gt;
+</summary><category term="pypy"></category></entry><entry><title>PyPy and Unladen Swallow: Making your Python Fast</title><link href="https://pyvideo.org/chipy/pypy-and-unladen-swallow--making-your-python-fast.html" rel="alternate"></link><published>2010-07-08T00:00:00+00:00</published><updated>2010-07-08T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2010-07-08:chipy/pypy-and-unladen-swallow--making-your-python-fast.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python has a reputation for being a bit slow, but it doesn't have to be
+that way. This talk will cover why Python is slow, and what two of the
+most exciting virtual machines are doing about it.&lt;/p&gt;
+</summary><category term="chipy"></category><category term="optimization"></category><category term="performance"></category><category term="pypy"></category><category term="unladenswallow"></category></entry><entry><title>A Summer in the Wild</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--a-summer-in-the-wild.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--a-summer-in-the-wild.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A summer in the wild&lt;/p&gt;
+&lt;p&gt;Presented by Alex Gaynor&lt;/p&gt;
+&lt;p&gt;I've spent this past summer away from Django, working for Quora,
+venturing into the depths of a foreign codebase, and making it faster by
+running on PyPy. This talk will feature the lessons I've learned about
+Django, PyPy, and web development in general.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2011"></category><category term="pypy"></category><category term="web"></category></entry><entry><title>PyPy hands-on</title><link href="https://pyvideo.org/europython-2011/pypy-hands-on.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/pypy-hands-on.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &amp;quot;Training
+Pizza Margherita&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.&lt;/p&gt;
+&lt;p&gt;The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.&lt;/p&gt;
+&lt;div class="section" id="part-1-run-your-application-under-pypy"&gt;
+&lt;h4&gt;Part 1: Run your application under PyPy&lt;/h4&gt;
+&lt;p&gt;This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-2-write-your-own-interpreter-with-pypy"&gt;
+&lt;h4&gt;Part 2: Write your own interpreter with PyPy&lt;/h4&gt;
+&lt;p&gt;PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.&lt;/p&gt;
+&lt;p&gt;The students will be given the source code for a toy language
+implemented in RPython. They will learn:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &amp;quot;hints&amp;quot; needed by the JIT generator, and how to place them
+&lt;/pre&gt;
+&lt;p&gt;Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THINGS TO DO BEFORE THE TRAINING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You are encouraged to bring your laptop to the training session.&lt;/p&gt;
+&lt;p&gt;Make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Install PyPy 1.5:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/download.html"&gt;http://pypy.org/download.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy"&gt;http://doc.pypy.org/en/latest/getting-started.html#installing-pypy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;distribute&lt;/tt&gt; are installed (look
+at the URL above for instructions)&lt;/li&gt;
+&lt;li&gt;Clone the pypy repository, and update to the 1.5 version:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/pypy"&gt;http://bitbucket.org/pypy/pypy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd pypy&lt;/p&gt;
+&lt;p&gt;$ hg up -r release-1.5&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Clone the jitviewer repository and install it on pypy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/jitviewer"&gt;http://bitbucket.org/pypy/jitviewer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd jitviewer&lt;/p&gt;
+&lt;p&gt;$ /path/to/pypy-1.5/bin/pypy setup.py develop&lt;/p&gt;
+&lt;p&gt;If you intend to follow also the second part (&amp;quot;Write your own
+interpreter with PyPy&amp;quot;), you need to make sure you have a working
+&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter"&gt;developing
+environment&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="cd"></category><category term="cpython"></category><category term="extensions"></category><category term="hg"></category><category term="jit"></category><category term="optimize"></category><category term="pypy"></category><category term="setup.py"></category><category term="tutorial"></category></entry><entry><title>Making CPython Fast Using Trace-based Optimisations</title><link href="https://pyvideo.org/europython-2011/making-cpython-fast-using-trace-based-optimisatio.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Mark Shannon - 24 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CPython can be made faster by implementing the sort of optimizations
+used in the PyPy VM, and in my HotPy VM. All the necessary changes can
+be made without modifying the language or the API.&lt;/p&gt;
+&lt;p&gt;The CPython VM can be modified to support optimizations by adding an
+effective garbage collector and by separating the virtual-machine state
+from the real- machine state (like Stackless).&lt;/p&gt;
+&lt;p&gt;Optimizations can be implemented incrementally. Since almost all of the
+optimizations are implemented in the interpreter, all hardware platforms
+can benefit. JIT compiler(s) can then be added for common platforms
+(intel, ARM, etc.).&lt;/p&gt;
+&lt;p&gt;For more information see &lt;a class="reference external" href="http://hotpy.blogspot.com/"&gt;http://hotpy.blogspot.com/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="cpython"></category><category term="jit"></category><category term="pypy"></category><category term="vm"></category></entry><entry><title>PyPy in production</title><link href="https://pyvideo.org/europython-2011/pypy-in-production.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/pypy-in-production.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 23 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The PyPy project has recently gathered a lot of attention for its
+progress in speeding up the Python language - it is the fastest Python
+interpreter, and the most compatible and most stable 'alternative´ one.
+No longer merely a research project, PyPy is now suitable for production
+use. We are working on improvements on calling into C libraries and
+generally integrating with the existing Python extensions ecosystem.&lt;/p&gt;
+&lt;p&gt;We will give an overview on how the tracing Just-in-Time compiler works
+in PyPy. From there, we will then focus on what the PyPy project has
+achieved, particularly in the past two years:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;most Python benchmarks run much faster than with CPython or Psyco&lt;/li&gt;
+&lt;li&gt;the real-world PyPy compiler toolchain itself (200 KLocs) runs twice
+as fast&lt;/li&gt;
+&lt;li&gt;already supports 32 and 64bit x86 and is in the process of supporting
+ARM&lt;/li&gt;
+&lt;li&gt;full compatibility with CPython (more than Jython/IronPython)&lt;/li&gt;
+&lt;li&gt;full (and JIT-ed) ctypes support to call C libraries from Python&lt;/li&gt;
+&lt;li&gt;supports Stackless Python (in-progress)&lt;/li&gt;
+&lt;li&gt;new &amp;quot;cpyext&amp;quot; layer which integrates existing CPython C extensions&lt;/li&gt;
+&lt;li&gt;an experimental super-fast JIT-compilation of calls to C++ libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We want to reserve time for discussing potential future work like SWIG
+and/or Cython compatibility and other areas brought up by the audience.
+There are many interesting details that can be explored further; we will
+focus on the points the audience is most interested in.&lt;/p&gt;
+&lt;p&gt;For more info:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/"&gt;http://pypy.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Our blog: &lt;a class="reference external" href="http://morepypy.blogspot.com/"&gt;http://morepypy.blogspot.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eureka program: &lt;a class="reference external" href="http://www.eurostars-eureka.eu/"&gt;http://www.eurostars-eureka.eu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Eurostars Eureka is our funding source since 2009. It is a
+cross-European funding collaboration that targets small firms which
+produce research.&lt;/em&gt;&lt;/p&gt;
+</summary><category term="cpython"></category><category term="ctypes"></category><category term="cython"></category><category term="extensions"></category><category term="pypy"></category><category term="stackless"></category></entry><entry><title>Michael Hudson-Doyle - An Introduction to PyPy</title><link href="https://pyvideo.org/kiwi-pycon-2009/michael-hudson-doyle---an-introduction-to-pypy.html" rel="alternate"></link><published>2009-11-07T00:00:00+00:00</published><updated>2009-11-07T00:00:00+00:00</updated><author><name>Michael Hudson-Doyle</name></author><id>tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/michael-hudson-doyle---an-introduction-to-pypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An introduction to PyPy&lt;/p&gt;
+&lt;p&gt;Presented by Michael Hudson-Doyle&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;An overview of the ideas behind the project, its current status, future
+plans and why you should care about it.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;The core idea of PyPy is to produce a flexible and fast implementation
+of the Python programming language. The talk will cover the interpreter,
+translator and jit parts of the code and their relationships and the
+fundamental ways in which PyPy differs from other virtual machine
+implementations.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</summary><category term="kiwipycon"></category><category term="kiwipycon2009"></category><category term="pypy"></category></entry><entry><title>State of CPython and Python Ecosystem</title><link href="https://pyvideo.org/pycon-au-2011/state-of-cpython-and-python-ecosystem.html" rel="alternate"></link><published>2011-08-22T00:00:00+00:00</published><updated>2011-08-22T00:00:00+00:00</updated><author><name>Senthil Kumaran</name></author><id>tag:pyvideo.org,2011-08-22:pycon-au-2011/state-of-cpython-and-python-ecosystem.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This a high level overview of the State of CPython interpreter and other
+python interpreters. The talk will mention about the
+&amp;amp;nbsp_place_holder;changes in 3.2 release and changes coming up in 3.3
+release and status of Python2.7. It will also give the details of
+current state of PyPy Project, IronPython project and Jython Project..&lt;/p&gt;
+</summary><category term="cpython"></category><category term="ironpython"></category><category term="jython"></category><category term="pypy"></category></entry><entry><title>PyPy - is it ready for production?</title><link href="https://pyvideo.org/pycon-au-2012/pypy-is-it-ready-for-production.html" rel="alternate"></link><published>2012-08-22T00:00:00+00:00</published><updated>2012-08-22T00:00:00+00:00</updated><author><name>Mark Rees</name></author><id>tag:pyvideo.org,2012-08-22:pycon-au-2012/pypy-is-it-ready-for-production.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;I have followed the development of PyPy since 2004 and played with
+various releases to see what the PyPy team had achieved. It wasn't until
+the release of PyPy 1.18 that I actually ran some existing production
+python code under it. The perc&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I have followed the development of PyPy since 2004 and played with
+various releases to see what the PyPy team had achieved. It wasn't until
+the release of PyPy 1.18 that I actually ran some existing production
+python code under it. The perceived performance improvement of this
+exercise inspired me to implement a more scientific method for comparing
+the runtime performance of CPython and PyPy running various Python
+production code sets that we use in the company I work for. This
+presentation will discuss the results of this comparison and the
+positives and negatives with utilising PyPy in production.&lt;/p&gt;
+</summary><category term="pypy"></category></entry><entry><title>PyCon 2009: PyPy status talk (#72)</title><link href="https://pyvideo.org/pycon-us-2009/pycon-2009-pypy-status-talk-72.html" rel="alternate"></link><published>2009-02-17T00:00:00+00:00</published><updated>2009-02-17T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2009-02-17:pycon-us-2009/pycon-2009-pypy-status-talk-72.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy Status Talk&lt;/p&gt;
+&lt;p&gt;Presented by Holger Krekel and Maciej Fijalkowski&lt;/p&gt;
+&lt;p&gt;PyPy has come a long way. It's gone from being purely a research project
+to providing a flexible and reasonably fast Python Interpreter, itself
+implemented in Python. Although PyPy is not yet a viable CPython
+replacement, PyPy is able to run sophisticated python applications like
+Django and Twisted. In this talk, we'll focus on improvements that
+happened during the last year in PyPy. This talk will also explain the
+motivations driving current PyPy development and its targets for the
+future.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Audio humming, other misc audio issues]&lt;/p&gt;
+</summary><category term="pycon"></category><category term="pycon2009"></category><category term="pypy"></category></entry><entry><title>Keynote: State of PyPy</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--keynote--state-of-pypy.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Maciej Fijalkowski</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--keynote--state-of-pypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote: State of PyPy&lt;/p&gt;
+&lt;p&gt;Presented by Maciej Fijalkowski&lt;/p&gt;
+&lt;p&gt;Talks about the current state of PyPy.&lt;/p&gt;
+</summary><category term="pycon"></category><category term="pycon2010"></category><category term="pypy"></category></entry><entry><title>The speed of PyPy (#83)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--the-speed-of-pypy---83.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Maciej Fijalkowski</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--the-speed-of-pypy---83.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Speed of PyPy&lt;/p&gt;
+&lt;p&gt;Presented by Maciej Fijalkowski (merlinux GmbH, pypy)&lt;/p&gt;
+&lt;p&gt;The first part of the talk will cover PyPy's speed achievements
+resulting from the last year's work on the Just-In-Time Compiler. I'll
+present and discuss a number of benchmarks and compare against other
+Python-speed projects. I'll also cover the basics of how the JIT works
+and what sort of programs it can greatly speedup (and which ones it
+can't).&lt;/p&gt;
+</summary><category term="pycon"></category><category term="pycon2010"></category><category term="pypy"></category></entry><entry><title>The Ring of Python (#189)</title><link href="https://pyvideo.org/pycon-us-2010/the-ring-of-python-189.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/the-ring-of-python-189.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Ring of Python&lt;/p&gt;
+&lt;p&gt;Presented by holger krekel (merlinux gmbh)&lt;/p&gt;
+&lt;p&gt;CPython 2.5/2.6/3.1, Jython, IronPython, PyPy, StacklessPython,
+UnladenSwallow, Cython ... what do we make of all these cool interpreter
+projects and versions? Where does competition help and where does it
+hamper?&lt;/p&gt;
+&lt;p&gt;In this interactive talk I'll highlight the main strengths of each of
+the Python interpreters. Furthermore, I'll discuss ways to leverage
+Python interpreters in a co-operative way, discuss challenges, projects
+and issues ahead and also briefly highlight 'execnet', one my own
+projects for bridging (Any) Python to (Any) Python. This is also the
+first time i am going to try out a new and funvisual presentation
+technique after several years of having done mostly text-based ones&lt;/p&gt;
+</summary><category term="cpython"></category><category term="cython"></category><category term="ironpython"></category><category term="jython"></category><category term="pycon"></category><category term="pycon2010"></category><category term="pypy"></category><category term="stackless"></category><category term="unladenswallow"></category></entry><entry><title>Panel: Python VMs</title><link href="https://pyvideo.org/pycon-us-2011/panel-python-vms.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Brett Cannon</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/panel-python-vms.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Panel: Python VMs&lt;/p&gt;
+&lt;p&gt;Presented by Jacob Kaplan-Moss, Brett Cannon, Maciej Fijalkowski, Frank
+Wierzbicki, Dino Viehland&lt;/p&gt;
+&lt;p&gt;Python is lucky enough to have a healthy ecosystem of virtual machines
+(VMs) exist. CPython, Jython, IronPython, and PyPy are all used
+extensively by people in real-world situations. This panel brings
+together a representative from each of the major VMs to discuss where
+they are now, going in the future, and to answer questions from the
+community.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;All four major Python VMs will be represented:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://python.org/"&gt;CPython&lt;/a&gt;: Brett Cannon&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.jython.org/"&gt;Jython&lt;/a&gt;: Frank Wierzbicki&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ironpython.net/"&gt;IronPython&lt;/a&gt;: Dino Viehland&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/"&gt;PyPy&lt;/a&gt;: Maciej Fijalkowski Moderation will be
+handled by Jacob Kaplan-Moss of Django.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="cpython"></category><category term="ironpython"></category><category term="jython"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category></entry><entry><title>Prototyping Go's Select with stackless.py for Stackless Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Andrew Francis</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Prototyping Go's Select with stackless.py for Stackless Python&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Francis&lt;/p&gt;
+&lt;p&gt;Showing how to use Python to prototype powerful concurrency features for
+Stackless Python. We do want you to try this at home.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Google’s introduction of the Go language raised eyebrows in the
+Stackless Python community. Although very different languages, Go and
+Stackless Python’s concurrency model share a common ancestor: the Bell
+Labs family of languages (i.e., Newsqueak, Limbo). The common feature
+are channels: a synchronous message passing mechanism based on Tony
+Hoare’s Communicating Sequential Processes (CSP).&lt;/p&gt;
+&lt;p&gt;Both Go and Python have channels. However with the select language
+statement, Go has the ability to wait on multiple channels
+simultaneously. Select greatly simplifies many concurrent programming
+problems. Stackless Python does not have this feature. Other channel
+based languages also feature powerful concurrency constructs. How hard
+would these constructs be to implement for Stackless Python?&lt;/p&gt;
+&lt;p&gt;This talk explores the prototyping potential of stackless.py, the PyPy's
+framework's implementation of Stackless Python. The beauty of
+stackless.py is that it is written in Python and implements much of
+Stackless Python's API! The &amp;quot;case study&amp;quot; involves prototyping Go's
+select in stackless.py before reimplementing select in C based Stackless
+Python.&lt;/p&gt;
+&lt;p&gt;During this talk, it will be shown how stackless.py can be used with
+CPython and the greenlet package (no need to install another Python).
+The audience will also get an in depth look at how channels are
+implemented. Channels are at the heart of Stackless Python's message
+based concurrency model. Finally the audience will gain insights into
+future directions of Stackless Python.&lt;/p&gt;
+</summary><category term="csp"></category><category term="go"></category><category term="greenlets"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category><category term="stackless"></category></entry><entry><title>PSF funds PyPy</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--psf-funds-pypy.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--psf-funds-pypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Maciej Fija?kowski, Armin Rigo, Alex Gaynor, Laura Creighton and Jacob
+Hall&lt;/p&gt;
+</summary><category term="psf"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category></entry><entry><title>Why is Python slow and how PyPy can help?</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--why-is-python-slow-and-how-pypy-can-h.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Alex Gaynor</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--why-is-python-slow-and-how-pypy-can-h.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Why is Python slow and how PyPy can help?&lt;/p&gt;
+&lt;p&gt;Presented by Maciej Fijalkowski and Alex Gaynor&lt;/p&gt;
+&lt;p&gt;PyPy is a virtual machine for Python, featuring an advanced just in time
+compiler, which can deliver exceptional performance. This talk is going
+to be a deep dive into what exactly makes Python such a hard language to
+optimize, how PyPy is organized, and what optimizations our JIT can do
+(and what it can't do) for your code.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The talk will detail how a python interpreter works internally and why
+some operations are costly. We'll go through several python features,
+how they work, why they're slow in CPython and how we're fixing it.&lt;/p&gt;
+&lt;p&gt;The list of mentioned features is not exhaustive, however we will try to
+focus at least on the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Dynamic language - In Python code we have no known types, like a
+statically typed language. Even operations like &amp;quot;a + b&amp;quot; can do
+anything, unless we know more about the code, and the types it is
+operating on.&lt;/li&gt;
+&lt;li&gt;Frame introspection - Frame objects need to be allocated for every
+function call, and all local variables are stored on the frame, and
+must be accessible from further down the call stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PyPy uses a novel approach called &amp;quot;virtualizables&amp;quot; which makes it
+possible to avoid frame allocation in most common cases.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Object model - All user defined Python objects have a dictionary
+which stores their attributes, as does every type. When Python does
+an attribute lookup this requires at least two dictionary lookups.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In PyPy we use an approach similar to the one used by V8 with hidden
+classes (except more PyPy specific) called map dictionaries and other
+optimizations.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;FFI calls - Calling C from Python is costly and hard to optimize. In
+PyPy we expose C APIs to Python code via ctypes. This part explains
+how we can optimize ctypes calls.&lt;/li&gt;
+&lt;li&gt;array module - Users of CPython's array module probably know it can
+save them quite a bit of memory, however it's also slower than using
+a list, due to the overhead of boxing and unboxing on every
+operations. Here we will tie everything together and describe how the
+array module is much faster with PyPy's JIT, combining our
+optimizations to: unbox values, remove the dynamicism within traces,
+and deliver great performance.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="jit"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category><category term="vm"></category></entry><entry><title>David Beazley Keynote: Tinkering with PyPy</title><link href="https://pyvideo.org/pycon-us-2012/keynote-david-beazley.html" rel="alternate"></link><published>2012-03-10T00:00:00+00:00</published><updated>2012-03-10T00:00:00+00:00</updated><author><name>David Beazley</name></author><id>tag:pyvideo.org,2012-03-10:pycon-us-2012/keynote-david-beazley.html</id><summary type="html"></summary><category term="pypy"></category></entry></feed>

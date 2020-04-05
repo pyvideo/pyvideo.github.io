@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_tyler-reddy.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-11T00:00:00+00:00</updated><entry><title>Inside NumPy: Preparing for the Next Decade</title><link href="https://pyvideo.org/scipy-2019/inside-numpy-preparing-for-the-next-decade.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Ralf Gommers</name></author><id>tag:pyvideo.org,2019-07-11:scipy-2019/inside-numpy-preparing-for-the-next-decade.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the past year, and for the first time since its creation, NumPy has been operating with dedicated funding. NumPy developers think it has invigorated the project and its community. But is that true, and how can we know? We will give an overview of the actions we've taken to improve the sustainability of the NumPy project and its community. We will draw some lessons from a first year of grant-funded activity, discuss key obstacles faced, attempt to quantify what we need to operate sustainably, and present a vision for the project and how we plan to realize it.&lt;/p&gt;
+</summary></entry><entry><title>Veni, Vidi, Voronoi: Attacking Viruses using spherical Voronoi diagrams in Python</title><link href="https://pyvideo.org/pydata-london-2015/veni-vidi-voronoi-attacking-viruses-using-spherical-voronoi-diagrams-in-python.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Tyler Reddy</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/veni-vidi-voronoi-attacking-viruses-using-spherical-voronoi-diagrams-in-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Roughly spherical objects are abundant and affect human lives every
+day--whether dealing with the surface of the earth or microscopic
+viruses that cause severe illness in humans. Spherical Voronoi
+diagrams can be used to gain insight into such spherical objects and
+the algorithms used have only recently been proposed. I will discuss
+an open source Python implementation and remaining challenges.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A Voronoi diagram for a set of input data points (called generators)
+defines cells (polygons) around each generator such that any point
+within a given cell is closer to its generator than to any other
+generator in the system. On a sphere for example, this means you could
+rapidly identify the closest airport to a search and rescue region on
+the surface of the earth. I've produced an open source Python
+implementation of the Voronoi diagram on the surface of a sphere. The
+(&lt;a class="reference external" href="https://github.com/tylerjereddy/py_sphere_Voronoi"&gt;https://github.com/tylerjereddy/py_sphere_Voronoi&lt;/a&gt; &amp;quot;repository&amp;quot;) and
+(&lt;a class="reference external" href="http://py-sphere-voronoi.readthedocs.org/en/latest/voronoi_utility.html"&gt;http://py-sphere-voronoi.readthedocs.org/en/latest/voronoi_utility.html&lt;/a&gt;
+&amp;quot;documentation&amp;quot;) are both available online. The code is capable of
+producing spherical Voronoi diagrams for a wide range of input test
+cases as verified by the unit tests, and further exposes the individual
+surface areas and coordinates of each Voronoi cell on the surface. I
+will discuss the procedure (algorithm) I've used to generate the
+spherical Voronoi diagram and highlight limitations / challenges moving
+forward along with some example applications (i.e., viruses).&lt;/p&gt;
+&lt;p&gt;The remaining challenges, for which computational geometry and
+engineering expertise would be most welcome, will be discussed in some
+detail. For example, although the % surface area reconstitution when
+summing up the areas of the Voronoi cells is generally &amp;gt; 95 % of the
+theoretical surface area of the sphere, there are occasional (albeit
+rare) cases where a vertex is excluded from a Voronoi cell, leaving
+'blank' spaces in the diagrams. There is also a general susceptibility
+to numerical / floating point instability in some of the calculations,
+presumably due to the substantial number of trigonometric operations.
+Again, input from experienced engineers and mathematicians would be most
+helpful in improving this open source effort.&lt;/p&gt;
+</summary></entry><entry><title>Mastering scipy.spatial</title><link href="https://pyvideo.org/pycon-us-2017/mastering-scipyspatial.html" rel="alternate"></link><published>2017-05-18T00:00:00+00:00</published><updated>2017-05-18T00:00:00+00:00</updated><author><name>Tyler Reddy</name></author><id>tag:pyvideo.org,2017-05-18:pycon-us-2017/mastering-scipyspatial.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The heavily-used scipy library is so large that each of the major
+modules could fill its own tutorial syllabus. It is also
+production-quality software with a 1.0 release imminent. In this
+tutorial, my focus is to cover the scipy.spatial component of the
+library in great detail, from the perspective of a heavy user and active
+developer of the computational geometry components of scipy. From
+distance matrices to Voronoi diagrams and Hausdorff distances, we will
+explore the corners of scipy.spatial code--both long-established
+features and even proposed features that haven't yet made it into a
+stable release.&lt;/p&gt;
+</summary></entry><entry><title>MDAnalysis: A Python Package for the Rapid Analysis of Molecular Dynamics Simulations</title><link href="https://pyvideo.org/scipy-2016/mdanalysis-a-python-package-for-the-rapid-analysis-of-molecular-dynamics-simulations-scipy-2016.html" rel="alternate"></link><published>2016-07-14T00:00:00+00:00</published><updated>2016-07-14T00:00:00+00:00</updated><author><name>Oliver Beckstein</name></author><id>tag:pyvideo.org,2016-07-14:scipy-2016/mdanalysis-a-python-package-for-the-rapid-analysis-of-molecular-dynamics-simulations-scipy-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;MDAnalysis (&lt;a class="reference external" href="http://mdanalysis.org"&gt;http://mdanalysis.org&lt;/a&gt;) is an object-oriented library for structural and temporal analysis of molecular dynamics (MD) simulation trajectories and individual protein structures. MD simulations of biological molecules have become an important tool to elucidate the relationship between molecular structure and physiological function. Simulations are performed with highly optimized software packages on HPC resources but most codes generate output trajectories in their own formats so that the development of new trajectory analysis algorithms is confined to specific user communities and widespread adoption and further development is delayed. The MDAnalysis library addresses this problem by abstracting access to the raw simulation data and presenting a uniform object-oriented Python interface to the user. It thus enables users to rapidly write code that is portable and immediately usable in virtually all biomolecular simulation communities. The user interface and modular design work equally well in complex scripted workflows, as foundations for other packages, and for interactive and rapid prototyping work in IPython/Jupyter notebooks, especially together with molecular visualization provided by nglview [1] and time series analysis with pandas [2]. MDAnalysis is written in Python and Cython and uses NumPy arrays for easy interoperability with the wider scientific Python ecosystem. It is widely used and forms the foundation for more specialized biomolecular simulation tools. MDAnalysis is available under the GNU General Public License v2.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://github.com/arose/nglview"&gt;https://github.com/arose/nglview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2] &lt;a class="reference external" href="http://pandas.pydata.org/"&gt;http://pandas.pydata.org/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="mdanalysis"></category><category term="biomolecular"></category><category term="biomedicine"></category></entry><entry><title>Computational Geometry in Python</title><link href="https://pyvideo.org/pycon-us-2016/tyler-reddy-computational-geometry-in-python-pycon-2016.html" rel="alternate"></link><published>2016-05-30T00:00:00+00:00</published><updated>2016-05-30T00:00:00+00:00</updated><author><name>Tyler Reddy</name></author><id>tag:pyvideo.org,2016-05-30:pycon-us-2016/tyler-reddy-computational-geometry-in-python-pycon-2016.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Tyler Reddy&lt;/p&gt;
+&lt;p&gt;Computational geometry deals with the algorithms used to solve a diverse set of problems in geometry. Applications range from robotics (visibility) and geographic information systems to game development (collision detection) and medical research. This tutorial will introduce computational geometry, the related tools available in the Python ecosystem, and identify areas for improvement.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

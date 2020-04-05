@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Lightning talks on Thursday, July 11</title><link>https://pyvideo.org/europython-2019/lightning-talks-on-thursday-july-11.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Petr Viktorin</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/lightning-talks-on-thursday-july-11.html</guid></item><item><title>ZODB: The Graph Database for PythonDevelopers</title><link>https://pyvideo.org/pycon-de-2018/zodb-the-graph-database-for-pythondevelopers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You can see the current version of the slides at
+&lt;a class="reference external" href="https://pythonlinks.info/presentations/zodbtalk.pdf"&gt;https://pythonlinks.info/presentations/zodbtalk.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I invite you to first watch the full but slightly earlier version of the
+talk at PythonLinks.info/zodb&lt;/p&gt;
+&lt;p&gt;And then read the following summary to see what else is being added to
+the talk.&lt;/p&gt;
+&lt;p&gt;The ZODB is a mature graph database written in Python and optimized in
+C. Just subclass off of class Persistent Object and Persistent
+Container, and your objects, graphs and applications become persistent.&lt;/p&gt;
+&lt;p&gt;The market for Graph Databases has recently exploded, as evidenced by
+over $200 Million invested in graph database companies. Most of the
+graph databases are written in Java.&lt;/p&gt;
+&lt;p&gt;If you are a Python developer, you will find much greater productivity
+using a graph database written in Python, than one written in statically
+bound Java. You cannot add or remove an attribute to an object at
+run-time in a statically typed language. Furthermore, the major Java
+databases constrain you to one of several persistent data types.
+Persistent Python, supported by the ZODB allows you to make any Python
+data structure persistent. Publishing JSON, YAML and Pickles are well
+supported. GraphQL is conceptually very close to the ZODB schema
+approach.&lt;/p&gt;
+&lt;p&gt;Okay, the ZODB is interesting, but is it risky? The ZODB is mature, rock
+solid and well supported. The ZODB is quite heavily used in the Plone
+world. Just the government of Brazil has over 100 websites using the
+ZODB. That includes the President's office, parliament and many other
+governmet offices. Recently the ZODB has been reengineered. It now
+supports thousands of write transactions per second.&lt;/p&gt;
+&lt;p&gt;The major applications of graph databases are fraud detection, social
+networks and computer networks. NLP is an interesting application area.&lt;/p&gt;
+&lt;p&gt;The talk reviews the basic concepts of traversal and views on objects.&lt;/p&gt;
+&lt;p&gt;It is important to understand the basics of how objects are stored on
+disk. Objects are pickled. There are multiple ways to store those
+pickles. When using File Storage, the objects in a transaction are
+appended to he end of the database files. When using relstorage, a
+record is created with the object id, the version number, and the
+pickle. The talk reviews how objects are distributed across multiple
+Python processes. With ZEO the pickles are served across the network.
+Connections are encrypted. The talk also discusses how to build
+real-time (chat and iOT) applications using the MQTT message broker with
+the ZODB.&lt;/p&gt;
+&lt;p&gt;Performance, scalability, and number of objects, are all discussed.
+Comparisons are made to traditional relational databases.&lt;/p&gt;
+&lt;p&gt;The ZODB Demo makes it very easy to start building your own applications
+on top of the ZODB. You can start by customizing the TreeLeaf,
+TreeBranch and TreeRoot classes and their templates. You get CRUD for
+free.&lt;/p&gt;
+&lt;p&gt;The demo includes traditional relational CRUD, Create, Read, Update, and
+Delete. But it also includes the extended graph CRUD. Rename a Leaf or
+Branch. Cut and paste leaves or branches, copy and paste leaves or
+branches. View and restore historic versions are demonstrated.&lt;/p&gt;
+&lt;p&gt;Of course the real reason to use a graph database is to improve the user
+experience. A basic concept in human factors is to limit lists to 7
+items. That is why librarians use hierarchy. The Panama Papers
+journalists said a graph database was more intuitive. Have you ever
+selected your country from a list of 150 countries. Much better to use a
+hierarchical list. Have you ever used a Google map with thousands of
+pins. Much better to have one page for each city.&lt;/p&gt;
+&lt;p&gt;And of course the most important reason for using a graph database is
+not what the software does, but how it changes how we humans think about
+our problems, and how we make decisions. Graph databases enable a
+different approach to distributing applications across the network. They
+encourage a different approach to managing the git development process.
+They enable a different set of decisions to be made.&lt;/p&gt;
+&lt;p&gt;By the end of this talk, readers should have a much better appreciation
+for the rich but little known and under appreciated ZODB ecosystem.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-25:pycon-de-2018/zodb-the-graph-database-for-pythondevelopers.html</guid><category>Web</category></item><item><title>The Best Python Videos - PythonLinks.info</title><link>https://pyvideo.org/pycon-de-2018/the-best-python-videos-pythonlinksinfo.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/the-best-python-videos-pythonlinksinfo.html</guid><category>lightning talk</category></item><item><title>ZODB: The Graph database for Python Developers.</title><link>https://pyvideo.org/pycon-sk-2018/zodb-the-graph-database-for-python-developers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The ZODB is a mature graph database written in Python and optimized in
+C. Just subclass off of class Persistent Object, and Persistent
+Container, and your objects, graphs and applications become persistent.&lt;/p&gt;
+&lt;p&gt;The market for Graph Databases has recently exploded, as evidenced by
+over $200Million invested in graph database companies. Most of the graph
+databases are written in Java.&lt;/p&gt;
+&lt;p&gt;If you are a Python developer, you will find much greater productivity
+using a graph database written in Python, than one written in statically
+bound Java. The major Java databases constrain you to one of several
+persistent data types. Persistent Python, supported by the ZODB allows
+you to make any Python data structure persistent.&lt;/p&gt;
+&lt;p&gt;The new ZODB Demo makes it very easy to start building your own
+applications on top of the ZODB. You can start by customizing the
+TreeLeaf, TreeBranch and TreeRoot classes and their templates. You get
+CRUD for free.&lt;/p&gt;
+&lt;p&gt;The demo includes traditional relational CRUD, Create, Read, Update, and
+Delete. But it also includes the extended graph CRUD. Rename a Leaf or
+Branch. Cut and paste leaves or branches, copy and paste leaves or
+branches. The talk also demonstrates the soon-to-be released view
+historic versions and restore a previous version.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;You can watch the talk video here:&lt;/div&gt;
+&lt;div class="line"&gt;PythonLinks.info/zodb&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;And see the slides here:&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://pythonlinks.info/presentations/zodbtalk.pdf"&gt;https://pythonlinks.info/presentations/zodbtalk.pdf&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Fri, 09 Mar 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-03-09:pycon-sk-2018/zodb-the-graph-database-for-python-developers.html</guid><category>PyCon SK</category><category>Python</category><category>ZODB: The Graph database</category></item><item><title>The ZODB Ecosystem</title><link>https://pyvideo.org/pycon-uk-2017/the-zodb-ecosystem.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ZODB is an object-oriented database written in Python and optimized in C. It makes it so easy to build trees or graphs of persistent Python objects. Just subclass off of class Persistent, and your applications become persistent. It is heavily used in Pyramid and Plone.&lt;/p&gt;
+&lt;p&gt;This talk introduces the ZODB database, presents important concepts, shows how to build a simple account object, and reviews the tools available.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Fri, 27 Oct 2017 15:30:00 +0100</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-27:pycon-uk-2017/the-zodb-ecosystem.html</guid><category>zodb</category></item><item><title>Lightning talks Thursday</title><link>https://pyvideo.org/pycon-cz-2017/lightning-talks-thursday.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning talks Thursday&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Viktor Stískala</dc:creator><pubDate>Thu, 08 Jun 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-06-08:pycon-cz-2017/lightning-talks-thursday.html</guid><category>lightning talks</category></item><item><title>Python and Poland Directories.</title><link>https://pyvideo.org/pycon-fr-2017/python-and-poland-directories.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PythonLinks is the world's largest Python Directory.  Now that it includes a rapidly growing directory of Python companies organized by Region→Country→City-Company, along with their products, jobs, and links, such as the corporate blog, product reviews, and youtube videos, everyone really likes the site.&lt;/p&gt;
+&lt;p&gt;PolandTrade.info is a directory of information about international business with Poland.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Sun, 24 Sep 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-09-24:pycon-fr-2017/python-and-poland-directories.html</guid></item><item><title>ZODB Ecosystem</title><link>https://pyvideo.org/pycon-fr-2017/zodb-ecosystem.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ZODB is an object-oriented database written in Python and optimized in C.This talk introduces the database, presents important concepts, and reviews the tools available.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-09-23:pycon-fr-2017/zodb-ecosystem.html</guid></item><item><title>Lightning Talks 2016-07-20</title><link>https://pyvideo.org/europython-2016/lightning-talks-2016-07-20.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Various speakers - Lightning Talks
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Lightning talks, presented by Harald Massa and Harry Percival&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Christopher Lozinski - blogory.org&lt;/li&gt;
+&lt;li&gt;David Naranja &amp;amp; Maria Coetero - Random.random() online&lt;/li&gt;
+&lt;li&gt;Petr Viktorin - PEPs 487 &amp;amp; 520 (*descriptors in 5 min)&lt;/li&gt;
+&lt;li&gt;Anselm Linsnau - tuxcademy - Great training material - for free!&lt;/li&gt;
+&lt;li&gt;Miroslav Pojman - PyOO - Control Open Office from Python&lt;/li&gt;
+&lt;li&gt;Fabio Pliger - Jupyterlab&lt;/li&gt;
+&lt;li&gt;Plethora - Python meets Industry - Data Challenge&lt;/li&gt;
+&lt;li&gt;Adam Castle - Ripe Forum&lt;/li&gt;
+&lt;li&gt;Florian Brühen - Crowdfunding&lt;/li&gt;
+&lt;li&gt;Charlie Beeson - Running a Coding Cometition&lt;/li&gt;
+&lt;li&gt;Pavlo  Andriychenko - Jupiter Tricks&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Lozinski</dc:creator><pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-01:europython-2016/lightning-talks-2016-07-20.html</guid><category>lightning talks</category></item></channel></rss>

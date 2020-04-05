@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_katie-barr.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-05-11T00:00:00+00:00</updated><entry><title>Simulating Quantum Physics in Less Than 20 Lines of Pure Python</title><link href="https://pyvideo.org/pydata-london-2015/simulating-quantum-physics-in-less-than-20-lines-of-pure-python.html" rel="alternate"></link><published>2015-06-20T00:00:00+00:00</published><updated>2015-06-20T00:00:00+00:00</updated><author><name>Katie Barr</name></author><id>tag:pyvideo.org,2015-06-20:pydata-london-2015/simulating-quantum-physics-in-less-than-20-lines-of-pure-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The quantum walk in Python; an explaination of the model and the
+motivations for studying it as well as the process of simulation and
+data collection finishing with why the quantum walk is of interest to
+quantum computer scientists.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Quantum physics is notoriously tricky, but if you have some coding
+ability, exploring quantum systems is extremely easy. The discrete time
+quantum walk is the quantum analogue of the classical random walk, and
+was developed in the hope of it having algorithmic applications. In
+fact, the model is universal for quantum computation, and famous
+algorithms such as Grovers' (quantum search) can be described in terms
+of it.&lt;/p&gt;
+&lt;p&gt;I will describe the code for a quantum walk on a 2d lattice, and
+indicate how this code can be used and adapted to address open research
+questions in the field of quantum information.&lt;/p&gt;
+&lt;p&gt;As well as describing in detail how to simulate quantum walks, I will
+give a brief introduction in general to simulating quantum systems, the
+sorts of things you look for if investigating them numerically, and the
+suitability in general of using simulation as a tool for researching
+physics. After making it look ridiculously easy, I will describe the
+challenges faced by people investigating quantum systems numerically,
+and other reasons why we need quantum computers.&lt;/p&gt;
+</summary></entry><entry><title>Simulating quantum systems</title><link href="https://pyvideo.org/pycon-uk-2014/simulating-quantum-systems.html" rel="alternate"></link><published>2014-10-13T00:00:00+00:00</published><updated>2014-10-13T00:00:00+00:00</updated><author><name>Katie Barr</name></author><id>tag:pyvideo.org,2014-10-13:pycon-uk-2014/simulating-quantum-systems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Presented by: Katie Barr&lt;/p&gt;
+&lt;p&gt;Quantum theory is famously difficult and paradoxical, but exploring quantum systems numerically in high level languages such as Python is surprisingly easy. In this talk I will describe, step by step, how to simulate a particular system, the discrete time quantum walk. This is the quantum analogue of a classical random walk, and has some interesting properties which I will briefly describe. The simulation can be performed with just 15 lines of Python code, using no external modules. I will then indicate how simple variations on this simulation are used to perform current research into the discrete time quantum walk, as the example I give is a variation of Grover's algorithm, which is asymptotically the fastest possible quantum search algorithm. By the end of the talk listeners should be able to go away and perform their own simulations of this system. I will also indicate further motivations for using Python to investigate quantum mechanical systems, in particular using numpy support for linear algebra, which is one of the types of mathematics used by quantum theorists. There will be no mention of the trickier aspects of quantum systems, but, for those interested, I will provide materials describing how to measure entanglement and explore the effects of measurement in the quantum walk I have presented. I do not expect listeners to have any background in mathematics and physics, and will keep technical discussion which would require such background to a minimum.&lt;/p&gt;
+</summary></entry><entry><title>Template matching - howto</title><link href="https://pyvideo.org/pycon-uk-2015/template-matching-howto.html" rel="alternate"></link><published>2015-09-19T00:00:00+00:00</published><updated>2015-09-19T00:00:00+00:00</updated><author><name>Katie Barr</name></author><id>tag:pyvideo.org,2015-09-19:pycon-uk-2015/template-matching-howto.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Image recognition via template matching&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Image recognition, also known as template matching, is a key component
+of computer vision, and in this talk I will tell you how its done by
+describing algorithms used by OpenCV. The purpose of the talk is to give
+a practical introduction to this subject by describing both the theory
+and Python implementation.&lt;/p&gt;
+&lt;p&gt;Whilst the algorithms I describe are very simple, and intuitively
+understood, if you do not take care when implementing them you can end
+up with extremely inefficient computations. This is because you
+effectively compare every pixel in your image with every pixel in your
+template. These algorithms are called: correlation, correlation
+coefficient, and squared difference, all with or without normalisation.
+Normalisation is required to prevent false positives due to bright spots
+in images. I will explain why computing the value directly can lead to
+prohibitively slow computations. In order to efficiently implement the
+algorithms we must use a theorem called the convolution theorem, which
+uses Fourier Transforms. I give the Fourier Transform expressions for
+the template-image comparison, and this is what we use in our
+implementation.&lt;/p&gt;
+&lt;p&gt;I will introduce the algorithms and explain how they work, and then
+briefly introduce the Fourier Transform. This gives us everything we
+need to get started implementing our own image recognition with help
+from scipy and numpy. We will see how adjusting parameters in the
+algorithm can lead to very impressive results- the demo showing a range
+of letters, with different antialising, on different tiled backgrounds.
+By selecting how close your candidate match must be to the template at
+different stages during the algorithm, you can find matches with
+apparently large differences to the template, with no false positives.&lt;/p&gt;
+&lt;p&gt;Whilst I will aim to ensure that the talk is comprehensible to those who
+haven't met Fourier Transforms before by introducing them in detail,
+with examples, I also hope those who have met them before will find the
+talk interesting, as they may not have seen this application. Whilst I
+apply the techniques to images, they can be used for anything which can
+be treated as a function.&lt;/p&gt;
+</summary></entry><entry><title>Challenges of analysing the wheat genome</title><link href="https://pyvideo.org/pydata-london-2016/katie-barr-challenges-of-analysing-the-wheat-genome.html" rel="alternate"></link><published>2016-05-11T00:00:00+00:00</published><updated>2016-05-11T00:00:00+00:00</updated><author><name>Katie Barr</name></author><id>tag:pyvideo.org,2016-05-11:pydata-london-2016/katie-barr-challenges-of-analysing-the-wheat-genome.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016&lt;/p&gt;
+&lt;p&gt;TBC, but along the lines of: What do you do when your data, whilst formally meeting common requirements, is, to put it mildly, an edge case? And what if you don't have the time to write a bespoke tool for your analysis? I discuss this scenario, and will explain why my data is such difficult to start with.&lt;/p&gt;
+&lt;p&gt;TBC, but along the lines of: What has 5 times more DNA than a human, hugely repetitive regions, is a mixture of three plants and can differ significantly between varieties. It also supplies 20% of the calories consumed by humanity, and 35% of us depend on it for survival, so there is a strong motivation to understand it. The fact that wheat is not only not a 'model organism' but has some features which means assumptions generally made by the writers of bioinformatics software don't hold makes it hard to work with. In fact, often tools which document themselves as being suitable for use with data in the formats wheat researchers use fall over in this use case. Ideally, we would have time to rewrite them exactly for our use case, but this doesn't always happen.&lt;/p&gt;
+&lt;p&gt;This may either be a discussion or a talk. So far I've moved hardware twice, abandoned tools, rewritten parts of tools for my use case (I have a simple python example of this), my current task is to understand in detail why a particular piece of software is segfaulting so I will have a lot more insight very shortly.&lt;/p&gt;
+&lt;p&gt;I will aim to keep the talk more about how to deal with data which differs significantly from the standards in a given field than the particulars of wheat, but there are some neat bioinformatics algorithms so I will explain one to demonstrate why we need to store so much in RAM.&lt;/p&gt;
+</summary></entry></feed>

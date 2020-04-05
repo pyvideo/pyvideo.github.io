@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pydata-eindhoven-2019.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-11-30T00:00:00+00:00</updated><entry><title>A content-based recommender system for financial news</title><link href="https://pyvideo.org/pydata-eindhoven-2019/a-content-based-recommender-system-for-financial-news.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Anca Dumitrache</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/a-content-based-recommender-system-for-financial-news.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The news domain presents many interesting challenges for recommender
+systems - a continuous cold start problem to recommend newly published
+articles, learning from the implicit feedback of user clicks, a
+typically high amount of user traffic, that nevertheless suffers from
+sparsity. This talk will show how we tackled these challenges to build a
+content-based recommender system for financial news.&lt;/p&gt;
+&lt;p&gt;The news domain poses an interesting challenge for recommender systems -
+when reading news, users prefer the most recently published articles
+(i.e. the breaking news), and yet new articles without a reading history
+suffer from the &lt;em&gt;cold start problem&lt;/em&gt; and are more difficult to recommend
+to users. Other interesting challenges are how to &lt;em&gt;learn from the
+implicit feedback of user clicks&lt;/em&gt; , how to handle the &lt;em&gt;typically high
+amount of user traffic and transform it into training data&lt;/em&gt; , how to
+deal with &lt;em&gt;sparsity in the data&lt;/em&gt; (most users read a small number of
+articles per day, and a small amount of articles get the majority of
+user clicks), and what are &lt;em&gt;the right natural language processing tools
+for Dutch language&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this talk we discuss how we tackled these challenges to build a
+content- based recommender system for Het Financieele Dagblad, a daily
+Dutch newspaper focusing on business and financial news. To represent
+the content of the article, we implemented a wide array of enrichment
+techniques (e.g. representing the articles in a word vector space,
+sentiment analysis), by using libraries such as &lt;tt class="docutils literal"&gt;textpipe&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;spaCy&lt;/tt&gt;. But the most meaningful features that we found referred to
+the overlap between the user profile and the article representation,
+such as the overlap in article tags between the article and the set of
+most frequent tags read by the user. The talk will describe how our
+recommender system was modeled as a gradient-boosting decision tree, and
+implemented using the &lt;tt class="docutils literal"&gt;xgboost&lt;/tt&gt; library.&lt;/p&gt;
+</summary></entry><entry><title>A Python application to flag outliers in very high dimensional sensor data.</title><link href="https://pyvideo.org/pydata-eindhoven-2019/a-python-application-to-flag-outliers-in-very-high-dimensional-sensor-data.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Satej Khedekar</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/a-python-application-to-flag-outliers-in-very-high-dimensional-sensor-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In high dimensions data becomes increasingly sparse, and the
+conventional methods to detect outliers do not work effectively. I shall
+discuss the application of two open source libraries in Python to build
+an application that can reveal the presence of outliers in the
+high-dimensional noisy data from ASML sensors.&lt;/p&gt;
+&lt;p&gt;Statistical outlier mining depends on identifying a contrast between
+inliers and outliers. As the dimensionality of data increases, this
+contrast starts to decrease owing to what is known as the curse of
+dimensionality, and the data points start to become equidistant. A way
+to prevent this is to use dimensionality reduction techniques.&lt;/p&gt;
+&lt;p&gt;Here we build an application to detect outliers in the noisy data
+collected by ASML sensors using open source Python packages. We first
+use a neighbor graph based algorithm, to embed the high dimensional data
+into low (2-3) dimensions, to aid in easy visualization. This is
+followed by clustering the embedded data to reveal the distinct types of
+outliers. All this is achieved in a completely unsupervised way.&lt;/p&gt;
+&lt;p&gt;The application provides valuable clues to an expert user trying to
+decipher the sanity of data. A correlation of the physical pattern of
+the detected outliers with location/time-stamp of the measurements helps
+in the determination of the reason behind the failed measurements.&lt;/p&gt;
+</summary></entry><entry><title>Advertising, algorithms and Privacy: recent opensource developments</title><link href="https://pyvideo.org/pydata-eindhoven-2019/advertising-algorithms-and-privacy-recent-opensource-developments.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Ruben Mak</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/advertising-algorithms-and-privacy-recent-opensource-developments.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Now more than ever, the trade-off between privacy and the benefits of
+optimally training your algorithms is under heavy discussion. Luckily,
+companies (mainly Google), heavily invest in research in this field
+which resulted in open sourcing various libraries. In this talk we will
+go into the technical details or differential privacy, federated
+learning in Tensorflow and Multi-Party Compute.&lt;/p&gt;
+&lt;p&gt;The digital advertising industry has been a great driving factor in the
+recent developments in data science and AI. However, now more than ever,
+the trade- off between privacy and the benefits of optimally training
+your algorithms is under heavy discussion. Luckily, companies (mainly
+Google), heavily invest in research in this field which resulted in open
+sourcing various libraries.&lt;/p&gt;
+&lt;p&gt;After a brief introduction about the context privacy in online
+advertising, we'll dive into the technical details of:&lt;/p&gt;
+&lt;p&gt;-Differential privacy -Federated learning in Tensorflow -Multi-Party
+Compute -Chromium's Privacy Sandbox -My own vision around Private and
+Public layers present in a blog from 2018&lt;/p&gt;
+</summary></entry><entry><title>Airflow and Kubernetes at JW Player, a match made in heaven?</title><link href="https://pyvideo.org/pydata-eindhoven-2019/airflow-and-kubernetes-at-jw-player-a-match-made-in-heaven.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Rik Heijdens</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/airflow-and-kubernetes-at-jw-player-a-match-made-in-heaven.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn how JW Player leverages Apache Airflow and Kubernetes to author,
+schedule, execute and monitor workflows containing thousands of tasks on
+a monthly basis. In this talk we'll provide an overview of our
+architecture, best practices for designing jobs and share some of the
+lessons that we learned.&lt;/p&gt;
+&lt;p&gt;At JW Player multiple teams use Apache Airflow to author, schedule and
+monitor workflows defined as acyclic graphs (DAGs) of tasks. Every
+single month we use Apache Airflow to run thousands of tasks. Our tasks
+are very heterogeneous: we have tasks that perform conventional ETL, but
+also more complicated tasks that train and evaluate Machine Learning
+models, or use existing Machine Learning models to analyze new data that
+flows into our systems at a daily basis. Our tasks interact with many
+different systems ranging from databases (PostgreSQL, Snowflake), to
+machine learning frameworks (TensorFlow), to storage systems (S3), to
+Hadoop clusters running Spark on EMR.&lt;/p&gt;
+&lt;p&gt;While the tasks that we run through Apache Airflow are very diverse and
+touch many different systems, they have one thing in common: every
+single task that we run at JW Player through Airflow is packaged as a
+Docker image. This has several benefits, but the most important one is
+that it allows us to leverage Kubernetes' JobController to execute our
+tasks through a (custom variant of) the KubernetesPodOperator. This
+allows us to use and scale our compute resources more effectively while
+also providing engineers certain guarantees around reproducibility and
+isolation due to the nature of Docker containers.&lt;/p&gt;
+&lt;p&gt;In this talk aimed at Software Engineers and Data Scientists we will
+provide an overview of the architecture that we adopted for Apache
+Airflow at JW Player. We will share some insights into the engineering
+decisions that we have made and we will share best practices for
+designing and testing jobs themselves.&lt;/p&gt;
+</summary></entry><entry><title>Automated river plastic monitoring using deep learning</title><link href="https://pyvideo.org/pydata-eindhoven-2019/automated-river-plastic-monitoring-using-deep-learning.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Colin van Lieshout</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/automated-river-plastic-monitoring-using-deep-learning.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;To combat complex challenges such as plastic pollution, we require a
+proper understanding on characteristics of the problem through time and
+space. This is one of the problems that the Ocean Cleanup tackles. In
+the past two years, we supported them in developing a deep learning
+solution to monitor river plastic. The system is now ready for global
+scaling.&lt;/p&gt;
+&lt;p&gt;Marine plastics are a widespread concern to the environment because of
+its negative impact the marine ecosystem and human health. Quantifying
+plastic pollution in rivers is essential to mitigate the negative
+impact, but challenging to realize due to lack of availability of
+scalable monitoring methods. Together with The Ocean Cleanup, we went
+through the journey of installing cameras, labeling data, training
+object detection models and more. Currently, our paper on the study has
+been submitted, and the cameras, cloud architecture and models are
+almost ready for scaling. Our talk will take you along our journey,
+sharing what we have learned.&lt;/p&gt;
+&lt;p&gt;At &lt;a class="reference external" href="https://www.sodascience.nl/"&gt;Soda science&lt;/a&gt;, we aim to create
+social impact through data science by partnering with challenge experts,
+such as The Ocean Cleanup.&lt;/p&gt;
+</summary></entry><entry><title>BigMedilytics: MPyC in practice</title><link href="https://pyvideo.org/pydata-eindhoven-2019/bigmedilytics-mpyc-in-practice.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Natasja van de L'Isle</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/bigmedilytics-mpyc-in-practice.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk we would like to introduce secure Multi-Party Computation
+(MPC) - as it allows for privacy preserving analytics - and show the
+possibilities of the framework MPyC. By utilizing MPyC, TNO, together
+with an insurance company and a hospital, have built a solution that can
+predict the number of hospitalization days on datasets from both
+parties, without them sharing their data.&lt;/p&gt;
+&lt;p&gt;TNO together with an insurance company and a hospital are analyzing data
+of heart failure patients. The insurance company has a lot of data on
+medical compliance and claim behavior, whereas the hospital has data
+from an academic study of hundreds of people that we tracked throughout
+several years. The hospital has data among others about exercising
+performance, alcohol intake, smoking behavior, etc. history. Combining
+these datasets can create more insights than analysis on each dataset
+separately. However, given the privacy concerns, this is not feasible.
+This is where Multi-Party Computation (MPC) offers a solution. MPC
+comprises of a set of cryptographic techniques that enable analysis in
+the encrypted domain. With these techniques it can be mathematically
+shown that no sensitive data is leaked, when performing an analysis.
+MPyC, developed by Berry Schoenmakers (TU/e), is a python library that
+is an MPC framework based on the technique secret sharing. By using this
+library, we have been able to successfully implement a LASSO regression.&lt;/p&gt;
+</summary></entry><entry><title>Categorizing financial transactions for personal finance management at Yolt</title><link href="https://pyvideo.org/pydata-eindhoven-2019/categorizing-financial-transactions-for-personal-finance-management-at-yolt.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Alexander Backus</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/categorizing-financial-transactions-for-personal-finance-management-at-yolt.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Yolt (ING), we continuously work on our transaction categorization
+engine to provide app users with a practical financial overview. But how
+to approach this seemingly clear-cut classification task and what are
+the key considerations? In this talk, I discuss all aspects, from
+business requirements to algorithms, starting with a simple model and
+moving on to label embedding neural networks.&lt;/p&gt;
+&lt;p&gt;At the advent of the second &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Payment_Services_Directive"&gt;Payment Services
+Directive&lt;/a&gt;
+(PSD2) and growing assortment of Personal Finance Management apps,
+today’s consumers are more than ever expecting accurate categorization
+of their transactions to get a comprehensive overview of their income
+and spendings. At &lt;a class="reference external" href="https://www.yolt.com/"&gt;Yolt&lt;/a&gt;, a fintech venture of
+ING Bank, we are continuously working to create the best financial
+transaction categorization engine in the world in order to deliver this
+customer promise. Interestingly, from a data science perspective, this
+seemingly straightforward classification task comes with its own
+intricacies. In this talk, I discuss the ins and outs of this real-life
+use case, including how evolving business requirements and product
+design influence modeling decisions. In particular, I highlight the
+trade-off between personalization and generalization, and both the
+complications and opportunities of feedback loops. I cover several
+modeling approaches, ranging from vanilla multiclass classification, to
+a hyper- personalized learning system and label embedding deep neural
+network architectures. For the latter, I will explain the &lt;a class="reference external" href="https://arxiv.org/abs/1709.03856"&gt;Facebook
+StarSpace&lt;/a&gt; architecture and
+possible extensions, including how to create transaction embeddings from
+mixed feature types, metric learning concepts, triplet loss functions
+and potential for one- shot learning. Conceptual machine learning model
+designs are interspersed with snippets of Python code to provide
+practical handles. In conclusion, I briefly discuss open challenges and
+provide key take-aways. After this talk, the audience will be familiar
+with all aspects of the industry use case of transaction categorization,
+from problem statement and data, to metrics and modeling approaches.&lt;/p&gt;
+</summary></entry><entry><title>Common pitfalls leading to wrongly estimated model performance</title><link href="https://pyvideo.org/pydata-eindhoven-2019/common-pitfalls-leading-to-wrongly-estimated-model-performance.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Jan van der Vegt</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/common-pitfalls-leading-to-wrongly-estimated-model-performance.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Overfitting is something every data scientist is aware of. Using
+techniques like cross validation can help detect overfitting.
+Unfortunately, regular cross validation still fails detecting certain
+errors. Assumptions can be violated and intricate feature engineering
+can lead to target leakage. The goal of this talk is to learn more about
+the experimental setup and better approaches.&lt;/p&gt;
+&lt;p&gt;Overfitting is a common issue and something every data scientist is
+aware of. By using techniques like cross validation, metrics can be used
+to approximate the performance of a model on unseen data. Unfortunately,
+regular cross validation often still fails the assumptions required for
+unbiased performance estimation. Certain statistical assumptions can be
+violated and intricate feature engineering can introduce obscure target
+leakage that lead to biased estimations.&lt;/p&gt;
+&lt;p&gt;The statistical assumptions that we will talk about are the i.i.d.
+assumption and the lack of concept drift. The i.i.d. assumption means
+that random samples are independent and identically distributed (i.i.d).
+The lack of concept drift entails that samples are stationary if we look
+at the time dimension of data collection, which means that the
+relationship between the features and targets does not depend on the
+implicit time.&lt;/p&gt;
+&lt;p&gt;Validation schemas are meant to simulate reality as closely as possible.
+We will look at the theory behind training, validation and test sets
+before discussing issues with standard crossvalidation. Possible
+solutions include nested crossvalidation, time window validation and
+grouped validation. While the only true verification happens in
+production, we will also look into approaches that minimize the risk of
+missing target leakage in the validation phase.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to learn more about the intuition behind proper
+experimental setup, potential pitfalls to keep in mind and tools to
+minimize the associated risks.&lt;/p&gt;
+</summary></entry><entry><title>Exploratory Data Analysis (EDA) and Visualization Techniques for Image Segmentation Challenges</title><link href="https://pyvideo.org/pydata-eindhoven-2019/exploratory-data-analysis-eda-and-visualization-techniques-for-image-segmentation-challenges.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Ekhtiar Syed</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/exploratory-data-analysis-eda-and-visualization-techniques-for-image-segmentation-challenges.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We tend to skip the step of exploring and analysing the data while
+working with images. In this talk, we will look at EDA and visualisation
+techniques for image segmentation tasks by reviewing three different
+competition I have participated recently on Kaggle. I will also
+summarise with a guideline for EDA and visualisation for image
+segmentation challenges.&lt;/p&gt;
+&lt;p&gt;In computer vision, image segmentation is the process of assigning
+labels to every pixel of an image. An example use case of this could be
+identifying some kind of defect from an image where every pixel is
+labeled ok or not ok. Data for image segmentation typically comes in two
+parts: the image data and mask to label the class and area of interest.
+In practice, we label each pixel by building a deep learning model to
+automatically produce the mask as an output.&lt;/p&gt;
+&lt;p&gt;For traditional datasets, like text data, understanding the data by
+doing an exploratory data analysis (EDA) is almost a mandatory step
+before doing any modelling. However, for image segmentation tasks, this
+step often goes missing. This is partly because as the input data is
+literally images, there is less opportunity to be creative. Of course we
+can print out a few images, and the masks; but this will not give us the
+whole story. As we often skip EDA and jump right to modelling without
+understanding the content of the data, we less aware about different
+training strategies for building our model.&lt;/p&gt;
+&lt;p&gt;Recently, I have participated in three image segmentation competitions
+on Kaggle, which were were very interesting on their own. For example,
+one of the competition challenge was to identify and label pneumothorax,
+a type of lung inflammation, from chest x rays of the patient. For all
+three competitions I created notebooks to perform exploratory data
+analysis (EDA) before creating a model. The analysis from these
+notebooks brought a lot of useful insights to the Kaggle community, and
+helped them come up with better strategies to train the model they have
+built. All three notebooks went on to receive a gold medal on Kaggle and
+link to these notebooks are attached.&lt;/p&gt;
+&lt;p&gt;In this talk, I want to walk the audience through the process of doing
+exploratory data analysis and visualisation for image segmentation tasks
+by reviewing the three kernels linked below. These kernels uses everyday
+python libraries like Pandas, Open-CV, Matplotlib, Plotly, and MLxtend.
+After walking through the examples from the kernel below, I will
+summarise with a guideline, which others working with image segmentation
+tasks can use as a starting point.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.kaggle.com/ekhtiar/finding-pneumo-part-1-eda-and-unet"&gt;https://www.kaggle.com/ekhtiar/finding-pneumo-part-1-eda-and-unet&lt;/a&gt;
+&lt;a class="reference external" href="https://www.kaggle.com/ekhtiar/defect-area-segments-eda-with-plotly-fp-mining"&gt;https://www.kaggle.com/ekhtiar/defect-area-segments-eda-with-plotly-fp-mining&lt;/a&gt;
+&lt;a class="reference external" href="https://www.kaggle.com/ekhtiar/eda-find-me-in-the-clouds"&gt;https://www.kaggle.com/ekhtiar/eda-find-me-in-the-clouds&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Keynote: Personalization, Bandits, and Causal inference</title><link href="https://pyvideo.org/pydata-eindhoven-2019/keynote-personalization-bandits-and-causal-inference.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Maurits Kaptein</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/keynote-personalization-bandits-and-causal-inference.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk Maurits will introduce the problem of personalization and
+discuss some its peculiarities.&lt;/p&gt;
+&lt;p&gt;Over ten years Maurits has been exploring different statistical methods
+to efficiently learn “what to do to whom”. His work has been applied
+various fields such as marketing (who should we target with our
+retention campaigns?) and healthcare (which type of treatment has the
+best expected outcome for the current patient?). In this talk Maurits
+will introduce the problem of personalization and discuss some its
+peculiarities. Maurits will focus on two contemporary challenges: First,
+how should we — if we are lucky enough to be able to — setup experiments
+to learn “what to do to whom” through sequential experimentation?
+Second, how can we learn, based on already existing data, what we should
+do to whom in the future? This talk will cover some of the intuitions
+behind effective sequential learning and offline policy evaluation, and
+will highlight a number of tools and software packages developed by
+member of Maurits’ lab that enable you to get started right away.&lt;/p&gt;
+&lt;p&gt;Lab website: www.nth-iteration.com&lt;/p&gt;
+</summary></entry><entry><title>Matthijs Brouns - Pipelines for Fairness: A Convexing Usecase | PyData Eindhoven 2019</title><link href="https://pyvideo.org/pydata-eindhoven-2019/matthijs-brouns-pipelines-for-fairness-a-convexing-usecase-pydata-eindhoven-2019.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/matthijs-brouns-pipelines-for-fairness-a-convexing-usecase-pydata-eindhoven-2019.html</id><summary type="html"></summary></entry><entry><title>Next-Gen railway asset management with computer vision at ProRail</title><link href="https://pyvideo.org/pydata-eindhoven-2019/next-gen-railway-asset-management-with-computer-vision-at-prorail.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Jasper Derikx</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/next-gen-railway-asset-management-with-computer-vision-at-prorail.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With computer vision we’re able to localize assets and determine their
+condition. In this talk we will dive into the details of convolutional
+neural networks and we’ll show how they help ProRail maintain 7000 km of
+railway track.&lt;/p&gt;
+&lt;p&gt;ProRail manages and maintains over 7000 km of railway track. In order to
+prevent and solve delays, accurate knowledge about the location and
+state of the various assets is required. Special camera-equipped trains
+cover the entire railway track twice a year, providing over 50 million
+images of the railway. Using computer vision, these images can be used
+to both localize assets and determine their condition. This technology
+is currently being put into production at ProRail, where the focus is
+first on the localization of important assets and next on quantifying
+their state.&lt;/p&gt;
+&lt;p&gt;In this talk, we will dive into how computer vision is applied at
+ProRail. First, we will discuss the convolutional neural network that we
+use in order to detect our main asset of interest: the insulation joint.
+We will elaborate on the specific choices we made and the tools we used
+during the implementation. However, a simple cnn might not cut it for us
+when trying to distinguish between 28 slightly different assets. In the
+second part of our talk we’ll touch on more advanced techniques such as
+transfer learning, and compare them on the use case.&lt;/p&gt;
+&lt;p&gt;No prior knowledge is required for this talk.&lt;/p&gt;
+</summary></entry><entry><title>Preventing churn like a bandit</title><link href="https://pyvideo.org/pydata-eindhoven-2019/preventing-churn-like-a-bandit.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Gerben Oostra</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/preventing-churn-like-a-bandit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Losing customers, also referred to as churning, is something that any
+company wants to prevent. But not by predicting churn, assuming
+correlation is causation, or by acting on prescribed actions. Let me
+show how to combine techniques from uplift modelling, causal inference
+and reinforcement learning, into one contextual bandit system that
+balances exploitation &amp;amp; exploration and deals with biases.&lt;/p&gt;
+&lt;p&gt;Losing customers, also referred to as churning, is something that any
+company wants to prevent, especially in industries with many subscribed
+customers, like Telco, Media, Finance and Insurance. The challenge then
+is to determine which, if any, intervention (also referred to as
+treatment or countermeasure) can retain a customer. In the Telco case
+this could be giving a discount or sending specific emails. In common
+approaches I see three issues: to predict churn, to assume correlation
+is causation, and to act on the prescribed actions. Please join me in
+constructing a more effective solution, combining techniques from uplift
+modelling, causal inference and reinforcement learning. Let us solve the
+correct business problem, deal with biased historical data, and balance
+exploration and exploitation. Along the way the audience will get a good
+grasp of possible design choices and techniques, with their
+implications. The end result will be a full contextual bandit solution,
+utilizing various techniques like inverse propensity scaling, Bayesian
+neural networks and Thompson sampling.&lt;/p&gt;
+</summary></entry><entry><title>Process Mining in Python</title><link href="https://pyvideo.org/pydata-eindhoven-2019/process-mining-in-python.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Sebastiaan J. van Zelst</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/process-mining-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk (/workshop) we introduce the field of process mining as
+well as the PM4Py library, i.e., a python library implementing process
+mining algorithms. Process mining is a collection of tools, techniques,
+methods etc. aimed at analyzing operational process data, stored during
+the execution of (business) processes.&lt;/p&gt;
+&lt;p&gt;The execution of business processes, in modern organizations, is often
+supported by different information systems. Clearly, the better one
+understands its core processes, the easier to steer the process towards
+an increased overall process performance. In order to gain a detailed
+understanding of the execution of a process, i.e., in terms of its
+performance and conformance, different techniques and methods
+originating from the process mining domain are typically used.
+Essentially, process mining techniques aim to distill actionable
+knowledge and insights of a process, on the basis of historical
+execution data. For example, process discovery algorithms are able to
+translate the captured even data into a process model, e.g., into a BPMN
+model. Furthermore, conformance checking algorithms allow us to compute,
+in an exact manner, whether or not the execution of the process, i.e.,
+as captured in the data, is in line with a reference model.
+Additionally, heaps of techniques exist that allow us to compute
+insights in the performance of the process.&lt;/p&gt;
+&lt;p&gt;Over the past twenty years, process mining has remained a relatively
+unknown, scientific, endeavor. However, recently, there has been a keen
+interest from industry in this technology as well. This is best
+illustrated by the German process mining company Celonis, recently
+valued over 1 billion dollars of net worth. Furthermore, the 1st
+international conference on process mining (&lt;a class="reference external" href="https://icpmconference.org"&gt;https://icpmconference.org&lt;/a&gt;),
+held in June 2019, attracted a total number of 20 sponsors from industry
+(mainly process mining vendors) and a total of 400 participants.&lt;/p&gt;
+&lt;p&gt;Despite the vast increase in commercial/industrial interest, the amount
+of open-source tools supporting process mining techniques has, until
+recently, been very little. For years, ProM (&lt;a class="reference external" href="http://promtools.org"&gt;http://promtools.org&lt;/a&gt;) and
+Apromore (&lt;a class="reference external" href="https://apromore.org/"&gt;https://apromore.org/&lt;/a&gt;) have been the de-facto leading
+open-source process mining solutions. However, these tools are primarily
+designed to be used by end-users, i.e., they provide a front-end and are
+not easily integrated in other software solutions. Only recently,
+solutions in R, i.e., bupaR (&lt;a class="reference external" href="https://www.bupar.net/"&gt;https://www.bupar.net/&lt;/a&gt;) and Python, i.e.,
+PM4Py (&lt;a class="reference external" href="https://pm4py.fit.fraunhofer.de"&gt;https://pm4py.fit.fraunhofer.de&lt;/a&gt;), have been developed.&lt;/p&gt;
+&lt;p&gt;In this talk, we present the main idea of process mining, i.e., going
+from captured event data process insights, and, we briefly show an
+example in python. In case of a possible workshop, we will elaborate
+more on the algorithmic details of one (of the many) state-of-the-art
+process mining algorithms.&lt;/p&gt;
+</summary></entry><entry><title>The 3 energy saving tips for your data science ecosystem</title><link href="https://pyvideo.org/pydata-eindhoven-2019/the-3-energy-saving-tips-for-your-data-science-ecosystem.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Fahimeh Alizadeh</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/the-3-energy-saving-tips-for-your-data-science-ecosystem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Enabling AI is very energy-consuming. Nowadays, many companies turn
+their attention toward productionizing machine learning models. However,
+the energy efficiency of the models has not been considered as one of
+the main quality requirements. In this talk, we outline some energy
+efficiency guidelines that you can start using today!&lt;/p&gt;
+&lt;p&gt;Deploying machine learning models into production can be very energy
+costly. For instance, training and hyper-parameter tuning utilize quite
+some hardware resources for quite long time intervals. Yet, most
+companies do not consider energy efficiency metrics as one of the main
+quality attributes of machine learning pipelines.&lt;/p&gt;
+&lt;p&gt;In this talk, we walk you through some example machine learning
+pipelines, which we use to show a couple of energy efficiency
+approaches. We explore inefficiency sweet spots in the life cycle of the
+models by looking at the utilization rates of the cloud resources.
+Finally, we evaluate the effectiveness of our energy efficiency
+approaches with regards to other efficiency metrics such as performance.&lt;/p&gt;
+&lt;p&gt;Data scientists, machine learning engineers, and data engineers can
+benefit from this talk by reusing the guidelines in similar use cases.
+This talk aims to emphasize the importance of &amp;quot;energy efficiency by
+design&amp;quot; in the data science field.&lt;/p&gt;
+</summary></entry><entry><title>Transferring clinical prediction models across hospitals using domain-adaptation techniques</title><link href="https://pyvideo.org/pydata-eindhoven-2019/transferring-clinical-prediction-models-across-hospitals-using-domain-adaptation-techniques.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Mattia Fornasa</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/transferring-clinical-prediction-models-across-hospitals-using-domain-adaptation-techniques.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you want to implement a ML prediction model in healthcare, you should
+make sure that your algorithm performs well also in a domain different
+than the one used during development. In this talk, I will share the
+lessons we learned at Pacmed while externally validating Pacmed
+Critical, a model that supports doctors in deciding the best moment to
+discharge patients from the Intensive Care Unit.&lt;/p&gt;
+&lt;p&gt;Pacmed Critical predicts the probability that a patient will die or be
+readmitted to the Intensive Care Unit, if he/she is discharged now. This
+information will help doctors identify the best moment to discharge
+their patients. The model has been developed using data from the
+Amsterdam UMC but it needs to be validated on an external dataset from a
+different hospital before it is implemented in practice.&lt;/p&gt;
+&lt;p&gt;In this talk you will discover the most common reasons why external
+validation can go wrong, namely concept shift and covariate drift. You
+will also learn how domain adaptation can address such problems by 1)
+giving more weights to the examples that are more similar between the
+two domains (importance weighting), 2) regularising the external model
+towards the original one (sequential models), 3) including the
+prediction of the original model as a feature of the external one
+(another flavour of sequential models) and 4) defining different
+hierarchies of domain-specific model coefficients (hierarchical models).
+Which of these performs best depends on whether you can train a model on
+both domains at the same time or if you can only do it separately. By
+the end of the talk, you will know which techniques is the most suited
+for your problem.&lt;/p&gt;
+&lt;p&gt;The presentation will be at the intermediate level: I will briefly
+introduce the theory behind the domain-adaptation techniques discussed
+and, then, I will focus on their applicability and impact in practice.
+The presentation is targeted to data scientists who have experience in
+the different phases of model development.&lt;/p&gt;
+</summary></entry><entry><title>Untitled12.ipynb</title><link href="https://pyvideo.org/pydata-eindhoven-2019/untitled12ipynb.html" rel="alternate"></link><published>2019-11-30T00:00:00+00:00</published><updated>2019-11-30T00:00:00+00:00</updated><author><name>Vincent D. Warmerdam</name></author><id>tag:pyvideo.org,2019-11-30:pydata-eindhoven-2019/untitled12ipynb.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks are great but they're causing bad habits. This talk will be a
+live coding exercise where we clean up some pandas code such that it
+behaves like lego. The goal is to uncover a great pattern for pandas
+that will prevent loads of scrolling.&lt;/p&gt;
+&lt;p&gt;These are the main habits I'll address;&lt;/p&gt;
+&lt;p&gt;how to construct pandas pipelines how to construct stateless ETL how to
+create proper decorators how to make your system debugable how to write
+pandas such that it is immediately ready for prod&lt;/p&gt;
+</summary></entry><entry><title>Deep generative models for image and text generation</title><link href="https://pyvideo.org/pydata-eindhoven-2019/deep-generative-models-for-image-and-text-generation.html" rel="alternate"></link><published>2019-11-29T00:00:00+00:00</published><updated>2019-11-29T00:00:00+00:00</updated><author><name>Dimitra Gkorou</name></author><id>tag:pyvideo.org,2019-11-29:pydata-eindhoven-2019/deep-generative-models-for-image-and-text-generation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deep generative models for text and image generation&lt;/p&gt;
+&lt;p&gt;Can we program a computer to be creative? Doesn’t everyone dream of
+painting a portrait or writing poetry? If you are not a good painter nor
+a good writer you can now rely on generative modeling, just like us.
+Recently, computers became able to paint, write, produce movies, and
+compose music thanks to the advance of generative modeling. In this
+workshop we will demonstrate the principles and the architecture of
+selected generative models for text and image.&lt;/p&gt;
+&lt;p&gt;In the first part of the workshop, we will focus on image generation and
+manipulation using Variational AutoEncoders (VAE). VAE is one the most
+fundamental and well-established deep learning architectures for
+generative modeling. We will describe the principles of VAE architecture
+and its advantages over simple Autoencoders. We will guide the audience
+to build VAE from scratch to generate images and to morph between
+images.&lt;/p&gt;
+&lt;p&gt;In the second part of the workshop, we will generate our own stories. We
+will first cover the principles and architecture of Recurrent Neural
+Networks (RNNs) and take a look at how these models can be used to
+generate text. Then, we describe Long Short Term Memory Networks (LSTM),
+which is another type of RNN. We observe its advantages over a basic RNN
+model and see how it improves our generated text.&lt;/p&gt;
+&lt;p&gt;We will provide notebooks. All you need is a laptop and basic python
+knowledge!&lt;/p&gt;
+</summary></entry><entry><title>Image Recognition DL WORKSHOP</title><link href="https://pyvideo.org/pydata-eindhoven-2019/image-recognition-dl-workshop.html" rel="alternate"></link><published>2019-11-29T00:00:00+00:00</published><updated>2019-11-29T00:00:00+00:00</updated><author><name>Pipple</name></author><id>tag:pyvideo.org,2019-11-29:pydata-eindhoven-2019/image-recognition-dl-workshop.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A DL workshop where we apply Deep Learning to satelite imagery.&lt;/p&gt;
+&lt;p&gt;Pipple will be presenting a workshop that will give the audience a
+hands-on tutorial focusing on deep learning. Deep-learning is part of
+the world’s most cutting edge technology that will undoubtedly impact
+human life in the upcoming years. It is used in driverless cars, voice
+assistance, facial recognition and even controversial topics like
+deepfakes. During the workshop the audience will be guided in the
+mathematics that is involved in this subset of machine learning and
+artificial intelligence, after which they will develop their own deep
+learning network by the use of a Jupyter Notebook tutorial. The goal of
+this tutorial is to classify roof shapes and materials of houses in an
+aerial image. A real-life use-case of how 510 (i.e. Data team of the
+Netherlands Red Cross) was able to improve damage assesment to improve
+humanitarian aid in disaster responses. After the tutorial, participants
+are encouraged to further improve their models during Friday/Saturday.
+The winning team will be made public on Saturday during the conference
+talks.&lt;/p&gt;
+&lt;p&gt;In order to receive access to the course materials we would like you to
+register here: &lt;a class="reference external" href="https://www.pipple.nl/pydata-2019-workshop/"&gt;https://www.pipple.nl/pydata-2019-workshop/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Managing Machine Learning Lifecycle with MLflow</title><link href="https://pyvideo.org/pydata-eindhoven-2019/managing-machine-learning-lifecycle-with-mlflow.html" rel="alternate"></link><published>2019-11-29T00:00:00+00:00</published><updated>2019-11-29T00:00:00+00:00</updated><author><name>Vladimir Osin</name></author><id>tag:pyvideo.org,2019-11-29:pydata-eindhoven-2019/managing-machine-learning-lifecycle-with-mlflow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bringing a machine learning project to a successful conclusion is more
+difficult than it may seem upfront. We have to take into consideration
+full machine learning lifecycle, which allows focusing not only on the
+development of the model but also on the production and monitoring
+parts. During this tutorial, we practice building full machine learning
+lifecycle using MLFlow as the main tool.&lt;/p&gt;
+&lt;p&gt;Tutorial instructions and data can be found here (make sure to check
+prior to event): &lt;strong&gt;`github
+link &amp;lt;https://github.com/osin-vladimir/mlflow_tutorial&amp;gt;`__&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Bringing a machine learning project to a successful conclusion is more
+difficult than it may seem upfront. We have to take into consideration
+full machine learning lifecycle, which allows focusing not only on the
+development of the model but also on the production and monitoring
+parts. Thankfully, there are mature tools available to manage machine
+learning lifecycle. One of the tools for end-to-end machine learning
+lifecycle management is the open- source platform MLflow.&lt;/p&gt;
+&lt;p&gt;During the tutorial we are going to deep dive into main MLFlow
+components:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;MLflow tracking: using an API and UI to track/log/visualize machine
+learning experiments.&lt;/li&gt;
+&lt;li&gt;Mlflow projects: using standardized format to package reusable data
+science code.&lt;/li&gt;
+&lt;li&gt;Mlflow models: using provided tools to deploy common model types to
+diverse platforms.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Scheduling machine learning pipelines using Apache Airflow</title><link href="https://pyvideo.org/pydata-eindhoven-2019/scheduling-machine-learning-pipelines-using-apache-airflow.html" rel="alternate"></link><published>2019-11-29T00:00:00+00:00</published><updated>2019-11-29T00:00:00+00:00</updated><author><name>Axel Goblet</name></author><id>tag:pyvideo.org,2019-11-29:pydata-eindhoven-2019/scheduling-machine-learning-pipelines-using-apache-airflow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scheduling machine learning pipelines in a robust fashion is an
+important aspect of many data science projects. Apache Airflow is an
+industry standard tool to author, schedule, and monitor complex data
+processing workflows. In this workshop, participants will get hands-on
+experience with Airflow, and learn how to properly schedule their
+machine learning pipelines.&lt;/p&gt;
+&lt;p&gt;Over the past years, the data science teams within organizations matured
+in their experimentation capabilities. Making machine learning pipelines
+production-ready has become the new main challenge. Apache Airflow is an
+industry standard tool for authoring, scheduling, and monitoring
+complex, production-grade workflows, with a strong focus on data
+processing pipelines. The tool is highly customizable, and integrates
+well with most modern working environments and data sources. Airflow
+workflows are written in Python, which intersects with the capabilities
+of typical data science teams. This workshop is useful for both data
+scientists and data engineers who want to schedule machine learning
+pipelines in a robust fashion. In the first plenary part, participants
+will learn what Airflow is and when it is useful. We will cover the
+principles and architecture of Airflow, and show some example workflows.
+After that, participants will create their own workflow to schedule a
+basic machine learning pipeline, and deploy it. For the more experienced
+participants, we offer a bonus assignment; they will leverage Airflow’s
+plugin system to further customize their pipeline. The necessary tools
+for this workshop will be provided; all you need is a laptop with an
+internet browser and basic Python knowledge.&lt;/p&gt;
+</summary></entry></feed>

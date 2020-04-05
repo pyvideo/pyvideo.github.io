@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 12 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>Binder 2.0: The Next Generation of Reproducible Scientific Environments with repo2docker and BinderHub</title><link>https://pyvideo.org/scipy-2018/binder-20-the-next-generation-of-reproducible-scientific-environments-with-repo2docker-and-binderhub.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="http://mybinder.org/"&gt;Binder&lt;/a&gt; allows researchers to quickly create
+and share computational environments needed to interact with research
+code and data. In this talk, we discuss the technical decisions and
+changes made in Binder 2.0. Many changes focus on deployment —
+modern-day cloud management tools (Kubernetes and Helm) and JupyterHub
+make the service more reliable, scalable, and easier to deploy. We focus
+on improvements for researchers using Binder to share their work.
+Supporting new workflows, languages, and REST APIs in Binder 2.0
+required developing two new components: repo2docker and BinderHub. We
+will describe how these components work and how researchers can best use
+them. We will conclude with a vision for the future of
+Binder.Presenter(s): Speaker: M Pacer, University of California,
+Berkeley Speaker: Chris Holdgraf, University of California, Berkeley
+Speaker: Min Ragan-Kelley, IPython/Jupyter&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M Pacer</dc:creator><pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-12:scipy-2018/binder-20-the-next-generation-of-reproducible-scientific-environments-with-repo2docker-and-binderhub.html</guid></item><item><title>Using IPython for Parallel Computing (April 2014)</title><link>https://pyvideo.org/bay-piggies/using-ipython-for-parallel-computing-april-2014.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abstract:
+IPython provides tools for interactive computing -- code introspection, completion, and environments such as an interactive shell and web-based notebook. In addition to these environments, IPython provides a suite of tools for interactive parallel computing on multicore machines or clusters. We will cover some of the API and architecture for IPython.parallel, using some example use cases. It will all be presented in IPython notebooks, so you can follow along if you like.&lt;/p&gt;
+&lt;p&gt;Speaker:&lt;/p&gt;
+&lt;p&gt;Min finished his PhD at UC Berkeley in computational plasma physics in May, 2013. He has been a contributor to IPython since 2006, when the first implementation of IPython's parallel computing capabilities was his undergraduate thesis at Santa Clara University. He now works full time on IPython at UC Berkeley, funded by the Alfred P. Sloan Foundation. He is also the maintainer of pyzmq, the Python bindings of the ZeroMQ messaging library&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Min Ragan-Kelley</dc:creator><pubDate>Sun, 04 May 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-05-04:bay-piggies/using-ipython-for-parallel-computing-april-2014.html</guid></item><item><title>IPython and Jupyter in Depth: High productivity, interactive Python</title><link>https://pyvideo.org/pycon-us-2017/ipython-and-jupyter-in-depth-high-productivity-interactive-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;p&gt;IPython and Jupyter provide tools for interactive computing that are
+widely used in scientific computing, education, and data science, but
+can benefit any Python developer.&lt;/p&gt;
+&lt;p&gt;You will learn how to use IPython in different ways, as:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;an interactive shell,&lt;/li&gt;
+&lt;li&gt;a graphical console,&lt;/li&gt;
+&lt;li&gt;a network-aware VM (Virtual machine) in GUIs,&lt;/li&gt;
+&lt;li&gt;a web-based notebook combining code, graphics and rich HTML.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will demonstrate how to deploy a custom environment with Docker that
+not only contains multiple Python kernels but also a couple of other
+languages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="objectives"&gt;
+&lt;h4&gt;Objectives&lt;/h4&gt;
+&lt;p&gt;At the end of this tutorial, attendees will have an understanding of the
+overall design of Jupyter (and IPython) as a suite of applications they
+can use and combine in multiple ways in the course of their development
+work with Python and other programming languages. They will learn:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tricks from the IPython machinery that are useful in everyday
+development,&lt;/li&gt;
+&lt;li&gt;What high-level applications in Jupyter, the web-based notebooks, can
+do and how these applications can be used.&lt;/li&gt;
+&lt;li&gt;How to use IPython and Jupyter together so that they can be best used
+for the problem at hand.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python-level"&gt;
+&lt;h4&gt;Python Level&lt;/h4&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="domain-level"&gt;
+&lt;h4&gt;Domain Level&lt;/h4&gt;
+&lt;p&gt;Introductory&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="detailed-abstract"&gt;
+&lt;h4&gt;Detailed Abstract&lt;/h4&gt;
+&lt;p&gt;IPython started in 2001 simply as a better interactive Python shell.
+Over the last decade it has grown into a powerful set of interlocking
+tools that maximize developer productivity in Python while working
+interactively.&lt;/p&gt;
+&lt;p&gt;Today, Jupyter consists of an IPython kernel that executes user code,
+provides many features for introspection and namespace manipulation, and
+tools to control this kernel either in-process or out-of-process thanks
+to a well specified communications protocol implemented over ZeroMQ.
+This architecture allows the core features to be accessed via a variety
+of clients, each providing unique functionality tuned to a specific use
+case:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;An interactive, terminal-based shell with capabilities beyond the
+default Python interactive interpreter (this is the classic
+application opened by the &lt;tt class="docutils literal"&gt;ipython&lt;/tt&gt; command that many users have
+worked with)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;A &lt;a class="reference external" href="http://jupyter.org/"&gt;web-based notebook&lt;/a&gt; that can execute code
+and also contain rich text and figures, mathematical equations and
+arbitrary HTML. This notebook presents a document-like view with
+cells where code is executed but that can be edited in-place,
+reordered, mixed with explanatory text and figures, etc. The notebook
+provides an interactive experience that combines live code and
+results with literate documentation and the rich media that modern
+browsers can display:&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="Notebook screenshot" src="http://jupyter.org/assets/jupyterpreview.png" /&gt;
+&lt;p class="caption"&gt;Notebook screenshot&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The notebooks also allow for code in multiple languages allowing to mix
+Python with Cython, C, R and other programming languages to access
+features hard to obain from Python.&lt;/p&gt;
+&lt;p&gt;These tools also increasingly work with languages other than Python, and
+we renamed the language independent frontend components to &lt;em&gt;Jupyter&lt;/em&gt; in
+order to make this clearer. The Python kernel we provide and the
+original terminal-based shell will continue to be called &lt;em&gt;IPython&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this hands-on, in-depth tutorial, we will briefly describe IPython's
+architecture and will then show how to use the above tools for a highly
+productive workflow in Python.&lt;/p&gt;
+&lt;p&gt;The materials for this tutorial are &lt;a class="reference external" href="https://github.com/ipython/ipython-in-depth"&gt;available on a github
+repository&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matthias Bussonnier</dc:creator><pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-18:pycon-us-2017/ipython-and-jupyter-in-depth-high-productivity-interactive-python.html</guid></item><item><title>Parallel Data Analysis</title><link>https://pyvideo.org/pycon-us-2017/parallel-data-analysis.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An overview of parallel computing techniques available from Python and
+hands-on experience with a variety of frameworks.&lt;/p&gt;
+&lt;p&gt;This course has two primary goals: 1. Teach students how to reason about
+parallel computing 2. Provide hands-on experience with a variety of
+different parallel computing frameworks&lt;/p&gt;
+&lt;p&gt;Students will walk away with both a high-level understanding of parallel
+problems and how to select and use an appropriate parallel computing
+framework for their problem. They will get hands-on experience using
+tools both on their personal laptop, and on a cluster environment that
+will be provided for them at the tutorial.&lt;/p&gt;
+&lt;p&gt;For the first half we cover programming patterns for parallelism found
+across many tools, notably map, futures, and big-data collections. We
+investigate these common APIs by diving into a sequence of examples that
+require increasingly complex tools. We learn the benefits and costs of
+each API and the sorts of problems where each is appropriate.&lt;/p&gt;
+&lt;p&gt;For the second half, we focus on the performance aspects of frameworks
+and give intuition on how to pick the right tool for the job. This
+includes common challenges in parallel analysis, such as communication
+costs, debugging parallel code, as well as deployment and setup
+strategies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Zaitlen</dc:creator><pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-18:pycon-us-2017/parallel-data-analysis.html</guid></item><item><title>Jupyter: Notebooks in Multiple Languages for Data Science</title><link>https://pyvideo.org/pydata-amsterdam-2016/jupyter-notebooks-in-multiple-languages-for-data-science.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Amsterdam 2016&lt;/p&gt;
+&lt;p&gt;We'll talk about how the Jupyter Notebook has evolved from a Python specific tool to a general data science tool that supports many different languages, and about our own experiences in supporting a wide variety of languages for data science. We'll also demonstrate some of the new features and ideas being developed in and around the project.&lt;/p&gt;
+&lt;p&gt;Jupyter notebooks have become an invaluable tool for all kinds of data science. Originally developed as part of the IPython project, notebooks have evolved from a Python specific tool to support many programming languages; more than 50 different execution kernels have now been published. For all of these languages, notebooks are a way to record and describe a data science workflow, and then share it, publicly or privately, allowing the recipients to easily modify and execute the code.&lt;/p&gt;
+&lt;p&gt;We’ll describe the architectural changes and decisions involved in the transition to supporting multiple languages, as well as our own experience in supporting data science languages ranging from C++ to R to Bash. You’ll also get a high-level understanding of how to create a new kernel, if a language you’re excited about is not yet supported.&lt;/p&gt;
+&lt;p&gt;We’ll also highlight some of the current development work taking place in and around Jupyter, including redesigned UI, mechanisms for collaboration on notebooks, ways to share live, executable notebooks online, and projects that reuse the Jupyter machinery in different user interfaces.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1PHnnkKYgjq1lcSDaVyhZP0Fs7qC70iA07b2Jv0uisUE/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1PHnnkKYgjq1lcSDaVyhZP0Fs7qC70iA07b2Jv0uisUE/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Kluyver</dc:creator><pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-03-26:pydata-amsterdam-2016/jupyter-notebooks-in-multiple-languages-for-data-science.html</guid><category>jupyter notebook</category></item><item><title>Diffing and Merging Jupyter Notebooks with nbdime</title><link>https://pyvideo.org/scipy-2016/diffing-and-merging-jupyter-notebooks-with-nbdime-scipy-2016-min-ragan-kelley.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Min Ragan Kelley</dc:creator><pubDate>Fri, 15 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-15:scipy-2016/diffing-and-merging-jupyter-notebooks-with-nbdime-scipy-2016-min-ragan-kelley.html</guid><category>SciPy 2016</category><category>jupyter</category><category>jupyter notebook</category></item><item><title>JupyterHub: Deploying Jupyter Notebooks for students and researchers</title><link>https://pyvideo.org/pydata-london-2016/jupyterhub-deploying-jupyter-notebooks-for-students-and-researchers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016
+Min Ragan Kelley &amp;amp; Thomas Kluyver&lt;/p&gt;
+&lt;p&gt;Learn to deploy JupyterHub! JupyterHub is a simple, highly extensible, multi-user system for managing per-user Jupyter Notebook servers, designed for research groups or classes. We will cover deploying JupyterHub on a single server, as well as deploying with Docker using GitHub for authentication.&lt;/p&gt;
+&lt;p&gt;The Jupyter Notebook is an interactive web-based tool for interactive programming and writing code-centric documents. Being a web-based environment, the notebook server can be run remotely, not just on your local machine. JupyterHub is a multi-user server, aimed at helping research groups and instructors host notebook servers for their users or students. By default, JupyterHub uses the local system users and PAM authentication, but it can be customized to use any authentication system, including GitHub, CILogon, Shibboleth, and more. The way single-user servers are spawned can also be customized to use services such as Docker, Kubernetes, or HPC cluster queuing systems. The tutorial will cover a basic deployment of JupyterHub on a single machine, then extending it to use docker and GitHub authentication, as well as general best practices for JupyterHub deployment.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="https://github.com/minrk/jupyterhub-pydata-2016/blob/master/JupyterHub.pdf"&gt;https://github.com/minrk/jupyterhub-pydata-2016/blob/master/JupyterHub.pdf&lt;/a&gt;
+GitHub Repo: &lt;a class="reference external" href="https://github.com/minrk/jupyterhub-pydata-2016"&gt;https://github.com/minrk/jupyterhub-pydata-2016&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Min Ragan Kelley</dc:creator><pubDate>Fri, 13 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-13:pydata-london-2016/jupyterhub-deploying-jupyter-notebooks-for-students-and-researchers.html</guid></item><item><title>Customising nbconvert. How to turn Jupyter notebooks into anything you want.</title><link>https://pyvideo.org/pydata-london-2016/thomas-kluyver-min-ragan-kelley-customising-nbconvert-how-to-turn-jupyter-notebooks-into-anythi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016&lt;/p&gt;
+&lt;p&gt;nbconvert is a set of tools to convert Jupyter notebooks into other document formats. We'll describe the different ways you can extend and customise nbconvert to modify the output and define extra output formats.&lt;/p&gt;
+&lt;p&gt;Jupyter Notebooks are code-centric documents including prose, maths, code, and rich output, such as images and HTML. These are all stored in a structured JSON file, with metadata about each input and output. nbconvert is a highly extensible tool for converting those JSON notebooks to other formats, such as HTML, LaTeX, PDF, and restructuredText. nbconvert powers the web service nbviewer, which renders any notebooks on the Web as HTML, so that they can be read by anyone with a browser and internet connection. We will cover the various ways you can extend nbconvert, from defining your own export formats to customising the output with Jinja templates, enabling things like hiding input or boilerplate cells.&lt;/p&gt;
+&lt;p&gt;GitHub Repo: &lt;a class="reference external" href="https://github.com/takluyver/customising-nbconvert"&gt;https://github.com/takluyver/customising-nbconvert&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Kluyver</dc:creator><pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-12:pydata-london-2016/thomas-kluyver-min-ragan-kelley-customising-nbconvert-how-to-turn-jupyter-notebooks-into-anythi.html</guid></item><item><title>IPython: tools for the entire lifecycle of research computing</title><link>https://pyvideo.org/scipy-2012/ipython-tools-for-the-entire-lifecycle-of-resear.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;IPython started as a better interactive Python interpreter in 2001, but
+over the last decade it has grown into a rich and powerful set of
+interlocking tools aimed at enabling an efficient, fluid and productive
+workflow in the typical use cases encountered by scientists in everyday
+research.&lt;/p&gt;
+&lt;p&gt;Today, IPython consists of a kernel executing user code and capable of
+communicating with a variety of clients, using ZeroMQ for networking via
+a well-documented protocol. This enables IPython to support, from a
+single codebase, a rich variety of usage scenarios through user-facing
+applications and an API for embedding:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An interactive, terminal-based shell with many capabilities far
+beyond the default Python interactive interpreter (this is the
+default application opened by the &lt;tt class="docutils literal"&gt;ipython&lt;/tt&gt; command that most users
+are familiar with).&lt;/li&gt;
+&lt;li&gt;A Qt console that provides the look and feel of a terminal, but adds
+support for inline figures, graphical calltips, a persistent session
+that can survive crashes of the kernel process, and more.&lt;/li&gt;
+&lt;li&gt;A web-based notebook that can execute code and also contain rich text
+and figures, mathematical equations and arbitrary HTML. This notebook
+presents a document-like view with cells where code is executed but
+that can be edited in-place, reordered, mixed with explanatory text
+and figures, etc.&lt;/li&gt;
+&lt;li&gt;A high-performance, low-latency system for parallel computing that
+supports the control of a cluster of IPython engines communicating
+over ZeroMQ, with optimizations that minimize unnecessary copying of
+large objects (especially numpy arrays).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this talk we will show how IPython supports all stages in the
+lifecycle of a scientific idea: individual exploration, collaborative
+development, large- scale production using parallel resources,
+publication and education. In particular, the IPython Notebook supports
+multiuser collaboration and allows scientists to share their work in an
+open document format that is a true &amp;quot;executable paper&amp;quot;: notebooks can be
+version controlled, exported to HTML or PDF for publication, and used
+for teaching. We will demonstrate the key features of the system,&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Granger</dc:creator><pubDate>Thu, 19 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-19:scipy-2012/ipython-tools-for-the-entire-lifecycle-of-resear.html</guid><category>General</category></item><item><title>IPython in-depth: Interactive Tools for Scientific Computing</title><link>https://pyvideo.org/scipy-2012/ipython-in-depth-interactive-tools-for-scientifi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive and parallel computing that are
+widely used in scientific computing. We will show some uses of IPython
+for scientific applications, focusing on exciting recent developments,
+such as the network- aware kernel, web-based notebook with code,
+graphics, and rich HTML, and a high-level framework for interactive
+parallel computing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fernando Pérez</dc:creator><pubDate>Tue, 17 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-17:scipy-2012/ipython-in-depth-interactive-tools-for-scientifi.html</guid></item><item><title>Interactive Parallel Computing with IPython Part 1</title><link>https://pyvideo.org/scipy-2014/interactive-parallel-computing-with-ipython-part.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Learn about interactive parallel computing in IPython.parallel, with
+examples including parallel image processing, machine learning, and
+physical simulations. IPython provides an easy way to interact with your
+multicore laptop or compute cluster.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive exploration of code and data.
+IPython.parallel is the part of IPython that enables an interactive
+model for parallel execution, and aims to make distributing your work on
+a multicore computer, local clusters or cloud services such as AWS or MS
+Azure simple and straightforward. The tutorial will cover how to do
+interactive and asynchronous parallel computing with IPython, and how to
+get the most out of your IPython cluster. Some of IPython’s novel
+interactive features will be demonstrated, such as automatically
+parallelizing code with magics in the IPython Notebook and interactive
+debugging of remote execution. Examples covered will include parallel
+image processing, machine learning, and physical simulations, with
+exercises to solve along the way.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to IPython.parallel&lt;/li&gt;
+&lt;li&gt;Deploying IPython&lt;/li&gt;
+&lt;li&gt;Using DirectViews and LoadBalancedViews&lt;/li&gt;
+&lt;li&gt;The basic model for execution&lt;/li&gt;
+&lt;li&gt;Getting to know your IPython cluster:&lt;/li&gt;
+&lt;li&gt;Working with remote namespaces&lt;/li&gt;
+&lt;li&gt;AsyncResult: the API for asynchronous execution&lt;/li&gt;
+&lt;li&gt;Interacting with incomplete results. Remember, it’s about
+interactivity&lt;/li&gt;
+&lt;li&gt;Interactive parallel plotting&lt;/li&gt;
+&lt;li&gt;More advanced topics:&lt;/li&gt;
+&lt;li&gt;Using IPython.parallel with traditional (MPI) parallel programs&lt;/li&gt;
+&lt;li&gt;Debugging parallel code&lt;/li&gt;
+&lt;li&gt;Minimizing data movement&lt;/li&gt;
+&lt;li&gt;Task dependencies&lt;/li&gt;
+&lt;li&gt;Caveats and tuning tips for IPython.parallel&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fernando Pérez</dc:creator><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-09:scipy-2014/interactive-parallel-computing-with-ipython-part.html</guid><category>ipython</category></item><item><title>Interactive Parallel Computing with IPython Part 2</title><link>https://pyvideo.org/scipy-2014/interactive-parallel-computing-with-ipython-part-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Learn about interactive parallel computing in IPython.parallel, with
+examples including parallel image processing, machine learning, and
+physical simulations. IPython provides an easy way to interact with your
+multicore laptop or compute cluster.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive exploration of code and data.
+IPython.parallel is the part of IPython that enables an interactive
+model for parallel execution, and aims to make distributing your work on
+a multicore computer, local clusters or cloud services such as AWS or MS
+Azure simple and straightforward. The tutorial will cover how to do
+interactive and asynchronous parallel computing with IPython, and how to
+get the most out of your IPython cluster. Some of IPython’s novel
+interactive features will be demonstrated, such as automatically
+parallelizing code with magics in the IPython Notebook and interactive
+debugging of remote execution. Examples covered will include parallel
+image processing, machine learning, and physical simulations, with
+exercises to solve along the way.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to IPython.parallel&lt;/li&gt;
+&lt;li&gt;Deploying IPython&lt;/li&gt;
+&lt;li&gt;Using DirectViews and LoadBalancedViews&lt;/li&gt;
+&lt;li&gt;The basic model for execution&lt;/li&gt;
+&lt;li&gt;Getting to know your IPython cluster:&lt;/li&gt;
+&lt;li&gt;Working with remote namespaces&lt;/li&gt;
+&lt;li&gt;AsyncResult: the API for asynchronous execution&lt;/li&gt;
+&lt;li&gt;Interacting with incomplete results. Remember, it’s about
+interactivity&lt;/li&gt;
+&lt;li&gt;Interactive parallel plotting&lt;/li&gt;
+&lt;li&gt;More advanced topics:&lt;/li&gt;
+&lt;li&gt;Using IPython.parallel with traditional (MPI) parallel programs&lt;/li&gt;
+&lt;li&gt;Debugging parallel code&lt;/li&gt;
+&lt;li&gt;Minimizing data movement&lt;/li&gt;
+&lt;li&gt;Task dependencies&lt;/li&gt;
+&lt;li&gt;Caveats and tuning tips for IPython.parallel&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fernando Pérez</dc:creator><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-09:scipy-2014/interactive-parallel-computing-with-ipython-part-0.html</guid><category>ipython</category></item><item><title>Interactive Parallel Computing with IPython Part 3</title><link>https://pyvideo.org/scipy-2014/interactive-parallel-computing-with-ipython-part-1.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Learn about interactive parallel computing in IPython.parallel, with
+examples including parallel image processing, machine learning, and
+physical simulations. IPython provides an easy way to interact with your
+multicore laptop or compute cluster.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive exploration of code and data.
+IPython.parallel is the part of IPython that enables an interactive
+model for parallel execution, and aims to make distributing your work on
+a multicore computer, local clusters or cloud services such as AWS or MS
+Azure simple and straightforward. The tutorial will cover how to do
+interactive and asynchronous parallel computing with IPython, and how to
+get the most out of your IPython cluster. Some of IPython’s novel
+interactive features will be demonstrated, such as automatically
+parallelizing code with magics in the IPython Notebook and interactive
+debugging of remote execution. Examples covered will include parallel
+image processing, machine learning, and physical simulations, with
+exercises to solve along the way.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to IPython.parallel&lt;/li&gt;
+&lt;li&gt;Deploying IPython&lt;/li&gt;
+&lt;li&gt;Using DirectViews and LoadBalancedViews&lt;/li&gt;
+&lt;li&gt;The basic model for execution&lt;/li&gt;
+&lt;li&gt;Getting to know your IPython cluster:&lt;/li&gt;
+&lt;li&gt;Working with remote namespaces&lt;/li&gt;
+&lt;li&gt;AsyncResult: the API for asynchronous execution&lt;/li&gt;
+&lt;li&gt;Interacting with incomplete results. Remember, it’s about
+interactivity&lt;/li&gt;
+&lt;li&gt;Interactive parallel plotting&lt;/li&gt;
+&lt;li&gt;More advanced topics:&lt;/li&gt;
+&lt;li&gt;Using IPython.parallel with traditional (MPI) parallel programs&lt;/li&gt;
+&lt;li&gt;Debugging parallel code&lt;/li&gt;
+&lt;li&gt;Minimizing data movement&lt;/li&gt;
+&lt;li&gt;Task dependencies&lt;/li&gt;
+&lt;li&gt;Caveats and tuning tips for IPython.parallel&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fernando Pérez</dc:creator><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-09:scipy-2014/interactive-parallel-computing-with-ipython-part-1.html</guid><category>ipython</category></item><item><title>IPython: Python at your fingertips</title><link>https://pyvideo.org/pycon-us-2012/ipython-python-at-your-fingertips.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;IPython is widely used in the scientific community, but its various
+tools can be used in any context. IPython gets you as close as possible
+to the Python language, with an array of tools for productive work: at
+the terminal, in GUIs, through a web browser, and in high-level parallel
+computing. This talk will explain the design of IPython and provide
+short, hands-on demos of its main features.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian E. Granger</dc:creator><pubDate>Fri, 09 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-09:pycon-us-2012/ipython-python-at-your-fingertips.html</guid></item><item><title>IPython in-depth: high-productivity interactive and parallel python</title><link>https://pyvideo.org/pycon-us-2012/ipython-in-depth-high-productivity-interactive-a.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive and parallel computing that are
+widely used in scientific computing, but can benefit any Python
+developer. We will show how to use IPython in different ways, as: an
+interactive shell, an embedded shell, a graphical console, a
+network-aware VM in GUIs, a web-based notebook with code, graphics and
+rich HTML, and a high-level framework for parallel computing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian E. Granger</dc:creator><pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-07:pycon-us-2012/ipython-in-depth-high-productivity-interactive-a.html</guid></item><item><title>IPython in-depth: high-productivity interactive and parallel python</title><link>https://pyvideo.org/pycon-us-2013/ipython-in-depth-high-productivity-interactive-a-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;IPython provides tools for interactive and parallel computing that are
+widely used in scientific computing, but can benefit any Python
+developer.&lt;/p&gt;
+&lt;p&gt;We will show how to use IPython in different ways, as: an interactive
+shell, an embedded shell, a graphical console, a network-aware VM in
+GUIs, a web-based notebook with code, graphics and rich HTML, and a
+high-level framework for parallel computing.&lt;/p&gt;
+&lt;p&gt;All materials for this tutorial can be found on our &lt;a class="reference external" href="https://github.com/ipython/ipython-in-depth"&gt;github
+repository&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Granger</dc:creator><pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-13:pycon-us-2013/ipython-in-depth-high-productivity-interactive-a-0.html</guid><category>tutorial</category></item></channel></rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 13 Jul 2017 00:00:00 +0000</lastBuildDate><item><title>Streaming: Why should I care?</title><link>https://pyvideo.org/europython-2017/streaming-why-should-i-care.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You think, all that hype about streaming solutions does not affect
+you? I thought so also. But when playing around with that topic for
+some time, I realized that it sheds a different light on many topics
+I struggled with for some time. In this talk I want to share with you
+what I discovered when switching from a from a database centric view
+to stream oriented processing.&lt;/p&gt;
+&lt;p&gt;Splitting your application in smaller services gets easier as you
+have more natural boundaries. You have more options to run different
+data schema versions in different services (instead of one central db
+upgrade). More scaling possibilities. Operations improvements.&lt;/p&gt;
+&lt;p&gt;For sure, streaming does not solve any problem, but much more than I
+thought before. And in python you have good support with many
+streaming clients. I will give some examples and comparisons for
+working with Kafka and Avro Schemas.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Trebing</dc:creator><pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-13:europython-2017/streaming-why-should-i-care.html</guid></item><item><title>Building a multi-purpose platform for bulk data using sqlalchemy</title><link>https://pyvideo.org/europython-2015/building-a-multi-purpose-platform-for-bulk-data-using-sqlalchemy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Christian Trebing - Building a multi-purpose platform for bulk data using sqlalchemy
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;At Blue Yonder, we've built a platform that can accept and process
+bulk amounts of data for multiple business domains (e.g. handling
+retail store location and sales data) using SQLAlchemy as a database
+abstraction layer.&lt;/p&gt;
+&lt;p&gt;We wanted to use as much of SQLAlchemy as possible, but we quickly
+found that the ORM (Object Relational Mapper) is not suitable for
+handling large amounts of data at once. At the same time, we did not
+want each team of developers working on individual business domains to
+have to handcraft their own SQL statements. To solve this problem, we
+built an application configuration that closely resembles an
+SQLAlchemy model, but also contains application-specific logic
+settings.&lt;/p&gt;
+&lt;p&gt;In this talk I will demonstrate:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An application architecture for multiple business domains&lt;/li&gt;
+&lt;li&gt;The structure of the domain configuration utilized in the generation of the SQLAlchemy model, SQLAlchemy core statements, and other application functionality&lt;/li&gt;
+&lt;li&gt;How the domain configuration is used throughout the application (consuming and parsing incoming data, storing it in a database and ensuring data quality)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Trebing</dc:creator><pubDate>Wed, 05 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-05:europython-2015/building-a-multi-purpose-platform-for-bulk-data-using-sqlalchemy.html</guid></item><item><title>Get in control of your workflows with Airflow</title><link>https://pyvideo.org/europython-2016/get-in-control-of-your-workflows-with-airflow.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Christian Trebing - Get in control of your workflows with Airflow
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/get-in-control-of-your-workflows-with-airflow"&gt;https://ep2016.europython.eu//conference/talks/get-in-control-of-your-workflows-with-airflow&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Airflow (&lt;a class="reference external" href="https://github.com/airbnb/airflow"&gt;https://github.com/airbnb/airflow&lt;/a&gt;) is an open source Python
+package from Airbnb to control your workflows.&lt;/p&gt;
+&lt;p&gt;This talk will explain the concepts behind Airflow, demonstrating how
+to define your own workflows in Python code and how to extend the
+functionality with new task operators and UI blueprints by developing
+your own plugins. You'll also get to hear about our experiences at
+Blue Yonder,  using this tool in real-world scenarios.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Whenever you work with data, sooner or later you stumble across the
+definition of your workflows. At what point should you process your
+customer's data? What subsequent steps are necessary? And what went
+wrong with your data processing last Saturday night?&lt;/p&gt;
+&lt;p&gt;At Blue Yonder we use Airflow (&lt;a class="reference external" href="https://github.com/airbnb/airflow"&gt;https://github.com/airbnb/airflow&lt;/a&gt;), an
+open source Python package from Airbnb to solve these problems. It can
+be extended with new functionality by developing plugins in Python,
+without the need to fork the repo. With Airflow, we define workflows
+as directed acyclic graphs and get a shiny UI for free. Airflow comes
+with some task operators which can be used out of the box to complete
+certain tasks. For more specific cases, tasks can be developed by the
+end user. Best of all: even the configuration is done completely in
+Python!&lt;/p&gt;
+&lt;p&gt;This talk will explain the concepts behind Airflow, demonstrating how
+to define your own workflows in Python code and how to extend the
+functionality with new task operators and UI blueprints. You'll also
+get to hear about our experiences using this tool in real-world
+scenarios.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Trebing</dc:creator><pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-01:europython-2016/get-in-control-of-your-workflows-with-airflow.html</guid></item></channel></rss>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_michael-konig.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-25T00:00:00+00:00</updated><entry><title>Turbodbc: Turbocharged database access for data scientists</title><link href="https://pyvideo.org/pycon-de-2017/turbodbc-turbocharged-database-access-for-data-scientists.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Michael König</name></author><id>tag:pyvideo.org,2017-10-25:pycon-de-2017/turbodbc-turbocharged-database-access-for-data-scientists.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Michael König&lt;/strong&gt; (&amp;#64;turbodbc)&lt;/p&gt;
+&lt;p&gt;Michael is a senior software engineer at Blue Yonder GmbH. He holds a PhD in physics, practices test-driven development, and digs Clean Code in C++ and Python. In the last five years, he invested more money in table tennis gear than in smartphones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Python's database API 2.0 is well suited for transactional database workflows, but not so much for column-heavy data science. This talk explains how the ODBC-based turbodbc database module extends this API with first-class, efficient support for familiar NumPy and Apache Arrow data structures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This talk introduces the open source Python database module turbodbc. It uses standard ODBC drivers to connect with virtually any database and is a viable (and often faster) alternative to &amp;quot;native&amp;quot; Python drivers.&lt;/p&gt;
+&lt;p&gt;Briefly recounting the painful story of how data scientists previously used our analytics database, I explain why turbodbc was created and what distinguishes it from other ODBC modules. Sketching the flow of data from databases via drivers and Python modules to consumable Python objects, I motivate a few extensions to the standard database API 2.0 that turbodbc has made. These extensions heavily use NumPy arrays and Apache Arrow tables to provide data scientists with both familiar and efficient binary data structures they can further work on. I conclude my talk with benchmark results for a few databases.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</summary><category term="numpy"></category><category term="database"></category><category term="python"></category><category term="data-science"></category><category term="analytics"></category></entry><entry><title>Embedding Python: Charming the Snake with C++</title><link href="https://pyvideo.org/europython-2014/embedding-python-charming-the-snake-with-c.html" rel="alternate"></link><published>2014-07-23T00:00:00+00:00</published><updated>2014-07-23T00:00:00+00:00</updated><author><name>Michael König</name></author><id>tag:pyvideo.org,2014-07-23:europython-2014/embedding-python-charming-the-snake-with-c.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;At the example of our in-house distributed scheduling system, we discuss
+the challenges of embedding the Python interpreter in a C++ program.
+Besides the actual integration of the interpreter, efficient data
+exchange between both languages is discussed. In addition, this
+presentation demonstrates how higher-level abstractions further diminish
+the language barrier.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python with its huge standard library and sophisticated packages
+developed by its thriving community has become an incredibly useful tool
+for data scientists. At Blue Yonder, we value Python for the ease with
+which we can access and combine machine learning algorithms to build
+accurate prediction models.&lt;/p&gt;
+&lt;p&gt;To get the most business value out of the use of Python, we strive to
+rid our model developers from all burdens outside their core expertise,
+i.e., developing statistical models. To leverage our existing
+infrastructure, essentially a distributed scheduling system written in
+C++, we decided to embed a Python interpreter in our application. The
+goal was to let developers use the language best suited for their
+problem, and to let them incorporate code created by others even if it
+is not written in the same language.&lt;/p&gt;
+&lt;p&gt;In this presentation, I will talk about a few obstacles which we had to
+overcome in integrating the (C)Python interpreter in our C++ program,
+e.g., clean resource management, error handling, and broken features in
+the interpreter's API. I will show how we employed features from the
+&lt;a class="reference external" href="http://www.boost.org/doc/libs/1_55_0/libs/python/"&gt;Boost Python C++
+library&lt;/a&gt; not only
+for simple data exchange, but also for more powerful concepts such as
+data sources. Finally, I will demonstrate how C++ objects can be used to
+seamlessly interact with Python, for example to use Python's logging
+package as usual while the actual logging is handled by our C++
+application.&lt;/p&gt;
+&lt;p&gt;With this combination of both worlds, we achieved a desirable mix of
+virtues: safe, reliable operations; good run-time performance; fast
+development; and highly expressive, unit testable core domain logic.&lt;/p&gt;
+</summary></entry></feed>

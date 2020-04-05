@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_matthew-j-desmarais.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2013-03-15T00:00:00+00:00</updated><entry><title>What would you do with an ast?</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--what-would-you-do-with-an-ast.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Matthew J Desmarais</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--what-would-you-do-with-an-ast.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What would you do with an ast?&lt;/p&gt;
+&lt;p&gt;Presented by Matthew J Desmarais&lt;/p&gt;
+&lt;p&gt;The ast module in the Python (&amp;gt;= 2.6) standard library provides a
+representation of python code in a python data structure. We'll begin
+with a discussion about what an abstract syntax tree is and why it's
+useful. We can then talk about what's available in the ast module, how
+it works, and how you can use it. This will be a practical session built
+around examples examining and modifying live ASTs.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;I would prefer to make this a 45 minute talk with examination of code
+samples.&lt;/p&gt;
+&lt;p&gt;Python 2.6 introduced a new module in the standard library, ast. The
+first line of the ast documentation is, &amp;quot;The ast module helps Python
+applications to process trees of the Python abstract syntax grammar.&amp;quot;
+What this means is not obvious and many, if not most, python programmers
+won't know what this means. I will begin by talking about the idea of
+syntax tree and how it fits into the python execution lifecycle. I will
+also talk about the contents of the ast module. I will cover the
+available ast.Node subclasses and the provided helper functions,
+including the NodeVisitor and NodeTransformer. I will finish by talking
+about how the ast module can be used to analyze Python code and how it
+can be used to generate new code.&lt;/p&gt;
+&lt;p&gt;I expect the time to break down roughly like this:&lt;/p&gt;
+&lt;p&gt;Introduction ( 5m )&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Capacitor joke&lt;/li&gt;
+&lt;li&gt;What is an abstract syntax tree?&lt;/li&gt;
+&lt;li&gt;How they are used by the Python interpreter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The contents of the ast module (20 m)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The node subclasses and the ast ( 10m )&lt;ul&gt;
+&lt;li&gt;How you get an ast.&lt;/li&gt;
+&lt;li&gt;code examples&lt;/li&gt;
+&lt;li&gt;ast.stmt vs. ast.expr&lt;/li&gt;
+&lt;li&gt;peculiarities&lt;/li&gt;
+&lt;li&gt;code examples&lt;ul&gt;
+&lt;li&gt;elif as syntactic sugar for &amp;quot;if: else: if:&amp;quot;&lt;/li&gt;
+&lt;li&gt;comparison operators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Why this is useful.&lt;/li&gt;
+&lt;li&gt;the ast is the &amp;quot;truth&amp;quot; of the program&lt;ul&gt;
+&lt;li&gt;code examples&lt;/li&gt;
+&lt;li&gt;tricky code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The ast module helpers ( 10m )&lt;ul&gt;
+&lt;li&gt;visitor pattern&lt;/li&gt;
+&lt;li&gt;NodeVisitor&lt;/li&gt;
+&lt;li&gt;NodeTransformer&lt;/li&gt;
+&lt;li&gt;code examples&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What you do with an ast ( 15m )&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Walking an ast&lt;ul&gt;
+&lt;li&gt;code examples&lt;/li&gt;
+&lt;li&gt;a simple visitor to gather variables by scope&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Creating/Modifying an ast&lt;ul&gt;
+&lt;li&gt;code examples&lt;/li&gt;
+&lt;li&gt;rearrange imports transformer&lt;/li&gt;
+&lt;li&gt;naive &amp;quot;rename all instances&amp;quot; transformer&lt;/li&gt;
+&lt;li&gt;naive macro expansion transformer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Conclusion ( 5m )&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Practical Applications&lt;ul&gt;
+&lt;li&gt;existing projects&lt;/li&gt;
+&lt;li&gt;visitors&lt;ul&gt;
+&lt;li&gt;checkers (pylint, pyflakes)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;transformers&lt;ul&gt;
+&lt;li&gt;refactoring tools (rope)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;When is it a good idea to use ast?&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="ast"></category><category term="pycon"></category><category term="pycon2011"></category></entry><entry><title>Lightning Talks - Friday evening</title><link href="https://pyvideo.org/pycon-us-2013/friday-evening-lightning-talks.html" rel="alternate"></link><published>2013-03-15T00:00:00+00:00</published><updated>2013-03-15T00:00:00+00:00</updated><author><name>MC Larry Hasting</name></author><id>tag:pyvideo.org,2013-03-15:pycon-us-2013/friday-evening-lightning-talks.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Lightning talks from Friday evening.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=0m"&gt;00:00&lt;/a&gt; - Intro to Lightning Talks - MC Larry Hasting&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=1m56s"&gt;01:56&lt;/a&gt; - Instrumental - Matthew J Desmarais&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=7m14s"&gt;07:14&lt;/a&gt; - Statvent - Christian Wyglendowski&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=12m4s"&gt;12:04&lt;/a&gt; - Switchboard - Kyle Adams&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=16m14s"&gt;16:14&lt;/a&gt; - hy: a lisp variant - Paul Tag&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=20m40s"&gt;20:40&lt;/a&gt; - 5 packages you need to know - Łukasz Langa&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=26m24s"&gt;26:24&lt;/a&gt; - The future of Linux containers - Solomon
+Hykes&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=32m8s"&gt;32:08&lt;/a&gt; - SciPy 2013 - Andy Terrel, Anthony Scopatz&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=35m39s"&gt;35:39&lt;/a&gt; - BirdFish - Preston Holmes&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=41m20s"&gt;41:20&lt;/a&gt; - Julython - Robert Myers&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=44m20s"&gt;44:20&lt;/a&gt; - CLDR: Common locale data repository - Martin
+von Löwis&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=1vui-LupKJI#t=48m49s"&gt;48:49&lt;/a&gt; - Spine demo and Python port of runtime - Terry
+Simons&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry></feed>

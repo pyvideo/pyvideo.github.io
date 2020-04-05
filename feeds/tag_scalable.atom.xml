@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_scalable.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-20T00:00:00+00:00</updated><entry><title>Building a hosting platform with Python</title><link href="https://pyvideo.org/europython-2011/building-a-hosting-platform-with-python.html" rel="alternate"></link><published>2011-07-20T00:00:00+00:00</published><updated>2011-07-20T00:00:00+00:00</updated><author><name>Andrew Godwin</name></author><id>tag:pyvideo.org,2011-07-20:europython-2011/building-a-hosting-platform-with-python.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Andrew Godwin - 20 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At ep.io we built a Python hosting platform from the ground up, designed
+to run large numbers of web applications on a small number of physical
+machines both securely and in a reasonably scalable way. This talk will
+show you how we built our infrastructure - using Redis, eventlet,
+PostgreSQL and more - and what lessons we learnt from our first few
+thousand deploys.&lt;/p&gt;
+&lt;p&gt;See how we split services into multiple processes and greenthreads; the
+pains of building a cooperatively-multitasking PTY module; how Redis
+isn't the answer to everything, but is still very useful; how to
+persuade third-party software to work securely in a shared environment;
+and how important it is to have good logging, especially when you have
+more than five servers.&lt;/p&gt;
+</summary><category term="ep.io"></category><category term="hosting"></category><category term="infrastructure"></category><category term="postgresql"></category><category term="redis"></category><category term="scalable"></category><category term="web"></category></entry><entry><title>Leveraging an instant messaging protocol to build a scalable cloud architecture</title><link href="https://pyvideo.org/europython-2011/leveraging-an-instant-messaging-protocol-to-build.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Achiel van der Mandele</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/leveraging-an-instant-messaging-protocol-to-build.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Achiel van der Mandele - 24 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;XMPP is an open technology for real-time communication. Although
+primarily known for its application in the IM service &amp;quot;Jabber&amp;quot; (and,
+subsequently, gchat/gtalk), it has numerous applications and creates new
+opportunities for inter-system communication.&lt;/p&gt;
+&lt;p&gt;While researching for an alternative to webservices at Mendix, we came
+across XMPP and realized it solved many of the shortcomings of
+webservices. It is currently being used to handle all inter-system and
+inter-process communication in the Mendix cloud hosting environment.&lt;/p&gt;
+&lt;p&gt;The talk will give a general overview of what XMPP is, an introduction
+to the sleekxmpp python library and how the core features of xmpp can
+help an architecture scale well horizontally.&lt;/p&gt;
+&lt;p&gt;Required knowledge: basic understanding of hosting environments.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="cloud"></category><category term="hosting"></category><category term="real-time"></category><category term="scalable"></category><category term="technology"></category></entry><entry><title>Building Scalable Web Apps</title><link href="https://pyvideo.org/europython-2011/building-scalable-web-apps.html" rel="alternate"></link><published>2011-07-07T00:00:00+00:00</published><updated>2011-07-07T00:00:00+00:00</updated><author><name>David Cramer</name></author><id>tag:pyvideo.org,2011-07-07:europython-2011/building-scalable-web-apps.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] David Cramer - 21 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Building scalable web applications may seem like a distant problem, but
+the problem is not thinking about it before it's too late. This talk
+will focus on designing a scalable web application before it needs to be
+(and avoiding the premature optimization dilemma). It will cover topics
+such as efficient usage of your database, appropriate caching (and
+invalidation!), and what the speaker considers as best practices.&lt;/p&gt;
+</summary><category term="optimization"></category><category term="scalable"></category><category term="web"></category></entry><entry><title>MongoDB + Pylons at Catch.com: Scalable Web Apps with Python and NoSQL</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--mongodb---pylons-at-catch-com--scalab.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Niall O'Higgins</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--mongodb---pylons-at-catch-com--scalab.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;MongoDB + Pylons at Catch.com: Scalable Web Apps with Python and NoSQL&lt;/p&gt;
+&lt;p&gt;Presented by Niall O'Higgins&lt;/p&gt;
+&lt;p&gt;The Catch.com backend provides an API for publishing and querying your
+personal data - used by many hugely popular Android, iOS and Web
+clients. We ported this system to Python and MongoDB, using the Pylons
+Web framework. This talk details our reasoning for choosing - and
+experiences with - these cutting-edge Web and NoSQL database
+technologies in a high-traffic, real-world production system.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Faced with the limits of our initial Catch.com Java/BDB backend
+implemention, we evaluated various alternative technologies including
+Amazon SimpleDB, MySQL, Cassandra and MongoDB. Eventually we settled on
+Python, Pylons and MongoDB.&lt;/p&gt;
+&lt;p&gt;We found Python and MongoDB gave us unique flexibility with our data
+model, allowed us to scale for increased reliability and performance and
+decreased feature development time - and in this talk we'll describe
+exactly how.&lt;/p&gt;
+&lt;p&gt;While there are many advantages, Python/Pylons and MongoDB (as a
+relative newcomer on the database scene) certainly have issues and
+limitations which must be taken into careful consideration for any
+real-world production deployment.&lt;/p&gt;
+&lt;p&gt;We compare MongoDB with other database technologies such as more
+traditional RDBMS like MySQL and competing NoSQL options such as
+Cassandra, CouchDB and BDB.&lt;/p&gt;
+&lt;p&gt;We give a detailed introducton to data modeling in MongoDB - with
+special attention paid to how this differs from a traditional relational
+system - the operators provided by its rich query language and utilizing
+advanced features such as GeoSpatial indexing, Replica Sets, Sharding -
+and how to deal with some of the more publicized limitations of the
+system (such as single-server durability).&lt;/p&gt;
+&lt;p&gt;While much of this talk will be about using MongoDB with Python, we will
+also touch on issues surrounding production deployment of the Pylons Web
+framework, including how we work around the GIL to take advantage of
+multi-core machines.&lt;/p&gt;
+</summary><category term="casestudy"></category><category term="mongodb"></category><category term="nosql"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pylons"></category><category term="scalable"></category></entry></feed>

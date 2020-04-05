@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 26 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>Introduction to sentiment analysis with spaCy</title><link>https://pyvideo.org/europython-2018/introduction-to-sentiment-analysis-with-spacy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sentiment analysis aims at extracting opinions from texts written in
+natural language, typically reviews or comments on social sites and
+forums. SpaCy already provides mechanisms for dealing with natural
+languages in general but does not offer means for sentiment analysis.&lt;/p&gt;
+&lt;p&gt;This talk gives a short introduction to sentiment analysis in general
+and shows how to extract topics and ratings by utilizing spaCy’s basic
+tools and extending them with a lexicon based approach and simple Python
+code to consolidate sentiments spread over multiple words.&lt;/p&gt;
+&lt;p&gt;Topic covered are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What is sentiment analysis?&lt;/li&gt;
+&lt;li&gt;Levels of sentiment detection&lt;/li&gt;
+&lt;li&gt;Representing opinions&lt;/li&gt;
+&lt;li&gt;Splitting texts in sentences and words.&lt;/li&gt;
+&lt;li&gt;Finding the base word (lemma)&lt;/li&gt;
+&lt;li&gt;Extending spaCy’s pipeline and tokens&lt;/li&gt;
+&lt;li&gt;Matching words to topics and ratings&lt;/li&gt;
+&lt;li&gt;Combining multiple words to a rating&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Code examples are introduced and explained using a Jupyter notebook that
+can be used as basis for your own analysis.&lt;/p&gt;
+&lt;p&gt;As additional twist the analyzed texts are not in English but German to
+show that this approach can be used for multiple languages. No knowledge
+of German is required though because translations of the short examples
+sentences are provided.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Aglassinger</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:europython-2018/introduction-to-sentiment-analysis-with-spacy.html</guid></item><item><title>Solution oriented error handling</title><link>https://pyvideo.org/europython-2014/solution-oriented-error-handling.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk shows how to use Python's built in error handling mechanisms
+to keep the productive code clean, derive error messages helpful for the
+user directly from the code and release ressources properly.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Traditionally error handling is regarded an annoyance by developers
+because it removes the focus from the already difficult enough
+productive parts of the code to parts that ideally will never be called.
+And even if, end users seem to be ignore the error messages and just
+click &amp;quot;Ok&amp;quot; or call the help desk.&lt;/p&gt;
+&lt;p&gt;Solution oriented error handling uses Python's existing
+try/catch/finally idiom, with statement, assert statement and exception
+hierarchy in a way that keeps the code clean and easy to maintain. It
+gives a clear distinction between errors that can be solved by the end
+user, the system administrator and the developer. Naming conventions and
+a simple set of coding guidelines ensure that helpful error messages can
+be easily derived from the code.&lt;/p&gt;
+&lt;p&gt;Most code examples work with Python 2.6+ and Python 3.x, on a few
+occasions minor differences are pointed out.&lt;/p&gt;
+&lt;p&gt;Topics covered are:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Introduction to error handling in Python&lt;ul&gt;
+&lt;li&gt;What are errors?&lt;/li&gt;
+&lt;li&gt;How to represent errors in Python&lt;/li&gt;
+&lt;li&gt;Detecting errors&lt;/li&gt;
+&lt;li&gt;Delegating errors to the caller&lt;/li&gt;
+&lt;li&gt;clean resource management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Principles of solution oriented error handling&lt;ul&gt;
+&lt;li&gt;responsibilities between user, admin and developer&lt;/li&gt;
+&lt;li&gt;when to use raise or assert&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Error messages&lt;ul&gt;
+&lt;li&gt;What are &amp;quot;good&amp;quot; error messages&lt;/li&gt;
+&lt;li&gt;How to derive error messages from the source code&lt;/li&gt;
+&lt;li&gt;Adding context to the error&lt;/li&gt;
+&lt;li&gt;How to report errors to the user&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Solution oriented usage of Python's exception hierarchy&lt;ul&gt;
+&lt;li&gt;admins fix &lt;tt class="docutils literal"&gt;EnvironmentError&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;users fix &lt;tt class="docutils literal"&gt;DataError&lt;/tt&gt;&lt;ul&gt;
+&lt;li&gt;representing &lt;tt class="docutils literal"&gt;DataError&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;converting exceptions to &lt;tt class="docutils literal"&gt;DataError&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;developers fix everything else&lt;/li&gt;
+&lt;li&gt;special Python exceptions not representing errors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Template for a solution oriented command line application&lt;/li&gt;
+&lt;li&gt;Best practices for &lt;tt class="docutils literal"&gt;raise&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;except&lt;/tt&gt;&lt;ul&gt;
+&lt;li&gt;When to use &lt;tt class="docutils literal"&gt;raise&lt;/tt&gt;?&lt;/li&gt;
+&lt;li&gt;When to use &lt;tt class="docutils literal"&gt;except&lt;/tt&gt;?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This talk is a translation of a German
+&lt;a class="reference external" href="https://github.com/roskakori/talks/tree/master/pygraz/errorhandling"&gt;talk&lt;/a&gt;
+given at the PyGRAZ user group and in a (slightly depythonized variant)
+the Grazer Linux Tag 2013 (&lt;a class="reference external" href="http://glt13-programm.linuxtage.at/events/198.de.html"&gt;slides and
+video&lt;/a&gt;).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Aglassinger</dc:creator><pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-22:europython-2014/solution-oriented-error-handling.html</guid></item></channel></rss>

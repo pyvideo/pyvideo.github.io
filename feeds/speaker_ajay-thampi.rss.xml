@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Interpretable AI or How I Learned to Stop Worrying and Trust AI</title><link>https://pyvideo.org/pydata-london-2019/interpretable-ai-or-how-i-learned-to-stop-worrying-and-trust-ai.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One of the main reasons why companies are blocking the deployment of AI across the enterprise is trust. The lack of understanding of complex machine learned models is hugely problematic. In this tutorial, I will cover various data science techniques that have been successfully applied at Microsoft to gain customer trust and improve model understanding.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ajay Thampi</dc:creator><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-13:pydata-london-2019/interpretable-ai-or-how-i-learned-to-stop-worrying-and-trust-ai.html</guid></item><item><title>A Fast, Offline Reverse Geocoder in Python</title><link>https://pyvideo.org/pydata-london-2015/a-fast-offline-reverse-geocoder-in-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A fast, offline reverse geocoder in Python. This implementation uses
+a parallelised K-D tree and the details of this implementation will
+be presented. The key feature is speed; 10 million coordinates can be
+geocoded in less than 30 seconds. The library is released under the
+LGPL license and is available at
+&lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder"&gt;https://github.com/thampiman/reverse-geocoder&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;Reverse geocoding using online web services such as Google Maps is
+incredibly slow and is also restrictive in terms of the number of
+requests that can be made per day. Offline reverse geocoders have been
+built for PostGIS databases and also Python but are either complicated
+or slow. In this talk, I will be presenting a fast, offline reverse
+geocoder in Python. The basic outline of the talk is presented below.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-library"&gt;
+&lt;h4&gt;The Library&lt;/h4&gt;
+&lt;p&gt;The library improves on an existing one built by Richard Penman in the
+following ways:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;It supports Python 2 and 3.&lt;/li&gt;
+&lt;li&gt;It geocodes a lot more location information. Besides the place name,
+city and country, the library returns the administrative regions (1 &amp;amp;
+2) and the nearest latitude and longitude.&lt;/li&gt;
+&lt;li&gt;But the key enhancement is performance. The library extends the K-D
+tree class in the scipy package and implements a parallelised version
+of it.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This reverse geocoder is released under the LGPL license and is
+available &lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementation"&gt;
+&lt;h4&gt;Implementation&lt;/h4&gt;
+&lt;p&gt;The first time the library is called, information on places with a
+population greater than 1000 is downloaded from the
+&lt;a class="reference external" href="http://download.geonames.org/export/dump/"&gt;Geonames&lt;/a&gt; database, and
+it is stored locally. The GPS coordinates of these places are populated
+in a K-D tree and the nearest neighbour (NN) algorithm is then used to
+find the place closest to the input GPS coordinate. The scipy package
+provides a &lt;a class="reference external" href="http://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.spatial.KDTree.html%20%22cKDTree%22"&gt;K-D tree
+class&lt;/a&gt;
+and this is extended to implement a multi-process version. In this talk,
+I will be presenting details of this implementation. A basic background
+in Python, numpy, multi-processing and shared memory is assumed. The K-D
+tree class in the scipy package supports only the Minkowski p-norm
+distance for the NN algorithm. Although this has not been released
+publicly, I will also be presenting a version of the library using the
+haversine formula for much more accurate geocoding.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="performance-study"&gt;
+&lt;h4&gt;Performance Study&lt;/h4&gt;
+&lt;p&gt;The library supports two modes:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Single-process mode (Mode 1)&lt;/li&gt;
+&lt;li&gt;Multi-process mode (Mode 2): The default mode&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;A performance comparison of the two modes on a quad-core Macbook Pro is
+shown below. &lt;img alt="Performance Comparison" src="https://raw.githubusercontent.com/thampiman/reverse-%20geocoder/master/performance.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Mode 2 runs 2x faster especially for large inputs, i.e. 10M coordinates.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="applications"&gt;
+&lt;h4&gt;Applications&lt;/h4&gt;
+&lt;p&gt;In this part of the talk, I will discuss how the library is being used
+at &lt;a class="reference external" href="http://opensignal.com/"&gt;OpenSignal&lt;/a&gt;, where I work as a data
+scientist. The main purpose for building the library was to be able to
+geocode terabytes of data (approx. 500M coordinates). Speed was
+therefore crucial. I will discuss methods on geocoding at this scale in
+real-time and also offline. I will also talk about how this open-source
+library is being used by the community.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="contributions-by-the-community"&gt;
+&lt;h4&gt;Contributions by the Community&lt;/h4&gt;
+&lt;p&gt;Since its release on Github on 27-Mar-2015, the open-source community
+has also been instrumental in testing, fixing bugs and implementing
+additional features. In this part of the talk, I will given an overview
+of the following two major changes made by other developers:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Python 3 support, and&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/thampiman/reverse-geocoder/tree/master/c++"&gt;C++
+wrapper&lt;/a&gt;
+for the Python library.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ajay Thampi</dc:creator><pubDate>Sun, 21 Jun 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-06-21:pydata-london-2015/a-fast-offline-reverse-geocoder-in-python.html</guid></item></channel></rss>

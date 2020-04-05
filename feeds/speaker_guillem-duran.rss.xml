@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 25 Jul 2018 00:00:00 +0000</lastBuildDate><item><title>Hacking Reinforcement Learning</title><link>https://pyvideo.org/europython-2018/hacking-reinforcement-learning.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/Guillemdb/hacking-rl"&gt;Repository&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://docs.google.com/presentation/d/1aquFoqMz8gYhua2zr-%20PCckL2-6-weQFfbZ4fRVywW2Y/edit?usp=sharing"&gt;Slides with
+notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Creating huge datasets of top performing examples for Reinforcement
+Learning (RL) has always been tricky, but if we allow ourselves to cheat
+a bit it can be done very easily. During this talk, I will present a new
+family of algorithms that allow to efficiently generate very high
+quality samples for any known RL environment.&lt;/p&gt;
+&lt;p&gt;This new generation of planning algorithms achieves a performance which
+is several orders of magnitude higher than any other existing
+alternative, while offering linear time complexity and good scalability.&lt;/p&gt;
+&lt;div class="section" id="the-talk"&gt;
+&lt;h4&gt;The talk&lt;/h4&gt;
+&lt;p&gt;This talk will be a practical example of how we can use new tools for
+hacking any reinforcement learning environment, and make it generate
+superhuman level games.&lt;/p&gt;
+&lt;p&gt;Hacking RL, as any other hacking process will be divided in four phases:&lt;/p&gt;
+&lt;div class="section" id="information-gathering"&gt;
+&lt;h5&gt;1. Information Gathering&lt;/h5&gt;
+&lt;p&gt;During information gathering, I will briefly explain what are the main
+ideas behind Reinforcement Learning. I will also talk about how our
+theory (FractalAI) came to be, and what are the fundamental concepts
+behind it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scanning-and-vulnerability-detection"&gt;
+&lt;h5&gt;2. Scanning and vulnerability detection&lt;/h5&gt;
+&lt;p&gt;We will find an attack vector against the environment API, and explain
+how it can be exploited. I will explain the fundamental concepts needed
+to build a new generation of exploits, that will allow us to have
+complete control over the data the environment produces.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="exploitation-privilege-escalation"&gt;
+&lt;h5&gt;3.Exploitation &amp;amp; privilege escalation&lt;/h5&gt;
+&lt;p&gt;This is the time to test the new exploits and to show a proof of
+concept. We will exploit the attack vector to gain access to the
+environment. Using only a laptop I will show how it is possible to
+sample data which surpasses human performance way faster than real time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="maintaining-access-managing-tracks"&gt;
+&lt;h5&gt;4. Maintaining access &amp;amp; managing tracks&lt;/h5&gt;
+&lt;p&gt;Once we have gained control of the environment, we will measure how well
+the exploits work, and how well the techniques presented can generalize
+to other types of environments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-q-a"&gt;
+&lt;h4&gt;The Q&amp;amp;A&lt;/h4&gt;
+&lt;p&gt;I want the talk to be as simple and fast as possible, with a lot of
+graphical examples, videos, and a Jupyter notebook. The Q&amp;amp;A session is
+the time to apply some social engineering to get me to talk about the
+details that you find more interesting. I have prepared additional
+material covering the most common questions and concerns, but feel free
+to ask whatever you want, I love challenging questions ;)&lt;/p&gt;
+&lt;p&gt;Some of the topics covered in the additional material are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Reinforcement Learning as a supervised problem&lt;/li&gt;
+&lt;li&gt;Improving AlphaZero&lt;/li&gt;
+&lt;li&gt;Hacking OpenAI baselines&lt;/li&gt;
+&lt;li&gt;How the algorithm works&lt;/li&gt;
+&lt;li&gt;An overview of the FractalAI repository&lt;/li&gt;
+&lt;li&gt;Improving world models&lt;/li&gt;
+&lt;li&gt;Combining FractalAI with neural networks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h4&gt;References&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Repository with the code of the Swarm Wave and Fractal Monte Carlo
+algorithms: &lt;a class="reference external" href="https://github.com/FragileTheory/FractalAI"&gt;https://github.com/FragileTheory/FractalAI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://arxiv.org/pdf/1801.03354.pdf"&gt;Planning with Pixels in (Almost) Real
+Time&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.ijcai.org/Proceedings/16/Papers/460.pdf"&gt;Blind Search for Atari-Like Online Planning
+Revisited&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://docs.google.com/spreadsheets/d/1JcNw2L0YL_I2iGZPJ0bNKJshlTaqMuEl5CP2W5zie6M/edit?usp=sharing"&gt;Google spreadsheet with all bencharks on
+Atari&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/Guillemdb/FractalAI/tree/learning"&gt;Code used to run the
+examples&lt;/a&gt;.
+(Not merged to the FractalAI repo yet)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillem Duran</dc:creator><pubDate>Wed, 25 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-25:europython-2018/hacking-reinforcement-learning.html</guid></item><item><title>Per Shaolin ad Astra</title><link>https://pyvideo.org/pycon-es-2016/per-shaolin-ad-astra.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk we will show how it is possible to build an interactive 3D model of the solar system using the python packages shaolin and poliastro.&lt;/p&gt;
+&lt;p&gt;At EuroPython Juan Luis Cano asked for a 3D visualization module for poliastro, and now we are finally presenting the first version of the poliastro 3D models build using plotly and vpython.&lt;/p&gt;
+&lt;p&gt;We will review the data presented at EuroPython 2016 with an interactive model of the solar system for representing planets and its orbits.&lt;/p&gt;
+&lt;p&gt;Materials available at &lt;a class="reference external" href="https://github.com/Guillem-db/PyconEs-2016"&gt;https://github.com/Guillem-db/PyconEs-2016&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://2016.es.pycon.org/"&gt;http://2016.es.pycon.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillem Durán</dc:creator><pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-09:pycon-es-2016/per-shaolin-ad-astra.html</guid></item><item><title>Interactive data Kung Fu with Shaolin</title><link>https://pyvideo.org/europython-2016/interactive-data-kung-fu-with-shaolin.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Guillem Duran - Interactive data Kung Fu with Shaolin
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/interactive-data-kung-fu-with-shaolin"&gt;https://ep2016.europython.eu//conference/talks/interactive-data-kung-fu-with-shaolin&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;“Notebooks come alive when interactive widgets are used”, but
+programming complex applications that rely entirely on widgets may end
+up being a painful and frustrating process. Shaolin is a new python
+project that aims to provide a framework for building interactive
+complex dashboards.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;You can read in The Project Jupyter web page that “Notebooks come
+alive when interactive widgets are used”, but programming complex
+applications that rely entirely on widgets may end up being a painful
+and frustrating process. Shaolin is a new python project that aims to
+provide a framework for building interactive complex dashboards.&lt;/p&gt;
+&lt;p&gt;Shaolin provides all the basic tools for building complex interactive
+data analysis applications using the pydata ecosystem. Arbitrary code
+can be embedded into a Dashboard -a class that works as a “black box”
+that allows to easily define a GUI based on the ipywidgets package- to
+process any data in any form and then let you interactively define how
+to plot it using automatically generated widgets. Hierarchical
+combinations of Dashboards can be arranged then to build more complex
+applications.&lt;/p&gt;
+&lt;p&gt;The talk is divided in two sections. First one introduce the framework
+and its main features:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Custom syntax for defining widgets in a simplified way.&lt;/li&gt;
+&lt;li&gt;Dashboards: Syntax rules and capabilities.&lt;/li&gt;
+&lt;li&gt;Combining Dashboards to build complex applications.&lt;/li&gt;
+&lt;li&gt;Interactive plot creation.&lt;/li&gt;
+&lt;li&gt;Integration with pydata.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Second section will show how this framework can be used to analyse
+real data using Dashboards without writing any code. I will show how
+to transform market data time series into graphs using pandas and
+networkx, then plot it interactively using bokeh and Vpython.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Guillem Duran</dc:creator><pubDate>Fri, 05 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-05:europython-2016/interactive-data-kung-fu-with-shaolin.html</guid></item></channel></rss>

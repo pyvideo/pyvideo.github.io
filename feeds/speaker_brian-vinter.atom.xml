@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_brian-vinter.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-07-18T00:00:00+00:00</updated><entry><title>Bringing High Performance to Python/Numpy Without Changing a Single Line of Code.</title><link href="https://pyvideo.org/scipy-2012/bringing-high-performance-to-pythonnumpy-without.html" rel="alternate"></link><published>2012-07-18T00:00:00+00:00</published><updated>2012-07-18T00:00:00+00:00</updated><author><name>Brian Vinter</name></author><id>tag:pyvideo.org,2012-07-18:scipy-2012/bringing-high-performance-to-pythonnumpy-without.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent years have provided a wealth of projects showing that using
+Python for scientific applications outperforms even popular choices such
+as Matlab. A major factor driving these successes is the efficient
+utilization of multi- cores, GPUs for general-purpose computation and
+scaling computations to clusters.&lt;/p&gt;
+&lt;p&gt;However, often these advances sacrifice some of the high-productivity
+features of Python by introducing new language constructs, enforcing new
+language semantics and/or enforcing explicit data types. The result is
+that the user will have to rewrite existing Python applications to use
+the Python extension.&lt;/p&gt;
+&lt;p&gt;In order to use GPGPUs in Python, a popular approach is to embed
+CUDA/OpenCL code kernels directly in the Python application. The
+programming productivity of this approach is better and more readable
+than C/C++ applications but it is still inferior to native Python code.
+Furthermore, the approach enforces hardware specific programming and
+thus requires intimate knowledge of the underlying hardware and the
+CUDA/OpenCL programming model.&lt;/p&gt;
+&lt;p&gt;Copenhagen Vector Byte Code (cphVB) strives to provide a
+high-performance back-end for Numerical Python (NumPy) without reducing
+the high-productivity of Python/NumPy. Without any involvement of the
+user, cphVB will transform regular sequential Python/NumPy applications
+into high-performance applications. The cphVB runtime system is capable
+of utilizing a broad range of computing platforms efficiently, e.g.
+Multi-core CPUs, GPGPUs and clusters of such machines.&lt;/p&gt;
+&lt;p&gt;cphVB consists of a bridge that translates NumPy array operations into
+cphVB vector operations. The bridge will send these vector operations to
+a Vector Engine that performs the actual execution of the operations.
+cphVB comes with a broad range of Vector Engines optimized to specific
+hardware architectures, such as multi-core CPUs, GPGPU and clusters of
+said architectures. Thus, cphVB provides a high-productivity,
+high-performance framework that support legacy NumPy applications
+without changing a single line of code.&lt;/p&gt;
+</summary><category term="hpc"></category></entry></feed>

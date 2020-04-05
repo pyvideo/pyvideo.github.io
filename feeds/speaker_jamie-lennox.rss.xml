@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 06 Aug 2017 00:00:00 +0000</lastBuildDate><item><title>Unit Testing with Requests</title><link>https://pyvideo.org/pycon-au-2017/unit-testing-with-requests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you're working with APIs or the web in python you will (or should) have
+heard of requests. The 'HTTP for Humans' library is one of python's most
+popular and most downloaded libraries and is referenced by the urllib docs as
+the recommended way to do HTTP requests in python.&lt;/p&gt;
+&lt;p&gt;As strict unit testers of our code we need to assert that our projects are
+making the expected HTTP requests however don't want to be making actual
+network connections. Most people start with simply mocking this requests
+interface but this is much more complex than it appears on first glance and
+frequently ends up replicating large chunks of the interface or skipping mocked
+out functions within your code.&lt;/p&gt;
+&lt;p&gt;In this talk I'll cover two libraries that can help you mock out your HTTP
+requests: requests-mock and betamax.&lt;/p&gt;
+&lt;p&gt;requests-mock is the extended and more correct version of mocking out the
+interface. It lets you ensure that the requests you expect are going over the
+wire, but ensures that all the bytes/strings, json decoding and other helper
+features that requests offers work, without your mocks becoming unmanageable.&lt;/p&gt;
+&lt;p&gt;Betamax gives you functional style testing without the network connection. It
+allows you to record real interactions through requests, store that to file,
+and replay them later in testing.&lt;/p&gt;
+&lt;p&gt;Between them we can assert our behaviour both against our local, constructed
+responses, and real recorded responses our application has made.&lt;/p&gt;
+&lt;p&gt;With a small example app I'll demonstrate how you can use these libraries, the
+different benefits of each, and how to structure your tests to make the most
+use of them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jamie Lennox</dc:creator><pubDate>Sun, 06 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-06:pycon-au-2017/unit-testing-with-requests.html</guid></item><item><title>JSON Standards for the Web</title><link>https://pyvideo.org/pycon-au-2015/json-standards-for-the-web.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;RESTful APIs reign supreme! No longer do developers have to put up with
+SOAP and XML-RPC and those bulky, schema laden exchanges. JSON maps
+almost directly to python and we're flying again!&lt;/p&gt;
+&lt;p&gt;Over time the chaos of free form JSON representations has subsided and a
+number of best practices have appeared such that we now expect certain
+patterns when encountering a new JSON REST API. The next step is to
+standardize these practices and start offering the predictability and
+code reuse we lost years ago.&lt;/p&gt;
+&lt;p&gt;The talk will provide an overview of current attempts at standardizing
+JSON exchanges such as jsonapi, jsonhome and jsonschema.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jamie Lennox</dc:creator><pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-04:pycon-au-2015/json-standards-for-the-web.html</guid></item><item><title>Practical Federated Identity</title><link>https://pyvideo.org/pycon-au-2015/practical-federated-identity.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Federated Identity was once again a highlight of the OpenStack summit in
+Vancouver this time with the announcement of keystone to keystone
+federation that will pave the way for inter-cloud workloads.&lt;/p&gt;
+&lt;p&gt;In the past I have done presentations on what Federated Identity is,
+however in this talk we delve into the more practical requirements of
+connecting to an IdP, discuss the changes in workflow required to
+authenticate your applications, how to configure web single sign on with
+horizon, what is possible today and the pain points you may encounter
+using federation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jamie Lennox</dc:creator><pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-04:pycon-au-2015/practical-federated-identity.html</guid></item></channel></rss>

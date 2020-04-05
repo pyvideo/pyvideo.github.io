@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 04 May 2019 13:40:00 +0000</lastBuildDate><item><title>Time to take out the rubbish: garbage collector</title><link>https://pyvideo.org/pycon-us-2019/time-to-take-out-the-rubbish-garbage-collector.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;One of the reasons why programming in Python is very straightforward and
+simple is that we do not have to worry about the lifetime of our
+objects. That is, once it ceases to be necessary, a variable disappears
+from the memory &amp;quot;magically&amp;quot;. The fact that this happens automatically
+can erroneously lead us to believe that it is not required to worry
+about what happens behind the scenes.&lt;/p&gt;
+&lt;p&gt;Nothing is further from reality: knowing how Python manages memory is
+fundamental in specific scenarios, and not knowing what is happening can
+have consequences as significant as unpleasant. For example, if our
+programs manage a large amount of data at the same time or launch
+multiple processes in parallel, this ceases to be a theoretical issue
+and becomes something that we, logical minds, also care.&lt;/p&gt;
+&lt;p&gt;Although these concepts tend to be considered advanced and difficult to
+understand, we will see that this is not the case. This topic is not a
+purely theoretical matter nor is it difficult to find its practical
+applications. In this talk, we will explain why it is something that
+should matter to us, and we will talk about how to apply the knowledge
+we have gained to specific problems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Sat, 04 May 2019 13:40:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-04:pycon-us-2019/time-to-take-out-the-rubbish-garbage-collector.html</guid><category>talk</category></item><item><title>¡Oh vosotros los que entráis, abandonad toda esperanza!</title><link>https://pyvideo.org/pycon-es-2018/oh-vosotros-los-que-entrais-abandonad-toda-esperanza.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Como programadores de Python, estamos acostumbrados a usar nuestro
+lenguaje favorito continuamente pero alguna vez que otra pasa por
+nuestra cabeza la duda de cómo funciona todo esto. ¿Cómo está
+implementado un lenguaje de programación? ¿Cómo sabe Python si lo que
+escribo es correcto o no? ¿Cómo se transforma y ejecuta el código que
+escribimos?&lt;/p&gt;
+&lt;p&gt;El objetivo de esta charla es aprender todo lo posible acerca de
+sintaxis, gramática, &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree"&gt;árboles sintácticos abstractos&lt;/a&gt;, como un lenguaje
+como Python funciona y cómo &lt;a class="reference external" href="https://en.wikipedia.org/wiki/CPython"&gt;CPython&lt;/a&gt; (la implementación por defecto
+del intérprete) en particular está implementado. Para que la sesión no
+sea simplemente una serie de diatribas teóricas, utilizaremos la excusa
+de modificar, retorcer y extender la gramática de Python como hilo
+conductor para entender cómo todas las piezas encajan y para aprender
+cómo funcionan todas las técnicas avanzadas de análisis y modificación
+de código. Para ello empezaremos hablando de cómo modificar código de
+Python modificando su árbol sintáctico abstracto y veremos algunos
+ejemplos de librerías (pytest, 2to3…) que utilizan esta técnica. Después
+veremos como extender la gramática de Python “informalmente” utilizando
+un &lt;a class="reference external" href="https://docs.python.org/3/library/codecs.html"&gt;códec&lt;/a&gt; personalizado y qué aplicaciones podría tener esto.
+Finalmente hablaremos de cómo modificar realmente la gramática de Python
+creando nuestro propio intérprete modificado en caso de que algún día
+queramos implementar nuestro propio lenguage o modificar el propio
+Python.&lt;/p&gt;
+&lt;p&gt;Tras terminar la charla (¡para aquellos que sobrevivan a los nueve
+circulos!) ganaremos conocimiento de como funciona Python y, por
+extensión, otros lenguajes de programación además de tener un montón de
+malas ideas inmantenibles en mente para la próxima vez que queramos
+asustar a nuestros compañeros programadores.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:pycon-es-2018/oh-vosotros-los-que-entrais-abandonad-toda-esperanza.html</guid></item><item><title>Metaclases: exactamente qué y (sobre todo) por qué</title><link>https://pyvideo.org/pycon-es-2017/metaclases-exactamente-que-y-sobre-todo-por-que.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;El objetivo de estar charla es abordar un problema que parece ser desafortunadamente común entre el material disponible sobre las metaclases: por más que nos lo expliquen nos sigue sin quedar claro qué son las metaclases… o lo olvidamos a los diez minutos. Los ejemplos que se usan para ilustrar esa cosa tan arcana son casi inevitablemente crípticos, solucionando de forma compleja problemas demasiado rebuscados y que no nos hemos encontrado jamás en nuestro día a día. ¿Tienen realmente alguna utilidad práctica, o son sólo una excusa usada por ponentes para parecer r/iamverysmart? ¿Por qué deberían importarme a mí, con mi nivel medio de Python?&lt;/p&gt;
+&lt;p&gt;Lo que vamos a hacer en esta charla es empezar describiendo un problema: queremos implementar el mismo comportamiento (por ejemplo, logging) en todos los métodos de mi clase. Para ello tenemos varias opciones, en creciente orden de complejidad: (a) copiar y pegar la misma línea de código en todos los métodos, (b) usar un decorador en cada método y (c) usar un decorador de clase. Pero ninguna solución es ideal, y la falta de elegancia provoca lamentos y lágrimas. Es ante un problema así cuando las metaclases tienen una función, y agradeceremos que se encuentren en nuestro repertorio de habilidades de Python.&lt;/p&gt;
+&lt;p&gt;Entendiendo por qué nos hacen falta, procedereremos a explicar cómo crear una: primero repasando brevemente la función de __new__() e __init__() para clases normales, y a continuación mostrando cómo hacer lo mismo con las metaclases. Ilustraremos esto con varios ejemplos, usando metaclases para añadir funcionalidad de auto-logging o compilación just-in-time, como hace Numba, a nuestro código. Por último, y a modo de curiosidad, continuaremos hacia mayores niveles de abstracción, aprendiendo qué son los hooks de metaclases y para qué son útiles los ficheros .pth.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Sat, 23 Sep 2017 17:00:00 +0200</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-09-23:pycon-es-2017/metaclases-exactamente-que-y-sobre-todo-por-que.html</guid><category>metaclass</category></item><item><title>Parallel and non parallel stuff</title><link>https://pyvideo.org/pycon-es-2017/parallel-and-non-parallel-stuff.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;¡Oh no: otro tutorial de programación paralela y asíncrona en Python! ¿Cúando dejarán de insistir en el mismo asunto una y otra vez? Si alguna vez te has preguntado esto, este NO es tu taller. En cambio, si quieres volver a oir lo mismo de siempre acerca de hilos, procesos, el GIL, asyncio y demás amigos...¡Este es el taller de tus sueños! En este tutorial haremos un viaje através de todos estos conceptos desde la base, entendiendo en detalle los conceptos, los problemas y las soluciones.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Fri, 22 Sep 2017 15:00:00 +0200</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-09-22:pycon-es-2017/parallel-and-non-parallel-stuff.html</guid><category>workshop</category></item><item><title>Agujeros negros y optimización de código en python</title><link>https://pyvideo.org/pycon-es-2015/agujeros-negros-y-optimizacion-de-codigo-en-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;En esta charla atenderemos a la construcción de un raytracer relativista en Python. Nuestro objetivo será conseguir imágenes similares a las observadas en la película Interestellar, mediante la creación de imágenes sintéticas en un entorno de gravedad extrema, como es un agujero negro. Utilizando esto como excusa, analizaremos distintos enfoques para optimizar nuestro código al máximo y conseguir programas eficientes y profesionales a la altura de cualquier otro lenguaje de programación.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Tue, 02 Feb 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-02-02:pycon-es-2015/agujeros-negros-y-optimizacion-de-codigo-en-python.html</guid><category>Track Científico</category></item></channel></rss>

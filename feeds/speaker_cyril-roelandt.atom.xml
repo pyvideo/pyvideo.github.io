@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_cyril-roelandt.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-06T00:00:00+00:00</updated><entry><title>Empaquetez facilement vos projets pour GNU/Linux et *BSD !</title><link href="https://pyvideo.org/pycon-fr-2018/empaquetez-facilement-vos-projets-pour-gnulinux-et-bsd.html" rel="alternate"></link><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><author><name>Cyril Roelandt</name></author><id>tag:pyvideo.org,2018-10-06:pycon-fr-2018/empaquetez-facilement-vos-projets-pour-gnulinux-et-bsd.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;De nos jours, la plupart des langages fournissent leur propre
+gestionnaire de paquets (pip, gem, etc.) ainsi que leur propre archive
+de paquets (PyPI, RubyGems, etc.). Il existe également de nombreuses
+distributions GNU/Linux (Debian, Fedora, etc.) et *BSD (FreeBSD,
+OpenBSD, etc.).&lt;/p&gt;
+&lt;p&gt;Les empaqueteurs doivent convertir les paquets &amp;quot;upstream&amp;quot; (disponibles
+dans les archives de paquets des langages) en paquets &amp;quot;downstream&amp;quot; (les
+paquets de nos distributions). Divers outils ont été écrits pour les
+aider dans ce travail quelque peu fastidieux : on trouve ainsi pypi2rpm,
+gem2rpm, pypi2deb, url2pkg, portgen, pytoport et bien d'autres. Tous ces
+outils ont une interface et un comportement différents. Ils
+réimplémentent tous du code similaire : lire des métadonnées depuis les
+archives de paquets, et écrire des paquets Debian/RPM/etc.&lt;/p&gt;
+&lt;p&gt;Durant cette présentation, je présenterai upt (Universal Packaging Tool,
+disponible à &lt;a class="reference external" href="https://framagit.org/upt/upt"&gt;https://framagit.org/upt/upt&lt;/a&gt;), un outil modulaire combinant
+des &amp;quot;lecteurs&amp;quot; (qui lisent les métadonnées) et des &amp;quot;écrivains&amp;quot; (qui
+écrivent les paquets Debian/RPM/etc.) grâce à une représentation
+intermédiaire unifiée des paquets. Je le comparerai à des projets
+similaires et montrerai comment ajouter facilement le support pour votre
+langage ou votre distribution préféré.&lt;/p&gt;
+</summary></entry><entry><title>Guix-tox, une version fonctionnelle de tox.</title><link href="https://pyvideo.org/pycon-fr-2015/guix-tox-une-version-fonctionnelle-de-tox.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Cyril Roelandt</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/guix-tox-une-version-fonctionnelle-de-tox.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tox est un outil, très utilisé dans les projets Python, qui permet de
+lancer des tests au sein d'environnements virtuels créés par virtualenv.
+Cette approche souffre de plusieurs défauts qui affectent la
+reproductibilité des tests. Nous verrons comment il est possible de
+remplacer virtualenv par Guix et donnerons quelques exemples issus du
+quotidien d'un développeur OpenStack.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tox permet de lancer les tests d'un paquet Python dans des
+environnements virtuels. L'utilisation de ces derniers pose plusieurs
+problèmes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;seuls les paquets disponibles sur PyPI sont gérés. Ainsi, il est
+parfois nécessaire d'utiliser le gestionnaire de paquets de sa
+distribution pour installer des fichiers d'en-tête (on pense
+notamment à lib*-dev sous Debian);&lt;/li&gt;
+&lt;li&gt;lorsque plusieurs environnements ont besoin de la même dépendance,
+cette dernière est installée plusieurs fois, et est dupliquée sur le
+disque, ce qui provoque une perte d'espace disque;&lt;/li&gt;
+&lt;li&gt;mauvais niveau d'abstraction : la tendance actuelle consiste à
+utiliser des gestionnaires de paquets spécifiques à des langages
+(pip, npm, cpan...) plutôt qu'un gestionnaire de paquets robuste;&lt;/li&gt;
+&lt;li&gt;manque de reproductibilité des tests : les environnements de tests
+sont loin d'être parfaitement isolés (les variables d'environnement,
+les fichiers présents dans /usr, le choix des locales... peuvent
+influencer le déroulement des tests).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;GNU Guix est un gestionnaire de paquets fonctionnel (comme dans
+&amp;quot;programmation fonctionnelle&amp;quot;) basé sur Nix. Il permet de construire des
+paquets dans un environnement complètement isolé utilisant les
+conteneurs fournis par le noyau Linux qui garantit la reproductibilité
+de l'opération. Nous ferons une présentation de cet outil et nous
+attarderons notamment sur la fonctionnalité que nous serons amenés à
+utiliser pour guix-tox : &amp;quot;guix environment&amp;quot;, qui permet de créer un
+environnement isolé contenant uniquement certains paquets.&lt;/p&gt;
+&lt;p&gt;Enfin, nous verrons comment il est possible de remplacer virtualenv par
+Guix dans tox, afin de profiter des avantages de ce gestionnaire de
+paquets de façon quasi-transparente. Nous montrerons comment il est
+possible de l'utiliser afin de travailler sur des projets OpenStack tels
+que python- keystoneclient ou encore la bibliothèque Oslo.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 24 Jul 2014 00:00:00 +0000</lastBuildDate><item><title>Elasticsearch from the bottom up</title><link>https://pyvideo.org/europython-2014/elasticsearch-from-the-bottom-up.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk will teach you about Elasticsearch and Lucene's architecture.&lt;/p&gt;
+&lt;p&gt;The key data structure in search is the powerful inverted index, which
+is actually simple to understand. We start there, then ascend through
+abstraction layers to get an overview of how a distributed search
+cluster processes searches and changes.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="who-i-am-and-motivation"&gt;
+&lt;h4&gt;Who I am and motivation&lt;/h4&gt;
+&lt;p&gt;I work with hosted Elasticsearch and have interacted with lots of
+developers. We see what many struggle with.&lt;/p&gt;
+&lt;p&gt;Some relevant theory helps a lot. What follows has already lead to many
+&amp;quot;Aha!&amp;quot;-moments and developers piecing things together herself.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-inverted-index"&gt;
+&lt;h4&gt;The inverted index&lt;/h4&gt;
+&lt;p&gt;The most important index structure is actually very simple. It is
+essentially a sorted dictionary of terms, with a list of postings per
+term.&lt;/p&gt;
+&lt;p&gt;We show three simple sample documents and the resulting inverted index.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-index-term"&gt;
+&lt;h4&gt;The index term&lt;/h4&gt;
+&lt;p&gt;The index term is the &amp;quot;unit of search&amp;quot;, and the terms we make decide how
+we can search.&lt;/p&gt;
+&lt;p&gt;With the inverted index and its sorted dictionary, we can quickly search
+for terms given their prefix.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="importance-of-text-analysis"&gt;
+&lt;h4&gt;Importance of text analysis&lt;/h4&gt;
+&lt;p&gt;Thus, we need to transform our search problems into string prefix
+problems.&lt;/p&gt;
+&lt;p&gt;This is done with text analysis, which is the process of making of index
+terms. It is highly important when implementing search.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="building-indexes"&gt;
+&lt;h4&gt;Building indexes&lt;/h4&gt;
+&lt;p&gt;The way indexes are built must balance how compact an index is, how
+easily we can search in it, how fast we can index documents - and the
+time it takes for changes to be visible.&lt;/p&gt;
+&lt;p&gt;Lucene, and thus Elasticsearch, builds them in segments.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="index-segments"&gt;
+&lt;h4&gt;Index segments&lt;/h4&gt;
+&lt;p&gt;A Lucene index consists of index segments, i.e. immutable mini-indexes.&lt;/p&gt;
+&lt;p&gt;A search on an index is done by doing the search on all segments and
+merging the results.&lt;/p&gt;
+&lt;p&gt;Segments are immutable:&lt;/p&gt;
+&lt;p&gt;This enables important compression techniques. Deletes are not
+immediate, just a marker. Segments are occasionally merged to larger
+segments. Then documents are finally deleted. New segments are made by
+buffering changes in memory, and written when flushing happens. Flushes
+are largely caused by refreshing every second, due to real time needs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="caches"&gt;
+&lt;h4&gt;Caches&lt;/h4&gt;
+&lt;p&gt;Caches like filter- and field caches are managed per segment. They are
+essential for performance.&lt;/p&gt;
+&lt;p&gt;Immutable segments make for simple reasoning about caches. New segments
+only cause partial cache invalidations.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="elasticsearch-indexes"&gt;
+&lt;h4&gt;Elasticsearch indexes&lt;/h4&gt;
+&lt;p&gt;Much like a Lucene index is made up of many segments, an Elasticsearch
+index is made up of many Lucene indexes.&lt;/p&gt;
+&lt;p&gt;Two Elasticsearch indexes with 1 shard is essentially the same as one
+Elasticsearch index with 2 shards.&lt;/p&gt;
+&lt;p&gt;Search all shards and merge. Much like segments, but this time possibly
+across machines.&lt;/p&gt;
+&lt;p&gt;Shard / Index routing enables various partitioning strategies. Simpler
+than it sounds, so one important example:&lt;/p&gt;
+&lt;p&gt;Essential for time based data, like logs: can efficiently skip searching
+entire indexes - and roll out old data by deleting the entire index.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="common-pitfalls"&gt;
+&lt;h4&gt;Common pitfalls&lt;/h4&gt;
+&lt;p&gt;We must design our indexing for how we search - not the searches for how
+things are indexed. Be careful with wildcards and regexes.&lt;/p&gt;
+&lt;p&gt;Since segments are immutable, deleting documents is expensive while
+deleting an entire index is cheap.&lt;/p&gt;
+&lt;p&gt;Updating documents is essentially a delete and re-index. Heavy updating
+might cause problems.&lt;/p&gt;
+&lt;p&gt;Have enough memory and then some. Elasticsearch is very reliant on its
+caches.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h4&gt;Summary&lt;/h4&gt;
+&lt;p&gt;We've seen how index structures are used, and why proper text processing
+is essential for performant searches.&lt;/p&gt;
+&lt;p&gt;Also, you now know what index segments are, and how they affect both
+indexing and searching strategies.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="questions"&gt;
+&lt;h4&gt;Questions&lt;/h4&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Brasetvik</dc:creator><pubDate>Thu, 24 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-24:europython-2014/elasticsearch-from-the-bottom-up.html</guid></item></channel></rss>

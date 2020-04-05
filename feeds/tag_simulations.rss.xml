@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 21 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>Visualization and Analysis of Large Scale Datasets with Python</title><link>https://pyvideo.org/europython-2011/visualization-and-analysis-of-large-scale-dataset.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Christine Moran - 23 June 2011 in &amp;quot;Training Pizza
+Margherita &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will introduce ParaView, an open source application
+developed by researchers around the world for parallel visualization and
+analysis of large scale datasets, which in can be used to visualize and
+analyze terabytes of data in real time. ParaView’s core algorithms are
+implemented in C/C++ but all its major functionality can be scripted
+from python with ease. I’ll give a short introduction to AstroViz, a
+parallel visualization tool for astrophysical simulations implemented as
+an opensource plugin to ParaView, which I have been lead developer on
+since 2009. The focus of the talk will be on driving ParaView from
+within python however, both general out of the box use and customized
+extensions.&lt;/p&gt;
+&lt;p&gt;I also have access to several parallel supercomputers so if there’s a
+huge dataset we as a crowd would like to tackle visualizing during the
+course of the week that would be fun project. The end of the talk will
+be a short brainstorm of cool applications of analysis and visualization
+of large scale datasets.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.paraview.org/"&gt;http://www.paraview.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christine Moran</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/visualization-and-analysis-of-large-scale-dataset.html</guid><category>analysis</category><category>datasets</category><category>opensource</category><category>parallel</category><category>simulations</category><category>visualization</category></item><item><title>SOLVCON: A New Python-Based Software Framework for Massively Parallelized Numerical Simulations</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--solvcon--a-new-python-based-software-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SOLVCON: A New Python-Based Software Framework for Massively
+Parallelized Numerical Simulations&lt;/p&gt;
+&lt;p&gt;Presented by Yung-Yu Chen&lt;/p&gt;
+&lt;p&gt;SOLVCON is the first Python-based software framework for high-resolution
+simulations of multi-physics conservation laws. More than ninety
+percents of the codes are done in Python. Performance hot-spots are
+optimized by C and glued by ctypes library. SOLVCON is high-performance
+in nature and has been able to utilize 512 4-core nodes at Ohio
+Supercomputer Center.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;In this decade, performance improvements of scientific computing will
+mainly come from major changes in the computing hardware. A
+well-organized software structure is imperative to accommodate such
+changes. Based on Python, SOLVCON (&lt;a class="reference external" href="http://solvcon.net/"&gt;http://solvcon.net/&lt;/a&gt;) is designed as a
+software framework to develop conservation-law solvers by segregating
+solving kernels from various supportive functionalities. Being the
+governing equations for the physical world, conservation laws are
+applied everywhere in science and engineering. Although it is well known
+that the numerical algorithms and physical models form the kernel of any
+conservation-law solver, few if not none code can cleanly separate those
+core components from supportive functionalities. The lack of
+organization has hindered the development of legacy codes. To address
+the issues, the supportive functionalities are internalized in the
+framework of SOLVCON. Aided by the framework, both multi- physics and
+hybrid parallelism can be implemented in an organized way. To date,
+SOLVCON has utilized up to 512 4-core nodes at Ohio Supercomputer Center
+for high-resolution simulations of computational fluid dynamics (CFD).
+SOLVCON targets to concurrently utilize thousands of computer nodes for
+high- resolution simulations using over one billion mesh points.&lt;/p&gt;
+&lt;p&gt;One of the major purposes of SOLVCON is to resolve the complicated
+programming efforts for GPU clusters. Supercomputing is undergoing the
+third revolution by the emerging GPU computing. To date, the fastest
+supercomputer in the Top 500 list, Tianhe-1A, is a GPU cluster. GPU
+computing promises numerical analysts to reduce the time for the
+high-resolution simulations from months to days. In order to use GPU
+computing to accelerate such large-scale problems, GPU nodes must be
+networked together to form a GPU cluster. As such, shared-memory and
+distributed-memory parallelization must be simultaneously utilized to
+achieve the so-called hybrid parallelism. Parallel computing is
+difficult, and hybrid parallel computing is more difficult. By using
+Python to develop the fundamental software structure, GPU or
+multi-threaded programming for shared- memory parallelization are locked
+in solving kernels. Complex message-passing is implemented in SOLVCON
+and isolated from solving-kernel developers. Highly optimized C and GPU
+codes are glued into SOLVCON without loss of performance by using the
+ctypes package. Othere important features of SOLVCON include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pluggable multi-physics.&lt;/li&gt;
+&lt;li&gt;Built-in &lt;a class="reference external" href="http://www.grc.nasa.gov/WWW/microbus/"&gt;CESE&lt;/a&gt; solvers.&lt;/li&gt;
+&lt;li&gt;Unstructured mesh consisting of mixed elements.&lt;/li&gt;
+&lt;li&gt;Interface to Message-Passing Interface (MPI) libraries.&lt;/li&gt;
+&lt;li&gt;Socket communication layer: working without MPI installed.&lt;/li&gt;
+&lt;li&gt;Automatic distributed-memory parallelization by domain decomposition.&lt;/li&gt;
+&lt;li&gt;Parallel I/O.&lt;/li&gt;
+&lt;li&gt;In situ visualization by &lt;a class="reference external" href="http://vtk.org"&gt;VTK&lt;/a&gt; library.&lt;/li&gt;
+&lt;li&gt;Standalone writers to VTK legacy and XML file formats.&lt;/li&gt;
+&lt;li&gt;Integration to supercomputer (cluster) batch systems.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SOLVCON has been applied to computation fluid dynamics and computational
+mechanics. More physical solvers are being developed for various
+propagating wave problems, e.g., electromagnetic waves. By using Python
+as the foundation in SOLVCON, performance and extensibility are well
+balanced, and computational research is being done in the most
+productive way. In this talk, the author of SOLVCON will make an
+introduction to the software framework by including the following
+topics:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Simulations of conservation laws and hybrid parallelism for
+supercomputing.&lt;/li&gt;
+&lt;li&gt;Issues in legacy codes and challenges to code for emerging
+supercomputer hardware.&lt;/li&gt;
+&lt;li&gt;Using SOLVCON in the simple way by pre-defined modules.&lt;/li&gt;
+&lt;li&gt;Fixed parts in SOLVCON.&lt;ol class="arabic"&gt;
+&lt;li&gt;Distributed computing.&lt;/li&gt;
+&lt;li&gt;Multi-thread utilities.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Customizable parts in SOLVCON.&lt;ol class="arabic"&gt;
+&lt;li&gt;Pluggable multi-physics and GPGPU computing.&lt;/li&gt;
+&lt;li&gt;Supercomputer batch system and bootstrapping.&lt;/li&gt;
+&lt;li&gt;In situ visualization.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Conclusion.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The talk will take 30 minutes.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yung-Yu Chen</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--solvcon--a-new-python-based-software-.html</guid><category>gpgpu</category><category>numericalsimulations</category><category>parallelcomputing</category><category>pycon</category><category>pycon2011</category><category>simulations</category><category>solvcon</category></item></channel></rss>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_boris-feld.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-10-06T00:00:00+00:00</updated><entry><title>La gestion de version en 2018: présent et future</title><link href="https://pyvideo.org/pycon-fr-2018/la-gestion-de-version-en-2018-present-et-future.html" rel="alternate"></link><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><author><name>Pierre-Yves David</name></author><id>tag:pyvideo.org,2018-10-06:pycon-fr-2018/la-gestion-de-version-en-2018-present-et-future.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La gestion de version a profondément changé ces 10 dernières années,
+avec l’arrivée des gestionnaires de versions décentralisés et des
+plateformes comme Github. Pourtant, malgré son succès retentissant, git
+n’est pas non plus la solution ultime couvrant tous les besoins. De
+nombreuses personnes et entreprises font le choix de solutions plus
+anciennes (comme SVN), propriétaires (comme Perforce™) ou de la même
+génération (comme Mercurial).&lt;/p&gt;
+&lt;p&gt;Dans cette présentation, nous étudierons les besoins classiques qui ont
+façonnés et préservés les solutions actuelles, puis nous explorerons les
+nouvelles habitudes de développement auquelles les gestionnaires de
+versions doivent s’adapter. Cette présentation sera jalonnée d’exemples
+concrets qui vous permettront entre autre de comprendre en quoi les
+alternatives à Git sont utiles pour l’innovation et pourquoi, chez
+Octobus, nous avons choisi de travailler sur Mercurial plutôt que Git.&lt;/p&gt;
+</summary></entry><entry><title>La révolution dans le monde des tests</title><link href="https://pyvideo.org/pycon-fr-2018/la-revolution-dans-le-monde-des-tests.html" rel="alternate"></link><published>2018-10-06T00:00:00+00:00</published><updated>2018-10-06T00:00:00+00:00</updated><author><name>Boris Feld</name></author><id>tag:pyvideo.org,2018-10-06:pycon-fr-2018/la-revolution-dans-le-monde-des-tests.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Depuis plusieurs années, les outils de qualité ont évolués, les outils
+de CI sont de plus en plus scalables, les librairies d'écriture de tests
+sont plus nombreuses et ont bien mûries et de nouveaux outils sont
+apparus pour améliorer encore plus la qualité du code que l'on produit.&lt;/p&gt;
+&lt;p&gt;Néanmoins, la plupart des outils de CI se contentent de lancer un script
+et de vérifier le code de retour, la plupart des librairies de tests
+nous imposent de choisir entre lancer l'ensemble de nos suites de tests
+ou s'arrêter pour voir le détail du test en échec et enfin la plupart
+des innovations des outils de CI, l'exécution en parallèle et
+l'exécution à distance, n'ont pas encore trouvé le chemin jusqu'au
+développeurs.&lt;/p&gt;
+&lt;p&gt;Comment améliorer la situation ? Je vous présenterai l'un de mes
+projets, LITF (&lt;a class="reference external" href="https://github.com/Lothiraldan/litf"&gt;https://github.com/Lothiraldan/litf&lt;/a&gt;) un nouveau format
+d'entrée et de sortie pour les librairies de test et BALTO
+(&lt;a class="reference external" href="https://github.com/lothiraldan/balto"&gt;https://github.com/lothiraldan/balto&lt;/a&gt;), un orchestrateur de tests
+utilisant ce nouveau format. BALTO est écrit en Python 3.6 / Asyncio et
+supporte bien entendu Pytest comme première librairie compatible.&lt;/p&gt;
+&lt;p&gt;Grâce à ce nouveau format, BALTO peut exécuter plusieurs suites de tests
+dans des langages différents, à distance sur un clusteur Kubernetes et
+le tout en parallèle. En tout cas, c'est le but pour la version stable.&lt;/p&gt;
+</summary></entry><entry><title>Unicode and bytes démystifiés</title><link href="https://pyvideo.org/pycon-fr-2017/unicode-and-bytes-demystifies.html" rel="alternate"></link><published>2017-09-24T00:00:00+00:00</published><updated>2017-09-24T00:00:00+00:00</updated><author><name>Boris Feld</name></author><id>tag:pyvideo.org,2017-09-24:pycon-fr-2017/unicode-and-bytes-demystifies.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Travailler avec l'unicode et les bytes étaient au mieux hasardeux au pire douloureux en Python 2, heureusement Python 3 arriva et mis de l'ordre dans ce bazar. Hélas, les vieilles habitudes ont la vie dure et migrer de Python 2 à Python 3 est souvent difficile quand on as pas saisit les subtilités derrière les concepts d'unicode et de bytes. Clarifions donc ceux-ci pour une migration heureuse vers Python 3 en 2017 !&lt;/p&gt;
+</summary></entry><entry><title>Tester les performances, pourquoi et comment ?</title><link href="https://pyvideo.org/pycon-fr-2017/tester-les-performances-pourquoi-et-comment.html" rel="alternate"></link><published>2017-09-23T00:00:00+00:00</published><updated>2017-09-23T00:00:00+00:00</updated><author><name>Boris Feld</name></author><id>tag:pyvideo.org,2017-09-23:pycon-fr-2017/tester-les-performances-pourquoi-et-comment.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La qualité est un avantage reconnu du logiciel libre. Les tests d'acceptance et de régression sont bien maîtrisés et utilisés par les projets libres.&lt;/p&gt;
+&lt;p&gt;Mais un type de test manque encore et toujours aux projets libres : les tests de performance. Qui est content de mettre à jour son outil libre préféré pour se rendre compte qu'il lui faut maintenant deux fois plus de temps pour exécuter une commande fondamentale à son workflow ? Les performances font partie intégrante de l'expérience du développeur, les régressions y sont sournoises et douloureuses…&lt;/p&gt;
+&lt;p&gt;L'une des raisons de cette lacune est la difficulté de mise en place de ce type de test. Nous l'avons expérimenté récemment dans la communauté Mercurial et nous vous proposons un retour d'expérience.&lt;/p&gt;
+&lt;p&gt;Quels sont les bénéfices de la mise en place de tels tests ? Comment s'assurer que leurs résultats sont vraiment utilisables ? Quels sont les pièges à éviter ? Quelles approches pour quels besoins ? Quels outils utiliser pour collecter, analyser et visualiser les résultats ? Nous répondrons de notre mieux à toutes ces questions.&lt;/p&gt;
+</summary></entry><entry><title>Mock considered harmful</title><link href="https://pyvideo.org/pycon-fr-2015/mock-considered-harmful.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/mock-considered-harmful.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Très connu pour ses excellents travaux et ses dons, le marabout Boris
+peut soigner vos tests de leurs mocks, garantir le retour du statut vert
+aimé, réduire la durée de vos tests et améliorer vos relations avec
+votre sysadmin. Succès garanti. Paiement en bitcoin.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les mocks, si puissants, mais un grand pouvoir implique un grand chaos
+le plus souvent.&lt;/p&gt;
+&lt;p&gt;Les mocks font souvent plus de mal que de bien et ralentissent le
+développement en couplant les tests et l'implémentation. Les mocks, bien
+utilisée avec d'autres bonne pratique tel que l'inversion de dépendance
+peuvent au contraire rendre votre code plus facilement testable et ainsi
+plus robuste.&lt;/p&gt;
+&lt;p&gt;Les mocks gardent une grande importance dans les tests applicatifs et
+avec les bonnes pratiques, vous pouvez en tirer le maximum.&lt;/p&gt;
+</summary></entry><entry><title>from Sync to to Async Python, a AsyncIO migration</title><link href="https://pyvideo.org/pycon-fr-2015/from-sync-to-to-async-python-a-asyncio-migration.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/from-sync-to-to-async-python-a-asyncio-migration.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Migration d'une librairie de communication réseau depuis Tornado
+(python2.7) vers Asyncio (python3.4)&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Présentation de la migration de ZeroServices
+(&lt;a class="reference external" href="https://github.com/Lothiraldan/ZeroServices"&gt;https://github.com/Lothiraldan/ZeroServices&lt;/a&gt;) depuis Tornado en python2
+vers Tornado en python3.4 en passant par une version synchrone en
+python3.&lt;/p&gt;
+&lt;p&gt;Présentation des raisons de chacun de ces changements, les challenges
+qu'ils ont représenté, les compromis faits et les points positifs de ces
+changements et les évolutions dans le design.&lt;/p&gt;
+&lt;p&gt;Un gros focus sera mis sur l'intérêt d'asyncio dans une application
+réseau, l'intérêt de l'unicode partout en python3 et sur comment tester
+une application asynchrone en asyncio.&lt;/p&gt;
+</summary></entry><entry><title>Micro-services késako</title><link href="https://pyvideo.org/pycon-fr-2015/micro-services-kesako.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/micro-services-kesako.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les micro-services sont la nouvelle mode ces derniers temps, qu'est-ce
+qui se cache derrière ce &amp;quot;nouveau&amp;quot; terme et comment en faire en Python ?&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les micro-services sont la nouvelle mode de ces derniers temps, mais
+qu'est-ce que terme représente donc bien ? Encore un truc à la mode du
+style full-stack developer ou DevOps ? C'est un peu lié effectivement.&lt;/p&gt;
+&lt;p&gt;Comment peut se définir une architecture micro-service, quels sont ses
+avantages, ses inconvénients. Quels sont les challenges à adresser avant
+de pouvoir passer à une architecture micro-services, quand ne faut-il ne
+pas y passer ? Quel sont les différences avec les architectures SOA
+&amp;quot;classiques&amp;quot; ?&lt;/p&gt;
+&lt;p&gt;Je donnerais un début de réponse à vos interrogations et vous
+présenterais des solutions pour développer des micro-services en Python
+grâce à principalement ZeroServices.&lt;/p&gt;
+&lt;p&gt;Ce talk se concentrera surtout sur la partie théorique puisque les
+micro- services sont une architecture agnostique sur le language de
+programmation.&lt;/p&gt;
+</summary></entry><entry><title>Monkey-Patcher Python en production</title><link href="https://pyvideo.org/pycon-fr-2016/monkey-patcher-python-en-production.html" rel="alternate"></link><published>2016-10-16T00:00:00+00:00</published><updated>2016-10-16T00:00:00+00:00</updated><author><name>Boris FELD</name></author><id>tag:pyvideo.org,2016-10-16:pycon-fr-2016/monkey-patcher-python-en-production.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Monkey-Patching est difficile, le faire en production l’est encore plus ! Il faut trouver comment entrer dans Python et faire attention aux pièges tendus en ces eaux souvent peu explorées. Nous vous présenterons les solutions que nous avons trouvées et ce qu’il faut éviter de faire quand on monkey-patch du code en production.&lt;/p&gt;
+</summary></entry><entry><title>ZeroServices</title><link href="https://pyvideo.org/pycon-fr-2013/zeroservices.html" rel="alternate"></link><published>2013-11-30T00:00:00+00:00</published><updated>2013-11-30T00:00:00+00:00</updated><author><name>Boris Feld</name></author><id>tag:pyvideo.org,2013-11-30:pycon-fr-2013/zeroservices.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Qui n'a jamais eut besoin d'écrire des services réseau qui se découvrent
+automatiquement, qui détectent la perte d'un des service, qui permet la
+diffusion en unicast, en multicast ou broadcast ? ZeroServices vous
+simplifie la vie. ZeroServices est construit autour de ZeroMQ et de
+Tornado et vous permet d'écrire des services réseau sans efforts.&lt;/p&gt;
+&lt;p&gt;Présentation de ZeroServices, une libraire python écrite grâce au couple
+Tornado/ZeroMQ qui facilite l'écriture de services réseaux
+décentralisés. Grâce à la découverte automatique des pairs, à l'émission
+de message en unicast et/ou multicast et à la détection des services
+morts, ZeroServices permet d'écrire des services réseaux facilement et
+rapidement.&lt;/p&gt;
+&lt;p&gt;Cette conférence présentera ZeroServices, détaillera le fonctionnement
+et enfin présentera les capacités de la librairie avec une démo de
+service de chat.&lt;/p&gt;
+&lt;p&gt;ZeroServices est hébergé ici :
+&lt;a class="reference external" href="https://github.com/Lothiraldan/ZeroServices"&gt;https://github.com/Lothiraldan/ZeroServices&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

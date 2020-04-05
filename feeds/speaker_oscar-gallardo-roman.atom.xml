@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_oscar-gallardo-roman.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-05-21T12:45:00+02:00</updated><entry><title>LympHOS2, Organizing and Sharing Biological Data</title><link href="https://pyvideo.org/pydata-barcelona-2017/lymphos2-organizing-and-sharing-biological-data.html" rel="alternate"></link><published>2017-05-21T12:45:00+02:00</published><updated>2017-05-21T12:45:00+02:00</updated><author><name>Óscar Gallardo Román</name></author><id>tag:pyvideo.org,2017-05-21:pydata-barcelona-2017/lymphos2-organizing-and-sharing-biological-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The study of the proteome (the set of proteins expressed by a cell,
+tissue, or organism at a defined time and conditions) generates a large
+amount of complex data. This data should be processed, stored, curated,
+and made easily available to researchers so it can be studied to obtain
+biomedical knowledge. In this talk we expose the Python tools we have
+used and developed to accomplish it.&lt;/p&gt;
+&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;At the &lt;a class="reference external" href="http://proteomica.uab.cat"&gt;LP-CSIC/UAB&lt;/a&gt; we use a technology called &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Mass_spectrometry"&gt;Mass Spectrometry&lt;/a&gt; to
+study the &lt;em&gt;phospho-proteome of human T-Lymphocytes&lt;/em&gt;; this is, the group
+of proteins that are phosphorilated (modified with phosphate groups) in
+the human &lt;a class="reference external" href="https://en.wikipedia.org/wiki/T_cell"&gt;T cells&lt;/a&gt; during their activation and differentiation as part
+of the &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Immune_response"&gt;immune response&lt;/a&gt;. The experiments involved in this study
+generates a &lt;em&gt;large&lt;/em&gt; amount of &lt;em&gt;complex&lt;/em&gt; data:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Experimental conditions and procedures metadata.&lt;/li&gt;
+&lt;li&gt;The spectra data and metadata obtained from the mass spectrometers
+(usually in proprietary binary formats).&lt;/li&gt;
+&lt;li&gt;Qualitative or identification data, consisting of search results of
+those spectra against human protein sequence databases (using
+multiple search engines, that use different output file-formats)
+linking the spectra with possible peptides (small protein sequence
+fragments) that may or may not contain phosphorylated amino-acids.&lt;/li&gt;
+&lt;li&gt;Semi-quantitative data about the abundance of each possible
+identified peptide.&lt;/li&gt;
+&lt;li&gt;Missing values, identification scores, phosphorylation reassignments,
+and a lot of relationships and inter-linked data…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And all this data has to be &lt;strong&gt;processed&lt;/strong&gt;, &lt;strong&gt;stored&lt;/strong&gt;, &lt;strong&gt;curated&lt;/strong&gt;, and
+made &lt;strong&gt;easily accessible&lt;/strong&gt; to researchers in our lab and worldwide, so
+they can study it to obtain biomedical knowledge about the
+phosphorylation changes in peptides and proteins involved in the signal
+transduction pathways of T cells after their activation during the
+specific immune response.&lt;/p&gt;
+&lt;p&gt;We have used different Python &lt;em&gt;packages&lt;/em&gt; to develop different tools and
+applications to accomplish those objectives:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/easiermgf"&gt;EasierMgf&lt;/a&gt; front-end application, to extract plain text spectra
+data from proprietary binary mass spectrometer files, was developed
+using the &lt;a class="reference external" href="https://wxpython.org/"&gt;wxPython&lt;/a&gt; GUI toolkit.&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Object-relational_mapping"&gt;ORM&lt;/a&gt; from the &lt;a class="reference external" href="https://www.djangoproject.com/"&gt;django&lt;/a&gt; framework was used to design and
+interact with the LymPHOS2 &lt;a class="reference external" href="https://www.mysql.com/"&gt;MySQL&lt;/a&gt; database, which stores all the
+data and their inter-relationships.&lt;/li&gt;
+&lt;li&gt;Also, different modules from the Python standard library (&lt;em&gt;json&lt;/em&gt;,
+&lt;em&gt;xml.etree.ElementTree&lt;/em&gt;, &lt;em&gt;csv&lt;/em&gt;, &lt;em&gt;zipfile&lt;/em&gt;) were used to read and
+&lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/lymphosweb/src/c127cd7a88a5dfb0a70b9e3b6243553c6adda6fb/src/LymPHOS_v1_5/lymphos/filters.py"&gt;import&lt;/a&gt; into the database the different files containing the data;
+and to &lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/lymphostools"&gt;export&lt;/a&gt; database data into commonly used file formats for
+the researches to work with.&lt;/li&gt;
+&lt;li&gt;The &lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/lymphospquantifier"&gt;PQuantifier&lt;/a&gt; group of tools was developed to do the statistical
+processing and analysis of the LymPHOS2 semi-quantitative data. It
+uses the &lt;a class="reference external" href="https://www.sqlalchemy.org/"&gt;SQLAlchemy&lt;/a&gt; ORM for fast database storage in local
+&lt;a class="reference external" href="https://sqlite.org/"&gt;SQLite&lt;/a&gt; files, the &lt;a class="reference external" href="https://www.numpy.org/"&gt;NumPy&lt;/a&gt; N-dimensional array package, the
+&lt;a class="reference external" href="https://scipy.org/scipylib"&gt;SciPy&lt;/a&gt; scientific computing library for the statistics, the
+&lt;a class="reference external" href="https://pythonhosted.org/uncertainties/"&gt;uncertainties&lt;/a&gt; package for calculations with error propagation,
+and the &lt;a class="reference external" href="https://matplotlib.org/"&gt;matplotlib&lt;/a&gt; 2D plotting library for some nice plots of
+data distributions.&lt;/li&gt;
+&lt;li&gt;And the full django framework itself was used to develop the
+&lt;a class="reference external" href="http://www.lymphos.org"&gt;LymPHOS2&lt;/a&gt; web application. Which also uses the matplotlib library
+to dynamically generate the mass spectra images.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The final result is the &lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/lymphosweb/branch/Web_LymPHOS_2"&gt;LymPHOS2&lt;/a&gt; web-oriented database, that
+nowadays (2017) contains 131.908 mass spectra, 15.566 phosphorylation
+sites from 8.273 unique phospho-peptides and 4.937 proteins (which
+represent a 45-fold increase over the original LymPHOS database of
+2009); aside from the new quantitative data for 1.975 of the identified
+phospho-peptides, which was not present in the previous version of
+LymPHOS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Repositories and Presentation Slides:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bitbucket code repositories: &lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/"&gt;https://bitbucket.org/lp-csic-uab/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Presentation Slides (.ODP, .PDF and .PPTX):
+&lt;a class="reference external" href="https://bitbucket.org/lp-csic-uab/lymphosdocs/downloads/"&gt;https://bitbucket.org/lp-csic-uab/lymphosdocs/downloads/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Credits:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The exposed work has been carried out at &lt;a class="reference external" href="http://proteomica.uab.cat"&gt;LP-CSIC/UAB&lt;/a&gt; from
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Catalonia"&gt;Catalonia&lt;/a&gt;, part of the &lt;a class="reference external" href="http://www.csic.es/"&gt;Spanish National Research Council (Consejo
+Superior de Investigaciones Científicas - CSIC)&lt;/a&gt; and of &lt;a class="reference external" href="http://www.proteored.org/"&gt;ProteoRed
+(Proteomics National NetWork Platform)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;people&lt;/em&gt; who have participated directly in the current work are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Data analysis, bioinformatics and informatics&lt;/strong&gt;: &lt;em&gt;Joaquin Abian&lt;/em&gt;
+and &lt;em&gt;Óscar Gallardo&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mass Spectrometry, experimental design and implementation&lt;/strong&gt;:
+&lt;em&gt;Montserrat Carrascal&lt;/em&gt;, &lt;em&gt;Nguyen Tien Dung&lt;/em&gt; and &lt;em&gt;Oriol Vidal-Cortes&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sample preparation&lt;/strong&gt;: &lt;em&gt;Montserrat Carrascal&lt;/em&gt;, &lt;em&gt;Nguyen Tien Dung&lt;/em&gt;,
+&lt;em&gt;Oriol Vidal-Cortes&lt;/em&gt; and &lt;em&gt;Vanessa Casas&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Past collaborators&lt;/strong&gt;: &lt;em&gt;David Ovelleiro&lt;/em&gt; and &lt;em&gt;Marina Gay&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Direction&lt;/strong&gt;: &lt;em&gt;Joaquin Abian&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</summary><category term="lymphos"></category></entry></feed>

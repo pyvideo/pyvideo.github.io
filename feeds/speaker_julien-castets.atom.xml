@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_julien-castets.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-10-15T00:00:00+00:00</updated><entry><title>L'Enfer du packaging Python</title><link href="https://pyvideo.org/pycon-fr-2016/lenfer-du-packaging-python.html" rel="alternate"></link><published>2016-10-15T00:00:00+00:00</published><updated>2016-10-15T00:00:00+00:00</updated><author><name>Julien Castets</name></author><id>tag:pyvideo.org,2016-10-15:pycon-fr-2016/lenfer-du-packaging-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scaleway est un fournisseur de cloud computing qui expose plusieurs APIs pour permette aux clients de gérer leurs infrastructures.
+La plupart de la stack de Scaleway est en Python : APIs, workers qui managent le hardware, gestion de la facturation, divers scripts, ...
+Tous ces projets ont besoin d'être développés, testés et déployés. Le packaging Python fait donc partie intégrante du quotidien de la team Scaleway. Et pourtant, de nombreux problèmes ont été rencontrés :
+* dépendances cycliques mal gérées par setuptools
+* easy_install qui ne fonctionne pas (et ne devrait pas être utilisé)
+* pip install -e : ne fonctionne pas (toujours) avec les namespace packages
+* dependency links : supprimé puis réintroduit bien que deprecated, et pourtant souvent bien pratique
+* pyshop : permet d'avoir un repository local. Ne respecte pas la PEP 503, ne permet pas de gérer les permissions, backend sqlite bancal
+* devpi : fonctionne très bien, mais usine à gaz (documentation austère et complexe)
+* virtualenv : --relocatable qui ne fonctionne pas, rendant plus complexe les déploiements&lt;/p&gt;
+</summary></entry></feed>

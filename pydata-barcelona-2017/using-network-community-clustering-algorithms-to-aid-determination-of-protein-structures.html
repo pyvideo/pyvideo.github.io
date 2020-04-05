@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Using network community clustering algorithms to aid determination of protein structures</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-barcelona-2017.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pydata-barcelona-2017.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Using network community clustering algorithms to aid determination of protein structures" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pydata-barcelona-2017/using-network-community-clustering-algorithms-to-aid-determination-of-protein-structures.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/9g-DaHZZKDE/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/9g-DaHZZKDE/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="bioinformatics" />
+    <meta name="tags" content="protein" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pydata-barcelona-2017/using-network-community-clustering-algorithms-to-aid-determination-of-protein-structures.html" rel="bookmark"
+         title="Permalink to Using network community clustering algorithms to aid determination of protein structures">Using network community clustering algorithms to aid determination of protein structures
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2017-05-21T15:45:00+02:00">
+      <i class="fa fa-calendar"></i> Sun 21 May 2017
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/claudia-millan.html">Claudia Millán</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9g-DaHZZKDE" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>How can you best exploit the information on the protein structures that we already know in order to solve the (many more) that we don’t know? That’s the question we try to solve in our group and this talk will show our use of community clustering on the use case of aiding protein structure solution.</p>
+<p><strong>Abstract</strong></p>
+<p>The study of proteins is extremely relevant to many fields, ranging from medicine to industrial processes. If a cell was a factory, proteins would be the workers, performing very specific tasks in a production chain, in which a failure at any of the steps might affect the others. In order to really understand the function of proteins, there are a number of biochemical techniques that we can apply, but to get a really accurate description of their mechanisms we need to have information up to their atomic level. Proteins are composed by different combinations of 20 amino acids which form chains and result in an intricate and functional structure. We know the final shape of the protein is dependent from its sequence but we can't (currently) predict the outcome of a given sequence, so we need experimental techniques to obtain this information. We can't directly look a protein with a microscope and see its three-dimensional atomic arrangement. There are biophysical techniques that allow us to get low-resolution shapes or surfaces of them, but the only current method that provides atomic detail is x-ray diffraction. In contrast to microscopy, were after illuminating your sample you can, with the appropriate lenses, transform back your reflected rays in an image, in x-ray diffraction we only get the Fourier transform of our protein's structure, that is, its diffraction pattern, but we lose the phase information from the diffracted rays. This problem, known as the phase problem, is an issue in structure solution, because, compared to the intensities of the diffraction pattern, phases provide much more information about our protein's structure. Phases can be computed from a coordinates model, so, if there is a structure of a protein that is expected to be similar (in terms of their coordinates) to an unknown one, it can be used to provide initial estimates of the phases and then improve them until the problem structure is solved.</p>
+<p>Proteins do not adopt random shapes. There are forces that act on them and, according to the chemical properties of the amino acids and the context they have around, they will arrange in particular forms. The first level of structure formed is what we call secondary structure, which is formed of alpha helices and beta strands. These are very general and are present in all kind of proteins. As letters in different books, which are general if looked at independently but can acquire a quite different meaning in 'El Quijote' than in '50 Shades of Grey', these structure fragments alone have a different meaning than when set in a context with other structure elements. Yet, even combinations of a few elements can still be general and frequent, and have a sense, such as the phrase 'Once upon a time' in so many tales. In the protein case, particular small combinations of alpha helices and beta strands should also appear more frequently and can be studied on their different contexts. In a way, we could say that, protein structures, from a top down view, look quite different between them, but from a bottom up one, when we go to small pieces, they look much more similar.</p>
+<p>In our group, we try to exploit these properties of protein structures for solving two types of problems. One is a search problem, consisting in understanding which is the best way in which to break down a larger model of a protein similar to an unknown one in order to refine it and get the correct phases and solve the structure. The other one is more of a prediction problem, in which we want to find structural units in the database of solved structures in order to help us interpret them and extract new information from this vast amount of data. In order to solve both problems we need a numerical description of our system than can help us describing its geometrical features in an accurate way. We have developed a description of such secondary structure fragments based on what we call characteristic vectors, that we also employ to represent the relations between such elements. This description can be implemented in a network graph that allows to use community clustering algorithms on it in order to evaluate simultaneously all the relations between the elements of the structure and find its communities.</p>
+<p>From the technical point of view, the language we use for our development is Python, and the tool in which our graphs are implemented is python-igraph. There are a number of community clustering algorithms available and deciding which is the best for our case and which metrics to use to describe our structures has been an interesting process that we want to share with you. In this talk I will explain our research and development on this topic and I will link the general descriptions to our current and successful use case, possibly leaving open questions on what can we do more!</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pydata-barcelona-2017.html">PyData Barcelona 2017</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=9g-DaHZZKDE" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/bioinformatics/">bioinformatics</a>, <a href="https://pyvideo.org/tag/protein/">protein</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://pydata.org/barcelona2017/schedule/presentation/30/">
+schedule                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pydata-barcelona-2017/videos/claudia-millan-using-network-community-clustering-algorithms.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; What would you do with an ast?</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="What would you do with an ast?" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-us-2011/pycon-2011--what-would-you-do-with-an-ast.html" />
+    <meta property="og:image" content="https://archive.org/services/img/pyvideo_419___what-would-you-do-with-an-ast" />
+    <meta property="og:image:secure_url" content="https://archive.org/services/img/pyvideo_419___what-would-you-do-with-an-ast" />
+
+
+    <meta name="tags" content="ast" />
+    <meta name="tags" content="pycon" />
+    <meta name="tags" content="pycon2011" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-us-2011/pycon-2011--what-would-you-do-with-an-ast.html" rel="bookmark"
+         title="Permalink to What would you do with an ast?">What would you do with an ast?
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2011-03-11T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 11 March 2011
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/matthew-j-desmarais.html">Matthew J Desmarais</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#archive.org" aria-controls="archive.org" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> ARCHIVE.ORG
+    </a></li>
+    <li class="" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="archive.org">
+        <a class="reference external image-reference"
+           href="https://archive.org/details/pyvideo_419___what-would-you-do-with-an-ast">
+            <img alt=""
+                 src="https://archive.org/services/img/pyvideo_419___what-would-you-do-with-an-ast">
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/419_what-would-you-do-with-an-ast.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>What would you do with an ast?</p>
+<p>Presented by Matthew J Desmarais</p>
+<p>The ast module in the Python (&gt;= 2.6) standard library provides a
+representation of python code in a python data structure. We'll begin
+with a discussion about what an abstract syntax tree is and why it's
+useful. We can then talk about what's available in the ast module, how
+it works, and how you can use it. This will be a practical session built
+around examples examining and modifying live ASTs.</p>
+<p>Abstract</p>
+<p>I would prefer to make this a 45 minute talk with examination of code
+samples.</p>
+<p>Python 2.6 introduced a new module in the standard library, ast. The
+first line of the ast documentation is, &quot;The ast module helps Python
+applications to process trees of the Python abstract syntax grammar.&quot;
+What this means is not obvious and many, if not most, python programmers
+won't know what this means. I will begin by talking about the idea of
+syntax tree and how it fits into the python execution lifecycle. I will
+also talk about the contents of the ast module. I will cover the
+available ast.Node subclasses and the provided helper functions,
+including the NodeVisitor and NodeTransformer. I will finish by talking
+about how the ast module can be used to analyze Python code and how it
+can be used to generate new code.</p>
+<p>I expect the time to break down roughly like this:</p>
+<p>Introduction ( 5m )</p>
+<ul class="simple">
+<li>Capacitor joke</li>
+<li>What is an abstract syntax tree?</li>
+<li>How they are used by the Python interpreter</li>
+</ul>
+<p>The contents of the ast module (20 m)</p>
+<ul class="simple">
+<li>The node subclasses and the ast ( 10m )<ul>
+<li>How you get an ast.</li>
+<li>code examples</li>
+<li>ast.stmt vs. ast.expr</li>
+<li>peculiarities</li>
+<li>code examples<ul>
+<li>elif as syntactic sugar for &quot;if: else: if:&quot;</li>
+<li>comparison operators</li>
+</ul>
+</li>
+<li>Why this is useful.</li>
+<li>the ast is the &quot;truth&quot; of the program<ul>
+<li>code examples</li>
+<li>tricky code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The ast module helpers ( 10m )<ul>
+<li>visitor pattern</li>
+<li>NodeVisitor</li>
+<li>NodeTransformer</li>
+<li>code examples</li>
+</ul>
+</li>
+</ul>
+<p>What you do with an ast ( 15m )</p>
+<ul class="simple">
+<li>Walking an ast<ul>
+<li>code examples</li>
+<li>a simple visitor to gather variables by scope</li>
+</ul>
+</li>
+<li>Creating/Modifying an ast<ul>
+<li>code examples</li>
+<li>rearrange imports transformer</li>
+<li>naive &quot;rename all instances&quot; transformer</li>
+<li>naive macro expansion transformer</li>
+</ul>
+</li>
+</ul>
+<p>Conclusion ( 5m )</p>
+<ul class="simple">
+<li>Practical Applications<ul>
+<li>existing projects</li>
+<li>visitors<ul>
+<li>checkers (pylint, pyflakes)</li>
+</ul>
+</li>
+<li>transformers<ul>
+<li>refactoring tools (rope)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>When is it a good idea to use ast?</li>
+</ul>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-us-2011.html">PyCon US 2011</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://archive.org/details/pyvideo_419___what-would-you-do-with-an-ast" rel="external">ARCHIVE.ORG</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/419_what-would-you-do-with-an-ast.mp4" rel="external">MP4</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/ast/">ast</a>, <a href="https://pyvideo.org/tag/pycon/">pycon</a>, <a href="https://pyvideo.org/tag/pycon2011/">pycon2011</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-us-2011/videos/pycon-2011--what-would-you-do-with-an-ast.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

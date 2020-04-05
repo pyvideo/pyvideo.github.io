@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 19 Sep 2015 00:00:00 +0000</lastBuildDate><item><title>Dispelling py.test magic</title><link>https://pyvideo.org/pycon-uk-2015/dispelling-pytest-magic.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This short talk will look under the hood of how py.test uses assertion
+statement rewriting to give users a better, more pythonic testing
+experience.&lt;/p&gt;
+&lt;p&gt;Usually in Python, assertion statements are quite simple and tedious to
+work with, where a simple snippet of code like this:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+def double(x):
+    return x * 2
+expected = 5
+assert double(2) == expected
+&lt;/pre&gt;
+&lt;p&gt;finishes with message that does not include any context:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Traceback (most recent call last):
+  File &amp;quot;t.py&amp;quot;, line 5, in &amp;lt;module&amp;gt;
+    assert double(2) == expected
+AssertionError
+&lt;/pre&gt;
+&lt;p&gt;With py.test, we get a lot more information with all intermittent values
+nicely described:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+t.py:5: in &amp;lt;module&amp;gt;
+    assert double(2) == expected
+E   assert 4 == 5
+E    +  where 4 = &amp;lt;function double at 0x1033add08&amp;gt;(2)
+&lt;/pre&gt;
+&lt;p&gt;During this talk you will learn about all the ingredients needed to
+reverse- engineer py.test behaviour, using import hooks described in PEP
+302, and the ast module from standard library. We will try to use these
+hidden gems in a broader context, outside of testing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tomek Paczkowski</dc:creator><pubDate>Sat, 19 Sep 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-09-19:pycon-uk-2015/dispelling-pytest-magic.html</guid></item></channel></rss>

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pycon-za-2017.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-06T00:00:00+00:00</updated><entry><title>Another angle on test infrastructure</title><link href="https://pyvideo.org/pycon-za-2017/another-angle-on-test-infrastructure.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Iwan Vosloo</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/another-angle-on-test-infrastructure.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Last year at PyConZA I presented a talk about different approaches to
+test setup and alluded to an idea that we have been playing with at
+&lt;a class="reference external" href="http://www.reahl.org"&gt;Reahl&lt;/a&gt;: class based test Fixtures. We have
+since refined our approach and built it as an add-on that works with
+py.test.&lt;/p&gt;
+&lt;p&gt;In this talk I briefly introduce Fixtures again for people who did not
+see the &lt;a class="reference external" href="https://2016.za.pycon.org/talks/26/"&gt;last year's talk&lt;/a&gt;. I
+then show more detail about the types of problems we deal with while
+testing and how our fixture ideas solve these issues.&lt;/p&gt;
+&lt;p&gt;For example, in our tests the database schema is created from scratch at
+the beginning of a test run, but the database is kept clean by rolling
+back a transaction between each individual test. We can also create
+extra temporary database tables, just for a test run.&lt;/p&gt;
+&lt;p&gt;We integrate Selenium webdriver with our web server so that the web
+server runs in the same thread as the tests themselves, in the same
+database transaction. The effect of this is that when something breaks
+inside the web server, the test immediately breaks as well, and gives a
+sensible stack trace.&lt;/p&gt;
+&lt;p&gt;In our code, we use a global context much like what Flask does. This is
+a design often criticised because of the fact that it makes testing
+difficult. We use our fixtures to hide the associated complexities
+regarding the global context as well.&lt;/p&gt;
+&lt;p&gt;The talk covers some details about how we use Fixtures to provide this
+functionality and some thoughts on where we found it useful and which
+things we still struggle to deal with elegantly.&lt;/p&gt;
+</summary></entry><entry><title>Closing Ceremony</title><link href="https://pyvideo.org/pycon-za-2017/closing-ceremony.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>David Sharpe</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/closing-ceremony.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The closing ceremony. A general wrap of the conference. There will also
+be announcements about sprints on Saturday and Sunday.&lt;/p&gt;
+</summary></entry><entry><title>Deep Learning - a gentle dive</title><link href="https://pyvideo.org/pycon-za-2017/deep-learning-a-gentle-dive.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Dries Cronje</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/deep-learning-a-gentle-dive.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deep Learning has the ability to disrupt and to disrupt fast. There
+are tools and algorithms mature enough to add value in almost any
+industry and you do not need a Math Ph.D to learn Deep Learning.&lt;/p&gt;
+&lt;p&gt;In this talk, I will briefly paint a picture of the exciting world of
+Deep Learning and then explain Deep Learning concepts using
+Convolutional Neural Networks as a base.&lt;/p&gt;
+&lt;p&gt;The last part will be a live demo of a Convolutional Neural Network
+written in Python doing image classification.&lt;/p&gt;
+</summary></entry><entry><title>Deep Learning for Computer Vision</title><link href="https://pyvideo.org/pycon-za-2017/deep-learning-for-computer-vision.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Alex Conway</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/deep-learning-for-computer-vision.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The state-of-the-art in image classification has skyrocketed thanks
+to the development of deep convolutional neural networks and
+increases in the amount of data and computing power available to
+train them. The top-5 error rate in the international ImageNet
+competition to predict which of 1000 classes an image belongs to has
+plummeted from 28% error in 2010 before deep learning to just 2.25%
+in 2017 (human level error is around 5%).&lt;/p&gt;
+&lt;p&gt;In addition to being able to classify objects in images (including not
+hotdogs), deep learning can be used to automatically generate captions
+for images, convert photos into paintings, detect cancer in pathology
+slide images, and help self-driving cars ‘see’.&lt;/p&gt;
+&lt;p&gt;The talk will give an overview of the cutting edge in the field and some
+of the core mathematical concepts behind the models. It will also
+include a short code-first tutorial to show how easy it is to get
+started using deep learning for computer vision in python…&lt;/p&gt;
+</summary></entry><entry><title>Deploying Django web applications in Docker containers</title><link href="https://pyvideo.org/pycon-za-2017/deploying-django-web-applications-in-docker-containers.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Jamie Hewland</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/deploying-django-web-applications-in-docker-containers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will describe how to package a Django web application as a
+Docker container image for use on a container orchestration platform.
+Starting with a common Django setup involving Nginx, Gunicorn, and
+Celery, we will show how to adapt the application to run inside
+containers.&lt;/p&gt;
+&lt;p&gt;Container orchestration platforms such as Kubernetes and DC/OS are
+growing increasingly popular. These systems provide many advantages, but
+require significant changes to how applications are packaged and
+deployed. Instead of running on staticly-configured webservers,
+applications must run in containers that are dynamically deployed to a
+pool of hosts.&lt;/p&gt;
+&lt;p&gt;There are further benefits to packaging applications as containers. By
+providing an easy-to-use and tested base image for Django applications,
+deployment best-practices are easily and consistently replicated.
+Integration testing becomes more practical, as containers can be run
+similarly between development and production environments.&lt;/p&gt;
+&lt;p&gt;This talk expects some familiarity with Django, as well as the basics of
+Docker and HTTP. There should be lessons relevant to anybody interested
+in using Docker for Python-based web applications.&lt;/p&gt;
+</summary></entry><entry><title>Friday Lightning Talks</title><link href="https://pyvideo.org/pycon-za-2017/friday-lightning-talks.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Pi Delport</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/friday-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Friday Lightning Talks&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Bruce Merry: &amp;quot;asyncio: it's all about the cancellation&amp;quot;&lt;/li&gt;
+&lt;li&gt;Simba Nyatsanga: &amp;quot;Keep you friends close and caches closer&amp;quot;&lt;/li&gt;
+&lt;li&gt;Peter van Onselen: &amp;quot;And now for something completely different&amp;quot;&lt;/li&gt;
+&lt;li&gt;Simon Cross: &amp;quot;Python Software Society of South Africa&amp;quot;&lt;/li&gt;
+&lt;li&gt;Whitney Tennant: &amp;quot;Why I kept flying to Cape Town for sammiches&amp;quot;&lt;/li&gt;
+&lt;li&gt;Matthew French: &amp;quot;Grid computing on a budget (Or: Reinventing celery)&amp;quot;&lt;/li&gt;
+&lt;li&gt;Marlene Mhangami: &amp;quot;The PSF and Python in Africa&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>From Fun to Business - How Open Source can Change Your Life</title><link href="https://pyvideo.org/pycon-za-2017/from-fun-to-business-how-open-source-can-change-your-life.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Lasse Schuirmann</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/from-fun-to-business-how-open-source-can-change-your-life.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;coala is an Open Source project with well over 400 contributors and more
+than 50 Google Summer of Code applications this year. What’s behind it?
+How did it all start? What is the secret sauce to its growth and how do
+we make a living of it? This talk tells our story with the key takeaways
+and provides a top level story driven insight on those and more topics.
+This talk is perfect for people who want to live and work for their own
+ideas rather than being a gear in a machine.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;p&gt;coala began as a fun project. We never believed there would be anything
+useful growing out of it - and yet it did. Contributors all over the
+world came to us and helped creating the community as it is. Eventually
+I became a freelancer and got funding for working on a startup based on
+coala.&lt;/p&gt;
+&lt;p&gt;How did all of this happen? What does this mean for the main
+contributors? How can we make a living of an open source project?&lt;/p&gt;
+&lt;p&gt;This talk tells our story. What we did - good and bad things - so we all
+can learn from it. From my personal open source contributions over
+founding an open source project to building a freelance agency and
+founding a startup.&lt;/p&gt;
+&lt;p&gt;Participants will learn how they can grow an open project, automate
+newcomer processes and gain insights into how they can start making a
+living of it, possibly founding a company eventually. There is no single
+recipe for this but we can - and should - exchange the tips and tricks
+we’ve gained with our ventures. This talk is for entrepreneurs,
+wanna-be-freelancers and future or open source project founders and
+contributors.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Getting more out of your pandas</title><link href="https://pyvideo.org/pycon-za-2017/getting-more-out-of-your-pandas.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Laura Richter</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/getting-more-out-of-your-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas is a python library for data processing. It makes many of your
+typical data operations easy - input and output, joining,
+aggregating, and various analytics. But being so easy to use makes it
+easy to use poorly (pandamonium)! This talk will explore how to get
+more out of pandas by using it the way it wants to be used. Iu2019ll
+speak about the internals of pandas and pandas data structures. I
+will thendescribe ways to speed up your code by by structuring your
+data processing in a more pandonic way, demonstrated through worked
+examples.&lt;/p&gt;
+</summary></entry><entry><title>Growing Pains: Scaling a Django Project and Team</title><link href="https://pyvideo.org/pycon-za-2017/growing-pains-scaling-a-django-project-and-team.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Cory Zue</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/growing-pains-scaling-a-django-project-and-team.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I’ll describe the evolution of a Django project as it
+goes from something small and simple to a full-blown multi-server,
+multi-datacenter behemoth. The talk will use examples from real-world
+applications I’ve either built or contributed do, and draw heavily
+from my experience leading the development of &lt;a class="reference external" href="https://www.commcarehq.org/"&gt;CommCare HQ&lt;/a&gt; (an 8-year old, ~500,000 LoC
+codebase currently developed and maintained by about 20 people).&lt;/p&gt;
+&lt;p&gt;The goal of the talk is to try and demonstrate how and why complexity
+and process seeps into projects over time and is in fact necessary as a
+project’s lifecycle matures. I'll base the talk around a series of
+examples that highlight a problem and then discuss how the introduction
+of a new subsystem, architecture, or process helps to address that
+problem. These problems / solutions will be a mix of the technical (e.g.
+&amp;quot;the site is slow&amp;quot;) and human (e.g. &amp;quot;we can't ship features quickly
+anymore&amp;quot;).&lt;/p&gt;
+&lt;p&gt;Anyone who is part of a growing project or team should hopefully learn
+something or get some ideas for what might be in store for your future!&lt;/p&gt;
+</summary></entry><entry><title>House of Salt: Extending and leveraging SaltStack</title><link href="https://pyvideo.org/pycon-za-2017/house-of-salt-extending-and-leveraging-saltstack.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Marco Slaviero</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/house-of-salt-extending-and-leveraging-saltstack.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Once upon a time, sysadmins had cute naming schemes for their boxen,
+and it was good. Suddenly, virtualisation! And the cute names
+withered as herds of servers were born. Infrastructure automation and
+management became a thing. Helper software was released (without
+which a nine person company could not hope to manage 400-odd
+servers.) And it was good again, until the edges showed. Then we
+started to build.&lt;/p&gt;
+&lt;p&gt;In this talk we’ll discuss the challenges encountered in managing
+hundreds of servers delivering a single product on AWS. Relying on
+SaltStack for deployment, management and diagnostics, we’ve automated
+away painful steps and reduced our attack surface. SaltStack handles
+configuration and package management well, but is capable of much more
+once you start to customise it.&lt;/p&gt;
+&lt;p&gt;Along the way we’ll show examples of custom SaltStack modules, runners,
+and event handlers. We’ll describe threats and show how SaltStack helps
+us limit their exposure and impact. We’ll catalogue the lessons we’ve
+faced in two years of running SaltStack in our production environment.&lt;/p&gt;
+&lt;p&gt;We won't rehash content from previous talks, and novice users will get
+to see how the tool can be stretched. If you’re wanting to get more out
+of SaltStack than the builtin modules allow for, this talk is for you.&lt;/p&gt;
+</summary></entry><entry><title>Managing 2000+ CPEs with Celery and Django</title><link href="https://pyvideo.org/pycon-za-2017/managing-2000-cpes-with-celery-and-django.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Duane Churms</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/managing-2000-cpes-with-celery-and-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We implemented an interface between a TR069 Auto Configuration Server
+(ACS) and an ISP's billing system. This system ensures consistency
+between data on the billing system and over 2000 CPEs (Customer
+Premises Equipment) in the field. It prevents fraud by ensuring that
+credentials are only used on the devices for which they are intended.
+Django was used to present an API to the billing system, which can
+provision credentials for each CPE or deprovision a CPE. Celery is
+used to perform asynchronous communication with the ACS, which can
+take several seconds per call.&lt;/p&gt;
+&lt;p&gt;We encountered several challenges during this project, such as TR069
+parameter locations being inconsistent across CPE models and firmware
+versions. A mapping system had to be implemented to allow all device
+models to be managed. This talk covers the challenges we faced and the
+approach we used to overcome these challenges.&lt;/p&gt;
+</summary></entry><entry><title>Mixing Metals with Snakes - Moving an Industry Forward</title><link href="https://pyvideo.org/pycon-za-2017/mixing-metals-with-snakes-moving-an-industry-forward.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Johan Zietsman</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/mixing-metals-with-snakes-moving-an-industry-forward.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The South Africa mining and metallurgical industry is the bedrock of
+our economy... or it is supposed to be. We are blessed with more
+mineral resources than any other country in the world. Unfortunately
+we are tending, more and more, to export ore to China and other
+countries without adding value to it here. The end result is that we
+lose billions of Rand in potential revenue.&lt;/p&gt;
+&lt;p&gt;Computational modelling plays an important part in helping us understand
+things better, make better decisions, develop better processes, and be
+more competitive. In our metallurgical industry processes are mostly
+described with Excel models. These models have many drawbacks, and of
+limited use. There is another way. We can integrate detailed
+thermochemistry into our models to describe process more accurately.
+This, however, is fairly difficult, and not many people are able to do
+it. Our challenge is to make this type of modelling easier, and to make
+it more accessible, so that our industry can benefit.&lt;/p&gt;
+&lt;p&gt;Our journey has been a long one, and has winded through territories like
+C++, VB, VBA, C#.net and others. Eventually we arrived at Python. We
+will share our experiences in using things like Django, Jinja2, Celery
+and Postgres to move modelling of metallurgical processes into the 21st
+century, into the cloud, and to move our industry forward.&lt;/p&gt;
+</summary></entry><entry><title>Python 2 and 3 compatibility: In a single codebase</title><link href="https://pyvideo.org/pycon-za-2017/python-2-and-3-compatibility-in-a-single-codebase.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Joannah Nanjekye</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/python-2-and-3-compatibility-in-a-single-codebase.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Although Python 3 is considered the future of Python, Python 2.x will
+be maintained for several more years, alongside Python 3 which is not
+backwards compatible with many open source projects and some packages
+on PYPi still supporting python 2.x because the users of these
+projects still use python 2.x.&lt;/p&gt;
+&lt;p&gt;This talk explains clean ways to write code that will run on both Python
+2.x and 3.x with examples of how to convert existing Python 2-compatible
+code to code that will run reliably on both Python 2.x and 3.x.&lt;/p&gt;
+&lt;p&gt;Developers working on either small, medium, or large projects will
+appreciate the explanations, detailed examples, and clean techniques to
+help them extend support for both versions to their existing Python
+2-compatible projects.&lt;/p&gt;
+&lt;p&gt;The talk will give insight into the content in the book &lt;a class="reference external" href="https://www.amazon.com/Python-Compatibility-Python-Future-Joannah-Nanjekye/dp/1484229541"&gt;Python 2 and 3
+Compatibility&lt;/a&gt;
+that will available in October but be released in paper backs in January
+2018 by Apress.&lt;/p&gt;
+</summary></entry><entry><title>Say Hello to the new wave of software bots...</title><link href="https://pyvideo.org/pycon-za-2017/say-hello-to-the-new-wave-of-software-bots.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Irikidzai Muchaneta</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/say-hello-to-the-new-wave-of-software-bots.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;No, really, say &amp;quot;hello&amp;quot; to them. The age of voice enabled interfaces
+is already upon us with the rise of driverless cars, ubiquitous
+technology and the Internet of Things(IoT), computers no longer need
+to speak in code but they have learnt to speak the human language.
+Google home is a voice-activated speaker powered by the google
+assistant similar to other assistants namely Siri, Alexa and Cortana.&lt;/p&gt;
+&lt;p&gt;In this talk, I will be looking at developing and deploying Actions
+(Conversations) on the Google home assistant. This will be done by
+creating an application (web hook) triggered by an action created in
+API.AI using a python template.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Audience is anyone interested in creating bots using API.AI&lt;/li&gt;
+&lt;li&gt;Anyone interested in adding customized actions to the google
+assistant&lt;/li&gt;
+&lt;li&gt;Anyone interested in learning about voice enabled actions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Specific aspects I will cover include: - Reasons, voice enabled
+interfacing is an interesting topic to follow - Simplified overview of
+the steps to create custom &amp;quot;conversation actions&amp;quot; - Going into a bit of
+detail where the challenges arise - Examples of cool projects out there
+currently&lt;/p&gt;
+&lt;p&gt;I will end with a look into creating your first simplified google
+&amp;quot;conversational action&amp;quot; in hopefully less than 10 minutes once all the
+prerequisite software is installed.&lt;/p&gt;
+&lt;p&gt;Ladies and Gentlemen...the software bots have risen.&lt;/p&gt;
+</summary></entry><entry><title>Semantic Concept Embedding for a natural language FAQ system</title><link href="https://pyvideo.org/pycon-za-2017/semantic-concept-embedding-for-a-natural-language-faq-system.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Bernardt Duvenhage</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/semantic-concept-embedding-for-a-natural-language-faq-system.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For a number of months now work has been proceeding in order to bring
+perfection to the crudely conceived idea of a super-positioning of
+word vectors that would not only capture the tenor of a sentence in a
+vector of similar dimension, but that is based on the high
+dimensional manifold hypothesis to optimally retain the various
+semantic concepts. Such a super-positioning of word vectors is called
+the semantic concept embedding.&lt;/p&gt;
+&lt;p&gt;Now basically the only new principle involved is that instead of using
+the mean of the word vectors of a sentence one rather retains the
+dominant semantic concepts over all of the words. A modification
+informed by the aforementioned manifold hypothesis.&lt;/p&gt;
+&lt;p&gt;The original implementation retains the absolute maximum value over each
+of the dimensions of an embedding such as the GloVe embedding developed
+at Stanford University. The use of these semantic concept vectors then
+allows effective matching of users' questions to an online FAQ system
+which in turn allows a natural language adaptation of said system that
+easily achieves an F-score of 0.922 on the Quora dataset given only
+three examples of how any particular question may be asked.&lt;/p&gt;
+&lt;p&gt;The semantic concept embedding has now reached a high level of
+development. First, an analysis of the word embedding is applied to find
+the prepotent semantic concepts. The associated direction vectors are
+then used to transform the embeddings in just the right way to optimally
+detangle the principal manifolds and further increase the performance of
+the natural language FAQ system.&lt;/p&gt;
+&lt;p&gt;This talk will give an overview of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The problem of semantic sentence embedding.&lt;/li&gt;
+&lt;li&gt;How NLTK, numpy, and Python machine learning frameworks are used to solve the problem.&lt;/li&gt;
+&lt;li&gt;How semantic concept embedding is used for natural language FAQ systems in chatbots, etc.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Surviving a Legacy Codebase</title><link href="https://pyvideo.org/pycon-za-2017/surviving-a-legacy-codebase.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Jeremy Thurgood</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/surviving-a-legacy-codebase.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Few things strike more fear into the heart of a seasoned software
+developer than the words &amp;quot;legacy code&amp;quot;. However, many of us spend a
+lot of time working on byzantine monstrosities inherited from
+contractors, third parties, or Bob who left the company three months
+ago. Over the past several years, I've sunk way more hours than I
+care to think about into making legacy codebases more malleable. I've
+picked up a few tricks and strategies along the way that make the
+process a little smoother and less painful, and I will be sharing
+them in this talk.&lt;/p&gt;
+</summary></entry><entry><title>Tachyonic: an open source DEVOPS project written in Python for the Networking community</title><link href="https://pyvideo.org/pycon-za-2017/tachyonic-an-open-source-devops-project-written-in-python-for-the-networking-community.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Allan Swanepoel</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/tachyonic-an-open-source-devops-project-written-in-python-for-the-networking-community.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By: The authors of Tachyonic&lt;/p&gt;
+&lt;div class="section" id="intro-10-mins"&gt;
+&lt;h4&gt;Intro: (10 mins)&lt;/h4&gt;
+&lt;p&gt;Meet Bob. Bob is a Network Administrator at a Service Provider. As a
+well seasoned network engineer, he’s been building packet pushing
+networks since the days when IP shared bandwidth with IPX, Appletalk,
+DECnet etc. He is a well rounded network engineer with robust set of
+networking skills. He mastered making, shaping of networks with his tool
+set such as Spanning Tree, RAPS, Vlans, VXLAN and MPLS.&lt;/p&gt;
+&lt;p&gt;However, Bob’s world is changing. Networks are not what they used be.
+Today’s networks are growing more rapidly than ever. This means there
+are more devices to manage and also more data produced by these devices
+to work with. Doing things manually just don’t scale anmore. Bob has no
+other option to turn to automation.&lt;/p&gt;
+&lt;p&gt;In the Devops world these issues have been and are being addressed. The
+Networking universe is lagging behind. Standard Bodies and Vendors have
+started coming up with solutions such as Openflow and NETCONF, but there
+are limits.&lt;/p&gt;
+&lt;p&gt;Also, many Open source projects (most of them written in Python) and
+proprietary solutions have joined the scene, which we will talk about.&lt;/p&gt;
+&lt;p&gt;So Bob has options, but… none of them has all the answers. Except for
+one!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="introduction-to-tachyonic-open-source-project-10-mins"&gt;
+&lt;h4&gt;Introduction to Tachyonic Open Source Project (10 mins)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why Python? ** (you probably know some of the answer already)&lt;/li&gt;
+&lt;li&gt;What is Tachyonic? ** Tachyonic framework is intended to control a
+large pool of services such as cloud, networking, dns, email managed
+through a single dashboard. The goal here is to have a “single pane
+of glass” view. Tachyonic scale is only dependent on the deployment
+method used and is designed to be massively horizontally scalable.
+It's all open-source and completely customizable.&lt;/li&gt;
+&lt;li&gt;Modular - extensible ** All interfaces such as API endpoints and
+Dashboard views are fully extensible via plugins/modules. All you
+need to do is write the bit of python to meet your need, and plug it
+into the Tachyonic framework. ** Components and endpoints can run
+on the same Server, or different ones.&lt;/li&gt;
+&lt;li&gt;API and UI ** Tachyonic comes with both a RESTful API, as well as a
+UI for those who wish to use it. In fact the UI simply uses the API
+in the back-end&lt;/li&gt;
+&lt;li&gt;Multi-Tenancy ** With Tachyonic you get a framework that us
+Multi-Tenant, and Multi-Tiered. That means you can use it to add
+customers, and Customers can even be resellers that have their own
+customers. Tachyonic takes care of who is allowed access to what.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-you-get-10-mins"&gt;
+&lt;h4&gt;What you get (10 mins)&lt;/h4&gt;
+&lt;p&gt;We have done all the hard work for you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;User login and RBAC&lt;/li&gt;
+&lt;li&gt;Separate Domains&lt;/li&gt;
+&lt;li&gt;UI&lt;/li&gt;
+&lt;li&gt;API&lt;/li&gt;
+&lt;li&gt;WSGI Framework&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-you-need-to-code"&gt;
+&lt;h4&gt;What you need to code&lt;/h4&gt;
+&lt;p&gt;You may simply write the python you require, and plug it in! Single
+extendable portal, restapi framework does it all!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="use-cases"&gt;
+&lt;h4&gt;Use cases&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Build customer portals to provision services in addition to
+integrated helpdesk and payment gateways.&lt;/li&gt;
+&lt;li&gt;Build Billing and Telemetry services on top of Python using
+well-known open-source projects such as Pandas for time series data.&lt;/li&gt;
+&lt;li&gt;Automate deployment and monitoring of network devices&lt;/li&gt;
+&lt;li&gt;With knowledge of Python and Tachyonic, you may never have to look at
+a new system ever again!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="where-can-i-get-more-info"&gt;
+&lt;h4&gt;Where can i get more info?&lt;/h4&gt;
+&lt;p&gt;Visit our site: &lt;a class="reference external" href="http://tachyonic.co.za/"&gt;http://tachyonic.co.za/&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Taking back control of your code</title><link href="https://pyvideo.org/pycon-za-2017/taking-back-control-of-your-code.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Nickolas Grigoriadis</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/taking-back-control-of-your-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Managing your code is like managing anything else.&lt;/p&gt;
+</summary></entry><entry><title>The practice of TDD: tips&amp;tricks</title><link href="https://pyvideo.org/pycon-za-2017/the-practice-of-tdd-tipstricks.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/the-practice-of-tdd-tipstricks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Test Driven Development is a well known practice in software
+development. However, passing from knowing the principles of TDD to
+applying them in real world situations is not straightforward: the
+aim of this talk is to help the audience to fill the gap and apply
+TDD effectively in Python.&lt;/p&gt;
+&lt;p&gt;The talk will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a brief overview of most popular tools and libraries (e.g. unittest,
+pytest, nose, tox)&lt;/li&gt;
+&lt;li&gt;useful design patterns&lt;/li&gt;
+&lt;li&gt;common mistakes and how to avoid them&lt;/li&gt;
+&lt;li&gt;some real life example taken from the projects the author has worked
+on in the past 15 years (including PyPy, pdb++, capnpy)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is primarily aimed at beginners.&lt;/p&gt;
+</summary></entry><entry><title>What is this "Search" that you speak of?</title><link href="https://pyvideo.org/pycon-za-2017/what-is-this-search-that-you-speak-of.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Honza Král</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/what-is-this-search-that-you-speak-of.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fulltext search is hard, or is it? In this talk we will go through
+the theory and background of search engines all the way to
+implementing your own search engine in Python.&lt;/p&gt;
+&lt;p&gt;This process should give everyone insight into how search engines work
+that can then be applied even when using production-ready systems like
+Elasticsearch.&lt;/p&gt;
+</summary></entry><entry><title>Zen and the Art of Data Science</title><link href="https://pyvideo.org/pycon-za-2017/zen-and-the-art-of-data-science.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Helge Reikeras</name></author><id>tag:pyvideo.org,2017-10-06:pycon-za-2017/zen-and-the-art-of-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The popularity of Data Science in the business world has exploded in
+recent years as companies are realising the value that data can yield
+to their products, services, and business decisions.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll discuss a typical data science workflow, from
+extracting the raw data through to serving real-time machine learning
+predictions using a REST API.&lt;/p&gt;
+&lt;p&gt;We'll feature a range of Python tools that make up the Data Science
+pipeline, including Pandas, Scikit-learn, Gensim, Luigi, and Flask, and
+show how these all can work together.&lt;/p&gt;
+&lt;p&gt;A real-world implementation done at Offerzen will be presented as an
+example.&lt;/p&gt;
+</summary></entry><entry><title>Better APIs using GraphQL with Python and React</title><link href="https://pyvideo.org/pycon-za-2017/better-apis-using-graphql-with-python-and-react.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Mike Jones</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/better-apis-using-graphql-with-python-and-react.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you ever found yourself stuck in a battle between creating more and
+more granular REST endpoints to return different payloads suitable for
+the individual use cases of different consumers and just Exposing All
+The Data, All The Time?&lt;/p&gt;
+&lt;p&gt;Enter GraphQL, born at Facebook but now in wide use in many organisation
+and with a burgeoning ecosystem of tools across many languages.&lt;/p&gt;
+&lt;p&gt;We'll be examining what GraphQL is, comparison to REST APIs, its
+potential use-cases and how to get productive quickly with Graphene
+(Python GraphQL service) on your backend and Apollo (Javascript client)
+on your frontend.&lt;/p&gt;
+&lt;p&gt;We'll use real-world examples from Picsa, where we've adopted
+Graphene-Django as the core element in our platform for building
+financial services for low-income farmworkers in South Africa.&lt;/p&gt;
+&lt;p&gt;This will be an introduction to these frameworks that should be
+applicable for those who have no prior experience.&lt;/p&gt;
+</summary></entry><entry><title>Control and Monitoring of the Karoo Telescope Arrays using Python (5 years later)</title><link href="https://pyvideo.org/pycon-za-2017/control-and-monitoring-of-the-karoo-telescope-arrays-using-python-5-years-later.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Toufeeq Ockards</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/control-and-monitoring-of-the-karoo-telescope-arrays-using-python-5-years-later.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In 2012 the SKA SA Control and Monitoring (CAM) gave a talk at
+PyConZA and it can be viewed at this &lt;a class="reference external" href="https://www.youtube.com/watch?v=HN5cMyZucKI"&gt;Youtube Video&lt;/a&gt; and more info at
+&lt;a class="reference external" href="https://2012.za.pycon.org/speaker/27/detail.html"&gt;PyConZA 2012 link&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;5 years later, Python is still used for Controlling and Monitoring of
+this world-class instrument, that is on its path to being the most
+sensitive radio telescope in the southern hemisphere. The 64 dish array
+completion is around the corner and we take a look back at the last 5
+years and our time with Python.&lt;/p&gt;
+&lt;p&gt;Who is your audience?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The general audience. It should interest all the attendees.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What will they get out of it?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Insight into the use of Python in a Large Experimental Physics
+Control System.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What will you cover?&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Overview (SKA vs MeerKAT vs KAT-7)&lt;/li&gt;
+&lt;li&gt;Why SKA SA chose Python&lt;/li&gt;
+&lt;li&gt;How and where Python is used at SKA SA.&lt;/li&gt;
+&lt;li&gt;Description of the Control and Monitoring problem domain (what we
+monitor &amp;amp; control, data volumes)&lt;/li&gt;
+&lt;li&gt;Architecture of the CAM subsystem (KATcp, proxies, monitors)&lt;/li&gt;
+&lt;li&gt;Some of the lessons learnt over the last 5 years using Python.&lt;/li&gt;
+&lt;li&gt;Overview of Control interfaces&lt;/li&gt;
+&lt;li&gt;Live demo&lt;/li&gt;
+&lt;li&gt;astronomy images produced by MeerKAT&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Don't try to look smart. Be smart</title><link href="https://pyvideo.org/pycon-za-2017/dont-try-to-look-smart-be-smart.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Flavio Percoco</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/dont-try-to-look-smart-be-smart.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The technology industry is growing and already huge. The number of
+humans in this industry and the number of areas they can work on are
+overwhelming. The number of opportunities often don't seem as many
+for an industry that big, nonetheless.&lt;/p&gt;
+&lt;p&gt;Regardless of how long you've been in this industry, you often feel
+overwhelmed, unfocused, demotivated by the size of the industry, the
+uncertainty it generates and the urge of doing something others consider
+important.&lt;/p&gt;
+&lt;p&gt;Throughout this talk, the audience will learn how to grow in an industry
+that is often blasted with intellectual appearances, quantity over
+quality and unstoppable, constant, changes. The talk provides tips to
+cope with large communities and fields as well as experiences and
+examples.&lt;/p&gt;
+</summary></entry><entry><title>Experiences in Asynchronous Application Development with Crossbar.io</title><link href="https://pyvideo.org/pycon-za-2017/experiences-in-asynchronous-application-development-with-crossbario.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Adam Jorgensen</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/experiences-in-asynchronous-application-development-with-crossbario.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recently at OpenDNA we've been rebuilding one of our core internal
+applications from the ground-up. Early on we decided that we wanted
+to make the new system completely asynchronous, leveraging the
+ability of modern browsers to communicate with the server in a
+bi-directional fashion unconstrained by the usual flow of a RESTful
+application.&lt;/p&gt;
+&lt;p&gt;There are a number of ways to implement this kind of application in
+Python but only one of them (in our humble opinion) is really worth
+investing time in: Crossbar.io&lt;/p&gt;
+&lt;p&gt;In this talk I will cover the process of developing a purely
+asynchronous application using Crossbar from top to bottom, detailing
+everything from high-level design considerations to low-level code
+decisions to potential pitfalls and how to avoid them.&lt;/p&gt;
+&lt;p&gt;The aim: To convince you that your next application should be built
+using Crossbar!&lt;/p&gt;
+&lt;p&gt;This talk should be suitable for any audience but will be of particular
+interest to developers looking for a way to leverage WebSockets and/or
+WAMP to develop highly or even purely asynchronous applications.&lt;/p&gt;
+</summary></entry><entry><title>In the land of Serverless, who uses Zappa is king!</title><link href="https://pyvideo.org/pycon-za-2017/in-the-land-of-serverless-who-uses-zappa-is-king.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Jonatas Baldin</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/in-the-land-of-serverless-who-uses-zappa-is-king.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Serverless is an architecture style where we don't have servers*,
+dealing just with third-party services. This means infinite scaling,
+less downtime and less maintenance. Of course this is not the answer
+for every problem, but it can be a good choice.&lt;/p&gt;
+&lt;p&gt;Together with this concept, there's Zappa, a framework that makes that
+easily to deploy Python WSGI applications with AWS Lambda and AWS API
+Gateway.&lt;/p&gt;
+&lt;p&gt;In this talk, we're going to discuss about the concept and the tool,
+deploying a web Python application with Zappa!&lt;/p&gt;
+&lt;p&gt;--  Kidding: Serverless still has servers ;)&lt;/p&gt;
+</summary></entry><entry><title>Jupyter Notebooks for Radio Astronomy Research</title><link href="https://pyvideo.org/pycon-za-2017/jupyter-notebooks-for-radio-astronomy-research.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Brad Frank</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/jupyter-notebooks-for-radio-astronomy-research.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At the Inter-University Institute for Data Intensive Astronomy (IDIA,
+www.idia.ac.za), we are focusing on several important use-cases
+related to the delivery of science data products from large radio
+telescopes, such as MeerKAT. The requirements for the hardcore
+processing and analysis of raw radio data has to be counter-balanced
+with our essential need to collaborate on our science projects.&lt;/p&gt;
+&lt;p&gt;We have thus adopted the Jupyter Hub/Notebooks as the principle means of
+running radio astronomy workflows, pipelines and calibration scripts. We
+have found this to be an enormously useful and powerful medium to
+prototype technical recipes, and to share lessons learned. This allows
+us to shorten the amount of time taken to develop a complex astronomical
+workflow, and shifts the focus on the data and the processes involved in
+a single, comprehensive framework.&lt;/p&gt;
+&lt;p&gt;The usage of Jupyter Notebooks is become quite popular in radio
+astronomy, and marks a distinct paradigm shift in the way that
+astronomers all over the world are collaborating on large science
+projects.&lt;/p&gt;
+&lt;p&gt;In my talk I will focus on our usage of Jupyter Hub/Notebooks within an
+astronomical context, and some highlights related to the development of
+our astronomical computing software stack in python.&lt;/p&gt;
+</summary></entry><entry><title>Large-scale media analysis for driving accountability</title><link href="https://pyvideo.org/pycon-za-2017/large-scale-media-analysis-for-driving-accountability.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Matthew Adendorff</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/large-scale-media-analysis-for-driving-accountability.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In an age where fake news is an emerging concern, digestion of
+digital media should be assisted by informative measures that are
+exemplary of integrity, responsibility, equal representation, and a
+lack of personal agenda. Such metrics are intrinsically complex and
+their derivation, calculation and implementation should be handled
+with care. At the core of developing such accountability measures is
+the ability to ingest, process, analyze and draw insights from
+digital media. To achieve this, Media Monitoring Africa has developed
+a cloud-based platform, built on Flask, with a full Python stack, to
+automatically ingest digital media from several countries
+(particularly South Africa and other African countries). The system
+then performs Natural Language Processing to highlight important
+sources, topics, and entities, and allows for advanced analytics on
+the resulting data to be performed.&lt;/p&gt;
+&lt;p&gt;This talk will present the rationale, data flow and cloud implementation
+of this platform, as well as its application to driving accountability
+and insights in South African media. The intended audience is broad,
+where members can see a detailed road-map of constructing a Python-based
+Big Data type system, the analyses that can be performed with it, as
+well as the impact it can have on a society's approach to digital media.&lt;/p&gt;
+</summary></entry><entry><title>Making man-made medicine price data more useful</title><link href="https://pyvideo.org/pycon-za-2017/making-man-made-medicine-price-data-more-useful.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>JD Bothma</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/making-man-made-medicine-price-data-more-useful.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A walk-through of how we practically clean and use a public dataset
+that is changing people's lives.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="http://mpr.gov.za/"&gt;Medicine Price Registry&lt;/a&gt; is a spreadsheet
+published one or more times per year, with the latest prices and active
+ingredients for medicines registered for sale in South Africa. Like most
+data, it's dirty and has limited usability in its original form. We take
+you through some of the practical steps we take to clean the data and
+make it easier to analyse and use. This allows us, for example, to
+analyse how price competition from generics lower medicine prices, or
+not!&lt;/p&gt;
+&lt;p&gt;This is intended as a simple real-world example of how we work around
+the issues with a dataset using a few common tools. This could be done
+with any platform, but jupyter notebooks, sqlalchemy, alembic migrations
+and the brevity of python is a nice combination for the iteration needed
+to work with this data and adapt as we get to know it. We start with a
+GUI tool called OpenRefine but it pretty quickly becomes necessary to
+write just a bit of code to move quickly.&lt;/p&gt;
+&lt;p&gt;There's a lot of material out there on specific tools. I'd like to show
+the reality of dirty datasets, and the workarounds and approaches we use
+to get value from it nonetheless. One such example is using charts and
+ordering to group related data and visually identify interesting events.
+I encourage people to ask questions and offer suggestions. The effort
+put into this project has been limited by time constraints but any
+improvements can have real world impact.&lt;/p&gt;
+&lt;p&gt;If you're interested in trying something like this yourself, you're
+invited to chat with me about civic technology, perhaps join our civic
+tech community, and help figure out how it can be most effective. You
+may also be interested in the CodeBridge Community Evening Thursday 5
+October at 18:30.&lt;/p&gt;
+</summary></entry><entry><title>Meet MariaDB 10.2/10.3</title><link href="https://pyvideo.org/pycon-za-2017/meet-mariadb-102103.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Ian Gilfillan</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/meet-mariadb-102103.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;MariaDB 10.2 is the current stable release, and MariaDB 10.3 the
+current development release. This talk introduces some of the new
+features that may be of interest to Python developers, in particular
+Window Functions and Common Table Expressions (CTEs). Window
+functions are similar to aggregate functions in that they perform
+calculations across a set of rows. Recursive CTEs are excellent for
+navigating a tree structure, or a route map, which regular SQL is
+poor at.&lt;/p&gt;
+&lt;p&gt;By making use of these features. more work can be passed on to the
+database layer, simplifying the code and improving performance.&lt;/p&gt;
+</summary></entry><entry><title>Opening Ceremony</title><link href="https://pyvideo.org/pycon-za-2017/opening-ceremony.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>David Sharpe</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/opening-ceremony.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A general welcome and an introduction to all the exciting things that
+will be happening at PyConZA 2017!&lt;/p&gt;
+</summary></entry><entry><title>OpenStack and Software Engineering - Questions, Tricks and everything else about OpenStack.</title><link href="https://pyvideo.org/pycon-za-2017/openstack-and-software-engineering-questions-tricks-and-everything-else-about-openstack.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Stephan Ludik</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/openstack-and-software-engineering-questions-tricks-and-everything-else-about-openstack.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;1 Introduction&lt;/h4&gt;
+&lt;div class="section" id="presenters"&gt;
+&lt;h5&gt;1.1 Presenters&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Thomas Lee&lt;/li&gt;
+&lt;li&gt;Stephan Ludik&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="our-openstack-experience"&gt;
+&lt;h5&gt;1.2 Our OpenStack experience&lt;/h5&gt;
+&lt;p&gt;Our OpenStack Journey&lt;/p&gt;
+&lt;p&gt;Our Open Source Contributions&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="openstack-introduction"&gt;
+&lt;h4&gt;2 OpenStack Introduction&lt;/h4&gt;
+&lt;div class="section" id="what-openstack-is"&gt;
+&lt;h5&gt;2.1 What OpenStack Is&lt;/h5&gt;
+&lt;p&gt;We will talk about the OpenStack program as a whole and what it consists
+of. We will alsodiscuss some of the main projects in OpenStack and how
+they fit together to deliver IaaS and other services.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="openstack-project-factoids"&gt;
+&lt;h5&gt;2.2 OpenStack project factoids&lt;/h5&gt;
+&lt;p&gt;We discuss a few key aspects of the OpenStack project and community
+around it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="case-study"&gt;
+&lt;h5&gt;2.3 Case Study&lt;/h5&gt;
+&lt;p&gt;Building OpenStack for Test, Dev and Production use.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="openstack-vs-competitors"&gt;
+&lt;h5&gt;2.4 OpenStack vs. Competitors&lt;/h5&gt;
+&lt;p&gt;Cost structure&lt;/p&gt;
+&lt;p&gt;Functional benefits&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="demo-of-openstack-in-action"&gt;
+&lt;h4&gt;3 Demo of OpenStack in action&lt;/h4&gt;
+&lt;p&gt;A little demonstration of what is possible with OpenStack.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Start up a Django based application via an heat template, showing the
+progress.&lt;/li&gt;
+&lt;li&gt;Show the environment is functioning on the cloud.&lt;/li&gt;
+&lt;li&gt;Destroy the complete environment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="q-a"&gt;
+&lt;h4&gt;4 Q&amp;amp;A&lt;/h4&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>PyPy3, Numpy, and maybe a GIL-less future</title><link href="https://pyvideo.org/pycon-za-2017/pypy3-numpy-and-maybe-a-gil-less-future.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Maciej Fijalkowski</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/pypy3-numpy-and-maybe-a-gil-less-future.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a Python implementation, alternative to the standard CPython.
+PyPy comes with a JIT (Just-in-Time compiler). We'll see the recent
+developments:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;PyPy now supports either Python 2.7 or (in beta) Python 3.5.&lt;/li&gt;
+&lt;li&gt;Numpy and the scientific stack are getting ever closer to fully
+working.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will also mention a potential future direction: getting rid of the
+GIL (Global Interpreter Lock). The Python community has been discussing
+removing the GIL for a long time, with no success so far. Targeting PyPy
+instead of CPython would still be quite involved, but more doable.&lt;/p&gt;
+</summary></entry><entry><title>Solid Snakes or: How to Take 5 Weeks of Vacation</title><link href="https://pyvideo.org/pycon-za-2017/solid-snakes-or-how-to-take-5-weeks-of-vacation.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Hynek Schlawack</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/solid-snakes-or-how-to-take-5-weeks-of-vacation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;No matter whether you run a web app, search for gravitational waves,
+or maintain a backup script: being responsible for a piece of
+software or infrastructure means that you either get a pager right
+away, or that you get angry calls from people affected by outages.
+Being paged at 4am in everyday life is bad enough. Having to fix
+problems from hotel rooms while your travel buddies go for brunch is
+even worse.&lt;/p&gt;
+&lt;p&gt;And while incidents can’t be prevented completely, there are ways to
+make your systems more reliable and minimize the need for (your!) manual
+intervention. This talk will help you to get calm nights and relaxing
+vacations by teaching you some of them.&lt;/p&gt;
+</summary></entry><entry><title>The importance of Agile Software Testing</title><link href="https://pyvideo.org/pycon-za-2017/the-importance-of-agile-software-testing.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Kudakwashe Siziva</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/the-importance-of-agile-software-testing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From the beginning of time, the relationship between developers and
+software testers has always been that of 'Cat and Mouse'. This
+relationship has had its fair share of short comings which chiefly
+included unmet deadlines and lack of confidence when shipping
+software products. The talk is meant to introduce a better
+relationship between developers and testers by going over the
+importance of including testing in an Agile cycle.&lt;/p&gt;
+&lt;p&gt;We will look at different levels of testing E.g. Unit vs integration
+testing, how units work together. Knowing why we are writing each test -
+what are we trying to achieve when we write a test for a unit as that is
+a place that developers struggle and either write duplicate tests or not
+enough and changeability and confidence can suffer as a result.&lt;/p&gt;
+&lt;p&gt;Objective is to build better agile software teams and ship clean python
+projects with confidence.&lt;/p&gt;
+</summary></entry><entry><title>Thursday Lightning Talks</title><link href="https://pyvideo.org/pycon-za-2017/thursday-lightning-talks.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Robyn Farah</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/thursday-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;Adrian Moisey: &amp;quot;Lint-Review&amp;quot;&lt;/li&gt;
+&lt;li&gt;Alex Hall: &amp;quot;Bird's Eye&amp;quot;&lt;/li&gt;
+&lt;li&gt;Lasse Schuirmann: &amp;quot;Sticky Notes&amp;quot;&lt;/li&gt;
+&lt;li&gt;JP Viljoen: &amp;quot;Magic Wormhole&amp;quot;&lt;/li&gt;
+&lt;li&gt;José Carlos S Fonseca: &amp;quot;Editing Fortran .ini configuration files from
+Python&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>You suck at shell scripting: building awesome command line tools in Python for fun and profit!</title><link href="https://pyvideo.org/pycon-za-2017/you-suck-at-shell-scripting-building-awesome-command-line-tools-in-python-for-fun-and-profit.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Tobias Brandt</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/you-suck-at-shell-scripting-building-awesome-command-line-tools-in-python-for-fun-and-profit.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You do! You're aweful! You are as bad at shell scripting as Helen
+Zille is at Twitter. However clever that 140 character bash one liner
+seemed at the time, you know that you regretted it once it became an
+integral part of your production build pipeline. This talk will show
+you how to write maintainable Command Line Interfaces with click and
+pathlib that won't leave you trying to rewrite your git commit
+history after the next production system outage.&lt;/p&gt;
+&lt;p&gt;As a simple illustration I'll demonstrate command line application to
+download and analyse digital asset data (aka cryptocurrencies).&lt;/p&gt;
+</summary></entry><entry><title>ZimboPy: Empowering Zimbabwean Girls As Change Makers</title><link href="https://pyvideo.org/pycon-za-2017/zimbopy-empowering-zimbabwean-girls-as-change-makers.html" rel="alternate"></link><published>2017-10-05T00:00:00+00:00</published><updated>2017-10-05T00:00:00+00:00</updated><author><name>Marlene Mhangami</name></author><id>tag:pyvideo.org,2017-10-05:pycon-za-2017/zimbopy-empowering-zimbabwean-girls-as-change-makers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ZimboPy is an organic, on-the-ground effort by a local non-profit
+organization and Python developers in the Harare software development
+community to advance the cause of women in technology in Zimbabwe. The
+program operates in community centers, universities, high schools and
+tech hubs to make programming accessible to girls regardless of their
+socio-economic status. Upon initially joining a ZimboPy club, many of
+the girls would have never used a computer before, let alone code.&lt;/p&gt;
+&lt;p&gt;In Zimbabwe, only 17% of computer science undergraduate majors are
+women, and in the developing world, women make up less than 20% of the
+information and technology workforce. ZimboPy exists to empower
+Zimbabwean girls with the skills and confidence necessary to not only
+enter the local tech industry, but to lead it.&lt;/p&gt;
+&lt;p&gt;In addition to learning to code, ZimboPy club members also join a global
+network of women in technology that are working to tackle social
+challenges through human-centered design and computer science.The Python
+community has been a central part of our work. For our mentorship week
+that was held in April we had python programmers from USA, Italy,
+Australia and of course Zimbabwe join us in person and virtually. Our
+talk will outline what we've achieved so far and how anyone who's part
+of the Python community can get involved. We invite developers from
+around the world to help Zimbabwean girls address local problems which
+can be solved with technology, such as clean water and e-commerce
+solutions for small shops in towns and villages. Mentors can travel to
+Zimbabwe and work with girls as they develop a plan for their
+applications and pair-program with them, answering questions and
+providing feedback along the way. Overall, ZimboPy looks forward to
+changing Zimbabwe's future through creativity, collaboration and the
+power of Python programming&lt;/p&gt;
+</summary></entry></feed>

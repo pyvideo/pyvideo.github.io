@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_fabien-boucher.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-10-17T00:00:00+00:00</updated><entry><title>Optimiser l'intégration de code avec Zuul</title><link href="https://pyvideo.org/pycon-fr-2015/optimiser-lintegration-de-code-avec-zuul.html" rel="alternate"></link><published>2015-10-17T00:00:00+00:00</published><updated>2015-10-17T00:00:00+00:00</updated><author><name>Matthieu Huin</name></author><id>tag:pyvideo.org,2015-10-17:pycon-fr-2015/optimiser-lintegration-de-code-avec-zuul.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Cette présentation s'adresse à tout développeur soucieux de la qualité
+du code, intéressé par les problématiques d'intégration et de
+développement continus, et travaillant sur un projet comptant plus de 2
+contributeurs. Elle se concentre sur Zuul, un système de &amp;quot;gating&amp;quot; des
+contributions à un ensemble de projets.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Les projets de grande échelle comme OpenStack, intégrant plus d'une
+centaine de contributions par jour en moyenne, ne pourraient aboutir
+sans un contrôle rigoureux de la qualité du code. C'est pourquoi l'une
+des tâches majeures des développeurs principaux (&amp;quot;core devs&amp;quot;)
+d'OpenStack est de passer en revue les contributions (&amp;quot;code review&amp;quot;)
+puis d'éventuellement les valider pour intégration au code source. Mais
+comment gérer un tel flux de contributions en un temps raisonnable ?
+Comment être certain qu'une contribution acceptée par un core dev ne va
+pas avoir des effets de bord sur une autre contribution acceptée
+simultanément par quelqu'un d'autre, ou sur un projet connexe ?&lt;/p&gt;
+&lt;p&gt;La communauté OpenStack utilise un outil codé en Python appelé Zuul (en
+référence à Ghostbusters) pour répondre à ces problématiques, et
+permettre aux core devs de ne pas avoir à consacrer 100% de leur
+activité à la revue de code. L'intérêt de Zuul est clair pour tout
+projet, quel que soit son envergure, nécessitant un contrôle rigoureux
+pour l'intégration et le déploiement continus. Nous présentons donc ici
+les principales fonctionnalités de Zuul à travers des cas d'usage
+simples, et telles que nous les utilisons dans le projet &lt;a class="reference external" href="http://softwarefactory.enovance.com%20%22Software%20Factory%22"&gt;Software
+Factory&lt;/a&gt;,
+une suite logicielle libre &amp;quot;all in one&amp;quot; de gestion de code, poussé par
+Red Hat.&lt;/p&gt;
+&lt;p&gt;Nous couvrirons les sujets suivants:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Comment Zuul interagit avec Gerrit, le service de revue du code&lt;/li&gt;
+&lt;li&gt;Que signifie la notion de &amp;quot;pipelines&amp;quot; dans Zuul, et comment les
+utiliser&lt;/li&gt;
+&lt;li&gt;Quelle stratégie suit Zuul pour gérer la queue des contributions à
+tester ou à intégrer&lt;/li&gt;
+&lt;li&gt;Comment Zuul gère les interdépendances de projets&lt;/li&gt;
+&lt;li&gt;Exemples de workflows de CI et CD facilités par Zuul&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry></feed>

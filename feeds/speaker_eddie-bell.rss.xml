@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 13 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Weak supervision: a new paradigm for unreliable labels</title><link>https://pyvideo.org/pydata-london-2019/weak-supervision-a-new-paradigm-for-unreliable-labels.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Machine learning is easier when you have access to a large number of quality labels. Unfortunately acquiring labels is expensive or impossible in many domains. Recently, the new paradigm of weak-supervision has emerged in which a set of weak and cheap labelling sources are mapped to high-quality labels. In this presentation, I'll describe the methods and research underpinning weak-supervision.&lt;/p&gt;
+&lt;p&gt;Acquiring quality labels for supervised models is expensive and sometimes impossible. Unsupervised models usually perform poorly and semi-supervised models make strong similarity assumptions so that labels can be propagated. Recently, a new paradigm has emerged: weak supervision. A weakly supervised model has a set of unreliable labelling functions such as heuristic rules, similarity methods, weak classifiers and human labelling. As such, weak supervision can be considered a generalisation of semi-supervised learning.&lt;/p&gt;
+&lt;p&gt;The labelling functions should be selected to promote diversity, much like an ensemble, with a variety of bias-variance tradeoff profiles and correlations. The characteristics of each labelling function do not have to be known explicitly but after training the model can provide feedback on the quality of labelling sources.&lt;/p&gt;
+&lt;p&gt;The weakly-supervised model combines, disambiguates and prunes the unreliable labels using an unsupervised generative component to produce a reliable probabilistic label set which can then be consumed by a traditional supervised component. Some practitioners have even heralded weak-supervision as software 2.0 in which a central ML model governs the behaviour of an application based upon vast quantities of weak labels provided by non-experts.&lt;/p&gt;
+&lt;p&gt;In this presentation, I'll describe the methods and research underpinning weak-supervision.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eddie Bell</dc:creator><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-13:pydata-london-2019/weak-supervision-a-new-paradigm-for-unreliable-labels.html</guid></item><item><title>The Dark Art of Search Relevancy</title><link>https://pyvideo.org/pydata-london-2015/the-dark-art-of-search-relevancy.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Building a search engine is a dark art that is made even more
+difficult by the nebulous ever-changing concept of search relevancy.
+When, and to what degree, is a result deemed to be relevant for a
+given search term? In this talk I will describe how we built a Lyst
+search relevancy data set using heuristics, crowd-sourcing and Xbox
+Live matchmaking.&lt;/p&gt;
+&lt;p&gt;Full details —&amp;nbsp;&lt;a class="reference external" href="http://london.pydata.org/schedule/presentation/1/"&gt;http://london.pydata.org/schedule/presentation/1/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Search is a hard area to work in. Techniques are not made public due to
+their value and little academic work is done in the area. Furthermore,
+Google has made the exceptional an everyday experience so the bar for
+success is very high from the outset.&lt;/p&gt;
+&lt;p&gt;Search data sets are also hard to create due to the nebulous
+ever-changing concept of search relevancy. When, and to what degree, is
+a result deemed to be relevant for a given search term? The
+ElasticSearch documentation states it well: &lt;em&gt;&amp;quot; Search relevancy tuning
+is a rabbit hole that you can easily fall into and never emerge&amp;quot;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;In this presentation I'll give a introduction to building a search
+relevancy data set with python using crowd-sourcing and the Trueskill
+algorithm from Microsoft. Trueskill is used for matchmaking on XBox Live
+and it allows us to transform moderated pairwise comparisons into
+rankings. The rankings can then be used to learn what results best match
+a given search phrase. I'll briefly cover how we're modeling the
+moderated rankings at Lyst using deep learning.&lt;/p&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h4&gt;References&lt;/h4&gt;
+&lt;p&gt;M. Hadi Kiapour, Kota Yamaguchi, Alexander C. Berg, Tamara L. Berg.
+Hipster Wars: Discovering Elements of Fashion Styles (2014).&lt;/p&gt;
+&lt;p&gt;Yelong Shen, Xiaodong He, Jianfeng Gao, Li Deng, and Grégoire Mesnil.
+Learning semantic representations using convolutional neural networks
+for web search (2014).&lt;/p&gt;
+&lt;p&gt;Ralf Herbrich, Tom Minka, and Thore Graepel. TrueSkill(TM): A Bayesian
+Skill Rating System (2007).&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eddie Bell</dc:creator><pubDate>Sat, 20 Jun 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-06-20:pydata-london-2015/the-dark-art-of-search-relevancy.html</guid></item><item><title>Working with Fashion Models</title><link>https://pyvideo.org/pydata-london-2016/eddie-bell-working-with-fashion-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016&lt;/p&gt;
+&lt;p&gt;Since the dawn of time man has harnessed the power of convolutional neural networks to understand fashion. In this presentation, I carry on the trend and discuss how we've built a general purpose visual fashion representation by simultaneously training against multiple objectives with multiple images per objective. There will be lots of pictures.&lt;/p&gt;
+&lt;p&gt;Fashion is a visual medium so it makes sense for our models of fashion to include visual features. In this presentation, I'll describe how we've build a general purpose visual fashion representation using CNNs. The network is multi-task (multiple labels per image), multi-image (multiple images per label) and it runs on multiple GPUs. We used the python library Chainer to fit the network.&lt;/p&gt;
+&lt;p&gt;I'll visually explore what is going on inside the black box of a neural network and discover how a fashion specific model sees the world differently from generic visual models. Lastly, I'll demonstrate some applications of the representation learned by the model.&lt;/p&gt;
+&lt;p&gt;The initial part of this presentation will be technical but the remainder will be accessible.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://www.slideshare.net/ejlbell/working-with-fashion-models-pydatalondon-2016"&gt;http://www.slideshare.net/ejlbell/working-with-fashion-models-pydatalondon-2016&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eddie Bell</dc:creator><pubDate>Thu, 12 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-12:pydata-london-2016/eddie-bell-working-with-fashion-models.html</guid></item></channel></rss>

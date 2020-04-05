@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 22 Jul 2014 00:00:00 +0000</lastBuildDate><item><title>Web Scraping in Python 101</title><link>https://pyvideo.org/europython-2014/web-scraping-in-python-101.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk is about web scraping in Python, why web scraping is useful
+and what Python libraries are available to help you. I will also look
+into proprietary alternatives and will discuss how they work and why
+they are not useful. I will show you different libraries used in web
+scraping and some example code so that you can choose your own personal
+favourite. I will also tell why writing your own scrapper in scrapy
+allows you to have more control over the scraping process.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="who-am-i"&gt;
+&lt;h4&gt;Who am I ?&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a programmer&lt;/li&gt;
+&lt;li&gt;a high school student&lt;/li&gt;
+&lt;li&gt;a blogger&lt;/li&gt;
+&lt;li&gt;Pythonista&lt;/li&gt;
+&lt;li&gt;and tea lover&lt;/li&gt;
+&lt;li&gt;Creator of freepythontips.wordpress.com&lt;/li&gt;
+&lt;li&gt;I made soundcloud-dl.appspot.com&lt;/li&gt;
+&lt;li&gt;I am a main contributor of youtube-dl.&lt;/li&gt;
+&lt;li&gt;I teach programming at my school to my friends.&lt;/li&gt;
+&lt;li&gt;It's my first programming related conference.&lt;/li&gt;
+&lt;li&gt;The life of a python programmer in Pakistan&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-this-talk-is-about"&gt;
+&lt;h4&gt;What this talk is about ?&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What is Web Scraping and its usefulness&lt;/li&gt;
+&lt;li&gt;Which libraries are available for the job&lt;/li&gt;
+&lt;li&gt;Open Source vs proprietary alternatives&lt;/li&gt;
+&lt;li&gt;Whaich library is best for which job&lt;/li&gt;
+&lt;li&gt;When and when not to use Scrapy&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-is-web-scraping"&gt;
+&lt;h4&gt;What is Web Scraping ?&lt;/h4&gt;
+&lt;p&gt;Web scraping (web harvesting or web data extraction) is a computer
+software technique of extracting information from websites. - Wikipedia&lt;/p&gt;
+&lt;div class="section" id="in-simple-words"&gt;
+&lt;h5&gt;In simple words :&lt;/h5&gt;
+&lt;p&gt;It is a method to extract data from a website that does not have an API
+or we want to extract a LOT of data which we can not do through an API
+due to rate limiting.&lt;/p&gt;
+&lt;p&gt;We can extract any data through web scraping which we can see while
+browsing the web.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="usage-of-web-scraping-in-real-life"&gt;
+&lt;h4&gt;Usage of web scraping in real life.&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;to extract product information&lt;/li&gt;
+&lt;li&gt;to extract job postings and internships&lt;/li&gt;
+&lt;li&gt;extract offers and discounts from deal-of-the-day websites&lt;/li&gt;
+&lt;li&gt;Crawl forums and social websites&lt;/li&gt;
+&lt;li&gt;Extract data to make a search engine&lt;/li&gt;
+&lt;li&gt;Gathering weather data etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advantages-of-web-scraping-over-using-an-api"&gt;
+&lt;h4&gt;Advantages of Web scraping over using an API&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Web Scraping is not rate limited&lt;/li&gt;
+&lt;li&gt;Anonymously access the website and gather data&lt;/li&gt;
+&lt;li&gt;Some websites do not have an API&lt;/li&gt;
+&lt;li&gt;Some data is not accessible through an API etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="which-libraries-are-available-for-the-job"&gt;
+&lt;h4&gt;Which libraries are available for the job ?&lt;/h4&gt;
+&lt;p&gt;There are numerous libraries available for web scraping in python. Each
+library has its own weaknesses and plus points.&lt;/p&gt;
+&lt;p&gt;Some of the most widely known libraries used for web scraping are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;BeautifulSoup&lt;/li&gt;
+&lt;li&gt;html5lib&lt;/li&gt;
+&lt;li&gt;lxml&lt;/li&gt;
+&lt;li&gt;re ( not really for web scraping, I will explain later )&lt;/li&gt;
+&lt;li&gt;scrapy ( a complete framework )&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-comparison-between-these-libraries"&gt;
+&lt;h4&gt;A comparison between these libraries&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;speed&lt;/li&gt;
+&lt;li&gt;ease of use&lt;/li&gt;
+&lt;li&gt;what do i prefer&lt;/li&gt;
+&lt;li&gt;which library is best for which purpose&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="proprietary-alternatives"&gt;
+&lt;h4&gt;Proprietary alternatives&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a list of proprietary scrapers&lt;/li&gt;
+&lt;li&gt;their price&lt;/li&gt;
+&lt;li&gt;are they really useful for you ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="working-of-proprietary-alternatives"&gt;
+&lt;h4&gt;Working of proprietary alternatives&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how they work (render javascript)&lt;/li&gt;
+&lt;li&gt;why they are not suitable for you&lt;/li&gt;
+&lt;li&gt;how custom scrapers beat proprietary alternatives&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scrapy"&gt;
+&lt;h4&gt;Scrapy&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;what is it&lt;/li&gt;
+&lt;li&gt;why is it useful&lt;/li&gt;
+&lt;li&gt;asynchronous support&lt;/li&gt;
+&lt;li&gt;an example scraper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="question"&gt;
+&lt;h4&gt;Question&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Questions from the viewers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">M.Yasoob Khalid</dc:creator><pubDate>Tue, 22 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-22:europython-2014/web-scraping-in-python-101.html</guid></item></channel></rss>

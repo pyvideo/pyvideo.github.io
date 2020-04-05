@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 03 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>Be Agile, Not Vulnerable</title><link>https://pyvideo.org/djangocon-us-2013/be-agile-not-vulnerable.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Be Agile, Not Vulnerable&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Security has to be everyone's responsibility, and cannot be managed as a
+feature.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Startups like to &amp;quot;move fast and break things&amp;quot;... but how do you ensure
+that what breaks isn't security? How do you strike a balance and make
+sure you're able to ship quickly while still ensuring that what goes out
+the door doesn't have vulnerabilities? The answer begins by recognizing
+that security is a process, not a feature, and this has ramifications
+throughout the organization. It means that security engineering needs to
+be everyone's responsibility (instead of a select few), and it means
+that when security vulnerabilities crop up — and they will — the
+organization needs to be prepared and aligned to act quickly.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jacob Kaplan-Moss</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/be-agile-not-vulnerable.html</guid></item><item><title>Building Rich Applications with Django and Ember.js</title><link>https://pyvideo.org/djangocon-us-2013/building-rich-applications-with-django-and-ember.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Building Rich Applications with Django and Ember.js&lt;/p&gt;
+&lt;p&gt;Wednesday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Ember.js is the most advanced client-side JavaScript framework
+available: it provides optimistic server updates, automatically-updating
+templates and sensible defaults to dramatically increase developer
+productivity. Abstract&lt;/p&gt;
+&lt;p&gt;Learn how Django and Ember.js can compliment each other: how to
+integrate them where their functionality overlaps and reconcile the
+differences where their approaches contradict.&lt;/p&gt;
+&lt;p&gt;Django helps quickly express a data model and handle HTTP requests, but
+using it alone isn't conducive to building highly-dynamic interfaces.
+Ember, on the other hand, is a client-side framework designed with
+precisely these interfaces in mind, but doesn't tackle the server-side
+at all.&lt;/p&gt;
+&lt;p&gt;Both Django and Ember.js are large, ambitious and opinionated
+frameworks. This is what gives them their power over their more
+minimalist colleagues (Flask and Backbone.js, respectively) but because
+their opinions sometimes differ, it can be difficult to make them play
+together.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll briefly introduce Ember.js, compare and contrast how
+Django and Ember.js handle the various layers of an application, and
+show how to bridge between these two worlds.&lt;/p&gt;
+&lt;p&gt;Topics covered: - Ember's interpretation of MVC in Django terms -
+Overlap in functionality: which pieces of each framework to keep, modify
+and throw away - Compiling Assets - Connecting Ember to Django with
+Ember-data and Django REST framework&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Grant</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/building-rich-applications-with-django-and-ember.html</guid></item><item><title>Database Sharding with Django</title><link>https://pyvideo.org/djangocon-us-2013/database-sharding-with-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Database Sharding with Django&lt;/p&gt;
+&lt;p&gt;Wednesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Django works great for single database webapps, but did you know they
+give us the tools to create webapps with sharded data right out of the
+box? This talk will go over how we leveraged Django's features to add
+sharding to our webapp infrastructure. Abstract&lt;/p&gt;
+&lt;p&gt;Topics to cover:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Why do you need to shard your data? lots of data lots of writes&lt;/li&gt;
+&lt;li&gt;What should you do before sharding?
+Scale up - throw money at it. Feature partitioning - split feature data on different databases
+Sharded databases.&lt;/li&gt;
+&lt;li&gt;How to set up multiple databases in Django tools that we used at Wave. Talk about what Django gives us right out of the box (DB Routers) How database routers work. Gotchas when using South for DB migrations.&lt;/li&gt;
+&lt;li&gt;The downsides of multi-database systems. what we lose (ForeignKeys, Transactions management, select_related(), prefetch_related())&lt;/li&gt;
+&lt;li&gt;Scaling the database via sharding. what does this mean? how do I pick a key to shard on? what makes a good and bad sharding key?&lt;/li&gt;
+&lt;li&gt;Database routers for sharding.&lt;/li&gt;
+&lt;li&gt;New tooling that needs to be written to deal with database migrations. deal with database migrations&lt;/li&gt;
+&lt;li&gt;How to interact with your data through the ORM when it's sharded.&lt;/li&gt;
+&lt;li&gt;Need to start using Globally Unique PK's go over a few different strategies used by other companies. strategy for unique ID generation in Python.&lt;/li&gt;
+&lt;li&gt;Transactions + Sharded data. transactions are only useful on same-shard&lt;/li&gt;
+&lt;li&gt;Balancing sharded data across servers we chose multiple DB's per node. make db migration a DevOps task. downsides (limited db connections).&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ash Christopher</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/database-sharding-with-django.html</guid></item><item><title>Epic South Disasters: or, Why You Actually Need to Pay Attention to your DBMS</title><link>https://pyvideo.org/djangocon-us-2013/epic-south-disasters-or-why-you-actually-need-to.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Epic South Disasters: or, Why You Actually Need to Pay Attention to your
+DBMS&lt;/p&gt;
+&lt;p&gt;Wednesday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Using South has its gotchas. I'll go over some of them by using colorful
+examples involving data loss and hard-to-recover states. Abstract&lt;/p&gt;
+&lt;p&gt;Epic South Disasters: or, why you actually need to pay attention to your
+DBMS&lt;/p&gt;
+&lt;p&gt;A lot of people use South to manage database migrations. It's a great
+addition to the Django space that allows you to iterate quickly, without
+spending a lot of time writing and testing schema migrations. But what
+happens when South does things you didn't expect it to do? From the
+quibbles of differing database backends to phantom post_save signals
+sent during data migrations, this talk will offer a set of warnings
+illustrated by example. Prepare to be horrified.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Adams</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/epic-south-disasters-or-why-you-actually-need-to.html</guid></item><item><title>Everybody Loves Migrations</title><link>https://pyvideo.org/djangocon-us-2013/everybody-loves-migrations.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Everybody Loves Migrations&lt;/p&gt;
+&lt;p&gt;Wednesday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Times are changing - schema migrations are finding their way into core
+Django and becoming quite different in the process. Come and learn
+what's happening, why it's being done this way, and how you can best
+start using them. Abstract&lt;/p&gt;
+&lt;p&gt;This year has seen a lot of changes on the migration front. After a
+successful Kickstarter, schema migrations have been finding their way
+into core Django, and they're not quite the South migrations you're used
+to.&lt;/p&gt;
+&lt;p&gt;Don't worry though - behind every one of the new features or changes is
+five years of learning and experimentation, and this is where you can
+come and hear not only what's new and how best to use it, but also why
+it was done that way and the challenges that came up as part of it.&lt;/p&gt;
+&lt;p&gt;Among other topics, this should cover squashing, branch merge detection,
+custom fields, using raw SQL and data migrations with Python code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Godwin</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/everybody-loves-migrations.html</guid></item><item><title>Guerilla APIs: integrating web systems that weren't designed to be integrated</title><link>https://pyvideo.org/djangocon-us-2013/guerilla-apis-integrating-web-systems-that-werent.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;GUERILLA APIS: INTEGRATING WEB SYSTEMS THAT WEREN'T DESIGNED TO BE
+INTEGRATED&lt;/p&gt;
+&lt;p&gt;Thursday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION In an ideal world, every web system would provide a well
+designed REST API with oAuth authentication. But what do you do when
+those things don't exist?&lt;/p&gt;
+&lt;p&gt;ABSTRACT In an ideal world, every web system would provide a well
+designed REST API with oAuth authentication. But what do you do when
+that doesn't exist?&lt;/p&gt;
+&lt;p&gt;In this talk, Russell Keith-Magee will explore some unorthodox
+techniques for extracting and inserting information into the sort of
+systems you see in the real world outside Silicon Valley -- systems that
+don't provide a nice ReSTful API.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Russell Keith-Magee</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/guerilla-apis-integrating-web-systems-that-werent.html</guid></item><item><title>How to Learn Django the Wrong Way</title><link>https://pyvideo.org/djangocon-us-2013/how-to-learn-django-the-wrong-way.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;How to Learn Django the Wrong Way&lt;/p&gt;
+&lt;p&gt;Wednesday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Can you remember your very first Django project and some embarrassing
+mistakes you made? Come hear about some 'aha' moments of a novice
+Djangonaut! I'll share valuable lessons I learned by doing things the
+wrong way. If you are a Django novice, you'll learn some pitfalls to
+avoid. If you are a seasoned Djangonaut, you can find out challenges
+that a new Djangonaut, your new hire or mentee may face! Abstract&lt;/p&gt;
+&lt;p&gt;Can you remember your very first Django project and some mistakes you
+made? Or are you a Django novice embarking on your first application or
+struggling with one?&lt;/p&gt;
+&lt;p&gt;Come hear about my experiences as an entry developer &amp;#64;InVitae. In this
+talk, I'll give a quick overview of my first Django project and give
+snapshots to explain how it changed over time. There will be code
+snippets to show some horrible code I initially wrote, consequences of
+those code, and improvements that were made later. In the process,
+you'll find out how I learned Django (more accurately, still learning)
+by doing things the wrong way and how one can learn about good software
+engineering practices through bad practices.&lt;/p&gt;
+&lt;p&gt;Some potential topics include: Where does this function belong-- in
+models or views or another file? Facing the consequences of bad schema
+in an agile programming environment Auto-reloading troubles to removing
+the cache layer Migrating from function-based views to class-based views
+A posteriori testing&lt;/p&gt;
+&lt;p&gt;The goal of this talk is two-fold: to give a fresh perspective on how
+building a Django application may be like for the complete newbie (those
+new to programming and to Django), and to help prevent other beginners
+from making the same mistakes I made.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Moon Limb</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/how-to-learn-django-the-wrong-way.html</guid></item><item><title>Lightning Talks - Sept. 4, 2013</title><link>https://pyvideo.org/djangocon-us-2013/lightning-talks-sept-4-2013.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;LIGHTNING TALKS: Sept. 04, 2013&lt;/p&gt;
+&lt;p&gt;The annual tradition of lightning talks has captivated the Django world.&lt;/p&gt;
+&lt;p&gt;A lightning talk is a chance to say something to (a large subset of) the
+whole conference. The thing is, lightnings should last &amp;quot;a MAXIMUM of
+five minutes.&amp;quot; Allowing a minute between talks, if each talk averaged
+THREE minutes there would be time for roughly forty-five talks. So
+please don't feel that you HAVE to speak for five minutes. Say what you
+have to say, and stop.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/lightning-talks-sept-4-2013.html</guid><category>lightning talks</category></item><item><title>MySQL 5.6</title><link>https://pyvideo.org/djangocon-us-2013/mysql-5-6.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;MySQL 5.6&lt;/p&gt;
+&lt;p&gt;Wednesday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;MySQL is the ubiquitous web database but many developers are unaware of
+new features found in the later releases. This session will cover
+improvements in the optimizer, Global Transactions IDs, dynamic DDL, and
+more. Abstract&lt;/p&gt;
+&lt;p&gt;MySQL is the ubiquitous web database but many developers are unaware of
+new features found in the later releases. This session will cover the
+advancements MySQL has made in version 5.6 and show how these new
+features can make your life easier. See how Global Transaction IDs and
+simple Python scripts (MySQL Utilities) can be used to replicate slave
+servers from a master and provide automatic fail over if the master
+dies. Discover how the improved optimizer provides better performance,
+handles sub-queries, and provides more tuning possibilities. New dynamic
+table definitions make schema changes less onerous. Discover how a NoSQL
+interface via memcached provides key/value pair access to data and SQL
+access. The new performance schema provides more insights into system
+tuning to eek out the last bit of performance. All that and more in less
+than an hour.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dave Stokes</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/mysql-5-6.html</guid></item><item><title>Rapid Prototyping and Communicating with Clients</title><link>https://pyvideo.org/djangocon-us-2013/rapid-prototyping-and-communicating-with-clients.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Rapid Prototyping and Communicating with Clients&lt;/p&gt;
+&lt;p&gt;Wednesday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;This talk will focus on the conversations around rapid prototyping.
+Miscommunication between developers and clients can occur because of
+different perspectives and work styles. In this talk I'll introduce
+interaction design concepts and templating with Django to show how easy
+it is to set up a minimally viable UI and explain the value in letting
+users feel that they have creative control. Abstract&lt;/p&gt;
+&lt;p&gt;Talk will begin with an overview of some common communication problems
+between developers and non-technical clients. For example, the client
+may want to see a particular font but want to see how it looks before
+making a final decision. Allowing them the flexibility to edit this
+setting in the admin offsets some of the back and forth dialog and
+editing CSS files numerous times. (2 mins)&lt;/p&gt;
+&lt;p&gt;Intro to Interaction Design (5 mins) - Wireframing and design pattern
+libraries - Screen sizes and responsive design&lt;/p&gt;
+&lt;p&gt;Intro to Django Templates (8 mins) - Talk about the common template
+elements (such as include tag for DRY design) - Tips on structuring
+templates&lt;/p&gt;
+&lt;p&gt;Viewing web applications as data flow diagrams (5 mins) - Describe DFD
+diagrams - Organizing templates based on DFD components&lt;/p&gt;
+&lt;p&gt;Example of apps with different UIs for same data (10 mins) - Picture
+dictionary (showing text, images, links)
+(github.com/katychuang/django-snapbook) - Interactive reports on
+statistics (github.com/katychuang/techsummitpr)&lt;/p&gt;
+&lt;p&gt;Example of an app with pseudo apps (5 mins) - Using cloud hosted console
+for prototyping with django (katychuang.pythonanywhere.com)&lt;/p&gt;
+&lt;p&gt;Recap on design patterns and templates (1 min)&lt;/p&gt;
+&lt;p&gt;Questions &amp;amp; Discussion (rest of the time)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Katherine Chuang</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/rapid-prototyping-and-communicating-with-clients.html</guid></item><item><title>Red User, Blue User, MyUser, auth.User</title><link>https://pyvideo.org/djangocon-us-2013/red-user-blue-user-myuser-auth-user.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Red User, Blue User, MyUser, auth.User&lt;/p&gt;
+&lt;p&gt;Wednesday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;An exploration of one of the banner features of Django 1.5 -- Custom
+User models. Includes worked examples, a discussion of design decisions
+that must be made, and a look at the internal architecture that makes it
+all possible. Abstract&lt;/p&gt;
+&lt;p&gt;One of the banner features of Django 1.5 was the introduction of custom
+User models. Using this new feature, you are free to use any model you
+wish as your User, instead of being bound to the '30 character username
+and optional email' requirement of auth.User.&lt;/p&gt;
+&lt;p&gt;In this talk, Django core developer Russell Keith-Magee will give an
+overview of the API, and walk through some examples for some common --
+and some not so common -- use cases for a custom User.&lt;/p&gt;
+&lt;p&gt;He will also explore some common pitfalls and limitations of the custom
+User model API, and look at the design decisions that face any use of
+the custom User model API.&lt;/p&gt;
+&lt;p&gt;Finally, we'll take a brief look under the hood to see how the feature
+actually works, and see how the same technique could be used for other
+pluggable apps.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Russell Keith-Magee</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/red-user-blue-user-myuser-auth-user.html</guid></item><item><title>Small Shop / Big Solutions: Django and Long-Term Thinking</title><link>https://pyvideo.org/djangocon-us-2013/small-shop-big-solutions-django-and-long-term.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;SMALL SHOP / BIG SOLUTIONS: DJANGO AND LONG-TERM THINKING&lt;/p&gt;
+&lt;p&gt;Wednesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;DESCRIPTION In a small non-profit with a 10,000 year business plan, how
+does todays technology play a role? how does it hold up against entropy
+and evolve over long-periods of time? Django has done very well for us
+and I'd like to share some of my stories and lessons. A small shop can
+build big solutions that last.&lt;/p&gt;
+&lt;p&gt;ABSTRACT This talk will focus on how Django has helped a small
+non-profit keep up with the big guys and 3rd party solutions over the
+long-term. I'll share with you how I stumbled upon it, dove in and
+pitched it to the rest of the company. How we (and you, through IRC
+#django!) took our three major sites, all running on different
+technoloiges, and migrated them to Django.&lt;/p&gt;
+&lt;p&gt;There is so much else out there that we use, of course and I learned
+some valuable lessons from Django on how to pick out the great ones.
+We'll get to discuss and share workflow productivity tips. Being a
+non-profit that takes no sides, I have the special oppourtunity to share
+inside stories and lessons that may be of use to you.&lt;/p&gt;
+&lt;p&gt;In smaller shops, full-stack positions are common and thats what I am. I
+think a lot of us are. It's hard to do so but with the help of tools
+such as Django we're able to pick up incredible pace and build awesome
+things together.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Keating</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/small-shop-big-solutions-django-and-long-term.html</guid></item><item><title>Take My Money: an Intro to Charging for Things with Django</title><link>https://pyvideo.org/djangocon-us-2013/take-my-money-an-intro-to-charging-for-things-with.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;TAKE MY MONEY: AN INTRO TO CHARGING FOR THINGS WITH DJANGO&lt;/p&gt;
+&lt;p&gt;Thursday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Charging for your application can often be almost as
+difficult as creating the initial version of the application itself. In
+this talk, we'll cover tools and techniques to avoid reinventing the
+wheel and get you to your pay-day sooner, no matter what sort of payment
+structure you wish to implement.&lt;/p&gt;
+&lt;p&gt;ABSTRACT You're got your app ready to go -- your ticket to fame and
+fortune. But wait, how are you going to collect that fortune from your
+customers? We'll walk through the different payment models common on the
+web, and how to charge for each one using Django.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel Grant</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/take-my-money-an-intro-to-charging-for-things-with.html</guid></item><item><title>Ten Minutes To Replication</title><link>https://pyvideo.org/djangocon-us-2013/ten-minutes-to-replication.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;10 MINUTES TO REPLICATION&lt;/p&gt;
+&lt;p&gt;Wednesday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Daunted and confused by PostgreSQL's built-in replication?
+Don't be; it's really not that complicated. In ten minutes, you can set
+up a multi-server replication cluster.&lt;/p&gt;
+&lt;p&gt;ABSTRACT We will set up a four-server replication cluster on AWS in the
+first ten minutes of this class. Then we'll explain how we did it, and
+briefly go over some of the additional options you have for replication
+in PostgreSQL 9.2 and 9.3, including:&lt;/p&gt;
+&lt;p&gt;backup archiving cascading replication failover and failback
+load-balancing options why synchronous replication isn't what you think
+it is Attendees will leave knowing how to set up a simple replication
+cluster on cloud hosting.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Josh Berkus</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/ten-minutes-to-replication.html</guid></item><item><title>Transactions for Web Developers</title><link>https://pyvideo.org/djangocon-us-2013/transactions-for-web-developers.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;TRANSACTIONS FOR WEB DEVELOPERS&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Django has since long outgrown its roots in publishing. It's
+used in enterprise systems, under write-heavy workloads and strong data
+integrity requirements. But transaction management barely changed since
+the 0.9x days. Even veterans pull their hair out fighting DatabaseErrors
+when they use it. At last transaction handling will be overhauled in
+Django 1.6. How does the new system work, and why?&lt;/p&gt;
+&lt;p&gt;ABSTRACT This talk will start from the transactional features of
+databases and work its way through the Python database API, up to
+Django's transaction management. It'll explain the downsides of Django's
+historical transaction handling and describe the new system introduced
+in Django 1.6.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aymeric Augustin</dc:creator><pubDate>Thu, 03 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-03:djangocon-us-2013/transactions-for-web-developers.html</guid></item><item><title>CSS Processors</title><link>https://pyvideo.org/djangocon-us-2013/css-processors.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;CSS Preprocessors&lt;/p&gt;
+&lt;p&gt;Tuesday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Preprocessors like Sass and LESS bring basic programming functionality
+to CSS allowing for resilient, configurable front-ends. Learn more about
+these tools, how to use them, how to integrate them into your workflow,
+and how to extend them by opening their hoods. Abstract&lt;/p&gt;
+&lt;p&gt;This talk covers core concepts and syntax, then moves into best
+practices and pitfalls. This talk demonstrates the programming
+capabilities baked into preprocessors with real world scenarios and
+working code samples. The audience will gain the knowledge necessary to
+begin using these tools and learn where to look to stay up-to-date.
+Introduction Capabilities Real World Usage Advanced Usage, a Glance
+Under the Hood Wrap Up/QA&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael Trythall</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/css-processors.html</guid></item><item><title>Denormalize All The Things!</title><link>https://pyvideo.org/djangocon-us-2013/denormalize-all-the-things.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Denormalize All the Things!&lt;/p&gt;
+&lt;p&gt;Thursday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;What do you do when you need to cache a model but also need to query the
+cached data? You denormalize all the things! In this talk we will see
+how to create and maintain denormalized versions of some of your Django
+models in order to enjoy the benefits of caching while maintaining the
+benefits of relational data. Abstract Denormalized models: another copy
+of your data that you can query&lt;/p&gt;
+&lt;p&gt;Typical usage (with examples): pre-computed data a different view of
+your data combining multiple model&lt;/p&gt;
+&lt;p&gt;Keeping things synced The canonical data is always right&lt;/p&gt;
+&lt;p&gt;You must define the authoritative source of data and maintain it. Know
+thy parent&lt;/p&gt;
+&lt;p&gt;Keeping track of the canonical source (across database shards)
+Propagating changes manually (call a method on save) &amp;quot;use the signals
+Luke&amp;quot; (example)&lt;/p&gt;
+&lt;p&gt;Handling concurrency issues&lt;/p&gt;
+&lt;p&gt;The approach: you can't improve what you can't measure. Measure, fix,
+measure again, repeat.&lt;/p&gt;
+&lt;p&gt;Problems and some solutions (applying computer science goodness) one at
+a time: locks and mutexes (pylock) ensuring update order is correct&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nathan Duthoit</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/denormalize-all-the-things.html</guid></item><item><title>Django and Docker: a Marriage Made in Heaven</title><link>https://pyvideo.org/djangocon-us-2013/django-and-docker-a-marriage-made-in-heaven.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Django and Docker: a Marriage Made in Heaven&lt;/p&gt;
+&lt;p&gt;Tuesday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Docker is a new tool that makes it easy to bundle and deploy your
+applications to any host running Docker. In this talk I'll show you how
+to get started with Docker, and how to use it to deploy your Django apps
+to your different server environments. Abstract Overview:&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to show you how you can use Docker to make your
+life easier when developing Django apps. Developing Django apps is fun,
+but there is a lot of other stuff you need to do in your day to day
+work, that isn't fun. Let me show you how to let Docker help you make
+those tasks more fun, and take less time, so you can get back to doing
+the stuff you love. Outline: Intro to docker for the people who have
+never heard of it. Show how easy it is to setup a docker server Explain
+a little how docker works under the covers. Go over the steps that are
+needed to convert a django application to use docker Show how easy it is
+to deploy your newly converted docker application to any number of
+docker servers (EC2, Rackspace, digital Ocean, local server, etc) with a
+few easy commands. Go over the different use cases for using Docker in
+your development environment (testing, deployment, etc) Questions&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ken Cochrane</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/django-and-docker-a-marriage-made-in-heaven.html</guid></item><item><title>Django Toolsets: what are they buying you, what are they costing you?</title><link>https://pyvideo.org/djangocon-us-2013/django-toolsets-what-are-they-buying-you-what-are.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;DJANGO TOOLSETS: WHAT ARE THEY BUYING YOU, WHAT ARE THEY COSTING YOU?&lt;/p&gt;
+&lt;p&gt;Thursday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Experienced&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Django makes some things extremely easy. That doesn't make
+them right for you, your application or your business. In this talk
+we'll explore some things HireVue does with Django, what fits our
+business, what doesn't, and how you can learn from our mistakes.&lt;/p&gt;
+&lt;p&gt;ABSTRACT HireVue's business is about digital interviewing. That means
+large organizations with sensitive data and high availability demands.
+In this presentation we'll discuss our experience using Django,
+TastyPie, and South to convert our legacy PHP application into the brave
+new world of Python. We'll discuss why we chose these tools and what we
+expected to get out of them, how things when awry for us and how we
+recovered from it. We'll also cover what decisions have allowed us to
+continue to meet our obligations while using Django. Some topics
+include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Class methods on models and template tags to simplify queries - how
+that led to thousands of queries per page&lt;/li&gt;
+&lt;li&gt;Django granular permissions - how we twisted Django signals into an
+extensive mandatory permissions system that strangled our development&lt;/li&gt;
+&lt;li&gt;TastyPie - how we wrote an API really quickly that led us to shave a
+small herd of yaks and didn't really meet our business needs&lt;/li&gt;
+&lt;li&gt;South - how south made us not think about migrations any more. Until
+we started taking down our production website with them.&lt;/li&gt;
+&lt;li&gt;Django admin - how it allowed us to avoid any work to create real
+internal tools and instead do work trying to train support personnel
+as engineers. Badly.&lt;/li&gt;
+&lt;li&gt;Django test runner - how we started writing unit tests. Lots of them.
+Enough that we had to ditch it to be able to effectively debug test
+failures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While our experience with these tools does not indicate that they are
+bad or unworkable it does provide insight in to how you can choose to
+use these, or other tools, depending on your business needs. We have
+learned to constantly improve our toolset by evaluating what helps us,
+what hinders us, what our tools buy us and what they cost us. From our
+painful beginnings we've switched to&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Separating our platform from our view logic to control query count
+and separate concerns&lt;/li&gt;
+&lt;li&gt;Simplify our permissions system to consolidate business logic and
+reduce database queries&lt;/li&gt;
+&lt;li&gt;Separate out our API logic to use common code and provide services
+that make sense for our business and are entirely separate from our
+persistence layer&lt;/li&gt;
+&lt;li&gt;Use south coupled with careful process to avoid downtime when running
+migrations and allow developers to coordinate schema modifications&lt;/li&gt;
+&lt;li&gt;Stop using django admin and build real internal tools&lt;/li&gt;
+&lt;li&gt;Switch to py.test for our test runner&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eli Ribble</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/django-toolsets-what-are-they-buying-you-what-are.html</guid></item><item><title>DjangoCon Intro and Keynote: State of the Pony Report -- Russell Keith-Magee</title><link>https://pyvideo.org/djangocon-us-2013/djangocon-intro-and-keynote-state-of-the-pony.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Intro and Keynote: State of the Pony Report, by Russell Keith-Magee on
+Tuesday, Sept. 3rd, 2013&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/djangocon-intro-and-keynote-state-of-the-pony.html</guid></item><item><title>Finding the Needle: Search and Django</title><link>https://pyvideo.org/djangocon-us-2013/finding-the-needle-search-and-django.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Finding the Needle: Search and Django&lt;/p&gt;
+&lt;p&gt;Tuesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Most websites share at least two things in common: content and users who
+want to find content. This talk will cover the basics of site search
+using search engines (the kind you run, not Google), setting up a Django
+project with Haystack, highlight some of the gotchas you might
+encounter, and touch on some more advanced functionality. Abstract&lt;/p&gt;
+&lt;p&gt;The ability to find content on a site is important to users, and there
+are some great tools that make a sometimes tricky problem a lot simpler.
+This talk will address the search problem, introduce a few of the tools
+at your disposal, and provide a way to get started using Django
+Haystack.&lt;/p&gt;
+&lt;p&gt;The goals is for developers new to search to understand what's different
+about using a search engine as an additional service, to be aware of
+some of the &amp;quot;gotchas&amp;quot;, and to know not just what's possible but how to
+get started. Advanced topics in brief One slice at a time: Faceting
+Finding Carmen Diego: Geospatial search This, this, this: Relevance
+boosting Puppies, dogs, and canines: Synonym searching&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Lopatin</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/finding-the-needle-search-and-django.html</guid></item><item><title>Getting Started With Salt</title><link>https://pyvideo.org/djangocon-us-2013/getting-started-with-salt.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Getting Started with Salt&lt;/p&gt;
+&lt;p&gt;Tuesday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Salt is the new kid on the block in the configuration management space.
+Unlike the Ruby-based Chef and Puppet, Salt is written in Python, making
+it easy to debug and extend for Django developers. This talk will
+introduce Salt as well as explore some of the things that make it
+unique. Abstract Current landscape and Definitions Configuration
+Management Remote Execution Framework Why Salt is different language
+architecture approach Intro to Salt concepts master/minion, grains,
+pillars, states, modules Beyond Configuration Management (What else Salt
+can do)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Baumgartner</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/getting-started-with-salt.html</guid></item><item><title>How To Create Amazing Open Source Modules</title><link>https://pyvideo.org/djangocon-us-2013/how-to-create-amazing-open-source-modules.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;HOW TO CREATE AMAZING OPEN SOURCE MODULES&lt;/p&gt;
+&lt;p&gt;Tuesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Every Django project will eventually benefit from a third
+party module. Whether you're considering publishing your first module or
+your next one, this talk will cover everything you need to know. The
+open source quilt is woven by each of us. How do you make sure your
+module is useful to the community? How do you accept patches? How do you
+maintain your module?&lt;/p&gt;
+&lt;p&gt;ABSTRACT Intended audience:&lt;/p&gt;
+&lt;p&gt;Python/Django developers who understand Python modules but are new to
+publishing them as open source Developers who have built several open
+source modules but want to get better at making them useful and
+effective Developers in closed source companies who want to share code
+with their team more effectively Anyone who wants to make Python
+software better for everyone A sampling of topics:&lt;/p&gt;
+&lt;p&gt;Documenting your module Ensuring stability Supporting multiple versions
+of Python Collaborating with the community&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kumar McMillan</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/how-to-create-amazing-open-source-modules.html</guid></item><item><title>HTTP for Great Good</title><link>https://pyvideo.org/djangocon-us-2013/http-for-great-good.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;HTTP FOR GREAT GOOD&lt;/p&gt;
+&lt;p&gt;Thursday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION I will be explaining some of the tricks and details about
+how Disqus uses HTTP techniques to scale our Django backends by
+harnessing upstream caches.&lt;/p&gt;
+&lt;p&gt;ABSTRACT I will be providing a brief introduction into tools that work
+along-side Django, such as Varnish, and explaining how these critical
+components work together to make a fast user experience. &amp;quot;The fastest
+HTTP request is no HTTP request at all.&amp;quot;&lt;/p&gt;
+&lt;p&gt;What tools does Django provide for working with this? What are things we
+can look out for? How can we rearchitect something to be more
+&amp;quot;cacheable&amp;quot;? What do all of these HTTP headers even mean?!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Robenolt</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/http-for-great-good.html</guid></item><item><title>Integration and Functional Testing with LiveServerTestCase, Selenium and More</title><link>https://pyvideo.org/djangocon-us-2013/integration-and-functional-testing-with-selenium.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;INTEGRATION AND FUNCTIONAL TESTING WITH LIVESERVERTESTCASE, SELENIUM AND
+MORE&lt;/p&gt;
+&lt;p&gt;Thursday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION In this talk, I will present LiveServerTestCase, a feature
+recently added to Django to enable new, comprehensive forms of testing.
+I will in particular show how to use LiveServerTestCase with browser
+automators like Selenium to perform integration and functional tests for
+your Django applications.&lt;/p&gt;
+&lt;p&gt;ABSTRACT The Django ecosystem has always placed a strong emphasis on
+testing, partly thanks to a wide range of tools available in Django's
+own testing framework. One of the most used from those tools is the
+dummy web client, which allows to emit mock HTTP requests directly to
+your codebase and to inspect the responses' contents. However, as useful
+as it is, this dummy client is limited as it does not exercise the full
+HTTP specification and it cannot effectively reproduce actual user
+interactions. With the recent introduction of LiveServerTestCase, it is
+now possible to use sophisticated HTTP libraries like python-requests
+and browser automators like Selenium to perform your tests in a more
+comprehensive way. By automatically running a live HTTP server in the
+background, LiveServerTestCase allows you to write tests ensuring that
+all layers of your web application properly fit together and that user
+interactions function well from end to end.&lt;/p&gt;
+&lt;p&gt;This talk will cover a range of topics to help you get started with the
+writing of integration and functional tests for your Django
+applications, including:&lt;/p&gt;
+&lt;p&gt;A brief history of when and how LiveServerTestCase was added to Django
+core. A brief review of different browser automators (Selenium,
+Ghost.py, etc.). Tips for writing, accelerating and debugging Selenium
+tests. Testing interactive Javascript-based front-ends and user
+workflows. A demo of the Django core Selenium test suite. Testing
+RESTful APIs with python-requests. Running Selenium tests in headless
+mode for continuous integration. Thoughts on when to use, and when not
+to use, integration and functional tests.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Julien Phalip</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/integration-and-functional-testing-with-selenium.html</guid></item><item><title>Lightning Talks, Awards, and Wrap Up, Sept. 05</title><link>https://pyvideo.org/djangocon-us-2013/lightning-talks-awards-and-wrap-up-sept-05.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A few final Lightning talks, Awards, and DjangoCon Wrap up, from Sept.
+05, 2013&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/lightning-talks-awards-and-wrap-up-sept-05.html</guid><category>lightning talks</category></item><item><title>Lightning Talks, Sept 05, 2013</title><link>https://pyvideo.org/djangocon-us-2013/lightning-talks-sept-05-2013.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;LIGHTNING TALKS: Sept. 05, 2013&lt;/p&gt;
+&lt;p&gt;The annual tradition of lightning talks has captivated the Django world.&lt;/p&gt;
+&lt;p&gt;A lightning talk is a chance to say something to (a large subset of) the
+whole conference. The thing is, lightnings should last &amp;quot;a MAXIMUM of
+five minutes.&amp;quot; Allowing a minute between talks, if each talk averaged
+THREE minutes there would be time for roughly forty-five talks. So
+please don't feel that you HAVE to speak for five minutes. Say what you
+have to say, and stop.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/lightning-talks-sept-05-2013.html</guid><category>lightning talks</category></item><item><title>Making Django Play Nice with Third Party Services</title><link>https://pyvideo.org/djangocon-us-2013/making-django-play-nice-with-third-party-services.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;MAKING DJANGO PLAY NICE WITH THIRD PARTY SERVICES&lt;/p&gt;
+&lt;p&gt;Thursday 10 a.m.--10:45 a.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Modern Django projects combine custom apps with third party
+services, such as Twilio and Stripe, to create a complete product.
+Choosing the right services for your application can make or break its
+usefulness to users as well as your sanity during maintenance. This talk
+will show you how to properly evaluate, integrate, and maximize what you
+get out of SaaS products in your Django projects.&lt;/p&gt;
+&lt;p&gt;ABSTRACT THE FOUR STEPS: IDENTIFY, EVALUATE, INTEGRATE, AND MAINTAIN
+Identify&lt;/p&gt;
+&lt;p&gt;What problem needs to be solved? Finding services and their competitors
+Cost model fit - are they successful when you're successful? Identify
+Checklist Evaluate&lt;/p&gt;
+&lt;p&gt;Instructions and walkthroughs - Stripe example Their platform technology
+- Twilio example Open source community and dev team responsiveness -
+Urban Airship example Long term viability and future service plans -
+Intercom.io example Evaluation checklist Integrate&lt;/p&gt;
+&lt;p&gt;Settings best practices, environment variables (SECRET_KEY) Test versus
+production (functional testing) Limiting coupling (code examples) When
+it breaks, how will you break? Integration checklist Maintain&lt;/p&gt;
+&lt;p&gt;Keeping up with security updates Regression testing Maintenance
+checklist Conclude&lt;/p&gt;
+&lt;p&gt;Combined Four Steps Checklist Review Takeaway story: SimpleGeo&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Makai</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/making-django-play-nice-with-third-party-services.html</guid></item><item><title>My Bootcamp Brings all the Nerds to the Yard: Lessons from GeekChic</title><link>https://pyvideo.org/djangocon-us-2013/my-bootcamp-brings-all-the-nerds-to-the-yard-from.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;My Bootcamp Brings all the Nerds to the Yard: Lessons from GeekChic&lt;/p&gt;
+&lt;p&gt;Tuesday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;GeekChic Programming CEO &amp;amp; Founder, Josannah Keller, discusses best
+practices and lessons learned from the all-female software training
+program designed to give women the tools they need to become active
+participants and leaders in the technology community. Abstract Ten-Hut!
+The Bootcamp Model Benefits of coding schools The pitfalls (and how to
+avoid them) Hiring junior developers&lt;/p&gt;
+&lt;p&gt;The Full Monty: Teaching full stack development with Python &amp;amp; Django
+Best practices Lessons learned&lt;/p&gt;
+&lt;p&gt;Leaning In: How to start a (not so) new business in a new market The
+technology of marketing Lessons learned&lt;/p&gt;
+&lt;p&gt;Women Transforming Technology: Where my ladies at?! Gender gap in
+technology Benefits of diversity on a technical team Recruiting women&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Josannah Keller</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/my-bootcamp-brings-all-the-nerds-to-the-yard-from.html</guid></item><item><title>Overcoming Troubles with Class-based Generic Views</title><link>https://pyvideo.org/djangocon-us-2013/overcoming-troubles-with-class-based-generic-views.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;OVERCOMING TROUBLES WITH CLASS-BASED GENERIC VIEWS&lt;/p&gt;
+&lt;p&gt;Thursday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION This talk will introduce both Class-based Views (CBV) and
+Class-based Generic Views (CBGV), before moving into how to customize
+CBGV, focusing in particular on data generation at the view and form
+level. The talk will further involve the source code for CBGV,
+Validation, and Python's Method Resolution Order.&lt;/p&gt;
+&lt;p&gt;ABSTRACT When tasked with building a Banking website, I set out to build
+the the site using Class-based Generic View (CBGV). As I built the
+features, I quickly discovered that assumptions I had made about
+Validation and CBGV were wrong, circumventing data generation and
+propagation in the banking app. In this talk, I will detail the
+solutions I came up with to the various problems I encountered while
+building the site. As such, this talk is an in-depth look at CBGV, that
+will involve a short tutorial in both Class-based Views (CBV) and CBGV.
+We will then examine the source code of CBGV, allowing for customization
+of the project's views. Notably, these customizations allow for data
+generation in Forms and Views, instead of Models. This talk will also
+offer a short analysis of Validation, and quickly look at Python's
+Method Resolution Order.&lt;/p&gt;
+&lt;p&gt;By the end of the talk, you will have a fundamental understanding of
+both CBV and CBGV, and you will know which functions to override in
+Models, Forms, and Views to automatically generate data.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Pinkham</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/overcoming-troubles-with-class-based-generic-views.html</guid></item><item><title>Scaling Your Write-heavy Django App: a case study</title><link>https://pyvideo.org/djangocon-us-2013/scaling-your-write-heavy-django-app-a-case-study.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Scaling Your Write-heavy Django App: a case study&lt;/p&gt;
+&lt;p&gt;Tuesday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Content management systems and other read-heavy Django apps are
+relatively easy to scale. Scaling write-heavy apps is another matter. In
+this talk I'll walk through our experience scaling the University of
+Chicago's custom school survey application to handle over 75,000
+requests per minute and upwards of 9,500 PostgreSQL transactions per
+second. Abstract&lt;/p&gt;
+&lt;p&gt;Content management systems and other read-heavy Django apps are
+relatively easy to scale. You add some caching, and maybe a couple extra
+web servers for good measure. Scaling write-heavy apps is another
+matter, both from an app server and a database server perspective. In
+this talk I'll walk through our experience scaling the University of
+Chicago's custom school survey application to handle over 75,000
+requests per minute and upwards of 9,500 PostgreSQL transactions per
+second. This includes everything from django-debug-toolbar and server
+provisioning to load testing and consolidated logging. The following is
+a rough outline of topics to be covered: Eliminating gross
+inefficiencies with django-debug-toolbar Analyzing your Postgres logs
+for repetitive queries Establishing a platform you can use to test
+Creating a test script with JMeter Running your test script at scale
+Interpreting load test results Things we tried that didn't work
+Optimizing your web server configuration Final tweaks to your Postgres
+configuration&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tobias McNulty</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/scaling-your-write-heavy-django-app-a-case-study.html</guid></item><item><title>Serving More Requests for Less Money: how Django is saving "Ain't It Cool News"</title><link>https://pyvideo.org/djangocon-us-2013/serving-more-requests-for-less-money-how-django-is.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Serving More Requests for Less Money: how Django is saving &amp;quot;Ain't It
+Cool News&amp;quot;&lt;/p&gt;
+&lt;p&gt;Tuesday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Hear how in under 2 weeks Ain't it Cool News, a movie news and review
+website with over 15 years of raw HTML content and hundreds of thousands
+of daily visits, was moved from an expensive custom Ruby on Rails App on
+an EC2 cluster to a dedicated server running Django. All with zero
+downtime. Abstract&lt;/p&gt;
+&lt;p&gt;In December 2012 the movie website Ain't It Cool News was in a rut-
+advertising revenues were going down while their custom Ruby on Rails
+solution on EC2 seems to require more and more system administration and
+hosting resources.&lt;/p&gt;
+&lt;p&gt;Hear how by using django a website with over a decade of raw HTML
+content, 4.5 million comments and hundreds of thousands of daily visits
+was moved from EC2 to a single managed server running Django behind the
+Cloudfront CDN with no downtime at a significantly reduced monthly cost.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nick Catalano</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/serving-more-requests-for-less-money-how-django-is.html</guid></item><item><title>State of the Real-time Web with Django</title><link>https://pyvideo.org/djangocon-us-2013/state-of-the-real-time-web-with-django.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;STATE OF THE REAL-TIME WEB WITH DJANGO&lt;/p&gt;
+&lt;p&gt;Thursday 11:30 a.m.--12:15 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;DESCRIPTION In 2013, &amp;quot;real-time&amp;quot; is more than a buzzword: it's a reality
+on the Web. Unfortunately, for users of Django, it's still a foreign
+world that involves new concepts and new components, and it doesn't
+integrate well with traditional infrastructure. What is the real-time
+web? Why is it hard to support in Django? What are our options today?
+What can we expect in the future?&lt;/p&gt;
+&lt;p&gt;ABSTRACT This talk will start by describing the protocols supporting the
+real-time web and showing a few use cases. Then it will explain how this
+new paradigm performs and scales differently from the traditional
+request / response cycle and it will present some software components
+that can help build a real-time architecture. Finally it will analyse
+what PEP 3156 could mean for Django.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aymeric Augustin</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/state-of-the-real-time-web-with-django.html</guid></item><item><title>Stateless / Immutable Webapps - Stealing Ideas from Functional Patterns</title><link>https://pyvideo.org/djangocon-us-2013/stateless-immutable-webapps-stealing-ideas-from.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;STATELESS / IMMUTABLE WEBAPPS - STEALING IDEAS FROM FUNCTIONAL PATTERNS&lt;/p&gt;
+&lt;p&gt;Thursday 10 a.m.--10:45 a.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;DESCRIPTION What would happen if we replaced Django's orm with an
+analogous but immutable equivalent. This is where my story begins...&lt;/p&gt;
+&lt;p&gt;ABSTRACT This talk started after I heard a talk by Gary Bernhart at a
+conference in Chicago(SCNA). There he talked about a hypothetical
+programming structure that held many functional principles(SOC,
+data-in-data-out functions, etc...), but included enough latitude to
+keep non-functional tools and structures.&lt;/p&gt;
+&lt;p&gt;So I decided to write my next
+project(&lt;a class="reference external" href="https://github.com/MattyO/trackerCharts"&gt;https://github.com/MattyO/trackerCharts&lt;/a&gt;) in this style to see
+how things would play out in the real world. And it turned out great.
+This style of a &amp;quot;functional core surrounded by an imperative ring&amp;quot;
+pushed me towards more and simpler unit tests, the ability to push back
+many data decisions much later into the process, and a really speedy
+test suite for little to no extra work. However, this program had no
+database; being that there was so little data that it fit into a
+document style store so nicely, everything was held on the file system.&lt;/p&gt;
+&lt;p&gt;With the next project being written in Django instead of Flask I was
+pushed into trying this structure while dealing with Django's ORM. In
+the process of trying to turn django's ORM calls into more pure forms of
+straight data, I wrote some code to turn turn the ORM query object into
+something that had an equivalent DSL, but without the ability to make
+further calls to the database. ORM's ended up being abstracted into a db
+module that returned this new type of data. Some more great things
+happened: Data access was much easier to see in views, db integration
+tests only covered the specified uses cases in the module, what data a
+view or function actually needs is readably apparent, mocking database
+calls become completely unnecessary (due to the makeup of the new data
+models), other kinda data sources were trivial to convert; so data just
+looked like data no matter where it came from(the file system, an ORM,
+redis, mongo).&lt;/p&gt;
+&lt;p&gt;I would like to share some of this journey, talk about separating data
+from functionality(the good times, the bad times), some of the code that
+emerged form my journey, and things we can take away from this grand
+experiment. Thanks !! -Matt&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt ODonnell</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/stateless-immutable-webapps-stealing-ideas-from.html</guid></item><item><title>The Path to Smoother Database Migrations</title><link>https://pyvideo.org/djangocon-us-2013/the-path-to-smoother-database-migrations.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The Path to Smoother Database Migrations&lt;/p&gt;
+&lt;p&gt;Tuesday 4:45 p.m.--5:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Experienced&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Migrations are often applied as part of the deploy process. For most
+Django applications, this is fine. However, when your data becomes
+large, slow migrations and locked tables can result in downtime. Running
+migrations outside of the deploy process helps minimize the impact. This
+talk will go over this and other strategies I have found successful in
+minimizing downtime during database migrations. Abstract The common
+approach and its challenges The first step: running migrations
+out-of-band What it means&lt;/p&gt;
+&lt;p&gt;Code deployed should work both before and after the migration is applied
+Step by step examples: adding a new model adding a required field to an
+existing model changing an existing field&lt;/p&gt;
+&lt;p&gt;The challenges introduced: More process and discipline required when
+developing Continuous deployment becomes more challenging&lt;/p&gt;
+&lt;p&gt;Speeding up schema migrations When running the migration with south is
+too slow&lt;/p&gt;
+&lt;p&gt;A showcase of pt-online-schema-change: how it works, its challenges
+Handling long data migrations:&lt;/p&gt;
+&lt;p&gt;The issue with running long data migrations using south: takes too long,
+ssh connection could be lost, no measure of progress Options (advantages
+and challenges of each): management command in screen background
+(celery) tasks: monitoring progress throttling to reduce impact on the
+system&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nathan Duthoit</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/the-path-to-smoother-database-migrations.html</guid></item><item><title>Trial by Fire: real world performance optimization</title><link>https://pyvideo.org/djangocon-us-2013/trial-by-fire-real-world-performance-optimization.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Trial by Fire: real world performance optimization&lt;/p&gt;
+&lt;p&gt;Tuesday 12:15 p.m.--1 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Your site is slow. But why is your site slow? There are a myriad of
+different problems that can cause this slowness. Drawn from real world
+experiences, this talk will help identify different problem areas and
+techniques for increasing performance. This involves both evaluating
+your performance on the backend and understand bottlenecks on the
+frontend. Abstract&lt;/p&gt;
+&lt;p&gt;This talk is will share with the audience our experience of improving
+page load performance on a site. Performance evaluation is a scary
+thing, especially for the inexperienced. This talk is not purely a &amp;quot;How
+to Optimize Django&amp;quot; as it will discuss various aspects of what makes a
+site appear slow to the end user.&lt;/p&gt;
+&lt;p&gt;What is slow? - How to identify where the problem and where to start&lt;/p&gt;
+&lt;p&gt;Performance Evaluation: - Django performance evaluation through
+middleware and debug toolbar - Browser performance evaluation through
+firebug, chrome developer toolkit, and third party tools, etc.&lt;/p&gt;
+&lt;p&gt;Performance Enhancement: - Reducing SQL queries - Leveraging server-side
+caching - fragment caching - lower level caching - using a database
+connection pooler - asset compression - CDN for media delivery - ajax
+page loading - message queues&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joseph Jasinski</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/trial-by-fire-real-world-performance-optimization.html</guid></item><item><title>Winning an Election with Django and jQuery Mobile</title><link>https://pyvideo.org/djangocon-us-2013/winning-an-election-with-django-and-jquery-mobile.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Winning an Election with Django and jQuery Mobile&lt;/p&gt;
+&lt;p&gt;Tuesday 2:45 p.m.--3:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Eric Palakovich Carr will discuss how he leveraged Django and jQuery
+mobile to help run his wife's data driven political campaign. Abstract&lt;/p&gt;
+&lt;p&gt;Eric Palakovich Carr talks about building a mobile app to help his
+wife's political campaign for a city council seat. See how he integrated
+Django, AngularJS, and jQuery Mobile to build a canvasing (door
+knocking) and phone banking mobile app. See what's gone right, what's
+gone wrong, and a lot of code showing how it's done. Introduction (Very)
+short demo of Voter Pad Brief overview of jQuery Mobile Using Django and
+jQuery Mobile Using AngularJS and Django REST Framework Pitfalls in
+jQuery Mobile Challenges integrating Django, AngularJS, and jQuery
+Mobile together Pros and Cons of using Django and jQuery mobile vs.
+native mobile apps Q&amp;amp;A&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eric Palakovich Carr</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/winning-an-election-with-django-and-jquery-mobile.html</guid></item><item><title>Writing Fast and Efficient Unit Tests for Django</title><link>https://pyvideo.org/djangocon-us-2013/writing-fast-and-efficient-unit-tests-for-django.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Writing Fast and Efficient Unit Tests for Django&lt;/p&gt;
+&lt;p&gt;Tuesday 4:45 p.m.--5:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Many developers have difficulty finding clear guidelines and best
+practices for how to test efficiently, leading to a flimsy, slow, and
+ineffective test suite. This talk will cover some basic (but oft
+overlooked) principles of unit and integration testing, and dive into
+more advanced topics such as testing with read only data and using Mock
+ultra-focused and fast testing. Abstract&lt;/p&gt;
+&lt;p&gt;Borrowing from recent real-world experiences, Casey will discuss how a
+sub-par test suite began to cause delays and negatively affect a large
+production project with a national audience. He'll share what his team
+learned after deciding to dive head-first into faster and more effective
+testing, including: The key differences between unit tests and
+integration tests, and how to distribute them appropriately Dropping the
+Django framework's fixture system in favor of read-only test data to
+create a test suite that adapts alongside a complex and changing data
+model Using the python Mock library to: Mock object instances Mock
+python modules for very precise feature testing Mock very complex
+testing situations (such as overridden class methods, etc)&lt;/p&gt;
+&lt;p&gt;We'll look at real code samples and the tests used to vet them,
+demonstrating the ways Casey's team was able to update their tests to
+use these standards and quantify the benefits. And finally, we'll
+discuss how the quest for faster tests lead to a full blown testing
+philosophy and better code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Casey Kinsey</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/writing-fast-and-efficient-unit-tests-for-django.html</guid></item></channel></rss>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_eric-bruning.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-07-12T00:00:00+00:00</updated><entry><title>From the Field to Geostationary Orbit - Mapping Lightning with Python</title><link href="https://pyvideo.org/scipy-2017/from-the-field-to-geostationary-orbit-mapping-lightning-with-python.html" rel="alternate"></link><published>2017-07-12T00:00:00+00:00</published><updated>2017-07-12T00:00:00+00:00</updated><author><name>Eric Bruning</name></author><id>tag:pyvideo.org,2017-07-12:scipy-2017/from-the-field-to-geostationary-orbit-mapping-lightning-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning measurements generate hierarchically clustered, time-tagged, georeferenced datasets, which is rare in the Earth sciences. Therefore, practical knowledge concerning lightning data formats, services, and visualization approaches is underdeveloped. Using data from new instruments and recent field campaigns we will show the utility of xarray and other Python tools for traversing and visualizing lighting data alongside other meteorological datasets, with a view toward reference implementations that speed use of lightning data by the wider scientific and operational forecasting community.&lt;/p&gt;
+</summary></entry><entry><title>Can Python's web and science communities run concurrently?</title><link href="https://pyvideo.org/scipy-2012/can-pythons-web-and-science-communities-run-conc.html" rel="alternate"></link><published>2012-07-19T00:00:00+00:00</published><updated>2012-07-19T00:00:00+00:00</updated><author><name>Eric Bruning</name></author><id>tag:pyvideo.org,2012-07-19:scipy-2012/can-pythons-web-and-science-communities-run-conc.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has been adopted by many disciplinary communities, showing its
+adaptability to many problems. Scientific computing and web development
+are two examples of such communities. These might, at first glance, seem
+to share few common interests, especially at the level of algorithms and
+libraries. However, at the level of integrated practice in
+time-constrained academic environments, where framework development is
+less valued than research and teaching productivity, ease of adoption of
+tools from each of these communities can be tremendously valuable.&lt;/p&gt;
+&lt;p&gt;Using examples from the recently-deployed West Texas Lightning Mapping
+Array, which is processed and visualized in real-time, this paper will
+argue that a shared sense, among disciplinary communities, of the
+essence of how one deploys Python for specific problems is beneficial
+for continuation and growth of Python's status as a go-to language for
+practitioners in academic settings.&lt;/p&gt;
+</summary><category term="Meteorology Mini-Symposia"></category></entry><entry><title>Streamed Clustering of Lightning Mapping Data in Python Using sklearn; SciPy 2013 Presentation</title><link href="https://pyvideo.org/scipy-2013/streamed-clustering-of-lightning-mapping-data-in.html" rel="alternate"></link><published>2013-07-01T00:00:00+00:00</published><updated>2013-07-01T00:00:00+00:00</updated><author><name>Eric Bruning</name></author><id>tag:pyvideo.org,2013-07-01:scipy-2013/streamed-clustering-of-lightning-mapping-data-in.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Authors: Bruning, Eric C., Texas Tech University&lt;/p&gt;
+&lt;p&gt;Track: GIS - Geospatial Data Analysis&lt;/p&gt;
+&lt;p&gt;Lightning mapping at radio frequencies (here with VHF Lightning Mapping
+Array data) is typically performed by a time-of-arrival source retrieval
+method. Thereafter, it is common to cluster the located sources into
+flash-level entities (often comprised of 10^2 - 10^3 sources) using
+space and time separation thresholds. A previously-used clustering
+algorithm was a one-off implementation in Fortran, and was designed
+without reference to the machine learning literature. This study
+replaces the previous algorithm, which had been wrapped into the
+Python-based lmatools workflow, with the general-purpose DBSCAN
+implementation in Python's sklearn package. The legacy code included
+substantial, file format-specific, I/O boilerplate. The new code
+clarifies the boundary between algorithm and I/O, and promotes clean
+integration with the rest of the lmatools infrastructure, aiding
+maintainability.&lt;/p&gt;
+&lt;p&gt;A chunked, streamed processing method was developed to account for
+continuous data rates that may exceed 10^5 four-coordinate (space and
+time) source vectors per minute. The chunking method exploits known
+physical limits to lightning flash duration, allowing the N^2
+implementation of DBSCAN in sklearn to achieve real-time processing
+rates within available memory. The streaming technique is expected to be
+useful in future work as a flexible building block for end-to-end
+real-time and post-processing scripts and interactive analysis tools.&lt;/p&gt;
+&lt;p&gt;The algorithm is expected to find immediate use in our analysis of data
+from the NSF-sponsored Deep Convective Clouds and Chemistry campaign.
+The open nature of the underlying clustering libraries promotes code
+reuse by other research groups. Accounts of source-to-flash clustering
+in the literature are complemented by the availability of this open,
+objective reference implementation for clustering of lightning mapping
+datasets.&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="Tech"></category></entry></feed>

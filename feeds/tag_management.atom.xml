@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_management.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-12-07T00:00:00+00:00</updated><entry><title>Becoming a Data Head, a reflection on the trade offs and decision points in build a data team</title><link href="https://pyvideo.org/pydata-austin-2019/becoming-a-data-head-a-reflection-on-the-trade-offs-and-decision-points-in-build-a-data-team.html" rel="alternate"></link><published>2019-12-07T00:00:00+00:00</published><updated>2019-12-07T00:00:00+00:00</updated><author><name>Andy Terrel</name></author><id>tag:pyvideo.org,2019-12-07:pydata-austin-2019/becoming-a-data-head-a-reflection-on-the-trade-offs-and-decision-points-in-build-a-data-team.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote&lt;/p&gt;
+</summary><category term="Management"></category></entry><entry><title>Moving big projects to Python 3</title><link href="https://pyvideo.org/europython-2019/moving-big-projects-to-python-3.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Lennart Regebro</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/moving-big-projects-to-python-3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Next year Python 2 is no longer maintained. But you have a monster code
+base with clever tricks and libraries that don't support Python 2, and
+your data may be stored in a format that is hard to move Python 3. And
+that's the easy bit.&lt;/p&gt;
+&lt;p&gt;This talk focuses on the process of moving, not the code changes.
+Because it's the process that is the hard part. How do you get your code
+in a state where it's ready to move? How do you get the whole team on
+the boat to Python 3?&lt;/p&gt;
+&lt;p&gt;All Python 3 talks I have seen, including those I have given, and all
+the texts on how to port, including the book I wrote, focus on the code
+changes. With increasing backwards compatibility in Python 3 and
+forward-compatibility in Python 2, this actually became a lesser problem
+for big code bases.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The extra issues of large, old code bases&lt;/li&gt;
+&lt;li&gt;Can you stop adding features? (1 min)&lt;/li&gt;
+&lt;li&gt;Separate team vs getting everyone on it (2 min)&lt;/li&gt;
+&lt;li&gt;Python 2 compatibility: You need it (1 min)&lt;/li&gt;
+&lt;li&gt;The steps&lt;/li&gt;
+&lt;li&gt;Fix your development process (2 min)&lt;/li&gt;
+&lt;li&gt;Replace old libraries, or take over maintenance and port them (2 min)&lt;/li&gt;
+&lt;li&gt;Make sure your tests are solid (1 min)&lt;/li&gt;
+&lt;li&gt;Run 2to3 but only backwards compatible fixers (2 min)&lt;/li&gt;
+&lt;li&gt;Run tests on Python 3 to stop backsliding (4 min)&lt;/li&gt;
+&lt;li&gt;Run all tests: Expansive or slow&lt;/li&gt;
+&lt;li&gt;Store passed tests&lt;/li&gt;
+&lt;li&gt;Detect tests that change&lt;/li&gt;
+&lt;li&gt;Turning it off adds a lot of extra work&lt;/li&gt;
+&lt;li&gt;Port all your little utilities and tool scripts (1 min)&lt;/li&gt;
+&lt;li&gt;Fix fix fix fix (1 min)&lt;/li&gt;
+&lt;li&gt;Add tests with Python 2 data, to test migration (2 min)&lt;/li&gt;
+&lt;li&gt;You might need migration scripts&lt;/li&gt;
+&lt;li&gt;Extra careful staging tests (1 min)&lt;/li&gt;
+&lt;li&gt;Production: Try, fail, repeat (1 min)&lt;/li&gt;
+&lt;li&gt;Clean the code up (3 min)&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Deployment/Continuous Integration and Delivery"></category><category term="Management"></category><category term="Python 3"></category><category term="Testing"></category></entry><entry><title>Software patterns for productive teams</title><link href="https://pyvideo.org/europython-2019/software-patterns-for-productive-teams.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Radoslav Georgiev</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/software-patterns-for-productive-teams.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Software development is a team game.&lt;/p&gt;
+&lt;p&gt;When we want to deliver more work, one of the variables that we can
+change is the team size. But as we all know, increasing the team size
+does not automatically translate into increased productivity &amp;amp; more
+features shipped.&lt;/p&gt;
+&lt;p&gt;If things are left unmanaged, people can step on each other toes, block
+each other &amp;amp; generally decrease the overall productivity of a given
+software project.&lt;/p&gt;
+&lt;p&gt;In this talk we'll identify different problems teams can face &amp;amp; see how
+we can solve them using different strategies &amp;amp; patterns.&lt;/p&gt;
+&lt;p&gt;In the end, we want to enable the team to perform better &amp;amp; ship features
+with high confidence. We want enable the team &amp;amp; put its potential into
+building good software.&lt;/p&gt;
+&lt;p&gt;Problems we are going to cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Constant merge conflicts / working in the same files&lt;/li&gt;
+&lt;li&gt;Blocking each other on different features / Feature deadlock&lt;/li&gt;
+&lt;li&gt;Constantly switching between bugfixing &amp;amp; feature development&lt;/li&gt;
+&lt;li&gt;Constant regressions and things breaking down&lt;/li&gt;
+&lt;li&gt;Fighting with local setup &amp;amp; not being able to properly test things,
+especially when working with 3rd parties&lt;/li&gt;
+&lt;li&gt;Merge strategies &amp;amp; improving the work with git &amp;amp; GitHub&lt;/li&gt;
+&lt;li&gt;Communication between team members &amp;amp; ego fights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For each problem, we are going to propose different solutions with
+provided real-life examples from our experience &amp;amp; projects.&lt;/p&gt;
+&lt;p&gt;The examples show are going to be in the context of large Python /
+Django projects.&lt;/p&gt;
+&lt;p&gt;This talk is the natural sequel of the following talks from previous
+EuroPythons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;EuroPython 2017 - Practical Debugging - Tips, Tricks and Ways to
+think - &lt;a class="reference external" href="https://www.youtube.com/watch?v=9Ys4gCUtTh8"&gt;https://www.youtube.com/watch?v=9Ys4gCUtTh8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EuroPython 2018 - Django structure for scale and longevity -
+&lt;a class="reference external" href="https://www.youtube.com/watch?v=yG3ZdxBb1oo"&gt;https://www.youtube.com/watch?v=yG3ZdxBb1oo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Abstractions"></category><category term="Best Practice"></category><category term="Communication"></category><category term="Django Projects"></category><category term="Management"></category></entry><entry><title>Explaining AI to Managers 👨‍💼🤖👩‍💼</title><link href="https://pyvideo.org/europython-2019/explaining-ai-to-managers.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Alexander CS Hendorf</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/explaining-ai-to-managers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Artificial intelligence promises great value. The technology is mostly
+understood only by few, yet still unexplainable even for experts.&lt;/div&gt;
+&lt;div class="line"&gt;In this talk I'll present how to narrow the hype down to real value
+explainable to everyone in your organisation - without the math.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Slides can you downloaded at &lt;a class="reference external" href="http://bit.ly/ai-executives-data-litteracy"&gt;http://bit.ly/ai-executives-data-litteracy&lt;/a&gt;-
+europython&lt;/p&gt;
+</summary><category term="Analytics"></category><category term="Business"></category><category term="Deep Learning"></category><category term="Management"></category></entry><entry><title>The Dangers of Outsourcing Software Development</title><link href="https://pyvideo.org/europython-2019/the-dangers-of-outsourcing-software-development.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Sebastian Roll</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/the-dangers-of-outsourcing-software-development.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Customer lock-in. Dubious “Land and Expand” strategies. We have all
+heard about outsourced software projects that run far past schedule and
+obliterates the budget, yet somehow fail to meet even basic
+requirements.&lt;/p&gt;
+&lt;p&gt;How can this happen. How can your company reduce the risks of delegating
+software development to an external party?&lt;/p&gt;
+&lt;p&gt;The Principal–Agent Problem is a well researched dilemma in economic
+literature. It occurs when a person or entity (“agent”), is tasked to
+work on behalf of another person or entity (&amp;quot;principal&amp;quot;). When the two
+parties have divergent interests, the agent might act contrary to the
+best interests of the principal.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Examples of principal-agent relationships are:&lt;/div&gt;
+&lt;div class="line"&gt;- Employer vs Employee&lt;/div&gt;
+&lt;div class="line"&gt;- Shareholder vs Management&lt;/div&gt;
+&lt;div class="line"&gt;- Voter vs Political party&lt;/div&gt;
+&lt;div class="line"&gt;- Contractor vs Software Consultant&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;When a firm decides to outsource software development to a third party,
+there is an economic divergence of interest at play, as both parties
+seek to maximize profit. The contractor wants its requirements met at
+low cost and on a predictable schedule. The third party, when acting
+nefariously, can maximize its own gains by extending the project,
+utilizing junior or low-cost labor, and creating a relationship of
+dependency.&lt;/p&gt;
+&lt;p&gt;In this session we will look into some nefarious techniques and
+practices used in the IT consulting industry and how best to avoid them.
+We will also learn why it is particularly hard to mitigate the risks of
+outsourced software development.&lt;/p&gt;
+</summary><category term="Business"></category><category term="Clients"></category><category term="Ethics"></category><category term="Management"></category><category term="freelancing"></category></entry><entry><title>How to Become a Kickass Team Lead 101</title><link href="https://pyvideo.org/pycon-italia-2019/how-to-become-a-kickass-team-lead-101.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Ahmad Alhour</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/how-to-become-a-kickass-team-lead-101.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Title: How to Become a Kickass Team Lead 101&lt;/p&gt;
+&lt;p&gt;Audience Level: Beginner&lt;/p&gt;
+&lt;p&gt;Requirements: None&lt;/p&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h4&gt;SUMMARY&lt;/h4&gt;
+&lt;p&gt;Most engineers who get promoted to the role of a team lead, tech lead or
+lead developer (regardless of the wording of the title) feel like they
+were thrown in cold waters as they, most probably, lack prior training
+or education on the subject matter. Most of us that survive and actually
+get to like the new role and arrive at really good results, manage to
+educate themselves on the skills and habits required to become an
+effective team leader.&lt;/p&gt;
+&lt;p&gt;In this talk, I will cover the most important lessons about being an
+effective team lead without any previous knowledge about the subject.
+This is a practical talk and the audience will walk away with a lot of
+material and advice to upgrade their engineering leadership game, as
+well as a recommended set of resources for further study. The talk is
+primarily focused on developing leadership skills and is tailored
+towards engineers and software teams.&lt;/p&gt;
+&lt;p&gt;The learning goals are: - How to develop practical leadership skills for
+your day-to-day job - Understand the core components of leadership: ATM
+(Ability, Team, Mission) - How to build teamwork on a foundation of
+trust - How to overcome the main dysfunctions to look in order to
+tighten up your team - Increase your awareness of the main anti-patterns
+that team leads end up doing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1668"&gt;https://python.it/feedback-1668&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="management"></category><category term="community"></category><category term="leadership"></category><category term="teamwork"></category><category term="tech-lead"></category><category term="education"></category></entry><entry><title>Creating a Contemporary Risk Management System Using Python</title><link href="https://pyvideo.org/pydata-chicago-2016/creating-a-contemporary-risk-management-system-using-python.html" rel="alternate"></link><published>2016-08-28T00:00:00+00:00</published><updated>2016-08-28T00:00:00+00:00</updated><author><name>Piero Ferrante</name></author><id>tag:pyvideo.org,2016-08-28:pydata-chicago-2016/creating-a-contemporary-risk-management-system-using-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Chicago 2016&lt;/p&gt;
+&lt;p&gt;Lending involves risk and in order to be a successful lender at scale that risk needs to be mitigated. We'll be discussing how C2FO has built a suite of risk management tools for underwriting and portfolio management using the PyData ecosystem, rpy2 (for integrating R), and Spyre (for building a simple web application).&lt;/p&gt;
+</summary><category term="management"></category></entry><entry><title>Managing requirements for a many-thousands contributors software</title><link href="https://pyvideo.org/pycaribbean-2016/managing-requirements-for-a-1k-contributors-software.html" rel="alternate"></link><published>2016-02-21T00:00:00+00:00</published><updated>2016-02-21T00:00:00+00:00</updated><author><name>Flavio Percoco Premoli</name></author><id>tag:pyvideo.org,2016-02-21:pycaribbean-2016/managing-requirements-for-a-1k-contributors-software.html</id><summary type="html"></summary><category term="openstack"></category><category term="management"></category></entry><entry><title>Keynote - David Eaves</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--keynote---david-eaves.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--keynote---david-eaves.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote - David Eaves&lt;/p&gt;
+&lt;p&gt;David talks about community management in open source communities.&lt;/p&gt;
+</summary><category term="community"></category><category term="communitymanagement"></category><category term="djangocon"></category><category term="djangocon2011"></category><category term="eaves"></category><category term="management"></category></entry></feed>

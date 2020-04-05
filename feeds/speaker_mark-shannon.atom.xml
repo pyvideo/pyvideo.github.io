@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_mark-shannon.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-07-26T00:00:00+00:00</updated><entry><title>Is your code tainted? Finding security vulnerabilities using taint-tracking.</title><link href="https://pyvideo.org/europython-2018/is-your-code-tainted-finding-security-vulnerabilities-using-taint-tracking.html" rel="alternate"></link><published>2018-07-26T00:00:00+00:00</published><updated>2018-07-26T00:00:00+00:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2018-07-26:europython-2018/is-your-code-tainted-finding-security-vulnerabilities-using-taint-tracking.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;“Taint tracking” is a technique used in code analysis to find security
+vulnerabilities and other problems.&lt;/p&gt;
+&lt;p&gt;Any data that comes from an untrusted source, for example a HTTP
+request, is treated as “tainted”. If that “tainted” data is able to
+reach a vulnerable part of your code, then you have a problem.
+Sophisticated code analysis tools can track this data, and reveal
+potential security problems. Examples of the sort of problem that can be
+found include cross-site scripting (XSS), code injection, SQL injection
+and others.&lt;/p&gt;
+&lt;p&gt;In this talk I will show how taint tracking analysis works in practice,
+introducing the concepts of source, sink and sanitizer. I will then
+demonstrate using taint tracking to find a XSS vulnerability in a django
+app. (We will chose a project that is designed to teach django security,
+where the vulnerability is deliberate.)&lt;/p&gt;
+&lt;p&gt;I will also explain how thinking in terms of “taint” can help you write
+safer code, even without access to code analysis.&lt;/p&gt;
+&lt;p&gt;During this talk I will use the code analysis tools on lgtm.com to
+demonstrate the analysis. lgtm.com is free to use for open-source
+projects. A paid version is available.&lt;/p&gt;
+</summary></entry><entry><title>Finding bugs for free - The magic of code analysis</title><link href="https://pyvideo.org/pycon-uk-2017/finding-bugs-for-free-the-magic-of-code-analysis.html" rel="alternate"></link><published>2017-10-29T10:30:00+01:00</published><updated>2017-10-29T10:30:00+01:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2017-10-29:pycon-uk-2017/finding-bugs-for-free-the-magic-of-code-analysis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Code analysis is a powerful technique for improving the quality of software. It allows you to find bugs in your Python code that would be very hard to find with testing, and without the need for any annotations.&lt;/p&gt;
+&lt;p&gt;In this talk I show examples of &amp;quot;interesting&amp;quot; bugs that we at &lt;a class="reference external" href="https://lgtm.com/"&gt;https://lgtm.com/&lt;/a&gt; have found in real code. For each example, I will describe how we can find that type of error.&lt;/p&gt;
+&lt;p&gt;In order to avoid unnecessary embarrassment, all examples will be anonymised.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;Most Python developers. I will assume that the audience knows Python reasonably well, but knows little or nothing about code analysis.&lt;/p&gt;
+&lt;p&gt;At &lt;a class="reference external" href="https://lgtm.com/"&gt;https://lgtm.com/&lt;/a&gt; we provide state-of-the-art analysis for a number of languages including Python. We have found bugs in the standard library, requests, numpy and many other&lt;/p&gt;
+</summary></entry><entry><title>Finding bugs for free: The magic of static analysis.</title><link href="https://pyvideo.org/europython-2017/finding-bugs-for-free-the-magic-of-static-analysis.html" rel="alternate"></link><published>2017-07-14T00:00:00+00:00</published><updated>2017-07-14T00:00:00+00:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2017-07-14:europython-2017/finding-bugs-for-free-the-magic-of-static-analysis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Static analysis is a powerful technique for improving the quality of
+software. It allows you to find bugs in your Python code without any
+the need for any annotations.&lt;/p&gt;
+&lt;p&gt;At lgtm.com we provide state-of-the-art static analysis for a number
+of languages including Python. Our Python analysis can find bugs
+without the annoyance of many false positives. We have already found
+bugs in the standard library, requests, numpy and many others.&lt;/p&gt;
+&lt;p&gt;In this talk I will briefly describe what static analysis is, how it
+can be useful to you, and then give an overview of the techniques we
+use.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;This talk is aimed at all Python developers, although I expect that
+those who have used pyflakes, pep8, pylint or mypy in the past will
+find it the most accessible. I hope that this talk will inspire
+developers to start using static analysis tools (hopefully ours) and
+to produce better code as a result. I will assume that the audience
+knows Python well, but knows little or nothing about static analysis.&lt;/p&gt;
+&lt;p&gt;(lgtm.com is a commercial project that is free to use for open-source software)&lt;/p&gt;
+</summary></entry><entry><title>Making CPython Fast Using Trace-based Optimisations</title><link href="https://pyvideo.org/europython-2011/making-cpython-fast-using-trace-based-optimisatio.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Mark Shannon - 24 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CPython can be made faster by implementing the sort of optimizations
+used in the PyPy VM, and in my HotPy VM. All the necessary changes can
+be made without modifying the language or the API.&lt;/p&gt;
+&lt;p&gt;The CPython VM can be modified to support optimizations by adding an
+effective garbage collector and by separating the virtual-machine state
+from the real- machine state (like Stackless).&lt;/p&gt;
+&lt;p&gt;Optimizations can be implemented incrementally. Since almost all of the
+optimizations are implemented in the interpreter, all hardware platforms
+can benefit. JIT compiler(s) can then be added for common platforms
+(intel, ARM, etc.).&lt;/p&gt;
+&lt;p&gt;For more information see &lt;a class="reference external" href="http://hotpy.blogspot.com/"&gt;http://hotpy.blogspot.com/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="cpython"></category><category term="jit"></category><category term="pypy"></category><category term="vm"></category></entry><entry><title>HotPy (2) - A High Performance Binary-Compatible Virtual Machine for Python</title><link href="https://pyvideo.org/europython-2012/hotpy-2-a-high-performance-binary-compatible.html" rel="alternate"></link><published>2012-07-06T00:00:00+00:00</published><updated>2012-07-06T00:00:00+00:00</updated><author><name>Mark Shannon</name></author><id>tag:pyvideo.org,2012-07-06:europython-2012/hotpy-2-a-high-performance-binary-compatible.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] Mark Shannon - 5 JULY 2012 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HotPy (2) is a new interpreter for Python. It is binary compatible with
+CPython and reuses CPython’s object and module implementations. The core
+interpreter is new and uses many of the techniques developed during the
+1990s and 2000s plus a technique developed during my PhD. Once the first
+stage of the optimisation chain is completed (May or June), HotPy is
+expected to be between 2 and 3 times as fast as CPython. It will
+probably never be as fast as PyPy, but it might be possible to get
+close. During the talk I will explain how it works (with lots of
+pictures), and how it compares to CPython and PyPy. I will also discuss
+whether the techniques used in HotPy would be suitable for Jython and
+IronPython.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 19 May 2017 00:00:00 +0000</lastBuildDate><item><title>Passing Exceptions 101: Paradigms in Error Handling</title><link>https://pyvideo.org/pycon-us-2017/passing-exceptions-101-paradigms-in-error-handling.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Exception handling in Python can sometimes feel like a Wild West. If you
+have a &lt;tt class="docutils literal"&gt;send_email&lt;/tt&gt; function, and the caller inputs an invalid email
+address, should it: A) Return &lt;tt class="docutils literal"&gt;None&lt;/tt&gt; or some other special return
+value, B) Let the underlying exception it might cause bubble up, C)
+Check via a regex and type checking and raise a &lt;tt class="docutils literal"&gt;ValueError&lt;/tt&gt;
+immediately, or D) Make a custom &lt;tt class="docutils literal"&gt;EmailException&lt;/tt&gt; subclass and raise
+that?&lt;/p&gt;
+&lt;p&gt;What if there is a network error while the email was sending? Or what if
+the function calls a helper &lt;tt class="docutils literal"&gt;_format_email&lt;/tt&gt; that returns an integer
+(clearly wrong!), or raises an &lt;tt class="docutils literal"&gt;TypeError&lt;/tt&gt; itself? Should it crash the
+program or prompt a retry?&lt;/p&gt;
+&lt;p&gt;This talk will introduce the concept of an exception, explain the
+built-in Python exception hierarchy and the utility of custom
+subclasses, demonstrate try/except/finally/else syntax, and then explore
+different design patterns for exception control flow and their tradeoffs
+using examples. It will also make comparisons to error handling
+philosophy in other languages, like Eiffel and Go.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Amandine Lee</dc:creator><pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-19:pycon-us-2017/passing-exceptions-101-paradigms-in-error-handling.html</guid></item></channel></rss>

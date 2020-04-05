@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jiwon-seo.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-09T00:00:00+00:00</updated><entry><title>SociaLite: Python intergrated query Language for Data Analysis</title><link href="https://pyvideo.org/scipy-2014/socialite-python-intergrated-query-language-for.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Jiwon Seo</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/socialite-python-intergrated-query-language-for.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;SociaLite is a Python-integrated query language for data analysis. It
+makes scientific data analysis simple, yet achieves fast performance
+with its compiler optimizations. We support relational tables and
+operations in SociaLite as well as Python integration, which makes it
+easy to implement various analysis algorithms, including Blast algorithm
+and genome assembly algorithm in bioinformatics.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SociaLite is a Python-integrated query language for distributed data
+analysis.
+It makes scientific data analysis simple, yet achieves fast
+performance with its compiler optimizations. The performance of
+SociaLite is often more than three orders of magnitude faster than
+Hadoop programs, and close to optimized C programs. For example,
+PageRank algorithm can be implemented in just 2 lines of SociaLite
+query, which runs nearly as fast as an optimal parallelized C code.&lt;/p&gt;
+&lt;p&gt;SociaLite supports well-known high-level concepts to make data analysis
+easy for non-expert programmers. We support relational tables for
+storing data, and relational operations, such as join, selection, and
+projection, for processing the data. Moreover, SociaLite queries are
+fully integrated with Python, so both SociaLite and Python code can be
+used to implement data analysis logic. For the integration with Python,
+we support embedding and extending SociaLite, where embedding supports
+using SociaLite queries directly in Python code, and extending supports
+using Python functions in SociaLite queries.&lt;/p&gt;
+&lt;p&gt;The Python integration makes it easy to implement various analysis
+algorithms in SociaLite and Python. For example, the BLAST algorithm in
+bioinformatics can be implemented in just a few lines of SociaLite
+queries and Python code. Also genome assembly algorithm -- generating a
+De Bruijn graph and applying Eulerian cycle algorithm -- can be simply
+implemented. In the talk, I will demonstrate these algorithms in
+SociaLite as well as more general algorithms such as K-means clustering
+and logistic regression.&lt;/p&gt;
+&lt;p&gt;The SociaLite queries are compiled to highly optimized
+parallel/distributed code; we apply optimizations such as pipelined
+evaluation and prioritization. The runtime system also speeds up the
+performance; for example, the customized memory allocator reduces memory
+allocation time and footprint. In short, SociaLite makes
+high-performance data analysis easy with its high-level abstractions and
+compiler/runtime optimizations.&lt;/p&gt;
+</summary><category term="bioinformatics"></category><category term="blast"></category><category term="data analysis"></category></entry><entry><title>Designing a Python-integrated query language for distributed computing</title><link href="https://pyvideo.org/pycon-apac-2014/designing-a-python-integrated-query-language-for.html" rel="alternate"></link><published>2014-06-27T00:00:00+00:00</published><updated>2014-06-27T00:00:00+00:00</updated><author><name>Jiwon Seo</name></author><id>tag:pyvideo.org,2014-06-27:pycon-apac-2014/designing-a-python-integrated-query-language-for.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python becomes increasingly popular in the domain of big data analysis.
+Many big data frameworks such as Hadoop now support Python to some
+extent. PySociaLite is a new big data framework developed at Stanford.
+It is designed from beginning to be fully integrated into Python. In
+PySociaLite, SQL-like queries (called SociaLite) are directly embedded
+within Python code; the queries can access Python variables and
+functions, so there is full inter-operation between SociaLite and
+Python.&lt;/p&gt;
+&lt;p&gt;In this talk, I will give a brief overview of SociaLite, then mainly
+present the techniques for the integration of SociaLite into Python.
+SociaLite builds on top of well-known programming concepts -- tables and
+relational operations -- and it allows users to declare distributed
+tables to perform, for example, distributed join operations. For the
+integration of SociaLite into Python, we basically extend Jython
+interpreter to process embedded SociaLite queries. More specificaly, we
+use PyParsing to recognize SociaLite queries and re-write the queries
+into Java function calls. We also use lesser-known Python features, such
+as import hooks to process SociaLite queries within imported modules. To
+access Python functions within SociaLite, Jython interpreter instance
+(from which SociaLite queries are executed) is passed to SociaLite
+runtime system, and used to lookup and access Python functions. For the
+distributed execution, Python functions are serialized (as well as its
+PyCode object) and copied to cluster machines.&lt;/p&gt;
+&lt;p&gt;Time permitting, I will give a demo of PySociaLite; SociaLite queries
+will be executed interactively within (extended) Jython shell and
+demonstrate the inter-operation between SociaLite and Python.&lt;/p&gt;
+&lt;p&gt;About the speaker&lt;/p&gt;
+&lt;p&gt;Jiwon Seo is a PhD student in Stanford university, studying parallel
+query language for data analysis. He contributed to Python in various
+ways; for example, he implemented PEP 289 (Generator Expressions) and
+PEP 3102 (Keyword-Only Arguments).&lt;/p&gt;
+&lt;p&gt;He designed and implemented a parallel and distributed query language,
+called SociaLite. The SociaLite compiler generates efficient
+parallel/distributed code from user queries. SociaLite queries can be
+embedded in Python programs, allowing users to enjoy flexibility of
+Python and efficiency of SociaLite. More information is in
+&lt;a class="reference external" href="http://socialite-lang.github.io/"&gt;http://socialite-lang.github.io/&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

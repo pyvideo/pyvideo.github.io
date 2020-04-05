@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_anselm-kruis.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-25T00:00:00+00:00</updated><entry><title>Advanced Pickling with Stackless Python and sPickle</title><link href="https://pyvideo.org/europython-2011/advanced-pickling-with-stackless-python-and-spick.html" rel="alternate"></link><published>2011-07-07T00:00:00+00:00</published><updated>2011-07-07T00:00:00+00:00</updated><author><name>Anselm Kruis</name></author><id>tag:pyvideo.org,2011-07-07:europython-2011/advanced-pickling-with-stackless-python-and-spick.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Anselm Kruis - 24 June 2011 in &amp;quot;Track Tagliatelle &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python supports pickling of a wider range of types than
+conventional C-Python, including stack frames and code objects. On this
+basis it is possible to extend further the pickle.Pickler class in order
+to serialise classes, modules, packages up to certain limits. The
+&lt;a class="reference external" href="http://pypi.python.org/pypi/sPickle"&gt;sPickle package&lt;/a&gt; provides such
+an extended Pickler. The code was developed as part of a commercial
+project and recently released as free software by science + computing
+ag. Currently it requires Stackless Python 2.7.&lt;/p&gt;
+&lt;p&gt;In my presentation, I'll first demonstrate some applications of the
+sPickle package including serialisation of modules and executing parts
+of a program on a remote computer using RPyC and Paramiko.&lt;/p&gt;
+&lt;p&gt;In the second part of my speech, I'll give some insight in the internal
+operations of sPickle and the lessons learned during its development.
+Extending the Pickler showed to be like opening a can of worms. You have
+take care of many odds and ends to get it right. I'll point out some
+weak points in the implementation of the conventional pickling code and
+I'll also show the limits of the current sPickle implementation.&lt;/p&gt;
+</summary><category term="packages"></category><category term="pickling"></category><category term="science"></category><category term="stackless"></category></entry><entry><title>Post-Mortem Debugging with Heap-Dumps</title><link href="https://pyvideo.org/europython-2014/post-mortem-debugging-with-heap-dumps.html" rel="alternate"></link><published>2014-07-25T00:00:00+00:00</published><updated>2014-07-25T00:00:00+00:00</updated><author><name>Anselm Kruis</name></author><id>tag:pyvideo.org,2014-07-25:europython-2014/post-mortem-debugging-with-heap-dumps.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;UNIX core-dumps, Windows minidumps or Java heap-dumps are well
+established technologies for post-mortem defect analysis. I'll present a
+similar technology for Python. An improved pickling mechanism makes it
+possible to serialise the state of a Python program for subsequent
+analysis with a conventional Python-debugger.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;UNIX core-dumps, Windows minidumps and analogous solutions of other
+operating systems are well established technologies for post-mortem
+defect analysis of native-code processes. In principle those dumps can
+be used to analyse „interpreted“ programs running within a native-code
+interpreter-process. However in practise this approach is tedious and
+not always successful [1]. Therefore operating system independent dump
+methods were developed for some „interpreted“ languages [2]. A prominent
+example are Java heap dumps [3].&lt;/p&gt;
+&lt;p&gt;Unfortunately up to now there was no practically usable dump-method for
+Python. Various attempts were made to utilise OS-level dump methods [4,
+5]. In 2012 Eli Finer published the Python module &lt;em&gt;pydump&lt;/em&gt; [6]. This
+module pickles the traceback of an exception and subsequently uses the
+pdb debugger to analyse the unpickled traceback. Unfortunately &lt;em&gt;pydump&lt;/em&gt;
+fails on PicklingErrors.&lt;/p&gt;
+&lt;p&gt;In my talk I'll present the Python package
+&lt;a class="reference external" href="https://pypi.python.org/pypi/pyheapdump"&gt;*pyheapdump*&lt;/a&gt;. It has the
+same operation principle as Eli's &lt;em&gt;pydump&lt;/em&gt;, but is an independent
+implementation. &lt;em&gt;pyheapdump&lt;/em&gt; uses an extended pickler
+(&lt;a class="reference external" href="https://pypi.python.org/pypi/sPickle"&gt;sPickle&lt;/a&gt;) to serialise all
+relevant objects of a Python process to a file. Later on a fault
+tolerant unpickler recreates the objects and a common Python debugger
+can be used to analyse the dump. The pickler extensions make it possible
+to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;pickle and unpickle many commonly not pickleable objects [7].&lt;/li&gt;
+&lt;li&gt;replace the remaining not pickleable objects by surrogate objects so
+that the resulting object graph is almost isomorphic to the original
+object graph.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Which objects are relevant? In its default operation mode &lt;em&gt;pyheapdump&lt;/em&gt;
+uses the frame-stacks of all threads as start point for pickling.
+Following the usual rules for pickling the dump includes all local
+variables and all objects reachable from a local variable and so on.
+That is usually enough for a successful defect analysis.&lt;/p&gt;
+&lt;p&gt;Compared with other Python post-mortem debugging methods &lt;em&gt;pyheapdump&lt;/em&gt;
+has several advantages:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;It is a pure Python solution and independent from the operation
+system.&lt;/li&gt;
+&lt;li&gt;Creation of the pyheapdump and fault analysis can be performed
+different computers.&lt;/li&gt;
+&lt;li&gt;It is not obstructive. It does not modify / monkey-patch or disturb
+the dumped process in any way, with the exception of loading
+additional modules.&lt;/li&gt;
+&lt;li&gt;If used with the Pydev-debugger, it supports multi-threaded
+applications.&lt;/li&gt;
+&lt;li&gt;If used with the Pydev-debugger and Stackless Python, it supports
+tasklets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The implementation of &lt;em&gt;pyheapdump&lt;/em&gt; is fairly small, because it draws
+most of its functionality from the underlying sPickle package and from
+the new Stackless-Support [8] of the Pydev-Debugger. Therefore it is -
+despite of its short history - already a useful piece of software.&lt;/p&gt;
+&lt;div class="section" id="outline-of-the-talk"&gt;
+&lt;h4&gt;Outline of the talk&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Introduction to the problem&lt;/li&gt;
+&lt;li&gt;Previous works&lt;/li&gt;
+&lt;li&gt;The concept of &lt;em&gt;pyheapdump&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Live demonstration&lt;/li&gt;
+&lt;li&gt;Open problems and further development&lt;/li&gt;
+&lt;li&gt;Questions and Answers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="references"&gt;
+&lt;h4&gt;References&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Andraz Tori, Python, 2011-01-16: &lt;em&gt;gdb and a very large core dump&lt;/em&gt;,
+blog at &lt;a class="reference external" href="http://www.zemanta.com/blog/python-gdb-large-core-dump/"&gt;http://www.zemanta.com/blog/python-gdb-large-core-dump/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;David Pacheco, ACM Queue - Programming Languages Volume 9 Issue 10,
+October 2011: &lt;em&gt;Postmortem Debugging in Dynamic Environments&lt;/em&gt;, PDF
+&lt;a class="reference external" href="http://dl.acm.org/ft_gateway.cfm?id=2039361&amp;amp;ftid=1050739&amp;amp;dwn=1&amp;amp;CFID=290171300&amp;amp;CFTOKEN=95099236"&gt;http://dl.acm.org/ft_gateway.cfm?id=2039361&amp;amp;ftid=1050739&amp;amp;dwn=1&amp;amp;CFID=290171300&amp;amp;CFTOKEN=95099236&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chris Bailey, Andrew Johnson, Kevin Grigorenko, IBM developerWorks,
+2011-03-15: &lt;em&gt;Debugging from dumps - Diagnose more than memory leaks
+with Memory Analyzer&lt;/em&gt;, PDF
+&lt;a class="reference external" href="http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf"&gt;http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Brian Curtin, 2011-09-29: &lt;em&gt;minidumper - Python crash dumps on
+Windows&lt;/em&gt;, blog at
+&lt;a class="reference external" href="http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html"&gt;http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;David Malcolm, Fedora Feature, 2010-04-06: &lt;em&gt;Easier Python Debugging&lt;/em&gt;
+at &lt;a class="reference external" href="http://fedoraproject.org/wiki/Features/EasierPythonDebugging"&gt;http://fedoraproject.org/wiki/Features/EasierPythonDebugging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eli Finer, Github-Project, 2012: &lt;em&gt;pydump&lt;/em&gt; at
+&lt;a class="reference external" href="https://github.com/gooli/pydump"&gt;https://github.com/gooli/pydump&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Anselm Kruis, EuroPython 2011: &lt;em&gt;Advanced Pickling with Stackless
+Python and sPickle&lt;/em&gt;, archived talk at
+&lt;a class="reference external" href="https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle"&gt;https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fabio Zadrozny, 2013-12-12: &lt;em&gt;PyDev 3.1.0 released&lt;/em&gt;, blog at
+&lt;a class="reference external" href="http://pydev.blogspot.de/2013/12/pydev-310-released.html"&gt;http://pydev.blogspot.de/2013/12/pydev-310-released.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Stackless: Recent advancements and future goals</title><link href="https://pyvideo.org/europython-2014/stackless-recent-advancements-and-future-goals.html" rel="alternate"></link><published>2014-07-23T00:00:00+00:00</published><updated>2014-07-23T00:00:00+00:00</updated><author><name>Anselm Kruis</name></author><id>tag:pyvideo.org,2014-07-23:europython-2014/stackless-recent-advancements-and-future-goals.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Stackless (formerly known as Stackless-Python) is an enhanced variant of
+the Python-language. Stackless is best known for its lightweight
+microthreads. But that's not all. In this talk Stackless core developers
+demonstrate recent advancements regarding multi-threading,
+custom-scheduling, debugging with Stackless and explain future plans for
+Stackless.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Since Python release 1.5 Stackless Python is an enhanced variant of
+C-Python. Stackless is best known for its addition of lightweight
+microthreads (tasklets) and channels.&lt;/p&gt;
+&lt;p&gt;Less known are the recent enhancements that became available with
+Stackless 2.7.6. In this talk core Stackless developers demonstrate&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The improved multi-threading support&lt;/li&gt;
+&lt;li&gt;How to build custom scheduling primitives based on atomic tasklet
+operations&lt;/li&gt;
+&lt;li&gt;The much improved debugger support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stackless recently switched the new master repository from
+hg.python.org/stackless to bitbucket to allow for a more open
+development process. We'll summarise our experience and discuss our
+plans for the future development of Stackless.&lt;/p&gt;
+&lt;p&gt;The talk will be help by Anselm Kruis and Christian Tismer. If we are
+lucky, we will also welcome Kristján Valur Jónsson from Iceland.&lt;/p&gt;
+</summary></entry></feed>

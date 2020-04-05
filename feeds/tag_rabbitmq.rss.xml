@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 13 May 2018 00:00:00 +0000</lastBuildDate><item><title>Industrial Machine Learning: Building scalable distributed machine learning pipelines with Python</title><link>https://pyvideo.org/pycon-sk-2018/industrial-machine-learning-building-scalable-distributed-machine-learning-pipelines-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk would provide useful and practical understanding on how to
+build industry-ready machine learning models in python through
+distributed, horizontally-scalable architectures. I will include why and
+when these architectures are required, best practices, caveats,
+technologies to use them, and a practical implementation using celery +
+rabbitmq.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alejandro Saucedo</dc:creator><pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-03-10:pycon-sk-2018/industrial-machine-learning-building-scalable-distributed-machine-learning-pipelines-with-python.html</guid><category>Machine Learning</category><category>PyCon SK</category><category>Python</category><category>celery</category><category>rabbitmq</category></item><item><title>The Hare Wins the Race: Getting the most out of RabbitMQ in distributed applications</title><link>https://pyvideo.org/pycon-us-2018/the-hare-wins-the-race-getting-the-most-out-of-rabbitmq-in-distributed-applications.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As web apps grow increasingly complex, distributing asynchronous work
+across multiple background workers is often a basic requirement of a
+performant app. While there are a variety of tools that exist to solve
+this issue, one common feature among them is the need for a robust
+messaging platform.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt; is a stable, full-featured, and mature solution that is
+usually found in the Python ecosystem backing &lt;a class="reference external" href="http://www.celeryproject.org/"&gt;Celery&lt;/a&gt; implementations.
+While Celery’s utilization of RabbitMQ works just fine out of the gate,
+users with complex workflows, unique constraints, or tight budgets can
+take advantage of the flexibility of RabbitMQ to streamline their data
+pipelines and get the most out of their infrastructure.&lt;/p&gt;
+&lt;p&gt;This talk will provide an overview of RabbitMQ, review its varied
+message-routing capabilities, and demonstrate some of the ways in which
+these features can be utilized in Python applications to solve common
+yet difficult use-cases.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Steven Sklar</dc:creator><pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-13:pycon-us-2018/the-hare-wins-the-race-getting-the-most-out-of-rabbitmq-in-distributed-applications.html</guid><category>celery</category><category>rabbitmq</category></item><item><title>Massaging the Pony: Message Queues and You</title><link>https://pyvideo.org/djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Message queues are a potential solution for any site that needs to
+facilitate robust asynchronous operations on your website including
+carrying out intensive or long-running actions or synchronizing off-site
+services. We will look at how PBS has used Celery and RabbitMQ to
+provide more reliable service and how to set up a robust message queue
+solution in a cloud hosting environment.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;In maintaining several different site projects written in Django over
+the past four years, the PBS Education team repeatedly found the need
+for the ability to create asynchronous processes that could handle
+long-running actions and mission-critical synchronization. We needed a
+way to handle tasks such as generating reports on large data sets and
+executing remote processes on fussy third-party services. The clear
+solution to the problems we encountered was to implement a robust
+message queue solution.&lt;/p&gt;
+&lt;p&gt;Message queues allow sites to execute processes outside the normal HTTP
+request cycle and then deliver the results of those processes in a
+variety of ways. After a survey of all available message queue solutions
+we settled on a combination of Celery and RabbitMQ to create a reliable,
+always-available system that can handle mission-critical tasks. We can
+easily develop against a message queue in our development builds, and we
+have an infrastucture based in a cloud hosting service that allows us to
+rely on the message queue without reservation.&lt;/p&gt;
+&lt;p&gt;In this talk will will look at what a message queue does for your site,
+how to implement a message queue in your Django code, and how to set up
+a reliable message queue infrastructure on your servers. We will show
+examples from some of our sites at PBS so it is clear how message queues
+work and to present some common use cases that warrant a message queue
+solution. We will also discuss some of the design patterns that made it
+easy to switch to message queue based processing for discreet tasks, as
+well as some of the things we learned that have made the solution even
+easier to implement for new tasks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shawn Rider</dc:creator><pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html</guid><category>celery</category><category>djangocon</category><category>djangocon2010</category><category>messagequeues</category><category>queues</category><category>rabbitmq</category></item><item><title>Playing tasks with Django-Celery</title><link>https://pyvideo.org/europython-2011/playing-tasks-with-django-celery.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Mauro Rocco - 22 June 2011 in &amp;quot;Track Tagliatelle &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Celery is an open source task queueing system based on distributed
+message passing.&lt;/p&gt;
+&lt;p&gt;I will talk about the tools that Celery offers for task distribution and
+how to monitor and manage the system using a Django web interface. This
+talk will also focus on how we use Celery at Jamendo and our real
+solutions to some common issues you may encounter when developing a
+back-office based on Celery.&lt;/p&gt;
+&lt;p&gt;The talk will cover the following topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A brief overview of Celery and the AMPQ protocol AMPQ protocol
+overview, Celery introduction: Celery, RabbitMQ code examples&lt;/li&gt;
+&lt;li&gt;The impact of Celery on the Jamendo work-flow; examples with real
+tasks. Here I will talk about the Jamendo back-office infrastructure
+and some of our common tasks. I will discuss the improvements made by
+introducing a new back-office system based on Celery. I will show
+some code snippets and go over some real scenarios.&lt;/li&gt;
+&lt;li&gt;Overview of the Django Celery admin interface and some Jamendo
+extensions. Let's talk about the Django-Celery interface that allows
+one to monitor or schedule tasks directly from the Django admin. I
+will explain which common additional features are necessary and how
+to add them.&lt;/li&gt;
+&lt;li&gt;Common &amp;quot;gotchas&amp;quot; we encountered while working with Celery and how we
+solved them.&lt;/li&gt;
+&lt;li&gt;Global task locks&lt;/li&gt;
+&lt;li&gt;Centralized logging: be able to read all the logs of all celery
+workers on different servers and filter them for real-time debugging&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mauro Rocco</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/playing-tasks-with-django-celery.html</guid><category>celery</category><category>distributed</category><category>django</category><category>infrastructure</category><category>queueing</category><category>rabbitmq</category><category>real-time</category><category>web</category></item><item><title>Echtzeit Browsergames</title><link>https://pyvideo.org/pycon-de-2012/echtzeit-browsergames.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Mit gevent und browserseitigem JavaScript können Mehrspieler
+Browsergames entwickelt werden, die Spielerinteraktionen in Echtzeit
+zulassen. Dieser Vortrag versucht Lust auf das Echtzeit Web zu machen
+und zeigt anhand eines konkreten Spieles (KODEX, &lt;a class="reference external" href="http://kodexgame.com/"&gt;http://kodexgame.com/&lt;/a&gt;)
+Lösungen für Entwicklung, Hosting und Vertrieb auf.&lt;/p&gt;
+&lt;p&gt;Der Vortrag beleuchtet neben den Implikationen des Realtime Web wie
+Caching, Scaling, Same-Origin-Policy und Cross-Origin-Resource-Sharing
+auch Strategien zur horizontalen Skalierbarkeit, oder: Wie löst man das
+&lt;a class="reference external" href="http://www.kegel.com/c10k.html"&gt;C10K&lt;/a&gt; Problem?&lt;/p&gt;
+&lt;p&gt;Während NodeJS oft als &lt;em&gt;die&lt;/em&gt; Lösung für Echtzeitanwendungen angepriesen
+wird, kommt hier auf der Serverseite gezielt Python mit gevent zum
+Einsatz.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael P. Jung</dc:creator><pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-30:pycon-de-2012/echtzeit-browsergames.html</guid><category>django</category><category>echtzeit</category><category>game</category><category>gevent</category><category>javascript</category><category>python</category><category>rabbitmq</category><category>realtime</category><category>socketio</category><category>spiel</category></item></channel></rss>

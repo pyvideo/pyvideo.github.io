@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 25 Jul 2014 00:00:00 +0000</lastBuildDate><item><title>Building Realtime Web Applications with WebRTC and Python</title><link>https://pyvideo.org/europython-2014/building-realtime-web-applications-with-webrtc-an.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;WebRTC makes building peer to peer real time web applications easier.
+First, we'll discuss in short what WebRTC is, how it works. Then we will
+explore ways to build the signalling system of a WebRTC app using
+Python.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="introduction"&gt;
+&lt;h4&gt;Introduction&lt;/h4&gt;
+&lt;p&gt;This talk will first introduce the audience to WebRTC and then discuss
+about how to implement the server side logic of a WebRTC app using
+Python.&lt;/p&gt;
+&lt;p&gt;WebRTC is a free, open project that enables web browsers with
+plugin-less Real-Time Communications (RTC) capabilities via simple
+JavaScript APIs. What makes WebRTC special is that the data travels from
+one client to another without going through the server.&lt;/p&gt;
+&lt;p&gt;The main functions of WebRTC can be broadly categorized into three
+types.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Access and acquire video and audio streams&lt;/li&gt;
+&lt;li&gt;Establish a connection between peers and stream audio/video.&lt;/li&gt;
+&lt;li&gt;Communicate arbitrary data.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WebRTC uses three different JavaScript APIs to perform these three
+functions. These APIs are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;MediaStream (aka getUserMedia)&lt;/li&gt;
+&lt;li&gt;RTCPeerConnection&lt;/li&gt;
+&lt;li&gt;RTCDataChannel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MediaStream API performs the task of accessing the webcam and/or
+microphone of the device and acquire the video and/or audio stream from
+them. RTCPeerConnection API establishes connection between peers and
+streams audio and video data. This API also does all the encoding and
+decoding of audio/video data. The third API, RTCDataChannel helps to
+communicate arbitrary data from one client to the other.&lt;/p&gt;
+&lt;p&gt;There will be short demos to demonstrate the functionalities of these
+APIs.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="signaling-and-session-control"&gt;
+&lt;h4&gt;Signaling and Session Control&lt;/h4&gt;
+&lt;p&gt;WebRTC uses RTCPeerConnection to communicate streaming data between
+browsers, but some sort of mechanism is needed to coordinate this
+communication and to send control messages. This process is known as
+signaling.&lt;/p&gt;
+&lt;p&gt;Signaling is used to exchange three types of information.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Session control messages: to initialize or close communication and
+report errors.&lt;/li&gt;
+&lt;li&gt;Network configuration: to the outside world, what's my computer's IP
+address and port?&lt;/li&gt;
+&lt;li&gt;Media capabilities: what codecs and resolutions can be handled by my
+browser and the browser it wants to communicate with?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This can be implemented using any appropriate two way communication
+channel.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementing-signaling-in-python"&gt;
+&lt;h4&gt;Implementing signaling in Python&lt;/h4&gt;
+&lt;p&gt;Next, we will have a look at how to implement this signaling mechanism
+in Python. ( Demonstration with annotated code and live application.)&lt;/p&gt;
+&lt;div class="section" id="google-appengine-and-the-channel-api"&gt;
+&lt;h5&gt;Google AppEngine and the Channel API&lt;/h5&gt;
+&lt;p&gt;Google AppEngine has a channel API which offers persistent connections
+between your application and Google servers, allowing your application
+to send messages to JavaScript clients in real time without the use of
+polling. We'll use this Channel API to build the signaling system of our
+WebRTC app on top of webapp2 and flask framework.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="flask-and-gevent"&gt;
+&lt;h5&gt;Flask and gevent&lt;/h5&gt;
+&lt;p&gt;We'll implement the same signaling system again, this time on top of
+Flask using gevent for the persistent connection between the browser and
+our application.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline-of-the-talk"&gt;
+&lt;h4&gt;Outline of the talk&lt;/h4&gt;
+&lt;div class="section" id="intro-5-min"&gt;
+&lt;h5&gt;Intro (5 min)&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Who are we?&lt;/li&gt;
+&lt;li&gt;What is WebRTC?&lt;/li&gt;
+&lt;li&gt;Functions of WebRTC.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="webrtc-apis-and-demos-3-min"&gt;
+&lt;h5&gt;WebRTC APIs and Demos (3 min)&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;MediaStream (getUserMedia) API&lt;/li&gt;
+&lt;li&gt;RTCPeerConnection API&lt;/li&gt;
+&lt;li&gt;RTCDataChannel API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="signaling-in-webrtc-applications-3-min"&gt;
+&lt;h5&gt;Signaling in WebRTC Applications (3 min)&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What is signaling?&lt;/li&gt;
+&lt;li&gt;Why is it needed?&lt;/li&gt;
+&lt;li&gt;How to implement it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="implementation-of-signaling-16-min"&gt;
+&lt;h5&gt;Implementation of signaling (16 min)&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Implementation using Google AppEngine and Channel API&lt;/li&gt;
+&lt;li&gt;Implementation using Flask and gevent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="questions-3-min"&gt;
+&lt;h5&gt;Questions (3 min)&lt;/h5&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tarashish Mishra</dc:creator><pubDate>Fri, 25 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-25:europython-2014/building-realtime-web-applications-with-webrtc-an.html</guid></item></channel></rss>

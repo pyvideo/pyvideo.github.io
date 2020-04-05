@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 18 Jul 2012 00:00:00 +0000</lastBuildDate><item><title>QNDArray: A Numpy Clone for C++/Qt</title><link>https://pyvideo.org/scipy-2012/qndarray-a-numpy-clone-for-cqt.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While Numpy/Scipy is an attractive implementation platform for many
+algorithms, in some cases C++ is mandated by a customer. However, a
+foundation of numpy's behavior is the notion of reference-counted
+instances, and implementing an efficient, cross-platform mechanism for
+reference counting is no trivial prerequisite.&lt;/p&gt;
+&lt;p&gt;The reference counting mechanisms already implemented in the Qt C++
+toolkit provide a cross-platform foundation upon which a numpy-like
+array class can be built. In this talk one such implementation is
+discussed, QNDArray. In fact, by mimicking the numpy behaviors, the job
+of implementing QNDArray became much easier, as the task of &amp;quot;defining
+the behavior&amp;quot; became &amp;quot;adopting the behavior,&amp;quot; to include function names.&lt;/p&gt;
+&lt;p&gt;In particular, the following aspects of the implementation were found to
+be tricky and deserve discussion in this presentation:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;slicing multidimensional arrays given the limitations of operator[]
+in C++,&lt;/li&gt;
+&lt;li&gt;const&lt;/li&gt;
+&lt;li&gt;partial specialization&lt;/li&gt;
+&lt;li&gt;implicit vs. explicit data sharing in Qt QNDArray has been deployed
+in scientific research applications and currently has the following
+features:&lt;/li&gt;
+&lt;li&gt;bit-packed boolean arrays&lt;/li&gt;
+&lt;li&gt;nascent masked array support&lt;/li&gt;
+&lt;li&gt;unit test suite that validates QNDArray behavior against numpy
+behavior&lt;/li&gt;
+&lt;li&gt;bounds checking with Q_ASSERT() (becomes a no-op in release mode)&lt;/li&gt;
+&lt;li&gt;memmap()ed arrays via QFile::map()&lt;/li&gt;
+&lt;li&gt;easily integrated as a QVariant value, leading to a natural mapping
+from QVariantMap to Python dict.&lt;/li&gt;
+&lt;li&gt;float16 implementation including in-place compare&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The author has approval from his management to submit the source code
+for QNDArray to the Qt Project and plans to have it freely available for
+download via &lt;a class="reference external" href="http://qt.gitorious.org/"&gt;http://qt.gitorious.org/&lt;/a&gt; before the SciPy conference
+begins.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Glen W. Mabey</dc:creator><pubDate>Wed, 18 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-18:scipy-2012/qndarray-a-numpy-clone-for-cqt.html</guid><category>General</category></item></channel></rss>

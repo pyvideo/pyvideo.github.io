@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 04 Aug 2017 00:00:00 +0000</lastBuildDate><item><title>Predicting Black Swan Events</title><link>https://pyvideo.org/pycon-india-2013/predicting-black-swan-events.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We have developed a new rigorous mathematical framework for quantifying
+risk designed to utilize all available information and predict the
+impact of Black Swan events. These rigorous predictors are global
+optimizations over all possible valid scenarios, and do not rely on
+common approximations in computing priors that lead to the exclusion of
+high-impact rare events. Such optimizations, however, are
+high-dimensional, highly-constrained, and non- convex, and generally
+impossible to solve with current optimization technology. I will present
+an overview of our mathematical framework, and the powerful optimization
+software we have developed to rigorously solve real- world problems in
+predictive science, finance, and technology. The software runs in
+standard python on a simple laptop -- however, it trivially scales up to
+potentially petascale and larger calculations running on some of the
+largest computers on the planet.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Sun, 01 Sep 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-09-01:pycon-india-2013/predicting-black-swan-events.html</guid></item><item><title>Modern Optimization Methods in Python</title><link>https://pyvideo.org/scipy-2017/modern-optimization-methods-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Highly-constrained, large-dimensional, and non-linear optimizations are found at the root of most of today's forefront problems in statistics, quantitative finance, risk, operations research, materials design, and other predictive sciences. Tools for optimization, however, have not changed much in the past 40 years -- until very recently. The abundance of parallel computing resources has stimulated a shift away from using reduced models to solve statistical and predictive problems, and toward more direct methods for solving high-dimensional nonlinear optimization problems.&lt;/p&gt;
+&lt;p&gt;This tutorial will introduce modern tools for solving optimization problems -- beginning with traditional methods, and extending to solving high-dimensional non-convex optimization problems with highly nonlinear constraints. We will start by introducing the cost function, and it's use in local and global optimization. We will then address how to monitor and diagnose your optimization convergence and results, tune your optimizer, and utilize compound termination conditions. This tutorial will discuss building and applying box constraints, penalty functions, and symbolic constraints. We will then demonstrate methods to efficiently reduce search space through the use of robust optimization constraints. Real-world inverse problems can be expensive, thus we will show how to enable your optimization to seamlessly leverage parallel computing. Large-scale optimizations also can greatly benefit from efficient solver restarts and the saving of state. This tutorial will cover using asynchronous computing for results caching and archiving, dynamic real-time optimization, and dimensional reduction. Next we will discuss new optimization methods that leverage parallel computing to perform blazingly-fast global optimizations and n-dimensional global searches. Finally, we will close with applications of global optimization in statistics and quantitative finance.&lt;/p&gt;
+&lt;p&gt;The audience need not be an expert in optimization, but should have interest in solving hard real-world optimization problems. We will begin with a walk through some introductory optimizations, learning how to build confidence in understanding your results. By the end of the tutorial, participants will have working knowledge of how to use modern constrained optimization tools, how to enable their solvers to leverage high-performance parallel computing, and how to utilize legacy data and surrogate models in statistical and predictive risk modeling.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Fri, 04 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-04:scipy-2017/modern-optimization-methods-in-python.html</guid></item><item><title>klepto Unified Persistent Storage to Memory, Database, or Disk</title><link>https://pyvideo.org/scipy-2015/klepto-unified-persistent-storage-to-memory-database-or-disk.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Fri, 10 Jul 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-07-10:scipy-2015/klepto-unified-persistent-storage-to-memory-database-or-disk.html</guid></item><item><title>The Failure of Python Object Serializations: Why HPC in Python is Broken and How to Fix it</title><link>https://pyvideo.org/scipy-2014/the-failure-of-python-object-serializations-why.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Parallel and asynchronous computing in python is crippled by pickle's
+poor object serialization. Dill, a more robust serialization package,
+strives to serialize all of python. Dill has been used to enable state
+persistence and recovery, global caching, and the coordination of
+distributed parallel calculations across a network of the world's
+largest computers.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Parallel and asynchronous computing in python is crippled by pickle's
+poor object serialization. However, a more robust serialization package
+would drastically improve the situation. To leverage the cores found in
+modern processors we need to communicate functions between different
+processes -- and that means callables must be serialized without pickle
+barfing. Similarly, parallel and distributed computing with MPI, GPUs,
+sockets, and across other process boundaries all need serialized
+functions (or other callables). So why is pickling in python so broken?
+Python's ability to leverage these awesome communication technologies is
+limited by python's own inability to be a fully serializable language.
+In actuality, serialization in python is quite limited, and for really
+no good reason.&lt;/p&gt;
+&lt;p&gt;Many raise security concerns for full object serialization, however it
+can be argued that it is not pickle's responsibility to do proper
+authentication. In fact, one could apply rather insecure serialization
+of all objects the objects were all sent across RSA-encrypted
+ssh-tunnels, for example.&lt;/p&gt;
+&lt;p&gt;Dill is a serialization package that strives to serialize all of python.
+We have forked python's multiprocessing to use dill. Dill can also be
+leveraged by mpi4py, ipython, and other parallel or distributed python
+packages. Dill serves as the backbone for a distributed parallel
+computing framework that is being used to design the next generation of
+large-scale heterogeneous computing platforms, and has been leveraged in
+large-scale calculations of risk and uncertainty. Dill has been used to
+enable state persistence and recovery, global caching, and the
+coordination of distributed parallel calculations across a network of
+the world's largest computers.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pythonhosted.org/dill"&gt;http://pythonhosted.org/dill&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/uqfoundation"&gt;https://github.com/uqfoundation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/"&gt;http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1"&gt;http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY"&gt;https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://nbviewer.ipython.org/gist/anonymous/5241793"&gt;http://nbviewer.ipython.org/gist/anonymous/5241793&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-09:scipy-2014/the-failure-of-python-object-serializations-why.html</guid></item><item><title>The failure of python object serialization: why HPC in python is broken, and how to fix it</title><link>https://pyvideo.org/euroscipy-2014/the-failure-of-python-object-serialization-why-h.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Parallel and asynchronous computing in python is crippled by pickle's
+poor object serialization. However, a more robust serialization package
+would drastically improve the situation. To leverage the cores found in
+modern processors we need to communicate functions between different
+processes -- and that means callables must be serialized without pickle
+barfing. Similarly, parallel and distributed computing with MPI, GPUs,
+sockets, and across other process boundaries all need serialized
+functions (or other callables). So why is pickling in python so broken?
+Python's ability to leverage these awesome communication technologies is
+limited by python's own inability to be a fully serializable language.
+In actuality, serialization in python is quite limited, and for really
+no good reason.&lt;/p&gt;
+&lt;p&gt;Many raise security concerns for full object serialization, however it
+can be argued that it is not pickle's responsibility to do proper
+authentication. In fact, one could apply rather insecure serialization
+of all objects the objects were all sent across RSA-encrypted
+ssh-tunnels, for example.&lt;/p&gt;
+&lt;p&gt;Dill is a serialization package that strives to serialize all of python.
+We have forked python's multiprocessing to use dill. Dill can also be
+leveraged by mpi4py, ipython, and other parallel or distributed python
+packages. Dill serves as the backbone for a distributed parallel
+computing framework that is being used to design the next generation of
+large-scale heterogeneous computing platforms, and has been leveraged in
+large-scale calculations of risk and uncertainty. Dill has been used to
+enable state persistence and recovery, global caching, and the
+coordination of distributed parallel calculations across a network of
+the world's largest computers.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pythonhosted.org/dill"&gt;http://pythonhosted.org/dill&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/uqfoundation"&gt;https://github.com/uqfoundation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/"&gt;http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1"&gt;http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY"&gt;https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://nbviewer.ipython.org/gist/anonymous/5241793"&gt;http://nbviewer.ipython.org/gist/anonymous/5241793&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/the-failure-of-python-object-serialization-why-h.html</guid></item></channel></rss>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_gunicorn.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-09-15T00:00:00+00:00</updated><entry><title>Gunicorn what's next? The new web challenge</title><link href="https://pyvideo.org/pycon-japan-2012/gunicorn-whats-next-the-new-web-challenge.html" rel="alternate"></link><published>2012-09-15T00:00:00+00:00</published><updated>2012-09-15T00:00:00+00:00</updated><author><name>Benoit Chesneau</name></author><id>tag:pyvideo.org,2012-09-15:pycon-japan-2012/gunicorn-whats-next-the-new-web-challenge.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gunicorn was designed in view of easing the deployment of your python web application on the web hand have some success to do it. With the new challenges of the web (SPDY, Websockets, Green computing...), it’s time to improve its design. This talk will cover the current design of Gunicorn, what need to be fixed and the new features that will be introduced in the future major release.&lt;/p&gt;
+</summary><category term="gunicorn"></category></entry><entry><title>Safely deploying on the cutting edge</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--safely-deploying-on-the-cutting-e.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--safely-deploying-on-the-cutting-e.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Safely deploying on the cutting edge&lt;/p&gt;
+&lt;p&gt;Eric Holscher&lt;/p&gt;
+&lt;p&gt;This talk will go through the deployment system that we have built at
+Urban Airship. It will cover the process that allows us to automate our
+deployments, making it safe to deploy at any time. It's built on Fabric,
+Gunicorn, Virtualenv, Rsync, Supervisord, and Python. We end up with
+fully isolated environments for our services that are easy to manage.&lt;/p&gt;
+</summary><category term="deploying"></category><category term="djangocon"></category><category term="djangocon2011"></category><category term="fabric"></category><category term="gunicorn"></category><category term="virtualenv"></category><category term="web"></category></entry><entry><title>Using Coroutines to Create Efficient, High-Concurrency Web Applications</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Matt Spitz</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using Coroutines to Create Efficient, High-Concurrency Web Applications&lt;/p&gt;
+&lt;p&gt;Presented by Matt Spitz&lt;/p&gt;
+&lt;p&gt;Creating high-concurrency python web applications is inherently
+difficult for a variety of reasons. In this talk, I'll discuss the
+various iterations of application server paradigms we've used at meebo,
+the advantages/disadvantages of each approach, and why we've settled on
+a coroutine-based WSGI setup to handle our high-concurrency web
+applications going forward.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There are a number of ways in which to create a web application in
+python. Some examples include a straight-up CGI scripts that run anew
+with each request, preforked Apache workers that each handle multiple
+requests, and using an asynchronous web framework like Twisted.&lt;/p&gt;
+&lt;p&gt;At meebo, we've settled on using gunicorn, a lightweight WSGI server,
+which supports gevent, a coroutine-based network library for python.
+Gevent monkeypatches python's system modules to make network requests
+asynchronous using an event loop based on libevent. This trick allows
+the developer to use a simple blocking CGI as a non-blocking web
+application that can handle many concurrent requests.&lt;/p&gt;
+&lt;p&gt;I'll discuss our iteration process through these approaches to building
+web applications, why we ended up choosing gunicorn+gevent, the
+challenges this new framework presents, and how we've dealt with them.&lt;/p&gt;
+</summary><category term="coroutines"></category><category term="gevent"></category><category term="gunicorn"></category><category term="highconcurrency"></category><category term="libevent"></category><category term="pycon"></category><category term="pycon2011"></category><category term="wsgi"></category></entry></feed>

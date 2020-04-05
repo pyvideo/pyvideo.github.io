@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_model.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-28T00:00:00+00:00</updated><entry><title>When Worlds Collide: Productionalizing a Data Science Model</title><link href="https://pyvideo.org/pydata-chicago-2016/when-worlds-collide-productionalizing-a-data-science-model.html" rel="alternate"></link><published>2016-08-28T00:00:00+00:00</published><updated>2016-08-28T00:00:00+00:00</updated><author><name>Tudor Radoaca</name></author><id>tag:pyvideo.org,2016-08-28:pydata-chicago-2016/when-worlds-collide-productionalizing-a-data-science-model.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Chicago 2016&lt;/p&gt;
+&lt;p&gt;On our first data science project at Shiftgig, the data science and engineering teams had to build software that was production-ready while maintaining the flexibility of a data science sandbox. Although these seem like irreconcilable goals, they forced us to improve inter-team communication and ultimately helped create a great product. We’ll walk through our process and the lessons we learned.&lt;/p&gt;
+</summary><category term="Data"></category><category term="data science"></category><category term="model"></category><category term="science"></category></entry><entry><title>Modeling challenges</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--modeling-challenges.html" rel="alternate"></link><published>2010-09-08T00:00:00+00:00</published><updated>2010-09-08T00:00:00+00:00</updated><author><name>Malcolm Tredinnick</name></author><id>tag:pyvideo.org,2010-09-08:djangocon-us-2010/djangocon-2010--modeling-challenges.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How would you model players, umpires and coaches in baseball data when
+the same person can switch roles over the course of their life? How
+about servers in racks with power boards attached (and cords running
+across the room to remote boards)? Come along to see one approach to
+create minimal and well- performing models for such real-life
+situations.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The slightly over-simplified but useful rule of thumb when creating
+database schema is “normalize until it hurts, [then] denormalize until
+it works.” If only people didn’t skip the first step so often. Using a
+data modeling layer, such as Django's models, doesn't absolve the system
+architects from the need to create good design. It also doesn't require
+them to do so, since you can get away with a lot of sub-optimality with
+many data sets.&lt;/p&gt;
+&lt;p&gt;The real difficulty here, though, is that the trade-off between
+text-book ideal modeling and easy to use is difficult to judge and takes
+practice to develop.&lt;/p&gt;
+&lt;p&gt;This talk will walk some interesting cases of model design that I've
+encountered recently. I'll explain how I approached the problem and what
+we ended up with. These will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Modeling people who might simultaneously play different roles in the
+system. For example, a person who was a baseball player and then
+became a coach — each role has different attributes attached to it.&lt;/li&gt;
+&lt;li&gt;Modeling what appears to be a triangular dependency relationship with
+minimal redundancy in the data description and without needing really
+long query filters to access things.&lt;/li&gt;
+&lt;li&gt;Handling date ranges (or other measured data) of different degrees of
+accuracy and precision.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This won't be a talk on theoretical database design. Rather, concrete
+examples of creating such designs and guiding the decisions by what
+might work best in the final Django code. Hopefully, by listening to one
+person's approach (mine!), people faced with similar challenges will
+have another possible attack method in their toolbox.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2010"></category><category term="model"></category></entry></feed>

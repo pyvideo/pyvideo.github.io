@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Total Recall: flmake and the Quest for Reproducibility</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2012.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2012.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Total Recall: flmake and the Quest for Reproducibility" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2012/total-recall-flmake-and-the-quest-for-reproducib.html" />
+    <meta property="og:image" content="https://i4.ytimg.com/vi/ce4UU0ltbPA/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i4.ytimg.com/vi/ce4UU0ltbPA/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="General" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2012/total-recall-flmake-and-the-quest-for-reproducib.html" rel="bookmark"
+         title="Permalink to Total Recall: flmake and the Quest for Reproducibility">Total Recall: flmake and the Quest for Reproducibility
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2012-07-19T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 19 July 2012
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/anthony-scopatz.html">Anthony Scopatz</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+    <li class="" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://s3.us.archive.org/nextdayvideo/enthought/scipy_2012/Total_Recall_flmake_and_the_Quest_for_Reproducibility.mp4?Signature=RXHp35B0p8ekEKA0Uds%2F6w73sRs%3D&Expires=1346382337&AWSAccessKeyId=FEWGReWX3QbNk0h3" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ce4UU0ltbPA" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p><a class="reference external" href="http://flash.uchicago.edu/site/">FLASH</a> is a high-performance
+computing (HPC) multi-physics code which is used to perform
+astrophysical and high-energy density physics simulations. It runs on
+the full range of systems from laptops to workstations to 100,000
+processor super computers - such as the Blue Gene/P at Argonne National
+Laboratory.</p>
+<p>Historically, FLASH was born from a collection of unconnected legacy
+codes written primarily in Fortran and merged into a single project.
+Over the past 13 years major sections have been rewritten in other
+languages. For instance, I/O is now implemented in C. However building,
+testing, and documentation are all performed in Python.</p>
+<p>FLASH has a unique architecture which compiles <em>simulation specific</em>
+executables for each new type of run. This is aided by an
+object-oriented- esque inheritance model that is implemented by
+inspecting the file system's directory hierarchy. This allows FLASH to
+compile to faster machine code than a compile-once strategy. However it
+also places a greater importance on the Python build system.</p>
+<p>To run a FLASH simulation, the user must go through three basic steps:
+setup, build, and execution. Canonically, each of these tasks are
+independently handled by the user. However, with the recent advent of
+<a class="reference external" href="http://flash.%20uchicago.edu/site/flashcode/user_support/tools4b/usersguide/flmake/index.htm">flmake</a>
+- a Python workflow management utility for FLASH - such tasks may now be
+performed in a repeatable way.</p>
+<p>Previous workflow management tools have been written for FLASH. (For
+example, the &quot;Milad system&quot; was implemented entirely in Makefiles.)
+However, none of the priorattempts have placed reproducibility as their
+primary concern. This is in part becausefully capturing the setup
+metadata requires alterations to the build system.</p>
+<p>The development of flmake started by rewriting the existing build
+systemto allow FLASH to be run outside of the main line subversion
+repository. It separates outproject and simulation directories
+independent of the FLASH source directory. Thesedirectories are
+typically under their own version control.</p>
+<p>Moreover for each of the important tasks (setup, build, run, etc), a
+sidecar metadata <em>description</em> file is either written or appended to.
+This is a simple dictionary-of-dictionaries JSON file which stores the
+environment of the system and the state of the code when each flmake
+command is run. This metadata includes the version information of both
+the FLASH main line and project repositories. However, it also may
+include <em>all</em> local modifications since the last commit. A patch is
+automatically generated using the Python standard library <tt class="docutils literal">difflib</tt>
+module and stored directly in the description.</p>
+<p>Along with universally unique identifiers, logging, and Python run
+control files, the flmake utility may use the description files to fully
+reproduce a simulation by re-executing each command in its original
+environment and state. While <tt class="docutils literal">flmake reproduce</tt> makes a useful
+debugging tool, it fundamentally increases the scientific merit of FLASH
+simulations.</p>
+<p>The methods described above may be used whenever source code itself is
+distributed. While this is true for FLASH (uncommon amongst
+compiledcodes), most Python packages also distribute their source.
+Therefore the same reproducibility strategy is applicable and highly
+recommended for Python simulation codes. Thus flmake shows that
+reproducibility - which is notably absent from most computational
+science projects - is easily attainable using only version control and
+standard library modules.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2012.html">SciPy 2012</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="http://s3.us.archive.org/nextdayvideo/enthought/scipy_2012/Total_Recall_flmake_and_the_Quest_for_Reproducibility.mp4?Signature=RXHp35B0p8ekEKA0Uds%2F6w73sRs%3D&Expires=1346382337&AWSAccessKeyId=FEWGReWX3QbNk0h3" rel="external">MP4</a>, <a href="http://youtube.com/watch?v=ce4UU0ltbPA" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/general/">General</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://flash.%20uchicago.edu/site/flashcode/user_support/tools4b/usersguide/flmake/index.htm">
+http://flash.%20uchicago.edu/site/flashcode/user_support/tools4b/usersguide/flmake/index.htm                </a></li><li><a href="http://flash.uchicago.edu/site/">
+http://flash.uchicago.edu/site/                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2012/videos/total-recall-flmake-and-the-quest-for-reproducib.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

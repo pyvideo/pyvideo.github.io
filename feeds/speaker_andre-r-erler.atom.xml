@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_andre-r-erler.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-11-12T00:00:00+00:00</updated><entry><title>Managing large ensembles and batch execution with Python</title><link href="https://pyvideo.org/pycon-ca-2016/managing-large-ensembles-and-batch-execution-with-python.html" rel="alternate"></link><published>2016-11-12T00:00:00+00:00</published><updated>2016-11-12T00:00:00+00:00</updated><author><name>Andre R. Erler</name></author><id>tag:pyvideo.org,2016-11-12:pycon-ca-2016/managing-large-ensembles-and-batch-execution-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In many scientific applications it is necessary to run a large number of
+similar experiments (i.e. ensembles). Using examples from my own
+research, I will show how an Ensemble container class can be constructed
+in Python to simplify many of the tedious aspects of performing large
+sets of numerical experiments or simulations and to easily parallelize
+batch execution.&lt;/p&gt;
+&lt;div class="section" id="andre-r-erler-bio"&gt;
+&lt;h4&gt;Andre R. Erler Bio&lt;/h4&gt;
+&lt;p&gt;Andre is an early-career researcher in climate modeling and hydrology;
+that means he runs climate models and hydrological models on high
+performance computing facilities and analyses their output. He uses
+primarily uses the scientific software stack in Python for data analysis
+and visualization, but also uses Python to manage experiments with large
+volumes of data (or &amp;quot;data plumbing&amp;quot;).&lt;/p&gt;
+&lt;p&gt;Andre is also interested in machine learning and the use of data science
+techniques in and outside of climate science, and he is somewhat
+concerned about the state of software development in science.&lt;/p&gt;
+&lt;p&gt;Open source software, open science, the environment and sustainable
+global development are the causes he cares most about.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>An example of scikit-learn and SciPy used for the analysis of extreme weather</title><link href="https://pyvideo.org/pycon-ca-2015/an-example-of-scikit-learn-and-scipy-used-for-the.html" rel="alternate"></link><published>2015-11-08T00:00:00+00:00</published><updated>2015-11-08T00:00:00+00:00</updated><author><name>Andre R. Erler</name></author><id>tag:pyvideo.org,2015-11-08:pycon-ca-2015/an-example-of-scikit-learn-and-scipy-used-for-the.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;There is considerable interest in the effect of climate change on extreme weather in the scientific community and in the public. However, detecting changes in extreme weather events in the observational record is extremely difficult, because extreme events are by definition rare and the instrumental record is not long enough to establish robust statistics for a single station record.&lt;/p&gt;
+&lt;p&gt;In this talk I show how tools from the scientific Python software stack can be used to analyze precipitation (rainfall) data and overcome this problem and detect changes in the observational record.&lt;/p&gt;
+&lt;p&gt;The analysis proceeds in two stages: first a k-means clustering algorithm (sklearn.cluster) is used to aggregate data from different stations that have similar climatological characteristics, and then a theoretical distribution function is fitted to the data (scipy.stats).
+The first step increases the number of data points to constrain the fit in the second step, assuming all stations in the same cluster have the same underlying distribution. The second step serves to further reduce noise and extrapolate the distribution to the most extreme quantiles.
+Finally a statistical test (scipy.stats) can be used to detect changes and asses statistical significance.&lt;/p&gt;
+&lt;p&gt;I will introduce the analysis algorithm using historical data from meteorological stations (Environment Canada), but I will also show how this technique can be applied to climate model projections of future climate change.&lt;/p&gt;
+&lt;p&gt;The analysis was conducted using the GeoPy analysis package, which is described in a separate talk. The package is available on GitHub: &lt;a class="reference external" href="https://github.com/aerler/GeoPy"&gt;https://github.com/aerler/GeoPy&lt;/a&gt;
+An extended abstract submitted to the Climate Informatics workshop in Boulder (September 24-25, 2015; 2 pages) is available here: &lt;a class="reference external" href="http://www.physics.utoronto.ca/~aerler/files/presentations/ci2015.pdf"&gt;http://www.physics.utoronto.ca/~aerler/files/presentations/ci2015.pdf&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Orchestrating a climate modeling data pipeline</title><link href="https://pyvideo.org/pycon-ca-2015/orchestrating-a-climate-modeling-data-pipeline-r.html" rel="alternate"></link><published>2015-11-07T00:00:00+00:00</published><updated>2015-11-07T00:00:00+00:00</updated><author><name>Andre R. Erler</name></author><id>tag:pyvideo.org,2015-11-07:pycon-ca-2015/orchestrating-a-climate-modeling-data-pipeline-r.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyCon Canada 2015:&lt;/p&gt;
+&lt;p&gt;Talk Description:
+In order to run high-resolution regional climate models, it is necessary to interpolate and pre-process large amounts of data from a global climate model at the boundaries of the regional model. Several C and Fortran tools are available in the scientific community to achieve different aspects of this task, but communication between these tools is limited to the filesystem (the program/tool reads input from a file and writes output to a file). In a High Performance Computing (HPC) environment, filesystem access is a bottleneck and temporary files should be avoided.&lt;/p&gt;
+&lt;p&gt;In this talk I will show how a Python driver module and an in-memory filesystem (RAM disk) can be used to orchestrate the data flow between various tools without creating temporary files on disk and fully automate the entire process.
+Except for the first input and the last output step, all file I/O is redirected to the RAM disk. The process can also be parallelized in the Python driver module by distributing different input files to different processes using Python multiprocessing.
+The use of this technique leads to a speed-up of 800% compared to traditional methods, and requires no human intervention.&lt;/p&gt;
+&lt;p&gt;Different input datasets are supported and new datasets can be added easily due to the object oriented implementation: at every stage of the pre-processing pipeline a dataset method can be overloaded and a different tool can be used, depending on the input dataset.
+This would not have been possible in a simple scripting language that might otherwise be used to automate such a process.&lt;/p&gt;
+&lt;p&gt;This module (called PyWPS), is part of the WRF Tools package, a set of Python modules and shell scripts designed to facilitate the operation of a regional climate model (the Weather Research and Forecasting model - WRF) in a HPC environment. It is capable of autonomously running the model over extended periods of time (including automatic crash handling and restarts), automatic pre- and post-processing and archiving.&lt;/p&gt;
+&lt;p&gt;In the presentation I will first provide some context on regional climate modeling and its computational challenges, before detailing the main design features of the Python WRF pre-processing system (PyWPS).&lt;/p&gt;
+&lt;p&gt;The package is available on GitHub: &lt;a class="reference external" href="https://github.com/aerler/WRF-Tools"&gt;https://github.com/aerler/WRF-Tools&lt;/a&gt;&lt;/p&gt;
+</summary></entry></feed>

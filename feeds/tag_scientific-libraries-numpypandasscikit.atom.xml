@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_scientific-libraries-numpypandasscikit.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>Parallel computing in Python: Current state and recent advances</title><link href="https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Pierre Glaser</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Distributed Systems"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Building Data-Driven Client Relationship Management in Banking with Python</title><link href="https://pyvideo.org/europython-2019/building-data-driven-client-relationship-management-in-banking-with-python.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Paul Hughes</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/building-data-driven-client-relationship-management-in-banking-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a case study that documents how a small data science team in a
+big bank took on the challenge to transform a fragmented sales process
+into a data-driven one using Python and machine learning.&lt;/p&gt;
+&lt;p&gt;This talk outlines the various ways Python has been instrumental in
+delivering a production solution that serves advisers and relationship
+manager on a continuous basis.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The Challenge&lt;/div&gt;
+&lt;div class="line"&gt;- A bank has many clients with diverse needs and cost pressures mean
+fewer advisers resulting in reduced client coverage.&lt;/div&gt;
+&lt;div class="line"&gt;- Multiple sales channels and mixed service levels meant sales
+processes were uncoordinated and driven by heuristics and often very
+subjective.&lt;/div&gt;
+&lt;div class="line"&gt;- And... Excel sheets everywhere!&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Solution&lt;/div&gt;
+&lt;div class="line"&gt;- Go data-driven!&lt;/div&gt;
+&lt;div class="line"&gt;- Learn from clients and understand product usage&lt;/div&gt;
+&lt;div class="line"&gt;- Empower and inform advisers and call centre agents&lt;/div&gt;
+&lt;div class="line"&gt;- Build a front-to-back sales process (no more Excels!)&lt;/div&gt;
+&lt;div class="line"&gt;- How? With Python!&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The Python Bits&lt;/div&gt;
+&lt;div class="line"&gt;- Scikit learn machine learning pipelines that implement two distinct
+approaches to product affinity in banking and wealth management&lt;/div&gt;
+&lt;div class="line"&gt;- SQL Alchemy based API for data engineering and rapid prototyping of
+analytics&lt;/div&gt;
+&lt;div class="line"&gt;- Pandas and Jupyter for development and collaboration&lt;/div&gt;
+&lt;div class="line"&gt;- Luigi pipeline for daily processing of millions of transactions and
+engineering features&lt;/div&gt;
+&lt;div class="line"&gt;- Extracting features from text with NLP (Spacy)&lt;/div&gt;
+&lt;div class="line"&gt;- Delivering machine learning interpretability in production, e.g.
+with Random Forests and treeinterpreter&lt;/div&gt;
+&lt;div class="line"&gt;- A Python module that we built with all the reusable bits: building
+training and prediction datasets, developing pipelines, generating
+monitoring data and enabling explainability&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Business Cases"></category><category term="Data Science"></category><category term="Machine-Learning"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category><category term="Windows"></category></entry><entry><title>Deep Learning with TensorFlow 2.0</title><link href="https://pyvideo.org/europython-2019/deep-learning-with-tensorflow-20.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Brad Miro</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/deep-learning-with-tensorflow-20.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn about the updates being made to TensorFlow in its 2.0 version.
+We’ll give an overview of what’s available in the new version as well as
+do a deep dive into an example using its central high-level API, Keras.
+You’ll walk away with a better understanding of how you can get started
+building machine learning models in Python with TensorFlow 2.0 as well
+as the other exciting available features!&lt;/p&gt;
+</summary><category term="Data Science"></category><category term="Deep Learning"></category><category term="Machine-Learning"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Machine learning on non curated data</title><link href="https://pyvideo.org/europython-2019/machine-learning-on-non-curated-data.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Gael Varoquaux</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/machine-learning-on-non-curated-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;According to industry surveys [1], the number one hassle of data
+scientists is cleaning the data to analyze it. Textbook statistical
+modeling is sufficient for noisy signals, but errors of a discrete
+nature break standard tools of machine learning. I will discuss how to
+easily run machine learning on data tables with two common dirty-data
+problems: missing values and non-normalized entries. On both problems, I
+will show how to run standard machine-learning tools such as
+scikit-learn in the presence of such errors. The talk will be didactic
+and will discuss simple software solutions. It will build on the latest
+improvements to scikit-learn for missing values and the DirtyCat package
+[2] for non normalized entries. I will also summarize theoretical
+analyses in recent machine learning publications.&lt;/p&gt;
+&lt;p&gt;This talk targets data practitioners. Its goal are to help data
+scientists to be more efficient analysing data with such errors and
+understanding their impacts.&lt;/p&gt;
+&lt;p&gt;With missing values, I will use simple arguments and examples to outline
+how to obtain asymptotically good predictions [3]. Two components are
+key: imputation and adding an indicator of missingness. I will explain
+theoretical guidelines for these, and I will show how to implement these
+ideas in practice, with scikit-learn as a learner, or as a preprocesser.&lt;/p&gt;
+&lt;p&gt;For non-normalized categories, I will show that using their string
+representations to “vectorize” them, creating vectorial representations
+gives a simple but powerful solution that can be plugged in standard
+statistical analysis tools [4].&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[1] Kaggle, the state of ML and data science 2017
+&lt;a class="reference external" href="https://www.kaggle.com/surveys/2017"&gt;https://www.kaggle.com/surveys/2017&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[2] &lt;a class="reference external" href="https://dirty-cat.github.io/stable/"&gt;https://dirty-cat.github.io/stable/&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[3] Josse Julie, Prost Nicolas, Scornet Erwan, and Varoquaux Gaël
+(2019). “On the consistency of supervised learning with missing
+values”. &lt;a class="reference external" href="https://arxiv.org/abs/1902.06931"&gt;https://arxiv.org/abs/1902.06931&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;[4] Cerda Patricio, Varoquaux Gaël, and Kégl Balázs. &amp;quot;Similarity
+encoding for learning with dirty categorical variables.&amp;quot; Machine
+Learning 107.8-10 (2018): 1477 &lt;a class="reference external" href="https://arxiv.org/abs/1806.00979"&gt;https://arxiv.org/abs/1806.00979&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Big Data"></category><category term="Data"></category><category term="Data Science"></category><category term="Machine-Learning"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Understanding Numba - the Python and Numpy compiler</title><link href="https://pyvideo.org/europython-2019/understanding-numba-the-python-and-numpy-compiler.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Christoph Deil</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/understanding-numba-the-python-and-numpy-compiler.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you have numerical code written in Python and Numpy? Do you wish it
+ran faster, using the full potential of your CPU?&lt;/p&gt;
+&lt;p&gt;Then you should try Numba, a JIT compiler that translates a subset of
+Python and Numpy code into fast machine code.&lt;/p&gt;
+&lt;p&gt;This talk will explain how Numba works, and when and how to use it for
+numerical algorithms, focusing on how to get very good performance on
+the CPU.&lt;/p&gt;
+&lt;p&gt;To understand this talk, only a basic knowledge of Python and Numpy is
+needed.&lt;/p&gt;
+&lt;p&gt;You will learn how Python compiles functions to bytecode and how Numba
+compiles bytecode to machine code. Why algorithms implemented using
+Numpy sometimes don't yield great performance, and how to do better
+using Numba. You will learn about the &amp;#64;numba.jit and &amp;#64;numba.vectorize
+decorators and how to create functions that use the CPU well by using
+e.g. multi-threading (several CPU cores), vector instructions (single
+instruction multiple data) and fast math (trade float accuracy for
+speed).&lt;/p&gt;
+&lt;p&gt;You will also learn when it does and doesn't make sense to use Numba, by
+contrasting it briefly with some other options for high-performance
+computing from Python: PyPy, C, C++, Cython, Numexpr, Dask, PyTorch,
+Tensorflow and Google JAX&lt;/p&gt;
+</summary><category term="CPython"></category><category term="Compiler and Interpreters"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>“When a biologist met Python”</title><link href="https://pyvideo.org/europython-2019/when-a-biologist-met-python.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Maria Molina-Contreras</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/when-a-biologist-met-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Biology and computing are closer than we usually think, for example
+many algorithms are inspired in biology patterns, and complementary to
+that, researchers needs special algorithms to have a better
+understanding of our environment. Thus, there is a strong relation an
+dependency.&lt;/div&gt;
+&lt;div class="line"&gt;In the past years, Biology has been transformed into computational
+biology. Therefore&lt;/div&gt;
+&lt;div class="line"&gt;technological advances helps us to predict physical interactions
+between atoms and DNA, because we are being able to integrate
+information from biology into algorithms.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Python has become a popular programming language in biosciences because
+it has a clean syntax that makes it easy to read language. In addition
+to this, there are many modules (toolkits) extending to different
+biological domains, like metabolomics, structure analysis,
+phylogenomics, molecular biology and others. Python is currently
+improving researcher’s workflow, helping us to focus on the theory or
+experimental part, instead of fighting with old buggy applications.&lt;/p&gt;
+&lt;p&gt;This talk aims to be oriented to all audiences (with/without biological
+background) since we will go together through an amazing adventure into
+the natural sciences using tools like Biopython, Bokeh, Networkx, Ecopy
+and much more! Are you brave enough to follow me on this journey?&lt;/p&gt;
+</summary><category term="Algorithms"></category><category term="Data Science"></category><category term="Natural Science"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category><category term="python"></category></entry><entry><title>How to train an image classifier using PyTorch</title><link href="https://pyvideo.org/europython-2019/how-to-train-an-image-classifier-using-pytorch.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Rogier van der Geer</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/how-to-train-an-image-classifier-using-pytorch.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Neural networks are everywhere nowadays. But while it seems everyone is
+using them, training your first neural network can be quite a hurdle to
+overcome.&lt;/p&gt;
+&lt;p&gt;In this talk I will take you by the hand, and following an example image
+classifier I trained, I will take you through the steps of making an
+image classifier in PyTorch. I will show you code snippets and explain
+the more intricate parts. Also, I will tell you about my experience, and
+about what mistakes to prevent. After this all you need to start
+training your first classifier is a data set!&lt;/p&gt;
+&lt;p&gt;Of course I will provide a link to the full codebase at the end. The
+talk will focus on the practical aspect of training a neural network,
+and will only touch the theoretical side very briefly. Some basic prior
+knowledge of neural networks is beneficial, but not required, to follow
+this talk.&lt;/p&gt;
+</summary><category term="Deep Learning"></category><category term="Fun and Humor"></category><category term="Image Processing"></category><category term="Machine-Learning"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Image processing with scikit-image and Dash</title><link href="https://pyvideo.org/europython-2019/image-processing-with-scikit-image-and-dash.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Emmanuelle Gouillart</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/image-processing-with-scikit-image-and-dash.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Images are an ubiquitous form of data in various fields of science and&lt;/div&gt;
+&lt;div class="line"&gt;industry. Images often need to be transformed and processed, for
+example for helping medical diagnosis by extracting regions of
+interest or measures, or for building training sets for machine
+learning.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In this talk, I will present and discuss several tools for automatic
+and&lt;/div&gt;
+&lt;div class="line"&gt;interactive image processing with Python. I will start by a short&lt;/div&gt;
+&lt;div class="line"&gt;introduction to scikit-image (&lt;a class="reference external" href="https://scikit-image.org/"&gt;https://scikit-image.org/&lt;/a&gt;), the
+open-source&lt;/div&gt;
+&lt;div class="line"&gt;image processing toolkit of the Pydata ecosystem, which aims at&lt;/div&gt;
+&lt;div class="line"&gt;processing images from a large class of modalities (2-D, 3-D, etc.)
+and&lt;/div&gt;
+&lt;div class="line"&gt;strives to have a gentle learning curve with pedagogical example-based&lt;/div&gt;
+&lt;div class="line"&gt;documentation. scikit-image provides users with a simple API based on
+a large number of functions, which can be used to build pipelines of
+image processing workflows.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In a second part, I will explain how to use Dash for building
+interactive&lt;/div&gt;
+&lt;div class="line"&gt;image processing operations. Dash (&lt;a class="reference external" href="https://dash.plot.ly/"&gt;https://dash.plot.ly/&lt;/a&gt;) is an&lt;/div&gt;
+&lt;div class="line"&gt;open-source Python web application framework developed by Plotly.
+Written on top of Flask, Plotly.js, and React.js, Dash is meant for
+building data visualization apps with highly custom user interfaces in
+pure Python. The dash-canvas component library of Dash
+(&lt;a class="reference external" href="https://dash.plot.ly/canvas"&gt;https://dash.plot.ly/canvas&lt;/a&gt;) is an interactive component for
+annotating images with several tools (freehand brush, lines, bounding
+boxes, ...). It also provides utility functions for using
+user-provided annotations for several image processing tasks such as
+segmentation, transformation, measures, etc. The latter functions are
+based on libraries such scikit-image and openCV. A gallery of examples
+showcases some typical uses of Dash for image processing on&lt;/div&gt;
+&lt;div class="line"&gt;&lt;a class="reference external" href="https://dash-canvas.plotly.host/"&gt;https://dash-canvas.plotly.host/&lt;/a&gt;. Also, other components of Dash can
+be leveraged easily to build powerful image processing applications,
+such as widgets to tune parameters or data tables for inspecting
+object&lt;/div&gt;
+&lt;div class="line"&gt;properties.&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Computer Vision"></category><category term="Data Science"></category><category term="Image Processing"></category><category term="JavaScript Web Frameworks (AngularJS/ReactJS/...)"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry></feed>

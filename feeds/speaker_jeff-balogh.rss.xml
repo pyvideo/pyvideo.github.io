@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 07 Sep 2010 00:00:00 +0000</lastBuildDate><item><title>Switching addons.mozilla.org from CakePHP to Django</title><link>https://pyvideo.org/djangocon-us-2010/djangocon-2010--switching-addons-mozilla-org-from.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In January of 2010 Mozilla started switching addons.mozilla.org (AMO)
+from CakePHP to Django. We see about 120 million web requests per month
+and 1.4 million visitors per day. This talk will be a case study of
+scaling and deploying a large website (and getting faster than PHP) with
+MySQL, memcached, virtualenv, Celery, Hudson, Redis, MongoDB, and more.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;To scale the backend of AMO, we rely heavily on caching in memcached
+(and soon Redis) to keep the load off our database, and multidb to
+spread the load we can't dump off on cache. Our caching ranges from
+object and query caching, to template fragment caching, up to full
+response caching. Frontend caching is external to Django and won't be
+covered. In addition, we work hard to measure and improve raw speed.
+Hitting indexes and keeping datasets small is critical, and the Django
+ecosystem has many great tools to help us profile.&lt;/p&gt;
+&lt;p&gt;We create development environments using pip and virtualenv, so we
+naturally started using that setup to deploy the site in production. We
+ran into issues creating a reliable environment with this method;
+switching to a separate vendor repository solved our problems with only
+a small amount of added effort. We update and deploy new code at least
+once a week, and have to deal with the additional complication of
+managing and interacting with parts of the PHP site that have not been
+ported over.&lt;/p&gt;
+&lt;p&gt;Apart from scaling and deployment, we've customized our application in
+ways that could be interesting to other Django users:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Jinja is our templating engine (but we keep the admin working)&lt;/li&gt;
+&lt;li&gt;Babel helps us localize the site in over 30 languages&lt;/li&gt;
+&lt;li&gt;Sphinx (not the documentation tool) serves our search results&lt;/li&gt;
+&lt;li&gt;Celery and RabbitMQ help us do offline processing&lt;/li&gt;
+&lt;li&gt;Nose and Hudson help us get over 90% code coverage in tests&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jeff Balogh</dc:creator><pubDate>Tue, 07 Sep 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-09-07:djangocon-us-2010/djangocon-2010--switching-addons-mozilla-org-from.html</guid><category>casestudy</category><category>djangocon</category><category>djangocon2010</category></item></channel></rss>

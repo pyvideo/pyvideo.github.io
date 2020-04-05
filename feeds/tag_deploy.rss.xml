@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 May 2019 00:00:00 +0000</lastBuildDate><item><title>Genropy e lo storage di file in cloud</title><link>https://pyvideo.org/pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Con la transizione dagli applicativi su server proprietari agli
+applicativi in cloud nasce l’esigenza di separare i dati dal loro
+storage fisico sul server dove risiede l’applicazione.&lt;/p&gt;
+&lt;p&gt;Per soddisfare questa esigenza abbiamo provveduto a implementare in
+Genropy delle API per rendere trasparente l’accesso al filesystem e
+consentire quindi di scrivere procedure che possano funzionare
+indifferentemente appoggiandosi in locale o in cloud
+(&lt;a class="reference external" href="https://aws.amazon.com/it/s3/"&gt;S3&lt;/a&gt; o simili)&lt;/p&gt;
+&lt;p&gt;Esamineremo brevemente la gestione dei servizi di Genropy e parleremo in
+particolare del servizio di Storage che consente di astrarre delle
+directory logiche su cui operare nell’applicativo, potendo decidere
+durante l’istallazione la corrispondenza con una directory locale o nel
+cloud.&lt;/p&gt;
+&lt;p&gt;Nel talk vedremo come rimpiazzare tutte le chiamate al FileSystem con le
+corrispondenti chiamate alle API del servizio di Storage. Ci
+soffermeremo sulla classe StorageNode che implementa sia i metodi
+necessari per le operazioni di scrittura, lettura e cancellazione di
+File e Directory indipendentemente dalla loro collocazione locale o in
+cloud sia un metodo che fornisce l’URL da servire per vedere o scaricare
+il contenuto statico.&lt;/p&gt;
+&lt;p&gt;Nel caso di servizi S3 o simili viene gestita automaticamente la
+gestione di un token di autorizzazione temporaneo basato sui privilegi
+dell’utente che effettua la richiesta. Questo consente di servire
+direttamente i file statici direttamente dal cloud invece di farli
+transitare dal server applicativo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1761"&gt;https://python.it/feedback-1761&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Porcari</dc:creator><pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-03:pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</guid><category>S3</category><category>genropy</category><category>cloud</category><category>deploy</category></item><item><title>Server side story</title><link>https://pyvideo.org/europython-2013/server-side-story.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Simone Deponti</dc:creator><pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-04:europython-2013/server-side-story.html</guid><category>HTTP</category><category>networking</category><category>deploy</category><category>mobile</category><category>javascript</category><category>desktop</category><category>sysadmin</category><category>json</category><category>gevent</category><category>design</category><category>software-engineering</category><category>best-practices</category><category>application-design</category><category>websockets</category><category>architecture</category></item><item><title>batou - a multi-(component|environment|platform|.*) deployment tool</title><link>https://pyvideo.org/europython-2013/batou-a-multi-componentenvironmentplatform-deployment-tool.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;batou is a service deployment utility inspired by tools like Puppet,
+Fabric, and other modern tools. It made a short appearance in a
+lightning talk and at the sprints during EP 2012.&lt;/p&gt;
+&lt;p&gt;The talk gives an overview and demonstrates with practical examples how
+we deploy web applications with many complex components:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;modelling service components with Python&lt;/li&gt;
+&lt;li&gt;multiple environments&lt;/li&gt;
+&lt;li&gt;multiple platforms&lt;/li&gt;
+&lt;li&gt;development environments&lt;/li&gt;
+&lt;li&gt;convergent behaviour&lt;/li&gt;
+&lt;li&gt;remote deployments&lt;/li&gt;
+&lt;li&gt;secrets management (database passwords, SSL certificates, …)&lt;/li&gt;
+&lt;li&gt;no additional run-time dependencies&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will show how the real-life requirements in our projects led us to
+develop a general model that integrates existing practices without
+building a huge stack of technologies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Theune</dc:creator><pubDate>Wed, 03 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-03:europython-2013/batou-a-multi-componentenvironmentplatform-deployment-tool.html</guid><category>fabric</category><category>hosting</category><category>deploy</category><category>devops</category><category>integration</category><category>service-orchestration</category><category>deployment</category><category>best-practices</category><category>webapp</category><category>servers</category></item><item><title>Python Good Practices</title><link>https://pyvideo.org/europython-2013/python-good-practices.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alan Franzoni</dc:creator><pubDate>Wed, 03 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-03:europython-2013/python-good-practices.html</guid><category>design</category><category>deploy</category><category>patterns</category><category>teamwork</category><category>architecture</category><category>best-practices</category></item><item><title>Deploy automatizzato di un progetto Python 3/Django con Ansible</title><link>https://pyvideo.org/pycon-italia-2017/deploy-automatizzato-di-un-progetto-python-3django-con-ansible.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La mia applicazione è pronta e funziona senza problemi sulla mia
+macchina con il server di sviluppo, ma non ho chiaro come portarla in un
+ambiente di produzione. Ci sono parecchi servizi che permettono il
+deploy con un solo click, adatti soprattutto a semplici siti, ma essi
+non sono pienamente configurabili e nascondono il modo in cui il server
+è effettivamente organizzato. Anche se molti usano ingegnose soluzioni
+PaaS, vale ancora la pena capire come costruire da zero un ambiente di
+produzione con Linux, Python 3, Django e uWSGI. Nel talk questo classico
+stack verrà brevemente introdotto e si mostrerà poi come automatizzare
+la configurazione e la procedura di deploy con un &lt;a class="reference external" href="https://github.com/marco-santamaria/django-%20ansible-deploy"&gt;playbook
+Ansible&lt;/a&gt;
+che verrà messo a disposizione. Una particolare enfasi verrà data
+all’uso di variabili d’ambiente per la configurazione del progetto
+seguendo l’approccio delle twelve-factor-app. Inoltre verranno spiegati
+i concetti più importanti di Ansible (playbook, ruoli, template, moduli,
+inventari).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marco Santamaria</dc:creator><pubDate>Fri, 07 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-07:pycon-italia-2017/deploy-automatizzato-di-un-progetto-python-3django-con-ansible.html</guid><category>deploy</category><category>devops</category><category>automation</category><category>nginx</category><category>ansible</category><category>best-practices</category><category>django</category><category>uwsgi</category></item><item><title>Deploying Django</title><link>https://pyvideo.org/djangocon-us-2009/djangocon-2009--deploying-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deploying Django&lt;/p&gt;
+&lt;p&gt;Presented by Brian Rosner&lt;/p&gt;
+&lt;p&gt;Talks about deploying django sites.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: mostly in left speaker]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brian Rosner</dc:creator><pubDate>Tue, 08 Sep 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-09-08:djangocon-us-2009/djangocon-2009--deploying-django.html</guid><category>deploy</category><category>deployment</category><category>djangocon</category><category>djangocon2009</category></item><item><title>Data Driven Cache Invalidation</title><link>https://pyvideo.org/europython-2011/data-driven-cache-invalidation.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Magnus Hagander - 23 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In todays world, nobody (should) deploy a web application facing the
+internet without having a proper caching system in place. There are many
+different solutions to choose from, from manual use of memcached through
+framework integrated caching to external caches like Squid or Varnish.
+Most modern frameworks come with integrated functionality for at least
+one of these methods, and often more than one.&lt;/p&gt;
+&lt;p&gt;However, they often relies on all traffic going through the same
+framework to work properly - a caching layer in Rails is hard to share
+with one in Django. This talk will show a way to break the design rules
+of these frameworks just a little, and have the database help solve this
+problem.&lt;/p&gt;
+&lt;p&gt;This talk will use a small application written in Python using Django to
+illustrate the examples, but the method is language independent.
+Unsurprisingly, the database used is PostgreSQL.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Magnus Hagander</dc:creator><pubDate>Sun, 24 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-24:europython-2011/data-driven-cache-invalidation.html</guid><category>cache</category><category>database</category><category>deploy</category><category>design</category><category>django</category><category>framework</category><category>web</category></item><item><title>Deploying web applications to the cloud with Python</title><link>https://pyvideo.org/europython-2011/deploying-web-applications-to-the-cloud-with-pyth.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Nate Aune - 23 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How can Python help you deploy web applications to the cloud? Amazon EC2
+provides virtual machines on demand but as a developer you still have to
+configure these machines and push your code to them. Fabric is a Python
+library that lets you execute commands on a remote machine, and Boto is
+a Python library for interfacing with Amazon web services. By using
+Fabric and Boto, you can easily create repeatable deployments and
+provision new resources as needed with minimal effort.&lt;/p&gt;
+&lt;p&gt;This talk will introduce Amazon Web Services and how to launch new
+machines using simple Boto scripts, and how to get started making your
+own repeatable deployments using Fabric scripts.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nate Aune</dc:creator><pubDate>Sun, 24 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-24:europython-2011/deploying-web-applications-to-the-cloud-with-pyth.html</guid><category>boto</category><category>cloud</category><category>deploy</category><category>ec2</category><category>fabric</category><category>web</category></item><item><title>Best Practices for Python in the Cloud</title><link>https://pyvideo.org/europython-2011/best-practices-for-python-in-the-cloud.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Gisle Aas - 21 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abstract: Whether you’re an independent developer or development manager
+in a large company, “the cloud” is on everyone’s mind. But just because
+it’s in the cloud, doesn’t mean development and deployment is
+effortless. The cloud presents infrastructure and development challenges
+in a new way.&lt;/p&gt;
+&lt;p&gt;In this presentation, ActiveState's Gisle Aas will share best practices
+in building and deploying a Python-centric LAMP stack(s) on the cloud
+for a range of web-based applications from simple Django site to HPC GPU
+Clusters.&lt;/p&gt;
+&lt;p&gt;Based on ActiveState’s experiences, Gisle will discuss the challenges
+faced and lessons learned in building an infrastructure to deploy web
+applications to the cloud with Python.&lt;/p&gt;
+&lt;p&gt;You will learn about:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Which packages are critical for a secure, Python-centric LAMP stack
+(and what it takes to build them)!&lt;/li&gt;
+&lt;li&gt;Tips for developing, deploying, and scaling Python applicaitons in
+the cloud&lt;/li&gt;
+&lt;li&gt;How to use Python to connect and build infrastructure to support and
+manage your deployment&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gisle Aas</dc:creator><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-18:europython-2011/best-practices-for-python-in-the-cloud.html</guid><category>cloud</category><category>deploy</category><category>deployment</category><category>django</category><category>gpu</category><category>hpc</category><category>infrastructure</category><category>lamp</category><category>packages</category><category>scaling</category><category>web</category></item><item><title>Developing a Cad application as an hobby. My exciting hobby is now my job</title><link>https://pyvideo.org/europython-2011/developing-a-cad-application-as-an-hobby-my-exci.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Matteo Boscolo - 22 June 2011 in &amp;quot;Track Tagliatelle &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PythonCAD is a CAD package written, surprisingly enough, in Python using
+the PyQt interface. The PythonCAD project aims to produce a scriptable,
+open- source, easy to use CAD package for Linux (Cross Platforms).&lt;/p&gt;
+&lt;p&gt;I start developing PythonCAD in my spare time and now python is the
+programming language that I mostly use. I think that will be very
+interesting to tell my story and how I learn python pyqt ,sqlite, sympy…
+and how python and pycon and OpenERP change my job.&lt;/p&gt;
+&lt;p&gt;The goal will be to tell at the new python programmer how easy to use is
+python even for complex problem. I can explain why I chose pyqt .. what
+kind of trouble I have found and how I solve it. Starting from python
+going to pyqt and at the end how to deploy a python application with
+pyInstaller …&lt;/p&gt;
+&lt;p&gt;I also explain my actual project OpenPLM an OpenERP module to manage PLM
+data into OpenERP&lt;/p&gt;
+&lt;p&gt;see you soon Matteo&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matteo Boscolo</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/developing-a-cad-application-as-an-hobby-my-exci.html</guid><category>deploy</category><category>pycon</category><category>pyqt</category></item><item><title>uWSGI, il coltellino svizzero (di MacGyver) del deploy</title><link>https://pyvideo.org/europython-2011/uwsgi-il-coltellino-svizzero-di-macgyver-del-d.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Roberto De Ioris - 21 June 2011 in &amp;quot;Track Italiana Big
+Mac&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La prima parte del talk introdurra' la storia di uWSGI, dall'idea
+iniziale alla messa in produzione dei primi lavori, fino alla sua
+inclusione nei progetti Cherokee e Nginx.&lt;/p&gt;
+&lt;p&gt;Seguira' una serie di esempi di deploy in ambienti ostili (a livello di
+sicurezza, non faremo deploy nella jungla) o con risorse fortemente
+limitate fino all'utilizzo delle funzionalita' integrate per il
+clustering.&lt;/p&gt;
+&lt;p&gt;Il talk si rivolge a tutti gli sviluppatori di applicazioni web che sono
+alla ricerca di un ambiente robusto e veloce per i propri lavori, o a
+chi gia' utilizza uWSGI e vuole conoscere qualcuna delle nuove
+funzionalita' introdotte nel ramo di sviluppo.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roberto De Ioris</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/uwsgi-il-coltellino-svizzero-di-macgyver-del-d.html</guid><category>deploy</category><category>web</category></item><item><title>How to maintain big app stacks without losing your mind</title><link>https://pyvideo.org/pycon-au-2011/how-to-maintain-big-app-stacks-without-losing-you.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;zc.buildout is a powerful build/configure/deployment tool for creating
+applications from multiple parts, some not python. It's perfect for
+sharing a development environment or deploy applications to many hosts.
+This tutorial will cover basic concepts, similarity to other tools such
+as virtual-env, puppet etc as well as practical examples. zc.buildout
+has successful been used with web applications such as Plone, django and
+pyramid.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dylan Jay</dc:creator><pubDate>Mon, 22 Aug 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-08-22:pycon-au-2011/how-to-maintain-big-app-stacks-without-losing-you.html</guid><category>deploy</category><category>django</category><category>puppet</category><category>tutorial</category><category>web</category><category>zc.buildout</category></item></channel></rss>

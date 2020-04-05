@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 13 May 2018 00:00:00 +0000</lastBuildDate><item><title>Reinventing the Parser Generator</title><link>https://pyvideo.org/pycon-us-2018/reinventing-the-parser-generator.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing lexers and parsers is a complex problem that often involves the use of special tools and domain specific languages (e.g., the lex/yacc tools on Unix).  In 2001, I wrote Python versions of these tools which can be found in the PLY project.  PLY predates a huge number of modern Python features including the iteration protocol, generators, decorators, metaclasses, and more.  As such, it relied on a variety of clever hacks to layer a domain specific parser specification language on top of Python itself.&lt;/p&gt;
+&lt;p&gt;In this talk, I discuss a modernization of the PLY project that abandons its past and freely abuses modern Python features including advanced metaclasses, guaranteed dictionary ordering, class decorators, type hints, and more.   The result of this work can be found in the SLY project.  However, this talk isn't so much about SLY as it is focused on how far you can push Python metaprogramming features to create domain-specific languages.   Prepare to be horrified--and to write code that will break your IDE.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Beazley</dc:creator><pubDate>Sun, 13 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-13:pycon-us-2018/reinventing-the-parser-generator.html</guid><category>ply</category><category>sly</category><category>parser</category></item><item><title>PyOhio 2011: Python, Parsing and You</title><link>https://pyvideo.org/pyohio-2011/pyohio-2011--python--parsing-and-you.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python, Parsing, and You&lt;/p&gt;
+&lt;p&gt;Presented by Tim Henderson&lt;/p&gt;
+&lt;p&gt;Tim Henderson Python is a fantastic language to write text processing
+tools in, including full fledged parsers. In this tutorial I will
+briefly cover Recursive Descent, Top Down Predictive and LALR Parsing.
+The tools used will include PLY and a Top Down Predictive Parsing
+framework of my own construction. I will expect the audience to be
+familiar with the following concepts: Context Free Grammars, Regular
+Expressions, ...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tim Henderson</dc:creator><pubDate>Sat, 30 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-30:pyohio-2011/pyohio-2011--python--parsing-and-you.html</guid><category>lalr</category><category>parser</category><category>ply</category><category>pyohio</category><category>pyohio2011</category></item><item><title>Generazione di codice in Python : dal documento al codice C++ passando per la modellizzazione UML.</title><link>https://pyvideo.org/europython-2011/generazione-di-codice-in-python-dal-documento-a.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Francesco Bochicchio - 24 June 2011 in &amp;quot;Track Italiana
+Big Mac &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Intendo presentare un programma di utilità che ho sviluppato per aiutare
+me e i miei colleghi nel nostro attuale progetto.Space Software Italia
+Questo programma esegue le seguenti attività: - Analizza un documento
+Microsoft Word - generato automaticamente - allo scopo di estrarne le
+informazioni relative alle strutture dati da usare per comunicare con
+dispositivi e/o programmi software. Tali informazioni sono memorizzate
+in un modello UML, generato interfacciandosi con il CASE tool usato in
+azienda (Rational Rose). - Utilizza i dati in un modello UML - di solito
+una versione migliorata a mano di quello generato automaticamente - per
+generare un set di classi C++, una per messaggio, che forniscono i
+metodi per serializzare/deserializzare i messaggi usando le API
+specifiche del progetto. Il programma è stato scritto in Python 2.x ed
+utilizza i seguenti moduli esterni: - pywin32: per interfacciare sia MS
+Word che il tool CASE usando lo standard COM. - ply : per analizzare il
+file in cui il tool CASE memorizza il modello,&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Bochicchio</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/generazione-di-codice-in-python-dal-documento-a.html</guid><category>api</category><category>ply</category></item><item><title>PLY and PyParsing (#93)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--ply-and-pyparsing---93.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PLY and PyParsing&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Dalke&lt;/p&gt;
+&lt;p&gt;Got a text parsing problem? In most cases using string manipulation and
+regular expressions will solve it for you. But when the input is
+complex, try reaching for a parsing system to help out.&lt;/p&gt;
+&lt;p&gt;The two most popular in Python are PLY and PyParsing. PLY follows the
+lex/yacc tradition with a domain specific language to describe the
+tokens and grammar. It was built with both error diagnostics and
+performance in mind. PyParsing is a recursive descent parser which
+expresses the format as a Python data structure. It make no distinction
+between lexer and grammar and has a uniform callback system which makes
+certain types of data extraction very easy.&lt;/p&gt;
+&lt;p&gt;In my talk I'll show the basics of how to use both systems for several
+different format parsing tasks, of different complexity. This will let
+you see how to use the parsers and understand more of the tradeoffs
+between complexity, readability, error handling, and performance.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Dalke</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--ply-and-pyparsing---93.html</guid><category>ply</category><category>pycon</category><category>pycon2010</category><category>pyparsing</category></item><item><title>Teaching compilers with python (#87)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--teaching-compilers-with-python---87.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Teaching compilers with python&lt;/p&gt;
+&lt;p&gt;Presented by Dr. Matthieu Amiguet&lt;/p&gt;
+&lt;p&gt;Why choose Python to teach compilers?&lt;/p&gt;
+&lt;p&gt;In the University of Applied Sciences ARC, compilers are taught in a
+relatively short amount of time. Focus is put on the main conceptual
+ideas, letting aside many technical details. Still, the students are
+expected to write a full compiler within a few weeks' time.&lt;/p&gt;
+&lt;p&gt;After trying the traditional C/Lex/Yacc based approach, and a more
+education- oriented Java/Jaccie solution, we settled on Python and PLY,
+plus a few enhancements (syntax tree graphical representation, decorator
+to achieve better code separation).&lt;/p&gt;
+&lt;p&gt;As a result, the students get a better understanding of the compiler
+concepts and produce more interesting and creative projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dr. Matthieu Amiguet</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--teaching-compilers-with-python---87.html</guid><category>ply</category><category>pycon</category><category>pycon2010</category></item></channel></rss>

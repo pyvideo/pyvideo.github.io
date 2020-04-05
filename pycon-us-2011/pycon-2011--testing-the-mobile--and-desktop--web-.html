@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Testing the Mobile (and Desktop) Web with Selenium 2.0 - Better, Faster, and more Pythonicly</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-us-2011.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Testing the Mobile (and Desktop) Web with Selenium 2.0 - Better, Faster, and more Pythonicly" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-us-2011/pycon-2011--testing-the-mobile--and-desktop--web-.html" />
+    <meta property="og:image" content="https://archive.org/services/img/pyvideo_373___testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly" />
+    <meta property="og:image:secure_url" content="https://archive.org/services/img/pyvideo_373___testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly" />
+
+
+    <meta name="tags" content="browsers" />
+    <meta name="tags" content="embedded" />
+    <meta name="tags" content="html5" />
+    <meta name="tags" content="pycon" />
+    <meta name="tags" content="pycon2011" />
+    <meta name="tags" content="selenium" />
+    <meta name="tags" content="webdriver" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-us-2011/pycon-2011--testing-the-mobile--and-desktop--web-.html" rel="bookmark"
+         title="Permalink to Testing the Mobile (and Desktop) Web with Selenium 2.0 - Better, Faster, and more Pythonicly">Testing the Mobile (and Desktop) Web with Selenium 2.0 - Better, Faster, and more Pythonicly
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2011-03-11T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 11 March 2011
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/jason-huggins.html">Jason Huggins</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#archive.org" aria-controls="archive.org" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> ARCHIVE.ORG
+    </a></li>
+    <li class="" role="presentation"><a href="#mp4" aria-controls="mp4" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-file-video-o"></i> MP4
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="archive.org">
+        <a class="reference external image-reference"
+           href="https://archive.org/details/pyvideo_373___testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly">
+            <img alt=""
+                 src="https://archive.org/services/img/pyvideo_373___testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly">
+        </a>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mp4">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <video class="embed-responsive-item" controls>
+                <source src="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/373_testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Testing the Mobile (and Desktop) Web with Selenium 2.0 - Better, Faster,
+and more Pythonicly</p>
+<p>Presented by Jason Huggins</p>
+<p>Selenium is a popular web application testing tool for acceptance
+testing dynamic web applications. Selenium 2.0 has a different
+architecture that makes it leaner, meaner, and more pythonic -- for
+testing desktop <em>and</em> mobile web (iPhone/Android) apps. This talk will
+go into detail on how Selenium 2 works. If you like testing and Python,
+you'll enjoy what's cooking in Selenium 2.</p>
+<p>Abstract</p>
+<p>Selenium was originally created by Jason Huggins and his team at
+ThoughtWorks in 2004 as a tool for cross-browser acceptance testing of
+dynamic web apps -- apps that use JavaScript heavily on the client. Over
+the years, the Selenium tool family has expanded to include a Firefox
+record and playback tool (Selenium IDE), a Remote Control server that
+allows API access from any major programming language, and a Grid server
+that allows tests to run in parallel across many machines.</p>
+<p>Despite it's widespread industry adoption, the Selenium project is far
+from done. Selenium's goal is to drive any browser the same way an end
+user would (e.g. opening pages, clicking buttons, entering text, etc.)
+with any programming language on any OS platform. It's an ambitious
+goal, and with a steady stream of new browsers (Chrome), new platforms
+(Android, iPhone), and new HTML5 technologies (video, canvas, offline
+storage) to support, just keeping up is an arduous task.</p>
+<p>Astute observers will note, though, the bulk of Selenium's automation
+engine is implemented in JavaScript, which is confined by the browser's
+security sandbox in which it executes JavaScript code. That security
+sandbox ultimately is at odds with Selenium's goal to drive the browser
+just as a user would. A user has no problem interacting with security
+alerts for untrusted certificates, or file upload dialog boxes, but
+Selenium can't deal with these kinds of things easily without extra
+effort.</p>
+<p>Enter WebDriver. There's a lot in common between the Selenium and
+WebDriver projects. They're both tools for automated testing of web
+applications, and both aspire to offer browser test automation from any
+language on any platform. However, they do their thing in radically
+different ways. Selenium uses the strategy that JavaScript is the one
+common tool available for automating all browsers, even though its
+capabilities can be highly constrained. Meanwhile, WebDriver leverages
+the strategy that acknowledges different automation strategies work best
+for different browsers. COM works best for IE on Windows, Apple Events
+for Safari on OS X. And Firefox, well, the best way to natively automate
+Firefox is to turn it into a telnet server. (But that's a whole other
+PyCon talk entirely!) WebDriver aims to natively drive each browser the
+best way possible for maximum capability, then hiding those differences
+between lower level C and C++ APIs, and finally exposing the
+functionality through the appropriate C/C++ mechanism for each target
+language, such as using ctypes for Python. With WebDriver's technical
+approach, anything a user can do is now possible in test automation
+code.</p>
+<p>This talk will go into detail explaining how Selenium and WebDriver (aka
+Selenium 2) work, comparing the strengths and weaknesses of each tool's
+approach to browser automation. The talk will then explain what Selenium
+2.0 looks like and how to use it.</p>
+<p>Talk outline:</p>
+<ul class="simple">
+<li>Description of problem space<ul>
+<li>More browsers</li>
+<li>More frequent browser releases</li>
+<li>HTML 5 - video, canvas, offline storage</li>
+<li>The web in more places - Mobile, Chrome OS</li>
+</ul>
+</li>
+<li>Description of Selenium</li>
+<li>Strengths of Selenium</li>
+<li>Description of challenges for Selenium 1<ul>
+<li>Javascript security sandbox</li>
+<li>Same origin policy / cross-site scripting</li>
+<li>OS-level popups</li>
+<li>Speed / stability</li>
+<li>Java as the cross-language integration point (aka Not Very
+Pythonic, eh?)</li>
+</ul>
+</li>
+<li>Description of Selenium 2 (aka WebDriver)</li>
+<li>Strengths of Selenium 2</li>
+<li>How Selenium 2 is more pythonic<ul>
+<li>(Lots and lots of example code goes here.)</li>
+<li>Spoiler Alert: No Java server required!</li>
+</ul>
+</li>
+<li>How to test Android apps</li>
+<li>How to test iPhone apps</li>
+<li>Selenium development roadmap</li>
+</ul>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-us-2011.html">PyCon US 2011</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://archive.org/details/pyvideo_373___testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly" rel="external">ARCHIVE.ORG</a>, <a href="http://05d2db1380b6504cc981-8cbed8cf7e3a131cd8f1c3e383d10041.r93.cf2.rackcdn.com/pycon-us-2011/373_testing-the-mobile-and-desktop-web-with-selenium-2-0-better-faster-and-more-pythonicly.mp4" rel="external">MP4</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/browsers/">browsers</a>, <a href="https://pyvideo.org/tag/embedded/">embedded</a>, <a href="https://pyvideo.org/tag/html5/">html5</a>, <a href="https://pyvideo.org/tag/pycon/">pycon</a>, <a href="https://pyvideo.org/tag/pycon2011/">pycon2011</a>, <a href="https://pyvideo.org/tag/selenium/">selenium</a>, <a href="https://pyvideo.org/tag/webdriver/">webdriver</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-us-2011/videos/pycon-2011--testing-the-mobile--and-desktop--web-.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

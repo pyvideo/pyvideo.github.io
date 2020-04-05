@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 09 Oct 2019 00:00:00 +0000</lastBuildDate><item><title>Tutorial: Write your Own Decorators</title><link>https://pyvideo.org/pycon-de-2019/tutorial-write-your-own-decorators.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Mike Müller&lt;/p&gt;
+&lt;p&gt;Decorators are really useful. Using them is simple. Writing your own is bit more involved. Learn in this hands-on workshop how to write decorators for many different purposes. The emphasis is on best practices and practical examples.&lt;/p&gt;
+&lt;p&gt;Recorded at the PyConDE &amp;amp; PyData Berlin 2019 conference.
+&lt;a class="reference external" href="https://pycon.de"&gt;https://pycon.de&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More details at the conference page: &lt;a class="reference external" href="https://de.pycon.org/program/ASLHQN"&gt;https://de.pycon.org/program/ASLHQN&lt;/a&gt;
+Follow us on Twitter:  &lt;a class="reference external" href="https://twitter.com/pydataberlin"&gt;https://twitter.com/pydataberlin&lt;/a&gt;, &lt;a class="reference external" href="https://twitter.com/pyconde"&gt;https://twitter.com/pyconde&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-10-09:pycon-de-2019/tutorial-write-your-own-decorators.html</guid></item><item><title>Faster Python Programs - Measure, don't Guess</title><link>https://pyvideo.org/pycon-us-2019/faster-python-programs-measure-dont-guess.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Optimization can often help to make Python programs faster or use less
+memory. Developing a strategy, establishing solid measuring and
+visualization techniques as well as knowing about algorithmic basics and
+datastructures are the foundation for a successful optimization. The
+tutorial will cover these topics. Examples will give you a hands-on
+experience on how to approach efficiently.&lt;/p&gt;
+&lt;p&gt;Python is a great language. But it can be slow compared to other
+languages for certain types of tasks. If applied appropriately,
+optimization may reduce program runtime or memory consumption
+considerably. But this often comes at a price. Optimization can be time
+consuming and the optimized program may be more complicated. This, in
+turn, means more maintenance effort. How do you find out if it is
+worthwhile to optimize your program? Where should you start? This
+tutorial will help you to answer these questions. You will learn how to
+find an optimization strategy based on quantitative and objective
+criteria. You will experience that one's gut feeling what to optimize is
+often wrong.&lt;/p&gt;
+&lt;p&gt;The solution to this problem is: „Measure, Measure, and Measure!“. You
+will learn how to measure program run times as well as profile CPU and
+memory. There are great tools available. You will learn how to use some
+of them. Measuring is not easy because, by definition, as soon as you
+start to measure, you influence your system. Keeping this impact as
+small as possible is important. Therefore, we will cover different
+measuring techniques.&lt;/p&gt;
+&lt;p&gt;Furthermore, we will look at algorithmic improvements. You will see that
+the right data structure for the job can make a big difference. Finally,
+you will learn about different caching techniques.&lt;/p&gt;
+&lt;div class="section" id="software-requirements"&gt;
+&lt;h4&gt;Software Requirements&lt;/h4&gt;
+&lt;p&gt;You will need Python 3.7 installed on your laptop. Python 2.7 or 3.5/3.6
+should also work. Python 3.x is strongly preferred. You may use Python
+3.8 if is released at the time of the tutorial and all dependencies can
+be installed.&lt;/p&gt;
+&lt;div class="section" id="jupyterlab"&gt;
+&lt;h5&gt;JupyterLab&lt;/h5&gt;
+&lt;p&gt;I will use a JupyterLab for the tutorial because it makes a very good
+teaching tool. You are welcome to use the setup you prefer, i.e editor,
+IDE, REPL. If you also like to use a JupyterLab, I recommend &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt;
+for easy installation. Similarly to &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; allows
+creating isolated environments but allows binary installs for all
+platforms.&lt;/p&gt;
+&lt;p&gt;There are two ways to install &lt;tt class="docutils literal"&gt;Jupyter&lt;/tt&gt; via &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt;:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="https://conda.io/miniconda.html"&gt;Minconda&lt;/a&gt;. This is a small
+install and (after you installed it) you can use the command
+&lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; to create an environment:
+&lt;tt class="docutils literal"&gt;conda create &lt;span class="pre"&gt;-n&lt;/span&gt; pycon2019 python=3.7&lt;/tt&gt; Now you can change into this
+environment: &lt;tt class="docutils literal"&gt;conda activate pycon2019&lt;/tt&gt;. The prompt should change
+to &lt;tt class="docutils literal"&gt;(pycon2019)&lt;/tt&gt;. Now you can install JupyterLab:
+&lt;tt class="docutils literal"&gt;conda install jupyterlab&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Install &lt;a class="reference external" href="https://www.anaconda.com/download/"&gt;Anaconda&lt;/a&gt; and you are
+ready to go if you don't mind installing lots of packages from the
+scientific field.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Personally, I prefer the Miniconda approach.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="working-witch-conda-environments"&gt;
+&lt;h5&gt;Working witch &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; environments&lt;/h5&gt;
+&lt;p&gt;After creating a new environment, the system might still work with some
+stale settings. Even when the command &lt;tt class="docutils literal"&gt;which&lt;/tt&gt; tells you that you are
+using an executable from your environment, this might actually not be
+the case. If you see strange behavior using a command line tool in your
+environment, use &lt;tt class="docutils literal"&gt;hash &lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/tt&gt; and try again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tools"&gt;
+&lt;h5&gt;Tools&lt;/h5&gt;
+&lt;p&gt;You can install these with &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; (in the active &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt;
+environment):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://jiffyclub.github.io/snakeviz/"&gt;SnakeViz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/line_profiler/"&gt;line_profiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/Pympler"&gt;Pympler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/memory_profiler"&gt;memory_profiler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="linux"&gt;
+&lt;h6&gt;Linux&lt;/h6&gt;
+&lt;p&gt;Using the package manager of your OS is alternative if you prefer this
+approach.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 02 May 2019 13:20:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-02:pycon-us-2019/faster-python-programs-measure-dont-guess.html</guid><category>tutorial</category></item><item><title>Meta Programming - Some Use Cases for Everyday Programming</title><link>https://pyvideo.org/europython-2013/meta-programming-some-use-cases-for-everyday-programming.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-04:europython-2013/meta-programming-some-use-cases-for-everyday-programming.html</guid><category>debugging</category><category>metaprogramming</category><category>testing</category><category>principles</category><category>refactoring</category><category>application-design</category><category>architecture</category><category>validation</category><category>software-engineering</category></item><item><title>The Python Paradox</title><link>https://pyvideo.org/europython-2013/the-python-paradox.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 04 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-04:europython-2013/the-python-paradox.html</guid></item><item><title>Faster Python Programs through Optimization - Part 1</title><link>https://pyvideo.org/europython-2013/faster-python-programs-through-optimization-part-1.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-02:europython-2013/faster-python-programs-through-optimization-part-1.html</guid></item><item><title>Faster Python Programs through Optimization - Part 2</title><link>https://pyvideo.org/europython-2013/faster-python-programs-through-optimization-part-2.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Tue, 02 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-02:europython-2013/faster-python-programs-through-optimization-part-2.html</guid></item><item><title>Faster Python Programs - Measure, don't Guess</title><link>https://pyvideo.org/pycon-us-2018/faster-python-programs-measure-dont-guess.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Optimization can often help to make Python programs faster or use less memory. Developing a strategy, establishing solid measuring and visualization techniques as well as knowing about algorithmic basics and datastructures are the foundation for a successful optimization. The tutorial will cover these topics.
+Examples will give you a hands-on experience on how to approach efficiently.&lt;/p&gt;
+&lt;p&gt;Python is a great language. But it can be slow compared to other languages
+for certain types of tasks. If applied appropriately, optimization may reduce
+program runtime or memory consumption considerably. But this often comes at a price. Optimization can be time consuming and the optimized program may be more complicated. This, in turn, means more maintenance effort. How do you find out if it is worthwhile to optimize your program? Where should you start?&lt;/p&gt;
+&lt;p&gt;This tutorial will help you to answer these questions. You will learn how
+to find  an optimization strategy based on quantitative and objective criteria.
+You will experience that one's gut feeling what to optimize is often wrong.&lt;/p&gt;
+&lt;p&gt;The solution to this problem is: „Measure, Measure, and Measure!“. You will
+learn how to measure program run times as well as profile CPU and memory.
+There are great tools available. You will learn how to use some of them.
+Measuring is not easy because, by definition, as soon as you start to measure,
+you influence your system. Keeping this impact as small as possible is
+important. Therefore, we will cover different measuring techniques.&lt;/p&gt;
+&lt;p&gt;Furthermore, we will look at algorithmic improvements. You will see that the
+right data structure for the job can make a big difference. Finally, you will
+learn about different caching techniques.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-09:pycon-us-2018/faster-python-programs-measure-dont-guess.html</guid><category>profiling</category><category>measuring</category></item><item><title>Scientific Python Tools for Non-Scientific Uses</title><link>https://pyvideo.org/pyconweb-2017/scientific-python-tools-for-non-scientific-uses.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is an amazing programming language that is used by many different
+communities. Dev-ops, web programmers, sys admins, database programmers
+as well as scientists and engineers from many different fields use it daily.
+But often members of one sub-community might not be familiar with the
+libraries and tools another sub-community uses. Even these libraries are
+originally designed for total different purposes, they can be useful for
+unintended usages.&lt;/p&gt;
+&lt;p&gt;This talk introduces two very use popular scientific Python tools, the Jupyter
+Notebook for fast, exploratory Python programming and pandas, the amazingly
+useful data analyses library. Both libraries could be called killer apps in
+their fields. Come and see what they can offer and how they can simplify your
+daily web-programming tasks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Sat, 27 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-27:pyconweb-2017/scientific-python-tools-for-non-scientific-uses.html</guid><category>jupyter notebook</category></item><item><title>Matplotlib</title><link>https://pyvideo.org/euroscipy-2017/matplotlib.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This tutorial is for Python users who would like to create nice 2d plots
+with Python.&lt;/p&gt;
+&lt;div class="section" id="audience-level"&gt;
+&lt;h4&gt;Audience Level&lt;/h4&gt;
+&lt;p&gt;Students should have a working knowledge of Python. NumPy knowledge is
+helpful but not required.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="prerequisites"&gt;
+&lt;h4&gt;Prerequisites&lt;/h4&gt;
+&lt;p&gt;Please bring your laptop with the operating system of your choice
+(Linux, Mac OS X, Windows). In addition to Python 3.6 (2.7 works if
+really want to use it), we need:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a current versions of matplotlib (&lt;a class="reference external" href="http://matplotlib.sourceforge.net"&gt;http://matplotlib.sourceforge.net&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Jupyter (&lt;a class="reference external" href="http://jupyter.org/"&gt;http://jupyter.org/&lt;/a&gt;) and&lt;/li&gt;
+&lt;li&gt;NumPy (&lt;a class="reference external" href="http://numpy.scipy.org"&gt;http://numpy.scipy.org&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you use Anaconda you should have all requirements installed. If you
+use a new &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; environment install with:&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;conda install jupyter numpy matplotlib&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;The same goes for &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;pip install jupyter numpy matplotlib&lt;/tt&gt;&lt;/p&gt;
+&lt;div class="section" id="method"&gt;
+&lt;h5&gt;Method&lt;/h5&gt;
+&lt;p&gt;This is a hands-on course. Students are strongly encouraged to work
+along with the trainer at the interactive prompt. There will be
+exercises the students need to do on their own. Experience shows that
+this active involvement is essential for an effective learning.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="content"&gt;
+&lt;h5&gt;Content&lt;/h5&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The library matplotlib provides many different types of diagrams from
+within Python with only few lines of code. Examples are used to
+exercise the use of this library. The tutorial provides an overview
+how to create plots . Using matplotlib from Jupyter Notebook provides
+an interactive environment for fast testing of ideas. We will be using
+this for most of the tutorial.&lt;/div&gt;
+&lt;div class="line"&gt;With a simple plot we learn how to add axis labels, titles and a
+legend. The GUI offers zooming, panning, changing of plot sizes and
+other interactive ways to modify the plot. We will use Python to
+change properties of existing plots such as line colors, marker
+symbols, or line styles. There are several ways how to place text on
+plots. You will learn about the different coordinate systems relative
+to the plot, the canvas or the figure. Another topic are ticks, where
+to put them and how to format them to achieve publication-quality
+plots. The concepts of figures, subplots, and axes and how they relate
+to each other will be explained with examples.&lt;/div&gt;
+&lt;div class="line"&gt;Matplotlib offers many different types of plots. The tutorial
+introduces several of them with an example. A more advanced topic will
+be creating your own plot types. Finally, we will create a small
+animation to explore the possibilities to visualize changes.&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="outline"&gt;
+&lt;h5&gt;Outline&lt;/h5&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction&lt;/li&gt;
+&lt;li&gt;Jupyter&lt;/li&gt;
+&lt;li&gt;Simple plots&lt;/li&gt;
+&lt;li&gt;Properties&lt;/li&gt;
+&lt;li&gt;Text&lt;/li&gt;
+&lt;li&gt;Ticks&lt;/li&gt;
+&lt;li&gt;Figures, subplots, and axes&lt;/li&gt;
+&lt;li&gt;Other types of plots&lt;/li&gt;
+&lt;li&gt;The class library&lt;/li&gt;
+&lt;li&gt;Creating New Plot Types&lt;/li&gt;
+&lt;li&gt;Animations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="audience-level-novice"&gt;
+&lt;h6&gt;Audience level: Novice&lt;/h6&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 31 Aug 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-08-31:euroscipy-2017/matplotlib.html</guid><category>tutorial</category></item><item><title>Programming in Parallel with Threads</title><link>https://pyvideo.org/europython-2017/programming-in-parallel-with-threads.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Threads are typically not the way to take advantage of multiple CPUs
+for CPU-bound problems. The Global Interpreter Lock (GIL) allows the
+use of only one CPU at the time when using threads. However, the GIL
+is released for IO task&lt;/p&gt;
+&lt;p&gt;The use case is a scientific simulation model that has to run 18,000
+different simulations. The input data for these simulations need to
+be extracted from a common database, re-assembled and translated into
+several input files per simulation. After each simulation that is run
+with an external, standalone executable, the output data needs to be
+gathered and rearranged in a output database.&lt;/p&gt;
+&lt;p&gt;The implementation scaled up to 50 threads. On a eight-core machine
+more than 90 % usage of all CPUs could be achieved, bringing the
+total run time down to about two hours from about 15 hours.&lt;/p&gt;
+&lt;p&gt;Depending on the use case, threading can help to speedup a program
+and even take advantage of multiple CPUs. This talk presents such a
+use case. The approach can be translated to problems from other
+domains if the sub-tasks can be turned into IO tasks.&lt;/p&gt;
+&lt;p&gt;Asynchronous programming could have been used here. However using a
+thread per task and using class that represents a task, is likely
+conceptually simpler for programmers not used to asynchronous
+programming.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Tue, 11 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-11:europython-2017/programming-in-parallel-with-threads.html</guid></item><item><title>Faster Python Programs - Measure, don't Guess</title><link>https://pyvideo.org/pycon-us-2017/faster-python-programs-measure-dont-guess.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Optimization can often help to make Python programs faster or use less
+memory. Developing a strategy, establishing solid measuring and
+visualization techniques as well as knowing about algorithmic basics and
+datastructures are the foundation for a successful optimization. The
+tutorial will cover these topics. Examples will give you a hands-on
+experience on how to approach efficiently.&lt;/p&gt;
+&lt;p&gt;Python is a great language. But it can be slow compared to other
+languages for certain types of tasks. If applied appropriately,
+optimization may reduce program runtime or memory consumption
+considerably. But this often comes at a price. Optimization can be time
+consuming and the optimized program may be more complicated. This, in
+turn, means more maintenance effort. How do you find out if it is
+worthwhile to optimize your program? Where should you start? This
+tutorial will help you to answer these questions. You will learn how to
+find an optimization strategy based on quantitative and objective
+criteria. You will experience that one's gut feeling what to optimize is
+often wrong.&lt;/p&gt;
+&lt;p&gt;The solution to this problem is: „Measure, Measure, and Measure!“. You
+will learn how to measure program run times as well as profile CPU and
+memory. There are great tools available. You will learn how to use some
+of them. Measuring is not easy because, by definition, as soon as you
+start to measure, you influence your system. Keeping this impact as
+small as possible is important. Therefore, we will cover different
+measuring techniques.&lt;/p&gt;
+&lt;p&gt;Furthermore, we will look at algorithmic improvements. You will see that
+the right data structure for the job can make a big difference. Finally,
+you will learn about different caching techniques.&lt;/p&gt;
+&lt;div class="section" id="software-requirements"&gt;
+&lt;h4&gt;Software Requirements&lt;/h4&gt;
+&lt;p&gt;You will need Python 2.7 or 3.5 installed on your laptop. Python 2.6 or
+3.3/3.4 should also work. Python 3.x is strongly preferred.&lt;/p&gt;
+&lt;div class="section" id="jupyter-notebook"&gt;
+&lt;h5&gt;Jupyter Notebook&lt;/h5&gt;
+&lt;p&gt;I will use a Jupyter Notebook for the tutorial because it makes a very
+good teaching tool. You are welcome to use the setup you prefer, i.e
+editor, IDE, REPL. If you also like to use a Jupyter Notebook, I
+recommend &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; for easy installation. Similarly to &lt;tt class="docutils literal"&gt;virtualenv&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; allows creating isolated environments but allows binary
+installs for all platforms.&lt;/p&gt;
+&lt;p&gt;There are two ways to install &lt;tt class="docutils literal"&gt;Jupyter&lt;/tt&gt; via &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt;:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Use &lt;a class="reference external" href="http://conda.pydata.org/miniconda.html"&gt;Minconda&lt;/a&gt;. This is a
+small install and (after you installed it) you can use the command
+&lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; to create an environment:
+&lt;tt class="docutils literal"&gt;conda create &lt;span class="pre"&gt;-n&lt;/span&gt; pycon2016 python=3.5&lt;/tt&gt; Now you can change into this
+environment: &lt;tt class="docutils literal"&gt;source activate pycon2016&lt;/tt&gt;. The prompt should change
+to &lt;tt class="docutils literal"&gt;(pycon2017)&lt;/tt&gt;. Now you can install IPython:
+&lt;tt class="docutils literal"&gt;conda install Jupyter&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;Install &lt;a class="reference external" href="http://continuum.io/downloads"&gt;Anaconda&lt;/a&gt; and you are
+ready to go if you don't mind installing lots of packages from the
+scientific field.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class="section" id="working-with-conda-environments"&gt;
+&lt;h5&gt;Working with &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt; environments&lt;/h5&gt;
+&lt;p&gt;After creating a new environment, the system might still work with some
+stale settings. Even when the command &lt;tt class="docutils literal"&gt;which&lt;/tt&gt; tells you that you are
+using an executable from your environment, this might actually not be
+the case. If you see strange behavior using a command line tool in your
+environment, use &lt;tt class="docutils literal"&gt;hash &lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/tt&gt; and try again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tools"&gt;
+&lt;h5&gt;Tools&lt;/h5&gt;
+&lt;p&gt;You can install these with &lt;tt class="docutils literal"&gt;pip&lt;/tt&gt; (in the active &lt;tt class="docutils literal"&gt;conda&lt;/tt&gt;
+environment):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://jiffyclub.github.io/snakeviz/"&gt;SnakeViz&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/line_profiler/"&gt;line_profiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/Pympler"&gt;Pympler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/memory_profiler"&gt;memory_profiler&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pwaller/pyprof2calltree/"&gt;pyprof2calltree&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="linux"&gt;
+&lt;h6&gt;Linux&lt;/h6&gt;
+&lt;p&gt;Using the package manager of your OS should be the best option.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-18:pycon-us-2017/faster-python-programs-measure-dont-guess.html</guid></item><item><title>Functional Python with Mochi</title><link>https://pyvideo.org/europython-2015/functional-python-with-mochi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mike Müller - Functional Python with Mochi
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;[Slides][1]&lt;/p&gt;
+&lt;p&gt;While Python supports procedural, object-oriented, and functional
+programming, its functional features are not fully developed. Mochi is
+a Python-like functional language that compiles to Python 3 and PyPy 3
+bytecode. It can use Python libraries and can be used from Python.&lt;/p&gt;
+&lt;p&gt;Mochi adds functional features such as tail recursion optimization, no
+re-assignments in function definitions, persistent data structures,
+pattern matching, algebraic data types, a pipeline operator, better
+anonymous functions, Erlang-style actors, Lisp-style macros as well as
+many useful builtin functions.&lt;/p&gt;
+&lt;p&gt;This talk presents what Mochi is, how it works, and what you can do
+with it. Functional programming can help to solve certain kind of
+problems elegantly. Done right, functional programs can be easily
+tested and provide more confidence that you program is really doing
+what you want. Mochi could be another tool in your toolbox. Functional
+programming can expand your horizon and can be a lot of fun. Mochi
+offers easy access to this new world because you can leverage your
+existing Python knowledge and libraries whenever needed.&lt;/p&gt;
+&lt;p&gt;[Slides][1]&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.python-academy.com/talks/europython2015/Functional%20Python%20with%20Mochi.slides.html#/"&gt;http://www.python-academy.com/talks/europython2015/Functional%20Python%20with%20Mochi.slides.html#/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Fri, 07 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-07:europython-2015/functional-python-with-mochi.html</guid></item><item><title>Conda - Easier Installs and Simpler Builds</title><link>https://pyvideo.org/europython-2016/conda-easier-installs-and-simpler-builds.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mike Müller - Conda - Easier Installs and Simpler Builds
+[EuroPython 2016]
+[19 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/conda-easier-installs-and-simpler-builds"&gt;https://ep2016.europython.eu//conference/talks/conda-easier-installs-and-simpler-builds&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Learn about &lt;cite&gt;conda&lt;/cite&gt;, the package installer from the scientific
+community. It offers very interesting features that can improve your
+installation experience considerably.  The talk gives an overview of
+the basic usage of &lt;cite&gt;conda&lt;/cite&gt;.  It covers the topics installation and
+building of packages.
+&lt;cite&gt;conda&lt;/cite&gt; can be combined with &lt;cite&gt;pip&lt;/cite&gt;  to use all PyPi packages. Its
+cross-platform and multi-languages features combined with power
+environments can help to improve your productivity.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;The BSD license &lt;cite&gt;conda&lt;/cite&gt; is a package installer for Python and other languages.
+While it originates form the scientific Python community, it can be
+really useful for
+all Python programmers.&lt;/p&gt;
+&lt;p&gt;Installation of Python packages has become much simpler over the last years.
+The use of  &lt;cite&gt;pip&lt;/cite&gt;  and &lt;cite&gt;virtualenv&lt;/cite&gt; simplify the installation of
+Python packages a lot.
+However,  they are specific to Python.  The Python-agnostic &lt;cite&gt;conda&lt;/cite&gt;
+has advantages
+for packages with C or Fortran extension that are very common for
+scientific libraries.
+&lt;cite&gt;conda&lt;/cite&gt; is cross-platform. According to different statistics,  the
+most Python users work on Windows. Often is especially complicate to
+get extensions with many dependencies installer on this platform.
+&lt;cite&gt;conda&lt;/cite&gt; facilities the installation for Windows considerably.&lt;/p&gt;
+&lt;p&gt;This talk introduces the basic usage of  &lt;cite&gt;conda&lt;/cite&gt; to install packages.
+This includes the basic commands for searching  and installing of
+packages. Furthermore, the talk demonstrates the creation of
+environments for different Python versions and combinations of
+packages.&lt;/p&gt;
+&lt;p&gt;The building of a packages is simple. The talk shows how to build
+recipes that contain declarations of dependencies .&lt;/p&gt;
+&lt;p&gt;&lt;cite&gt;conda&lt;/cite&gt; can work together  with &lt;cite&gt;pip&lt;/cite&gt;. This allows to use all packages
+from the Python Package Index ( PyPI). The talk explains the concept
+of channels that allow to get packages from different sources.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-31:europython-2016/conda-easier-installs-and-simpler-builds.html</guid></item><item><title>Descriptors and Metaclasses - Understanding and Using Python's More Advanced Features</title><link>https://pyvideo.org/pycon-us-2016/mike-muller-descriptors-and-metaclasses-understanding-and-using-pythons-more-advanced-features.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Mike Müller&lt;/p&gt;
+&lt;p&gt;Descriptors and metaclasses are advanced Python features. While it is
+possible to write Python programs without active knowledge of them,
+knowing more about them facilitates a deeper understanding of
+the language. With examples, you will learn how they work and how to
+write your own descriptors and metaclasses. Furthermore, you will understand
+when to use and when better not to use them.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-30:pycon-us-2016/mike-muller-descriptors-and-metaclasses-understanding-and-using-pythons-more-advanced-features.html</guid></item><item><title>Faster Python Programs - Measure, don't Guess</title><link>https://pyvideo.org/pycon-us-2016/mike-muller-faster-python-programs-measure-dont-guess-pycon-2016.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Mike Müller&lt;/p&gt;
+&lt;p&gt;Optimization can often help to make Python programs faster or use less memory.
+Developing a strategy, establishing solid measuring and visualization techniques
+as well as knowing about algorithmic basics and datastructures are the foundation
+for a successful optimization. The tutorial will cover these topics.
+Examples will give you a hands-on experience on how to approach efficiently.&lt;/p&gt;
+&lt;p&gt;Slides can be found at: &lt;a class="reference external" href="https://speakerdeck.com/pycon2016"&gt;https://speakerdeck.com/pycon2016&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/PyCon/2016-slides"&gt;https://github.com/PyCon/2016-slides&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-30:pycon-us-2016/mike-muller-faster-python-programs-measure-dont-guess-pycon-2016.html</guid></item><item><title>Welcome to EuroPython 2014: Where the European Python Community Meets</title><link>https://pyvideo.org/europython-2014/welcome-to-europython2104.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Welcome starts at &lt;a class="reference external" href="https://www.youtube.com/watch?v=6ugj7G9MUkI#t=266"&gt;4:26
+minutes&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fabio Pliger</dc:creator><pubDate>Mon, 21 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-21:europython-2014/welcome-to-europython2104.html</guid></item><item><title>Developing Scientific Simulation Systems</title><link>https://pyvideo.org/euroscipy-2014/developing-scientific-simulation-systems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scientific simulation models often need to incorporate many aspects into
+a working software system. This talk gives an overview of
+&lt;a class="reference external" href="http://www.pitlakq.com/"&gt;PITLAKQ&lt;/a&gt;, a complex, coupled model for
+water quality predictions of pit lakes. The focus is on experiences
+gained that might be useful for similar projects from other domains.
+This includes wrapping of legacy code, creating flexible but simple to
+use model input approaches and simplifying automation by users.
+Description&lt;/p&gt;
+&lt;p&gt;The model PITLAKQ helps to predict the water quality of pit lakes. These
+lakes can form in voids created by mining and may pose considerable
+environmental challenges. PITLAKQ couples several existing numerical
+models and adds lots of new functionality to account for the complex
+interactions of hydrodynamics, geochemical processes and anthropogenic
+influences.&lt;/p&gt;
+&lt;p&gt;Obviously, there is lots of scientific details. The talk only gives a
+very short overview of the functionality of the software. The main focus
+is on general principles that can be applied to other domains of
+scientific modeling. This includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;wrapping legacy Fortran code&lt;/li&gt;
+&lt;li&gt;coupling models from different domains&lt;/li&gt;
+&lt;li&gt;creating a simple, yet flexible input system for model users&lt;/li&gt;
+&lt;li&gt;simplifying automation of simulation runs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I think the lessons I learned over the last 15 years I've been working
+on this project can be useful for other scientists who need to solve
+simulation and modeling problems in other fields.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/developing-scientific-simulation-systems.html</guid></item><item><title>Große Datenmengen schnell speichern mit Python und HDF5</title><link>https://pyvideo.org/pycon-de-2011/groe-datenmengen-schnell-speichern-mit-python-un.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Vortrag stellt die Möglichkeiten vor mit Python HDF5 (Hierarchical
+Data Format) zu nutzen. HDF5 ist eine der schnellsten
+Speichermöglichkeiten für numerische Daten. Der Vortag wendet sich
+sowohl an Wissenschaftler, die ihre Mess- oder Berechnungsergebnisse so
+schnell wie möglich ablegen wollen, als auch an andere Anwender, die
+sich für nicht-relationale Datenspeicherung interessieren.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 05 Oct 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-10-05:pycon-de-2011/groe-datenmengen-schnell-speichern-mit-python-un.html</guid></item><item><title>Funktionale Programmierung mit Python</title><link>https://pyvideo.org/pycon-de-2012/funktionale-programmierung-mit-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;In den letzten Jahren hat die funktionale Programmierung wieder mehr
+Aufmerksamkeit erhalten. Das Vorurteil nur für akademische Nutzer
+interessant zu sein hat sich stark abgeschwächt. Haskell, Erlang und F#
+sind funktionale Programmiersprachen, die verstärkt für praktische
+Zwecke zum Einsatz kommen.&lt;/p&gt;
+&lt;p&gt;Python unterstütz mehrere Programmierparadigmen. Neben der prozeduralen
+und objektorientierten unterstütz es auch wichtige Konzepte der
+funktionalen Programmierung. Der Vortrag zeigt wie sich diese Merkmale
+wie Funktionen als Objekte erster Klasse, Funktionsabschlüsse
+(Closures), Funktionen ohne Seiteneffekte, Currying, verzögerte
+Auswertung, Vermeidung veränderlicher Datenstrukturen und Einsatz von
+Iteratoren, Generator und Comprehensions anstatt von Schleifen nutzen
+lassen. Beispiele verdeutlichen die Vor- und Nachteile des funktionellem
+Ansatzes für verschiedene Aufgaben.&lt;/p&gt;
+&lt;p&gt;Der Aufbau eines Programms mit funktionalen Ansatz kann sich stark von
+dem eines objektorientierten unterscheiden. Beispiele zeigen wie mit
+Python Teile eines Programms die Vorteile der funktionalen
+Programmierung nutzen können und sich schrittweise funktionale
+Prinzipien in objektorientierte Programme einbeziehen lassen.&lt;/p&gt;
+&lt;p&gt;Der Vortrag verdeutlicht wie das Modul itertools die verzögerte
+Auswertung unterstützt. Mit den Funktionen dieses Moduls lassen sich
+Algorithmen oft kurz, gut lesbar und effizient umsetzen. Auch hier ist
+eine Integration in sonst nicht-funktional geschriebene Programme
+einfach möglich.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Tue, 30 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-30:pycon-de-2012/funktionale-programmierung-mit-python.html</guid><category>closure</category><category>funktional</category><category>generator</category><category>iterator</category><category>itertools</category><category>paradigma</category><category>verzögerte auswertung</category></item><item><title>Python verbindet - Der Python Software Verband e.V. in 20 Minuten</title><link>https://pyvideo.org/pycon-de-2013/python-verbindet-der-python-software-verband-e.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Python Software Verband (PySV) ist als eingetragener Verein in
+Deutschland organisiert, und versteht sich als Support-Organ der
+gesamten deutschsprachigen Python-Community. 2011 hat sich der PySV
+langsam aber sicher organisatorisch aus dem früheren DZUG e.V., der
+bereits vollständig aus Python Enthusiasten bestand, emanzipiert und
+seine Neustrukturierung im letzten Jahr weitgehend abgeschlossen.&lt;/p&gt;
+&lt;p&gt;Die wichtigsten Mittel zur Unterstützung der Community sind u. a. unsere
+aktiven Mitglieder und die PySV-Website als zentraler Anlaufpunkt und
+der neue Usergruppen-Hub. Der PySV unterstützte und organisierte bereits
+die Python-Konferenzen PyCon.DE 2011 und 2012 als verantwortlicher
+Partner mit. Auch die PyCon.DE 2013 wird er in enger Zusammenarbeit mit
+der Kölner PyCologne Usergroup und dem DLR ermöglichen. In den Jahren
+2014 und 2015 wird der PySV sogar Mitausrichter der EuroPython – der
+größten europäsichen Python-Konferenz – sein. Die Berliner Usergroup mit
+dem PySV im Rücken konnte sich in der Bewerbung durchsetzen.&lt;/p&gt;
+&lt;p&gt;Auch kleinere, aber deswegen nicht unwichtigere Events unterstützt der
+PySV. Neben dem mittlerweile schon traditionellen PythonCamp in Köln
+sind das verschiedene Python-Sprints und u.A. der World Plone Day an
+mehreren Orten. Auf Messen wie der CeBIT, der überregionalen FrOSCon
+Konferenz und den Berliner und Chemnitzer Linuxtagen und dem Linuxtag in
+Berlin sorgt der Verband dafür, dass Python regelmäßig präsent ist.&lt;/p&gt;
+&lt;p&gt;Der gemeinsam neu entwickelte Programmierwettbewerb nimmt Formen an.
+Studenten erhalten vom PySV Unterstützung für die Teilnahme an der
+EuroSciPy.&lt;/p&gt;
+&lt;p&gt;Wie der Verband der Community helfen kann, wird mit allen, die mithelfen
+wollen, gemeinsam erarbeitet. Er bietet organisatorische, finanzielle
+und technische Hilfe für Usergruppen, Sprints und Workshops mit
+Python-Bezug. Alle Python-Enthusiasten sind eingeladen im Verein aktiv
+mitzuarbeiten. Neue Ideen und Verbesserungsvorschläge sind immer gern
+gesehen. Unsere Grundregel lautet: “Soviel Unterstüzung wie möglich, so
+wenig Reglementierung wie möglich.”&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Tue, 15 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-15:pycon-de-2013/python-verbindet-der-python-software-verband-e.html</guid><category>community</category><category>pysv</category><category>verband</category></item><item><title>Sunday Afternoon Lightning Talks</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--sunday-afternoon-lightning-talks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Plenary: Afternoon Lightning Talks&lt;/p&gt;
+&lt;p&gt;(02:20) Steve Holden - Lightning talk about lightning talks&lt;/p&gt;
+&lt;p&gt;(02:55) Michael Foord - Little Bit of Python podcast, upcoming unittest
+stuff, mock&lt;/p&gt;
+&lt;p&gt;(08:00) Harald Armin Massa - The real harm of functional programming&lt;/p&gt;
+&lt;p&gt;(11:41) Karl ? - FreeBSD certiciation&lt;/p&gt;
+&lt;p&gt;(13:50) Peter Fein - Please Pirate&lt;/p&gt;
+&lt;p&gt;(19;15) Chris McDonough - writing books with Sphinx
+(&lt;a class="reference external" href="http://bfg.repoze.org/book"&gt;repoze.bfg&lt;/a&gt;);
+&lt;a class="reference external" href="https://www.createspace.com/"&gt;createspace&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(22:05) Chris Petrilli - celery, distributed task queue&lt;/p&gt;
+&lt;p&gt;(26:30) Godefroid Chapelle - vim and pdb&lt;/p&gt;
+&lt;p&gt;(29:20) ? - fork() vs. threads&lt;/p&gt;
+&lt;p&gt;(33:40) - doing pyweek game with a large number of contributors&lt;/p&gt;
+&lt;p&gt;(38:05) Jason Huggins - Orbison&lt;/p&gt;
+&lt;p&gt;(43:20) Noufal Brahim - State of Python community in India&lt;/p&gt;
+&lt;p&gt;(47:40) Mike Müller - EuroSciPy 2010&lt;/p&gt;
+&lt;p&gt;(49:50) David gives away stuff, sprint intros, ...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Steve Holden</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--sunday-afternoon-lightning-talks.html</guid><category>lightning talks</category><category>celery</category><category>euroscipy</category><category>euroscipy2010</category><category>fork</category><category>freebsd</category><category>functionalprogramming</category><category>india</category><category>orbison</category><category>pdb</category><category>pycon</category><category>pycon2010</category><category>pyweek</category><category>sphinx</category><category>threads</category><category>unittest</category><category>vim</category></item><item><title>Python and HDF5 - Fast Storage for Large Data</title><link>https://pyvideo.org/pycon-us-2012/python-and-hdf5-fast-storage-for-large-data.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The presentation introduces the possibilities to use HDF5 (Hierarchical
+Data Format) from Python. HDF5 is one of the fastest ways to store large
+amounts of numerical data. The talk is for scientist who would like to
+store their measured or calculated data as well as for programmers who
+are interested in non-relational data storage.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Sat, 10 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-10:pycon-us-2012/python-and-hdf5-fast-storage-for-large-data.html</guid></item><item><title>Plotting with matplotlib</title><link>https://pyvideo.org/pycon-us-2012/plotting-with-matplotlib.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;When it comes to plotting with Python many people think about
+matplotlib. It is widely used and provides a simple interface for
+creating a wide variety of plots from very simple diagrams to
+sophisticated animations. This tutorial is a hands-on introduction that
+teaches the basics of matplotlib. Students will learn how to create
+publication-ready plots with just a few lines of Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Thu, 08 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-08:pycon-us-2012/plotting-with-matplotlib.html</guid></item><item><title>Faster Python Programs through Optimization</title><link>https://pyvideo.org/pycon-us-2012/faster-python-programs-through-optimization.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This tutorial provides an overview of techniques to improve the
+performance of Python programs. The focus is on concepts such as
+profiling, difference of data structures and algorithms as well as a
+selection of tools and libraries that help to speed up Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-07:pycon-us-2012/faster-python-programs-through-optimization.html</guid></item><item><title>Lightning Talks - Saturday morning</title><link>https://pyvideo.org/pycon-us-2013/saturday-morning-lightning-talks-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Lightning talks from Saturday morning.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=0s"&gt;00:00&lt;/a&gt; - ToRo (Tornado Coroutines) - Jesse Jiryu Davis&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=4m45s"&gt;04:45&lt;/a&gt; - Retask: Queue for Humans - Kushal Das&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=9m15s"&gt;09:15&lt;/a&gt; - Pythonic Andragogy: Python for Adults - Kirby
+Urner&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=16m"&gt;16:00&lt;/a&gt; - How and why a Java expert switched to Python -
+Ron Cox&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=22m10s"&gt;22:10&lt;/a&gt; - Coding across America - Andrew&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=25m9s"&gt;25:05&lt;/a&gt; - gitstreams.com - Justin Abrahms&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=26m58s"&gt;26:58&lt;/a&gt; - Jesse Noller interlude&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=30m30s"&gt;30:30&lt;/a&gt; - PyCharm - Dmitry Jemerov&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=36m10s"&gt;36:10&lt;/a&gt; - NASperry Pi - Mark Ransom&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=41m30s"&gt;41:30&lt;/a&gt; - NES, JavaScript and a Browser - Guto Maia&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=46m5s"&gt;46:05&lt;/a&gt; - EuroSciPy 2013: Come to our conference! - Mike
+Müller&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=48m7s"&gt;48:07&lt;/a&gt; - PyWeek: Join our week and write a game! -
+Richard Jones&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=51m13s"&gt;51:13&lt;/a&gt; - Don't make people watch what you type -
+Stuart Williams&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=54m"&gt;54:00&lt;/a&gt; - Job Security (in Python) - Christopher
+Neugebauer&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=pYZNLOKEE5I#t=59m9s"&gt;59:09&lt;/a&gt; - Using Python to make universal education truly
+universal: KA Lite - Jamie Alexandre&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jesse Jiryu Davis</dc:creator><pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-16:pycon-us-2013/saturday-morning-lightning-talks-0.html</guid><category>lightning talks</category></item><item><title>Functional Programming with Python</title><link>https://pyvideo.org/pycon-us-2013/functional-programming-with-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python supports several functional programming concepts. The
+presentations shows how to use functional features such as functions as
+first-class objects, closures, side-effect-fee functions, currying, lazy
+evaluation, no mutable data structures and use of iterators instead of
+loops. The focus is on integration of these concepts in existing
+programs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-15:pycon-us-2013/functional-programming-with-python.html</guid><category>talk</category></item><item><title>Faster Python Programs through Optimization</title><link>https://pyvideo.org/pycon-us-2013/faster-python-programs-through-optimization-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Although Python programs may be slow for certain types of tasks, there
+are many different ways to improve performance. This tutorial will
+introduce optimization strategies and demonstrate techniques to
+implement them. Another of the objectives of this course is to give
+participants the ability to decide what might be the optimal solution
+for a certain performance problem.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 13 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-13:pycon-us-2013/faster-python-programs-through-optimization-0.html</guid><category>tutorial</category></item><item><title>Faster Python Programs through Optimization</title><link>https://pyvideo.org/pycon-us-2014/faster-python-programs-through-optimization-1.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Although Python programs may be slow for certain types of tasks, there
+are many different ways to improve the performance. This tutorial will
+introduce optimization strategies and demonstrate techniques to
+implement them. Another objective of this course is to help the
+participants to gain the ability to decide what might be the optimal
+solution for a specific performance problem.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Sat, 12 Apr 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-04-12:pycon-us-2014/faster-python-programs-through-optimization-1.html</guid></item><item><title>Descriptors and Metaclasses - Understanding and Using Python's More Advanced Features</title><link>https://pyvideo.org/pycon-us-2014/descriptors-and-metaclasses-understanding-and-u.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Descriptors and metaclasses are advanced Python features. While it is
+possible to write Python programs without active of knowledge of them,
+knowing how they work provides a deeper understanding about the
+language. Using examples, you will learn how they work and when to use
+as well as when better not to use them. Use cases provide working code
+that can serve as a base for own solutions.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Fri, 11 Apr 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-04-11:pycon-us-2014/descriptors-and-metaclasses-understanding-and-u.html</guid></item><item><title>Descriptors and Metaclasses</title><link>https://pyvideo.org/pycon-us-2015/descriptors-and-metaclasses.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Descriptors and metaclasses are advanced Python features. While it is
+possible to write Python programs without active knowledge of them,
+knowing more about them facilitates a deeper understanding of the
+language. With examples, you will learn how they work and how to write
+your own descriptors and metaclasses. Furthermore, you will understand
+when to use and when better not to use them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Fri, 10 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-10:pycon-us-2015/descriptors-and-metaclasses.html</guid></item></channel></rss>

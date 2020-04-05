@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate><item><title>Pyccel, a Fortran static compiler for scientific High-Performance Computing</title><link>https://pyvideo.org/pycon-de-2018/pyccel-a-fortran-static-compiler-for-scientific-high-performance-computing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;em&gt;Pyccel&lt;/em&gt; is a new &lt;strong&gt;static compiler&lt;/strong&gt; for Python that uses &lt;strong&gt;Fortran&lt;/strong&gt;
+as backend language while enabling High-Performance Computing &lt;strong&gt;HPC&lt;/strong&gt;
+capabilities.&lt;/p&gt;
+&lt;p&gt;Fortran is a computer language for scientific programming that is
+tailored for efficient run-time execution on a wide variety of
+processors. Even if the &lt;em&gt;2003&lt;/em&gt; and &lt;em&gt;2008&lt;/em&gt; standards added major
+improvements like &lt;em&gt;OOP, Coarrays, Submodules, do concurrent&lt;/em&gt; , etc ...
+they are not covered by all available compilers. Moreover, the Fortran
+developer still suffers from the lack of &lt;strong&gt;meta-programming&lt;/strong&gt; compared
+to &lt;strong&gt;C++&lt;/strong&gt; ones. Therefore, it is more and more difficult for applied
+mathematicians and computational physicists to write applications at the
+&lt;em&gt;state of art&lt;/em&gt; (targeting CPUs, GPUs, MICs) while implementing
+complicated algorithms or numerical schemes.&lt;/p&gt;
+&lt;p&gt;Pyccel can be used in two cases:&lt;/p&gt;
+&lt;p&gt;In order to achieve the second point, we developed an internal DSL for
+&lt;em&gt;types&lt;/em&gt; and &lt;em&gt;macros&lt;/em&gt;. The later is used to map sentences based on
+&lt;em&gt;mpi4py&lt;/em&gt; , &lt;em&gt;scipy.linalg.blas or lapack&lt;/em&gt; onto the appropriate calls in
+Fortran. Moreover, two parsers, for &lt;em&gt;OpenMP&lt;/em&gt; and &lt;em&gt;OpenACC&lt;/em&gt; , were added
+too, allowing for explicit parallelism through the use of pragmas.&lt;/p&gt;
+&lt;p&gt;Last but not least, Pyccel is an extension of &lt;strong&gt;Sympy&lt;/strong&gt;. Actually, it
+converts a Python code to symbolic expressions/trees, from a Full Syntax
+Tree ( &lt;em&gt;RedBaron&lt;/em&gt; ), then annotates the new AST using types or different
+settings provided by the user.&lt;/p&gt;
+&lt;p&gt;In this talk, after a brief description of Pyccel, I will show different
+applications including Finite Elements (1d, 2d, 3d), Semi-Lagrangian
+schemes (4d), Kronecker linear solvers, diagnostics for 5D kinetic
+simulations and Machine Learning for Partial Differential Equations.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dr. Ing. Ratnani Ahmed</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/pyccel-a-fortran-static-compiler-for-scientific-high-performance-computing.html</guid><category>Artificial Intelligence</category><category>Algorithms</category><category>Astronomy</category><category>Parallel Programming</category><category>Programming</category><category>Python</category><category>Science</category></item><item><title>E.T. chiama Python</title><link>https://pyvideo.org/pycon-italia-2017/et-chiama-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;All’osservatorio astronomico della Val Pellice in provincia di Torino,
+le attività amministrative, didattiche, divulgative e scientifiche non
+mancano di certo. L’osservatorio, gestito dall’&lt;a class="reference external" href="http:/osservatoriourania.it"&gt;Associazione Astrofili
+Urania&lt;/a&gt;, dispone di diversi telescopi
+ottici, di un planetario, di una biblioteca, di una sala
+corsi/conferenze e di un radio telescopio.&lt;/p&gt;
+&lt;p&gt;Python è spesso un filo conduttore nel mondo scientifico e non solo, e a
+prova di questo fatto vogliamo mostrarvi come lo usiamo noi
+all’osservatorio. Mostreremo come Python viene usato per l’elaborazione
+dei dati provenienti dal radio telescopio, che scruta il cielo alla
+ricerca di segnali provenienti da esopianeti ed inviati potenzialmente
+da altre forme di vita intelligente.&lt;/p&gt;
+&lt;p&gt;Altri cenni riguarderanno l’utilizzo di software basati su Python (come
+Odoo) per la gestione di associazioni come la nostra.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Davide Corio</dc:creator><pubDate>Sat, 08 Apr 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-04-08:pycon-italia-2017/et-chiama-python.html</guid><category>pydata</category><category>Python</category><category>data-logging</category><category>Data-Scientist</category><category>Odoo</category><category>astronomy</category></item><item><title>La gran explosión de datos en astronomía</title><link>https://pyvideo.org/pycon-es-2016/la-gran-explosion-de-datos-en-astronomia.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;El volumen de datos de las observaciones astronómicas se hay ido duplicando año tras año. Con la inminente llegada de nuevas infraestructuras astronómicas se espera que el crecimiento sea aún más acelerado. Por ejemplo, el Large Synoptic Survey Telescope (LSST) obtendrá 30 TB de datos y disparará 2 millones de eventos cada noche durante 10 años a partir de 2022. El radio-telescopio Square Kilometre Array (SKA) producirá 160 TB de datos en bruto o 100 GB de datos procesados por segundo y deberá almacenar un total de ~4.6 EB de datos cada año. La primera fase de SKA entrará en servicio en 2020. La llegada de este torrente de datos es inminente y su procesado y almacenamiento está lejos de ser trivial. Entre los muchos frentes necesarios para tratar estos datos se encuentran la Inteligencia Artificial, las tecnologías de &amp;quot;big data&amp;quot; o la ciencia ciudadana.&lt;/p&gt;
+&lt;p&gt;LOFAR es uno de los radio-telescopios precursores de SKA y se encuentra actualmente operativo. Se trata de un radio-telescopio definido por software que observa el cielo en frecuencias entre los 10 y los 250 MHz. Los datos de una observación de 8 horas alcanzan los 20 TB y su calibración, además de ser completamente experimental, requiere unos 3 años de procesador. En la charla mostraré cómo se pueden manejar datos radio-astronómicos de LOFAR con la ayuda de infraestructuras en la nube y Python. Se presentará el resultado de una propuesta conjunta entre SKA y Amazon Web Services (AWS) para la implementación de nuevos métodos de calibración de grandes volúmenes de datos radio-astronómicos en la nube de Amazon. El papel de Python para el desarrollo rápido de este tipo de métodos es fundamental, permitiendo la creación y modificación rápida de flujos de procesado de datos. El objetivo final es mostrar como la astronomía, una de las ciencias más antiguas, empuja la frontera de la tecnología más moderna con la ayuda de Python.&lt;/p&gt;
+&lt;p&gt;Presentación disponible en &lt;a class="reference external" href="http://2016.es.pycon.org/media/keynotes/jsabater-PyConES2016.pdf"&gt;http://2016.es.pycon.org/media/keynotes/jsabater-PyConES2016.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://2016.es.pycon.org/"&gt;http://2016.es.pycon.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jose Sabater</dc:creator><pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-09:pycon-es-2016/la-gran-explosion-de-datos-en-astronomia.html</guid><category>astronomy</category></item><item><title>Astropy, growing a community-based software system for astronomy</title><link>https://pyvideo.org/scipy-2013/astropy-growing-a-community-based-software-syste-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Astropy is a community-based software project to coordinate the
+development of libraries and applications for astronomy. We will report
+on progress that has been made with astropy since the last scipy
+conference.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Droettboom, Michael, STScI; Robitaille, Thomas, Max Planck
+Institute; Tollerud, Erik, Yale Universit&lt;/p&gt;
+&lt;p&gt;Track: Astronomy and Astrophysics&lt;/p&gt;
+&lt;p&gt;Astropy is a community-based software project to coordinate the
+development of libraries and applications for astronomy. We will report
+on progress that has been made with astropy since the last scipy
+conference. The past year has seen much growth in the number and quality
+of the core libraries in astropy and a public release. We will highlight
+the new capabilities available, and outline the development plans for
+the upcoming year. Finally we discuss the strategies for advertising its
+capabilities and growing the documentation and tutorials available for
+users and developers.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Erik Tollerud</dc:creator><pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-01:scipy-2013/astropy-growing-a-community-based-software-syste-0.html</guid><category>astronomy</category><category>astrophysics</category><category>astropy</category></item><item><title>Combining C++ and Python in the LSST Software Stack</title><link>https://pyvideo.org/scipy-2013/combining-c-and-python-in-the-lsst-software-sta-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The software system for the Large Synoptic Survey Telescope is
+completely open-source, and at every stage we've focused on making it
+usable not just with LSST, but with generic astronomical image data.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Bosch, Jim, Princeton University&lt;/p&gt;
+&lt;p&gt;Track: Astronomy and Astrophysics&lt;/p&gt;
+&lt;p&gt;The Large Synoptic Survey Telescope is a 8.4-meter survey telescope that
+will image the entire visible sky twice a week with a 3.2 Gigapixel
+camera, expected to come online early in the next decade. That means a
+lot of data: approximately 30 TB each night, and over 60 PB at the end
+of the 10-year survey, all of which will be made available to the
+public. The software system for LSST is completely open-source, and at
+every stage we've focused on making it usable not just with LSST, but
+with generic astronomical image data (in fact, it has been used to
+reduce data from several other telescopes already). We're building the
+software system for LSST using a combination of C++ and Python, making
+use of third-party software such as NumPy, Swig, and Eigen, along with a
+lot of custom code (much of which may be of broader use). In this talk
+I'll go over some of the advantages and disadvantages of the C++/Python
+combination, and some of the tricks and tools we've developed (and
+trials and tribulations we've encountered) in making them play well
+together in the context of astronomical data analysis. While LSST is
+still years away, and our software pipeline is still in many ways a
+prototype, in many respects it is already at the cutting edge of
+astronomical data analysis, and the lessons we have already learned will
+be of value not just to astronomers, but to scientists in other &amp;quot;big
+data&amp;quot; fields and general-purpose scientific software developers as well.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Bosch</dc:creator><pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-01:scipy-2013/combining-c-and-python-in-the-lsst-software-sta-0.html</guid><category>astronomy</category><category>astrophysics</category><category>eigen</category><category>swig</category></item><item><title>Ginga: an open-source astronomical image viewer and toolkit</title><link>https://pyvideo.org/scipy-2013/ginga-an-open-source-astronomical-image-viewer-a-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Ginga is a new astronomical image viewer written in python. It uses and
+inter-operates with several key scientific python packages: numpy,
+pyfits, and scipy.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Jeschke, Eric, Subaru Telescope, National Astronomical
+Observatory of Japan&lt;/p&gt;
+&lt;p&gt;Track: Astronomy and Astrophysics&lt;/p&gt;
+&lt;p&gt;Ginga is a new astronomical image viewer written in python. It uses and
+inter-operates with several key scientific python packages: numpy,
+pyfits, and scipy. A key differentiator for this image viewer, compared
+to older-generation FITS viewers, is that all the key components are
+written as python classes, allowing for the first time a powerful FITS
+image display widget to be directly embedded in, and tightly coupled
+with, python code.&lt;/p&gt;
+&lt;p&gt;We call Ginga a toolkit for programming FITS viewers because it includes
+a choice of base classes for programming custom viewers for two
+different modern widget sets: Gtk and Qt, available on the three common
+desktop platforms. In addition, a reference viewer is included with the
+source code based on a plugin architecture in which the viewer can be
+extended with plugins scripted in python. The code is released under a
+BSD license similar to other major python packages and is available on
+github.&lt;/p&gt;
+&lt;p&gt;Ginga has been introduced only recently as a tool to the astronomical
+community, but since SciPy has a developer focus this talk concentrates
+on programming with the Ginga toolkit. We cover two cases: using the
+bare image widget to build custom viewers and writing plugins for the
+existing full-featured Ginga viewer. The talk may be of interest to
+anyone developing code in python needing to display scientific image
+(CCD or CMOS) data and astronomers interested in python-based quick look
+and analysis tools.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eric Jeschke</dc:creator><pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-01:scipy-2013/ginga-an-open-source-astronomical-image-viewer-a-0.html</guid><category>astronomy</category><category>astrophysics</category><category>ginga</category></item><item><title>Python and the SKA</title><link>https://pyvideo.org/scipy-2013/python-and-the-ska-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;We will discuss some of the challenges specific to the radio astronomy
+environment and how we believe Python can contribute, particularly when
+it comes to the trade off between development time and performance.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Simon Ratcliffe SKA South Africa, Ludwig Schwardt SKA South
+Africa&lt;/p&gt;
+&lt;p&gt;Track: Astronomy and Astrophysics&lt;/p&gt;
+&lt;p&gt;The Square Kilometer Array will be one of the prime scientific data
+generates in the next few decades.&lt;/p&gt;
+&lt;p&gt;Construction is scheduled to commence in late 2016 and last for the best
+part of a decade. Current estimates put data volume generation near 1
+Exabyte per day with 2-3 ExaFLOPs of processing required to handle this
+data.&lt;/p&gt;
+&lt;p&gt;As a host country, South Africa is constructing a large precursor
+telescope known as MeerKAT. Once complete this will be the most
+sensitive telescope of it's kind in the world - until dwarfed by the
+SKA.&lt;/p&gt;
+&lt;p&gt;We make extensive use of Python from the entire Monitor and Control
+system through to data handling and processing.&lt;/p&gt;
+&lt;p&gt;This talk looks at our current usage of Python, and our desire to see
+the entire high performance processing chain being able to call itself
+Pythonic.&lt;/p&gt;
+&lt;p&gt;We will discuss some of the challenges specific to the radio astronomy
+environment and how we believe Python can contribute, particularly when
+it comes to the trade off between development time and performance.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ludwig Schwardt</dc:creator><pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-01:scipy-2013/python-and-the-ska-0.html</guid><category>astronomy</category><category>astrophysics</category></item><item><title>SunPy - Python for Solar Physicists</title><link>https://pyvideo.org/scipy-2013/sunpy-python-for-solar-physicists-0.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;SunPy is a project designed to provide a free, open and easy-to-use
+Python alternative to IDL and SolarSoft. SunPy provides unified,
+coordinate-aware data objects for many common solar data types and
+integrates into these plotting and analysis tools.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Mumford, Stuart, University of Sheffield / SunPy&lt;/p&gt;
+&lt;p&gt;Track: Astronomy and Astrophysics&lt;/p&gt;
+&lt;p&gt;Modern solar physicists have, at their disposal, an abundance of space
+and ground based instruments providing a large amount of data to analyse
+the complex Sun every day. The NASA Solar Dynamics Observatory
+satellite, for example, collects around 1.2 TB of data every 24 hours
+which requires extensive reconstruction before it is ready for
+scientific use. Currently most data processing and analysis for all
+solar data is done using IDL and the 'SolarSoft' library. SunPy is a
+project designed to provide a free, open and easy-to-use Python
+alternative to IDL and SolarSoft.&lt;/p&gt;
+&lt;p&gt;SunPy provides unified, coordinate-aware data objects for many common
+solar data types and integrates into these plotting and analysis tools.
+Providing this base will give the global solar physics community the
+opportunity to use Python for future data processing and analysis
+routines. The astronomy and astrophysics community, through the
+implementation and adoption of AstroPy and pyRAF, have already
+demonstrated that Python is well suited for the analysis and processing
+of space science data.&lt;/p&gt;
+&lt;p&gt;In this presentation, we give key examples of SunPy's structure and
+scope, as well as the major improvements that have taken place to
+provide a stable base for future expansion. We discuss recent
+improvements to file I/O and visualisation, as well as improvements to
+the structure and interface of the map objects.&lt;/p&gt;
+&lt;p&gt;We discuss the many challenges which SunPy faces if it is to achieve its
+goal of becoming a key package for solar physics. The SunPy developers
+hope to increase the the visibility and uptake of SunPy, and encourage
+people to contribute to the project, while maintaining a high quality
+code base, which is facilitated by the use of a social version control
+system (git and GitHub).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stuart Mumford</dc:creator><pubDate>Mon, 01 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-01:scipy-2013/sunpy-python-for-solar-physicists-0.html</guid><category>astronomy</category><category>astrophysics</category><category>SunPy</category></item><item><title>Enhancements to Ginga: an Astronomical Image Viewer and Toolkit</title><link>https://pyvideo.org/scipy-2014/enhancements-to-ginga-an-astronomical-image-view.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;We describe recent developments in the Ginga package, a open-source
+astronomical image viewer and toolkit written in python and hosted on
+Github. The package was introduced to the scientific python community at
+SciPy 2013 and has received a number of enhancements since then based on
+user feedback. The talk includes an image mosaicing demo of a wide-field
+camera exposure with 116 4Kx2K CCDs.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ginga is an open-source astronomical image viewer and toolkit written in
+python and &lt;a class="reference external" href="https://github.com/ejeschke/ginga"&gt;hosted on Github&lt;/a&gt;. It
+uses and inter-operates with several key scientific python packages:
+numpy, scipy, astropy and matplotlib.&lt;/p&gt;
+&lt;p&gt;In this talk/poster we describe and illustrate recent enhancements to
+the package since the introductory talk at SciPy 2013, including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;modular/pluggable interfaces for world coordinate systems, image file
+I/O and star and image catalogs&lt;/li&gt;
+&lt;li&gt;support for rendering into matplotlib figures&lt;/li&gt;
+&lt;li&gt;support for image mosaicing&lt;/li&gt;
+&lt;li&gt;support for image overlays&lt;/li&gt;
+&lt;li&gt;customizable user-interface bindings&lt;/li&gt;
+&lt;li&gt;improved documentation&lt;/li&gt;
+&lt;li&gt;self contained Mac OS X packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During the talk we will demonstrate the mosaicing plugin that is being
+used with several instruments at Subaru Telescope in Hawaii, including
+the new Hyper Suprime-Cam wide-field camera with 116 separate 4Kx2K
+CCDs.&lt;/p&gt;
+&lt;p&gt;The talk/poster may be of interest to anyone developing code in python
+needing to display scientific image (CCD or CMOS) data and astronomers
+interested in python-based quick look and analysis tools.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eric Jeschke</dc:creator><pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-14:scipy-2014/enhancements-to-ginga-an-astronomical-image-view.html</guid><category>astronomy</category></item><item><title>WCSAxes: A Framework for Plotting Astronomical and Geospatial Data</title><link>https://pyvideo.org/scipy-2014/wcsaxes-a-framework-for-plotting-astronomical-an.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;I will present WCSAxes, a new framework for plotting astronomical data
+that seamlessly handles the plotting of ticks, tick labels, and grid
+lines for arbitrary coordinate systems and projections. While originally
+written for with astronomical data, it can be used for any kind of map
+provided that the projection and coordinate system can be represented by
+a pixel-to-world transformation.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Astronomical data (whether images on the sky, or other data) are
+typically stored with information about their corresponding projection
+(Gnomonic, Mercator, Conical, Aitoff, and &lt;em&gt;many&lt;/em&gt; more) and coordinate
+system (Equatorial, Galactic, Ecliptic, and so on).&lt;/p&gt;
+&lt;p&gt;I will present &lt;a class="reference external" href="https://github.com/astrofrog/wcsaxes"&gt;WCSAxes&lt;/a&gt;, a new
+framework for plotting such astronomical data, developed as part of the
+&lt;a class="reference external" href="http://www.astropy.org"&gt;Astropy&lt;/a&gt; project. WCSAxes consists primarily
+of a &lt;a class="reference external" href="http://www.matplotlib.org"&gt;Matplotlib&lt;/a&gt; Axes sub-class that
+seamlessly handles the plotting of ticks, tick labels, and grid lines
+for arbitrary coordinate systems and projections.&lt;/p&gt;
+&lt;p&gt;As an example, the following plot was produced with WCSAxes:&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="The Galactic center as seen by the Chandra X-ray observatory" src="http://www.mpia.de/~robitaille/chandra_avm_small.png" /&gt;
+&lt;p class="caption"&gt;The Galactic Center as seen by Chandra&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;(Image Credit: NASA/CXC/UMass/D. Wang et al. -
+&lt;a class="reference external" href="http://chandra.harvard.edu/photo/2009/gcenter/"&gt;http://chandra.harvard.edu/photo/2009/gcenter/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Since it is a sub-class of the Matplotlib Axes class, all the default
+Matplotlib methods such as plot, scatter, imshow, contour, as well as
+patches, lines, collections, and so on are supported, and WCSAxes - in
+combination with Matplotlib's ability to accept arbitrary
+transformations - makes it very easy to define whether the plotting
+should apply to pixel coordinates, or a world coordinate system related
+to the data.&lt;/p&gt;
+&lt;p&gt;WCSAxes has been designed as a framework that can be easily used in
+other Python tools, and it is planned for inclusion in
+&lt;a class="reference external" href="http://www.glueviz.org"&gt;Glue&lt;/a&gt;, &lt;a class="reference external" href="http://aplpy.github.io"&gt;APLpy&lt;/a&gt;,
+and other astronomical tools. While originally written for Astronomical
+images, it should be easily extendable to any kind of map (such as
+Earth-based geospatial data) provided that the projection and coordinate
+system can be represented by a pixel-to-world transformation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Robitaille</dc:creator><pubDate>Wed, 09 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-09:scipy-2014/wcsaxes-a-framework-for-plotting-astronomical-an.html</guid><category>astronomy</category><category>gis</category></item><item><title>Python for Large Astronomical Data Reduction and Analysis Systems (#107)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--python-for-large-astronomical-data-re.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python for Large Astronomical Data Reduction and Analysis Systems&lt;/p&gt;
+&lt;p&gt;Presented by Francesco Pierfederici (Harvard-Smithsonian Center for
+Astrophysics)&lt;/p&gt;
+&lt;p&gt;We describe how Python is used in a large astronomy project to
+automatically process data from several telescopes in both the
+hemispheres. We introduce the general problem and discuss challenges and
+lessons learned.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francesco Pierfederici</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--python-for-large-astronomical-data-re.html</guid><category>astronomy</category><category>casestudy</category><category>concurrency</category><category>pycon</category><category>pycon2010</category></item></channel></rss>

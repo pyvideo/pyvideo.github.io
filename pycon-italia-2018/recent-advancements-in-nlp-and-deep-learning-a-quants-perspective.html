@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Recent advancements in NLP and Deep Learning: A Quant's Perspective</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2018.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2018.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Recent advancements in NLP and Deep Learning: A Quant's Perspective" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-italia-2018/recent-advancements-in-nlp-and-deep-learning-a-quants-perspective.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/H_6VRrSaND0/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/H_6VRrSaND0/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="nlp" />
+    <meta name="tags" content="data-science" />
+    <meta name="tags" content="Keras" />
+    <meta name="tags" content="Python" />
+    <meta name="tags" content="Deep-Learning" />
+    <meta name="tags" content="machine-learning" />
+    <meta name="tags" content="spaCy" />
+    <meta name="tags" content="nltk" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-italia-2018/recent-advancements-in-nlp-and-deep-learning-a-quants-perspective.html" rel="bookmark"
+         title="Permalink to Recent advancements in NLP and Deep Learning: A Quant's Perspective">Recent advancements in NLP and Deep Learning: A Quant's Perspective
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2018-04-21T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sat 21 April 2018
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/umit-mert-cakmak.html">Umit Mert Cakmak</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H_6VRrSaND0" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>There is a gold-rush among hedge-funds for text mining algorithms to
+quantify textual data and generate trading signals. Harnessing the power
+of alternative data sources became crucial to find novel ways of
+enhancing trading strategies.</p>
+<p>With the proliferation of new data sources, natural language data became
+one of the most important data sources which could represent the public
+sentiment and opinion about market events, which then can be used to
+predict financial markets.</p>
+<p>Talk is split into 5 parts;</p>
+<ul class="simple">
+<li>Who is a quant and how do they use NLP?</li>
+<li>How deep learning has changed NLP?</li>
+<li>Let’s get dirty with word embeddings</li>
+<li>Performant deep learning layer for NLP: The Recurrent Layer</li>
+<li>Using all that to make money</li>
+</ul>
+<div class="section" id="who-is-a-quant-and-how-do-they-use-nlp">
+<h4>1. Who is a quant and how do they use NLP?</h4>
+<p>Quants use mathematical and statistical methods to create algorithmic
+trading strategies.</p>
+<p>Due to recent advances in available deep learning frameworks and
+datasets (time series, text, video etc) together with decreasing cost of
+parallelisable hardware, quants are experimenting with various NLP
+methods which are applicable to quantitative trading.</p>
+<p>In this section, we will get familiar with the brief history of text
+mining work that quants have done so far and recent advancements.</p>
+</div>
+<div class="section" id="how-deep-learning-has-changed-nlp">
+<h4>2. How deep learning has changed NLP?</h4>
+<p>In recent years, data representation and modeling methods are vastly
+improved. For example when it comes to textual data, rather than using
+high dimensional sparse matrices and suffering from curse of
+dimensionality, distributional vectors are more efficient to work with.</p>
+<p>In this section, I will talk about distributional vectors a.k.a. word
+embeddings and recent neural network architectures used when building
+NLP models.</p>
+</div>
+<div class="section" id="lets-get-dirty-with-word-embeddings">
+<h4>3. Let’s get dirty with word embeddings</h4>
+<p>Models such as Word2vec or GloVe helps us create word embeddings from
+large unlabeled corpus which represent the relation between words, their
+contextual relationships in numerical vector spaces and these
+representations not only work for words but also could be used for
+phrases and sentences.</p>
+<p>In this section, I will talk about inner workings of these models and
+important points when creating domain-specific embeddings (e.g. for
+sentiment analysis in financial domain).</p>
+</div>
+<div class="section" id="performant-deep-learning-layer-for-nlp-the-recurrent-layer">
+<h4>4. Performant deep learning layer for NLP: The Recurrent Layer</h4>
+<p>Recurrent Neural Networks (RNNs) can capture and hold the information
+which was seen before (context), which is important for dealing with
+unbounded context in NLP tasks.</p>
+<p>Long Short Term Memory (LSTM) networks, which is a special type of RNN,
+can understand the context even if words have long term dependencies,
+words which are far back in their sequence.</p>
+<p>In this talk, I will compare LSTMs with other deep learning
+architectures and will look at LSTM unit from a technical point of view.</p>
+</div>
+<div class="section" id="using-all-that-to-make-money">
+<h4>5. Using all that to make money</h4>
+<p>Financial news, especially if it’s major, can change the sentiment among
+investors and affect the related asset price with immediate price
+corrections.</p>
+<p>For example, what’s been communicated in quarterly earnings calls might
+indicate whether the price of share will drop or increase based on the
+language used. If the message of the company is not direct and featuring
+complex sounding language, it usually indicates that there’s some shady
+stuff going on and if this information extracted right, it’s a valuable
+trading signal. For similar reasons, scanning announcements and
+financial disclosures for trading signals became a common NLP practice
+in investment industry.</p>
+<p>In this section, I will talk about the various data sources that
+researchers can use and also explain common NLP workflows and deep
+learning practices for quantifying textual data for generating trading
+signals.</p>
+<p>I will end with summary with application architecture in case anyone
+would like to implement similar systems for their own use.</p>
+<p>in __on <strong>sabato 21 aprile</strong> at 14:45 <a class="reference external" href="/p3/schedule/pycon9/">**See
+schedule**</a></p>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-italia-2018.html">PyCon Italia 2018</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=H_6VRrSaND0" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/nlp/">nlp</a>, <a href="https://pyvideo.org/tag/data-science/">data-science</a>, <a href="https://pyvideo.org/tag/keras/">Keras</a>, <a href="https://pyvideo.org/tag/python/">Python</a>, <a href="https://pyvideo.org/tag/deep-learning/">Deep-Learning</a>, <a href="https://pyvideo.org/tag/machine-learning/">machine-learning</a>, <a href="https://pyvideo.org/tag/spacy/">spaCy</a>, <a href="https://pyvideo.org/tag/nltk/">nltk</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://www.pycon.it/p3/schedule/pycon9/">
+Conference schedule                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-italia-2018/videos/u-cakmak-recent-advancements-in-nlp-and-deep-learning-a-quant-s-perspective.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

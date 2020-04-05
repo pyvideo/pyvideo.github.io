@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_orm.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-04-20T00:00:00+00:00</updated><entry><title>Pushing the ORM to its limits</title><link href="https://pyvideo.org/djangocon-europe-2019/pushing-the-orm-to-its-limits.html" rel="alternate"></link><published>2019-04-20T00:00:00+00:00</published><updated>2019-04-20T00:00:00+00:00</updated><author><name>Sigurd Ljødal</name></author><id>tag:pyvideo.org,2019-04-20:djangocon-europe-2019/pushing-the-orm-to-its-limits.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;You can do a lot more with the Django ORM than you might think, and when something isn't possible using the existing primitives, you can easily add your own. In this talk you will learn about both advanced features of the ORM and how to run your own SQL queries.&lt;/strong&gt;
+Django's ORM makes it super simple to run quick queries against your database, but it can do a lot more for you than you might think. Need to get some statistics on a monthly-basis? Easy, just annotate your queryset with year and month using &lt;tt class="docutils literal"&gt;ExtractYear&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;ExtractMonth&lt;/tt&gt;, and you can use &lt;tt class="docutils literal"&gt;.values()&lt;/tt&gt; to get the data aggregated by month.
+When you find yourself in need of something that is not already covered by the existing ORM functions, you will often be able to create it yourself. Have you modelled your data with separate date and time fields, but need to compare this to a datetime field? You can make a custom expression in Django for combining the date and time into a datetime in the database.
+Starting with Django 1.11, you can easily make subqueries using the Django ORM. In Django 2.0 we got support for window functions. Django 2.1 exposes additional functions that are available in many databases, and version 2.2 will introduce support for custom constraints and extends the primitives for custom indexes.
+It is also easy to drop down to writing raw SQL if you need to. It is probably not something you need to do every day, but it's good to know that the option is there, and know how and when to do it.&lt;/p&gt;
+</summary><category term="django"></category><category term="orm"></category></entry><entry><title>Data model patterns with SQLAlchemy</title><link href="https://pyvideo.org/europython-2013/data-model-patterns-with-sqlalchemy.html" rel="alternate"></link><published>2013-07-03T00:00:00+00:00</published><updated>2013-07-03T00:00:00+00:00</updated><author><name>Erik Janssens</name></author><id>tag:pyvideo.org,2013-07-03:europython-2013/data-model-patterns-with-sqlalchemy.html</id><summary type="html"></summary><category term="sql"></category><category term="sqlalchemy"></category><category term="metaprogramming"></category><category term="orm"></category><category term="database"></category></entry><entry><title>PostgreSQL is Web-Scale (Really :) )</title><link href="https://pyvideo.org/europython-2013/postgresql-is-web-scale-really.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Hannu Krosing</name></author><id>tag:pyvideo.org,2013-07-02:europython-2013/postgresql-is-web-scale-really.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I show you how to set up a python and PostgreSQL based
+system which is easy to set up and easy to scale, provides ACID
+guarantees where they are needed and delays time-consistency between
+unrelated objects for scalability and availability where the latter are
+deemed more important.&lt;/p&gt;
+&lt;p&gt;The best thing is that this kind of scalability work for both OLTP and
+OLAP workloads, so with some planning you can have just a single large
+“database” which can take almost any type of load.&lt;/p&gt;
+&lt;p&gt;Also, if you hate SQL, you can do all the OLTP stuff in a pythonic way
+using an automagically generated ORM layer inside the database, near the
+data. If you are really masochistic, you can use the same ORM also for
+map-reduce type distributed data processing, though on this side the
+small effort of learning SQL usually pays off when queries get more
+complex. But as I said, everything runs inside the databse, near the
+data and thus even the ORM &amp;amp; map-reduce analytics works fast.&lt;/p&gt;
+</summary><category term="postgresql"></category><category term="nosql"></category><category term="datamining"></category><category term="parallelization"></category><category term="distributed"></category><category term="bigdata"></category><category term="scalability"></category><category term="pl/python"></category><category term="olap"></category><category term="optimization"></category><category term="orm"></category><category term="sql"></category><category term="performance"></category></entry><entry><title>SQLAlchemyと僕</title><link href="https://pyvideo.org/pycon-japan-2012/sqlalchemytopu.html" rel="alternate"></link><published>2012-09-15T00:00:00+00:00</published><updated>2012-09-15T00:00:00+00:00</updated><author><name>木田 光彦</name></author><id>tag:pyvideo.org,2012-09-15:pycon-japan-2012/sqlalchemytopu.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SQLAlchemyを利用したWebアプリケーション開発で押させておきたいポイントと、Tipsをまとめて、初心者向けとして紹介します。&lt;/p&gt;
+</summary><category term="sqlalchemy"></category><category term="orm"></category></entry><entry><title>weppy: the web framework for humans</title><link href="https://pyvideo.org/pycon-italia-2017/weppy-the-web-framework-for-humans.html" rel="alternate"></link><published>2017-04-07T00:00:00+00:00</published><updated>2017-04-07T00:00:00+00:00</updated><author><name>Giovanni Barillari</name></author><id>tag:pyvideo.org,2017-04-07:pycon-italia-2017/weppy-the-web-framework-for-humans.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Why another python web framework? Do we really need to innovate the
+Django and Flask scene? Could we? This talk will address all these
+questions, introducing weppy: the full stack python web framework
+designed with simplicity in mind.&lt;/p&gt;
+</summary><category term="web"></category><category term="orm"></category><category term="webservices"></category><category term="sql"></category><category term="webapp"></category><category term="web-development"></category></entry><entry><title>Exprimiendo el ORM de Django</title><link href="https://pyvideo.org/pycon-es-2017/exprimiendo-el-orm-de-django.html" rel="alternate"></link><published>2017-09-24T12:00:00+02:00</published><updated>2017-09-24T12:00:00+02:00</updated><author><name>Héctor Pablos López</name></author><id>tag:pyvideo.org,2017-09-24:pycon-es-2017/exprimiendo-el-orm-de-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Muchas veces nos resulta mucho más fácil escribir una consulta a base de datos en SQL plano que lidiar con las limitaciones del ORM de Django, perdiendo así la gran potencia y limpieza que este nos ofrece.&lt;/p&gt;
+&lt;p&gt;Los operadores Q() y F() son, muchas veces, algo que copiamos de la documentación sin entender completamente. Hacer joins simples puede no ser posible, y no hablemos de joins con claves foráneas de más de una columna.&lt;/p&gt;
+&lt;p&gt;Acabamos abusando del método extra() y la clase RawSQL cuando, en realidad, pueden no ser necesarios.&lt;/p&gt;
+&lt;p&gt;La experiencia nos ha enseñado a sacar el máximo partido de esta funcionalidad y exprimir al máximo sus posiblidades, limitando al máximo la escritura de código SQL plano. Explicaremos cómo, mediante la definición de algunos elementos básicos e intermedios para manipular querysets y la presentación de algunos trucos útiles.&lt;/p&gt;
+&lt;p&gt;Puede que te ahorre un par de consultas a la documentación y que descubras alguna cosa nueva, o simplemente que vuelvas a apreciar el ORM de Django.&lt;/p&gt;
+</summary><category term="django"></category><category term="orm"></category></entry><entry><title>NoSQL and Django Panel</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--nosql-and-django-panel.html" rel="alternate"></link><published>2010-09-09T00:00:00+00:00</published><updated>2010-09-09T00:00:00+00:00</updated><author><name>Jacob Burch</name></author><id>tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--nosql-and-django-panel.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A panel to discuss the future of no-sql/non-related databases in Django.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The proliferation of non-SQL speaking datastores has caused a lot of
+discourse and debate over their potential role in Django's decidedly
+SQL-speaking ORM. The goal of this panel is to consolidate and discuss
+the root questions of this debate.&lt;/p&gt;
+&lt;p&gt;The panel will consist of Django orm contributors and heavy end-users of
+both Django and a variety of NoSQL database solutions. Questions to the
+panel will briefly cover the NoSQL movement in general and it's staying
+power. After that introduction to the debates at hand outside of Django,
+questions will shift to focus closely on the issues into integrating
+NoSQL and Django--both on current best practices and future plans for
+integrating it into the core.&lt;/p&gt;
+</summary><category term="casestudy"></category><category term="djangocon"></category><category term="djangocon2010"></category><category term="nosql"></category><category term="orm"></category></entry><entry><title>Data Herding: How to Shepherd Your Flock Through Valleys of Darkness</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--data-herding--how-to-shepherd-you.html" rel="alternate"></link><published>2010-09-07T00:00:00+00:00</published><updated>2010-09-07T00:00:00+00:00</updated><author><name>Brian Luft</name></author><id>tag:pyvideo.org,2010-09-07:djangocon-us-2010/djangocon-2010--data-herding--how-to-shepherd-you.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn how to use common tools like the management shell,
+django-extensions, and iPython to craft an effective workflow whether
+you're building a new schema or migrating from old systems. We'll also
+look at how to take advantage of the latest ORM features.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The presentation would consist of walking through a few example
+scenarios where one would deal with processing or converting data in
+some manner. For example, migrating from a large legacy database often
+brings a number of tedious problems. I would demonstrate how to work in
+an iterative, repeatable style using the Django sql management commands,
+a few iPython tricks, etc.&lt;/p&gt;
+&lt;p&gt;Another demonstration would be showing a team workflow for South
+migrations, illustrating how to deal with some common problems that crop
+up in practice.&lt;/p&gt;
+&lt;p&gt;The audience will leave with some solid techniques for dealing with a
+few specific data management challenges. The unifying philosophy
+throughout is to break large, difficult problems into small, repeatable
+steps and audience members should also come away knowing how to select
+tools that help them work in this style.&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2010"></category><category term="django-extensions"></category><category term="ipython"></category><category term="managementshell"></category><category term="orm"></category></entry><entry><title>Lightning Talks - Day 1</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--lightning-talks---day-1.html" rel="alternate"></link><published>2010-09-07T00:00:00+00:00</published><updated>2010-09-07T00:00:00+00:00</updated><author><name>David Gouldin</name></author><id>tag:pyvideo.org,2010-09-07:djangocon-us-2010/djangocon-2010--lightning-talks---day-1.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;00:00 - David Gouldin: Hash Signaling Made Easy
+(&lt;a class="reference external" href="http://github.com/dgouldin/django-hashsignal"&gt;http://github.com/dgouldin/django-hashsignal&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;05:20 - Tareque Mossain: Django ORM Tips&lt;/li&gt;
+&lt;li&gt;11:20 - Nathan?: OpenID in Django&lt;/li&gt;
+&lt;li&gt;18:00 - Ben? and Jeremy?: Django efficacy project--call for case
+studies&lt;/li&gt;
+&lt;li&gt;19:40 - Tobias McNulty: django.contrib.messages and contributing to
+Django core&lt;/li&gt;
+&lt;li&gt;25:00 - Jason ?: Django Config Store
+(&lt;a class="reference external" href="http://github.com/zbyte64/django-configstore"&gt;http://github.com/zbyte64/django-configstore&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;28:25 - Niall Kelly: Giving Django a new front door&lt;/li&gt;
+&lt;li&gt;32:00 - Justin Lilly: Meetup Meeter&lt;/li&gt;
+&lt;li&gt;33:50 - Jesse Noller: WTF: PSF and DSF&lt;/li&gt;
+&lt;li&gt;40:00 - dmoisset ?: How request routing should be&lt;/li&gt;
+&lt;li&gt;45:30 - Gabriel Falcao: Feeding your ponies with lettuce
+(&lt;a class="reference external" href="http://lettuce.it/"&gt;http://lettuce.it/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;50:40 - Nate Aune: djangozoom: Effortless cloud deployment
+(&lt;a class="reference external" href="http://djangozoom.com/ponyexpress"&gt;http://djangozoom.com/ponyexpress&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[NOTE: If you know the people whose names have a ?, please add a comment
+so we can fix it in the description. Thanks!]&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="django-configstore"></category><category term="django.contrib.messages"></category><category term="django-hashsignal"></category><category term="djangozoom"></category><category term="dsf"></category><category term="hash-signaling"></category><category term="lettuce"></category><category term="openid"></category><category term="orm"></category><category term="psf"></category><category term="routing"></category></entry><entry><title>Making the Django ORM Multilingual</title><link href="https://pyvideo.org/djangocon-us-2011/djangocon-2011--making-the-django-orm-multilingua.html" rel="alternate"></link><published>2011-09-05T00:00:00+00:00</published><updated>2011-09-05T00:00:00+00:00</updated><author><name>Jonas Obrist</name></author><id>tag:pyvideo.org,2011-09-05:djangocon-us-2011/djangocon-2011--making-the-django-orm-multilingua.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Making the Django ORM Multilingual&lt;/p&gt;
+&lt;p&gt;Presented by Jonas Obrist&lt;/p&gt;
+&lt;p&gt;Why does Django make it that hard to have translated database contents?
+And what solutions are there to make it easier? And how can Django make
+multilingual database contents less of a pain?&lt;/p&gt;
+</summary><category term="djangocon"></category><category term="djangocon2011"></category><category term="localization"></category><category term="multilingual"></category><category term="orm"></category><category term="translations"></category></entry><entry><title>Sqlkit: database ad accesso immediato</title><link href="https://pyvideo.org/europython-2011/sqlkit-database-ad-accesso-immediato.html" rel="alternate"></link><published>2011-07-18T00:00:00+00:00</published><updated>2011-07-18T00:00:00+00:00</updated><author><name>Alessandro Dentella</name></author><id>tag:pyvideo.org,2011-07-18:europython-2011/sqlkit-database-ad-accesso-immediato.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Alessandro Dentella - 21 June 2011 in &amp;quot;Track Italiana
+Big Mac&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;È molto facile accedere ad un database con Python e ci sono molti ORM
+che permettono un alto livello di astrazione. Da qui c'é ancora una
+lunga strada per arrivare a manipolare interattivamente i dati anche per
+semplici compiti.&lt;/p&gt;
+&lt;p&gt;Sqlkit cerca di coprire questa distanza fornendo alcuni mega-widgets che
+permettono di costruire ogni applicazione GUI o accedere direttamente ai
+dati con l'applicazione 'sqledit', che viene distribuita con sqlkit.
+Sqlkit è costruita con PyGTK e SQLAlchemy.&lt;/p&gt;
+&lt;p&gt;Questa presentazione esplora alcune fra le più potenti caratteristiche
+di sqlkit e mostra quanto sia semplice costruire piccoli programmini ad
+uso personale o applicazioni ricche ed articolate. Si focalizza
+principalmente su due punti: quanto sia facile creare maschere per
+editare dati (anche relazioni on2many o many2many, grazie al modo
+originale di definire i layout) e al sistema di template basato su
+OpenOffice che rende incredibilmente semplice creare report.&lt;/p&gt;
+&lt;p&gt;Questa presentazione vuole mostrare come sqlkit può essere usato sia
+come framework di sviluppo di applicazioni, sia come strumento che ci
+aiuta mentre sviluppiamo altre applicazioni (es.: Django, OpenERP,… ).&lt;/p&gt;
+&lt;p&gt;Per rendere la presentazione più graduale, sfrutteremo il sistema di
+configurazione di sqledit Partendo da una configurazione minima -un URL-
+aggiungeremo elementi fino ad ottenere una vera applicazione.&lt;/p&gt;
+</summary><category term="ci"></category><category term="database"></category><category term="framework"></category><category term="gui"></category><category term="openoffice"></category><category term="orm"></category></entry><entry><title>django-rdflib and postgresql - the best of both worlds</title><link href="https://pyvideo.org/europython-2011/django-rdflib-and-postgresql-the-best-of-both-w.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Stefan Talpalaru</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/django-rdflib-and-postgresql-the-best-of-both-w.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Stefan Talpalaru - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;rdflib is a python library implementing a database with various triples
+back- end, parser, data serializers, SPARQL is a Python interface to
+extract/insert triples. We integrated it in Django reusing the database
+connection and exposing an ORM interface, along with full-text search on
+literals. This presentation shows a django-rdflib case study with a
+PostgreSQL backend in &lt;a class="reference external" href="http://brancusi1.usc.edu"&gt;Brain Architecture Management
+System&lt;/a&gt; - a neuroscientific project for the
+University of Southern California. Benefits of the flexible RDF
+structure will be shown, allowing researchers to insert free format
+data, making data public with a customizable serialization and use the
+powerful full-text search integrated in PostgreSQL.&lt;/p&gt;
+&lt;p&gt;Objective: show attendees an effective combination of RDF, PostgreSQL
+full- text search and Django ORM via django-rdflib.&lt;/p&gt;
+&lt;p&gt;Requirements: Django familiarity.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="database"></category><category term="django"></category><category term="orm"></category><category term="postgresql"></category><category term="reusing"></category><category term="search"></category><category term="serialization"></category><category term="university"></category></entry><entry><title>django-rdflib e postgresql - il meglio dei due mondi</title><link href="https://pyvideo.org/europython-2011/django-rdflib-e-postgresql-il-meglio-dei-due-mo.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Stefan Talpalaru</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/django-rdflib-e-postgresql-il-meglio-dei-due-mo.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Stefan Talpalaru - 24 June 2011 in &amp;quot;Track Italiana Big
+Mac &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;rdflib è una libreria python che fornisce una base di dati con vari
+back-end per le triple, dei parser, serializzatori, SPARQL è
+un'interfaccia in python per estrarre/inserire le triple. L'abbiamo
+integrata con Django tramite il riutilizzo della connessione alla base
+di dati fornendo un'interfaccia ORM e la capacità di fare ricerca
+full-text sui valori letterali. La presentazione contiene un studio di
+caso per django-rdflib con un back-end postgresql in Brain Architecture
+Management System (&lt;a class="reference external" href="http://brancusi1.usc.edu"&gt;http://brancusi1.usc.edu&lt;/a&gt;) - un progetto
+neuroscientifico per University of Southern California. Si vedranno i
+benefici della struttura flessibile del RDF che permette ai ricercatori
+di introdurre dati in formatto libero, rendere i dati pubblici con una
+serializzazione personalizzata e usare la potente ricerca full-text
+fornita da postgresql.&lt;/p&gt;
+&lt;p&gt;Scopo: introdurre al pubblico una combinazione di RDF, la ricerca
+full-text di postgresql e l'ORM di Django tramite django-rdflib.&lt;/p&gt;
+&lt;p&gt;Requisiti: familiarità con Django.&lt;/p&gt;
+</summary><category term="architecture"></category><category term="django"></category><category term="orm"></category><category term="postgresql"></category><category term="university"></category></entry><entry><title>Say What You Mean: Meta-Programming a Declarative API</title><link href="https://pyvideo.org/pycon-au-2011/say-what-you-mean-meta-programming-a-declarative.html" rel="alternate"></link><published>2011-08-22T00:00:00+00:00</published><updated>2011-08-22T00:00:00+00:00</updated><author><name>Ryan F Kelly</name></author><id>tag:pyvideo.org,2011-08-22:pycon-au-2011/say-what-you-mean-meta-programming-a-declarative.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk will explore the use of python's meta-programming facilities
+to create a simple declarative API so that you can &lt;em&gt;say what you mean&lt;/em&gt; -
+write code that focuses on the what and the why without being cluttered
+by the how. If you've ever wondered how the Django ORM or SQLObject work
+their magic, this is the talk for you.&lt;/p&gt;
+</summary><category term="api"></category><category term="django"></category><category term="orm"></category></entry><entry><title>Beziehungen? Nein danke! - Agile Datenbankentwicklung mit schemafreien Datenbanken und Python</title><link href="https://pyvideo.org/pycon-de-2012/beziehungen-nein-danke-agiledatenbankentwickl.html" rel="alternate"></link><published>2012-11-01T00:00:00+00:00</published><updated>2012-11-01T00:00:00+00:00</updated><author><name>Martin Schönert</name></author><id>tag:pyvideo.org,2012-11-01:pycon-de-2012/beziehungen-nein-danke-agiledatenbankentwickl.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python-Projekte haben immer häufiger alternative Datenbanken aus der
+nosql /newsql-Familie in ihrem Stack, seien es Graphendatenbanken wie
+Neo4j, Key- Value-Stores wie Redis oder dokumentenorientierte
+Datenbanken wie MongoDB.&lt;/p&gt;
+&lt;p&gt;So verschiedenartig diese Datenbanken auch sind, gemeinsam ist ihnen,
+dass sie nicht das relationale Datenmodell implementieren, Daten nicht
+in miteinander in Beziehung stehenden Entitäten ablegen. Während
+Nicht-Normalisirung bei relationalen Datenbanken meist als Anti-Pattern
+angesehen wird, ist es bei schemafreien Datenbanken Prinzip, das
+schnelles und agiles Entwickeln und Deployen fördert.&lt;/p&gt;
+&lt;p&gt;Dieser Talk zeigt an Hand eines konkreten Use-Cases, welche Auswirkungen
+die Verwendung einer nicht-relationalen Datenbank auf den
+Entwicklungsprozess hat, zeigt wie Daten modelliert werden können und
+auch, wie Veränderungen am Datenbankmodell implementiert werden können,
+wenn es kein &amp;quot;Alter table&amp;quot; mehr gibt.&lt;/p&gt;
+&lt;p&gt;Diskutiert werden sollen dabei auch die Pros und Kontras der
+verschiedenen Datenmodelle hinsichtlich ihrer Query-Möglichkeiten, der
+Query-Performance, Anforderungen an Plattenplatz und Auswirkungen auf
+die Client/Anwendungsseite.&lt;/p&gt;
+</summary><category term="agile softwareentwicklung"></category><category term="datenbank"></category><category term="datenmodellierung"></category><category term="nosql"></category><category term="orm"></category><category term="python"></category></entry><entry><title>Introduction to SQLAlchemy</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--introduction-to-sqlalchemy.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Johnathan Ellis</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--introduction-to-sqlalchemy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Introduction to SQLAlchemy&lt;/p&gt;
+&lt;p&gt;Presented by Johnathan Ellis&lt;/p&gt;
+&lt;p&gt;SQLAlchemy is the premier SQL toolkit for Python. SQLAlchemy exposes the
+full power of SQL while remaining easy to use for the basics, and is
+flexible enough to work with existing database schemas as well as fresh
+designs. SQLAlchemy is used in production by leading Python web
+frameworks Pylons and Turbogears as well as many other web and non-web
+developers.&lt;/p&gt;
+&lt;p&gt;This tutorial teaches SQLAlchemy's object-relational mapping to automate
+painlessly loading and persisting objects from and to your database,
+even when complex relationships exist.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;Python experience: intermediate. You should already have some hands-on
+experience with Python and be comfortable reading modern Python code.&lt;/p&gt;
+&lt;p&gt;SQL experience: beginning. You should know how to SELECT, INSERT, and
+DELETE, and how to read queries involving JOINs, but we will only be
+reading the SQL generated by SA, not writing our own.&lt;/p&gt;
+&lt;p&gt;ORM experience: prior experience with an object-relational mapper is not
+necessary.&lt;/p&gt;
+&lt;p&gt;Class Outline&lt;/p&gt;
+&lt;p&gt;Introduction:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Philosophy&lt;/li&gt;
+&lt;li&gt;SA features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Fundamentals:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to ORM&lt;/li&gt;
+&lt;li&gt;Data Mapper pattern vs Active Record&lt;/li&gt;
+&lt;li&gt;Tables&lt;/li&gt;
+&lt;li&gt;Mapping basics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Queries:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Conditions, operators&lt;/li&gt;
+&lt;li&gt;Joins&lt;/li&gt;
+&lt;li&gt;lazy / eager loading&lt;/li&gt;
+&lt;li&gt;Relation-based queries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sessions &amp;amp; identity map:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;detatching, attaching objects&lt;/li&gt;
+&lt;li&gt;Lifecycle relations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More Mapping:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;one to one, many to many&lt;/li&gt;
+&lt;li&gt;backreferences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Extensions, etc.:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;DDL&lt;/li&gt;
+&lt;li&gt;Migrate&lt;/li&gt;
+&lt;li&gt;FormAlchemy&lt;/li&gt;
+&lt;li&gt;SqlSoup&lt;/li&gt;
+&lt;li&gt;Elixir&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Requirements&lt;/p&gt;
+&lt;p&gt;Laptop with Python 2.5 or 2.6 and SQLAlchemy 0.6 installed. Code samples
+may also work with Python 2.4 but will not be tested on that platform.
+SQLAlchemy also supports Jython and cPython 3.x, but this tutorial will
+be using &amp;quot;classic&amp;quot; cPython.&lt;/p&gt;
+</summary><category term="ddl"></category><category term="elixer"></category><category term="formalchemy"></category><category term="migrate"></category><category term="orm"></category><category term="pycon"></category><category term="pycon2010"></category><category term="sqlalchemy"></category><category term="sqlsoup"></category><category term="tutorial"></category></entry></feed>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 06 Jul 2017 00:00:00 +0000</lastBuildDate><item><title>Opening Keynote</title><link>https://pyvideo.org/pycon-india-2012/opening-keynote.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyCon India 2012 Opening Keynote&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-28:pycon-india-2012/opening-keynote.html</guid><category>keynote</category><category>psf</category><category>python software foundation</category><category>voting systems</category><category>election systems</category></item><item><title>Parallelizing Scientific Python with Dask</title><link>https://pyvideo.org/pydata-seattle-2017/parallelizing-scientific-python-with-dask.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dask is a flexible tool for parallelizing Python code on a single machine or across a cluster. It builds upon familiar tools in the PyData ecosystem (e.g. NumPy and Pandas) while allowing them to scale across multiple cores or machines. This tutorial will cover both the high-level use of dask collections, as well as the low-level use of dask graphs and schedulers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Dask is a flexible tool for parallelizing Python code on a single machine or across a cluster.&lt;/p&gt;
+&lt;p&gt;We can think of dask at a high and a low level&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;High level collections: Dask provides high-level Array, Bag, and DataFrame collections that mimic and build upon NumPy arrays, Python lists, and Pandas DataFrames, but that can operate in parallel on datasets that do not fit into main memory.&lt;/li&gt;
+&lt;li&gt;Low Level schedulers: Dask provides dynamic task schedulers that execute task graphs in parallel. These execution engines power the high-level collections mentioned above but can also power custom, user-defined workloads to expose latent parallelism in procedural code. These schedulers are low-latency and run computations with a small memory footprint.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Different users operate at different levels but it is useful to understand both. This tutorial will cover both the high-level use of dask.array and dask.dataframe and the low-level use of dask graphs and schedulers. Attendees will come away&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Able to use dask.delayed to parallelize existing code&lt;/li&gt;
+&lt;li&gt;Understanding the differences between the dask schedulers, and when to use one over another&lt;/li&gt;
+&lt;li&gt;With a firm understanding of the different dask collections (dask.array and dask.dataframe) and how and when to use them.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Crist</dc:creator><pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-06:pydata-seattle-2017/parallelizing-scientific-python-with-dask.html</guid></item><item><title>Python's (future) type annotation system(s)</title><link>https://pyvideo.org/pycon-belarus-2015/pythons-future-type-annotation-systems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is a dynamically (but strongly, for some value of &amp;quot;strongly&amp;quot;)
+typed programming language. Notwithstanding its dynamism, checking
+types--or other behaviors--of variables has always been possible in
+Python code, and a steady stream of users have had a desire to do so. At
+a conceptual level, enforcing a type is a subset of enforcing an
+invariant on a variable, and the broader demand for design by contract
+has been a recurrent theme in Python discussions. PEP 316 addressed this
+desire (but was not accepted) a decade ago, as did the long defunct
+library PyDBC. Currently maintained, however, is the PyContracts
+library, which allows documenting and enforcing both types narrowly, and
+predicates of variables more broadly. I myself wrote a simple recipe for
+basic type checking using PEP 3107 annotations at the Python Cookbook:
+Type checking using Python 3.x annotations
+(&lt;a class="reference external" href="http://code.activestate.com/recipes/578528-type-checking-using"&gt;http://code.activestate.com/recipes/578528-type-checking-using&lt;/a&gt;-
+python-3x-annotations/).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Sat, 31 Jan 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-01-31:pycon-belarus-2015/pythons-future-type-annotation-systems.html</guid></item><item><title>Keynote: Working Efficiently with Big Data in Text Formats</title><link>https://pyvideo.org/pydata-san-francisco-2016/keynote-working-efficiently-with-big-data-in-text-formats.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData SF 2016&lt;/p&gt;
+&lt;p&gt;In an ideal world, all our large datasets would live in well optimized storage formats, such as RDBMS's, key-value NoSQL stores, HDF5 hierarchical datasets, or other formats that are well typed and fast to access. In our actual world, a great deal of our data lives in CSV, flat-file, or JSON formats, roughly stored on file systems, with little typing of data values. Moreover, data in these formats often have variably sized records making seeking data a linear scan operation.&lt;/p&gt;
+&lt;p&gt;Continuum Analytics has produced a custom optimized library called IOPro that includes a component called TextAdapter. TextAdapter provides abstractions to data access into these textual formats that adds much better data typing, minimizes memory use, uses indexing for seeking, and other facilities for better, faster data access without requiring conversion of exploratory datasets into permanent optimized formats. We will be releasing this code as an Open Source project, and plan on enhancing the library to allow further performance optimizations and integration with the Dask project.&lt;/p&gt;
+&lt;p&gt;As well as looking at technical and performance details of TextAdapter, this talk will discuss the economic and social concerns of company developed and supported Open Source projects. Continuum continues to explore some of these issues through our release of TextAdapter, following on company trajectory of moving projects from proprietary to open source status whenever reasonable.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Wed, 24 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-24:pydata-san-francisco-2016/keynote-working-efficiently-with-big-data-in-text-formats.html</guid><category>keynote</category></item><item><title>Coroutines, event loops, and the history of Python generators</title><link>https://pyvideo.org/pycon-us-2012/coroutines-event-loops-and-the-history-of-pytho.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk traces lightweight concurrency from Python 2.2's generators,
+which enabled semi-coroutines as a mechanism for scheduling &amp;quot;weightless&amp;quot;
+threads; to PEP 342, which created true coroutines, and hence made
+event-driven programming easier; to 3rd party libraries built around
+coroutines, from older GTasklet and peak.events to the current
+Greenlet/gevent and Twisted Reactor.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Sat, 10 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-10:pycon-us-2012/coroutines-event-loops-and-the-history-of-pytho.html</guid></item><item><title>Why you should use Python 3 for text processing</title><link>https://pyvideo.org/pycon-us-2013/why-you-should-use-python-3-for-text-processing.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Python is a great language for text processing. Each new version of
+Python--but especially the 3.x series--has enhanced this strength of the
+language. String (and byte) objects have grown some handy methods and
+some built-in functions have improved or been added. More importantly,
+refinements and additions have been made to the standard library to
+cover the most common tasks in text processing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-16:pycon-us-2013/why-you-should-use-python-3-for-text-processing.html</guid><category>talk</category></item><item><title>What I learned about Python – and about Guido's time machine – by reading the python-ideas mailing list</title><link>https://pyvideo.org/pycon-za-2014/what-i-learned-about-python-and-about-guidos-t.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;One of the ways that changes enter the Python language is via their
+prior discussion on the python-ideas mailing list. Many core
+contributors read and contribute to this list, some do not, and a large
+number of other interested Python programmers also participate in the
+discussion. A recurring element of these fascinating discussions is that
+ideas which seem compelling at first blush, upon deeper discussion
+reveal the greater wisdom of doing things just the way Python already
+does. Not always, of course, but often. A wonderful case study of this
+process is the innocuous seeming built-in 'sum()'. This function has an
+intricate history, with a great deal of dispute over just what its
+semantics and performance characteristics can or should be. A particular
+thread on python-ideas, rich with discussions of use cases and subtle
+semantics, led both to the creation of the 'statistics' module in Python
+3.4 (which contains a &amp;quot;private&amp;quot; version of the function,
+'statistics._sum()') and to a rejection of performance &amp;quot;optimizations&amp;quot;
+when operating over collections of collections (which may or may not
+seem obvious to &amp;quot;sum&amp;quot; in the first place).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Mertz</dc:creator><pubDate>Fri, 03 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-03:pycon-za-2014/what-i-learned-about-python-and-about-guidos-t.html</guid><category>pyconza</category><category>pyconza2014</category></item></channel></rss>
