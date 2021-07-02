@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_erik-van-zijst.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-24T00:00:00+00:00</updated><entry><title>The inner guts of Bitbucket</title><link href="https://pyvideo.org/europython-2014/the-inner-guts-of-bitbucket.html" rel="alternate"></link><published>2014-07-24T00:00:00+00:00</published><updated>2014-07-24T00:00:00+00:00</updated><author><name>Erik van Zijst</name></author><id>tag:pyvideo.org,2014-07-24:europython-2014/the-inner-guts-of-bitbucket.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Today Bitbucket is more than 30 times bigger than at the time of
+acquisition almost 4 years ago and serves repositories to over a million
+developers.&lt;/p&gt;
+&lt;p&gt;This talk lays out its current architecture in great detail, from
+Gunicorn and Django to Celery and HA-Proxy to NFS.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about Bitbucket's architecture. Leaving no stone unturned,
+I'll be covering the entire infrastructure. Every component, from web
+servers to message brokers and load balancing to managing hundreds of
+terabytes of data.&lt;/p&gt;
+&lt;p&gt;Since its inception in 2008, Bitbucket has grown from a standard, modest
+Django app into a large, complex stack that while still based around
+Django, has expanded into many more components.&lt;/p&gt;
+&lt;p&gt;Today Bitbucket is more than 30 times bigger than at the time of
+acquisition almost 4 years ago and serves Git and Mercurial repos to
+over a million users and growing faster now than ever before.&lt;/p&gt;
+&lt;p&gt;Our current architecture and infrastructure was shaped by rapid growth
+and has resulted in a large, mostly horizontally scalable system. What
+has not changed is that it's still nearly all Python based and could
+serve as inspiration or validation for other community members
+responsible for rapidly scaling their apps.&lt;/p&gt;
+&lt;p&gt;This talk will layout the entire architecture and motivate our
+technology choices. From our Gunicorn to Celery and HA-Proxy to NFS.&lt;/p&gt;
+</summary></entry><entry><title>Limiting Execution Time Through Interrupt Driven Programming</title><link href="https://pyvideo.org/pycon-au-2013/limiting-execution-time-through-interrupt-driven.html" rel="alternate"></link><published>2013-07-06T00:00:00+00:00</published><updated>2013-07-06T00:00:00+00:00</updated><author><name>Erik van Zijst</name></author><id>tag:pyvideo.org,2013-07-06:pycon-au-2013/limiting-execution-time-through-interrupt-driven.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk explores the challenges of ensuring responsiveness of
+applications under varying conditions like suddenly increased load, code
+regressions and problematic user data that reveal code paths with
+unusually high time complexity.&lt;/p&gt;
+&lt;p&gt;I'll be looking at interrupt-driven techniques to help bring the 95
+percentile of the response times of your application closer to the
+(usually much lower) mean.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll go beyond traditional tricks like caching, sharding
+and data denormalization and instead look at tools that can interrupt
+execution of overly expensive code paths, such that you can guarantee an
+upper bound in response time.&lt;/p&gt;
+&lt;p&gt;Interruptingcow and django-timelimit will be some of the tools that will
+be covered in this talk.&lt;/p&gt;
+&lt;p&gt;The context for most of this is web applications, and I'll be drawing
+many examples from our ongoing experiences with running and scaling
+Bitbucket, which is entirely written in Python.&lt;/p&gt;
+&lt;p&gt;Having said that though, many of the tools and techniques demonstrates
+will apply just as well to other types of applications and situations.&lt;/p&gt;
+</summary></entry></feed>

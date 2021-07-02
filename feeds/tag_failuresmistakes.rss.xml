@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Configuring uWSGI for Production: The defaults are all wrong</title><link>https://pyvideo.org/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Two years ago, we began migrating from a proprietary service framework
+to a WSGI-compliant one. We chose uWSGI as our host because of its
+performance and feature set. But, while powerful, uWSGI's defaults are
+driven by backward compatibility and are not ideal for new deployments.
+Powerful features can be overlooked due to the sheer magnitude of its
+feature set and spotty documentation. As we've scaled up the number of
+services hosted by uWSGI over the last year, we've had to tweak our
+standard configuration.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll present the base uWSGI configuration we use as a
+starting point for all services, as well as some tips to avoid known
+gotchas and provide a base level of defensiveness and high reliability.
+This base configuration makes use of several &amp;quot;no-cost&amp;quot; uWSGI features
+that help protect services from common, yet difficult to prevent issues
+-- some of which we discovered the hard way. We'll also talk about some
+programmatic uWSGI features which can be leveraged to improve
+reliability and improve outage response.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the topics we'll cover include:&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating memory leaks&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating stuck, hung, or infinitely looping processes&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing misconfigurations&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing wasted development effort&lt;/div&gt;
+&lt;div class="line"&gt;- Improving outage response&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Sperl</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</guid><category>Best Practice</category><category>Distributed Systems</category><category>Microservices</category><category>Web Servers and MicroFWs</category><category>failures/mistakes</category></item><item><title>Tools of the Trade: The Making of a Code Editor.</title><link>https://pyvideo.org/europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk tells the story of Mu, a native code editor written in Python
+(&lt;a class="reference external" href="https://codewith.mu/"&gt;https://codewith.mu/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;One Sunday afternoon I foolishly asked myself, &amp;quot;How hard can it be to
+write a simple code editor?&amp;quot; Several years later an international team
+of volunteers are still working on the project. We have had to address:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cross platform GUI development.&lt;/li&gt;
+&lt;li&gt;Cross platform packaging solutions for Python.&lt;/li&gt;
+&lt;li&gt;Creating an interactive visual debugger.&lt;/li&gt;
+&lt;li&gt;Integrating with iPython notebook.&lt;/li&gt;
+&lt;li&gt;Integrating with various IoT MicroPython devices.&lt;/li&gt;
+&lt;li&gt;Integrating with frameworks such as PyGame/PyGameZero and Flask.&lt;/li&gt;
+&lt;li&gt;Automating cross platform testing.&lt;/li&gt;
+&lt;li&gt;Researching and testing UX with a challenging user base.&lt;/li&gt;
+&lt;li&gt;Accessibility for all.&lt;/li&gt;
+&lt;li&gt;Internationalisation.&lt;/li&gt;
+&lt;li&gt;Creating an inclusive, welcoming and supportive community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will explain why Mu was created, how Mu was created and, most
+importantly, shares the decision making, technical research and
+implementation details of Mu in the hope others can learn from our
+mistakes, mis-steps and muck-ups.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nicholas Tollervey</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html</guid><category>Cross-Platform-Development</category><category>Development</category><category>Education</category><category>Packaging</category><category>failures/mistakes</category></item><item><title>A Day Has Only 24±1 Hours</title><link>https://pyvideo.org/europython-2019/a-day-has-only-24-1-hours.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;On the last Sunday of October you may get “one more hour of sleep” but
+as well may spend much more time debugging code dealing with the time
+zones, daylight saving time shifts and datetime stuff in general.&lt;/p&gt;
+&lt;p&gt;We'll look at a few pitfalls you may encounter when working with
+datetimes in Python. We'll dissect the pytz library, explain why it
+contains over 500 individual time zones while focusing on the 63 entries
+in Europe. We'll also find the reason why pytz is not part of the
+standard Python, why it gets updated so often and why even that won't
+solve all your problems. Do you know what happens after 2021 when the EU
+stops DST switching?&lt;/p&gt;
+&lt;p&gt;Two centuries of short-sighted propaganda and long-term chaos in
+forty-five minutes. Maybe that will make you want to avoid time zones in
+your code altogether!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miroslav Šedivý</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/a-day-has-only-24-1-hours.html</guid><category>Best Practice</category><category>Community</category><category>Python general</category><category>failures/mistakes</category></item><item><title>How Thinking in Python Made Me a Better Software Engineer</title><link>https://pyvideo.org/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a key for
+rapid development and good engineering.&lt;/p&gt;
+&lt;p&gt;Thinking in a programming language affects the amount of information you
+need to keep in your working memory. It also affects the abstractions
+and tools that pop in your mind and then used in constructing solutions.&lt;/p&gt;
+&lt;p&gt;Let’s explore what it means to think in Python. Why Python allows you to
+focus on problem solving, while languages like c++ often distract your
+attention from the problem at hand.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some good and bad practices by examples while
+trying to consider the amount of effort needed to write it, read it, and
+talk about it with other team members.&lt;/p&gt;
+&lt;p&gt;Key Takeaways: Tips for speeding your work without compromising quality,
+and reasoning for using it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience should be comfortably familiar with the process of
+software development, and software problem solving, and experience
+using Python.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Johnny Dude</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</guid><category>Best Practice</category><category>Development</category><category>Software Design</category><category>failures/mistakes</category></item><item><title>The dos and don'ts of task queues</title><link>https://pyvideo.org/europython-2019/the-dos-and-donts-of-task-queues.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we’ll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it’s the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won’t talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we’ll present our current setup which can take upon any number of
+tasks*. How we orchestrate the app and continuously integrate and
+deploy and what fun things await ahead of us in the development.&lt;/p&gt;
+&lt;p&gt;*Conditions may apply.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Petr Stehlík</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/the-dos-and-donts-of-task-queues.html</guid><category>ASYNC / Concurrency</category><category>Architecture</category><category>Best Practice</category><category>Case Study</category><category>failures/mistakes</category></item></channel></rss>

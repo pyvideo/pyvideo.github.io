@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Version Control and Unit Testing for Scientific Software, SciPy2013 Tutorial, Part 3 of 3</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2013.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2013.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Version Control and Unit Testing for Scientific Software, SciPy2013 Tutorial, Part 3 of 3" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2013/version-control-and-unit-testing-for-scientific-s.html" />
+    <meta property="og:image" content="https://i1.ytimg.com/vi/j36U6DTKVDY/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i1.ytimg.com/vi/j36U6DTKVDY/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="lightning talks" />
+    <meta name="tags" content="Tech" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2013/version-control-and-unit-testing-for-scientific-s.html" rel="bookmark"
+         title="Permalink to Version Control and Unit Testing for Scientific Software, SciPy2013 Tutorial, Part 3 of 3">Version Control and Unit Testing for Scientific Software, SciPy2013 Tutorial, Part 3 of 3
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2013-06-27T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 27 June 2013
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/matt-davis.html">Matt Davis</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/katy-huff.html">Katy Huff</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j36U6DTKVDY" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>Presenters: Matt Davis, Katy Huff</p>
+<p>Description</p>
+<p>Writing software can be a frustrating process but developers have come
+up with ways to make it less stressful and error prone. Version control
+saves the history of your project and makes it easier for multiple
+people to participate in development. Unit testing and testing
+frameworks help ensure the correctness of your code and help you find
+errors by quickly executing and testing your entire code base. These
+tools can save you time and stress and are valuable to anyone writing
+software of any description.</p>
+<p>This collaborative, hands-on tutorial will cover version control with
+Git plus writing and running unit tests in Python (and IPython!) using
+the nose testing framework. Attendees should be comfortable with the
+basics of Python and the command line but no experience with scientific
+Python is necessary.</p>
+<p>Outline</p>
+<p>The tutorial will be split into two two-hour lessons. The first lesson
+will cover git/GitHub and the second lesson will cover unit testing.
+Throughout the entirety of the tutorial students will be working in
+pairs. Our teaching style is to have frequent, short exercises for
+students. Ideally instructors aren't talking for more than a few minutes
+before they stop and students do something on their own machines.
+Instructors then give an explanation and example, then move on to the
+next item.</p>
+<p>Lesson 1: git/GitHub</p>
+<p>Students will work in pairs and in each pair one student will make a
+GitHub repo, then give the other student commit access on that repo.
+Students will take turns making modifications to learn various bits of
+git functionality.</p>
+<p>Lesson 2: Unit Testing</p>
+<p>Continuing to work in pairs, students will use test driven development
+to construct a small scientific program in the IPython Notebook and then
+take their work to .py files to see how nose works from the command
+line.</p>
+<p>Required Packages</p>
+<p>In addition to standard Python this tutorial will require the nose
+testing framework, the IPython Notebook, and the command line interface
+to Git. Installing Git varies by platform. Windows users should install
+Git Bash (aka msysgit), Mac users should install the Mac OS X Command
+Line Tools, and Linux users should use the packaging system for their
+particular Linux distribution. The Anaconda CE Python installer includes
+nose and the IPython Notebook.</p>
+<p>Documentation</p>
+<p>Material will be adapted from existing Software Carpentry lessons,
+especially:
+<a class="reference external" href="https://github.com/swcarpentry/boot-camps/tree/master/version-control/git/git-and-github">https://github.com/swcarpentry/boot-camps/tree/master/version-control/git/git-and-github</a>
+<a class="reference external" href="https://github.com/swcarpentry/boot-camps/tree/master/python/sw_engineering">https://github.com/swcarpentry/boot-camps/tree/master/python/sw_engineering</a></p>
+<p>Other links: <a class="reference external" href="http://software-carpentry.org/">http://software-carpentry.org/</a> - The software carpentry
+organization with links to many lessons and past boot camps.
+<a class="reference external" href="https://github.com/swcarpentry/boot-camps">https://github.com/swcarpentry/boot-camps</a> - Standard Software Carpentry
+boot camp curriculum. <a class="reference external" href="https://github.com/thehackerwithin/PyTrieste/wiki">https://github.com/thehackerwithin/PyTrieste/wiki</a>
+- Early Software Carpentry curriculum from a two week boot camp at the
+International Center for Theoretical Physics.
+<a class="reference external" href="https://code.google.com/p/hacker-within/w/list">https://code.google.com/p/hacker-within/w/list</a> - Lesson notes for a
+three hour lightning lesson at the American Nuclear Society Conference
+2011.
+<a class="reference external" href="http://software-carpentry.org/blog/2012/02/trieste-italy-workshop-week-1.html">http://software-carpentry.org/blog/2012/02/trieste-italy-workshop-week-1.html</a>
+- A blog post about the first week of the two week ICTP boot camp.
+<a class="reference external" href="http://software-carpentry.org/blog/2012/04/lessons-learned-at-the-university-of-chicago.html">http://software-carpentry.org/blog/2012/04/lessons-learned-at-the-university-of-chicago.html</a>
+- A blog post about a two day boot camp at the University of Chicago.
+<a class="reference external" href="http://software-carpentry.org/blog/2011/11/knowledge-of-the-second-kind.html">http://software-carpentry.org/blog/2011/11/knowledge-of-the-second-kind.html</a>
+- A blog post about what the hacker within did before it was absorbed
+into Software Carpentry (it's no longer really its own entity).</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2013.html">SciPy 2013</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=j36U6DTKVDY" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/lightning-talks/">lightning talks</a>, <a href="https://pyvideo.org/tag/tech/">Tech</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://software-carpentry.org/">
+http://software-carpentry.org/                </a></li><li><a href="http://software-carpentry.org/blog/2011/11/knowledge-of-the-second-kind.html">
+http://software-carpentry.org/blog/2011/11/knowledge-of-the-second-kind.html                </a></li><li><a href="http://software-carpentry.org/blog/2012/02/trieste-italy-workshop-week-1.html">
+http://software-carpentry.org/blog/2012/02/trieste-italy-workshop-week-1.html                </a></li><li><a href="http://software-carpentry.org/blog/2012/04/lessons-learned-at-the-university-of-chicago.html">
+http://software-carpentry.org/blog/2012/04/lessons-learned-at-the-university-of-chicago.html                </a></li><li><a href="https://code.google.com/p/hacker-within/w/list">
+https://code.google.com/p/hacker-within/w/list                </a></li><li><a href="https://github.com/swcarpentry/boot-camps">
+https://github.com/swcarpentry/boot-camps                </a></li><li><a href="https://github.com/swcarpentry/boot-camps/tree/master/python/sw\_engineering">
+https://github.com/swcarpentry/boot-camps/tree/master/python/sw\_engineering                </a></li><li><a href="https://github.com/swcarpentry/boot-camps/tree/master/version-control/git/git-and-github">
+https://github.com/swcarpentry/boot-camps/tree/master/version-control/git/git-and-github                </a></li><li><a href="https://github.com/thehackerwithin/PyTrieste/wiki">
+https://github.com/thehackerwithin/PyTrieste/wiki                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2013/videos/version-control-and-unit-testing-for-scientific-s.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

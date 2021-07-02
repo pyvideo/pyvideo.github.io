@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_francois-marier.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-09-13T00:00:00+00:00</updated><entry><title>External dependencies in web apps: system libs are not that scary</title><link href="https://pyvideo.org/kiwi-pycon-2014/external-dependencies-in-web-apps-system-libs-ar.html" rel="alternate"></link><published>2014-09-13T00:00:00+00:00</published><updated>2014-09-13T00:00:00+00:00</updated><author><name>Francois Marier</name></author><id>tag:pyvideo.org,2014-09-13:kiwi-pycon-2014/external-dependencies-in-web-apps-system-libs-ar.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Going to production is very different from setting up a development
+environment. We have great tools like pip and virtualenv for the latter
+but they lead to maintenance anti-patterns when they are used for
+production deployments. We don't &amp;quot;pip install apache&amp;quot; and instead
+leverage the QA and integration work of distro developers, so why not
+rely on distros for more than just the base system?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Today's web applications often have a lot of external dependencies.
+Start off with a basic framework, sprinkle a couple of handy plugins or
+python modules and finish with a generous serving of JavaScript
+front-end libraries.&lt;/p&gt;
+&lt;p&gt;What you end up is a gigantic mess of code from different sources which
+follow very different release schedules and policies. Language-specific
+package managers can automate much of the dependency resolution and
+package installation, but you're on your own in terms of integration and
+quality assurance. Also, the minute you start distributing someone
+else's code with your project, you become responsible for the security
+of that external code.&lt;/p&gt;
+&lt;p&gt;You could of course decide to avoid the problem by writing it all
+yourself from scratch. Realistically though, you're not likely to go
+past the stage of a toy WSGI app using that approach because it's a lot
+of work.&lt;/p&gt;
+&lt;p&gt;This talk will examine the decision that the Libravatar [1] project made
+to outsource much of its maintenance burden to the distro by using
+system packages for almost everything.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://www.libravatar.org/"&gt;https://www.libravatar.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://speakerdeck.com/nzpug/francois-marier-external-dependencies-in-web-apps-system-libs-are-not-that-scary"&gt;https://speakerdeck.com/nzpug/francois-marier-external-dependencies-in-web-apps-system-libs-are-not-that-scary&lt;/a&gt;&lt;/p&gt;
+</summary><category term="talk"></category></entry><entry><title>The web beyond usernames and passwords</title><link href="https://pyvideo.org/pycon-au-2012/the-web-beyond-usernames-and-passwords.html" rel="alternate"></link><published>2012-08-21T00:00:00+00:00</published><updated>2012-08-21T00:00:00+00:00</updated><author><name>Francois Marier</name></author><id>tag:pyvideo.org,2012-08-21:pycon-au-2012/the-web-beyond-usernames-and-passwords.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Persona is a new cross-browser login and identity system for the web
+that is pragmatic, federated, and serves the user.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Persona is a new cross-browser login and identity system for the web
+that is pragmatic, federated, and serves the user.&lt;/p&gt;
+&lt;p&gt;Unlike other popular solutions, it puts a strong emphasis on privacy
+protection and makes your browser the trusted intermediary. Developed by
+Mozilla, it is based on the simple idea of users demonstrating ownership
+of their email address (with a generous serving of crypto magic under
+the hood).&lt;/p&gt;
+&lt;p&gt;This talk will give a high-level overview of the system and then show
+how simple it is to add support for it in a Python webapp. If you want
+to make it easy for users to log into your site but don't want the risks
+and hassle of storing passwords, or if you cannot quite get your head
+around complicated authentication systems, then this talk is for you!&lt;/p&gt;
+</summary></entry></feed>

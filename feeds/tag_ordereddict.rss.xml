@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 18 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>Python's other collection types and algorithms</title><link>https://pyvideo.org/europython-2011/pythons-other-collection-types-and-algorithms.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Andrew Dalke - 21 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It's impossible to use Python without learning about lists, dictionaries
+and tuples, and most people have at least heard about sets. These four
+collection types are so important and useful that Python has special
+syntax for creating them.&lt;/p&gt;
+&lt;p&gt;Fewer people know about Python's other built-in collection data types
+and algorithms. A deque supports fast appends and pops from both ends
+and is great for breath-first searches, the heapq module helps you
+construct a priority queue on top of lists, and the bisect module is
+handy for quick binary searches of an already sorted list.&lt;/p&gt;
+&lt;p&gt;The defaultdict uses the dict &lt;strong&gt;missing&lt;/strong&gt; hook as a better solution to
+setdefault, OrderedDict is a dictionary that preserves insertion order,
+and Counter is a dictionary specialized for counting hashable objects. A
+namedtuple is handy if you want to support both index and attribute
+lookups for the same item, and a frozenset is a hashable form of a set
+which can be used as keys in a dictionary or set.&lt;/p&gt;
+&lt;p&gt;My talk will go over these 8 different classes and modules. I'll give
+concrete examples of how to use them and why they are useful. The target
+audience is intermediate programmers who are familiar with the Python's
+standard data types and with data types in general, but who don't know
+all of the functionality available in modern Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Dalke</dc:creator><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-18:europython-2011/pythons-other-collection-types-and-algorithms.html</guid><category>bisect</category><category>dictionaries</category><category>frozenset</category><category>heapq</category><category>learning</category><category>namedtuple</category><category>ordereddict</category></item><item><title>The Data Structures of Python</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--the-data-structures-of-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Data Structures of Python&lt;/p&gt;
+&lt;p&gt;Presented by Alex Gaynor&lt;/p&gt;
+&lt;p&gt;Any Python programmer knows about the major builtin data strcutres,
+lists, dicts, tuples, but do you always remember when you're supposed to
+use them? Do you know about all the cool data structures hidden in the
+standard library? This talk will be a review of the characteristics of
+the different data structures, and a tour of idiomatic ways to use some
+of the structures in the standard library.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;First, as a note this talk borders between survey and discuss in depth.
+For each data structure I want to cover their implementation,
+performance characteristics, and idiomatic usage (e.g. tuples vs.
+lists), a lot of them have similar implementations so idiomatic usage
+will dominate for some of them.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The builtins (10 minutes)&lt;ul&gt;
+&lt;li&gt;lists&lt;/li&gt;
+&lt;li&gt;Ordered collections of any type of objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as an array of pointers&lt;/li&gt;
+&lt;li&gt;tuples&lt;/li&gt;
+&lt;li&gt;Ordered collections of any type of objects&lt;/li&gt;
+&lt;li&gt;Immutable*&lt;/li&gt;
+&lt;li&gt;Implemented as a fixed-length array of pointers&lt;/li&gt;
+&lt;li&gt;dicts&lt;/li&gt;
+&lt;li&gt;Unordered mapping of hashable objects to any objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;ul&gt;
+&lt;li&gt;Why no immutable variant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implemented as an open-addressed hash table.&lt;/li&gt;
+&lt;li&gt;sets&lt;/li&gt;
+&lt;li&gt;Unordered collection of hashable objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;ul&gt;
+&lt;li&gt;frozenset&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Implemented as an open-addressed hash table.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;The Standard Library (10 minutes)&lt;ul&gt;
+&lt;li&gt;OrderedDict&lt;/li&gt;
+&lt;li&gt;Ordered mapping of hashable objects to any objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as a dict with a doubly-linked list running through
+it.&lt;/li&gt;
+&lt;li&gt;deque&lt;/li&gt;
+&lt;li&gt;Ordered collection of any type of objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as an unrolled, doubly-linked list&lt;/li&gt;
+&lt;li&gt;namedtuple&lt;/li&gt;
+&lt;li&gt;Ordered collection of any type of objects, &lt;em&gt;also&lt;/em&gt; addressable by
+name.&lt;/li&gt;
+&lt;li&gt;Immutable&lt;/li&gt;
+&lt;li&gt;Implemented as a tuple with extra properties&lt;/li&gt;
+&lt;li&gt;array&lt;/li&gt;
+&lt;li&gt;Like a list... but limited to &amp;quot;primitve&amp;quot; types.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Performance characteristics.&lt;/li&gt;
+&lt;li&gt;Writing your own (5 minutes)&lt;ul&gt;
+&lt;li&gt;Abstract Base Classes&lt;/li&gt;
+&lt;li&gt;Duck typing&lt;ul&gt;
+&lt;li&gt;Why would you want to use them!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;What's available.&lt;/li&gt;
+&lt;li&gt;OrderedSet&lt;/li&gt;
+&lt;li&gt;An ordered collection of hashable objects&lt;/li&gt;
+&lt;li&gt;Mutable&lt;/li&gt;
+&lt;li&gt;Implemented as a set with a doubly-linked list running through it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Questions (5 minutes)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Gaynor</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--the-data-structures-of-python.html</guid><category>abc</category><category>datastructures</category><category>dequearray</category><category>dict</category><category>ducktyping</category><category>frozenset</category><category>list</category><category>namedtuple</category><category>ordereddict</category><category>orderedset</category><category>pycon</category><category>pycon2011</category><category>set</category><category>tuple</category></item></channel></rss>

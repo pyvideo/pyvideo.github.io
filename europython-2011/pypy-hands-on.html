@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; PyPy hands-on</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2011.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2011.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="PyPy hands-on" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/europython-2011/pypy-hands-on.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/qcqEAE4QoeA/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/qcqEAE4QoeA/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="cd" />
+    <meta name="tags" content="cpython" />
+    <meta name="tags" content="extensions" />
+    <meta name="tags" content="hg" />
+    <meta name="tags" content="jit" />
+    <meta name="tags" content="optimize" />
+    <meta name="tags" content="pypy" />
+    <meta name="tags" content="setup.py" />
+    <meta name="tags" content="tutorial" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/europython-2011/pypy-hands-on.html" rel="bookmark"
+         title="Permalink to PyPy hands-on">PyPy hands-on
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2011-07-21T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 21 July 2011
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/antonio-cuni.html">Antonio Cuni</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/armin-rigo.html">Armin Rigo</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+    <li class="" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qcqEAE4QoeA" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/J1ZTPi06awk" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &quot;Training
+Pizza Margherita&quot;</p>
+<h3>Description</h3><p>The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.</p>
+<p>The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.</p>
+<div class="section" id="part-1-run-your-application-under-pypy">
+<h4>Part 1: Run your application under PyPy</h4>
+<p>This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:</p>
+<pre class="literal-block">
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+</pre>
+</div>
+<div class="section" id="part-2-write-your-own-interpreter-with-pypy">
+<h4>Part 2: Write your own interpreter with PyPy</h4>
+<p>PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.</p>
+<p>The students will be given the source code for a toy language
+implemented in RPython. They will learn:</p>
+<pre class="literal-block">
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &quot;hints&quot; needed by the JIT generator, and how to place them
+</pre>
+<p>Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.</p>
+<p><strong>THINGS TO DO BEFORE THE TRAINING</strong></p>
+<p>You are encouraged to bring your laptop to the training session.</p>
+<p>Make sure that the following prerequisites are met:</p>
+<ul class="simple">
+<li>Install PyPy 1.5:<ul>
+<li><a class="reference external" href="http://pypy.org/download.html">http://pypy.org/download.html</a></li>
+<li><a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy">http://doc.pypy.org/en/latest/getting-started.html#installing-pypy</a></li>
+</ul>
+</li>
+<li>Make sure that <tt class="docutils literal">setuptools</tt> or <tt class="docutils literal">distribute</tt> are installed (look
+at the URL above for instructions)</li>
+<li>Clone the pypy repository, and update to the 1.5 version:</li>
+</ul>
+<p>$ hg clone <a class="reference external" href="http://bitbucket.org/pypy/pypy">http://bitbucket.org/pypy/pypy</a></p>
+<p>$ cd pypy</p>
+<p>$ hg up -r release-1.5</p>
+<ul class="simple">
+<li>Clone the jitviewer repository and install it on pypy:</li>
+</ul>
+<p>$ hg clone <a class="reference external" href="http://bitbucket.org/pypy/jitviewer">http://bitbucket.org/pypy/jitviewer</a></p>
+<p>$ cd jitviewer</p>
+<p>$ /path/to/pypy-1.5/bin/pypy setup.py develop</p>
+<p>If you intend to follow also the second part (&quot;Write your own
+interpreter with PyPy&quot;), you need to make sure you have a working
+<a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter">developing
+environment</a></p>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/europython-2011.html">EuroPython 2011</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=qcqEAE4QoeA" rel="external">YouTube</a>, <a href="https://www.youtube.com/watch?v=J1ZTPi06awk" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/cd/">cd</a>, <a href="https://pyvideo.org/tag/cpython/">cpython</a>, <a href="https://pyvideo.org/tag/extensions/">extensions</a>, <a href="https://pyvideo.org/tag/hg/">hg</a>, <a href="https://pyvideo.org/tag/jit/">jit</a>, <a href="https://pyvideo.org/tag/optimize/">optimize</a>, <a href="https://pyvideo.org/tag/pypy/">pypy</a>, <a href="https://pyvideo.org/tag/setuppy/">setup.py</a>, <a href="https://pyvideo.org/tag/tutorial/">tutorial</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://bitbucket.org/pypy/jitviewer">
+http://bitbucket.org/pypy/jitviewer                </a></li><li><a href="http://bitbucket.org/pypy/pypy">
+http://bitbucket.org/pypy/pypy                </a></li><li><a href="http://doc.pypy.org/en/latest/getting-started-python.html%20">
+http://doc.pypy.org/en/latest/getting-started-python.html%20                </a></li><li><a href="http://doc.pypy.org/en/latest/getting-started.html">
+http://doc.pypy.org/en/latest/getting-started.html                </a></li><li><a href="http://pypy.org/download.html">
+http://pypy.org/download.html                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/europython-2011/videos/pypy-hands-on.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

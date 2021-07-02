@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_stackless.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-21T00:00:00+00:00</updated><entry><title>Emulating Stackless and greenlet with each other</title><link href="https://pyvideo.org/europython-2011/emulating-stackless-and-greenlet-with-each-other.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Péter Szabó</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/emulating-stackless-and-greenlet-with-each-other.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Peter Szabo - 20 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python and the greenlet package for CPython are two different
+implementations of coroutine support for Python. (Coroutines are
+fundamental building blocks of I/O frameworks like gevent, Eventlet,
+Concurrence and Syncless to conveniently handle thousands of socket
+connections at a time without creating threads.) Stackless and greenlet
+implement a different interface. However, each is powerful enough so
+that it can be used to emulate the other one. In this talk we explore
+the differences and discuss design decisions and testing strategies of
+the emulations we have implemented.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/slides_2011-06-20/pts_em%20u_coro_2011-06-20.html"&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/s%20lides_2010-11-29/pts_coro_2010-11-29.html"&gt;Slides for the bonus
+sub-talk&lt;/a&gt;&lt;/p&gt;
+</summary><category term="concurrence"></category><category term="cpython"></category><category term="design"></category><category term="greenlet"></category><category term="stackless"></category><category term="testing"></category></entry><entry><title>PyPy in production</title><link href="https://pyvideo.org/europython-2011/pypy-in-production.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/pypy-in-production.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 23 June 2011 in &amp;quot;Track
+Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The PyPy project has recently gathered a lot of attention for its
+progress in speeding up the Python language - it is the fastest Python
+interpreter, and the most compatible and most stable 'alternative´ one.
+No longer merely a research project, PyPy is now suitable for production
+use. We are working on improvements on calling into C libraries and
+generally integrating with the existing Python extensions ecosystem.&lt;/p&gt;
+&lt;p&gt;We will give an overview on how the tracing Just-in-Time compiler works
+in PyPy. From there, we will then focus on what the PyPy project has
+achieved, particularly in the past two years:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;most Python benchmarks run much faster than with CPython or Psyco&lt;/li&gt;
+&lt;li&gt;the real-world PyPy compiler toolchain itself (200 KLocs) runs twice
+as fast&lt;/li&gt;
+&lt;li&gt;already supports 32 and 64bit x86 and is in the process of supporting
+ARM&lt;/li&gt;
+&lt;li&gt;full compatibility with CPython (more than Jython/IronPython)&lt;/li&gt;
+&lt;li&gt;full (and JIT-ed) ctypes support to call C libraries from Python&lt;/li&gt;
+&lt;li&gt;supports Stackless Python (in-progress)&lt;/li&gt;
+&lt;li&gt;new &amp;quot;cpyext&amp;quot; layer which integrates existing CPython C extensions&lt;/li&gt;
+&lt;li&gt;an experimental super-fast JIT-compilation of calls to C++ libraries&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We want to reserve time for discussing potential future work like SWIG
+and/or Cython compatibility and other areas brought up by the audience.
+There are many interesting details that can be explored further; we will
+focus on the points the audience is most interested in.&lt;/p&gt;
+&lt;p&gt;For more info:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/"&gt;http://pypy.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Our blog: &lt;a class="reference external" href="http://morepypy.blogspot.com/"&gt;http://morepypy.blogspot.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Eureka program: &lt;a class="reference external" href="http://www.eurostars-eureka.eu/"&gt;http://www.eurostars-eureka.eu/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Eurostars Eureka is our funding source since 2009. It is a
+cross-European funding collaboration that targets small firms which
+produce research.&lt;/em&gt;&lt;/p&gt;
+</summary><category term="cpython"></category><category term="ctypes"></category><category term="cython"></category><category term="extensions"></category><category term="pypy"></category><category term="stackless"></category></entry><entry><title>Advanced Pickling with Stackless Python and sPickle</title><link href="https://pyvideo.org/europython-2011/advanced-pickling-with-stackless-python-and-spick.html" rel="alternate"></link><published>2011-07-07T00:00:00+00:00</published><updated>2011-07-07T00:00:00+00:00</updated><author><name>Anselm Kruis</name></author><id>tag:pyvideo.org,2011-07-07:europython-2011/advanced-pickling-with-stackless-python-and-spick.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Anselm Kruis - 24 June 2011 in &amp;quot;Track Tagliatelle &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python supports pickling of a wider range of types than
+conventional C-Python, including stack frames and code objects. On this
+basis it is possible to extend further the pickle.Pickler class in order
+to serialise classes, modules, packages up to certain limits. The
+&lt;a class="reference external" href="http://pypi.python.org/pypi/sPickle"&gt;sPickle package&lt;/a&gt; provides such
+an extended Pickler. The code was developed as part of a commercial
+project and recently released as free software by science + computing
+ag. Currently it requires Stackless Python 2.7.&lt;/p&gt;
+&lt;p&gt;In my presentation, I'll first demonstrate some applications of the
+sPickle package including serialisation of modules and executing parts
+of a program on a remote computer using RPyC and Paramiko.&lt;/p&gt;
+&lt;p&gt;In the second part of my speech, I'll give some insight in the internal
+operations of sPickle and the lessons learned during its development.
+Extending the Pickler showed to be like opening a can of worms. You have
+take care of many odds and ends to get it right. I'll point out some
+weak points in the implementation of the conventional pickling code and
+I'll also show the limits of the current sPickle implementation.&lt;/p&gt;
+</summary><category term="packages"></category><category term="pickling"></category><category term="science"></category><category term="stackless"></category></entry><entry><title>Richard Tew - Stackless Python 101</title><link href="https://pyvideo.org/kiwi-pycon-2009/richard-tew---stackless-python-101.html" rel="alternate"></link><published>2009-11-07T00:00:00+00:00</published><updated>2009-11-07T00:00:00+00:00</updated><author><name>Richard Tew</name></author><id>tag:pyvideo.org,2009-11-07:kiwi-pycon-2009/richard-tew---stackless-python-101.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python 101&lt;/p&gt;
+&lt;p&gt;Presented by Richard Tew&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;An introduction to Stackless Python, showing what it is useful for and
+how to use it.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;The talk would start by describing what Stackless Python is, and the
+reasons why you would use it. Next it would cover how to use Stackless
+Python. And finally, what the limitations of a green threading framework
+like this are and what needs to be done to cater for them.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Sound and video are poor. Slides are hard to read.]&lt;/p&gt;
+</summary><category term="kiwipycon"></category><category term="kiwipycon2009"></category><category term="stackless"></category></entry><entry><title>Sunday Morning Lightning Talks</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--sunday-morning-lightning-talks.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--sunday-morning-lightning-talks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sunday morning lightning talks&lt;/p&gt;
+&lt;p&gt;(00:20) Tim Cooper - Lightning sound bytes&lt;/p&gt;
+&lt;p&gt;(01:05) Gregg Lind, Dan Callahan - Python spring cleanup, contributing
+to FLOSS projects&lt;/p&gt;
+&lt;p&gt;(05:30) Natalia Bidart, MatÃ­as Bordese, Facundo Batista - PyAr&lt;/p&gt;
+&lt;p&gt;(10:40) D Huggins - You got your Cython in my NumPy&lt;/p&gt;
+&lt;p&gt;(16:05) Ken Elkabany - PiCloud&lt;/p&gt;
+&lt;p&gt;(21:20) Tim Fernando - Mobile web in Django&lt;/p&gt;
+&lt;p&gt;(26:40) ? - Running a standard webapp on stackless; monkeypatching&lt;/p&gt;
+</summary><category term="lightning talks"></category><category term="contributing"></category><category term="cython"></category><category term="floss"></category><category term="pyar"></category><category term="pycloud"></category><category term="pycon"></category><category term="pycon2010"></category><category term="stackless"></category></entry><entry><title>The Ring of Python (#189)</title><link href="https://pyvideo.org/pycon-us-2010/the-ring-of-python-189.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/the-ring-of-python-189.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Ring of Python&lt;/p&gt;
+&lt;p&gt;Presented by holger krekel (merlinux gmbh)&lt;/p&gt;
+&lt;p&gt;CPython 2.5/2.6/3.1, Jython, IronPython, PyPy, StacklessPython,
+UnladenSwallow, Cython ... what do we make of all these cool interpreter
+projects and versions? Where does competition help and where does it
+hamper?&lt;/p&gt;
+&lt;p&gt;In this interactive talk I'll highlight the main strengths of each of
+the Python interpreters. Furthermore, I'll discuss ways to leverage
+Python interpreters in a co-operative way, discuss challenges, projects
+and issues ahead and also briefly highlight 'execnet', one my own
+projects for bridging (Any) Python to (Any) Python. This is also the
+first time i am going to try out a new and funvisual presentation
+technique after several years of having done mostly text-based ones&lt;/p&gt;
+</summary><category term="cpython"></category><category term="cython"></category><category term="ironpython"></category><category term="jython"></category><category term="pycon"></category><category term="pycon2010"></category><category term="pypy"></category><category term="stackless"></category><category term="unladenswallow"></category></entry><entry><title>Large Scale Data Conditioning &amp; Processing with Stackless Python and Pypes</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--large-scale-data-conditioning--amp--p.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Eric Gaumer</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--large-scale-data-conditioning--amp--p.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Large Scale Data Conditioning &amp;amp; Processing with Stackless Python and
+Pypes&lt;/p&gt;
+&lt;p&gt;Presented by Eric Gaumer&lt;/p&gt;
+&lt;p&gt;Pypes is a component oriented framework for designing dataflow
+applications. It uses Stackless Python to model components as
+computational entities that operate by sending and receiving messages.
+Components are designed to process streams of data modeled as a series
+of messages which are exchanged asynchronously. Data streams are
+initiated over an asynchronous REST interface.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There's been some recent momentum around data flow programming with a
+number of new frameworks having been released. This new found interest
+is due largely in part to the increasing amount of data being produced
+and consumed by applications. MapReduce has become a general topic of
+discussion for analytics over large data sets but it's increasingly
+evident that it's not a panacea.&lt;/p&gt;
+&lt;p&gt;Simple batch processing tools like MapReduce and Hadoop are just not
+powerful enough in any one of the dimensions of the big data space that
+really matters. One particular area where MapReduce falls short is in
+near real-time search. It used to be common to run batch processing jobs
+on a nightly basis which would index the days events, making them
+searchable.&lt;/p&gt;
+&lt;p&gt;Given today's social dynamics, people have come to expect instant access
+to data as opposed to a daily digest. Batch oriented semantics are being
+superseded by event driven architectures that act on live, real-time
+streams of data. This shift in paradigm has sparked new interest in
+dataflow concepts.&lt;/p&gt;
+&lt;p&gt;Dataflow frameworks promote the data to become the main concept behind
+any program. It becomes a matter of &amp;quot;data-flow&amp;quot; over &amp;quot;control-flow&amp;quot;
+where processes are just the way data is created, manipulated and
+destroyed. This concept is well represented in the Unix operating system
+which pipes data between small single-purpose tools to produce more
+sophisticated applications.&lt;/p&gt;
+&lt;p&gt;Pypes is a dataflow framework that leverages Stackless Python to model
+processes as black box operations that communicate by sending and
+receiving messages. These processes are naturally component oriented
+allowing them to be connected in different ways to form new
+applications. Components are inherently stateless making parallel
+processing relatively simple. Because a component is an abstraction of a
+Stackless tasklet (true coroutines), expensive setups such as loading
+machine learning models are done once during initialization and can then
+be used throughout the life of the component. This is in contrast to
+MapReduce frameworks that typically incur this overhead each time the
+map function is called or try to manage some sort of global state.&lt;/p&gt;
+&lt;p&gt;One aspect that differentiates Pypes from other dataflow frameworks is
+its &amp;quot;push&amp;quot; model. Unlike generator based solutions which pull data
+through the system, Pypes provides a RESTful interface that allows data
+to be pushed in. This allows Pypes to sit more natural as an event
+driven middleware component in the context of a larger architecture. A
+data push model also simplifies scalability since an entire cluster of
+nodes can be setup behind a load balancer which will then automatically
+partition the incoming data stream. Generator based &amp;quot;pull models&amp;quot; cannot
+easily partition data without somehow coordinating access to the data
+which involves global state.&lt;/p&gt;
+&lt;p&gt;Pypes was designed to be a highly scalable, event driven, dataflow
+scheduling and execution environment. Writing your own components is
+simple and Pypes provides Paste templates for creating new projects.
+Components are packaged as Python eggs and discovered automatically.
+They can be wired together using a visual editor that runs in any HTML5
+compliant browser. Pypes supports Directed Acyclic Graphs and data
+streams are modeled as a series of JSON (dict) packets which support
+meta-data at both the packet level and the field level.&lt;/p&gt;
+&lt;p&gt;Pypes also leverages the Python multiprocessing module to scale up. Data
+arriving through the REST interface on any given node will be
+distributed across parallel instances of the graph running on different
+cores/CPUs. Data submission is completely asynchronous.&lt;/p&gt;
+&lt;p&gt;This talk will provide a gentle introduction to the Pypes architecture
+and design.&lt;/p&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Brief intro to Stackless Python (benefits it provides)&lt;/li&gt;
+&lt;li&gt;Control-Flow vs Data-Flow&lt;/li&gt;
+&lt;li&gt;Preemptive vs Cooperative Scheduling&lt;/li&gt;
+&lt;li&gt;The Topological Scheduler&lt;/li&gt;
+&lt;li&gt;The REST API (Submitting Data - Asynchronous Web Service)&lt;/li&gt;
+&lt;li&gt;Packet API: A unified data model with meta-data support&lt;/li&gt;
+&lt;li&gt;Writing Custom Components - Paste templates and pluggable eggs&lt;/li&gt;
+&lt;li&gt;Scale up - multiprocessing support&lt;/li&gt;
+&lt;li&gt;Scale out - cloud friendly&lt;/li&gt;
+&lt;li&gt;Questions&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="pycon"></category><category term="pycon2011"></category><category term="pypes"></category><category term="stackless"></category></entry><entry><title>Prototyping Go's Select with stackless.py for Stackless Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Andrew Francis</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Prototyping Go's Select with stackless.py for Stackless Python&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Francis&lt;/p&gt;
+&lt;p&gt;Showing how to use Python to prototype powerful concurrency features for
+Stackless Python. We do want you to try this at home.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Google’s introduction of the Go language raised eyebrows in the
+Stackless Python community. Although very different languages, Go and
+Stackless Python’s concurrency model share a common ancestor: the Bell
+Labs family of languages (i.e., Newsqueak, Limbo). The common feature
+are channels: a synchronous message passing mechanism based on Tony
+Hoare’s Communicating Sequential Processes (CSP).&lt;/p&gt;
+&lt;p&gt;Both Go and Python have channels. However with the select language
+statement, Go has the ability to wait on multiple channels
+simultaneously. Select greatly simplifies many concurrent programming
+problems. Stackless Python does not have this feature. Other channel
+based languages also feature powerful concurrency constructs. How hard
+would these constructs be to implement for Stackless Python?&lt;/p&gt;
+&lt;p&gt;This talk explores the prototyping potential of stackless.py, the PyPy's
+framework's implementation of Stackless Python. The beauty of
+stackless.py is that it is written in Python and implements much of
+Stackless Python's API! The &amp;quot;case study&amp;quot; involves prototyping Go's
+select in stackless.py before reimplementing select in C based Stackless
+Python.&lt;/p&gt;
+&lt;p&gt;During this talk, it will be shown how stackless.py can be used with
+CPython and the greenlet package (no need to install another Python).
+The audience will also get an in depth look at how channels are
+implemented. Channels are at the heart of Stackless Python's message
+based concurrency model. Finally the audience will gain insights into
+future directions of Stackless Python.&lt;/p&gt;
+</summary><category term="csp"></category><category term="go"></category><category term="greenlets"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category><category term="stackless"></category></entry></feed>

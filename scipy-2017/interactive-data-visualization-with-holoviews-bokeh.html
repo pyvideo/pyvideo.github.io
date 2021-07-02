@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Interactive Data Visualization with HoloViews & Bokeh</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2017.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2017.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Interactive Data Visualization with HoloViews & Bokeh" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2017/interactive-data-visualization-with-holoviews-bokeh.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/cMXKE0nB8k4/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/cMXKE0nB8k4/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="tutorial" />
+    <meta name="tags" content="HoloViews" />
+    <meta name="tags" content="Bokeh" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2017/interactive-data-visualization-with-holoviews-bokeh.html" rel="bookmark"
+         title="Permalink to Interactive Data Visualization with HoloViews & Bokeh">Interactive Data Visualization with HoloViews & Bokeh
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2017-08-04T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 04 August 2017
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/jean-luc-stevens.html">Jean-Luc Stevens</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/bryan-van-de-ven.html">Bryan Van de Ven</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cMXKE0nB8k4" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>There are audio issues with this video that cannot be fixed. We recommend listening to the tutorial without headphones to minimize the buzzing sound.
+Tutorial information may be found at <a class="reference external" href="https://scipy2017.scipy.org/ehome/220975/493423/">https://scipy2017.scipy.org/ehome/220975/493423/</a></p>
+<p>Visualization represents a major bottleneck in scientific research, engineering, data science, and data analytics. The tools in the Python scientific ecosystem make it very simple to do many of the tasks required, but building visualizations to help understand complex patterns and relationships in your data still typically involves a large amount of custom coding for every new type of plot. Writing long and detailed scripts for plotting slows down the process of exploration and reporting, while the difficulty involved means that many important observations and discoveries are missed due to inadequate visualizations. The complexity of the resulting plotting code makes it difficult to rapidly build sophisticated, interactive visualizations that can quickly reveal the underlying structure of the data, and once such complex plotting scripts have been created they can be a major impediment to future understanding, reproduction, and modification of the research process.</p>
+<p>In this tutorial, you will learn how to approach the problem of interactive visualization declaratively. Using the HoloViews library, you can annotate your data and store it in general-purpose containers that will be instantly visualizable. The declarative objects in HoloViews wrap your data to make it incredibly easy to visualize how different sets of data relate to each other, using subfigures, animations, interactive widgets and custom interactions. This flexibility has made HoloViews the chosen future replacement for the high-level Bokeh Charts API and works particularly well with IPython/Jupyter notebooks, where you can immediately see the output from selecting, combining, slicing, or sampling these objects. Each of these operations generates a different type of visualization, that can be flexibly extended even to complex dashboards deployed using the Bokeh server or Jupyter dashboards.</p>
+<p>The core design principle of HoloViews is to make it simple to create complex plot layouts and interactivity by applying compositional operations to a small number of elements and containers. Since HoloViews separates the declaration of the data from the precise visual details of the plotting code, the same HoloViews objects can be rendered using matplotlib for publication-quality plots, or bokeh for interactive use. Overall, this means the user can focus on <strong>what</strong> to plot before worrying about <strong>how</strong> exactly it should be displayed, providing a huge boost in productivity.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2017.html">SciPy 2017</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=cMXKE0nB8k4" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/tutorial/">tutorial</a>, <a href="https://pyvideo.org/tag/holoviews/">HoloViews</a>, <a href="https://pyvideo.org/tag/bokeh/">Bokeh</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://scipy2017.scipy.org/ehome/220975/493422/">
+schedule                </a></li><li><a href="https://github.com/ioam/scipy-2017-holoviews-tutorial">
+tutorial repository                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2017/videos/interactive-data-visualization-with-holoviews-bokeh-scipy-2017-tutorial-jean-luc-stevens-bry.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

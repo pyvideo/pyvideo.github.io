@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_maximilien-riehl.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-25T00:00:00+00:00</updated><entry><title>Practical PyBuilder</title><link href="https://pyvideo.org/europython-2014/practical-pybuilder.html" rel="alternate"></link><published>2014-07-25T00:00:00+00:00</published><updated>2014-07-25T00:00:00+00:00</updated><author><name>Maximilien Riehl</name></author><id>tag:pyvideo.org,2014-07-25:europython-2014/practical-pybuilder.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&lt;em&gt;PyBuilder&lt;/em&gt; is a software build tool written in pure python which mainly
+targets pure python applications. It provides glue between existing
+build frameworks, thus empowering you to focus on the big picture of the
+build process.&lt;/p&gt;
+&lt;p&gt;It will be shown through demonstrations and samples how a simple,
+human-readable and declarative configuration can lead to an
+astonishingly well-integrated build process which will make maintainers,
+developers and newcomers happy.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="why-another-build-tool"&gt;
+&lt;h4&gt;Why another build tool&lt;/h4&gt;
+&lt;p&gt;Starting up a simple python project with best practices still takes a
+lot of boilerplate and glueing (e.G. chaining unit tests and integration
+tests in the build process, adding a linter, measuring coverage, ...).
+It often results in extremely ugly homebrew scripts and edge-case
+solutions that are not reusable. There are even programs out there (e.G.
+cookiecutter) that encourage boilerplate code generation!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="build-orchestration"&gt;
+&lt;h4&gt;Build orchestration&lt;/h4&gt;
+&lt;p&gt;PyBuilder borrows from the &lt;em&gt;maven&lt;/em&gt; idea of phases (packaging, verifying,
+publishing, ...) to set up a fully declarative and automated build that
+can be run locally and remotely (build servers) in the very same way.
+Rather than reinventing the wheel, it provides glue between existing
+solutions (like unittest, coverage, flake8, ...) through a simple but
+powerful plugin mechanism.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-talk"&gt;
+&lt;h4&gt;The talk&lt;/h4&gt;
+&lt;p&gt;After a more theoretical talk with a colleague at PyConDE 2013, I want
+to show how it's actually like to work with &lt;em&gt;PyBuilder&lt;/em&gt;. This includes&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;starting up a project&lt;/li&gt;
+&lt;li&gt;running builds&lt;/li&gt;
+&lt;li&gt;using plugins&lt;/li&gt;
+&lt;li&gt;writing a plugin&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The demo code will be made available on GitHub and I'll probably have
+recordings prepped in case something goes wrong.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="reviewer-faq"&gt;
+&lt;h4&gt;Reviewer FAQ&lt;/h4&gt;
+&lt;div class="section" id="how-does-pybuilder-compare-to-other-existing-solutions-like-zc-buildout"&gt;
+&lt;h5&gt;How does PyBuilder compare to other existing solutions like zc.buildout?&lt;/h5&gt;
+&lt;p&gt;As opposed to solutions like zc.buildout which focus on the &lt;em&gt;building&lt;/em&gt;
+of complex projects (many parts, complex dependencies) PyBuilder
+emphasizes the full build process for very simple projects. Undoubtedly,
+buildout is more powerful for building in that regard and there is no
+reason to switch to PyBuilder.&lt;/p&gt;
+&lt;p&gt;However, for simple projects (a few packages, pure python) we believe
+that PyBuilder is better, especially if you're starting out with Python.
+The plugin architecture (as opposed to recipes) makes it easier to
+reason about what is going on. We are able to model dependencies between
+build phases (like &amp;quot;coverage&amp;quot; needing &amp;quot;unit tests&amp;quot; and &amp;quot;packaging&amp;quot;
+needing &amp;quot;integration tests&amp;quot;) where recipes are not. It also seems (after
+looking through the recipes available for buildout) that we have more
+focus on QA as part of the build process (lint code, differentiate
+between unit/integration tests, code analysis, ...).&lt;/p&gt;
+&lt;p&gt;There is also a special focus on having the build descriptor written in
+Python (with fluent interfaces where possible) so that it is possible to
+understand what the configuration is by reading plain english, as
+opposed to zc.buildout (where the configuration is an ini file, or SCons
+which is very make-oriented).&lt;/p&gt;
+&lt;p&gt;In the end, a big difference between most build tools and PyBuilder is
+that PyBuilder is more about orchestration. We didn't reinvent packaging
+or linting, we simply use what is already there (setuptools, flake8,
+pymetrics, ...). This allows users to use the tools they want without
+having to do the integration themselves, and still get a nice, unified
+build process out of it.&lt;/p&gt;
+&lt;p&gt;A simple example :&lt;/p&gt;
+&lt;p&gt;In buildout, code analysis can be done with&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[buildout]
+parts += code-analysis
+
+[code-analysis]
+recipe = plone.recipe.codeanalysis
+directory = ${buildout:directory}/src
+&lt;/pre&gt;
+&lt;p&gt;This is not readable IMHO. In PyBuilder it can look like this :&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+use_plugin('python.flake8')
+project.set_property('flake8_include_test_sources', True)
+project.set_property('flake8_ignore', 'E501')
+project.set_property('flake8_break_build', True)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="it-provides-glue-between-existing-build-frameworks-which-ones-could-you-name-some-at-least"&gt;
+&lt;h5&gt;&amp;quot;It provides glue between existing build frameworks&amp;quot; - which ones ? Could you name (some at least) ?&lt;/h5&gt;
+&lt;p&gt;Currently there is only a plugin for building with distutils/setuptools.
+Should that change (e.G. new contender) it would be easy to switch using
+PyBuilder.&lt;/p&gt;
+&lt;p&gt;Examples where glue is needed :&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Glue setuptools + unittest, so that no distribution can be shipped if
+tests fail&lt;/li&gt;
+&lt;li&gt;Glue setuptools + coverage + unittest, so that no distribution can be
+shipped if the statement coverage is too low (configurable ofc)&lt;/li&gt;
+&lt;li&gt;Glue setuptools + pip so that cloned projects can be built with their
+dependencies without needing to pip install manually&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry></feed>

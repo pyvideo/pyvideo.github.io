@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Accelerating and Enhancing Django with Redis</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2012.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2012.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Accelerating and Enhancing Django with Redis" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/djangocon-us-2012/accelerating-and-enhancing-django-with-redis.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/xbWBIudWRxQ/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/xbWBIudWRxQ/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="django" />
+    <meta name="tags" content="redis" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/djangocon-us-2012/accelerating-and-enhancing-django-with-redis.html" rel="bookmark"
+         title="Permalink to Accelerating and Enhancing Django with Redis">Accelerating and Enhancing Django with Redis
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2012-09-06T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 06 September 2012
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/joshua-ginsberg.html">Joshua Ginsberg</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xbWBIudWRxQ" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>This tutorial introduces Redis, an in-memory key-object NoSQL datastore.
+We discuss out-of-the-box ways Redis can help improve the performance of
+your Django deployments, ways that using Redis instead of SQL for some
+data management can accelerate your apps, and more advanced and
+unconventional uses for Redis to solve real-time and big-data problems.</p>
+<h3>Description</h3><p>Getting your Django app to a v1.0 release means focusing on function and
+user experience before prematurely focusing on optimization. But once
+it's off the ground, the Redis key-object store provides a versatile and
+functional way to take your app to the next level of performance and
+function with minimal engineering.</p>
+<p><a class="reference external" href="http://redis.io">Redis</a> is an in-memory key-object database that can
+perform standard operations on simple values, lists, sets, hash maps,
+and scored sets with incredible efficiency. While it cannot and should
+not replace SQL for schema-defined, persistent data storage, it can
+provide dramatically faster operational efficiency for volatile,
+temporary, or rapidly changing data with minimal coding required.</p>
+<p>This talk begins by introducing Redis, its basic featureset, and the
+data types and operations it supports. We'll cover some high-level
+guidelines and strategies for identifying where Redis may be an
+appropriate performance- enhancing solution. We then cover the
+out-of-the-box ways that Redis can improve a Django application as a
+cache, session store, Celery broker, and more. We'll then proceed to
+more advanced usage possibilities, implementing a real-time websocket
+based messaging solution, scripting within Redis using its embedded Lua
+interpreter, and connecting Redis to PostgreSQL using Foreign Data
+Wrappers to efficiently blend SQL tables with Redis data.</p>
+<p>By the end of the presentation, you should be able to use all of the
+data- structures offered by Redis, to identify opportunities within you
+codebase that Redis may offer simple but dramatic efficiency
+improvements, and to envision how advanced Redis usage may bring new and
+cutting-edge functionality to your project.</p>
+<p>Redis was developed by <a class="reference external" href="http://twitter.com/antirez">Salvatore
+Sanfilippo</a> and <a class="reference external" href="http://twitter.com/pnoordhuis">Pieter
+Noordhuis</a>, who are both supported by
+VMWare to develop the database full-time. Redis has excellent <a class="reference external" href="https://github.com/andymccurdy/redis-py/">Python
+bindings</a> developed by Andy
+McCurdy.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/djangocon-us-2012.html">DjangoCon US 2012</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=xbWBIudWRxQ" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/django/">django</a>, <a href="https://pyvideo.org/tag/redis/">redis</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://redis.io">
+http://redis.io                </a></li><li><a href="http://twitter.com/antirez">
+http://twitter.com/antirez                </a></li><li><a href="http://twitter.com/pnoordhuis">
+http://twitter.com/pnoordhuis                </a></li><li><a href="https://github.com/andymccurdy/redis-py/">
+https://github.com/andymccurdy/redis-py/                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/djangocon-2012/videos/accelerating-and-enhancing-django-with-redis.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

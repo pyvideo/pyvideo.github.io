@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Downloading a Billion Files in Python</title><link>https://pyvideo.org/europython-2019/downloading-a-billion-files-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've been given a task. You need to download some files from a server
+to your local machine. The files are fairly small, and you can list and
+access these files from the remote server through a REST API. You'd like
+to download them as fast as possible. The catch? There's a billion of
+them. Yes, one billion files.&lt;/p&gt;
+&lt;p&gt;How would would you do this? Would you do this synchronously in a single
+for loop? Would you use a producer/consumer queue with threads?
+Multiprocessing? Asyncio?&lt;/p&gt;
+&lt;p&gt;In this talk, we'll examine 3 different mechanisms for concurrently
+downloading files: multithreading, multiprocessing, and asyncio.&lt;/p&gt;
+&lt;p&gt;For each of these mechanisms we'll look at design best practices, how to
+handle debugging and error handling, and of course the overall
+performance. By examining three different approaches using the same data
+set, we gain a better understanding of the tradeoffs of each approach so
+we can pick the right library for the job.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Saryerwinnie</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/downloading-a-billion-files-in-python.html</guid><category>ASYNC / Concurrency</category><category>Case Study</category><category>Multi-Processing</category><category>Multi-Threading</category><category>Performance</category></item><item><title>Parallel computing in Python: Current state and recent advances</title><link>https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pierre Glaser</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</guid><category>Distributed Systems</category><category>Multi-Processing</category><category>Multi-Threading</category><category>Performance</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category></item><item><title>Python's Parallel Programming Possibilities - 4 levels of concurrency</title><link>https://pyvideo.org/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall into along the way.&lt;/p&gt;
+&lt;p&gt;To do so, I'll give short examples in code of achieving each level:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- leveraging multiple hosts using RQ, and also the possibility of RPC
+with HTTP&lt;/div&gt;
+&lt;div class="line"&gt;- multiprocessing and threading using their respective modules from
+the python standard library&lt;/div&gt;
+&lt;div class="line"&gt;- asyncio demonstrated with AIOHTTP&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That sounds great, but there are &amp;quot;gotchas&amp;quot; you should know about before
+you get started, for example:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple machines can actually be multiple virtual machines on the
+same host&lt;/div&gt;
+&lt;div class="line"&gt;- effectively communicating between processes is hard, how can we go
+about making it easier?&lt;/div&gt;
+&lt;div class="line"&gt;- the limitations of threading and the GIL&lt;/div&gt;
+&lt;div class="line"&gt;- run_in_executor - do we ever really need to use multiprocessing or
+threading directly again&lt;/div&gt;
+&lt;div class="line"&gt;- use of asyncio when dealing with both networking between hosts and
+between processes - you end up using two different kinds of
+concurrency at the same time. That can be confusing, but also awesome.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I'll finish of by showcasing a library I built, arq which is a job
+queueing and RPC library for python which uses asyncio and Redis.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Samuel Colvin</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</guid><category>ASYNC / Concurrency</category><category>Messaging and Job Queues</category><category>Multi-Processing</category><category>Multi-Threading</category><category>python</category></item></channel></rss>

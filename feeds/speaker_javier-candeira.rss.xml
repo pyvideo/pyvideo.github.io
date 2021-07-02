@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 16 Aug 2015 00:00:00 +0000</lastBuildDate><item><title>¡Mangle You A Python Interpreter for New Behaviour!</title><link>https://pyvideo.org/pycon-au-2015/mangle-you-a-python-interpreter-for-new-behaviou.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What happens when you feel some syntax or behaviour is missing from
+Python? You could fork the interpreter, but then nobody else could run
+your programs. Instead, you could implement the new behaviour as a
+Python module to be imported, and distribute it with your programs.&lt;/p&gt;
+&lt;p&gt;Following hot on the tracks of previous Pycon-AU talks like &amp;quot;Don't Do
+This&amp;quot; (2013) and the &amp;quot;ugly hacks&amp;quot; bit of &amp;quot;Here be dragons: some elegant
+and ugly hacks in CPython&amp;quot; (2014), this presentation will grant some of
+the requests you never dared to make:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You'd like for PEP 336, Make None Callable to have succeeded? You can
+make your own None()! Easy in CPython with CTypes!&lt;/li&gt;
+&lt;li&gt;You'd like to have the &amp;quot;?.&amp;quot; operator available for safe attribute
+access? Just add the syntax to pypy, then use a source codec hack to
+rewrite it into a legal Python 2.7 function. Too easy!&lt;/li&gt;
+&lt;li&gt;Your reaction to all of this is “please make it stop”? The talk will
+finish by discussing why having extensible syntax as a standard
+Python feature might even be a good idea! It is in other languages!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is for intermediate to advanced Python users, and for
+beginning Python implementors.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://hiperactivo.com/talks/pyconau15/mangling_python/"&gt;http://hiperactivo.com/talks/pyconau15/mangling_python/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Repos:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;quiet_None: &lt;a class="reference external" href="https://bitbucket.org/candeira/quiet_none/"&gt;https://bitbucket.org/candeira/quiet_none/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;question_dot: &lt;a class="reference external" href="https://bitbucket.org/candeira/question_dot/"&gt;https://bitbucket.org/candeira/question_dot/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Javier Candeira</dc:creator><pubDate>Sun, 16 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-16:pycon-au-2015/mangle-you-a-python-interpreter-for-new-behaviou.html</guid></item><item><title>Spreadsheet-Driven Meta-Programming for Python</title><link>https://pyvideo.org/pycon-au-2015/spreadsheet-driven-meta-programming-for-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We've all had those very detail-oriented clients who are able to specify
+their needs very neatly, often by means of exhaustive spreadsheets.
+Wouldn't it be nice if we could turn these spreadsheets straight into
+Python code?&lt;/p&gt;
+&lt;p&gt;In this tutorial we'll use two sets of meta-programming techniques to
+derive Python code out of semi-formal descriptions: first, to build
+Django models requiring very detailed validation supplied by the client
+in a spreadsheet; second, to build a Python API for a hardware device,
+the description of which is maintained by the engineers in a
+spreadsheet.&lt;/p&gt;
+&lt;p&gt;For the Pycon attendance, this tutorial has both business value and
+technical value:&lt;/p&gt;
+&lt;p&gt;Business value because spreadsheet-driven metaprogramming allows
+developers to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;respond to changes very fast by re-rendering their Python code from
+the modified spreadsheet descriptions.&lt;/li&gt;
+&lt;li&gt;avoid a certain class of human errors unavoidable when transcribing
+the requirements by hand.&lt;/li&gt;
+&lt;li&gt;save time which can be employed in other areas of the project, or
+with other clients.&lt;/li&gt;
+&lt;li&gt;clarify ambiguous specifications by making explicit all programmer's
+assumptions into the code generator.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Technical value because we'll be talking about:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;api design,&lt;/li&gt;
+&lt;li&gt;Django modeling and validation,&lt;/li&gt;
+&lt;li&gt;consuming spreadsheets via csv dictreaders and elbow grease,&lt;/li&gt;
+&lt;li&gt;writing partially-applied functions via custom classes with a
+&lt;strong&gt;call&lt;/strong&gt; method,&lt;/li&gt;
+&lt;li&gt;implementing fluent apis with table-driven &lt;strong&gt;getattr&lt;/strong&gt; methods,&lt;/li&gt;
+&lt;li&gt;implementing iterators with &lt;strong&gt;iter&lt;/strong&gt; and &lt;strong&gt;next&lt;/strong&gt;,&lt;/li&gt;
+&lt;li&gt;papering over some differences between Python 2 and Python 3 syntax,&lt;/li&gt;
+&lt;li&gt;and much, much more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We'll be doing all of it in a hands-on manner, without getting
+distracted by abstract discussions of Python syntax. There will be some
+discussions of Python syntax, but they won't be abstract. We'll always
+have a goal in sight.&lt;/p&gt;
+&lt;p&gt;Level:&lt;/p&gt;
+&lt;p&gt;Intermediate. You'll learn some advanced techniques, but all you need to
+really know in order to follow this tutorial is how lists, dictionaries,
+iteration and reading files work in Python.&lt;/p&gt;
+&lt;p&gt;Requirements:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Attendees are expected to know basic Python (see above, under
+&amp;quot;Level&amp;quot;).&lt;/li&gt;
+&lt;li&gt;A laptop and some knowledge of git will be useful for those wanting
+to follow along, but is not required. You can get a lot out of this
+tutorial just by watching and paying attention.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Javier Candeira</dc:creator><pubDate>Tue, 04 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-04:pycon-au-2015/spreadsheet-driven-meta-programming-for-python.html</guid></item></channel></rss>

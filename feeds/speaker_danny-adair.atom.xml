@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_danny-adair.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-09-14T00:00:00+00:00</updated><entry><title>Lightning Talks</title><link href="https://pyvideo.org/kiwi-pycon-2014/lightning-talks-12.html" rel="alternate"></link><published>2014-09-14T00:00:00+00:00</published><updated>2014-09-14T00:00:00+00:00</updated><author><name>Jen Zajac</name></author><id>tag:pyvideo.org,2014-09-14:kiwi-pycon-2014/lightning-talks-12.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;01 - Jen Zajac - PRIZE DRAW - 1:44 02 - Steven Ellis - LCA Auckland 2015
+- 5:43 03 - Jay Gattuso - Heritage Preserve; #WeWantJam - 8:54 04 -
+James Polly - Fewer Boilerplate! - 12:07 05 - Aurynn Shaw - Let me show
+you the world - 16:19 06 - Ronen Baram - MySQL Performance Schema -
+19:41 07 - Douglas Bagnall - Julia - 22:14 08 - Grant Paton-Simpson /
+Richard Shea - NZ Python Promotion Pamhplet 24:50 09 - Elliot
+Paton-Simpson - Blackbox - 27:23 10 - Danny Adair / Thomi Richards - New
+Zealand Python User Group - 30:45 11 - Ben Olsen - Docker &amp;amp; Python -
+35:37 12 - Tim Penhey - Object Factories for TDD - 40:46 13 - Hamish
+Campbell - Horrible Python Obfuscation Tricks - 43:20 14 - Nick Wareing
+- Arduino Pull Request Notifier - 48:35 15 - Giovanni Moretti -
+Dynamically creating Python tutorials and presentations - 53:12 16 -
+Robert Coup - Bad-ass Postgres Tricks - 58:36 17 - Juergen Brendel -
+&amp;quot;One button&amp;quot; test and deploy on AWS - 1:03:59 18 - Tobi Wulff - Python
+Anti-Patterns - 1:09:14 19 - Sanjay Wadhwa - Map Production using Python
+scripts - 1:14:32 20 - Chris McDowall - Making weird maps with Python -
+1:19:34&lt;/p&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>The Full Monty - CI on OpenStack</title><link href="https://pyvideo.org/kiwi-pycon-2014/the-full-monty-ci-on-openstack.html" rel="alternate"></link><published>2014-09-13T00:00:00+00:00</published><updated>2014-09-13T00:00:00+00:00</updated><author><name>Danny Adair</name></author><id>tag:pyvideo.org,2014-09-13:kiwi-pycon-2014/the-full-monty-ci-on-openstack.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience level&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Intermediate&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Are you continuously &amp;quot;integrating&amp;quot;, or just running some unit tests
+inside a virtualenv?&lt;/p&gt;
+&lt;p&gt;Let's go the Full Monty with OpenStack!&lt;/p&gt;
+&lt;p&gt;Protagonists, in order of appearance: Gerrit, Jenkins, OpenStack,
+Puppet, Odoo (formerly OpenERP). Enjoy the ride!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I'll show how we configured our CI tools to automatically build and
+destroy entire servers on OpenStack. We'll have Gerrit for code review,
+Jenkins for coordinating and monitoring the build process, OpenStack and
+its tools to build servers on their own subnet, Puppet for configuring
+said servers. The example project is an installation of Odoo (formely
+OpenERP) with a web server and PostgreSQL database.&lt;/p&gt;
+&lt;p&gt;At Catalyst, my team works with Odoo (formerly known as OpenERP), a
+modular Open Source suite of business applications. It has a very large
+and complex codebase and &amp;quot;Regression&amp;quot; is its middle name. It is under
+very active development on github, and customisations are generally
+brought in via plugins that override or extend default functionality.
+Basically, reasonable work on this requires continuous integration, it's
+not a luxury.&lt;/p&gt;
+&lt;p&gt;We could have a fat build server with multiple virtualenvs and multiple
+databases on the same PostgreSQL server, and just run some Python tests
+and be done with it. We could improve that with something like LXC,
+Vagrant etc. all happening on said build server. But why stop there -
+why not go all the way and create a more realistic setup? After all,
+another team is able to provide us with OpenStack. Let's go the Full
+Monty!&lt;/p&gt;
+&lt;p&gt;Let's go hog wild and create and destroy entire servers just for the
+purpose of testing. Let's have separate application and database
+servers, just like in production.&lt;/p&gt;
+&lt;p&gt;Let's also keep some servers alive for other purposes, e.g., user
+acceptance testing. Just sit in an IRC channel and after changes are
+committed for review, wait for a bot to post the URL of the newly built
+web server to click on. A nicely readable URL on a separate subdomain
+that is, of course!&lt;/p&gt;
+&lt;p&gt;As a bonus, I'll show how active upstream development on github fits
+into all this, and how your Ubuntu &amp;quot;Precise Pangolin&amp;quot; server can easily
+rehearse an upgrade to &amp;quot;Trusty Tahr&amp;quot;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://speakerdeck.com/nzpug/danny-adair-the-full-monty-ci-on-openstack"&gt;https://speakerdeck.com/nzpug/danny-adair-the-full-monty-ci-on-openstack&lt;/a&gt;&lt;/p&gt;
+</summary><category term="talk"></category></entry></feed>

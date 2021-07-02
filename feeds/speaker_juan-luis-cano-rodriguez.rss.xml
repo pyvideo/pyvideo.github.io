@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 05 Sep 2019 00:00:00 +0000</lastBuildDate><item><title>Can we make Python fast without sacrificing readability? numba for Astrodynamics</title><link>https://pyvideo.org/euroscipy-2019/can-we-make-python-fast-without-sacrificing-readability-numba-for-astrodynamics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We are lucky there are very diverse solutions to make Python faster that
+have been in use for a while: from wrapping compiled languages (NumPy),
+to altering the Python syntax to make it more suitable to compilers
+(Cython), to using a subset of it which can in turn be accelerated
+(numba). However, each of these options has a tradeoff, and there is no
+silver bullet.&lt;/p&gt;
+&lt;p&gt;poliastro is a library for Astrodynamics written in pure Python. All its
+core algorithms are accelerated with numba, which allows poliastro to be
+decently fast while having minimal code complexity and avoid using other
+languages.&lt;/p&gt;
+&lt;p&gt;However, even though numba is quite mature as a library and most of the
+Python syntax and NumPy functions are supported, there are still some
+limitations that affect its usage. In particular, we strive to offer a
+high-level API with support for physical units and reusable functions
+which can be passed as arguments, which sometimes require using complex
+objects or introspective Python behavior which is not available.&lt;/p&gt;
+&lt;p&gt;In this talk we will discuss the strategies and workarounds we have
+developed to overcome these problems, and what advanced numba features
+we can leverage.&lt;/p&gt;
+&lt;p&gt;There are several solutions to make Python faster, and choosing one is
+not easy: we would want it to be fast without sacrificing its
+readability and high-level nature. We tried to do it for an
+Astrodynamics library using numba. How did it turn out?&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Juan Luis Cano Rodríguez</dc:creator><pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-09-05:euroscipy-2019/can-we-make-python-fast-without-sacrificing-readability-numba-for-astrodynamics.html</guid></item><item><title>Lightning talks: Spain PyData</title><link>https://pyvideo.org/pycon-sk-2017/lightning-talks-spain-pydata.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning talks: Juan Luis Cano Rodríguez - Spain PyData&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Juan Luis Cano Rodríguez</dc:creator><pubDate>Sun, 12 Mar 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-03-12:pycon-sk-2017/lightning-talks-spain-pydata.html</guid><category>lightning talks</category></item><item><title>Through Python to the stars!</title><link>https://pyvideo.org/pycon-sk-2017/through-python-to-the-stars.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the intersection of mechanics, mathematics and “cool stuff that travels through space” lies Astrodynamics, a beautiful branch of physics that studies the motion of spacecraft. Rocket launches have never been so popular thanks to companies like Space X, more and more investors pay attention to aerospace startups and amazing missions explore our planet and our Solar System every day. In this talk we will get to know poliastro, a pure Python library that we can use to compute orbital maneuvers, plot trajectories and much more. The role of JIT compiling (using numba) to replace old and busted FORTRAN algorithms will also be discussed, as well as the importance of open source in scientific discoveries.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Juan Luis Cano Rodríguez</dc:creator><pubDate>Sat, 11 Mar 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-03-11:pycon-sk-2017/through-python-to-the-stars.html</guid></item><item><title>Embrace conda packages.</title><link>https://pyvideo.org/pydata-madrid-2016/embrace-conda-packages.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Madrid 2016&lt;/p&gt;
+&lt;p&gt;Most of the talks and workshop tutorials can be found here: &lt;a class="reference external" href="https://github.com/PyDataMadrid2016/Conference-Info"&gt;https://github.com/PyDataMadrid2016/Conference-Info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Installation problems represent half of your mailing list traffic? Nobody in your team knows how to properly configure the Visual Studio compilers? Forcing your users to download a script full of &amp;quot;sudo&amp;quot; commands? Providing Docker containers and virtual machines as the only sane way to run your software? No more suffering or pain: create conda packages with conda-build and stop worrying today.&lt;/p&gt;
+&lt;p&gt;From my perspective, scientific software seems to have the more complex build processes ever imagined. The amount of compiled dependencies is overwhelming, even though many packages share a fair amount of them. Still, the landscape of building systems is simply terrifying, every team rolls its own alternative and in the end the only sane approach is to create an Ubuntu-like virtual machine just to run a particular software. The wonderful dream of reproducibility didn't involve debugging arcane CMake scripts at night, compiling PETSc in a million ways or installing everything in root locations just because search paths are hardcoded everywhere.&lt;/p&gt;
+&lt;p&gt;The idea of this talk is to make some fun at the current situation and try to put it to an end once and for all. conda-build looks like the solution we've always desired to build Python packages with compiled extensions, with its declarative nature and its clear separation of build and testing phases. Yet it is much more than that, since it provides a way to build packages which have nothing to do with Python, which I consider is the closest thing we have to a true cross platform package manager. Combined with cloud services like AppVeyor and Travis CI, we can create a build pipeline that creates cross-platform, relocatable conda packages for Windows, OS X and Linux.&lt;/p&gt;
+&lt;p&gt;Following my experience with FEniCS, Firedrake and Pyomo, we will also explore how to overcome some conda-build limitations and provide some ideas on how could the developers work them so it becomes the perfect build tool we have always wanted, but never deserved.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Juan Luís Cano Rodríguez</dc:creator><pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-04-28:pydata-madrid-2016/embrace-conda-packages.html</guid></item><item><title>Lightning Talks - Saturday session.</title><link>https://pyvideo.org/pydata-madrid-2016/lightning-talks-saturday-session.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Madrid 2016&lt;/p&gt;
+&lt;p&gt;Most of the talks and workshop tutorials can be found here: &lt;a class="reference external" href="https://github.com/PyDataMadrid2016/Conference-Info"&gt;https://github.com/PyDataMadrid2016/Conference-Info&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;www.pydata.org&lt;/p&gt;
+&lt;p&gt;PyData is a gathering of users and developers of data analysis tools in Python. The goals are to provide Python enthusiasts a place to share ideas and learn from each other about how best to apply our language and tools to ever-evolving challenges in the vast realm of data management, processing, analytics, and visualization.&lt;/p&gt;
+&lt;p&gt;We aim to be an accessible, community-driven conference, with tutorials for novices, advanced topical workshops for practitioners, and opportunities for package developers and users to meet in person.&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="15%" /&gt;
+&lt;col width="10%" /&gt;
+&lt;col width="38%" /&gt;
+&lt;col width="37%" /&gt;
+&lt;/colgroup&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=120"&gt;02:20&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Gabriel de Maeztu&lt;/td&gt;
+&lt;td&gt;Jupyter themes&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://github.com/merqurio/jupyter_themes"&gt;https://github.com/merqurio/jupyter_themes&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=350"&gt;05:50&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Juan Luis Cano Rodríguez&lt;/td&gt;
+&lt;td&gt;A marte con python usando poliastro&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="http://poliastro.github.io"&gt;http://poliastro.github.io&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=683"&gt;11:23&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Israel Saeta Pérez&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="http://slides.com/israelsaetaperez/sklearn-pandas/"&gt;Sklearn-Pandas&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/sklearn-pandas/"&gt;https://pypi.python.org/pypi/sklearn-pandas/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=999"&gt;16:39&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;PyBikes&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://github.com/eskerda/PyBikes"&gt;https://github.com/eskerda/PyBikes&lt;/a&gt; &lt;a class="reference external" href="https://citybik.es/"&gt;https://citybik.es/&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=1288"&gt;21:28&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Siro Moreno&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://github.com/AunSiro/Algoritmos-Geneticos-R-Python-Meetup"&gt;Introduction to genetic algorithms. AeroPython.&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://github.com/AeroPython/Taller-PyConEs-2015/"&gt;https://github.com/AeroPython/Taller-PyConEs-2015/&lt;/a&gt; &lt;a class="reference external" href="https://github.com/AeroPython/aeropy/tree/Xfoil_interaction"&gt;https://github.com/AeroPython/aeropy/tree/Xfoil_interaction&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=1655"&gt;27:35&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Javier Martin&lt;/td&gt;
+&lt;td&gt;Simple example about how to generate input data for a map-based dashboard&lt;/td&gt;
+&lt;td&gt;&lt;a class="reference external" href="https://github.com/jmartinter/geo-dashboard"&gt;https://github.com/jmartinter/geo-dashboard&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;a class="reference external" href="https://youtu.be/IKPQrn-rS-Q?t=2048"&gt;34:08&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;td&gt;Bokeh lightning talk&lt;/td&gt;
+&lt;td&gt;&amp;nbsp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriel de Maeztu</dc:creator><pubDate>Thu, 28 Apr 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-04-28:pydata-madrid-2016/lightning-talks-saturday-session.html</guid><category>lightning talks</category></item></channel></rss>

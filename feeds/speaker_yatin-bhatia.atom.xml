@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_yatin-bhatia.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-08-03T00:00:00+00:00</updated><entry><title>Understanding Opacity in Machine Learning Models</title><link href="https://pyvideo.org/pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html" rel="alternate"></link><published>2019-08-03T00:00:00+00:00</published><updated>2019-08-03T00:00:00+00:00</updated><author><name>Ankit Rathi</name></author><id>tag:pyvideo.org,2019-08-03:pydata-delhi-2019/understanding-opacity-in-machine-learning-models.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Opacity is one of the biggest challenges in machine learning/deep
+learning solutions in the real world. Any basic deep learning model can
+contain dozens of hidden layers and millions of neurons interacting with
+each other. Explaining the Deep Learning model solutions can be a bit
+challenging. Our proposal explain some Approaches that can help to make
+ML/DL models more interpretable.&lt;/p&gt;
+&lt;div class="section" id="model-interpretability-background"&gt;
+&lt;h4&gt;Model Interpretability Background&lt;/h4&gt;
+&lt;p&gt;Data Science/AI models are still often perceived as a black box capable
+of performing magic. As we are solving more complex problems using
+advanced algorithms, the situation is such that more sophisticated the
+model, lower is the explainability level.&lt;/p&gt;
+&lt;p&gt;Without a reasonable understanding of how DS/AI model works, real-world
+projects rarely succeed. Also, business may not know the intricate
+details of how a model might work and as model will be making a lot of
+decisions for them in the end, they do have a right to pose the
+question.&lt;/p&gt;
+&lt;p&gt;A lot of real-world scenarios where biased models might have really
+adverse effects e.g. predicting potential criminals
+(&lt;a class="reference external" href="https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal"&gt;https://www.propublica.org/article/machine-bias-risk-assessments-in-criminal&lt;/a&gt;-
+sentencing), judicial sentencing risk scores
+(&lt;a class="reference external" href="https://www.propublica.org/article/making-algorithms-accountable"&gt;https://www.propublica.org/article/making-algorithms-accountable&lt;/a&gt;),
+credit scoring, fraud detection, health assessment, loan lending,
+self-driving.&lt;/p&gt;
+&lt;p&gt;Many researchers are actively working on making DS/AI models
+interpretable (Skater, ELI5, SHAP etc).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="why-model-interpretability-is-important"&gt;
+&lt;h4&gt;Why Model Interpretability is important?&lt;/h4&gt;
+&lt;p&gt;DS/AI models are used to make critical decisions on behalf of business.
+For the decisions taken by DS/AI models, business needs to cover these
+three aspects as well:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Fairness - How fair are the predictions? What drives model
+predictions?&lt;/li&gt;
+&lt;li&gt;Accountability - Why did the model take a certain decision?&lt;/li&gt;
+&lt;li&gt;Transparency - How can we trust model predictions?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-make-models-interpretable"&gt;
+&lt;h4&gt;How to make models interpretable?&lt;/h4&gt;
+&lt;p&gt;In order to make models interpretable, following approaches/techniques
+can be used:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Feature Importance&lt;/li&gt;
+&lt;li&gt;Partial Dependence Plot&lt;/li&gt;
+&lt;li&gt;SHAP Values&lt;/li&gt;
+&lt;li&gt;LIME&lt;/li&gt;
+&lt;li&gt;Skater&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Lets have a look at these approaches/techniques one by one:&lt;/p&gt;
+&lt;div class="section" id="feature-importance"&gt;
+&lt;h5&gt;1. Feature Importance&lt;/h5&gt;
+&lt;p&gt;For Machine Learning Models like XGBoost, Random Forest, Machine
+Learning Feature Importance helps Business Analysts drive Logical
+Conclusion out of it.&lt;/p&gt;
+&lt;p&gt;We measure the importance of a feature by calculating the increase in
+the model’s prediction error after permuting the feature. A feature is
+“important” if shuffling its values increases the model error, because
+in this case the model relied on the feature for the prediction. A
+feature is “unimportant” if shuffling its values leaves the model error
+unchanged, because in this case the model ignored the feature for the
+prediction.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh6.googleusercontent.com/6QlWI_TX3B40v5uvcwB3A0ADF3y4JDNUEJFtaRMCoCdn7QouTqB4M4bgTPzukoXT5PN4YAnphqqavM_yreeHCI1ObwYZqnHmeYn9AGhtkC-1zCmb9W55mhdqS66J3quq9DeRS8FE" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="partial-dependence-plot"&gt;
+&lt;h5&gt;2. Partial Dependence Plot&lt;/h5&gt;
+&lt;p&gt;Partial dependence plots show how a feature affects predictions. Partial
+dependence plots (PDP) show the dependence between the target response
+and a set of ‘target’ features, marginalizing over the values of all
+other features (the ‘complement’ features). Intuitively, we can
+interpret the partial dependence as the expected target response as a
+function of the ‘target’ features.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh3.googleusercontent.com/SpyncU_BRXeMhocCaird59qXmIoLGISyPOQA1KEqj_IUHYxP58yu4yZuMwGL5C1VOWvHl_UOgvK7VgRzCuOh9OhAxqk7cZZodut9CaygiWWvxLcBYLFWQQ_L0iHMUugv5DrbA8Xc" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="shap-shapley-additive-explanations-values"&gt;
+&lt;h5&gt;3. SHAP (SHapley Additive exPlanations) Values&lt;/h5&gt;
+&lt;p&gt;SHAP Values break down a prediction to show the impact of each feature.
+These are the scenarios where we need this technique:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A model says a bank shouldn't loan someone money, and the bank is
+legally required to explain the basis for each loan rejection&lt;/li&gt;
+&lt;li&gt;A healthcare provider wants to identify what factors are driving each
+patient's risk of some disease so they can directly address those
+risk factors with targeted health interventions.&lt;/li&gt;
+&lt;li&gt;&lt;img alt="image0" src="https://lh5.googleusercontent.com/lWsT9o5da1242Caaqqj66lWpY9yND6vEy4_3eT4dY_5Juyysnv3ZE4etya20rQMGzJ5E5PgJNUP05lLQZCuDUiAC0dfPlWjwZq-1m2p8SBylGDytFYRQCSBilE6pBVl7kRdjcdpV" /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We predicted 0.7, whereas the base_value is 0.4979. Feature values
+causing increased predictions are in pink, and their visual size shows
+the magnitude of the feature's effect. Feature values decreasing the
+prediction are in blue. The biggest impact comes from Goal Scored being
+2. Though the ball possession value has a meaningful effect decreasing
+the prediction.&lt;/p&gt;
+&lt;p&gt;The SHAP package has explainers for every type of model. -
+shap.DeepExplainer works with Deep Learning models. -
+shap.KernelExplainer works with all models, though it is slower than
+other Explainers and it offers an approximation rather than exact Shap
+values.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="lime-local-interpretable-model-agnostic-explanations"&gt;
+&lt;h5&gt;4. LIME (Local Interpretable Model-Agnostic Explanations)&lt;/h5&gt;
+&lt;p&gt;LIME (&lt;a class="reference external" href="https://github.com/marcotcr/lime"&gt;https://github.com/marcotcr/lime&lt;/a&gt;) can be used on anything from a
+polynomial regression model to a deep neural network.&lt;/p&gt;
+&lt;p&gt;LIME’s approach is to perturb most of the features of a single
+prediction instance — essentially zeroing-out these features — and then
+to test the resulting output. By running this process repeatedly, LIME
+is able to determine a linear decision boundary for each feature
+indicating its predictive importance (e.g. which pixels contributed the
+most to the classification of a specific image).&lt;/p&gt;
+&lt;p&gt;Interpretation of Lime :--&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Local - Local refers to local fidelity - i.e., we want the
+explanation to really reflect the behaviour of the classifier
+&amp;quot;around&amp;quot; the instance being predicted.&lt;/li&gt;
+&lt;li&gt;Interpretable - Lime explain output of Classifiers which are
+interpretable by humans. For e.g. Representing words for a Model
+which is built on word embeddings.&lt;/li&gt;
+&lt;li&gt;Model Agnostic - Lime is able to explain a Machine Learning Model
+without understanding it in deep.&lt;/li&gt;
+&lt;li&gt;Explanation - Lime explanations are not too long so that it is
+difficult for Humans to understand it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh4.googleusercontent.com/JmXlS0qJNYOvbLlmA53X42_WIGHp9uzDCItBtGpmPM8YHqgqlYzJ077VU0EjNVna6LNZHvgFHRWry6c_CUMCZ_-%20WnoZh2F3RoLE4Xalh_aimWw8QDkLFPzxPYjLtCZ8Ws7DZzPcW" /&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="" src="https://lh3.googleusercontent.com/g-nAKqqfemQR17DhBKzdYUDQJQYo7Q54Nzyf4rtTNInn8ZyI16l9VM8LmfaAclj40v5IhZHserrJY-%20qR-gA5_r6bwWlIat24sjdiuW085pkggHgrOgSbq_VQzZJnht-FyHChp9Zr" /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="skater"&gt;
+&lt;h5&gt;5. Skater&lt;/h5&gt;
+&lt;p&gt;Skater is a Python library designed to demystify the inner workings of
+complex or black-box models. Skater uses a number of techniques,
+including partial dependence plots and local interpretable model
+agnostic explanation (LIME), to clarify the relationships between the
+data a model receives and the outputs it produces.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry></feed>

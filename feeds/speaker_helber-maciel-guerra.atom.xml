@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_helber-maciel-guerra.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-10-13T00:00:00+00:00</updated><entry><title>Coerência de cache de granularidade fina, usando django signals</title><link href="https://pyvideo.org/python-brasil-2016/coerencia-de-cache-de-granularidade-fina-usando-django-signals.html" rel="alternate"></link><published>2016-10-13T00:00:00+00:00</published><updated>2016-10-13T00:00:00+00:00</updated><author><name>Helber Maciel Guerra</name></author><id>tag:pyvideo.org,2016-10-13:python-brasil-2016/coerencia-de-cache-de-granularidade-fina-usando-django-signals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fazendo o uso do cache do nginx, podemos ter melhoria de desempenho de
+APIs restful e conteúdos de 1000X ou mais. Mas como ter controle do que
+está no cache e se este conteúdo é coerente com o que está no backend?&lt;/p&gt;
+&lt;p&gt;Com sistemas de cache utilizando nginx ou varnish, geralmente são
+baseados em tempo (valid 10 min., 24h, …) mas muitas vezes ao fazer
+modificações em models do django, seria muito bom que este cache fosse
+invalidado no momento da modificação (post_save, post_delete, pre_save,
+etc).&lt;/p&gt;
+&lt;p&gt;O django-cache-coherence foi criado para atender esta necessidade. Para
+cada requisição em uma url requisitada e está configurada para fazer
+cache, os dados da requisição são salvos em um banco e registrado um
+signal para fazer a limpeza deste cache (PURGE). Assim que houver uma
+chamada do signal registrado, é feito uma consulta neste banco de
+requisições cacheadas, e disparado as limpezas, invalidando o cache
+somente da informação modificada, deixando integro o restante ndo cache.&lt;/p&gt;
+&lt;p&gt;Para ativar este tipo de funcionalidade no nginx é utilizado o módulo
+&lt;a class="reference external" href="https://github.com/FRiCKLE/ngx_cache_purge/"&gt;ngx_cache_purge&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vou mostrar a configuração do nginx e como fazer inclusive cache de
+APIs, com e sem autenticação. Mostrando como garantir e entrega com
+cache de informações sensiveis de usuários.&lt;/p&gt;
+&lt;p&gt;Para a validação de verificação do funcionamento são feitos testes de
+integração com testes unitários e containers docker.&lt;/p&gt;
+</summary></entry></feed>

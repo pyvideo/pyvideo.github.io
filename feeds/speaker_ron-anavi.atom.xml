@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_ron-anavi.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-06-04T00:00:00+00:00</updated><entry><title>Boosting development in a containerised microservices environment</title><link href="https://pyvideo.org/pycon-israel-2018/boosting-development-in-a-containerised-microservices-environment.html" rel="alternate"></link><published>2018-06-04T00:00:00+00:00</published><updated>2018-06-04T00:00:00+00:00</updated><author><name>Ron Anavi</name></author><id>tag:pyvideo.org,2018-06-04:pycon-israel-2018/boosting-development-in-a-containerised-microservices-environment.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We started as a development team of two people working on 2 containerised services. While we were concerned about scale, we weren't concerned about scaling the team itself, so we built our services using simple makefiles and each service had its own compose file. After a few months we found ourselves working with ~20 developers from 3 different teams, across several countries, collaborating on the same project, with 25 containerised python microservices.&lt;/p&gt;
+&lt;p&gt;A major growing pain we experienced was the “onboarding” process for our new team members. In order to automate and expedite the process, we wrote deployment scripts intended to easily create new dev environments. It didn’t work out as planned and the consequence was the vast majority of developers debugging/testing their own code remotely, rather than on their local machines.&lt;/p&gt;
+&lt;p&gt;After taking some time to reflect on the topic, we set out to solve the challenge of maintaining a stable and scalable dev environment within a growing team. These efforts can be summarized as the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Simplify container orchestration for local development environments&lt;/li&gt;
+&lt;li&gt;Build time optimization for local and CI processes&lt;/li&gt;
+&lt;li&gt;Maintaining and developing on multiple python environments (Python2/Python3/PyPy) with minimal setup overhead&lt;/li&gt;
+&lt;li&gt;Taking care of different caching aspects related to our CI and local builds&lt;/li&gt;
+&lt;li&gt;Enabling debug of the code in the container using its python interpreter&lt;/li&gt;
+&lt;li&gt;Creation of a monitoring solution for inter-service communication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This was and continues to be a journey towards improving our processes and mindset of growing a development team while reducing unnecessary pain. After learning the lessons above, we are excited to share our experiences with the community in an effort to help us all grow and improve together.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pycon-italia-2019.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-05-05T00:00:00+00:00</updated><entry><title>Decoupling Django with Django REST (and a sprinkle of React)</title><link href="https://pyvideo.org/pycon-italia-2019/decoupling-django-with-django-rest-and-a-sprinkle-of-react.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Valentino Gagliardi</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/decoupling-django-with-django-rest-and-a-sprinkle-of-react.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;p&gt;With the rise of JavaScript as the lingua-franca of the web and the
+steady growth of libraries like React, today’s web developers can build
+rich and well structured frontend experiences. Pair that with Django and
+Django REST framework and you get the perfect combination. But it’s not
+all bells and whistles. What challenges are we going to face when
+decoupling Django with Django REST? What are the best practices? How to
+structure such a project? In this talk I’ll guide Django developers
+(both beginners and intermediate) from 0 to structuring a decoupled
+Django project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="description"&gt;
+&lt;h4&gt;Description&lt;/h4&gt;
+&lt;p&gt;The goal of this talk is to give Django developers an overview of a
+Django REST project, paired with React, as well as the tradeoffs of the
+decoupled approach. By the end of the talk the developer should be able
+to configure a new Django REST project and use a frontend library for
+interacting with the API.&lt;/p&gt;
+&lt;div class="section" id="why-and-when-to-decouple-django"&gt;
+&lt;h5&gt;1. Why and when to decouple Django&lt;/h5&gt;
+&lt;p&gt;There are many ways for decoupling a Django application and each one
+depends on the use case. In this section we’ll outline what decoupling
+is, why decoupling is a great approach and why sometimes it is not the
+right thing to do. We’ll see what the challenges of such approach are
+and how to deal with authentication in a decoupled context.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-rest-fundamentals"&gt;
+&lt;h5&gt;2. Django REST fundamentals&lt;/h5&gt;
+&lt;p&gt;Django REST framework is a Django application for exposing API endpoints
+from a Django project. It this section we’ll see the building blocks of
+a Django API app: the model, the serializer and the view. Models should
+not be a surprise for the audience, they come from Django. Serializers
+instead are provided by Django REST. We’ll also see how a Django REST
+view looks like and how to leverage both function based views and
+generic views within the project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="setting-up-the-frontend"&gt;
+&lt;h5&gt;3. Setting up the frontend&lt;/h5&gt;
+&lt;p&gt;The key for a truly decoupled experience is a frontend for consuming and
+interacting with the API. In this section we’ll see how to structure a
+Django REST project alongside with React. We will explore two
+approaches: fully decoupled frontend and mixed frontend.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="a-note-on-testing-and-closing-words"&gt;
+&lt;h5&gt;4. A note on testing and closing words&lt;/h5&gt;
+&lt;p&gt;In the context of a decoupled Django site we move from the typical
+Django tests to testing the API’s response instead. We will see how a
+simple API test looks like. And for the JavaScript frontend we’ll take a
+look at the current available tooling for functional testing.&lt;/p&gt;
+&lt;p&gt;Questions?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1735"&gt;https://python.it/feedback-1735&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 10:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="javascript"></category><category term="django-rest-framework"></category><category term="REST"></category><category term="django"></category></entry><entry><title>Deep Learning for brain MRI segmentation: Big Data, AI and HPC meet together</title><link href="https://pyvideo.org/pycon-italia-2019/deep-learning-for-brain-mri-segmentation-big-data-ai-and-hpc-meet-together.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Giuseppe Di Bernardo</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/deep-learning-for-brain-mri-segmentation-big-data-ai-and-hpc-meet-together.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With ever-increasing advancements in technology, neuroscientists are
+able to collect data in greater volumes and with finer resolution. There
+has been a growing interest in leveraging this vast volume of data
+across levels of analysis, measurement techniques, and experimental
+paradigms to gain more insight into brain function. At multiple stages
+and levels of neuroscience investigation, ML holds great promise as an
+addition to the arsenal of analysis tools for discovering how the brain
+works. As quantitative analysis of brain MRI is routine for many
+neurological diseases and conditions, deep learning-based segmentation
+approaches for brain Magnetic Resonance Imaging (MRI) are gaining
+interest due to their self-learning and generalisation ability over
+large amounts of data. On the other hand, High Performance Computing
+(HPC) and AI will increasingly intertwine as we transition to an
+exascale future using new computing, storage, and communications
+technologies. In this talk I will walk you through fundamentals of
+generating high- performance deep-learning models in TensorFlow platform
+using Python on large computing system (e.g NVIDIA® Tesla® GPUs powered
+by Tensor Cores), in order to infer and segment thousands of cell
+centroids out of the brain objects of interest. From a more
+technological perspective, although astonishing results have been
+achieved concerning the distribution of training large convolutional
+neural networks on big data, to date the Python scientific ecosystem is
+still missing tools for an optimised and, above all, distributed
+inference of deep learning models. In this talk I will show you how a
+tiling-based inferencing approach could be a good solution to remedy the
+problem. The talk is intended for intermediate PyData researchers and
+practitioners. Basic to intermediate level experience in image
+recognition/object detection deep learning applications is assumed.
+Overall, a good proficiency with the Python language and with scientific
+python libraries (e.g. numpy, TensorFlow, Keras) are required for the
+entire talk.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1794"&gt;https://python.it/feedback-1794&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="GPUComputing"></category><category term="parallelization"></category><category term="bio-informatics"></category><category term="Machine Learning"></category><category term="ComputerVision"></category><category term="optimization"></category><category term="data-analysis"></category><category term="Artificial Intelligence"></category></entry><entry><title>Immagino: un racconto di serverless e codeless (più o meno).</title><link href="https://pyvideo.org/pycon-italia-2019/immagino-un-racconto-di-serverless-e-codeless-piu-o-meno.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Christian Strappazzon</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/immagino-un-racconto-di-serverless-e-codeless-piu-o-meno.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In &lt;a class="reference external" href="https://gs1it.org/"&gt;GS1 Italy&lt;/a&gt; abbiamo realizzato il servizio
+&lt;a class="reference external" href="http://immagino.biz/"&gt;Immagino&lt;/a&gt;, dove vengono digitalizzati prodotti
+merceologici. La parte interessante è come ci portiamo in casa le
+immagini e le descrizioni: abbiamo creato una pipeline di elaborazione
+con &lt;a class="reference external" href="https://aws.amazon.com/"&gt;aws&lt;/a&gt;, vedremo insieme il disegno
+dell’applicazione, i servizi (sqs, sns, lambda, s3) e package (zappa,
+asyncio, boto3) utilizzati. Non servono partiolari conoscenze di aws e
+Python, l’obiettivo è mostrare un caso d’uso in produzione.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1690"&gt;https://python.it/feedback-1690&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="aws"></category><category term="boto3"></category><category term="zappa"></category><category term="lambda-functions"></category><category term="packages"></category><category term="tools"></category><category term="pythonscripts"></category></entry><entry><title>Introduzione a Zerynth: Python per Microcontrollori e Applicazioni IoT</title><link href="https://pyvideo.org/pycon-italia-2019/introduzione-a-zerynth-python-per-microcontrollori-e-applicazioni-iot.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Luigi Francesco Cerfeda</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/introduzione-a-zerynth-python-per-microcontrollori-e-applicazioni-iot.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Durante il talk verrà presentato Zerynth
+(&lt;a class="reference external" href="https://www.zerynth.com/"&gt;www.zerynth.com&lt;/a&gt;), un software per la
+programmazione di &lt;strong&gt;microcontrollori&lt;/strong&gt; in &lt;strong&gt;Python&lt;/strong&gt; e la realizzazione
+di applicazioni &lt;strong&gt;IoT&lt;/strong&gt; e per l’ &lt;strong&gt;Industria 4.0&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I principali argomenti trattati saranno:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Perchè utilizzare Zerynth (e quindi Python) per programmare
+dispositivi IoT.&lt;/li&gt;
+&lt;li&gt;Differenza tra Zerynth e il Python tradizionale.&lt;/li&gt;
+&lt;li&gt;Differenza tra Zerynth ed altre piattaforme di programmazione
+&lt;strong&gt;“embedded”&lt;/strong&gt; come &lt;strong&gt;Raspberry Pi&lt;/strong&gt; , &lt;strong&gt;Micropython&lt;/strong&gt; e &lt;strong&gt;Arduino&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Panoramica delle schede elettroniche supportate e dei servizi
+&lt;strong&gt;Cloud&lt;/strong&gt; compatibili. In particolare verrà presentata la board
+&lt;a class="reference external" href="http://4zerobox.com/"&gt;4zerobox&lt;/a&gt;, una delle schede elettroniche
+ufficialmente supportate da Zerynth, mostrandone le caratteristiche
+principali e le applicazioni in &lt;strong&gt;campo industriale&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Target ideale&lt;/strong&gt; : sviluppatori Python, professionisti dell’IoT,
+designers, studenti e insegnanti, makers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Per approfondire&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;La suite di sviluppo Zerynth è composta da:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Zerynth Studio&lt;/strong&gt; , un IDE professionale per la programmazione in
+Python su schede elettroniche a microcontrollore. Zerynth Studio è
+free e cross-platform. Scaricabile da qui:
+&lt;a class="reference external" href="https://www.zerynth.com/zerynth-studio/"&gt;https://www.zerynth.com/zerynth-studio/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zerynth Virtual Machine&lt;/strong&gt; , un sistema operativo real-time
+multithreaded che fornisce una reale indipendenza dall’hardware e che
+permette il riutilizzo del codice su qualsiasi architettura MCU.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Zerynth App&lt;/strong&gt; , una App generica per smartphone con cui
+visualizzare i dati e/o controllare i dispositivi programmati con
+Zerynth.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1488"&gt;https://python.it/feedback-1488&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 09:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="micropython"></category><category term="iot"></category><category term="embedded"></category><category term="industry applications"></category><category term="microcontroller"></category><category term="aws"></category><category term="InternetOfThings"></category><category term="InternetDelleCose"></category><category term="industry4.0"></category><category term="google-cloud"></category></entry><entry><title>Let the AI Do the Talk: Adventures with Natural Language Generation</title><link href="https://pyvideo.org/pycon-italia-2019/let-the-ai-do-the-talk-adventures-with-natural-language-generation.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Marco Bonzanini</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/let-the-ai-do-the-talk-adventures-with-natural-language-generation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent advances in Artificial Intelligence have shown how computers can
+compete with humans in a variety of mundane tasks, but what happens when
+creativity is required?&lt;/p&gt;
+&lt;p&gt;This talk introduces the concept of Natural Language Generation, the
+task of automatically generating text, for examples articles on a
+particular topic, poems that follow a particular style, or speech
+transcripts that express some attitude. Specifically, we’ll discuss the
+case for Recurrent Neural Networks, a family of algorithms that can be
+trained on sequential data, and how they improve on traditional language
+models.&lt;/p&gt;
+&lt;p&gt;The talk is for beginners, we’ll focus more on the intuitions behind the
+algorithms and their practical implications, and less on the
+mathematical details. Practical examples with Python will showcase
+Keras, a library to quickly prototype deep learning architectures.&lt;/p&gt;
+&lt;p&gt;Brief outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to Natural Language Generation&lt;/li&gt;
+&lt;li&gt;Language Modelling&lt;/li&gt;
+&lt;li&gt;Recurrent Neural Networks and Long Short Term Memory for NLG&lt;/li&gt;
+&lt;li&gt;RNN examples with Keras&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1574"&gt;https://python.it/feedback-1574&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 10:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="nlp"></category><category term="Keras"></category><category term="natural-language-processing"></category><category term="pydata"></category></entry><entry><title>Python Standard Library, the hidden gems</title><link href="https://pyvideo.org/pycon-italia-2019/python-standard-library-the-hidden-gems.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Alessandro Molina</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/python-standard-library-the-hidden-gems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La standard library di Python è ricca di strumenti, al punto che si dice
+che Python arrivi “con le batterie incluse”. Ma con così tanti strumenti
+e librarie a disposizione è facile perdersi.&lt;/p&gt;
+&lt;p&gt;Il talk mira ad esporre alcune ricette, snippet e modi di usare parti
+della standard library che possono essere meno note o che non sono
+trattati in rete o nei più comuni libri su Python.&lt;/p&gt;
+&lt;p&gt;Il talk mira ad esporre un insieme di brevi esempi che possano far
+pensare ai programmatori presenti “oh, non ci avevo mai pensato” o che
+possano dimostrare come in molti casi non è necessario appoggiarsi a
+librerie esterne per ottenere quello che si vuole in Python.&lt;/p&gt;
+&lt;p&gt;Alcune degli esempi esposti sono tratti ed approfonditi dal libro
+“Modern Python Standard Library Cookbook”&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1532"&gt;https://python.it/feedback-1532&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="libraries"></category><category term="best-practices"></category><category term="python3"></category></entry><entry><title>Python Website is Slow? Think Again!</title><link href="https://pyvideo.org/pycon-italia-2019/python-website-is-slow-think-again.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Iskandar Setiadi</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/python-website-is-slow-think-again.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As a Python avid user, we read a lot of articles that describe Python as
+a slow, interpreted language. At a certain point, some people start to
+blame the language itself for performance problems and consider to
+migrate their codebase to other languages. However, the success story of
+Instagram in handling four hundred million users has shown us that
+Python is not the bottleneck, but our codebase is.&lt;/p&gt;
+&lt;p&gt;In this talk, the speaker will share a tale of improving Python website
+performances in medium-sized enterprise (serving million users) that I’m
+currently working at. In a year, we finally achieved speed improvement
+from the average response time of 400 ms to 150 ms per request and we
+could save around $100k per year in AWS EC2 instance provisioning, which
+is around 60% of total cost.&lt;/p&gt;
+&lt;p&gt;Several key points that we have learned from our development process
+includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Tracking database queries with Python decorator will reduce number of
+unnecessary queries&lt;/li&gt;
+&lt;li&gt;Using an async framework does not guarantee your codebase is
+implementing it correctly&lt;/li&gt;
+&lt;li&gt;Default configured third-party library is not always suitable for all
+use cases&lt;/li&gt;
+&lt;li&gt;Utilizing memory profiler and pdb properly will help you in
+pinpointing application bottleneck&lt;/li&gt;
+&lt;li&gt;Python for-loops vs generators&lt;/li&gt;
+&lt;li&gt;And several other common pitfalls&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Expected level of audience: This talk is mainly targeted for beginner to
+intermediate web developer who are interested in improving the cost-
+performance of their web applications. After listening to this talk, the
+audiences are expected to understand that good coding practices (e.g.:
+implement asyncio correctly, track number of DB queries with decorators,
+etc) will make their web application a lot faster and cut down
+operational costs by a large margin.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1592"&gt;https://python.it/feedback-1592&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="tornado"></category><category term="best-practices"></category><category term="aws"></category><category term="web-development"></category><category term="web"></category></entry><entry><title>Real world Graphene - lessons learned from building a GraphQL API on top of a large Django project</title><link href="https://pyvideo.org/pycon-italia-2019/real-world-graphene-lessons-learned-from-building-a-graphql-api-on-top-of-a-large-django-project.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Marcin Gębala</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/real-world-graphene-lessons-learned-from-building-a-graphql-api-on-top-of-a-large-django-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Graphene is currently the most popular framework for building a GraphQL
+in Python and it’s also an obvious choice for adding a GraphQL layer to
+Django applications. Over the course of a year, we successfully built an
+API with about 50 queries and over 100 mutations on top of existing
+Django project (Saleor), but we also learned some hard lessons and had
+to overcome several shortcomings of the framework along the way.&lt;/p&gt;
+&lt;p&gt;In this talk, I’d like to share some practical tips to overcome the most
+common problems that a Django developer might face when building an
+optimized and maintainable API with Graphene, such as: - using useful
+abstractions to build queries and mutations faster - optimizing database
+queries in a graph - structuring a large Graphene project - unified
+error handling&lt;/p&gt;
+&lt;p&gt;I’d also like to bring up a few limitations of the framework that we
+discovered as we were working on the project and then end the talk with
+the most important benefits that adoption of GraphQL brings to modern
+web applications development - both for the backend and frontend.&lt;/p&gt;
+&lt;p&gt;Prerequisites: - Intermediate knowledge of Django - Familiarity with API
+design and concepts in terms of web development - Basic knowledge of
+GraphQL or interest in it&lt;/p&gt;
+&lt;p&gt;I think the talk would be of great value to anyone working with a
+Graphene framework and those who want to know more about building
+GraphQL in Python.&lt;/p&gt;
+&lt;p&gt;All code examples in the presentation would be based on Saleor
+(&lt;a class="reference external" href="https://github.com/mirumee/saleor"&gt;https://github.com/mirumee/saleor&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1644"&gt;https://python.it/feedback-1644&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="API Design"></category><category term="e-commerce"></category><category term="graphql"></category><category term="open-source"></category><category term="django"></category></entry><entry><title>RedisAI</title><link href="https://pyvideo.org/pycon-italia-2019/redisai.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Luca Antiga</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/redisai.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Taking deep learning models to production and doing so reliably is one
+of the next frontiers of DevOps. With the advent of Redis modules and
+the availability of C APIs for the major deep learning frameworks, it is
+now possible to turn Redis into a reliable runtime for deep learning
+workloads, providing a simple solution for a model serving microservice.
+In this talk we will introduce RedisAI, a joint effort by Orobix and
+RedisLabs that introduces tensors and graphs as new Redis data types and
+allows to execute graphs over tensors using multiple backends (PyTorch,
+TensorFlow, and ONNXRuntime), both on the CPU and GPU. The module also
+supports scripting with TorchScript, which provides a Python-like tensor
+language that can be used to facilitate pre- and post-processing
+operations, like input shaping or output ensambling. In addition, thanks
+to its support for the ONNX standard, including ONNX-ML, RedisAI is not
+strictly limited to deep learning, but it offers support for general
+machine learning algorithms. In this talk, we will demonstrate a full,
+Python-powered journey from fine tuning a model to a scalable Flask +
+RedisAI deployment. Last, we will lay down the roadmap for the future,
+like automated batching, sharding, integration with Redis data types
+(e.g. streams) and advanced monitoring. The talk will include sample
+code, best practices and a live demo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1756"&gt;https://python.it/feedback-1756&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="database"></category><category term="redis"></category><category term="devops"></category><category term="Machine Learning"></category><category term="deployment"></category><category term="neural network"></category></entry><entry><title>Service discovery: sai dov'è il mio microservice?</title><link href="https://pyvideo.org/pycon-italia-2019/service-discovery-sai-dove-il-mio-microservice.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Davide Setti</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/service-discovery-sai-dove-il-mio-microservice.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Quello del discovery dei servizi è un problema che sembra banale fino a
+quando non ne hai bisogno. Non serve essere (metti qui grossa azienda)
+per doverlo fare: già con un paio di servizi deployati in maniera
+dinamica (leggi cloud e/o container) bisogna inventarsi qualcosa.
+Kubernetes offre la sua visione, ma se non lo usiamo o abbiamo un
+ibrido, dobbiamo trovare un’alternativa.&lt;/p&gt;
+&lt;p&gt;In questo talk analizzeremo il problema, la soluzione che adottiamo a
+SpazioDati (basata su Consul e HAProxy) e le novità in questo campo
+(Envoy).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1788"&gt;https://python.it/feedback-1788&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Consul"></category><category term="devops"></category><category term="SRE"></category></entry><entry><title>Sharing is Caring! - how to free the CPU from message passing hell - shared memory saved the day</title><link href="https://pyvideo.org/pycon-italia-2019/sharing-is-caring-how-to-free-the-cpu-from-message-passing-hell-shared-memory-saved-the-day.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Andrei Neagu</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/sharing-is-caring-how-to-free-the-cpu-from-message-passing-hell-shared-memory-saved-the-day.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When dealing with a real time application in which you are required to
+process a lot of data from multiple sources in parallel, system
+resources disappear quickly. Add some CPU intensive processing and you
+are set to fail.&lt;/p&gt;
+&lt;p&gt;This talk will illustrate a solution to solve a CPU bound problem with a
+data stream of tens of megabytes. I will talk about how easy it is to
+fail and how to obtain a working solution.&lt;/p&gt;
+&lt;p&gt;The following arguments will be discussed:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;threading and its limitations&lt;/li&gt;
+&lt;li&gt;multiprocessing and its limitations&lt;/li&gt;
+&lt;li&gt;serialization&lt;/li&gt;
+&lt;li&gt;shared memory&lt;/li&gt;
+&lt;li&gt;a solution: multiprocessing + shared memory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Code will be provided and shown during the talk.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1656"&gt;https://python.it/feedback-1656&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="threading"></category><category term="SharedMemory"></category><category term="#Python"></category><category term="python3"></category><category term="multiprocessing"></category></entry><entry><title>Source; deploying unbiased models effortlessly.</title><link href="https://pyvideo.org/pycon-italia-2019/source-deploying-unbiased-models-effortlessly.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Anton Bossenbroek</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/source-deploying-unbiased-models-effortlessly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For many organizations rapid machine learning deployment is often an
+oxymoron. BCG Source provides a one-stop shop for data lineage and model
+development. We will demonstrate how easy deployment enables quick
+diagnoses that a model is biased. Since it is essential to deploy
+unbiased machine learning, we will show how to remove this bias. You
+will learn about common machine-learning and data-science pitfalls, how
+to easily deploy a machine learning model, how to spot bias and how to
+remove bias.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1808"&gt;https://python.it/feedback-1808&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Subwoofler: Create Your Own Musical Instrument</title><link href="https://pyvideo.org/pycon-italia-2019/subwoofler-create-your-own-musical-instrument.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Anna Wszeborowska</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/subwoofler-create-your-own-musical-instrument.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you, like me, started your musical encounters with toys that made
+animal sounds? Has the teenage you wondered how your favorite beat
+makers turned field recordings into playable sounds? What would happen
+if you combined the two? Let me take you on a journey through the world
+of sampling instruments which inspired Subwoofler - a barking sampler
+written completely in Python. We’ll go through all of its components and
+learn a few concepts commonly used in music applications. Finally, we’ll
+compare the performance of processing real-time audio on different
+implementations of Python; the language which is not the most typical
+choice for such a use case.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1801"&gt;https://python.it/feedback-1801&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 14:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>TemPy! Una alternativa al templating tradizionale usando solo Python.</title><link href="https://pyvideo.org/pycon-italia-2019/tempy-una-alternativa-al-templating-tradizionale-usando-solo-python.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Federico Cerchiari</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/tempy-una-alternativa-al-templating-tradizionale-usando-solo-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;TemPy è un modo di fare pagine HTML senza usare HTML. E’ un modo per
+avere, nel templating di pagine web, tutta la libertà offerta da Python,
+senza dover sottostare a un linguaggio simil-python con limitazioni.&lt;/p&gt;
+&lt;p&gt;Il talk sarà una introduzione a un modo alternativo di produrre l’output
+web attraverso TemPy, sia per un veloce prototyping che per un complesso
+sistema di template da semplificare… o potenziare. Coprirà esempi di
+utilizzo del modulo, la filosofia alla sua base ed alcuni esempi di ciò
+che può fare.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1516"&gt;https://python.it/feedback-1516&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 09:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="templates"></category><category term="html5"></category><category term="oop"></category><category term="python3"></category><category term="web development"></category></entry><entry><title>Ternary CPUs: how they work and how Python helps designing one</title><link href="https://pyvideo.org/pycon-italia-2019/ternary-cpus-how-they-work-and-how-python-helps-designing-one.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Cesare Di Mauro</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/ternary-cpus-how-they-work-and-how-python-helps-designing-one.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;0/1, False/True, off/on, etc.: the computers which we’re working on are
+based, from very long time, on the so called binary arithmetic/logic.&lt;/p&gt;
+&lt;p&gt;“Two states to rule them all&amp;quot;: with these we built a complete ecosystem
+which goes from the hardware to the software… showing even this text
+that you’re reading now.&lt;/p&gt;
+&lt;p&gt;However the possibility to use the ternary logic instead, that started
+just a joke some years ago, generated recent papers and researches about
+it, with interesting features exploited and documented.&lt;/p&gt;
+&lt;p&gt;An FPGA project is in development to implement a “ternary CPU” and an
+ISA (Instruction Set Architecture) draft was roughly defined (and
+evolving).&lt;/p&gt;
+&lt;p&gt;But a CPU without code to execute is useless and here comes Python,
+which allows to quickly implement (and test) some simple, primitive
+assembler to generate executables (&amp;quot;ternaries”?), which can then be
+transferred to the FPGA board and run.&lt;/p&gt;
+&lt;p&gt;A basic emulator with a minimal set of instructions is implemented, in
+order to test the code even without the physical board.&lt;/p&gt;
+&lt;p&gt;This talk provides a short overview of the ternary logic, some
+challenges, and how the basic assembler and emulator are written,
+tested, and work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1793"&gt;https://python.it/feedback-1793&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 10:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="TernaryLogic"></category><category term="Assembler"></category><category term="emulator"></category><category term="CPU"></category></entry><entry><title>Text Extraction from PDFs made Easy</title><link href="https://pyvideo.org/pycon-italia-2019/text-extraction-from-pdfs-made-easy.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Aakriti Jain</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/text-extraction-from-pdfs-made-easy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;*Overview:*&lt;/strong&gt; PDFs are one of the widely used digital media formats
+and are used to present and exchange information reliably, independent
+of the software, hardware and operating system. Extracting data from PDF
+files can be a tricky task. This is because of the complicated formats,
+fonts, and layouts that are stored in PDF files.&lt;/p&gt;
+&lt;p&gt;Text Extraction from PDFs is one of the most common problems that is
+prevalent in every industry. I shall be showing you how to extract data
+directly from n number of PDF files using just one Python Library -
+Regex. I encountered a similar problem while working with my company and
+utilized Regular Expressions to automate an otherwise strenuous task.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;*1. Who is this talk for?*&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Anyone who is dealing with the problem of extracting data from
+unstructured data at their workplace/ university.&lt;/li&gt;
+&lt;li&gt;Anyone who wants to learn Regular Expression in a fun and easy
+manner.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;*2. What background knowledge or experience should the audience
+have?*&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;This will be a beginner’s talk. The basis of Regex will be built from
+the ground up during the talk.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;*3. What will the audience learn after attending the talk?*&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience will get a crisp overview of Regular Expressions, that
+can assist them in a wide spectrum of tasks, from wrangling data to
+qualifying and categorizing it.&lt;/li&gt;
+&lt;li&gt;I’ll be showing them a use-case/demo of a problem statement that I
+encountered at my workplace, giving the attendees more clarity about
+the extent of usage of Regex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1632"&gt;https://python.it/feedback-1632&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 09:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="textextraction"></category><category term="datawrangling"></category><category term="datamining"></category></entry><entry><title>Uno sguardo alle Dataclasses: quando una namedtuple non basta</title><link href="https://pyvideo.org/pycon-italia-2019/uno-sguardo-alle-dataclasses-quando-una-namedtuple-non-basta.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Alessandro Cucci</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/uno-sguardo-alle-dataclasses-quando-una-namedtuple-non-basta.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hanno fatto la loro prima apparizione in Python 3.7, sono la moda del
+momento. Sto parlando delle DataClasses, definite nella PEP557 come
+“mutable namedtuples with defaults”. Inizieremo facendo un ripasso
+veloce sulla bellezza, ma anche sui limiti, delle namedtuple,
+continuando poi con un tour alla scoperta di questo nuovo strumento
+regalatoci da Eric V. Smith (Python Core Developer) e di come può
+esserci d’aiuto nello scrivere nuove classi con minimo sforzo. Oltre
+alla definizione come Standard Library suggerisce, verranno proposti
+degli esempi di codice per far capire in maniera semplice ai
+programmatori che si avvicinano per la prima volta a questo modulo le
+caratteristiche, le differenze rispetto ad altri strumenti, e i vantaggi
+nell’usare le dataclasses nei loro programmi.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1534"&gt;https://python.it/feedback-1534&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="data-structures"></category><category term="object-oriented-programming"></category><category term="Python"></category><category term="python3"></category></entry><entry><title>Usa lo Zen, Luke!</title><link href="https://pyvideo.org/pycon-italia-2019/usa-lo-zen-luke.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Lorenzo Mele</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/usa-lo-zen-luke.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nel nostro lavoro ci troviamo spesso di fronte a scelte difficili da
+prendere, compromessi che possono compromettere il nostro codice o altre
+scelte future. Per fortuna abbiamo una guida che ci può aiutare a
+compiere queste scelte un po’ più facilmente: lo Zen di Python. In
+questo talk voglio mostrare alcuni casi reali in cui lo zen ci può
+aiutare a scrivere codice migliore, più manutenibile e più bello.
+Impossibile parlare di tutto lo zen, prenderò quattro o cinque consigli
+e proporrò un caso reale, cioè un pezzo di codice in produzione, per
+mostrarne la veridicità.&lt;/p&gt;
+&lt;p&gt;Non sono richiesti pre-requisiti, si parlerà di concetti generali.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Presentazione:`link &amp;lt;https://docs.google.com/presentation/d/1GUdMd7VCQqyHHgWxSq2mf2Ot370ERWVsCwN5ln7EfEc/edit?usp=sharing&amp;gt;`__&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:https://python.it/feedback-1664&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Python"></category><category term="Zen"></category></entry><entry><title>Using OpenAPI (and Python) to standardize a Country's API Ecosystem</title><link href="https://pyvideo.org/pycon-italia-2019/using-openapi-and-python-to-standardize-a-countrys-api-ecosystem.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/using-openapi-and-python-to-standardize-a-countrys-api-ecosystem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creating an &lt;a class="reference external" href="https://teamdigitale.governo.it/en/projects/api.htm"&gt;API
+Ecosystem&lt;/a&gt; is
+one of the goal of the &lt;a class="reference external" href="https://teamdigitale.governo.it/en/"&gt;Italian Government Digital Transformation
+Team&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This talk shows how OpenAPI (formerly known as Swagger) is a cornerstone
+for standardizing the behavior of the APIs created by thousands of
+Public Administrations.&lt;/p&gt;
+&lt;p&gt;After a brief introduction to OpenAPI, we’ll show the current work on
+documenting service management semantics (eg. circuit breaker) and
+standardizing API elements and schemas.&lt;/p&gt;
+&lt;p&gt;Code samples are based on
+&lt;tt class="docutils literal"&gt;`connexion&lt;/tt&gt; &amp;lt;&lt;a class="reference external" href="https://connexion.readthedocs.io/en/latest/quickstart.html#running-%20it"&gt;https://connexion.readthedocs.io/en/latest/quickstart.html#running-%20it&lt;/a&gt;&amp;gt;`__:
+a python framework based on flask which makes trivial creating REST APIs
+and sandboxes useful for testing and interoperability.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1681"&gt;https://python.it/feedback-1681&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 10:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="web"></category><category term="REST API Frameworks"></category><category term="openapi"></category></entry><entry><title>Using Vault to better protect your secrets.</title><link href="https://pyvideo.org/pycon-italia-2019/using-vault-to-better-protect-your-secrets.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Bryce Verdier</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/using-vault-to-better-protect-your-secrets.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;All developers have seen it and few will admit to doing it. Putting
+unprotected authentication credentials like usernames and passwords or
+cloud service authentication keys into application code, scripts or
+Ansible playbooks. We do this because it saves us time and effort. Add
+in external source control tools, like Github, and the risks of these
+credentials being publicly exposed increases. While most developers
+agree on the importance of automated testing and syntax checking, its
+time to add protecting application secrets, to the list of best
+practices. In this talk, we will explore how to use Hashicorp Vault, a
+secure storage and encryption tool, to help manage authentication in a
+way that is safe and secure. Time will be spent on learning how to setup
+a Vault server, migrate secrets into the service, and modify python
+scripts and Ansible playbooks to take advantage of Vault. This talk is
+for developers of all levels who are interested in a better way to
+manage their secrets and become the next hero with their security
+department. (Your results may vary.) Presenter has no affiliation with
+Hashicorp.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1657"&gt;https://python.it/feedback-1657&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 09:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="identity-management"></category><category term="configuration-management"></category><category term="Hashicorp-Vault"></category></entry><entry><title>White Mars: living far away from any form of life</title><link href="https://pyvideo.org/pycon-italia-2019/white-mars-living-far-away-from-any-form-of-life.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Marco Buttu</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/white-mars-living-far-away-from-any-form-of-life.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Concordia Station is a French/Italian facility located inside
+Antarctica, in a plateau called Dome-C, in the middle of nowhere. A dark
+and cold place: no Sun from May to August, temperatures around -80
+Celsius degress, no life. In this weird place there is a lack of oxygen,
+extremely dry air and no way to go back to the “normal world” between
+February and November. I lived in Concordia for 13 months, performing
+scientific research with other 12 collegues from Italy, France and
+Austria. We were the most isolated people on Earth, more than the
+austronauts on the International Space Station. It was like living on
+another planet, and that is why the European Space Agency was making
+bio-medical research on us, in order to understand how the human body
+behaves in a such extraterrestrial environment. In this talk I will
+introduce our studies, describe Concordia and our life there, and of
+course also speak about Python.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://marco-buttu.github.io/white_mars/"&gt;https://marco-buttu.github.io/white_mars/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1802"&gt;https://python.it/feedback-1802&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 15:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>You don't need n dimensions when you have pandas</title><link href="https://pyvideo.org/pycon-italia-2019/you-dont-need-n-dimensions-when-you-have-pandas.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Pietro Battiston</name></author><id>tag:pyvideo.org,2019-05-05:pycon-italia-2019/you-dont-need-n-dimensions-when-you-have-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://pietrobattiston.it/wiki/python:pycon#talk_you_don_t_need_n_dimensions_when_you_have_pandas"&gt;Click here for slides and material
+used&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After a (very) quick general introduction to &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;, and in
+particular to pandas &lt;strong&gt;indexes&lt;/strong&gt; , this talk will focus on particular
+types of indexes, &lt;tt class="docutils literal"&gt;MultiIndex&lt;/tt&gt;es, and on the many &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;
+features allowing us to use them to store and analyze multidimensional
+data.&lt;/p&gt;
+&lt;p&gt;We will discover together &lt;em&gt;why&lt;/em&gt; &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt; does not have (any more) data
+structures with more than 2 dimensions, and why we should not regret
+them. We will then look at further ways to “restructure” data, including
+&lt;tt class="docutils literal"&gt;groupby&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;window&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1771"&gt;https://python.it/feedback-1771&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="data-structures"></category><category term="numpy"></category><category term="pandas"></category><category term="data-analysis"></category><category term="pydata"></category></entry><entry><title>A Worked Intro to Scikit-learn</title><link href="https://pyvideo.org/pycon-italia-2019/a-worked-intro-to-scikit-learn.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Anders Bogsnes</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/a-worked-intro-to-scikit-learn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A talk introducing the audience to Scikit-learn as a library aimed at
+people who know Python at a beginner/intermediate level but are new to
+machine learning concepts. The goal of the talk is for the audience to
+leave with an understanding of the foundations of machine learning while
+respecting how easy it is to make a wrong choice that invalidates your
+model.&lt;/p&gt;
+&lt;p&gt;It will be a short background on scikit-learn followed by a livecoding
+demo where I demonstrate how scikit-learn works and detail common
+pitfalls.&lt;/p&gt;
+&lt;p&gt;I will demonstrate ways of coping with problems such as data leakage,
+the importance of train-test splits, choosing metrics wisely, and
+explain how cross-validation works and why we use it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1596"&gt;https://python.it/feedback-1596&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="pydata"></category><category term="Python"></category><category term="scikit-learn"></category><category term="Machine Learning"></category><category term="analytics"></category><category term="data"></category><category term="sklearn"></category></entry><entry><title>Artisanal Async Adventures</title><link href="https://pyvideo.org/pycon-italia-2019/artisanal-async-adventures.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Jonas Obrist</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/artisanal-async-adventures.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;If you want to write an efficient server, asynchronous networking is an
+excellent strategy to do so. To build a production ready system, you
+would use asyncio, tornado, twisted, trio or another popular
+implementation. However, to fully understand how and why it works, I
+will ignore these solutions and instead craft an artisanal asynchronous
+implementation in front of your very eyes. Step by step we will turn a
+blocking socket server, only capable of handling a single connection at
+a time, into a beautiful non blocking server that has no trouble dealing
+with many connections at once. By the end, you should see that
+asynchronous code is not magical at all, but nevertheless incredibly
+useful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1742"&gt;https://python.it/feedback-1742&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="async"></category><category term="event-driven-architecture"></category><category term="python3"></category></entry><entry><title>Basta problemi con tensorflow usando Docker &amp; Nvidia Docker</title><link href="https://pyvideo.org/pycon-italia-2019/basta-problemi-con-tensorflow-usando-docker-nvidia-docker.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Nicola Landro</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/basta-problemi-con-tensorflow-usando-docker-nvidia-docker.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Di sicuro vi sarà capitato che condividendo o effettuando un progetto
+tensorflow questo non funzioni correttamente. Soprattutto non riesco a
+far scalare la mia app perchè non ho abbastanza macchine con GPU e
+eseguire lo scale su macchine con solo CPU è costoso per poi ottenere
+scarsi benefici. La soluzione è utilizzare Docker e Nvidia Docker.
+Vedremo perchè Docker è migliore di una macchina virtuale e come
+cambiano le prestazioni rispetto ad andare direttamente sulla macchina.
+Vedremo trucchi su come strutturare dei docker-compose file senza
+duplicazione per poter sviluppare agilmente sia con GPU che senza, poter
+effettuare un deploy con tranquillità e poter scalare facilmente anche
+senza GPU. Slide Link: &amp;lt;&lt;a class="reference external" href="https://www.slideshare.net/NicolaLandro/basta"&gt;https://www.slideshare.net/NicolaLandro/basta&lt;/a&gt;-
+problemicontensorflowusandodockernvidiadocker&amp;gt;&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1528"&gt;https://python.it/feedback-1528&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="OSX"></category><category term="windows"></category><category term="devops"></category><category term="Machine Learning"></category><category term="GNU/Linux"></category><category term="cuda"></category><category term="tensorflow"></category><category term="docker"></category></entry><entry><title>Come aiutare i cani con Genropy</title><link href="https://pyvideo.org/pycon-italia-2019/come-aiutare-i-cani-con-genropy.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Francesco Porcari</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/come-aiutare-i-cani-con-genropy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;“Se il solo strumento che possedete è un martello, vedrete in ogni
+problema un chiodo” (Abraham Maslow)&lt;/p&gt;
+&lt;p&gt;Corollario: se cominci ad usare Genropy vedrai in ogni problema un caso
+d’uso per fare una WebApp&lt;/p&gt;
+&lt;p&gt;Nel tempo libero mi sono ritrovato a fare volontariato presso
+un’associazione che prende i cani randagi fa un processo di rieducazione
+e li rende adottabili.&lt;/p&gt;
+&lt;p&gt;Date le mie limitate competenze cinofile, ho pensato bene, vedendo come
+era organizzato il lavoro dei volontari (fogli di carta, e tanta
+disorganizzazione) di usare le mie competenze Pythoniche e mettere su un
+gestionale per questa realtà nel mio tempo libero. È venuto fuori
+qualcosa di bello e sicuramente un caso interessante di uso del
+framework Genropy.&lt;/p&gt;
+&lt;p&gt;In questo talk verranno presentati 3 livelli per ogni problema
+affrontato: - il mondo reale - come viene schematizzato in termini di
+base di dati e model - la ui, con esempi di codice&lt;/p&gt;
+&lt;p&gt;Il focus del talk è mostrare come sia semplice passare da una realtà di
+fogli di carta e file excel disorganizzati ad una webapp moderna in
+costante evoluzione.&lt;/p&gt;
+&lt;p&gt;Grazie a Python e Genropy&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1809"&gt;https://python.it/feedback-1809&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Communicating Between Microservices</title><link href="https://pyvideo.org/pycon-italia-2019/communicating-between-microservices.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Anton Caceres</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/communicating-between-microservices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Microservices are not just a bunch of little apps, it’s a connected
+ecosystem.&lt;/p&gt;
+&lt;p&gt;Within a monolith, code modules invoke each other simply by using
+language- level function calls, but in a microservice architecture,
+communication between components does not come for free anymore.
+Choosing not just a protocol, but a paradigm for communication between
+endpoints is considered the most tricky issue of microservice approach.&lt;/p&gt;
+&lt;p&gt;Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;Having a bunch of smooth as well as tricky microservice migrations in
+the past, I would like to share typical pitfalls of choosing a framework
+stack, communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1638"&gt;https://python.it/feedback-1638&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="MessageQueues"></category><category term="microservices"></category><category term="HTTP"></category><category term="communication"></category><category term="architecture"></category><category term="websockets"></category></entry><entry><title>Darkweb + Python: discover, analyze and extract information from hidden services</title><link href="https://pyvideo.org/pycon-italia-2019/darkweb-python-discover-analyze-and-extract-information-from-hidden-services.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Jose Manuel Ortega</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/darkweb-python-discover-analyze-and-extract-information-from-hidden-services.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will start explaining how Tor project can help us to the
+research and development of tools for online anonymity and privacy of
+its users while surfing the Internet, by establishing virtual circuits
+between the different nodes that make up the Tor network. In addition,
+we will review how Tor works from anonymity point of view, preventing
+websites from tracking you. Python help us to automate the process to
+search an discover hidden services thanks to packages like
+requests,requesocks and sockspy. At this point we will review the
+crawling process and show tools in python ecosystem available for this
+task such as Deep Explorer(&lt;a class="reference external" href="https://github.com/blueudp/deep-explorer"&gt;https://github.com/blueudp/deep-explorer&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;These could be the talking points:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction to Tor project and hidden services&lt;/li&gt;
+&lt;li&gt;Discovering hidden services.&lt;/li&gt;
+&lt;li&gt;Modules and packages we can use in python for connecting with Tor
+network&lt;/li&gt;
+&lt;li&gt;Tools that allow search hidden services and atomate the crawling
+process in Tor network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1563"&gt;https://python.it/feedback-1563&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="tor"></category><category term="security"></category><category term="privacy"></category><category term="hacking"></category><category term="crawler"></category></entry><entry><title>Defence Against the Dark Arts: Adversarial ML</title><link href="https://pyvideo.org/pycon-italia-2019/defence-against-the-dark-arts-adversarial-ml.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Amit Kushwaha</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/defence-against-the-dark-arts-adversarial-ml.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security and Privacy issues need no introduction. But how exactly is
+this affecting the field of Machine Learning? This is what this talk
+will cover. We first expose the attack surface of systems deploying
+machine learning. We then describe how an attacker may force models to
+make wrong predictions with very little information about the victim.
+One such attack can be biometric recognition where fake biometric traits
+may be exploited to impersonate a legitimate user. We demonstrate that
+these attacks are practical against existing machine learning as a
+service platform. Towards the end, we will discuss current research to
+defend models from such attacks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1700"&gt;https://python.it/feedback-1700&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="security"></category><category term="Artificial Intelligence"></category><category term="privacy"></category></entry><entry><title>From Science with (Data) Love: make others love data the way you do.</title><link href="https://pyvideo.org/pycon-italia-2019/from-science-with-data-love-make-others-love-data-the-way-you-do.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Paula Gonzales</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/from-science-with-data-love-make-others-love-data-the-way-you-do.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scientists that become Data Scientists in companies bring with them a
+particular academic baggage that defines the way they think, work and
+communicate in the new environment. In this talk, I will talk about pros
+and cons associated with this baggage, drawing from my personal story of
+transitioning to Data Science with a focus on how we love data and how
+we can improve communication with stakeholders through better data
+visualization and storytelling.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1800"&gt;https://python.it/feedback-1800&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 14:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>How software can feed the world</title><link href="https://pyvideo.org/pycon-italia-2019/how-software-can-feed-the-world.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Christian Barra</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/how-software-can-feed-the-world.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Infarm is a FaaS, Farming as a Service, and whether you believe it or
+not, our business is in-house farming at scale.&lt;/p&gt;
+&lt;p&gt;We design and build our farms, grow vegetables and sell them, and the
+backbone of our infrastructure is based on Python.&lt;/p&gt;
+&lt;p&gt;More than 10 million observations recorded from our farms, rapidly
+increasing given our expansion to new markets, feed our farm management
+system that allows the operators, plant scientists, and supervisors to
+monitor each farm in real-time.&lt;/p&gt;
+&lt;p&gt;During this talk I will introduce our IoT infrastructure, how we use
+Python and how we plan to improve the capabilities of our farms by
+adding edge machine learning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1785"&gt;https://python.it/feedback-1785&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 18:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="microservices"></category><category term="iot"></category><category term="CloudComputing"></category><category term="microcontroller"></category><category term="influxdb"></category><category term="raspberrypi"></category><category term="machine-learning"></category><category term="social-impact"></category><category term="python3"></category></entry><entry><title>How to write a JIT compiler in 30 minutes</title><link href="https://pyvideo.org/pycon-italia-2019/how-to-write-a-jit-compiler-in-30-minutes.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/how-to-write-a-jit-compiler-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Real-world JIT compilers like PyPy and Numba are complex and advanced.
+However, the basic ideas behind JIT compilers are easy to understand, as
+this talk aim to show.&lt;/p&gt;
+&lt;p&gt;This will be a live-coding exercise: we will write a working (albeit
+simple and limited) JIT compiler from scratch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1675"&gt;https://python.it/feedback-1675&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="performance"></category><category term="JIT"></category><category term="assembly"></category><category term="live-coding"></category><category term="compilers"></category></entry><entry><title>In Codice Ratio: Machine Transcription in the Vatican Secret Archive</title><link href="https://pyvideo.org/pycon-italia-2019/in-codice-ratio-machine-transcription-in-the-vatican-secret-archive.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Elena Nieddu</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/in-codice-ratio-machine-transcription-in-the-vatican-secret-archive.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In Codice Ratio is a research project to study tools and techniques for
+analyzing the contents of digitized historical documents from the
+Vatican Secret Archives (VSA). Being digitized as images, their text
+content is still unaccessible without expert human intervention:
+transcription is therefore a key enabler for search and automation of
+knowledge discovery on such large collections. Handwritten documents are
+particularly challenging, as traditional OCR does not apply, and state
+of the art handwritten text recognition systems require very large and
+expensive to obtain datasets. ICR’s transcription system is based on
+convolutional neural networks and statistical language models, and
+requires minimal dataset collection effort.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1797"&gt;https://python.it/feedback-1797&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 18:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Lightning Talks</title><link href="https://pyvideo.org/pycon-italia-2019/lightning-talks.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/lightning-talks.html</id><summary type="html"></summary></entry><entry><title>Machine Learning for Inventory Management</title><link href="https://pyvideo.org/pycon-italia-2019/machine-learning-for-inventory-management.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Laura De Stefanis</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/machine-learning-for-inventory-management.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Material forecast is the process of deciding which items to stock in the
+inventory, how much, and when. Aim of the forecast is to increase parts
+availability with the less possible impact on inventory, having enough
+stock in the warehouse to ensure the business keeps moving but not
+enough stock to drain its limited cash reserves. This decision process
+is being profoundly revised in its foundational concepts, thanks to new
+classification methodologies enabled by Machine Learning. We integrated
+domain knowledge and ML to create a new classification and level setting
+process, leveraging on 6 years of data and new statistical indicators
+for demand patter. These new features are used to run the machine
+learning algorithm that classify Make To Stock / Make To Order items in
+a single flow approach. The validation phase is reduced at each
+iteration as ML model can be re-trained to incorporate past validations,
+increasing efficiency and performances. Level setting problem is
+addressed benchmarking ML methods (Reinforcement Learning), Montecarlo
+simulations and traditional statistical methodologies. Regarding RL and
+Montecarlo we established punishments for letting an particular
+inventory item run out of stock and we also punish the model for stock
+too higher value for too long. For rewards, we primarily focus on
+ordering items within a safe window before the demand. First application
+of this new methodology brings a 20% reduction of inventory, without
+impact on sales, and a workload reduction of about 70%.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1554"&gt;https://python.it/feedback-1554&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="logistics"></category><category term="clustering"></category><category term="statistics"></category><category term="Python"></category><category term="Big-Data"></category><category term="gestionali"></category><category term="django"></category><category term="supplychain"></category><category term="sql"></category><category term="Artificial Intelligence"></category></entry><entry><title>Multi-modal classification with PyTorch</title><link href="https://pyvideo.org/pycon-italia-2019/multi-modal-classification-with-pytorch.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Jennifer Seale</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/multi-modal-classification-with-pytorch.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent work by Kiela et al. (2018) reveals that image and text
+multi-modal classification models far outperform both text- and
+image-only models. This talk will review work that extends Kiela et
+al.’s (2018) research by determining if accuracy in classification may
+be increased by the implementation of transfer learning in language
+processing. The performance of the model over a MM-IMDb (Arevalo et al.
+2017) dataset is analyzed and compared to the baseline provided by Kiela
+et al. (2018).&lt;/p&gt;
+&lt;p&gt;The work is implemented with PyTorch and the goal of the talk will be to
+review details of the implementation, and performance of the model as
+compared to that recorded in Kiela et al. (2018). Attendees of this talk
+should have a basic familiarity with neural nets developed in PyTorch
+for the purposes of NLP and computer vision.&lt;/p&gt;
+&lt;p&gt;References: Arevalo, J., Solorio, T., Montes-y-Gómez, M., &amp;amp; González, F.
+A. 2017. Gated multimodal units for information fusion. arXiv preprint
+arXiv:1702.01992.&lt;/p&gt;
+&lt;p&gt;Kiela, Douwe, Edouard Grave, Armand Joulin, and Tomas Mikolov. 2018.
+Efficient large-scale multi-modal classification. arXiv preprint
+arXiv:1802.02892.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1754"&gt;https://python.it/feedback-1754&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="nlp"></category><category term="mathematical-modelling"></category><category term="computer-vision"></category></entry><entry><title>Orobix: AI gets to work!</title><link href="https://pyvideo.org/pycon-italia-2019/orobix-ai-gets-to-work.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Luca Antiga</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/orobix-ai-gets-to-work.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Orobix is an engineering company focused on delivering AI-based
+solutions to businesses, in multiple domains including life-science and
+manufacturing.&lt;/p&gt;
+&lt;p&gt;The application of deep learning to real world problems and mission
+critical contexts is laden with potential pitfalls, involving project
+execution all the way to the deployment of&lt;/p&gt;
+&lt;p&gt;models in production. Orobix has engineered systems with deep learning
+at their core, ranging from medical image segmentation to industrial
+quality inspection. In its operations, Orobix has devised strategies to
+cope with the cost of collecting data, gathering annotations from
+experts, training data- efficient models, deploying models in
+production, monitoring and communicating results back to experts. This
+talk represents an opportunity for us to share where we started from and
+where we’re at, what worked and what didn’t, and what we think is laying
+ahead of us, both individually and collectively in the applied AI
+community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1807"&gt;https://python.it/feedback-1807&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Pipenv per la gestione delle dipendenze negli ambienti di sviluppo e di produzione</title><link href="https://pyvideo.org/pycon-italia-2019/pipenv-per-la-gestione-delle-dipendenze-negli-ambienti-di-sviluppo-e-di-produzione.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Marco Santamaria</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/pipenv-per-la-gestione-delle-dipendenze-negli-ambienti-di-sviluppo-e-di-produzione.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pipenv permette la creazione automatica di un virtual environment e
+l’installazione di pacchetti Python attraveso una elegante interfaccia a
+riga di comando che riunisce in un unico strumento le funzionalità di
+PIP e virtualenv. Allo stesso tempo permette di tracciare in modo facile
+ed affidabile le dipendenze di un’applicazione attraverso i file Pipfile
+e Pipfile.lock, mettendo fine ai problemi derivanti dall’uso dei file
+requirements.txt e permettendo build deterministici.&lt;/p&gt;
+&lt;p&gt;Inizialmente verranno presentate le motivazioni principali che
+giustificano l’uso di pipenv: 1. dipendenze astratte e concrete
+(setup.py vs requirements.txt) 2. problemi nell’uso di file
+requirements.txt 3. librerie vs applicazioni 4. necessità di build
+deterministici&lt;/p&gt;
+&lt;p&gt;In seguito verranno descritte le funzionalità principali di pipenv per
+la gestione dei pacchetti e virtual environment nell’ambiente di
+sviluppo: 5. Installazione di pipenv nelle principali distribuzioni
+Linux e in Windows 6. I comandi “pipenv install”, “pipenv shell”,
+“pipenv run” 7. I file Pipfile e Pipfile.lock&lt;/p&gt;
+&lt;p&gt;Poi si introdurranno alcune funzionalità avanzate di pipenv: 8. “pipenv
+graph” per la visualizzazione del grafo delle dipendenze 9. “pipenv
+check” per controllare vulnerabilità di sicurezza 10. configurazione
+tramite variabili d’ambiente&lt;/p&gt;
+&lt;p&gt;Infine verranno prese in esame alcune utili funzionalità che permettono
+a pipenv di entrare a pieno titolo nel processo di deploy di
+un’applicazione Python: 11. i comandi “pipenv install –deploy” e “pipenv
+sync” 12. il supporto di file dot-env&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1714"&gt;https://python.it/feedback-1714&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="dependency-management"></category><category term="virtualenv"></category><category term="pipenv"></category><category term="Python"></category><category term="pip"></category><category term="packages"></category></entry><entry><title>Please tell me why?! Explaining Machine Learning predictions in Python with Shap</title><link href="https://pyvideo.org/pycon-italia-2019/please-tell-me-why-explaining-machine-learning-predictions-in-python-with-shap.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Alessio Guerrieri</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/please-tell-me-why-explaining-machine-learning-predictions-in-python-with-shap.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk we will discuss the problem of making results coming from
+machine learning models understandable to both the data scientists and
+the final users. While most machine learning frameworks already include
+metrics that measure the importance of different features during
+training, fewer allow us to understand which features were most
+important for a specific prediction at runtime. We will describe our use
+case, discuss a few options and finally present Shap, an open-source
+python library able to interpret many different models. Shap comes with
+both general purpose tools and specialized tools for families of machine
+learning models and with integrations for Jupyter and Matplotlib for
+easy use during exploration and testing of a model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1601"&gt;https://python.it/feedback-1601&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="scikit-learn"></category><category term="machine-learning"></category><category term="data-analysis"></category></entry><entry><title>Predicting Human Activity using Time Series Analysis</title><link href="https://pyvideo.org/pycon-italia-2019/predicting-human-activity-using-time-series-analysis.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Akul Mehra</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/predicting-human-activity-using-time-series-analysis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time series is referred to as sequence of data points measured over
+successive intervals of time. Time series analysis is performed to
+extract meaningful statistics and characteristics of the data. For
+example, this analysis can be used to predict future based on the past
+events. Such use cases of this analysis are stock market prediction,
+weather prediction and web traffic prediction.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll be understanding the basics and how to perform time
+series analysis and machine learning for a given dataset. For this talk,
+we’ll be using the UCI Human Activity Recognition (HAR) Data Set to
+classify a given activity performed by the human as one of the following
+activities: Walking, Sitting, Standing or Laying.&lt;/p&gt;
+&lt;p&gt;The talk would be intermediate level and basics of Python and Pandas are
+required. Understanding of Machine Learning algorithms and signal
+processing would be helpful.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1576"&gt;https://python.it/feedback-1576&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="TimeSeriesAnalysis"></category><category term="data-science"></category><category term="machine-language"></category><category term="Python"></category><category term="data-exploration"></category><category term="Data-Scientist"></category><category term="MachineLearning"></category><category term="TimeSeries"></category><category term="pandas"></category><category term="DataEngineering"></category></entry><entry><title>Quando la tua applicazione Django non va abbastanza veloce</title><link href="https://pyvideo.org/pycon-italia-2019/quando-la-tua-applicazione-django-non-va-abbastanza-veloce.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Riccardo Magliocchetti</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/quando-la-tua-applicazione-django-non-va-abbastanza-veloce.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django mette molta enfasi nel creare applicazioni velocemente. Questo è
+grandioso! Sviluppare applicazioni velocemente però non sempre significa
+sviluppare applicazioni veloci.&lt;/p&gt;
+&lt;p&gt;In questo talk mostrerò alcuni problemi di performance che ho incontrato
+(o introdotto) nella mia esperienza di sviluppatore. Vedremo esempi in
+diversi punti dell’applicazione: dai modelli, passando per le viste fino
+ai serializzatori. Alcuni di questi si sono rivelati facili da trovare e
+risolvere, altri subdoli o addirittura imbarazzanti. Tutti
+fortunatamente risolti.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1611"&gt;https://python.it/feedback-1611&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="performance"></category><category term="django"></category><category term="django-rest-framework"></category><category term="databases"></category></entry><entry><title>Ravioli vs Pelmeni software architecture (microservices vs services)</title><link href="https://pyvideo.org/pycon-italia-2019/ravioli-vs-pelmeni-software-architecture-microservices-vs-services.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Anastasiia Tymoshchuk</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/ravioli-vs-pelmeni-software-architecture-microservices-vs-services.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Microservice architecture is trending now, everyone wants to use it, not
+matter if it’s needed or not. But what if you could know all the pros
+and cons, possible examples and success stories… What if you could
+choose by your considered and mature choice. This short talk will guide
+through best practices of using service and microservice architecture,
+so you could choose wisely.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1515"&gt;https://python.it/feedback-1515&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="best-practices"></category><category term="examples"></category><category term="clean-architecture"></category></entry><entry><title>Scrivere i primi test frontend con python? Si Può!</title><link href="https://pyvideo.org/pycon-italia-2019/scrivere-i-primi-test-frontend-con-python-si-puo.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Fiorella De Luca</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/scrivere-i-primi-test-frontend-con-python-si-puo.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://splinter.readthedocs.io/en/latest/"&gt;Splinter&lt;/a&gt; è uno
+strumento open source per testare le applicazioni web usando Python. Ti
+consente di automatizzare le azioni del browser, come visitare URL e
+interagire con i loro elementi. Vi parlerò di come realizzare i test
+frontend utilizzando Splinter, perché usarlo per il frontend, cosa
+differenzia Splinter dagli altri tool ma sopratutto come integrarlo nei
+nostri progetti Django.&lt;/p&gt;
+&lt;p&gt;Lo scopo di questo talk è di presentare le potenzialità di Splinter,
+inoltre verranno mostrati dei casi d’uso e le informazioni necessarie
+per poterlo installare e utilizzare.&lt;/p&gt;
+&lt;p&gt;Il talk è rivolto a sviluppatori web con esperienza in python.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1730"&gt;https://python.it/feedback-1730&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 12:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="#splinter"></category><category term="#selenium"></category><category term="#Python"></category></entry><entry><title>Serverless computing con Python e AWS - Endgame Edition</title><link href="https://pyvideo.org/pycon-italia-2019/serverless-computing-con-python-e-aws-endgame-edition.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Federico Caboni</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/serverless-computing-con-python-e-aws-endgame-edition.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+La più breve introduzione al Cloud Computing del mondo: dalle valvole termoioniche al FaaS in 15 minuti!
+Dal monolite ai microservizi: l’arte di smembrare un’applicazione senza farsi (troppo) male
+Lambda e i suoi fratelli: come usare Python per costruire un sistema scalabile senza installare nemmeno un server
+Chalice, Layers, Step Functions.
+&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1806"&gt;https://python.it/feedback-1806&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Sviluppare per Alexa in Python</title><link href="https://pyvideo.org/pycon-italia-2019/sviluppare-per-alexa-in-python.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Alberto Anceschi</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/sviluppare-per-alexa-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In questo talk verrà mostrato come sviluppare una Skill per Amazon Alexa
+in italiano. Verranno presentati i concetti e le metodologie utili allo
+sviluppo di un’interfaccia vocale, le risorse e gli strumenti a
+disposizione dello sviluppatore ed infine i requisiti qualitativi da
+rispettare affinché la Skill sviluppata venga pubblicata sullo store. La
+Skill fornirà insight sul traffico del sito web, interfacciandosi con
+Google Analytics attraverso autenticazione dell’utente. Requisiti:
+serverless (AWS Lambda), Oauth.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1676"&gt;https://python.it/feedback-1676&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 11:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="#assistant"></category><category term="#Python"></category><category term="#google"></category><category term="#api"></category><category term="#voice"></category><category term="#alexa"></category><category term="#analytics"></category></entry><entry><title>Why you should pursue public speaking and how to get there</title><link href="https://pyvideo.org/pycon-italia-2019/why-you-should-pursue-public-speaking-and-how-to-get-there.html" rel="alternate"></link><published>2019-05-04T00:00:00+00:00</published><updated>2019-05-04T00:00:00+00:00</updated><author><name>Yenny Cheung</name></author><id>tag:pyvideo.org,2019-05-04:pycon-italia-2019/why-you-should-pursue-public-speaking-and-how-to-get-there.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fear of public speaking is the most common of all phobias. Want to speak
+confidently in front of the crowd? This talk shares tips on how to
+overcome the fear, and ways to get started. You will be prepared to
+brace presenting from a team meeting to a conference.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1803"&gt;https://python.it/feedback-1803&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 15:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>AI and algorithmic art</title><link href="https://pyvideo.org/pycon-italia-2019/ai-and-algorithmic-art.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Cheuk Ho</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/ai-and-algorithmic-art.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Many people think of neural networks as magic boxes, using them as such
+is similar to allowing the computer or the machine to have a mind of
+their own. Classification and prediction are the best-known applications
+of these algorithms. But it has been demonstrated that they can also be
+used in multiple creative or artistic ways such as generating pictures,
+musical pieces, humour based dialogues or jokes and plays or literary
+pieces. Leading to the following question: can these black boxes express
+true creativity? A trait commonly associated with humans.&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Algorithmic Art (or computer generated art) refers to the use of
+computer algorithms to create artistic pieces. Algorithmic art has been
+around from the early 1960s, when artists used a plotter controlled by a
+computer to create some visual artwork pieces. In the 80s when computer
+graphics became more accessible, digital fractal artworks dominated to
+become the mainstream of algorithmic art. By the end of the 80s, genetic
+algorithms had matured enough to have a major influence in the
+algorithmic composition of music. At the same time, the artificial
+neural networks were used to explore the creation of musical
+compositions. Most recently, thanks to the blooming of neural network
+frameworks (e.g. tensorflow), availability of GPUs and development in
+sophisticated neural network architecture, they play an important part
+in academic research and data science business applications. Besides
+that, these enhanced resources and frameworks have enabled the neural
+networks to make significant contributions in the area of Algorithmic
+Arts. Examples of this are the Deep Dream and artistic style transfer
+and GANs (generative adversarial network) which can generate highly
+deceptive pictures. A specially trained neural network is also capable
+of composing music mimicking the style of Beethoven or generating a
+modern music piece. In the same way, a neural network can be used to
+generate poems or literary pieces in the true style of Shakespeare or
+Hamilton. In this talk, we will go through a gallery of art and music
+created by algorithms, showcasing what roles computers took in different
+algorithmic art forms. From the earliest fractal art to the music and
+pictures generated by the state of the art neural networks and GANs.
+This talk is suitable for everyone, from the curious general public to
+experts in the field of neural networks, both will find this talk
+inspiring and amusing.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Slide for this talk:
+&lt;a class="reference external" href="https://slides.com/cheukting_ho/ai-and-algorithmic-art/live#/"&gt;https://slides.com/cheukting_ho/ai-and-algorithmic-art/live#/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1778"&gt;https://python.it/feedback-1778&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="art"></category><category term="pydata"></category><category term="AI"></category><category term="Algorithms"></category><category term="algorithmicart"></category><category term="neural network"></category></entry><entry><title>Alex Martelli - Ask Me Anything</title><link href="https://pyvideo.org/pycon-italia-2019/alex-martelli-ask-me-anything.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/alex-martelli-ask-me-anything.html</id><summary type="html"></summary></entry><entry><title>Algoritmo di Routing Multi-Obiettivo di Veicoli Elettrici con vincoli di ricarica lungo il percorso</title><link href="https://pyvideo.org/pycon-italia-2019/algoritmo-di-routing-multi-obiettivo-di-veicoli-elettrici-con-vincoli-di-ricarica-lungo-il-percorso.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alessandro Betti</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/algoritmo-di-routing-multi-obiettivo-di-veicoli-elettrici-con-vincoli-di-ricarica-lungo-il-percorso.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In questa presentazione affronteremo alcune delle fasi più importanti, e
+le problematiche ad esse correlate, per lo sviluppo di un modello di
+routing multi-obiettivo di un veicolo elettrico con vincoli di ricarica
+lungo il percorso. In particolare analizzeremo le principali sorgenti
+Open di dati geografici della rete stradale e relativi a stazioni di
+ricarica (Open Street Map, Open Charge Map, etc.), nonchè alcune delle
+principali librerie Python che espongono API utili alla costruzione di
+una rete per scenari urbani ed extra-urbani (Pandana, OSMnx, etc). Nella
+presentazione si descriveranno inoltre brevemente algoritmi quali
+Dijkstra e A* utili come punto di partenza per il design di un tale
+modello e lo speed-up del tempo di processamento. Infine si mostreranno
+alcuni casi studio legati al tema mobilità elettrica, mostrando alcune
+mappe interattive realizzate con la potente libreria Folium.&lt;/p&gt;
+&lt;p&gt;Esperienza consigliata del pubblico: Beginner/Intermediate&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1552"&gt;https://python.it/feedback-1552&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="OpenStreetMap"></category><category term="visualization"></category><category term="Network"></category><category term="maps"></category><category term="Dijkstra"></category><category term="performance"></category></entry><entry><title>An insight into Python Garbage Collection</title><link href="https://pyvideo.org/pycon-italia-2019/an-insight-into-python-garbage-collection.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Fabio Falzoi</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/an-insight-into-python-garbage-collection.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will describe Python garbage collection, specifically the
+CPython strategy. Various examples will demonstrate its peculiarities
+and the related impact in term of performance. Whenever feasible, the
+relevant piece of the actual CPython source code will be presented and
+explained. Finally, the talk will focus on some comparisons with
+alternative language implementation (such as PyPy) or other languages
+garbage collectors (Golang). A mid-level experience with the Python
+language is required. A very basic knowledge of both C and GO
+programming languages will help to understand some examples regarding
+CPython and Go, but it is not essential.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1767"&gt;https://python.it/feedback-1767&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="performance"></category><category term="optimization"></category></entry><entry><title>Building a Celery alternative in Django on Kubernetes</title><link href="https://pyvideo.org/pycon-italia-2019/building-a-celery-alternative-in-django-on-kubernetes.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alec Clowes</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/building-a-celery-alternative-in-django-on-kubernetes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Every used Celery and been frustrated by the complexity of RabbitMQ, the
+Redis visibility timeout, or the deprecated Postgres support? Wish there
+was better support for composing tasks into workflows and a web UI for
+viewing status and logs? I’ve been working with Celery for years; it is
+a great tool but I wanted to build something that fit my use cases
+better so I started a new task execution framework.&lt;/p&gt;
+&lt;p&gt;This talk isn’t about that framework, however. It is about how to use
+Django and React together, how to take advantage of more advanced
+Postgres features like recursive queries and select-for-update row
+locking, and how to deploy the resulting application onto Google Cloud
+Platform’s hosted Kubernetes solution. I hope it is valuable as a how-to
+guide covering many current best practices, from CLI and API design to
+high-availability and continuous deployment. Everything is open-sourced
+on GitHub at &lt;a class="reference external" href="https://github.com/aclowes/yawn"&gt;https://github.com/aclowes/yawn&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1568"&gt;https://python.it/feedback-1568&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="celery"></category><category term="reactjs"></category><category term="postgresql"></category><category term="kubernetes"></category><category term="django"></category></entry><entry><title>Costruire un sito e-commerce con Odoo</title><link href="https://pyvideo.org/pycon-italia-2019/costruire-un-sito-e-commerce-con-odoo.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Davide Corio</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/costruire-un-sito-e-commerce-con-odoo.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In questa presentazione vedremo come costruire un sito e-commerce con
+Odoo in pochi passi. Parleremo brevemente dell’installazione del
+framework e della sua configurazione di base per arrivare alle modalità
+di personalizzazione.&lt;/p&gt;
+&lt;p&gt;Il focus sarà ovviamente la vendita online, ma mostreremo come un
+ambiente integrato come Odoo ci permette di gestire tutti i flussi
+legati all’e-commerce nella loro interezza. Partendo quindi dalla
+registrazione dei clienti fino alla spedizione del materiale.&lt;/p&gt;
+&lt;p&gt;Per quanto riguarda le personalizzazioni, parleremo dei vari market
+place dove è possibile trovare funzionalità aggiuntive, ma tratteremo
+anche le basi del SDK di Odoo che richiedono conoscenze sia di Python
+che di Javascript.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1762"&gt;https://python.it/feedback-1762&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="ERP"></category><category term="javascript"></category><category term="enterprise"></category><category term="sales"></category><category term="payments"></category><category term="Odoo"></category><category term="ecommerce"></category></entry><entry><title>Deep learning: the final frontier for time series analysis and signal processing?</title><link href="https://pyvideo.org/pycon-italia-2019/deep-learning-the-final-frontier-for-time-series-analysis-and-signal-processing.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alexandr Honchar</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/deep-learning-the-final-frontier-for-time-series-analysis-and-signal-processing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deep neural networks are becoming irreplaceable for analyzing most kinds
+of data that humans supposed to exceed in - images, video, sounds,
+texts. They can not only predict something based on some input but also
+generate new images or sounds. Meanwhile, we are forgetting about
+another very important source of data - signals (or time series, which
+will be interchangeably here), that gets less hype in public but
+benefits a lot from applying deep learning comparing to classical
+approaches.&lt;/p&gt;
+&lt;p&gt;In this talk, we will review what are sources of time series and what
+business goals are we solving while analyzing them, what are “old” tools
+for analysis and how deep neural nets overcome them, we will learn the
+latest trends and ruin some myths and, moreover, we will see how
+generative models can be applied to the signal processing as well.&lt;/p&gt;
+&lt;p&gt;After this talk, you’ll be able to boost your current solutions in
+signal processing or time series analysis with deep learning. It will be
+also interesting for practitioners in other areas, like computer vision
+or NLP since we will discuss some concepts that are widely applicable.
+Previous experience with time series is not required, but some
+theoretical or practical experience with machine learning and/or neural
+networks is preferred.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1716"&gt;https://python.it/feedback-1716&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="machine-learning"></category><category term="deep learning"></category><category term="biomedical-data-science"></category><category term="TimeSeries"></category><category term="signal-processing"></category><category term="neural network"></category><category term="finance"></category></entry><entry><title>Deep Learning with PyTorch for Fun and Profit (Part III / Italian Edition: Divina Commedia)</title><link href="https://pyvideo.org/pycon-italia-2019/deep-learning-with-pytorch-for-fun-and-profit-part-iii-italian-edition-divina-commedia.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alexander Hendorf</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/deep-learning-with-pytorch-for-fun-and-profit-part-iii-italian-edition-divina-commedia.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are all these great articles and blog posts about Deep Learning
+describing all that awesome stuff. - Is it all that easy? Let’s check!&lt;/p&gt;
+&lt;p&gt;We’ll look into: style transfer (making a picture look like painting),
+speech generation (like Siri or Alexa) and text generation (writing a
+story). In this talk I’ll describe the whole journey: A fun ride from
+the idea to the very end including all the struggles, failures and
+successes.&lt;/p&gt;
+&lt;p&gt;This is an ongoing talk on how far we can get creating a full &lt;a class="reference external" href="https://en.wikipedia.org/wiki/Radio_drama"&gt;radio
+drama (Hörspiel)&lt;/a&gt; with
+deep learning and the resources required.&lt;/p&gt;
+&lt;p&gt;Steps, we’ll cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The data challenge: get the data ready&lt;/li&gt;
+&lt;li&gt;Creating a character-level language models with an Recurrent Neural
+Network&lt;/li&gt;
+&lt;li&gt;Creating a text generator&lt;/li&gt;
+&lt;li&gt;Creating artwork&lt;/li&gt;
+&lt;li&gt;Synthesising speech&lt;/li&gt;
+&lt;li&gt;Making it sound like a real person&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this special PyCon X edition we will also try to recreate text in the
+style of Dante’ Divina Commedia.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1687"&gt;https://python.it/feedback-1687&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="deep learning"></category><category term="Pytorch"></category><category term="art"></category><category term="Artificial Intelligence"></category><category term="nlp"></category></entry><entry><title>From Machine Learning to Deep Learning and Applying AI to real-world enterprise challenges</title><link href="https://pyvideo.org/pycon-italia-2019/from-machine-learning-to-deep-learning-and-applying-ai-to-real-world-enterprise-challenges.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Mo Haghighi</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/from-machine-learning-to-deep-learning-and-applying-ai-to-real-world-enterprise-challenges.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Artificial intelligence has been expanding across several areas of our
+daily lives by getting embedded into billions of smart objects and IoT
+devices. Securing such devices presents a number of unique challenges,
+since they are deployed in uncontrolled, complex, and often hostile
+environments. Smart devices currently apply Machine Learning techniques
+to detect and mitigate security issues as they occur. The
+ever-increasing number of new security challenges however, requires them
+to predict and proactively protect against potential threats that may
+occur in the future by utilising Deep Learning techniques. In this talk,
+we will discuss the security challenges facing the IoT networks, as well
+as desires and requirements for making the journey from Machine Learning
+to Deep Learning.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1810"&gt;https://python.it/feedback-1810&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Genropy e lo storage di file in cloud</title><link href="https://pyvideo.org/pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Francesco Porcari</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/genropy-e-lo-storage-di-file-in-cloud.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Con la transizione dagli applicativi su server proprietari agli
+applicativi in cloud nasce l’esigenza di separare i dati dal loro
+storage fisico sul server dove risiede l’applicazione.&lt;/p&gt;
+&lt;p&gt;Per soddisfare questa esigenza abbiamo provveduto a implementare in
+Genropy delle API per rendere trasparente l’accesso al filesystem e
+consentire quindi di scrivere procedure che possano funzionare
+indifferentemente appoggiandosi in locale o in cloud
+(&lt;a class="reference external" href="https://aws.amazon.com/it/s3/"&gt;S3&lt;/a&gt; o simili)&lt;/p&gt;
+&lt;p&gt;Esamineremo brevemente la gestione dei servizi di Genropy e parleremo in
+particolare del servizio di Storage che consente di astrarre delle
+directory logiche su cui operare nell’applicativo, potendo decidere
+durante l’istallazione la corrispondenza con una directory locale o nel
+cloud.&lt;/p&gt;
+&lt;p&gt;Nel talk vedremo come rimpiazzare tutte le chiamate al FileSystem con le
+corrispondenti chiamate alle API del servizio di Storage. Ci
+soffermeremo sulla classe StorageNode che implementa sia i metodi
+necessari per le operazioni di scrittura, lettura e cancellazione di
+File e Directory indipendentemente dalla loro collocazione locale o in
+cloud sia un metodo che fornisce l’URL da servire per vedere o scaricare
+il contenuto statico.&lt;/p&gt;
+&lt;p&gt;Nel caso di servizi S3 o simili viene gestita automaticamente la
+gestione di un token di autorizzazione temporaneo basato sui privilegi
+dell’utente che effettua la richiesta. Questo consente di servire
+direttamente i file statici direttamente dal cloud invece di farli
+transitare dal server applicativo.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1761"&gt;https://python.it/feedback-1761&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="S3"></category><category term="genropy"></category><category term="cloud"></category><category term="deploy"></category></entry><entry><title>Geospatial analysis with Python</title><link href="https://pyvideo.org/pycon-italia-2019/geospatial-analysis-with-python.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Francesco Bruni</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/geospatial-analysis-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Due to its effectiveness and simplicity, Python is spreading as a choice
+for handling geospatial data. From running algorithms capable of
+extracting geo- referred insights or processing geo archives, Python
+could represent a powerful tool to handle geo-related problems thanks to
+an extensive set of libraries. The training will give an overview about
+processing geospatial data with Python. An approximate agenda will
+include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction&lt;ul&gt;
+&lt;li&gt;setting up the the environment&lt;/li&gt;
+&lt;li&gt;an introduction to geospatial world&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Working with geospatial data&lt;ul&gt;
+&lt;li&gt;playing with geo archives (vector/rasters)&lt;/li&gt;
+&lt;li&gt;extracting geo analytics&lt;/li&gt;
+&lt;li&gt;Vector tiles big vector data&lt;/li&gt;
+&lt;li&gt;Apache Spark for geospatial raster analysis&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Python for Earth observation&lt;ul&gt;
+&lt;li&gt;Classifying earth observation images&lt;/li&gt;
+&lt;li&gt;Extracting insights from Copernicus products&lt;/li&gt;
+&lt;li&gt;Use SNAP from Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;No tools are required for attending this training. Bring your PC with
+Docker installed. Further instructions will be provided.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1674"&gt;https://python.it/feedback-1674&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt; in __on &lt;strong&gt;Saturday 4
+May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Jupyter"></category><category term="pyspark"></category><category term="geospatial"></category><category term="geopynotebook"></category><category term="spark"></category><category term="docker"></category></entry><entry><title>Good features beat algorithms</title><link href="https://pyvideo.org/pycon-italia-2019/good-features-beat-algorithms.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Pietro Mascolo</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/good-features-beat-algorithms.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In Machine Learning and Data Science in general, understanding the data
+is paramount. This understanding can come from many different sources
+and techniques: domain expertise, exploratory analysis, SMEs, some
+specific Machine Learning techniques, and feature engineering. As a
+matter of fact, most Machine Learning and Statistical analysis strongly
+depends on how the data is prepared, thus making feature engineering
+very important for any serious Machine Learning enterprise.&lt;/p&gt;
+&lt;p&gt;“Feature engineering is the process of transforming raw data into
+features that better represent the underlying problem to the predictive
+models, resulting in improved model accuracy on unseen data.”&lt;/p&gt;
+&lt;p&gt;In this talk we will discuss what feature engineering and feature
+selection are; how to select important features in a real-world dataset
+and how to develop a simple, but powerful ensemble to measure feature
+importance and perform feature selection.&lt;/p&gt;
+&lt;p&gt;Familiarity with intermediate concepts of the Python programming
+language is required to follow the implementation steps. General
+knowledge of the basic concepts of Machine Learning and data cleaning
+will be useful, but not strictly necessary, to follow the discussion on
+feature selection and feature engineering.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1529"&gt;https://python.it/feedback-1529&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="scikit-learn"></category><category term="machine-learning"></category><category term="pydata"></category></entry><entry><title>Hearing Colours and Seeing Sounds using Python</title><link href="https://pyvideo.org/pycon-italia-2019/hearing-colours-and-seeing-sounds-using-python.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Aakanksha Chouhan</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/hearing-colours-and-seeing-sounds-using-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;We humans are the masterpieces. We are born with awesome capabilities
+and applaudable talents making us different from one another. As an
+individual , nobody thinks the way others do , they have their own
+intriguing ways to look at this world. Few of us have this exceptional
+quality to be able to visualise sounds and map colours with the words.
+It is termed as Synesthesia. It is fascinating to know how human brain
+can see sounds and hear colours, how it thinks of a word, and sees
+blocks of colours, and then these blocks get translated into letters.
+There are few who see the letters with a halo-effect. The letters
+give- off almost a glow of a certain colour.It is a striking fact that
+the synesthetic brains are wired a little differently from the ones of
+non-synesthetes.&lt;/div&gt;
+&lt;div class="line"&gt;This talk will cover the interesting applications of python
+programming by harnessing simple mathematical techniques to simulate
+the synesthetic ( bridging modalities) behaviour of brain. It is
+really appealing to be able to look at the world wearing colourful
+shades and building an AI that does bridge these modalities (vision ,
+hearing ,etc ) is truly astounding. The talk covers an interesting
+viewpoint on how python can be used widely to analyse some of the
+really complex human brain behaviours ,in addition to solving
+comparatively trivial real world problems.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Link to the slides :
+&lt;a class="reference external" href="https://speakerdeck.com/aakanksha07/hearing-colours-and"&gt;https://speakerdeck.com/aakanksha07/hearing-colours-and&lt;/a&gt;-
+seeing-sounds-using-python?slide=28&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1776"&gt;https://python.it/feedback-1776&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Python"></category><category term="Algorithms"></category><category term="Artificial Intelligence"></category><category term="Machine Learning"></category></entry><entry><title>High Performance and Scalability Made Easy For Data-Analytics/Machine-Learning Codes</title><link href="https://pyvideo.org/pycon-italia-2019/high-performance-and-scalability-made-easy-for-data-analyticsmachine-learning-codes.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Frank Schlimbach</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/high-performance-and-scalability-made-easy-for-data-analyticsmachine-learning-codes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Is your data-analysis code running for too long with Scikit-Learn,
+Numpy, Scipy and/or Pandas? Does your data-set blow your memory? Are
+spark/dask/… not giving you the scalability and/or ease-of-use your
+need?&lt;/p&gt;
+&lt;p&gt;Intel implemented optimizations in Numpy, Scikit-Learn, Scipy and Pandas
+which achieve up to orders of magnitude better performance for many
+functionalities compared to standard implementations. The optimized
+packages are drop-in replacements which do not require any code changes
+and allow processing more data in less time.&lt;/p&gt;
+&lt;p&gt;Moreover, two new tools allow you to easily bring your full data
+analytics pipeline to unprecedented scales: daal4py and HPAT. Daal4py is
+a convenient Python API to Intel® DAAL (Intel® Data Analytics
+Acceleration Library). While its interface is scikit-learn-like, its
+MPI-based engine under the hood allows scaling machine learning
+algorithms to bare-metal cluster performance with only little code
+changes. HPAT (High Performance Analytics Toolkit) scales analytics
+codes using Pandas/Python to bare-metal cluster performance. It
+automatically compiles a subset of Python (Pandas/Numpy/Daal4py) to
+efficient parallel binaries with MPI, also requiring only minimal code
+changes. With these tools your code can be orders of magnitude faster
+than alternatives like Apache Spark - without the pain of dealing
+directly with lower-level languages and/or tools like C and/or message
+passing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1805"&gt;https://python.it/feedback-1805&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 15:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>How to Become a Kickass Team Lead 101</title><link href="https://pyvideo.org/pycon-italia-2019/how-to-become-a-kickass-team-lead-101.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Ahmad Alhour</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/how-to-become-a-kickass-team-lead-101.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Title: How to Become a Kickass Team Lead 101&lt;/p&gt;
+&lt;p&gt;Audience Level: Beginner&lt;/p&gt;
+&lt;p&gt;Requirements: None&lt;/p&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h4&gt;SUMMARY&lt;/h4&gt;
+&lt;p&gt;Most engineers who get promoted to the role of a team lead, tech lead or
+lead developer (regardless of the wording of the title) feel like they
+were thrown in cold waters as they, most probably, lack prior training
+or education on the subject matter. Most of us that survive and actually
+get to like the new role and arrive at really good results, manage to
+educate themselves on the skills and habits required to become an
+effective team leader.&lt;/p&gt;
+&lt;p&gt;In this talk, I will cover the most important lessons about being an
+effective team lead without any previous knowledge about the subject.
+This is a practical talk and the audience will walk away with a lot of
+material and advice to upgrade their engineering leadership game, as
+well as a recommended set of resources for further study. The talk is
+primarily focused on developing leadership skills and is tailored
+towards engineers and software teams.&lt;/p&gt;
+&lt;p&gt;The learning goals are: - How to develop practical leadership skills for
+your day-to-day job - Understand the core components of leadership: ATM
+(Ability, Team, Mission) - How to build teamwork on a foundation of
+trust - How to overcome the main dysfunctions to look in order to
+tighten up your team - Increase your awareness of the main anti-patterns
+that team leads end up doing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1668"&gt;https://python.it/feedback-1668&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="management"></category><category term="community"></category><category term="leadership"></category><category term="teamwork"></category><category term="tech-lead"></category><category term="education"></category></entry><entry><title>Internet delle cose con Redis e django-channels</title><link href="https://pyvideo.org/pycon-italia-2019/internet-delle-cose-con-redis-e-django-channels.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Mario Orlandi</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/internet-delle-cose-con-redis-e-django-channels.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/morlandi/sinewave"&gt;https://github.com/morlandi/sinewave&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;L’esempio proposto ha lo scopo di esaminare alcuni possibili paradigmi
+di comunicazione fra dispositivi periferici e un server centrale, con
+particolare riferimento al protocollo PUB/SUB reso disponibile da Redis.
+L’invio di informazioni da parte del dispositivo può essere
+concretizzato sia utilizzando una delle tante librerie client
+disponibili (Python o altri linguaggi), sia mediante una funzione
+“publish” minimale (per es. scritta in C); questa seconda opzione può
+essere convenientemente utilizzata in contesti limitati quali Arduino o
+altre schede embedded. Le informazioni ricevute sul server possono
+essere ulteriormente propagate ad eventuali clients web che avessero
+manifestato il proprio interesse, predisponendo sul server un processo
+“listener” incaricato di raccogliere i dati come subscriber, per poi
+eseguirne il broadcast via WebSocket; l’esempio proposto illustra una
+semplice implementazione basata su django-channels.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1726"&gt;https://python.it/feedback-1726&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="pub/sub"></category><category term="redis"></category><category term="arduino"></category></entry><entry><title>Machine learning approaches for road scene video analysis</title><link href="https://pyvideo.org/pycon-italia-2019/machine-learning-approaches-for-road-scene-video-analysis.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Andrea Benericetti</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/machine-learning-approaches-for-road-scene-video-analysis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dashboard cameras (dashcams), inward or front-facing cameras installed
+in personal or commercial vehicles, are becoming increasingly popular
+due to the pervasiveness of their applications: driver safety,
+autonomous driving, fleet management systems, insurance, theft detection
+are some examples. Focusing on safety, one of the main problems is to
+analyze videos and automatically detect dangerous situations occurring
+in them, such as the risk of a near crash with another vehicle or
+pedestrian. In this talk, we show how we tackle this real- world problem
+at Verizon Connect, using a mix of state-of-the-art deep learning
+methods and traditional computer vision / machine learning techniques,
+leveraging libraries such as scikit-learn, scipy/numpy, pandas, openCV,
+and keras/tensorflow. We also describe how we use AWS and docker to
+deploy, serve and scale the application to customers all over the world.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1603"&gt;https://python.it/feedback-1603&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="ComputerVision"></category><category term="analytics"></category><category term="scikit-learn"></category><category term="opencv"></category><category term="video"></category><category term="machine-learning"></category><category term="optical-flow"></category><category term="pandas"></category></entry><entry><title>Mappe 🗺️ con GeoDjango 🌎, PostGIS 🐘 e Leaflet 🍃</title><link href="https://pyvideo.org/pycon-italia-2019/mappe-con-geodjango-postgis-e-leaflet.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Paolo Melchiorre</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/mappe-con-geodjango-postgis-e-leaflet.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Una &lt;em&gt;mappa&lt;/em&gt; permette agli utenti di visualizzare e ricercare i dati in
+maniera spaziale ed è comune l’esigenza di aggiungerne una al proprio
+progetto web.&lt;/p&gt;
+&lt;blockquote&gt;
+In questo talk vedremo come abbiamo integrato una &lt;em&gt;mappa&lt;/em&gt; in un
+progetto web già in produzione usando &lt;strong&gt;GeoDjango&lt;/strong&gt; , &lt;strong&gt;PostGIS&lt;/strong&gt; e
+&lt;strong&gt;Leaflet&lt;/strong&gt; ed eseguiremo una dimostrazione di integrazione da zero
+di una mappa in un progetto &lt;strong&gt;Django&lt;/strong&gt;.&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;GeoDjango&lt;/strong&gt; è un modulo incluso in &lt;strong&gt;Django&lt;/strong&gt; che lo trasforma in un
+&lt;em&gt;framework&lt;/em&gt; Web geografico di classe mondiale.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PostGIS&lt;/strong&gt; è un estensione del &lt;em&gt;database&lt;/em&gt; &lt;strong&gt;PostgreSQL&lt;/strong&gt; che aggiunge
+il supporto per gli oggetti geografici consentendo di eseguire query
+spaziali.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Leaflet&lt;/strong&gt; è la principale libreria &lt;strong&gt;JavaScript&lt;/strong&gt; &lt;em&gt;open source&lt;/em&gt; per
+mappe web interattive ottimizzate per dispositivi mobili.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Durante il primo meetup &lt;strong&gt;#PyRoma&lt;/strong&gt; del 2019 abbiamo presentato una
+versione ridotta di questo talk limitandoci al solo &lt;strong&gt;caso d’uso&lt;/strong&gt;. Info
+qui:
+&lt;a class="reference external" href="https://www.paulox.net/2019/01/21/pyroma-2019/"&gt;www.paulox.net/2019/01/21/pyroma-2019/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1608"&gt;https://python.it/feedback-1608&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 18:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="web"></category><category term="postgresql"></category><category term="javascript"></category><category term="postgis"></category><category term="django"></category><category term="leaflet"></category><category term="maps"></category><category term="geospatial"></category><category term="gis"></category><category term="geodjango"></category><category term="python3"></category></entry><entry><title>Meet dask and distributed: the unsung heroes of Python scientific data ecosystem.</title><link href="https://pyvideo.org/pycon-italia-2019/meet-dask-and-distributed-the-unsung-heroes-of-python-scientific-data-ecosystem.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/meet-dask-and-distributed-the-unsung-heroes-of-python-scientific-data-ecosystem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Thanks to its world-class data tools and libraries, like Numpy, Pandas,
+Jupyter, Matplotlib and xarray, Python is becoming the language of
+choice in many scientific communities from Physics to Climate Science,
+from Earth Observation to Economy.&lt;/p&gt;
+&lt;p&gt;A turn-key but less-know component of the scientific ecosystem is the
+dask library that enable seamless parallel, distributed and GPU
+computing in most cases without code changes.&lt;/p&gt;
+&lt;p&gt;We will use climate science as an typical example of a discipline where
+simple tasks become easily big data problems and where mastering xarray,
+dask and dask.distributed is the key to turn them back into simple
+tasks, possibly on a large cluster of VMs (that you can easily provision
+from your preferred cloud provider).&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://gitpitch.com/alexamici/talks/master?p=PyConX-2019"&gt;https://gitpitch.com/alexamici/talks/master?p=PyConX-2019&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1704"&gt;https://python.it/feedback-1704&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Jupyter"></category><category term="dask.distributed"></category><category term="Big-Data"></category><category term="xarray"></category><category term="dask"></category><category term="climate-change"></category><category term="earth-obeservation"></category><category term="pandas"></category></entry><entry><title>Pandas ecosystem 2019</title><link href="https://pyvideo.org/pycon-italia-2019/pandas-ecosystem-2019.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Marc Garcia</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/pandas-ecosystem-2019.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;pandas is more than 10 years old now. In this time, it became almost a
+standard for building data pipelines and perform data analysis in
+Python. As the popularity of the project grows, it also grows the number
+of projects that depend or interact with pandas.&lt;/p&gt;
+&lt;p&gt;This talk will cover this ecosystem of projects around pandas, mainly in
+the prespective of scalability and performance. Discussing for example
+how projects like Arrow are key for the future of pandas, or how Dask is
+overcoming pandas limitations.&lt;/p&gt;
+&lt;p&gt;In a first part, the talk will focus on pandas itself, its components,
+and its architecture. This will give the required context for a second
+part, that will explain related projects, how they interact with pandas,
+and what the whole ecosystem can offer to users.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1613"&gt;https://python.it/feedback-1613&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="pydata"></category><category term="analytics"></category><category term="data-analysis"></category><category term="Data Mining"></category><category term="data"></category><category term="pandas"></category></entry><entry><title>Porting your Python web app to serverless in 30 minutes</title><link href="https://pyvideo.org/pycon-italia-2019/porting-your-python-web-app-to-serverless-in-30-minutes.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Alex Casalboni</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/porting-your-python-web-app-to-serverless-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This live-coding session will guide you through the process of migrating
+an existing Flask application to AWS Lambda.&lt;/p&gt;
+&lt;p&gt;We will analyze the existing application, decompose it into individual
+microservices, adapt authentication, frontend, tests, and data model,
+and finally deploy it to the Cloud.&lt;/p&gt;
+&lt;p&gt;Throughout this step-by-step process, you will learn the benefits of
+serverless and how it will change the way you think of scalability,
+availability, security, infrastructure management, and cost
+optimization.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1620"&gt;https://python.it/feedback-1620&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="web"></category><category term="flask"></category><category term="aws"></category><category term="live-coding"></category><category term="cloud"></category></entry><entry><title>PostgreSQL on the kube</title><link href="https://pyvideo.org/pycon-italia-2019/postgresql-on-the-kube.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Marco Nenciarini</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/postgresql-on-the-kube.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kubernetes è un sistema di orchestrazione di container che permette di
+gestire il deploy, lo scaling e l’aggiornamento di una applicazione e di
+tutti i suoi componenti.&lt;/p&gt;
+&lt;p&gt;In questo talk parleremo di quali strumenti sono a disposizione per
+effettuare un deploy di un database PostgreSQL in un cluster Kubernetes.
+Inoltre vedremo come sia implementabile l’alta disponibilità e la
+disaster recovery, in maniera da avere i propri dati al sicuro e sempre
+accessibili.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1784"&gt;https://python.it/feedback-1784&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="postgresql"></category><category term="postgres"></category><category term="kubernetes"></category><category term="storage"></category><category term="containers"></category><category term="docker"></category><category term="k8s"></category><category term="cloud"></category></entry><entry><title>PyConX Conference Goodbye</title><link href="https://pyvideo.org/pycon-italia-2019/pyconx-conference-goodbye.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/pyconx-conference-goodbye.html</id><summary type="html"></summary></entry><entry><title>PyConX Conference Welcome and Introduction</title><link href="https://pyvideo.org/pycon-italia-2019/pyconx-conference-welcome-and-introduction.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Unknown</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/pyconx-conference-welcome-and-introduction.html</id><summary type="html"></summary></entry><entry><title>Python e MySQL 8.0 Document Store</title><link href="https://pyvideo.org/pycon-italia-2019/python-e-mysql-80-document-store.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Frédéric Descamps</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/python-e-mysql-80-document-store.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;MySQL Document Store è l’implementazione di MySQL di un Document Store
+JSON. Permette di memorizzare dati non strutturati sfruttando le
+proprietà transazionali già disponibili in MySQL. Per poter usare
+pienamente il MySQL Document Store, il nuovo X DevAPI è stato sviluppato
+ed è disponibile per diversi linguaggi di programmazione, anche in
+Python attraverso MySQL Connector/Python 8.0. Questa presentazione vi
+guida attraverso le basi del MySQL Document Store e come utilizzare l’X
+DevAPI in MySQL Connector/Python 8.0 per gestire le raccolte di
+documenti e utilizzare i metodi CRUD per lavorare con questi documenti.
+Partecipate a questa sessione se siete interessati a MySQL Document
+Store e MySQL Connector/Python.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1544"&gt;https://python.it/feedback-1544&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="database"></category><category term="json"></category><category term="DocumentStore"></category><category term="mysql"></category></entry><entry><title>Python &amp; Serverless: Refactor your monolith piece by piece</title><link href="https://pyvideo.org/pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Giuseppe Vallarelli</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/python-serverless-refactor-your-monolith-piece-by-piece.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python &amp;amp; Serverless: Refactor your monolith piece by piece&lt;/p&gt;
+&lt;p&gt;The introduction of the Function as a Service (Serverless) technologies
+is facilitating the adoption of a microservices based architecture. In
+this talk we will discuss why this might be useful (scalability / cost
+opportunities / choosing the right tool for the job) and what strategies
+we can follow to either extract independent services or add new
+capabilities using an event driven architecture style to a django web
+application. We will end up our discussion talking about testing and
+monitoring of our freshly baked services.&lt;/p&gt;
+&lt;p&gt;In this talk we will see:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Serverless/FaaS concepts brief intro&lt;/li&gt;
+&lt;li&gt;Breaking up the monolith rationale&lt;/li&gt;
+&lt;li&gt;Extracting some modules into independent services&lt;/li&gt;
+&lt;li&gt;Adding more capabilities using events as a trigger for our FaaS&lt;/li&gt;
+&lt;li&gt;Testing &amp;amp; Monitoring&lt;/li&gt;
+&lt;li&gt;References&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The intended audience should be familiar with the concepts related to
+web applications, web apis and a smattering of serverless concepts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1591"&gt;https://python.it/feedback-1591&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 11:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="serverless"></category><category term="microservices"></category><category term="pyweb"></category><category term="aws"></category><category term="devops"></category><category term="django"></category><category term="lambda-functions"></category><category term="event-driven-architecture"></category><category term="cloud"></category><category term="faas"></category></entry><entry><title>The Secret Society of Happiness</title><link href="https://pyvideo.org/pycon-italia-2019/the-secret-society-of-happiness.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Sasha Romijn</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/the-secret-society-of-happiness.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Happiness and our search for it is important but complicated. However,
+we can learn much from each other. Being our authentic selves and
+allowing ourselves to grow, gains us skills to help others too. In this
+talk, we’ll learn about helping ourselves and guiding others towards
+happiness for all.&lt;/p&gt;
+&lt;p&gt;Happiness and our own search for it have deep impacts on our entire
+lives. But important as it is, it’s also incredibly complicated. We each
+carry our own baggage, and the things that make us happy are not
+constants. However, we can learn so much from each other in a community,
+and can have a tremendous impact on each other’s happiness in how we
+shape our communities and interactions - though not always in the most
+obvious ways.&lt;/p&gt;
+&lt;p&gt;Many of the barriers to our happiness are actually created by ourselves,
+and those can be the hardest the overcome. But by being our authentic
+selves and facing up to our fears, we can gain the confidence to do what
+is needed. And growing in this process ourselves, we gain so many skills
+in helping others in their journeys as well. Embracing those journeys
+and skills in our community will make it a happier and more inclusive
+space for all, which fosters growth in ourselves and others.&lt;/p&gt;
+&lt;p&gt;I recently put literally every aspect of my life upside down in my own
+search for happiness, and will share from my personal story and stories
+of others about the lessons learned, in a way that many of us will
+recognise. We’ll also talk about how each of us in a community has
+opportunities to bring happiness to others, which in the end will
+contribute to our own happiness too.&lt;/p&gt;
+&lt;p&gt;Previous responses to this talk included:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;“Took me a decade to understand what this speaker is presenting
+gracefully and meaningfully in a handful of minutes.”&lt;/li&gt;
+&lt;li&gt;“Been waiting for this talk for months and it has not disappointed.”&lt;/li&gt;
+&lt;li&gt;“Such a strong, emotional and impactful opening keynote.”&lt;/li&gt;
+&lt;li&gt;“This speaker is like the purest person ever!”&lt;/li&gt;
+&lt;li&gt;“Thank you for being inspiring and honest.”&lt;/li&gt;
+&lt;li&gt;“Hard truth. Touching chords.”&lt;/li&gt;
+&lt;li&gt;“I should have worn waterproof makeup.”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1799"&gt;https://python.it/feedback-1799&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 14:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Traversing the land of graph computing and databases</title><link href="https://pyvideo.org/pycon-italia-2019/traversing-the-land-of-graph-computing-and-databases.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Akash Tandon</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/traversing-the-land-of-graph-computing-and-databases.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Graphs have long held a special place in the computer science’s history
+(and codebases). With the advent of a new wave of the information age
+characterized by a greater emphasis on linked data, graph computing and
+databases have risen to prominence. Be it enterprise knowledge graphs or
+graph-based analytics, there are a great number of potential
+applications.&lt;/p&gt;
+&lt;p&gt;To reap the benefits of graph databases and computing, one needs to
+understand the basics as well as current technical landscape and
+offerings. Also, it’s important to understand if a graph-based approach
+suits your problem. This talk will touch upon these points. Be prepared
+to learn some graph fundamentals and witness a live demo using Neo4j, a
+popular graph database.&lt;/p&gt;
+&lt;p&gt;Soft pre-requisites include familiarity with Python and experience
+working with a SQL or NoSQL database. There are no hard pre-requisites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1682"&gt;https://python.it/feedback-1682&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="nosql"></category><category term="graph"></category><category term="analytics"></category><category term="databases"></category><category term="neo4j"></category><category term="datascience"></category><category term="graphdatabase"></category></entry><entry><title>Using Python to create political acts</title><link href="https://pyvideo.org/pycon-italia-2019/using-python-to-create-political-acts.html" rel="alternate"></link><published>2019-05-03T00:00:00+00:00</published><updated>2019-05-03T00:00:00+00:00</updated><author><name>Felipe Cabral</name></author><id>tag:pyvideo.org,2019-05-03:pycon-italia-2019/using-python-to-create-political-acts.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Last Pycon Italia I showed how my team has using Python and Data Science
+to fight corruption - &lt;a class="reference external" href="https://www.youtube.com/watch?v=JiJ5a4CXRF8&amp;amp;t=8s"&gt;https://www.youtube.com/watch?v=JiJ5a4CXRF8&amp;amp;t=8s&lt;/a&gt;
+This time I want to show something that can be replicated in Italy right
+after we finish the presentation.&lt;/p&gt;
+&lt;p&gt;As &amp;#64;participatory (World Bank Internet impact researcher) says, every
+country has a good response for public pressure across the internet, and
+this response is even better within autocratic governments because they
+want to keep healthy international relations. But how we can keep a
+record of all the drafts of legislation that are happening right now?
+How we can use this information and create an action for the public to
+show their agreement or not for every change that happens.&lt;/p&gt;
+&lt;p&gt;With Scrapy, Python, Django, and Open source! Let me show you how has
+been done in Brazil and the Pipeline that makes possible to replicated
+here in Italy!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1702"&gt;https://python.it/feedback-1702&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 10:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</summary><category term="web-scraping"></category><category term="Python"></category><category term="programming"></category><category term="scrapy"></category><category term="api"></category><category term="open-data"></category><category term="opendata"></category><category term="hacking"></category></entry></feed>

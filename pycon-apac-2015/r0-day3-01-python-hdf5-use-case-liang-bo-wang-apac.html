@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; R0 DAY3-01 Python HDF5 Use Case - Liang Bo Wang (PyCon APAC 2015)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-apac-2015.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-apac-2015.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="R0 DAY3-01 Python HDF5 Use Case - Liang Bo Wang (PyCon APAC 2015)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-apac-2015/r0-day3-01-python-hdf5-use-case-liang-bo-wang-apac.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/XLyDMtFKRcM/sddefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/XLyDMtFKRcM/sddefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-apac-2015/r0-day3-01-python-hdf5-use-case-liang-bo-wang-apac.html" rel="bookmark"
+         title="Permalink to R0 DAY3-01 Python HDF5 Use Case - Liang Bo Wang (PyCon APAC 2015)">R0 DAY3-01 Python HDF5 Use Case - Liang Bo Wang (PyCon APAC 2015)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2015-08-24T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Mon 24 August 2015
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/liang-bo-wang.html">Liang Bo Wang</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/XLyDMtFKRcM" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Speaker: Liang Bo Wang</p>
+<p>HDF5 是一個用來存取數據的函式庫，Matlab 的儲存格式 (.mat) 即基於該格式設計。相較於多數人熟悉的 Database，HDF5 的功能更為單純，它只負責做好讀取、 儲存資料而並不提供 Query、Join 等操作，但也因此在 I/O 表現上更為出色。常見的應用為 sensor、實驗數據記錄與傳輸、大矩陣的操作等。HDF5 在 Python 的接口實作主要有 PyTables 及 h5py，兩者針對不同的使用情境有不同的設計。</p>
+<p>在本 talk 中，會先介紹 HDF5 格式與特色，在 Python 中如何用 PyTables、h5py 存取 與異同，以及與主流資料庫、pickle 物件串流化的比較。最後示範 HDF5 如何有效的完成 以下幾個情境中的問題：存取 pandas DataFrame 物件、在大型矩陣進行區域計算、追蹤 Deep Learning 學習記錄。</p>
+<p>About the speaker</p>
+<p>A master student active in Taipei Python and R meetups. His research topic focuses on network analysis of cancer genetics. After his intern in MSRA, he's currently working on digital histopathology analysis using convolutional neural network (CNN).</p>
+<p>個人網頁連結 <a class="reference external" href="http://liang2.tw/">http://liang2.tw/</a>
+Twitter &#64;ccwang002
+組織/公司 Bioinfo &amp; Biostat Core Lab, NTU CGM
+頭銜 Student</p>
+<p><a class="reference external" href="https://tw.pycon.org/2015apac/zh/program/24">https://tw.pycon.org/2015apac/zh/program/24</a></p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-apac-2015.html">PyCon APAC 2015</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=XLyDMtFKRcM" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://liang2.tw/">
+http://liang2.tw/                </a></li><li><a href="https://tw.pycon.org/2015apac/zh/program/24">
+https://tw.pycon.org/2015apac/zh/program/24                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-apac-2015/videos/r0-day3-01-python-hdf5-use-case-liang-bo-wang-apac.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

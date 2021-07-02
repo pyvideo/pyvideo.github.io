@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_compiler-and-interpreters.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>And now for something completely different.</title><link href="https://pyvideo.org/europython-2019/and-now-for-something-completely-different.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Danny Engelbarts</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/and-now-for-something-completely-different.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The goal of this talk is to show the audience a different way of
+thinking about and developing regex statements.&lt;/p&gt;
+&lt;p&gt;I have been working with UNIX for decades now and, although i always
+managed to avoid Perl, i have been intrigued with Regex constructs ever
+since my first encounter. These weird unreadable things that can
+transform text like nothing else or can find what i’m looking for in
+massive files, in no time at all. I’ve created regexes that only appeal
+to the most nerdiest of nerds and i’ve stunned colleagues by fixing
+their futile regex attempts in just a few keystrokes. But when Damian
+Conway showed me how regexes really work i was awestruck. And now i want
+to share this knowledge.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at pythonistas that have some experience with the re
+module. I will take some easy examples and explain in plain english how
+a regex engine searches for a match. This will show that a regex is not
+some mysterious incomprehensible pattern description or declarative
+blueprint. Instead it is a small program that is very good at comparing
+single characters. Like any programming language it turns out that once
+you understand the rules and structure it suddenly becomes so much
+easier to use.&lt;/p&gt;
+&lt;p&gt;With this new found knowledge we will up the ante and try some more
+difficult stuff, adding other semantics and some tips and tricks. We’ll
+look at some pitfalls, maybe compare regex to python solutions and have
+a look at some regexes found in the wild (either on my drive or on
+github).&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="Mind Bending"></category><category term="Programming"></category><category term="Python Skills"></category><category term="Tooling"></category></entry><entry><title>The Story of Features Coming in Python 3.8 and Beyond</title><link href="https://pyvideo.org/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Andrey Vlasovskikh</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's coming in Python 3.8? You can learn it by yourself by reading an
+excellent document [What's New in Python 3.8][1]. I'm not going to
+retell this document. Instead I'll focus on things barely described
+there or not mentioned at all:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why will the new features appear in Python 3.8 and what's the story
+behind them?&lt;/li&gt;
+&lt;li&gt;What is being discussed and developed now, but won't appear in Python
+3.8?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll share the news I learned at PyCon 2019 from the talks and
+discussions with Python core developers. I'll mention the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New syntax: &lt;tt class="docutils literal"&gt;x := expr&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f(...,&lt;/span&gt; /, &lt;span class="pre"&gt;...)&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f'{expr=}'&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New types: &lt;tt class="docutils literal"&gt;Literal&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Final&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TypedDict&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Future features of typing and async/await&lt;/li&gt;
+&lt;li&gt;New approaches to optimizing Python: sub-interpreters, mypyc&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Compiler and Interpreters"></category><category term="New Features"></category><category term="Python 3"></category><category term="Type-Hinting"></category></entry><entry><title>Get up to speed with Cython 3.0</title><link href="https://pyvideo.org/europython-2019/get-up-to-speed-with-cython-30.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/get-up-to-speed-with-cython-30.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing lots of data, in need of more speed, or struggling to make
+use of native code? The Cython compiler for Python solves all of these
+problems in a pythonic way, by compiling Python code to optimised C
+code.&lt;/p&gt;
+&lt;p&gt;Cython [1] has a very long history of faithfully helping users to solve
+their Python performance problems and integrating native code into
+Python in production critical settings, while stimulating somewhat less
+confidence with its 0.x versioning scheme. For the next Cython version,
+a stable 3.0 release, we are planning to clean up several historically
+grown issues in the language to make the Cython compiler more friendly
+for modern Python users to work with.&lt;/p&gt;
+&lt;p&gt;In this talk, I will show how Cython can be used for compiling and
+speeding up Python code, using fast native data structures and
+libraries. I will then give an overview of the changes that are on their
+way for the 3.0 release and how they will affect the user experience.&lt;/p&gt;
+&lt;p&gt;[1] &lt;a class="reference external" href="https://cython.org"&gt;https://cython.org&lt;/a&gt;&lt;/p&gt;
+</summary><category term="C-Languages"></category><category term="Compiler and Interpreters"></category><category term="Cython"></category><category term="Performance"></category><category term="Programming"></category></entry><entry><title>How to write a JIT compiler in 30 minutes</title><link href="https://pyvideo.org/europython-2019/how-to-write-a-jit-compiler-in-30-minutes.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/how-to-write-a-jit-compiler-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Real-world JIT compilers like PyPy and Numba are complex and advanced.
+However, the basic ideas behind JIT compilers are easy to understand, as
+this talk aim to show.&lt;/p&gt;
+&lt;p&gt;This is a live-coding exercise: we will start from a blank page and
+write a working (albeit simple and limited) JIT compiler from scratch.&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="Development"></category><category term="TDD"></category></entry><entry><title>Opening PyPy's magic black box</title><link href="https://pyvideo.org/europython-2019/opening-pypys-magic-black-box.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Ronan Lamy</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/opening-pypys-magic-black-box.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is a fast and compliant implementation of Python. In other words,
+it's an interpreter for the Python language that can act as a full
+replacement for the reference interpreter, CPython. It's optimised to
+enable efficient just-in- time (JIT) compilation of Python code to
+machine code, and has releases matching versions 2.7, and 3.6. It now
+also supports the main pillars of the scientific ecosystem (numpy,
+Cython, scipy, pandas, ...) thanks to its emulation layer for the C API
+of CPython.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The PyPy JIT is often just described as &amp;quot;magically running your code
+faster&amp;quot;, but is actually what is known as a &amp;quot;meta-tracing JIT&amp;quot;.&lt;/div&gt;
+&lt;div class="line"&gt;A tracing JIT optimises loops by recording and optimising a single,
+hopefully representative, execution of the loop. While crude, that
+approach is known to be effective for just-in-time compiler.
+Additionally, PyPy's JIT is &amp;quot;meta&amp;quot; in the sense that it traces the
+execution of the interpreter while it runs some user-code instead of
+tracing the user-code directly. This again simplifies the compiler. We
+will explore how all this works together and is implemented (spoiler:
+it's Python all the way down!).&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk assumes no prior knowledge of compiler theory nor of PyPy
+internals, and should be of interest to anybody who wishes that their
+pure-Python code would run faster. The audience will gain a firmer
+understanding of how PyPy operates and optimises code, and how to how to
+get the most out of the PyPy JIT.&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="PyPy"></category></entry><entry><title>Practical decorators</title><link href="https://pyvideo.org/europython-2019/practical-decorators.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Reuven Lerner</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/practical-decorators.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Decorators are one of Python's most powerful features. But even if you
+understand what they do, it's not always obvious what you can do with
+them. Sure, from a practical perspective, they let you remove repeated
+code from your callables. And semantically, they let you think at a
+higher level of abstraction, applying the same treatment to functions
+and classes.&lt;/p&gt;
+&lt;p&gt;But what can you actually do with them? For many Python developers I've
+encountered, decorators sometimes appear to be a solution looking for a
+problem.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll show you some practical uses for decorators, and how
+you can use them to make your code more readable and maintainable, while
+also providing more semantic power. Moreover, you'll see examples of
+things would be hard to do without decorators. I hope that after this
+talk, you'll have a good sense of how to use decorators in your own
+Python projects.&lt;/p&gt;
+</summary><category term="Compiler and Interpreters"></category><category term="Data Structures"></category><category term="Programming"></category><category term="Python Skills"></category><category term="Python general"></category></entry><entry><title>Understanding Numba - the Python and Numpy compiler</title><link href="https://pyvideo.org/europython-2019/understanding-numba-the-python-and-numpy-compiler.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Christoph Deil</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/understanding-numba-the-python-and-numpy-compiler.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you have numerical code written in Python and Numpy? Do you wish it
+ran faster, using the full potential of your CPU?&lt;/p&gt;
+&lt;p&gt;Then you should try Numba, a JIT compiler that translates a subset of
+Python and Numpy code into fast machine code.&lt;/p&gt;
+&lt;p&gt;This talk will explain how Numba works, and when and how to use it for
+numerical algorithms, focusing on how to get very good performance on
+the CPU.&lt;/p&gt;
+&lt;p&gt;To understand this talk, only a basic knowledge of Python and Numpy is
+needed.&lt;/p&gt;
+&lt;p&gt;You will learn how Python compiles functions to bytecode and how Numba
+compiles bytecode to machine code. Why algorithms implemented using
+Numpy sometimes don't yield great performance, and how to do better
+using Numba. You will learn about the &amp;#64;numba.jit and &amp;#64;numba.vectorize
+decorators and how to create functions that use the CPU well by using
+e.g. multi-threading (several CPU cores), vector instructions (single
+instruction multiple data) and fast math (trade float accuracy for
+speed).&lt;/p&gt;
+&lt;p&gt;You will also learn when it does and doesn't make sense to use Numba, by
+contrasting it briefly with some other options for high-performance
+computing from Python: PyPy, C, C++, Cython, Numexpr, Dask, PyTorch,
+Tensorflow and Google JAX&lt;/p&gt;
+</summary><category term="CPython"></category><category term="Compiler and Interpreters"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry></feed>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Extending GDB with Python</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pybay-2019.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pybay-2019.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Extending GDB with Python" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pybay-2019/extending-gdb-with-python.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/xt9v5t4_zvE/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/xt9v5t4_zvE/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pybay-2019/extending-gdb-with-python.html" rel="bookmark"
+         title="Permalink to Extending GDB with Python">Extending GDB with Python
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2019-08-17T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sat 17 August 2019
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/lisa-roach.html">Lisa Roach</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xt9v5t4_zvE" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>This talk was presented at PyBay2019 - 4th annual Bay Area Regional Python conference. See pybay.com for more details about PyBay and click SHOW MORE for more information about this talk.</p>
+<p>Description
+GDB is powerful, and can be extended with Python to do more than just one-off debugging. This talk will describe using Python with GDB to with GDB to write tools that interact with running processes, highlighting GDB’s ability to call C functions and how this can be coupled with Python’s C-API to inject code without needing to stop the process.</p>
+<p>Abstract
+The first half of the talk will be introductory in nature. I will talk about GDB and some of the specifics of how it can be extended with Python. The second half of the talk I will use the things discussed to create a program that does simple memory analysis of all objects in a running Python process.</p>
+<p>Introduction- who I am, what this talk is about (1 min)
+GDB Introduction (3 min) a. What it is typically used for- debugging segfaults, etc b. How it works- ptrace under the hood c. Can execute C code (this will be important later in the talk) d. Source files (also important later in the talk)
+GDB Python API (6 min) a. Accessing Python from GDB: basic commands (python [command], source, py-list, etc) b. Accessing GDB from Python: To use GDB in Python, from a GDB process, you can import gdb and all of the API is available to you. The API has extensive options to allow for many types of analysis but I will focus on some of the more basic options: executing GDB CLI strings, setting GDB parameters, and creating custom GDB commands. Docs: <a class="reference external" href="https://sourceware.org/gdb/current/onlinedocs/gdb/Python-API.html#Python-API">https://sourceware.org/gdb/current/onlinedocs/gdb/Python-API.html#Python-API</a> c. Show an example using gdb and Python’s C-API: gdb.execute(‘call PyRun_SimpleString(“print(‘Hello World’)”)’)
+Problem Statement: I want to know what objects are taking up the most memory in my program, but I don’t want to (or more realistically, can’t) add code to my process to do the data collection. Solution: Use GDB to inject into my running process some memory analysis code (we can use open-source projects like objgraph or pympler to do the memory work for us) and get that data back without killing the debugged process. (2 min)
+Launch a GDB subprocess and attach to the running process we are interested in debugging. (2 min)
+In the GDB subprocess command, connect to a Python script file that GDB can use as a ‘source file’. This file will be able to import gdb and use the GDB Python API to create custom commands. (1 mins)
+Write a custom command by inheriting from gdb.Command and using gdb.execute with PyRun_SimpleString (3 mins)
+Memory analysis tools can be injected the same way as print(‘Hello World’) using PyRun_SimpleString, but PyRun_SimpleString only likes one line at a time. To get around this, I place all the code I would like executed in another file, and have PyRun_SimpleString run an exec(file.read()) on the open file (3 mins)
+Two gotchas: locking the GIL, and making sure the running process has access to the memory analysis modules (2 min)
+Conclusion (2 min)</p>
+<p>Original slides: <a class="reference external" href="https://t.ly/3VX2b">https://t.ly/3VX2b</a></p>
+<p>About the speaker
+Lisa is a Production Engineer at Facebook and a CPython Core Developer. She is passionate about Python, and has spent time using Python on networking and security teams, and now focuses on improving the language itself and enabling other users of it.</p>
+<p>Sponsor Acknowledgement
+This and other PyBay2019 videos are via the help of our media partner AlphaVoice (<a class="reference external" href="https://www.alphavoice.io/">https://www.alphavoice.io/</a>)!</p>
+<p>#pybay #pybay2019 #python #python3 #gdb</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pybay-2019.html">PyBay 2019</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=xt9v5t4_zvE" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pybay-2019/videos/extending-gdb-with-python-lisa-roach.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

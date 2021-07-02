@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_kei-iwasaki.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-11-23T00:00:00+00:00</updated><entry><title>Collaboration hack with slackbot</title><link href="https://pyvideo.org/pycon-hk-2018/collaboration-hack-with-slackbot.html" rel="alternate"></link><published>2018-11-23T00:00:00+00:00</published><updated>2018-11-23T00:00:00+00:00</updated><author><name>Kei Iwasaki</name></author><id>tag:pyvideo.org,2018-11-23:pycon-hk-2018/collaboration-hack-with-slackbot.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you know that Slack knows that Integration and API are easy to use
+and are hackable collaboration platform? Even Python is able to easily
+make chatbot by using slackbot ( &lt;a class="reference external" href="https://github.com/lins05/slackbot"&gt;https://github.com/lins05/slackbot&lt;/a&gt; ) .
+With using this framework, you are able to let slackbot perform a Python
+process triggered by a mention or a keyword in a conversation on Slack.
+This is means that anything you can do with Python can be run on Slack!!
+(For example, it is acquiring information from the database, acquiring
+data using Web scraping, and deploying applications and so on.)&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In this Talk Session, I’m going to introduce the points of utilization
+of slackbot,&lt;/div&gt;
+&lt;div class="line"&gt;with a talk on SQUEEZE’s efforts to improve the workflow,
+communication and work realized by using slackbot.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Examples of Improve In SQUEEZE Inc (I Companies to which I belong ):&lt;/div&gt;
+&lt;div class="line"&gt;– slackbot make a primary response of request work beyond department&lt;/div&gt;
+&lt;div class="line"&gt;– example of request are that inquiries about the system from business
+team, Customer support etc. – slackbot receives request for products
+and notifies them collectively at a fixed time.&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>たった一ファイルの python スクリプトから始める OSS 開発入門</title><link href="https://pyvideo.org/pycon-japan-2016/tatsutayi-huairuno-python-sukuriputokarashi-meru-oss-kai-fa-ru-men.html" rel="alternate"></link><published>2016-09-20T00:00:00+00:00</published><updated>2016-09-20T00:00:00+00:00</updated><author><name>Kei Iwasaki</name></author><id>tag:pyvideo.org,2016-09-20:pycon-japan-2016/tatsutayi-huairuno-python-sukuriputokarashi-meru-oss-kai-fa-ru-men.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;1ファイルのスクリプトを書き捨てる程度でしかコードを書かなかったところから、書いたコードを公開するようになってによって起こった技術的な視野の広がりについて、実際の体験を元にお話します。&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;オペレーション中心のWeb系インフラエンジニアが 1ファイルのシェルスクリプトを書き捨てる程度でしかコードを書かなかったところから python を使い始めたこと、そして更に書いたコードを公開するようになってによってどのような変化が起こったのか、ということを紹介します。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h4&gt;ストーリー&lt;/h4&gt;
+&lt;p&gt;日々のオペレーション中心の業務の片手間でたまに1ファイルのシェルスクリプトを書く程度だったところから python に手をつけ始めたことにより、&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;URLエンコードをした状態のファイルパスで 255byte (アプリケーションのDBカラムのサイズ) を超えるもの一覧を取得する&lt;/li&gt;
+&lt;li&gt;便利なPyPIモジュールを使ってやや複雑な条件のCDNキャッシュのパージ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;といったそれまでなかなか手を付けづらかった調査や作業の効率化ができるようになりました。&lt;/p&gt;
+&lt;p&gt;一方で書いたスクリプトは実行したサーバにそのまま放置されてしまい、結果自分でも存在を忘れがちになります。 よその環境で使いたいと思ったときに移植するのが非常に面倒だったりと、せっかくコードで作業をに対するアプローチ方法が増えても、自分に依存してしまうという状況は大きく変わりませんでした。&lt;/p&gt;
+&lt;p&gt;そんな中、自分が見ている環境の 複数サーバに変更を加えたりファイルのやり取りを効率的にするためのコマンドラインツールの開発を行い、 踏み台にサーバに導入し当時のチームに展開しました。&lt;/p&gt;
+&lt;p&gt;この際に Github Enterprice 上のコードを pip install で導入する形で展開しましたが この体験がパッケージング、PyPIへの登録方法を覚えるきっかけになり、私にとっての一つのブレイクスルーとなりました。&lt;/p&gt;
+&lt;p&gt;その結果&lt;/p&gt;
+&lt;p&gt;「このコード、実はPyPIに登録(pip install で入るように)すれば便利では？」&lt;/p&gt;
+&lt;p&gt;という発想が自然になったのです。&lt;/p&gt;
+&lt;p&gt;また公開することを前提にコードを書くということを通じて&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;「普段自分が行っている日々のオペレーションを一般化して捉える」&lt;/li&gt;
+&lt;li&gt;「これまで使っていたOSSなソフトウェアを支えいているのもまた自分たちと同じエンジニアなのだ」&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;という視点がより強くなり、 エンジニアとしての自身の考え方の広がりも実感するようになりました。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h4&gt;アウトライン&lt;/h4&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;オペレーション、シェルスクリプトから python スクリプトへ&lt;/li&gt;
+&lt;li&gt;1 ファイルのpython スクリプトから python を使ったツール開発へ&lt;/li&gt;
+&lt;li&gt;ツール開発からパッケージングよる成果物の配布やってみて&lt;/li&gt;
+&lt;li&gt;パッケージングをしてみた、「pip install で入れば便利なのでは？」の気づき&lt;/li&gt;
+&lt;li&gt;PyPIに公開することを前提にコードを書くようになってよかったこと&lt;/li&gt;
+&lt;li&gt;これまで私が公開してきたものの紹介&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</summary></entry></feed>

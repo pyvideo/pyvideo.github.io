@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_andrew-dalke.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-07-06T00:00:00+00:00</updated><entry><title>Python's other collection types and algorithms</title><link href="https://pyvideo.org/europython-2011/pythons-other-collection-types-and-algorithms.html" rel="alternate"></link><published>2011-07-18T00:00:00+00:00</published><updated>2011-07-18T00:00:00+00:00</updated><author><name>Andrew Dalke</name></author><id>tag:pyvideo.org,2011-07-18:europython-2011/pythons-other-collection-types-and-algorithms.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Andrew Dalke - 21 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It's impossible to use Python without learning about lists, dictionaries
+and tuples, and most people have at least heard about sets. These four
+collection types are so important and useful that Python has special
+syntax for creating them.&lt;/p&gt;
+&lt;p&gt;Fewer people know about Python's other built-in collection data types
+and algorithms. A deque supports fast appends and pops from both ends
+and is great for breath-first searches, the heapq module helps you
+construct a priority queue on top of lists, and the bisect module is
+handy for quick binary searches of an already sorted list.&lt;/p&gt;
+&lt;p&gt;The defaultdict uses the dict &lt;strong&gt;missing&lt;/strong&gt; hook as a better solution to
+setdefault, OrderedDict is a dictionary that preserves insertion order,
+and Counter is a dictionary specialized for counting hashable objects. A
+namedtuple is handy if you want to support both index and attribute
+lookups for the same item, and a frozenset is a hashable form of a set
+which can be used as keys in a dictionary or set.&lt;/p&gt;
+&lt;p&gt;My talk will go over these 8 different classes and modules. I'll give
+concrete examples of how to use them and why they are useful. The target
+audience is intermediate programmers who are familiar with the Python's
+standard data types and with data types in general, but who don't know
+all of the functionality available in modern Python.&lt;/p&gt;
+</summary><category term="bisect"></category><category term="dictionaries"></category><category term="frozenset"></category><category term="heapq"></category><category term="learning"></category><category term="namedtuple"></category><category term="ordereddict"></category></entry><entry><title>concurrent.futures is here</title><link href="https://pyvideo.org/europython-2012/concurrentfutures-is-here.html" rel="alternate"></link><published>2012-07-06T00:00:00+00:00</published><updated>2012-07-06T00:00:00+00:00</updated><author><name>Andrew Dalke</name></author><id>tag:pyvideo.org,2012-07-06:europython-2012/concurrentfutures-is-here.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] Andrew Dalke - 5 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The future is here! Or rather, concurrent.futures became part of the
+Python standard library with 3.2. This style of asynchronous
+programming, also known as promises, has been around for decades but is
+only recently becoming popular in a number of languages and libraries.
+My presentation is meant for a Python programmer who knows nothing about
+futures. I’ll structure it around processing web server logs, and show
+several ways to Python code can make more effective use of a multi-core
+machine. In some cases the multi-threaded executor is good enough, but
+in others the right solution is the multi-process executor. Because of
+the unified API, it’s a one line change to switch from one to the other.
+It isn’t hard to write your own executor for different compute models.
+I’ll show that by developing a new one which works on top of the PiCloud
+API. At the end I’ll describe some of the more experimental work I’m
+doing to use promises in a dependency graph, where certain computed
+properties are dependent on others. Even though concurrent.futures came
+in 3.2, Python 2.x users can use the API through Alex Grönholm’s
+‘futures’ backport.&lt;/p&gt;
+</summary></entry><entry><title>PLY and PyParsing (#93)</title><link href="https://pyvideo.org/pycon-us-2010/pycon-2010--ply-and-pyparsing---93.html" rel="alternate"></link><published>2010-02-19T00:00:00+00:00</published><updated>2010-02-19T00:00:00+00:00</updated><author><name>Andrew Dalke</name></author><id>tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--ply-and-pyparsing---93.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PLY and PyParsing&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Dalke&lt;/p&gt;
+&lt;p&gt;Got a text parsing problem? In most cases using string manipulation and
+regular expressions will solve it for you. But when the input is
+complex, try reaching for a parsing system to help out.&lt;/p&gt;
+&lt;p&gt;The two most popular in Python are PLY and PyParsing. PLY follows the
+lex/yacc tradition with a domain specific language to describe the
+tokens and grammar. It was built with both error diagnostics and
+performance in mind. PyParsing is a recursive descent parser which
+expresses the format as a Python data structure. It make no distinction
+between lexer and grammar and has a uniform callback system which makes
+certain types of data extraction very easy.&lt;/p&gt;
+&lt;p&gt;In my talk I'll show the basics of how to use both systems for several
+different format parsing tasks, of different complexity. This will let
+you see how to use the parsers and understand more of the tradeoffs
+between complexity, readability, error handling, and performance.&lt;/p&gt;
+</summary><category term="ply"></category><category term="pycon"></category><category term="pycon2010"></category><category term="pyparsing"></category></entry></feed>

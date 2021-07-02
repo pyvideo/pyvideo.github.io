@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_pierrick-brunet.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-10-18T00:00:00+00:00</updated><entry><title>We don't need your loops</title><link href="https://pyvideo.org/pycon-fr-2015/we-dont-need-your-loops.html" rel="alternate"></link><published>2015-10-18T00:00:00+00:00</published><updated>2015-10-18T00:00:00+00:00</updated><author><name>Serge Guelton</name></author><id>tag:pyvideo.org,2015-10-18:pycon-fr-2015/we-dont-need-your-loops.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pythran est un compilateur pour le Python scientifique qui se distingue
+par des performances importantes pour du code de haut niveau.&lt;/p&gt;
+&lt;p&gt;Cette présentation se concentre sur les boucles, ou plutôt l'absence de
+boucle dans les codes numériques, pourquoi on les évite, ce que ça
+apporte, et pourquoi ce n'est pas si grave de les utiliser.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;La boucle. Un pilier de la programation impérative. Et pourtant, les
+utilisateurs avertis de Numpy l'évite comme la peste pour des raisons de
+performance. Heureusement, Numpy fournit de bonnes abstractions piur
+s'en passer dans pas mal de cas.&lt;/p&gt;
+&lt;p&gt;Le but de cette présentation est de montrer que le compilateur Pythran,
+un compilateur statique pour un langage embarqué dans le couple Python /
+Numpy et spécialisé pour le code scientifique, est compatible avec cette
+approche, et qu'il en bénéficie même pour générer du code plus efficace
+que s'il n'avait eu que les boucles à disposition.&lt;/p&gt;
+&lt;p&gt;On tordra ainsi le cou à un vieil adage qui dit que plus on est
+explicite dans sa description de l'algorithme, plus on saura tirer des
+perfs. En pratique, si on souhaite rester au niveau Python - Pythran est
+100% retro-compatible Python - rester à haut niveau n'est pas un frein.&lt;/p&gt;
+</summary></entry><entry><title>Pythran: Static Compilation of Parallel Scientific Kernels</title><link href="https://pyvideo.org/pydata-paris-2015/pythran-static-compilation-of-parallel-scientifi.html" rel="alternate"></link><published>2015-04-17T00:00:00+00:00</published><updated>2015-04-17T00:00:00+00:00</updated><author><name>Pierrick Brunet</name></author><id>tag:pyvideo.org,2015-04-17:pydata-paris-2015/pythran-static-compilation-of-parallel-scientifi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As the use of Python coupled to Numpy/SciPy for numerical computation
+increases, many tools to optimize performance have emerged. Indeed, this
+duo has relatively poor performance when compared to scientific codes
+written in legacy languages like C or Fortran. Cython, Numba, numexpr
+and parakeet belongs to this new compiler ecosystem. And so does
+Pythran, a Python to C++11 translator for scientific Python.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Pythran uses a static compilation approach a la Cython, but with full backward compatibility with Python. It does not only turns Python code into C++ code, it also performs Python/Numpy specific optimizations, generates calls to a parallel, vectorized runtime and makes it possible to write OpenMP annotation in the original Python code. It supports a large range of Numpy functions and can combine them in efficient ways: it can optimize high­level modern Python/Numpy codes and not only Fortran­ with­ a­ Python­ flavor ones.
+
+This talk presents the existing compilation approach and optimization opportunities for numerical Python, their strengths and weaknesses, then focus on the specificities of the Pythran compiler.
+&lt;/pre&gt;
+</summary></entry></feed>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Decoupling Django with Django REST (and a sprinkle of React)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2019.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2019.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Decoupling Django with Django REST (and a sprinkle of React)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-italia-2019/decoupling-django-with-django-rest-and-a-sprinkle-of-react.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/eGqmqqX-zRs/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/eGqmqqX-zRs/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="javascript" />
+    <meta name="tags" content="django-rest-framework" />
+    <meta name="tags" content="REST" />
+    <meta name="tags" content="django" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-italia-2019/decoupling-django-with-django-rest-and-a-sprinkle-of-react.html" rel="bookmark"
+         title="Permalink to Decoupling Django with Django REST (and a sprinkle of React)">Decoupling Django with Django REST (and a sprinkle of React)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2019-05-05T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sun 05 May 2019
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/valentino-gagliardi.html">Valentino Gagliardi</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eGqmqqX-zRs" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><div class="section" id="abstract">
+<h4>Abstract</h4>
+<p>With the rise of JavaScript as the lingua-franca of the web and the
+steady growth of libraries like React, today’s web developers can build
+rich and well structured frontend experiences. Pair that with Django and
+Django REST framework and you get the perfect combination. But it’s not
+all bells and whistles. What challenges are we going to face when
+decoupling Django with Django REST? What are the best practices? How to
+structure such a project? In this talk I’ll guide Django developers
+(both beginners and intermediate) from 0 to structuring a decoupled
+Django project.</p>
+</div>
+<div class="section" id="description">
+<h4>Description</h4>
+<p>The goal of this talk is to give Django developers an overview of a
+Django REST project, paired with React, as well as the tradeoffs of the
+decoupled approach. By the end of the talk the developer should be able
+to configure a new Django REST project and use a frontend library for
+interacting with the API.</p>
+<div class="section" id="why-and-when-to-decouple-django">
+<h5>1. Why and when to decouple Django</h5>
+<p>There are many ways for decoupling a Django application and each one
+depends on the use case. In this section we’ll outline what decoupling
+is, why decoupling is a great approach and why sometimes it is not the
+right thing to do. We’ll see what the challenges of such approach are
+and how to deal with authentication in a decoupled context.</p>
+</div>
+<div class="section" id="django-rest-fundamentals">
+<h5>2. Django REST fundamentals</h5>
+<p>Django REST framework is a Django application for exposing API endpoints
+from a Django project. It this section we’ll see the building blocks of
+a Django API app: the model, the serializer and the view. Models should
+not be a surprise for the audience, they come from Django. Serializers
+instead are provided by Django REST. We’ll also see how a Django REST
+view looks like and how to leverage both function based views and
+generic views within the project.</p>
+</div>
+<div class="section" id="setting-up-the-frontend">
+<h5>3. Setting up the frontend</h5>
+<p>The key for a truly decoupled experience is a frontend for consuming and
+interacting with the API. In this section we’ll see how to structure a
+Django REST project alongside with React. We will explore two
+approaches: fully decoupled frontend and mixed frontend.</p>
+</div>
+<div class="section" id="a-note-on-testing-and-closing-words">
+<h5>4. A note on testing and closing words</h5>
+<p>In the context of a decoupled Django site we move from the typical
+Django tests to testing the API’s response instead. We will see how a
+simple API test looks like. And for the JavaScript frontend we’ll take a
+look at the current available tooling for functional testing.</p>
+<p>Questions?</p>
+<p><strong>Feedback form:</strong> <a class="reference external" href="https://python.it/feedback-1735">https://python.it/feedback-1735</a></p>
+<p>in __on <strong>Sunday 5 May</strong> at 10:15 <a class="reference external" href="/en/sprints/schedule/pycon10/">**See
+schedule**</a></p>
+</div>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-italia-2019.html">PyCon Italia 2019</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=eGqmqqX-zRs" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/javascript/">javascript</a>, <a href="https://pyvideo.org/tag/django-rest-framework/">django-rest-framework</a>, <a href="https://pyvideo.org/tag/rest/">REST</a>, <a href="https://pyvideo.org/tag/django/">django</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://www.pycon.it/p3/schedule/pycon10/">
+Conference schedule                </a></li><li><a href="https://www.pycon.it/media/conference/slides/decoupling-django-with-django-rest-and-a-sprinkle-of-react.pdf">
+https://www.pycon.it/media/conference/slides/decoupling-django-with-django-rest-and-a-sprinkle-of...                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-italia-2019/videos/valentino-gagliardi-decoupling-django-with-django-rest-and-a-sprinkle-of-react.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

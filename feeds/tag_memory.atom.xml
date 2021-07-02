@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_memory.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-21T00:00:00+00:00</updated><entry><title>Python 103: Mmmm... Understanding Python's Memory Model, Mutability, and Methods</title><link href="https://pyvideo.org/europython-2011/python-103-mmmm-understanding-pythons-memory.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Wesley J. Chun</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/python-103-mmmm-understanding-pythons-memory.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] wesley chun - 22 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In Python 101, you learned basic Python syntax, what its flow control
+mechanisms and basic data types are and how they work. You learned how
+to write functions and developed executable Python scripts that actually
+work! You probably also learned how to create files, how to open, read
+from or write to them, and close them. Perhaps you've even learned a
+little bit of object- oriented programming, developed a couple of Python
+classes, most with user- defined methods, and have no problems creating
+instances to use in your applications.&lt;/p&gt;
+&lt;p&gt;In Python 102 (or equivalent in experience), you explored further, using
+default values and variable arguments for functions, discovered how to
+catch exceptions and write handlers for them… perhaps you've even
+created your own exceptions. You have found some useful Python standard
+library modules and using them actively in your own applications. You've
+quite comfortable with OOP, creating classes and using instances
+regularly in your programs. In fact, you've been coding Python for 6
+months to a couple of years now. You're much more serious about Python
+now because you're no longer a &amp;quot;beginner.&amp;quot; You've even taken notice at
+the growing number of jobs requesting or requiring Python skills.&lt;/p&gt;
+&lt;p&gt;As an aspiring Python developer, you are starting to be more aware of
+the entire ecosystem around you, and think you may be ready for
+&amp;quot;prime-time&amp;quot; and feel able to take on a full-time position as a Python
+programmer. However, if you have experienced one or more of the below
+questions or problems, this talk may be for you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Throughout this time, you've experienced strange bugs in your code.
+In particular, you notice that things don't always behave the way you
+expect and have spent a good amount of time debugging various parts
+of your software that you thought were actually correct - you work
+around them but are disturbed and don't have the time nor committment
+to fully investigate.&lt;/li&gt;
+&lt;li&gt;You've created classes and objects just fine but wish that you could
+use some of Python's operators (like +, in, len(), etc.) with your
+objects, which feel like they're &amp;quot;2nd-class&amp;quot; citizens compared to the
+standard data types.&lt;/li&gt;
+&lt;li&gt;Do you know what functional evaluation strategy means? Have you been
+asked or considered whether Python is &amp;quot;call-by-value&amp;quot; or
+&amp;quot;call-by-reference&amp;quot;? It is important to you, and can you clearly
+explain your answer?&lt;/li&gt;
+&lt;li&gt;What does &amp;quot;mutability&amp;quot; mean? What is the difference between mutable
+and immutable objects? Which Python objects are mutable and which
+aren't?&lt;/li&gt;
+&lt;li&gt;Can you clearly explain both the output in the two code snippets
+below, and even more importantly, &lt;em&gt;why&lt;/em&gt; the output is the way it is?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SNIPPET A x = 42 y = x x += 1 print x print y&lt;/p&gt;
+&lt;p&gt;SNIPPET B x = [1, 2, 3] y = x x[0] = 4 print x print y&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Have you seen odd behavior in container or collection objects like
+lists or dictionaries? For example, you may have copied those types
+of objects and discovered weird things happening to both the original
+and the copy, or that you seen something not quite right if you loop
+through it and remove items from it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is what Python 103 is for… to fill in all the missing gaps, to
+answer all the questions (including those above) that do not seem to
+have easy-to-find answers on Google, but only if you have the desire to
+learn more about the interpreter to take your Python skills to the next
+level.&lt;/p&gt;
+</summary><category term="debugging"></category><category term="exceptions"></category><category term="memory"></category><category term="scripts"></category></entry><entry><title>Debugging and profiling techniques</title><link href="https://pyvideo.org/europython-2011/debugging-and-profiling-techniques.html" rel="alternate"></link><published>2011-07-20T00:00:00+00:00</published><updated>2011-07-20T00:00:00+00:00</updated><author><name>Giovanni Bajo</name></author><id>tag:pyvideo.org,2011-07-20:europython-2011/debugging-and-profiling-techniques.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Giovanni Bajo - 22 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will give on overview over some common problems related to
+profiling and debugging CPython applications (especially desktop-based
+ones).&lt;/p&gt;
+&lt;p&gt;The following subjects will be covered:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Debugging of memory/resource leaks (circular references, &lt;strong&gt;del&lt;/strong&gt;,
+weakref, garbage collector, etc.). We will show in details how the
+memory management of Python objects work and we will show a few
+tricks to track memory leaks&lt;/li&gt;
+&lt;li&gt;Python code profiling (profile/hotshots/cProfile, design of small
+tests, etc.). We will show how to measure, profile, and analyse an
+application to spot performance problems and solve them.&lt;/li&gt;
+&lt;li&gt;Post-mortem step-by-step debugging of C/C++ extension under Windows.
+We will show how to setup Visual Studio for debugging, how to see a
+traceback in case of an unexpected segfault, and how to further debug
+and solve the crash.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is aimed at intermediate Python programmers, who have already
+developed non-trivial Python applications but have never &amp;quot;jumped
+through&amp;quot; the interpreter abstraction layer. If you feel a little lost
+when you see a segfault from a Python program or you don't have a clear
+idea how memory is collected in Python, this talk is perfect for you.&lt;/p&gt;
+</summary><category term="cpython"></category><category term="debugging"></category><category term="design"></category><category term="memory"></category><category term="performance"></category><category term="profiling"></category><category term="python,"></category></entry><entry><title>Interoperability: from Python to Clojure and the other way round</title><link href="https://pyvideo.org/europython-2011/interoperability-from-python-to-clojure-and-the.html" rel="alternate"></link><published>2011-07-13T00:00:00+00:00</published><updated>2011-07-13T00:00:00+00:00</updated><author><name>Enrico Franchi</name></author><id>tag:pyvideo.org,2011-07-13:europython-2011/interoperability-from-python-to-clojure-and-the.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Enrico Franchi - 21 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Clojure is a modern Lisp dialect symbiotic with the Java Virtual Machine
+and designed for concurrency. Clojure is compiled to byte-code and yet
+is fully dynamic. It is very oriented towards functional programming and
+manages state change in a controlled environment with software
+transactional memory (STM). Since Clojure is a Lisp dialect, it retains
+the code-as-data philosophy and has a powerful macro system&lt;/p&gt;
+&lt;p&gt;Using the Jython, an implementation of the Python programming language
+written in Java, it is possible to call Clojure from Python and call
+Python from Clojure, using the JVM as an interoperability platform.&lt;/p&gt;
+&lt;p&gt;After a brief introduction of the main Clojure features, the
+presentation will show how Jython and Clojure can be used together.&lt;/p&gt;
+&lt;p&gt;No previous knowledge of Clojure (or Lisp) is assumed nor required.&lt;/p&gt;
+</summary><category term="java"></category><category term="jvm"></category><category term="jython"></category><category term="memory"></category></entry><entry><title>PyConAU 2010: What's eating my memory?</title><link href="https://pyvideo.org/pycon-au-2010/pyconau-2010--what--39-s-eating-my-memory.html" rel="alternate"></link><published>2010-06-26T00:00:00+00:00</published><updated>2010-06-26T00:00:00+00:00</updated><author><name>Andrew Bennetts</name></author><id>tag:pyvideo.org,2010-06-26:pycon-au-2010/pyconau-2010--what--39-s-eating-my-memory.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's eating my memory?&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Bennetts (Canonical)&lt;/p&gt;
+&lt;p&gt;Ever wondered why your Python process has consumed 2 gigabytes of memory
+overnight? Ever torn out your hair trying to find out why? Andrew will
+show you some tools and techniques that can help you investigate.&lt;/p&gt;
+</summary><category term="memory"></category><category term="optimisation"></category><category term="performance"></category><category term="pyconau"></category><category term="pyconau2010"></category></entry><entry><title>"Dude, Where's My RAM?" - A deep dive into how Python uses memory</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011---quot-dude--where--39-s-my-ram--quot-.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Dave Malcolm</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011---quot-dude--where--39-s-my-ram--quot-.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;Dude, Where's My RAM?&amp;quot; - A deep dive into how Python uses memory&lt;/p&gt;
+&lt;p&gt;Presented by Dave Malcolm&lt;/p&gt;
+&lt;p&gt;This talk will give a deep dive into how CPython uses memory. I'll be
+demonstrating a new tool I've written that analyses CPython's memory
+usage, and offer hints and tips on how you can reduce the memory
+footprint of your Python programs.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Is your Python program using too much memory? This talk will give a deep
+dive into how CPython uses memory - starting from objects in your Python
+code, down through the various implementations layers, eventually
+reaching actual hardware.&lt;/p&gt;
+&lt;p&gt;In particular, I'll be demonstrating a new tool I've written that can
+track CPython's memory usage down to the level of individual bytes, and
+offer hints and tips on how you can reduce the memory footprint of your
+Python programs.&lt;/p&gt;
+</summary><category term="cpython"></category><category term="memory"></category><category term="pycon"></category><category term="pycon2011"></category></entry></feed>

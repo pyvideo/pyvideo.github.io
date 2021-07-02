@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Sleepy: How to suspend and resume your cpython process from inside</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-japan-2016.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-japan-2016.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Sleepy: How to suspend and resume your cpython process from inside" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-japan-2016/sleepy-how-to-suspend-and-resume-your-cpython-process-from-inside.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/yb1CWDeWCXA/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/yb1CWDeWCXA/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-japan-2016/sleepy-how-to-suspend-and-resume-your-cpython-process-from-inside.html" rel="bookmark"
+         title="Permalink to Sleepy: How to suspend and resume your cpython process from inside">Sleepy: How to suspend and resume your cpython process from inside
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2016-09-22T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 22 September 2016
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/david-weil.html">David Weil</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yb1CWDeWCXA" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>In this talk we'll propose and explain how it is possible suspend &amp; resume a python process execution from within python using no external-help. Pure-python-ffi-free code. This kind of tool is useful with the proliferation of cloud serv since they offer restricted execution env in terms of time/mem and process relocation/prio is required. Besides we’ll get unexpected debugger improvements.</p>
+<div class="section" id="detailed-abstract">
+<h4>Detailed Abstract</h4>
+<p>People will be introduced to a simple case of what continuations are, i.e.: suspending a whole python process and resuming it from where it was saved.</p>
+<p>We'll present some scenarios where it would be useful:</p>
+<ul class="simple">
+<li>restricted time execution environments</li>
+<li>distributed computing farms</li>
+<li>tasks would become dynamic, meaning they could be switched from one host to another at the user's will -run- time code problems evaluation by code re-execution, etc.</li>
+</ul>
+<p>A comparison to different alternatives will be shown:</p>
+<ul class="simple">
+<li>other languages features</li>
+<li>operating system provided features</li>
+</ul>
+<p>We'll present a method to persist execution state and then explain how to restore it. To do that, we use python's debugger in order to restore the state.</p>
+<p>Some problems arise in that process such as:</p>
+<ul class="simple">
+<li>how to persist and restore objects created in C</li>
+<li>how to restore process execution using debugger's functions</li>
+</ul>
+<p>To persist and restore objects created in C, I created python wrappers which would replicate C-created objects and expose their own methods and instance variables.</p>
+<p>To restore a process execution in a given point, we use the python debugger. With it, is possible to start the code in a programmatic way instrumenting to jump directly into the function call belonging to frames present in saved call-stack.</p>
+<p>The main problem here lies in the fact that the debugger is not powerful enough to jump from any function entrypoint into arbitrary points inside the funcion, i.e.: you can’t jump inside a block of code!</p>
+<p>For that, I present 3 different approaches to workaround that:</p>
+<ul class="simple">
+<li>block-unrolling : ie: pasting and compiling block’s code in the same place it is located and also, after function end, in an unrolled way (check added block1 after return) :</li>
+</ul>
+<blockquote>
+<pre class="code python literal-block">
+<span class="k">for</span> <span class="n">something</span> <span class="ow">in</span> <span class="n">some_iterator</span><span class="p">:</span>
+    <span class="n">block1</span>
+<span class="k">return</span>
+<span class="n">block1</span>
+</pre>
+</blockquote>
+<ul class="simple">
+<li>the alternative is to replace the expressions which control loops with assisted functions, like:</li>
+</ul>
+<blockquote>
+<pre class="code python literal-block">
+<span class="k">for</span> <span class="n">something</span> <span class="ow">in</span> <span class="n">my_library_controlled_iterator</span><span class="p">(</span><span class="n">original_iterator</span><span class="p">):</span>
+    <span class="n">block1</span>
+<span class="k">return</span>
+</pre>
+</blockquote>
+<ul class="simple">
+<li>letting us control the debugger and execute the loop instructions (returning controlled value from the assisted function iterator), and then jump again to call the function for the next frame in the call-stack.</li>
+<li>it is possible to rewrite python’s byte-code to have no block byte-codes. This is the method I chose for my implementation, and I will explain how the bytecode will be rewritten for each control structure found.</li>
+</ul>
+<p>After that, major problems are solved and we have a working prototype.</p>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-japan-2016.html">PyCon Japan 2016</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=yb1CWDeWCXA" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://speakerdeck.com/tenuki/sleepy-how-to-suspend-and-resume-your-cpython-process-from-inside">
+https://speakerdeck.com/tenuki/sleepy-how-to-suspend-and-resume-your-cpython-process-from-inside                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-jp-2016/videos/4_09-sleepy-how-to-suspend-and-resume-your-cpython-process-from-inside.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

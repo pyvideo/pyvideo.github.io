@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jaime-fernandez-del-rio.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-05-20T15:45:00+02:00</updated><entry><title>The Secret Life Of Rolling Pandas</title><link href="https://pyvideo.org/pydata-barcelona-2017/the-secret-life-of-rolling-pandas.html" rel="alternate"></link><published>2017-05-20T15:45:00+02:00</published><updated>2017-05-20T15:45:00+02:00</updated><author><name>Jaime Fernandez del Rio</name></author><id>tag:pyvideo.org,2017-05-20:pydata-barcelona-2017/the-secret-life-of-rolling-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas provides a powerful set of functions to compute statistics on rolling windows. We will go beyond the convenient interface, and peek at the algorithmic gems that implement these operations efficiently: summed area tables, Welford's method, skip lists, ring buffers, deques... will all get their minute of fame, and attendees may learn a thing or two they can use in their everyday coding.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A quick overview of the Rolling and Expanding objects in pandas. Why straightforward implementations, even clever ones using advanced NumPy tricks, are inefficient.&lt;/li&gt;
+&lt;li&gt;How is Series.rolling().sum() implemented. How the same idea can be extended to higher dimensions with the help of the inclusion-exclusion principle to yield summed area tables.&lt;/li&gt;
+&lt;li&gt;How are Series.rolling().var() and friends implemented. The importance of numerically stable algorithms: why Welford's method is the better choice, even if it's a little slower. How can the same ideas be generalized to higher order moments, and used to parallelize computations.&lt;/li&gt;
+&lt;li&gt;How are Series.rolling().max() and .min() implemented. The beauty of clever algorithms. The use of specialized data structures: a ring buffer as a deque.&lt;/li&gt;
+&lt;li&gt;How are Series.rolling().median() and .quantile() implemented. More specialized data structures: the skip list, or why randomization can be your friend.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="pandas"></category></entry></feed>

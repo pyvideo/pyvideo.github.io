@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_alex-vinyals.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-05T00:00:00+00:00</updated><entry><title>Ingesting 35 million hotel images with python in the cloud.</title><link href="https://pyvideo.org/europython-2016/ingesting-35-million-hotel-images-with-python-in-the-cloud.html" rel="alternate"></link><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><author><name>Alex Vinyals</name></author><id>tag:pyvideo.org,2016-08-05:europython-2016/ingesting-35-million-hotel-images-with-python-in-the-cloud.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alex Vinyals - Ingesting 35 million hotel images with python in the cloud.
+[EuroPython 2016]
+[19 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/ingesting-35-million-hotel-images-with-python-in-the-cloud"&gt;https://ep2016.europython.eu//conference/talks/ingesting-35-million-hotel-images-with-python-in-the-cloud&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;This talk covers the distributed architecture that Skyscanner built to
+solve the data challenges involved in the generation of images of all
+hotels in the world.  Putting together a distributed system in Python,
+based on queues, surfing on the AWS Cloud.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;Our goal? To build an incremental image processing pipeline that
+discards poor quality and duplicated images,  scaling the final images
+to several sizes to optimise for mobile devices.&lt;/p&gt;
+&lt;p&gt;Among the challenges:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Ingest all the input images that partners provide us.&lt;/li&gt;
+&lt;li&gt;Detect and remove bad quality + duplicated images from reaching production.&lt;/li&gt;
+&lt;li&gt;Resize all the generated images to optimise for mobile devices.&lt;/li&gt;
+&lt;li&gt;Ensure the process scales and behaves in an incremental way.&lt;/li&gt;
+&lt;li&gt;Ensure the whole process fits in a time constrained window.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Among the tools we used? Pillow, ImageHash, Kombu and Boto.&lt;/p&gt;
+</summary></entry></feed>

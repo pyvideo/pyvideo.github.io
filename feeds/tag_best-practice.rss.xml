@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 12 Jul 2019 00:00:00 +0000</lastBuildDate><item><title>Advanced asyncio: Solving Real-world Production Problems</title><link>https://pyvideo.org/europython-2019/advanced-asyncio-solving-real-world-production-problems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and profiling, and working with
+threaded code. We’ll learn how to approach asynchronous and concurrent
+programming with Python’s asyncio library, take away some best
+practices, and learn what pitfalls to avoid.&lt;/p&gt;
+&lt;p&gt;Outline:
+(40 minutes + 5 min Q&amp;amp;A, if unable to get 45 minutes, then 30 min slot
+with no time for Q&amp;amp;A)&lt;/p&gt;
+&lt;div class="section" id="intro-2m"&gt;
+&lt;h4&gt;Intro (2m)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Speaker/company intro&lt;/li&gt;
+&lt;li&gt;Setting the context/purpose of talk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="foundations-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Foundations (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Initial setup of an asyncio service (2m)&lt;ul&gt;
+&lt;li&gt;Required boilerplate code&lt;/li&gt;
+&lt;li&gt;Inspiration from official asyncio tutorial docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making a service &lt;em&gt;actually&lt;/em&gt; concurrent (5m)&lt;ul&gt;
+&lt;li&gt;non-blocking vs concurrent&lt;/li&gt;
+&lt;li&gt;when to be concurrent vs serial&lt;/li&gt;
+&lt;li&gt;using callbacks vs awaits vs scheduling tasks (create_task) vs
+asyncio.Events&lt;/li&gt;
+&lt;li&gt;Making synchronous code asyncio-friendly (2m)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intermediate-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Intermediate (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Graceful shutdowns (3m)&lt;ul&gt;
+&lt;li&gt;What a signal handler is, why it’s needed&lt;/li&gt;
+&lt;li&gt;What signals to listen to&lt;/li&gt;
+&lt;li&gt;Gotchas of cancelling tasks, asyncio.shield + shutdown behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exception handling (3m)&lt;ul&gt;
+&lt;li&gt;Difference between top-level exception handling and handling
+within other coroutines&lt;/li&gt;
+&lt;li&gt;Avoid mistakenly swallowing/missing raised exceptions&lt;/li&gt;
+&lt;li&gt;Making use of loop.set_exception_handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making threaded code asyncio-“friendly” (3m)&lt;ul&gt;
+&lt;li&gt;Calling threaded code from coroutines (aka running within a
+ThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Calling coroutines from from threaded code (aka
+run_coroutine_threadsafe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advanced-19m-trimmed-to-15m-for-30-min-slot"&gt;
+&lt;h4&gt;Advanced (19m - trimmed to 15m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Testing asyncio code (7m)&lt;ul&gt;
+&lt;li&gt;Benefits of debug mode&lt;/li&gt;
+&lt;li&gt;How to mock coroutines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debugging an asyncio service (5m)&lt;ul&gt;
+&lt;li&gt;Reinforce debug mode&lt;/li&gt;
+&lt;li&gt;Using “tricks&amp;quot; like &lt;tt class="docutils literal"&gt;asyncio.all_tasks&lt;/tt&gt; with logging,
+&lt;tt class="docutils literal"&gt;loop.slow_callback_duration&lt;/tt&gt;, adding context/stack trace in default
+exception handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Profiling (7m)&lt;ul&gt;
+&lt;li&gt;Basic profiling (cProfile, strace) - not that different from sync
+code&lt;/li&gt;
+&lt;li&gt;Continuous profiling with 3rd party tools, i.e. github.com/what-
+studio/profiling&lt;/li&gt;
+&lt;li&gt;PyCharm’s asyncio &amp;amp; thread profiler&lt;/li&gt;
+&lt;li&gt;How to properly trace a workflow/request (e.g. for the purpose of
+distributed tracing) (to be cut if not enough time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrap-up-review-1m"&gt;
+&lt;h4&gt;Wrap up/Review (1m)&lt;/h4&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lynn Root</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/advanced-asyncio-solving-real-world-production-problems.html</guid><category>ASYNC / Concurrency</category><category>Best Practice</category><category>Development</category></item><item><title>Code quality in Python</title><link>https://pyvideo.org/europython-2019/code-quality-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Four years ago I talked about code quality during EuroPython in
+Bilbao. A lot of things changed from that time. Firstly, most tools I
+presented were still developed and gained new features, but also new
+ones appeared I wanted to discuss with you. Secondly, Python changed,
+Python 3 has type hints on board and there is a new tool dedicated to
+checking the types. Thirdly - I changed. I'm more distanced form my
+zealous approach from four years ago. I got real and reasonable.
+That's why I wanted to talk about code quality tools in Python again.&lt;/div&gt;
+&lt;div class="line"&gt;I'll talk about all the software that can make code review a bit
+simpler by pointing out possible errors, duplicates or unused code.
+I'll talk again about formatters and how can they be used in
+modern-time projects. And I'll talk about hobgoblins, if you know what
+I mean :)&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radosław Ganczarek</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/code-quality-in-python.html</guid><category>Best Practice</category><category>Code Analysis</category><category>Python 3</category><category>Tooling</category><category>Type-Hinting</category></item><item><title>Code review for Beginners and Experts: Tips &amp; Tricks</title><link>https://pyvideo.org/europython-2019/code-review-for-beginners-and-experts-tips-tricks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Code review is not just boring duty. It's mutual responsibility for
+the software we're releasing. It's one of the most critical aspects of
+code quality, and therefore it's the first step of quality assurance.
+This is also the key to easier programming and better maintainability.
+Clean code is much easier to debug, and it's much harder to introduce
+a bug in such code.&lt;/div&gt;
+&lt;div class="line"&gt;When you think about code review, you probably think about verifying
+and examining the code. Reviewing the expert's code may look like a
+waste of time because he knows what he's doing. Reviewing the code by
+a beginner may look like a waste of time because he's not able to find
+as many defects as an experienced developer. Code review is a code
+quality tool in the first place, but it's also much beyond that. You
+can teach or help someone, learn from somebody and much more both from
+the position of reviewer and reviewee.&lt;/div&gt;
+&lt;div class="line"&gt;There is much more about the real power of code review which I want to
+share with you.&lt;/div&gt;
+&lt;div class="line"&gt;This talk is also about how to do it the right way and how to not do
+it based on lessons learned and my experience within the diverse teams
+of people with a variety of knowledge and experience. I was reviewing
+the code but, on the other hand, I was also being reviewed. I'd like
+to pass my observations to people who are reviewing the code both in
+commercial and open source projects for a while. This talk is also for
+those who want to start to review the code, but they do not know how
+to do it.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Łukasz Kąkol</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/code-review-for-beginners-and-experts-tips-tricks.html</guid><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Development</category><category>Programming</category></item><item><title>Configuring uWSGI for Production: The defaults are all wrong</title><link>https://pyvideo.org/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Two years ago, we began migrating from a proprietary service framework
+to a WSGI-compliant one. We chose uWSGI as our host because of its
+performance and feature set. But, while powerful, uWSGI's defaults are
+driven by backward compatibility and are not ideal for new deployments.
+Powerful features can be overlooked due to the sheer magnitude of its
+feature set and spotty documentation. As we've scaled up the number of
+services hosted by uWSGI over the last year, we've had to tweak our
+standard configuration.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll present the base uWSGI configuration we use as a
+starting point for all services, as well as some tips to avoid known
+gotchas and provide a base level of defensiveness and high reliability.
+This base configuration makes use of several &amp;quot;no-cost&amp;quot; uWSGI features
+that help protect services from common, yet difficult to prevent issues
+-- some of which we discovered the hard way. We'll also talk about some
+programmatic uWSGI features which can be leveraged to improve
+reliability and improve outage response.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the topics we'll cover include:&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating memory leaks&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating stuck, hung, or infinitely looping processes&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing misconfigurations&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing wasted development effort&lt;/div&gt;
+&lt;div class="line"&gt;- Improving outage response&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Sperl</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</guid><category>Best Practice</category><category>Distributed Systems</category><category>Microservices</category><category>Web Servers and MicroFWs</category><category>failures/mistakes</category></item><item><title>Don't do this at work</title><link>https://pyvideo.org/europython-2019/dont-do-this-at-work.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I reframe a computer programming workshop for kids I
+delivered earlier this year, exploring and sharing my experience
+throughout that journey, from preparation to delivery, by recreating a
+simple yet engaging enough game.&lt;/p&gt;
+&lt;p&gt;With that I'll both demonstrate several Python related techniques and
+tools many may not be aware of, on one hand, and, on the other, extract
+provocative questions about general learning processes, especially when
+targeted at professional developers.&lt;/p&gt;
+&lt;p&gt;I promise zero slides and a somewhat fast-paced live (re)coding session,
+intertwined with comments on good/bad techniques, along with a
+surprising exploration of the turtle module in the Standard Library --
+it is more capable than you think.&lt;/p&gt;
+&lt;p&gt;I wrap up with a self-code review and with thoughts on how such a game
+could be improved, what implications that could have for both beginners
+and seasoned professionals: should you do this at work?&lt;/p&gt;
+&lt;p&gt;Targeting 10 minute Q&amp;amp;A / discussion by the end!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tiago Montes</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/dont-do-this-at-work.html</guid><category>Best Practice</category><category>Education</category><category>Learning</category><category>Life</category><category>Python Skills</category></item><item><title>Don't start with a database</title><link>https://pyvideo.org/europython-2019/dont-start-with-a-database.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What you do when you start a new project? Usually, we begin with
+database design, then we prepare a migration system, user registration,
+and all different stuff that distracts us from doing what is most
+important - business logic. With the clean architecture, we can learn
+how to start a project in another way and this will be one of two main
+topics of my talk. The second one will be about new features in Python.
+You probably heard about typings, mypy, and dataclasses, but I will show
+you how they can be used in real life project that can be developed over
+many years in production lifecycle. There will be no &amp;quot;hello world&amp;quot; app,
+no copy &amp;amp; paste of documentation, only practical knowledge learned
+through many years of practice.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Grzegorz Kocjan</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/dont-start-with-a-database.html</guid><category>APIs</category><category>Abstractions</category><category>Architecture</category><category>Best Practice</category><category>Clean Code</category></item><item><title>How we run GraphQL APIs in production on our Kubernetes cluster</title><link>https://pyvideo.org/europython-2019/how-we-run-graphql-apis-in-production-on-our-kubernetes-cluster.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I would like to share the workflow and tools we use to
+build, deploy and operate GraphQL APIs on our on-premise Kubernetes
+cluster.&lt;/p&gt;
+&lt;p&gt;I will share code and command examples explaining how we are operating
+our applications since our recent transition from REST APIs on Web
+servers to GraphQL APIs containers on Kubernetes.&lt;/p&gt;
+&lt;p&gt;This talk will not be about the difference between REST and GraphQL but
+focus on the workflow, tools and experience we gained in switching our
+run time environments and API models.&lt;/p&gt;
+&lt;p&gt;At Numberly, we have built and are operating our own on-premise
+Kubernetes cluster so we will also be talking about its capabilities and
+share some of the experience we gained in doing so.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Proposed agenda:&lt;/div&gt;
+&lt;div class="line"&gt;- Our previous workflow and its limitations&lt;/div&gt;
+&lt;div class="line"&gt;- How we designed our Kubernetes cluster, its capabilities and the
+choices we made&lt;/div&gt;
+&lt;div class="line"&gt;- Developer workflow, environments management and deployment&lt;/div&gt;
+&lt;div class="line"&gt;- Our GraphQL stack, featuring a sample application&lt;/div&gt;
+&lt;div class="line"&gt;- What we're still working on to improve&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexys Jacob</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/how-we-run-graphql-apis-in-production-on-our-kubernetes-cluster.html</guid><category>APIs</category><category>Best Practice</category><category>Case Study</category><category>Docker</category><category>Infrastructure</category></item><item><title>Modern Continuous Delivery for Python Developers</title><link>https://pyvideo.org/europython-2019/modern-continuous-delivery-for-python-developers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deployment automation, cloud platforms, containerization, short
+iterations to develop and release software—we’ve progressed a lot. And
+finally it’s official: Kubernetes and OpenShift are the established
+platforms to help us do scaling and zero downtime deployments with just
+a few hundred lines of YAML. It’s a great time.&lt;/p&gt;
+&lt;p&gt;Can we finally put all our eggs into one basket? Identify the cloud
+platform that fits our needs, and jump on it? That could well backfire:
+Vendor lock-in is the new waterfall, it slows you down. In future you’ll
+want to jump over to the next better platform, in a matter of minutes.
+Not months.&lt;/p&gt;
+&lt;p&gt;This talk is about The Art of Writing deployment pipelines that will
+survive Kubernetes, OpenShift and the like. It’s for Python developers
+and Kubernetes enthusiasts of all levels – no domain specific knowledge
+required, all you need to understand will be explained. You’ll learn how
+to separate application-specific and deployment-specific configuration
+details, to maximize your freedom and avoid vendor lock-in.&lt;/p&gt;
+&lt;p&gt;Come see a demo of a Django project setup that covers everything from
+local development to automatic scaling, flexible enough to be deployed
+on any of your favorite container platforms. Take home a working,
+future-proof setup for your Python applications.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Bittner</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/modern-continuous-delivery-for-python-developers.html</guid><category>Agile</category><category>Best Practice</category><category>Clean Code</category><category>Deployment/Continuous Integration and Delivery</category></item><item><title>Software patterns for productive teams</title><link>https://pyvideo.org/europython-2019/software-patterns-for-productive-teams.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Software development is a team game.&lt;/p&gt;
+&lt;p&gt;When we want to deliver more work, one of the variables that we can
+change is the team size. But as we all know, increasing the team size
+does not automatically translate into increased productivity &amp;amp; more
+features shipped.&lt;/p&gt;
+&lt;p&gt;If things are left unmanaged, people can step on each other toes, block
+each other &amp;amp; generally decrease the overall productivity of a given
+software project.&lt;/p&gt;
+&lt;p&gt;In this talk we'll identify different problems teams can face &amp;amp; see how
+we can solve them using different strategies &amp;amp; patterns.&lt;/p&gt;
+&lt;p&gt;In the end, we want to enable the team to perform better &amp;amp; ship features
+with high confidence. We want enable the team &amp;amp; put its potential into
+building good software.&lt;/p&gt;
+&lt;p&gt;Problems we are going to cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Constant merge conflicts / working in the same files&lt;/li&gt;
+&lt;li&gt;Blocking each other on different features / Feature deadlock&lt;/li&gt;
+&lt;li&gt;Constantly switching between bugfixing &amp;amp; feature development&lt;/li&gt;
+&lt;li&gt;Constant regressions and things breaking down&lt;/li&gt;
+&lt;li&gt;Fighting with local setup &amp;amp; not being able to properly test things,
+especially when working with 3rd parties&lt;/li&gt;
+&lt;li&gt;Merge strategies &amp;amp; improving the work with git &amp;amp; GitHub&lt;/li&gt;
+&lt;li&gt;Communication between team members &amp;amp; ego fights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For each problem, we are going to propose different solutions with
+provided real-life examples from our experience &amp;amp; projects.&lt;/p&gt;
+&lt;p&gt;The examples show are going to be in the context of large Python /
+Django projects.&lt;/p&gt;
+&lt;p&gt;This talk is the natural sequel of the following talks from previous
+EuroPythons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;EuroPython 2017 - Practical Debugging - Tips, Tricks and Ways to
+think - &lt;a class="reference external" href="https://www.youtube.com/watch?v=9Ys4gCUtTh8"&gt;https://www.youtube.com/watch?v=9Ys4gCUtTh8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EuroPython 2018 - Django structure for scale and longevity -
+&lt;a class="reference external" href="https://www.youtube.com/watch?v=yG3ZdxBb1oo"&gt;https://www.youtube.com/watch?v=yG3ZdxBb1oo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radoslav Georgiev</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:europython-2019/software-patterns-for-productive-teams.html</guid><category>Abstractions</category><category>Best Practice</category><category>Communication</category><category>Django Projects</category><category>Management</category></item><item><title>A Day Has Only 24±1 Hours</title><link>https://pyvideo.org/europython-2019/a-day-has-only-24-1-hours.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;On the last Sunday of October you may get “one more hour of sleep” but
+as well may spend much more time debugging code dealing with the time
+zones, daylight saving time shifts and datetime stuff in general.&lt;/p&gt;
+&lt;p&gt;We'll look at a few pitfalls you may encounter when working with
+datetimes in Python. We'll dissect the pytz library, explain why it
+contains over 500 individual time zones while focusing on the 63 entries
+in Europe. We'll also find the reason why pytz is not part of the
+standard Python, why it gets updated so often and why even that won't
+solve all your problems. Do you know what happens after 2021 when the EU
+stops DST switching?&lt;/p&gt;
+&lt;p&gt;Two centuries of short-sighted propaganda and long-term chaos in
+forty-five minutes. Maybe that will make you want to avoid time zones in
+your code altogether!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miroslav Šedivý</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/a-day-has-only-24-1-hours.html</guid><category>Best Practice</category><category>Community</category><category>Python general</category><category>failures/mistakes</category></item><item><title>Exceptional Exceptions</title><link>https://pyvideo.org/europython-2019/exceptional-exceptions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Did you know there are multiple ways to raise and capture exceptions?
+Have you ever wondered if you should raise a built-in exception or
+create your own hierarchy? Did you ever find it hard to understand
+what an exception meant?&lt;/div&gt;
+&lt;div class="line"&gt;This talk will go through the decisions needed to raise and capture
+exceptions when creating a library. We will look at how to translate
+and handle errors, create your own exceptions, and make exceptions
+clear and easy to troubleshoot, while also understanding how they
+actually work, common pitfalls.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk will enable intermediate developers to leave the room with a
+solid understanding of how to work effectively with exceptions. As the
+exception flow usually goes untested, this will help prevent frustrating
+situations when errors occur that are not easy to understand or when an
+unexpected result is produced. The talk will delve into the different
+ways of working with exceptions. We will illustrate this with a
+real-world example to which many developers will be able to relate.&lt;/p&gt;
+&lt;p&gt;Following the talk, intermediate developers will leave the room more
+informed and better prepared to create and handle exceptions, having
+learned about many utilities that were already available to them, but
+were never used or were used improperly.&lt;/p&gt;
+&lt;p&gt;The not-so-advanced Pythonistas will get an in-depth dive into
+exceptions. Even if they might not be able to grasp all of the content,
+they will get a sense of the features that most programmers are unaware
+of and learn to use them when the proper situation arrives.&lt;/p&gt;
+&lt;p&gt;Advanced programmers will find this to be a humorous talk that will
+certainly teach them at least one new thing, as I will dive into parts
+of the grammar of Python that even many advanced programmers are not
+used to.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk is also full of niche information like why the variable that
+catches exceptions doesn’t like outside of the &lt;tt class="docutils literal"&gt;except&lt;/tt&gt; scope.&lt;/div&gt;
+&lt;div class="line"&gt;The talk is comprised of four main sections preceded by an
+introduction to the problem and a conclusion with time for questions
+at the end. We will look at how to raise, capture, create and design
+exceptions, offering tips and pitfalls in each section.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mario Corchero</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/exceptional-exceptions.html</guid><category>Best Practice</category><category>Development</category><category>General</category><category>Python 3</category><category>Python Skills</category></item><item><title>From Python script to Open Source Project</title><link>https://pyvideo.org/europython-2019/from-python-script-to-open-source-project.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you write a cool and useful Python script? Would you like to share
+it with the community, but you're not sure how to go about that? If so,
+then this talks is for you. We'll go over a list of simple steps which
+can turn your script into a fully fledged open-source project.&lt;/p&gt;
+&lt;p&gt;The Python community has a rich set of tools which can help verify the
+quality of your code through automated code-review and linting. You can
+benefit by taking advantage of this ecosystem. Complete the steps in
+this checklist, and your project will be easier to maintain, you'll be
+ready to take contributions from the community and those contributions
+will be up to high standards. Your project will also keep up with other
+projects on PyPI and you will be alerted if any new release causes an
+incompatibility with your code.&lt;/p&gt;
+&lt;p&gt;The same checklist can be used for non open-source projects as well.&lt;/p&gt;
+&lt;p&gt;The project maturity checklist includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Properly structure your code&lt;/li&gt;
+&lt;li&gt;Use a setup.py file&lt;/li&gt;
+&lt;li&gt;Add entry_points for your script command&lt;/li&gt;
+&lt;li&gt;Create a requirements.txt file&lt;/li&gt;
+&lt;li&gt;Use Black to format your code&lt;/li&gt;
+&lt;li&gt;Create a tox.ini config and include code linters&lt;/li&gt;
+&lt;li&gt;Set up a Git repo&lt;/li&gt;
+&lt;li&gt;Refactor your code to be unit-testable and add tests&lt;/li&gt;
+&lt;li&gt;Add missing docstrings&lt;/li&gt;
+&lt;li&gt;Add type annotations and a MyPy verification step&lt;/li&gt;
+&lt;li&gt;Upload to GitHub&lt;/li&gt;
+&lt;li&gt;Add a continuous integration service (e.g. Travis)&lt;/li&gt;
+&lt;li&gt;Add a requirements updater (e.g. pyup.bot)&lt;/li&gt;
+&lt;li&gt;Add test coverage checker (e.g. coveralls)&lt;/li&gt;
+&lt;li&gt;Add a Readme file and documentation&lt;/li&gt;
+&lt;li&gt;Publish your project on PyPI&lt;/li&gt;
+&lt;li&gt;Advertise your project&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michał Karzyński</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/from-python-script-to-open-source-project.html</guid><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Static Analysis</category><category>Tooling</category></item><item><title>Gamifying the study of algorithms</title><link>https://pyvideo.org/europython-2019/gamifying-the-study-of-algorithms.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Do you remember when you used to learn algorithms? It was probably
+either back when you were studying for your degree, or when you were
+brushing up for a technical interview. If you're like most of the
+developers I know, solving algorithms probably went from being a fun
+past-time, to a bothersome necessity, to a thing of the past. Our life
+has been greatly improved by our tools and there's little need to know
+all sorting methods out there, or how to search through a tree. Or maybe
+we're wrong, maybe knowing these things could make a difference in how
+we write code.&lt;/p&gt;
+&lt;p&gt;I am going to try to dispel some of the myths surrounding the study of
+algorithms and competitive programming, and argue that sharpening this
+skill is something that benefits us, as software developers, outside of
+passing technical tests; that knowing many algorithms makes us better
+and faster problem solvers.&lt;/p&gt;
+&lt;p&gt;Lastly, this talk is about resources and ways in which to gamify the
+study of algorithms. Going at it the same way as for exams or interviews
+makes it very bothersome very quickly. It gets easy to lose sight of the
+biggest picture and to start thinking of algorithms in abstract terms,
+outside their applications. All these are factors that prompt the
+question: why should I carry on with it?&lt;/p&gt;
+&lt;p&gt;Therefore, something needs to be changed in the way we do this.
+Algorithms are fun and they don't deserve the disdain we give them.
+Knowing algorithms is not only for the geniuses and innovators.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Iulia Avram</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/gamifying-the-study-of-algorithms.html</guid><category>Algorithms</category><category>Best Practice</category><category>Education</category><category>Fun and Humor</category></item><item><title>How Thinking in Python Made Me a Better Software Engineer</title><link>https://pyvideo.org/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a key for
+rapid development and good engineering.&lt;/p&gt;
+&lt;p&gt;Thinking in a programming language affects the amount of information you
+need to keep in your working memory. It also affects the abstractions
+and tools that pop in your mind and then used in constructing solutions.&lt;/p&gt;
+&lt;p&gt;Let’s explore what it means to think in Python. Why Python allows you to
+focus on problem solving, while languages like c++ often distract your
+attention from the problem at hand.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some good and bad practices by examples while
+trying to consider the amount of effort needed to write it, read it, and
+talk about it with other team members.&lt;/p&gt;
+&lt;p&gt;Key Takeaways: Tips for speeding your work without compromising quality,
+and reasoning for using it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience should be comfortably familiar with the process of
+software development, and software problem solving, and experience
+using Python.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Johnny Dude</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</guid><category>Best Practice</category><category>Development</category><category>Software Design</category><category>failures/mistakes</category></item><item><title>How To Build a Python Microservice Without Losing a Job</title><link>https://pyvideo.org/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarcastic talk, sharing real-life experience on both technical and
+social aspects of doing an architecture migration to microservices
+without losing a job.&lt;/p&gt;
+&lt;p&gt;Any change in software architecture is a significant time investment.
+Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;I would like to share typical pitfalls of choosing a framework stack,
+communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</guid><category>Architecture</category><category>Best Practice</category><category>Communication</category><category>Distributed Systems</category><category>Microservices</category></item><item><title>How to ship a Python app to a hundred million desktops</title><link>https://pyvideo.org/europython-2019/how-to-ship-a-python-app-to-a-hundred-million-desktops.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is widely used to write scripts and tools, but did you know that
+it can also be used to build client-side end-user applications? Crossing
+the gap from script to app can be challenging: Join us to learn how to
+write modern, high quality desktop apps in Python!&lt;/p&gt;
+&lt;p&gt;At Dropbox, we’ve been fans of Python from the very beginning: we’ll
+take you on a tour of our app for Windows/macOS/Linux and share our
+“lessons learned” from over 10 years of development.&lt;/p&gt;
+&lt;p&gt;We’ll share best practices and techniques for shipping Python code to
+hundreds of millions of devices: discover how to maximize security,
+improve performance and guarantee stability.&lt;/p&gt;
+&lt;p&gt;We’ll explore the key choices we made and why: learn how we migrated to
+Python 3 by simultaneously shipping both versions, or how we use HTML to
+power our GUI (a la Electron).&lt;/p&gt;
+&lt;p&gt;We’ll reveal our favorite tools and libraries: learn how we scaled from
+a few engineers to over 100 and added support for other programming
+languages (like Rust).&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The goal of this talk is to share our learnings from using Python on
+Windows, macOS and Linux to encourage the use of Python when building
+Desktop apps.&lt;/div&gt;
+&lt;div class="line"&gt;- We also want to recognize the third-party libraries we’ve used (and
+their authors) to raise their profile with the overall community.&lt;/div&gt;
+&lt;div class="line"&gt;- We hope this will inspire attendees to write more desktop Python
+code, and raise awareness for this use case with the community as a
+whole.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;We intend to speak to any Python developer/engineer or enthusiast who
+makes use of Python in a Desktop environment (or wants to), whether
+it’s to make scripts, tools or apps.&lt;/div&gt;
+&lt;div class="line"&gt;We do not expect knowledge of any specific third-party Python
+libraries; in fact, we hope to draw attention to and recognize many
+libraries we’ve found useful.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Max Bélanger</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/how-to-ship-a-python-app-to-a-hundred-million-desktops.html</guid><category>Architecture</category><category>Best Practice</category><category>Cross-Platform-Development</category><category>Mac OS X</category><category>Windows</category></item><item><title>Maintaining a Python Project When It’s Not Your Job</title><link>https://pyvideo.org/europython-2019/maintaining-a-python-project-when-its-not-your-job.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPI is a gold mine of great packages but those packages have to be
+written first. More often than not, projects that millions of people
+depend on are written and maintained by only one person. If you’re
+unlucky, that person is you!&lt;/p&gt;
+&lt;p&gt;So how do you square delivering a high quality Python package you can be
+proud of and having only limited time at your disposal? The answer is
+not “try harder,” the answer is to do less.&lt;/p&gt;
+&lt;p&gt;This talk will help you get there by talking about how you can make your
+life easier, remove causes of friction with your contributors, and
+empower said contributors to take over tasks that you can’t make time
+for anymore.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Hynek Schlawack</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:europython-2019/maintaining-a-python-project-when-its-not-your-job.html</guid><category>Best Practice</category><category>Open-Source</category></item><item><title>Publish a (Perfect) Python Package on PyPI</title><link>https://pyvideo.org/europython-2019/publish-a-perfect-python-package-on-pypi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Always wanted to publish a package on PyPI, but didn't know where to
+start? This talk is for you! Starting with nothing, we'll build a
+package and publish it on PyPI using current best practices.&lt;/p&gt;
+&lt;p&gt;Learn how to structure your project and your code. Discover what goes in
+your &lt;tt class="docutils literal"&gt;requirements.txt&lt;/tt&gt; and your &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;. Ensure your code will
+work in different on different platforms! Document your code so people
+won't ask you loads of questions! Finally, learn how avoid doing any of
+this yourself.&lt;/p&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why should you package your code for PyPI?&lt;/li&gt;
+&lt;li&gt;How to structure your project and your code, including why you need a
+&lt;tt class="docutils literal"&gt;src&lt;/tt&gt; folder!&lt;/li&gt;
+&lt;li&gt;Discover what goes in your &lt;tt class="docutils literal"&gt;Pipfile&lt;/tt&gt; and your &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;, and
+why. Learn the difference between installing your library to use it,
+and installing it to develop on it.&lt;/li&gt;
+&lt;li&gt;Write tests for your project, and run them using Tox.&lt;/li&gt;
+&lt;li&gt;Ensure your code will work in different on different platforms with
+Continuous Integration!&lt;/li&gt;
+&lt;li&gt;Document your code so people won't ask you loads of questions!&lt;/li&gt;
+&lt;li&gt;How to actually get your code on PyPI using Twine.&lt;/li&gt;
+&lt;li&gt;Finally, learn how avoid doing any of this yourself (or avoid doing
+it twice) using CookieCutter templates.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Smith</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/publish-a-perfect-python-package-on-pypi.html</guid><category>Best Practice</category><category>Packaging</category><category>Python 3</category></item><item><title>The dos and don'ts of task queues</title><link>https://pyvideo.org/europython-2019/the-dos-and-donts-of-task-queues.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we’ll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it’s the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won’t talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we’ll present our current setup which can take upon any number of
+tasks*. How we orchestrate the app and continuously integrate and
+deploy and what fun things await ahead of us in the development.&lt;/p&gt;
+&lt;p&gt;*Conditions may apply.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Petr Stehlík</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/the-dos-and-donts-of-task-queues.html</guid><category>ASYNC / Concurrency</category><category>Architecture</category><category>Best Practice</category><category>Case Study</category><category>failures/mistakes</category></item><item><title>Wait, IPython can do that?!</title><link>https://pyvideo.org/europython-2019/wait-ipython-can-do-that.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I've been programming in Python for over 7 years. And from the time
+someone introduced me to IPython, it immediately became my default
+Python REPL. I enjoyed the syntax highlighting, code completion or the
+instant access to the documentation. Over the years, I've picked up more
+and more tricks that IPython could do: embedding IPython sessions,
+starting IPython automatically when a test fails, taking advantage of
+the startup files, not to mention all the various magic functions.&lt;/p&gt;
+&lt;p&gt;It took me some time to discover all those features (if there is one
+thing I would like you to take away from this talk, it’s that reading
+the documentation of a tool that you are using &lt;em&gt;every day&lt;/em&gt; is probably a
+good idea) and in this talk, I will give an overview of what you can do
+with IPython REPL.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the things I will talk about:&lt;/div&gt;
+&lt;div class="line"&gt;- Documentation with ? and ??, running shell functions in IPython,
+magic functions&lt;/div&gt;
+&lt;div class="line"&gt;- Profiles, startup files, configuration file, kernels, and extensions&lt;/div&gt;
+&lt;div class="line"&gt;- How to better use IPython for debugging&lt;/div&gt;
+&lt;div class="line"&gt;- How to use IPython for profiling&lt;/div&gt;
+&lt;div class="line"&gt;- Alternatives to IPython REPL&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk is for you if you are a casual user of IPython - you know some
+of its features, but maybe not all of them and instead of reading
+through the documentation, you would prefer to see someone giving an
+overview of IPython features and how you can use them.&lt;/p&gt;
+&lt;p&gt;This talk is NOT for you if you are up to date with IPython
+documentation and you think you know most of its features.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sebastian Witowski</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:europython-2019/wait-ipython-can-do-that.html</guid><category>Best Practice</category><category>Development</category><category>Ipython</category><category>Tooling</category><category>iPython</category></item></channel></rss>

@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_europython-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-08-08T00:00:00+00:00</updated><entry><title>Architecture of a cloud hosting service using python technologies: django, ansible and celery</title><link href="https://pyvideo.org/europython-2015/architecture-of-a-cloud-hosting-service-using-python-technologies-django-ansible-and-celery.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Abraham Martin</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/architecture-of-a-cloud-hosting-service-using-python-technologies-django-ansible-and-celery.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Abraham Martin - Architecture of a cloud hosting service using python technologies: django, ansible and celery
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The talk will show the architecture and inners of a cloud hosting
+service we are developing in the University of Cambridge based on
+python technologies, mainly django, ansible, and celery.&lt;/p&gt;
+&lt;p&gt;The users manage their hosts using a web panel, developed in django,
+with common options: ability to create a vhost, associate domain names
+to vhosts, install packages, recover from backups, make snapshots,
+etc. Interaction between the panel and the hosts are made using
+ansible playbooks launched asynchronously by celery tasks. The VM
+architecture has been designed to be VM platform agnostic and to
+provide disk replication and high availability.&lt;/p&gt;
+&lt;p&gt;The University of Cambridge central IT services
+(&lt;a class="reference external" href="http://www.ucs.cam.ac.uk/"&gt;http://www.ucs.cam.ac.uk/&lt;/a&gt;) also provides other services to the rest
+of the university like domain name registration, authentication,
+authorisation, TLS certificates, etc. We link all these other services
+with the hosting service by using APIs while keeping a microservices
+architecture approach. Thus, enabling the use/link of other services
+within the same hosting service web application.&lt;/p&gt;
+</summary></entry><entry><title>Building a RESTful real-time analytics system with Pyramid</title><link href="https://pyvideo.org/europython-2015/building-a-restful-real-time-analytics-system-with-pyramid.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Andrii Chaichenko</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/building-a-restful-real-time-analytics-system-with-pyramid.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andrii Chaichenko - Building a RESTful real-time analytics system with Pyramid
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;CeleraOne tries to bring its vision to Big Data by developing a unique
+platform for real-time Big Data processing. The platform is capable of
+personalizing multi-channel user flows, right-in time targeting and
+analytics while seamlessly scaling to billions of page impression. It
+is currently tailored to the needs of content providers, but of course
+not limited to.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The platform’s architecture is based on four main layers:&lt;/li&gt;
+&lt;li&gt;Proxy/Distribution -- OpenResty/LUA for dynamic request forwarding&lt;/li&gt;
+&lt;li&gt;RESTful API -- several Python applications written using Pyramid web framework running under uWSGI server, which serve as an integration point for third party systems;&lt;/li&gt;
+&lt;li&gt;Analytics -- Python API for Big Data querying and distributed workers performing heavy data collection.&lt;/li&gt;
+&lt;li&gt;In-memory Engine -- CeleraOne’s NoSql database which provides both data storage and fast business logic.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the talk I would like to give insights on how we use Python in the
+architecture, which tools and technologies were chosen, and share
+experiences deploying and running the system in production.&lt;/p&gt;
+</summary></entry><entry><title>Designing a scalable and distributed application</title><link href="https://pyvideo.org/europython-2015/designing-a-scalable-and-distributed-application.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Alexys Jacob</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/designing-a-scalable-and-distributed-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alexys Jacob - Designing a scalable and distributed application
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;One of the key aspect to keep in mind when developing a scalable
+application is its faculty to grow easily. But while we're used to
+take advantage of scalable backend technologies such as mongodb or
+couchbase, &lt;strong&gt;scaling automatically our own application&lt;/strong&gt; core is
+usually another story.&lt;/p&gt;
+&lt;p&gt;In this talk I will &lt;strong&gt;explain and showcase&lt;/strong&gt; a distributed web
+application design based on &lt;strong&gt;consul&lt;/strong&gt; and &lt;strong&gt;uWSGI&lt;/strong&gt; and its consul
+plugin. This design will cover the key components of a distributed and
+scalable application:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;strong&gt;Automatic service registration and discovery&lt;/strong&gt; will allow your application to grow itself automatically.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Health checking and service unregistration&lt;/strong&gt; will allow your application to be fault tolerant, highly available and to shrink itself automatically.&lt;/li&gt;
+&lt;li&gt;A &lt;strong&gt;distributed Key/Value storage&lt;/strong&gt; will allow you to (re)configure your distributed application nodes at once.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-Datacenter awareness&lt;/strong&gt; will allow your application to scale around the world easily.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://docs.google.com/presentation/d/1bZ30UculKOM4IQ4ic5X2fLpz1Fe1QQPVqJLtshIO0pg/edit?usp=sharing"&gt;Slides of this talk are available here&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>DumbDev -- eight rules for dumb development</title><link href="https://pyvideo.org/europython-2015/dumbdev-eight-rules-for-dumb-development.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Rob Collins</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/dumbdev-eight-rules-for-dumb-development.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Rob Collins - DumbDev -- eight rules for dumb development
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;So often, we've been encouraged to be smart in our development. &amp;quot;Work
+smarter not harder!&amp;quot; say the encouraging posters. But the desire to be
+smart, and be seen to be smart, is hurting. The design suffers, the
+code suffers, and it's hard to recruit developers smart enough to cope
+with the problems caused.&lt;/p&gt;
+&lt;p&gt;In this talk, I'm proposing an alternative to being smart:
+&lt;strong&gt;_DumbDev_&lt;/strong&gt;. Let's use our brains for enjoyable, interesting things,
+rather than wrestling with code written for smart developers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;So what do I mean by _dumb_?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Well, I don't mean 'ignorant'. A clever person can be ignorant of some
+important information, and learn it. With ignorance, there is hope.
+I'm also not talking about its opposite, 'stupidity'. This occurs when
+someone is given the information or advice, and chooses to ignore it.
+Dumb isn't stupid. Nor is it silent, as in someone who can't speak.&lt;/p&gt;
+&lt;p&gt;Instead, the picture I have is of one of the early computers: very
+small RAM, disk space measured in KB, and a woefully inadequate CPU.
+In other words, slow, with very little working memory and limited
+persistent storage. Hey, this describes my brain -- and I realise
+that's an asset! I will write better software if I take this into
+account.&lt;/p&gt;
+&lt;p&gt;So, I'm a &lt;strong&gt;_DumbDev_&lt;/strong&gt;, which means I can't hold in my mind the
+infamous [Plone Site class hierarchy][1] (see [Michele Simionato's
+article][2]). Rather than beat myself up about this, I can say, &amp;quot;Hold
+on, maybe deep inheritance is a bad idea...&amp;quot; There is some debate
+about the number of things we can think about simultaneously: it may
+be 7, 9, 5, 4 or even only 3. We can learn some tricks to appear to
+cope with more, but most of us can't easily do 38.&lt;/p&gt;
+&lt;p&gt;Here's the first &lt;strong&gt;_DumbDev_&lt;/strong&gt; rule, putting a sensible limit on complexity:&lt;/p&gt;
+&lt;p&gt;&amp;gt; &lt;strong&gt;1. All diagrams must fit on a Noughts and Crosses (Tic-tac-toe) board&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&amp;gt; _One central class/concept and up to eight things linked. Larger
+structures need to be subdivided._&lt;/p&gt;
+&lt;p&gt;There are seven further rules for me to explain in this talk. I will
+demonstrate the benefits of the &lt;strong&gt;_DumbDev_&lt;/strong&gt; approach, with good and
+bad examples. At the end of the presentation, I hope you will realise
+that you're a better developer than you thought at the start. The next
+time it takes you two hours to debug a simple exception, you'll know
+that it's not you. It's because the system wasn't written using
+&lt;strong&gt;_DumbDev_&lt;/strong&gt; rules.&lt;/p&gt;
+&lt;p&gt;Let's free our brains for more interesting things, like having ideas
+and solving problems.&lt;/p&gt;
+&lt;p&gt;Let's do &lt;strong&gt;_DumbDev_&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.phyast.pitt.edu/~micheles/python/plone-hierarchy.png"&gt;http://www.phyast.pitt.edu/~micheles/python/plone-hierarchy.png&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://www.artima.com/weblogs/viewpost.jsp?thread=246341"&gt;http://www.artima.com/weblogs/viewpost.jsp?thread=246341&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>How to build a spreadsheet with Python</title><link href="https://pyvideo.org/europython-2015/how-to-build-a-spreadsheet-with-python.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Harry Percival</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/how-to-build-a-spreadsheet-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Harry Percival - How to build a spreadsheet with Python
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Do you know how a spreadsheet works?  Can you imagine building one,
+from scratch, in Python?  This talk will be a whirlwind overview of
+how to do just that.  Based on the source code of Dirigible, a short-
+lived experiment in building a cloud-based Pythonic spreadsheet (now
+[open-sourced](&lt;a class="reference external" href="https://github.com/pythonanywhere/dirigible"&gt;https://github.com/pythonanywhere/dirigible&lt;/a&gt;-
+spreadsheet), for the curious).&lt;/p&gt;
+&lt;p&gt;We'll start from scratch, with a simple data representation for a two-
+by-two grid, and then gradually build up the functionality of our
+spreadsheet:
+- Cell objects, and the formula/value distinction
+- Evaluating cells, from simple arithmetic up to an Excel-like dialect
+- Building up the dependency graph, and the ensuing fun times with
+recursion (arg!)
+- Integrating custom functions and user-defined code.&lt;/p&gt;
+&lt;p&gt;Showing and explaining code examples, and alternating with  live demos
+(don't worry, I've done this before!)&lt;/p&gt;
+&lt;p&gt;And it's all in Python!  You'll be surprised at how easy it turns out
+to be, when you go step-by-step, each building on the last... And I
+promise you'll be at least a couple of  moderately mind-blowing
+moments :)&lt;/p&gt;
+</summary></entry><entry><title>Just Because You Can, Doesn't Mean You Should</title><link href="https://pyvideo.org/europython-2015/just-because-you-can-doesnt-mean-you-should.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Julian Berman</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/just-because-you-can-doesnt-mean-you-should.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Julian Berman - Just Because You Can, Doesn't Mean You Should
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Python is a powerful language that provides many tools for creating
+highly dynamic programs. It offers tools all across the complexity
+spectrum that library authors can use to make their libraries seem
+convenient to use for users.&lt;/p&gt;
+&lt;p&gt;While it's true that there are a wealth of techniques with huge
+positive benefits, there are a number of common antipatterns which can
+deceptively cause a net-loss in flexibility, readability, and
+predictability for users.&lt;/p&gt;
+&lt;p&gt;We'll explore a few specific commonalities in this area of library and
+object API design, and talk about the ramifications they have on each
+of these programmer concerns.&lt;/p&gt;
+</summary></entry><entry><title>Panel Discussion: Code Review Tools</title><link href="https://pyvideo.org/europython-2015/panel-discussion-code-review-tools.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/panel-discussion-code-review-tools.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gautier Hayoun (org) - Panel Discussion: Code Review Tools
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This was a last minute replacement for a cancelled talk.&lt;/p&gt;
+</summary></entry><entry><title>surviving the awkward adolescence of a microservices-based application</title><link href="https://pyvideo.org/europython-2015/surviving-the-awkward-adolescence-of-a-microservices-based-application.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Arrested Development</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/surviving-the-awkward-adolescence-of-a-microservices-based-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scott Triglia - Arrested Development - surviving the awkward adolescence of a microservices-based application
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The potential upside of microservices is significant and exciting. So
+much so that Yelp's Transaction Platform committed from the start to
+an architecture of small, cooperative microservices. This talk
+explores the inevitable complications that arise for Python developers
+in as the services grow larger and stretch both their own architecture
+and the developers responsible for them. Come hear tales of terror
+(tight coupling! low test coverage!), stories which will warm your
+heart (agility! strong interfaces!), and everything in between as we
+follow the adventures of our plucky team.&lt;/p&gt;
+&lt;p&gt;The talk will be focused on the functional, cultural, and reliability
+challenges which occur as a microservices-based project evolves and
+expands over time. Particular attention will be paid to where these
+diverge from the utopian way microservices are often described, and to
+the particular difficulties faced by Python developers trying to
+implement such systems. My goal is to share with attendees some
+mistakes we've made, some successful methods for growing gracefully,
+and Python-specific tools/libraries which can help with these
+problems.&lt;/p&gt;
+&lt;p&gt;To enjoy this talk, you should be aware of the basic vocabulary and
+concepts of HTTP-based services. Any additional awareness of
+distributed systems (and their failure modes) will be helpful.&lt;/p&gt;
+</summary></entry><entry><title>Taking the pain out of passwords and authentication</title><link href="https://pyvideo.org/europython-2015/taking-the-pain-out-of-passwords-and-authentication.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Alex Willmer</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/taking-the-pain-out-of-passwords-and-authentication.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alex Willmer - Taking the pain out of passwords and authentication
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Passwords are a pain for us all - programmers, users and admins alike.
+How can we reduce that pain, or eliminate it entirely?&lt;/p&gt;
+&lt;p&gt;This talk will&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Review research into techniques that improve the usability of password systems, and mitigate shortcomings&lt;/li&gt;
+&lt;li&gt;Introduce the new standards Universal Authentication Framework (UAF) &amp;amp; Universal Second Factor (U2F)&lt;/li&gt;
+&lt;li&gt;Describe how they streamline authentication, even eliminate passwords entirely&lt;/li&gt;
+&lt;li&gt;Show how to integrate UAF/U2F in Django and other Python frameworks&lt;/li&gt;
+&lt;li&gt;Summarize the state of support for UAF &amp;amp; U2F in browsers, devices, and the wider world&lt;/li&gt;
+&lt;li&gt;&amp;lt;del&amp;gt;Introduce Sonipass - a project to replace passwords, even on existing websites&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://moreati.github.io/passwordspain"&gt;Slides&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Testing with two failure seeking missiles: fuzzing and property based testing</title><link href="https://pyvideo.org/europython-2015/testing-with-two-failure-seeking-missiles-fuzzing-and-property-based-testing.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Tom Viner</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/testing-with-two-failure-seeking-missiles-fuzzing-and-property-based-testing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tom Viner - Testing with two failure seeking missiles: fuzzing and property based testing
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[Full Video of Talk][0]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Testing with purely random data on it's own doesn't get you very far. But
+two approaches that have been around for a while have new libraries that
+help you generate random input, that homes in on failing testcases.&lt;/p&gt;
+&lt;p&gt;First &lt;strong&gt;[Hypothesis][1]&lt;/strong&gt;, a Python implementation and update of the
+Haskell library
+QuickCheck. Known as property based testing, you specify a property of your
+code that must hold, and Hypothesis does its best to find a counterexample.
+It then shrinks this to find the minimal input that contradicts your
+property.&lt;/p&gt;
+&lt;p&gt;Video: &lt;a class="reference external" href="https://www.youtube.com/watch?v=YGim-BL_ebE#t=53m17s"&gt;https://www.youtube.com/watch?v=YGim-BL_ebE#t=53m17s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Second, &lt;strong&gt;[American fuzzy lop][2]&lt;/strong&gt; (AFL), is a young fuzzing library
+that's already
+achieved an impressive trophy case of bug discoveries. Using
+instrumentation and genetic algorithms, it generates test input that
+carefully searches out as many code paths as it can find, seeking greater
+functional coverage and ultimately locating crashes and hangs that no other
+method has found. I'll be showing how with &lt;strong&gt;[Python-AFL][3]&lt;/strong&gt; we can apply this
+tool to our Python code.&lt;/p&gt;
+&lt;p&gt;[0]: &lt;a class="reference external" href="https://youtu.be/YGim-BL_ebE?t=53m17s"&gt;https://youtu.be/YGim-BL_ebE?t=53m17s&lt;/a&gt;
+[1]: &lt;a class="reference external" href="https://hypothesis.readthedocs.org/en/latest/"&gt;https://hypothesis.readthedocs.org/en/latest/&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://lcamtuf.coredump.cx/afl/"&gt;http://lcamtuf.coredump.cx/afl/&lt;/a&gt;
+[3]: &lt;a class="reference external" href="http://jwilk.net/software/python-afl"&gt;http://jwilk.net/software/python-afl&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Tuning Python applications can dramatically increase performance</title><link href="https://pyvideo.org/europython-2015/tuning-python-applications-can-dramatically-increase-performance.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Vasilij Litvinov</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/tuning-python-applications-can-dramatically-increase-performance.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vasilij Litvinov - Tuning Python applications can dramatically increase performance
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Traditional Python profiling tools have limitations.  Standard tools
+like &lt;strong&gt;cProfile&lt;/strong&gt; and most all third party tools (like &lt;strong&gt;Python
+Tools&lt;/strong&gt; plugin for Microsoft Visual Studio) suffer from common flaws.
+First, the profiling overhead is high (up to 50%).  Second, the
+information provided is “function-level” i.e. the  tool shows how much
+time was spent within a function, but not actionable “line-level”
+information to show which exact lines are &lt;em&gt;the bottleneck&lt;/em&gt; in a
+function.  Adding “line-level” information to most tools causes the
+application to run even slower. Third, some tools require modification
+of the application source code to enable profiling thus disrupting
+development.&lt;/p&gt;
+&lt;p&gt;This talk presents an experimental Python profiler.  It typically has
+less than 15% overhead, shows line-level information and does not
+require modification of application source code.  Experiments using it
+resulted in performance gains of 2x and more.  Of course results vary
+by application, but in a typical application there may be quick
+optimizations easily identified by this type of profiler.&lt;/p&gt;
+&lt;p&gt;The talk will briefly describe the basics of what, why and how to
+profile.  The profiler‘s use and results will be shown in the
+presentation with examples based on real-life applications.  Previous
+experience of working with profilers and trying to optimize an
+application is a plus, but not required, to gain a better appreciation
+of the work presented.&lt;/p&gt;
+</summary></entry><entry><title>What's the fuzz all about? Randomized data generation for robust unit testing</title><link href="https://pyvideo.org/europython-2015/whats-the-fuzz-all-about-randomized-data-generation-for-robust-unit-testing.html" rel="alternate"></link><published>2015-08-08T00:00:00+00:00</published><updated>2015-08-08T00:00:00+00:00</updated><author><name>Moritz Gronbach</name></author><id>tag:pyvideo.org,2015-08-08:europython-2015/whats-the-fuzz-all-about-randomized-data-generation-for-robust-unit-testing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Moritz Gronbach - What's the fuzz all about? Randomized data generation for robust unit testing
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In static unit testing, the output of a function is compared to a
+precomputed result. Even though such unit tests may apparently cover
+all the code in a function, they might cover only a small subset of
+behaviours of the function. This potentially allows bugs such as
+heartbleed to stay undetected. Dynamic unit tests using fuzzing, which
+allows you to specify a data generation template, can make your test
+suite more robust.&lt;/p&gt;
+&lt;p&gt;In this talk, we demonstrate fuzzing using the hypothesis library.
+Hypothesis is a Python library to automatically generate test data
+based on a template.
+Data is generated using a strategy. A strategy specifies how data is
+generated, and how falsifying examples can be simplified. Hypothesis
+provides strategies for Python's built-in data types, and is easily
+customizable.Since test data is generated automatically, we can not
+compare against pre-computed results. Instead, tests are usually done
+on invariants of functions. We give an overview of such invariants.&lt;/p&gt;
+&lt;p&gt;Finally, we demonstrate how we use fuzzing to test machine learning
+algorithms at Blue Yonder.&lt;/p&gt;
+</summary></entry><entry><title>Big data beautiful visualization on the browser with Bokeh</title><link href="https://pyvideo.org/europython-2015/big-data-beautiful-visualization-on-the-browser-with-bokeh.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Fabio Pliger</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/big-data-beautiful-visualization-on-the-browser-with-bokeh.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fabio Pliger - Big data beautiful visualization on the browser with Bokeh
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Bokeh is a Python interactive visualization library for large datasets
+that natively uses the latest web technologies. Its goal is to provide
+elegant, concise construction of novel graphics in the style of
+Protovis/D3, while delivering high-performance interactivity over
+large data to thin clients.&lt;/p&gt;
+&lt;p&gt;The talk will go through it’s design providing details of the
+different API layers (bottom to top) concluding with a comprehensive
+showcase of examples to expose many of the features that make Bokeh so
+powerful and easy.&lt;/p&gt;
+</summary></entry><entry><title>Brainwaves for Hackers 2.0</title><link href="https://pyvideo.org/europython-2015/brainwaves-for-hackers-20.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Andreas Klostermann</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/brainwaves-for-hackers-20.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andreas Klostermann - Brainwaves for Hackers 2.0
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This talk is a sequel to &amp;quot;Brainwaves for Hackers&amp;quot; and illustrates some
+experiments you can do with a Neurosky Mindwave headset, a bluetooth
+enabled EEG device.&lt;/p&gt;
+&lt;p&gt;I'll also talk some more about how to integrate the device with the IPython&lt;/p&gt;
+&lt;p&gt;Notebook for real time viewing and how to use the Mindwave with the
+Raspberry Pi.&lt;/p&gt;
+</summary></entry><entry><title>CityBikes: bike sharing networks around the world</title><link href="https://pyvideo.org/europython-2015/citybikes-bike-sharing-networks-around-the-world.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Lluís Esquerda</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/citybikes-bike-sharing-networks-around-the-world.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lluís Esquerda - CityBikes: bike sharing networks around the world
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;CityBikes [1] started on 2010 as a FOSS alternative endpoint (and
+Android client) to gather information for Barcelona's Bicing bike
+sharing service. Later evolved as an open API [2] providing bike
+sharing data of any (mostly) service worldwide.&lt;/p&gt;
+&lt;p&gt;Fast forward today and after some C&amp;amp;D letters, there's support for
+more than 200 cities, more than 170M historical entries have been
+gathered for analysis (in approx. a year) and the CityBikes API is the
+main source for open bike share data worldwide. This talk will tour
+about how we got there with the help of python and the community [3].&lt;/p&gt;
+&lt;p&gt;PS: We have a realtime map, it is awesome [4].&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://citybik.es"&gt;http://citybik.es&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://api.citybik.es"&gt;http://api.citybik.es&lt;/a&gt;
+[3]: &lt;a class="reference external" href="http://github.com/eskerda/pybikes"&gt;http://github.com/eskerda/pybikes&lt;/a&gt;
+[4]: &lt;a class="reference external" href="http://upcoming.citybik.es"&gt;http://upcoming.citybik.es&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Code is not text! How graph technologies can help us to understand our code better.</title><link href="https://pyvideo.org/europython-2015/code-is-not-text-how-graph-technologies-can-help-us-to-understand-our-code-better.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Andreas Dewes</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/code-is-not-text-how-graph-technologies-can-help-us-to-understand-our-code-better.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andreas Dewes - Code is not text! How graph technologies can help us to understand our code better.
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Today, we almost exclusively think of code in software projects as a
+collection of text files. The tools that we use (version control
+systems, IDEs, code analyzers) also use text as the primary storage
+format for code. In fact, the belief that &amp;quot;code is text&amp;quot; is so deeply
+ingrained in our heads that we never question its validity or even
+become aware of the fact that there are other ways to look at code.&lt;/p&gt;
+&lt;p&gt;In my talk I will explain why treating code as text is a very bad idea
+which actively holds back our understanding and creates a range of
+problems in large software projects. I will then show how we can
+overcome (some of) these problems by treating and storing code as
+data, and more specifically as a graph. I will show specific examples
+of how we can use this approach to improve our understanding of large
+code bases, increase code quality and automate certain aspects of
+software development.&lt;/p&gt;
+&lt;p&gt;Finally, I will outline my personal vision of the future of
+programming, which is a future where we no longer primarily interact
+with code bases using simple text editors. I will also give some ideas
+on how we might get to that future.&lt;/p&gt;
+&lt;p&gt;More information about me:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Github: &lt;a class="reference external" href="https://github.com/adewes"&gt;https://github.com/adewes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Twitter: &lt;a class="reference external" href="https://twitter.com/japh44"&gt;https://twitter.com/japh44&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Website: &lt;a class="reference external" href="http://www.andreas-dewes.de/en"&gt;http://www.andreas-dewes.de/en&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Data-visualisation with Python and Javascript: crafting a data-viz toolchain for the web</title><link href="https://pyvideo.org/europython-2015/data-visualisation-with-python-and-javascript-crafting-a-data-viz-toolchain-for-the-web.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Dale</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/data-visualisation-with-python-and-javascript-crafting-a-data-viz-toolchain-for-the-web.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kyran Dale - Data-visualisation with Python and Javascript: crafting a data-viz toolchain for the web
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;To accompany an upcoming O'Reilly book 'Data-visualisation with Python
+and Javascript: crafting a dataviz toolchain for the web' (see
+[here][1]) this talk aims to sketch out the toolchain by transforming
+some dry Wikipedia data (Nobel prize-winners) into a far more engaging
+and insightful web-visualisation. This transformative cycle uses
+Python big-hitters such as Scrapy, Pandas and Flask, the latter
+delivering data to Javascript's D3.&lt;/p&gt;
+&lt;p&gt;While Python is fast becoming the goto language for data-
+processing/science, the visual fruits of that labour hit the wall of
+the web, where there is only one first-class language, Javascript. To
+develop a data-viz toolchain for the modern world, where web-
+presentation is increasingly mandated, making Python and Javascript
+play nicely is fundamental. This talk aims to show that the perceived
+wall between the two languages is actually a thin, permeable membrane
+and that, with a bare minimum of web-dev, one can get on with
+programming seamlessly in both.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://kyrandale.com/blog/data-visualization-python-javascript/"&gt;http://kyrandale.com/blog/data-visualization-python-javascript/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Diversity: We are not done yet</title><link href="https://pyvideo.org/europython-2015/diversity-we-are-not-done-yet.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/diversity-we-are-not-done-yet.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lynn Root - Diversity: We are not done yet
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;The past few years, we have made large strides to welcome more diverse
+people into our community.  You see better gender ratios in attendance
+numbers at Python conferences, the billed speakers, the amount of
+women-centric programs.  We can see the benefits of outreach.  But
+we're not done yet.&lt;/p&gt;
+&lt;p&gt;While a lot of the Python community embraces the importance of being
+diverse, we haven't taken that mindset to our workplace.  From
+recruiting, we still hear, &amp;quot;sure, we wanted to recruit women, but we
+couldn't find them&amp;quot; and &amp;quot;we only focus on quality here, not gender!&amp;quot;
+Within company cultures, we hear &amp;quot;gender equality isn't a problem
+here!&amp;quot; or &amp;quot;women don't ask for a higher salary&amp;quot; and to &amp;quot;just lean in!&amp;quot;&lt;/p&gt;
+&lt;p&gt;This talk will recount the diversity efforts of the past few years and
+quantify the effects on the Python community.  But this talk will also
+address the not-so-low-hanging fruit; the  deeper-rooted problems that
+still plague the community from inside where we work.  And it will
+talk the audience through actionable items to improve one's work place
+that welcomes more diversity.&lt;/p&gt;
+</summary></entry><entry><title>Beyond grep: Practical Logging and Metrics</title><link href="https://pyvideo.org/europython-2015/europython-2015-hynek-schlawack-beyond-grep-practical-logging-and-metrics.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Hynek Schlawack</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/europython-2015-hynek-schlawack-beyond-grep-practical-logging-and-metrics.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hynek Schlawack - Beyond grep: Practical Logging and Metrics
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Knowing that your application is up and running is great. However in
+order to make informed decisions about the future, you also need to
+know in what state your application currently is and how its state is
+developing over time.&lt;/p&gt;
+&lt;p&gt;This talk combines two topics that are usually discussed separately.
+However I do believe that they have a lot of overlap and ultimately a
+similar goal: giving you vital insights about your system in
+production.&lt;/p&gt;
+&lt;p&gt;We'll have a look at their commonalities, differences, popular tools,
+and how to apply everything in your own systems while avoiding some
+common pitfalls.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides &amp;amp; Notes&lt;/strong&gt;:  [&lt;a class="reference external" href="https://hynek.me/talks/beyond"&gt;https://hynek.me/talks/beyond&lt;/a&gt;-
+grep/](&lt;a class="reference external" href="https://hynek.me/talks/beyond-grep/"&gt;https://hynek.me/talks/beyond-grep/&lt;/a&gt;)&lt;/p&gt;
+</summary></entry><entry><title>Functional Python with Mochi</title><link href="https://pyvideo.org/europython-2015/functional-python-with-mochi.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Mike Müller</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/functional-python-with-mochi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mike Müller - Functional Python with Mochi
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;[Slides][1]&lt;/p&gt;
+&lt;p&gt;While Python supports procedural, object-oriented, and functional
+programming, its functional features are not fully developed. Mochi is
+a Python-like functional language that compiles to Python 3 and PyPy 3
+bytecode. It can use Python libraries and can be used from Python.&lt;/p&gt;
+&lt;p&gt;Mochi adds functional features such as tail recursion optimization, no
+re-assignments in function definitions, persistent data structures,
+pattern matching, algebraic data types, a pipeline operator, better
+anonymous functions, Erlang-style actors, Lisp-style macros as well as
+many useful builtin functions.&lt;/p&gt;
+&lt;p&gt;This talk presents what Mochi is, how it works, and what you can do
+with it. Functional programming can help to solve certain kind of
+problems elegantly. Done right, functional programs can be easily
+tested and provide more confidence that you program is really doing
+what you want. Mochi could be another tool in your toolbox. Functional
+programming can expand your horizon and can be a lot of fun. Mochi
+offers easy access to this new world because you can leverage your
+existing Python knowledge and libraries whenever needed.&lt;/p&gt;
+&lt;p&gt;[Slides][1]&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.python-academy.com/talks/europython2015/Functional%20Python%20with%20Mochi.slides.html#/"&gt;http://www.python-academy.com/talks/europython2015/Functional%20Python%20with%20Mochi.slides.html#/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Incorporando administrado repositorios de información para generar documentación on-demand</title><link href="https://pyvideo.org/europython-2015/incorporando-administrado-repositorios-de-informacion-para-generar-documentacion-on-demand.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Todd Waits</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/incorporando-administrado-repositorios-de-informacion-para-generar-documentacion-on-demand.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Todd Waits - Incorporando administrado repositorios de información para generar documentación on-demand
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[En Español]&lt;/p&gt;
+&lt;p&gt;Generar  documentación de forma dinámica es relevante para los
+ingenieros de software porque ellos interactúan con la data en el
+mismo donde está localizada.  Es también relevante para los clientes
+porque la documentación se puede presentar en un formato organizado y
+claro.  En esta presentación, hablaremos de cómo usar un proceso
+unificado para generar dinámicamente la documentación de diversas
+fuentes de data incluyendo los wikis y los sistemas de rastreo de
+incidencias.&lt;/p&gt;
+&lt;p&gt;Idealmente, nosotros como ingenieros deberíamos interactuar  solamente
+con una Fuente de información que nos dara como resultado una
+documentación vigente y correspondiente al estado actual de un
+sistema.  En el Presente, el cliente recibe documentos incompletos y
+sin actualización dando una incorrecta impresión del estado vigente de
+un Sistema.  Usando un proceso unificado para generar documentación de
+solo una Fuente de data permite presentar al cliente lo que se merece:
+artefactos actualizados y completos dando el real y mas reciente
+estado de un Sistema.  El resto de esta presentación se enfocara en
+cómo lograr este Sistema.&lt;/p&gt;
+&lt;p&gt;Idealmente, nosotros como ingenieros deberíamos interactuar  solamente
+con una Fuente de información que nos dara como resultado una
+documentación vigente y correspondiente al estado actual de un
+sistema.  En el Presente, el cliente recibe documentos incompletos y
+sin actualización dando una incorrecta impresión del estado vigente de
+un Sistema.  Usando un proceso unificado para generar documentación de
+solo una Fuente de data permite presentar al cliente lo que se merece:
+artefactos actualizados y completos dando el real y mas reciente
+estado de un Sistema.  El resto de esta presentación se enfocara en
+cómo lograr este Sistema.&lt;/p&gt;
+</summary></entry><entry><title>Lecciones aprendidas en un proyecto grande de Django</title><link href="https://pyvideo.org/europython-2015/lecciones-aprendidas-en-un-proyecto-grande-de-django.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Yamila Moreno</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/lecciones-aprendidas-en-un-proyecto-grande-de-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Yamila Moreno - Lecciones aprendidas en un proyecto grande de Django
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[En Español]&lt;/p&gt;
+&lt;p&gt;Un proyecto hecho en Django durante dos años da para muchas anécdotas
+y mucho aprendizaje.  Esta charla es un repaso por las decisiones
+sobre lo humano y lo técnico que fuimos tomando durante el desarrollo
+del proyecto.&lt;/p&gt;
+&lt;p&gt;Señalaré las buenas decisiones que tomamos en el equipo, y también las
+que no nos salieron bien y nos hicieron aprender por las malas.&lt;/p&gt;
+&lt;p&gt;Tanto las buenas como las malas decisiones nos enseñaron muchísimo y
+aquí las compilo junto con unos cuantos tips que pueden divertir y,
+ojalá, inspirar a la audiencia, especialmente a aquellas personas que
+se enfrentan por primera vez a un proyecto grande.&lt;/p&gt;
+</summary></entry><entry><title>Less known packaging features and tricks</title><link href="https://pyvideo.org/europython-2015/less-known-packaging-features-and-tricks.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Ionel Cristian Mărieș</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/less-known-packaging-features-and-tricks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ionel Cristian Mărieș - Less known packaging features and tricks
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;You've been making packages for a while now. Everything works almost
+fine, however, lots of new features and tools have been developed
+recently. Some are really obscure. And there's a chance they can save
+you time and help you avoid &lt;em&gt;packaging-induced-pain&lt;/em&gt;. I'm willing to
+bet couple of beers you haven't seen these features and/or tools
+before.&lt;/p&gt;
+&lt;p&gt;This talk is going to show you:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Patterns and tricks you can use in your &lt;cite&gt;setup.py&lt;/cite&gt;.&lt;/li&gt;
+&lt;li&gt;Obscure pip/setuptools/virtualenv/python features you can use to improve your packaging experience (be it as a user of packages or a package author).&lt;/li&gt;
+&lt;li&gt;Fledgeling alternative tools.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://blog.ionelmc.ro/presentations/packaging/"&gt;Slides (HTML with notes)&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>MAX: Realtime messaging and activity stream engine</title><link href="https://pyvideo.org/europython-2015/max-realtime-messaging-and-activity-stream-engine.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Carles Bruguera</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/max-realtime-messaging-and-activity-stream-engine.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Carles Bruguera - MAX: Realtime messaging and activity stream engine
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;What if I told you that we’ve built an open source “WhatsApp”-like
+RESTful API on the top of Pyramid? We've developed MAX: a real-time
+messaging service and activity stream that has become the key feature
+for a social intranet at the BarcelonaTech University&lt;/p&gt;
+&lt;p&gt;We will show how we designed and built MAX with performance in mind
+using state of the art Python technologies like Gevent, WSGI, and
+multi-threaded queue processing. We will also show you how we've
+managed to design a simple architecture guaranteeing both high
+scalability and performance, achieving connecting ratios over 30.000
+students, teachers, and university staff.&lt;/p&gt;
+&lt;p&gt;The API is secured using oAuth 2.0 resource owner password credentials
+flow powered by our own oAuth server implementation (Osiris) also
+Pyramid-based. We are using MongoDB as general storage backend and
+RabbitMQ over websockets to support realtime and messaging.&lt;/p&gt;
+</summary></entry><entry><title>Multibody Simulation using sympy, scipy and vpython</title><link href="https://pyvideo.org/europython-2015/multibody-simulation-using-sympy-scipy-and-vpython.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Oliver Braun</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/multibody-simulation-using-sympy-scipy-and-vpython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Oliver Braun - Multibody Simulation using sympy, scipy and vpython
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The talk is about the implementation of multibody simulation in the
+scientific python world on the way to a stage usefull for engineering
+and educational purposes.
+Multibody simulation (MBS) requires two major steps: first the
+formulation of the specific mechanical problem. Second step is the
+integration of the resulting equations.
+For the first step we use the package sympy which is on a very
+advanced level to perform symbolic calculation and which supports
+already Lagrange's and Kane's formalism. The extensions we made are
+such that a complex mechanical setup can be formulated easily with
+several lines of python code. The functionality is analogous to well
+known MBS-tools, with that you can assemble bodies, joints, forces and
+constraints. Also external forces even in a cosimulation model can be
+added on top. The second step, the integration is done via ode-
+integrators implemented in scipy.
+Finally for visual validation the results are visualized with the
+vpython package and for further analytics with matplotlib.&lt;/p&gt;
+&lt;p&gt;Conclusion: not only highly constrained pendulums with many rods and
+springs but also driving simulation of passenger cars an be performed
+with our new extension using python packages off the shelf.&lt;/p&gt;
+</summary></entry><entry><title>Physical computing with Python and Raspberry Pi</title><link href="https://pyvideo.org/europython-2015/physical-computing-with-python-and-raspberry-pi.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Ben Nuttall</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/physical-computing-with-python-and-raspberry-pi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ben Nuttall - Physical computing with Python and Raspberry Pi
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;With the Raspberry Pi, it's easy to do physical computing directly
+from Python code - rather than usual embedded hardware engineering in
+C or Assembler.&lt;/p&gt;
+&lt;p&gt;In this talk I'll show examples of physical computing projects that
+use Python on Raspberry Pi and demonstrate the sort of code  used in
+such projects.&lt;/p&gt;
+&lt;p&gt;Physical computing with Python is very popular in education - as it's
+so engaging, and more interesting than printing to the screen.&lt;/p&gt;
+&lt;p&gt;This will be an informative session with learning possibilities to
+give those new to physical computing a change to get started.&lt;/p&gt;
+</summary></entry><entry><title>Playing with CPython Objects Internals</title><link href="https://pyvideo.org/europython-2015/playing-with-cpython-objects-internals.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Jesús Espino</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/playing-with-cpython-objects-internals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jesús Espino - Playing with CPython Objects Internals
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;I will explain how CPython objects are built, from simple objects
+like int or None to complex ones like dict. To make it funnier, I
+will play to change instance data directly using ctypes and do
+&amp;quot;really bad things&amp;quot; like truncating tuples.&lt;/p&gt;
+</summary></entry><entry><title>Plone 5 and how to use machine learning with it.</title><link href="https://pyvideo.org/europython-2015/plone-5-and-how-to-use-machine-learning-with-it.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Ramon Navarro Bosch</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/plone-5-and-how-to-use-machine-learning-with-it.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ramon Navarro Bosch - Plone 5 and how to use machine learning with it.
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Plone is a Document Management System and Content Management System
+that has been in the Python scope for more than 10 years.&lt;/p&gt;
+&lt;p&gt;Plone 5’s features allow us to manage content, define various kinds of
+content and provide a nice useful UI to work on semantic web
+technologies. In this talk we are going to explain our approach for
+using Plone with the Python machine learning toolkit sklearn (http
+://scikit-learn.org/stable/) to enable clusterization and
+classification of content using a scalable content management system.
+We will also add some sophisticated front-end gloss using the new
+functionalities on frontend development added on Plone 5 and some real
+use cases of CMS/DMS with machine learning using sklean and solr.&lt;/p&gt;
+</summary></entry><entry><title>Python and PyPy performance (not) for dummies</title><link href="https://pyvideo.org/europython-2015/python-and-pypy-performance-not-for-dummies.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/python-and-pypy-performance-not-for-dummies.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Antonio Cuni - Python and PyPy performance (not) for dummies
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk we would like to have a short introduction on how Python
+programs are compiled and executed, with a special attention towards
+just in time compilation done by PyPy. PyPy is the most advanced Python
+interpreter around and while it should generally just speed up your programs
+there is a wide range of performance that you can get out of PyPy, ranging from
+slightly faster than CPython to C speeds, depending on how you write your
+programs.&lt;/p&gt;
+&lt;p&gt;We will split the talk in two parts. In the first part we will explain
+how things work and what can and what cannot be optimized as well as describe
+the basic heuristics of JIT compiler and optimizer. In the next part we will
+do a survey of existing tools for looking at performance of Python programs
+with specific focus on PyPy.&lt;/p&gt;
+&lt;p&gt;As a result of this talk, an audience member should be better equipped with
+tools how to write new software and improve existing software with performance
+in mind.&lt;/p&gt;
+&lt;p&gt;The talk will be given by Antonio Cuni and Maciej Fijalkowski,
+both long time PyPy core developers and expert in the area of
+Python performance.&lt;/p&gt;
+</summary></entry><entry><title>Python for IT specialists' tasks automation</title><link href="https://pyvideo.org/europython-2015/python-for-it-specialists-tasks-automation.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Gianluca Nieri</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/python-for-it-specialists-tasks-automation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gianluca Nieri - Python for IT specialists' tasks automation
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This talks is about automation and the use of Python scripts to speed
+up repetitive tasks.&lt;/p&gt;
+&lt;p&gt;It's for developers, sysops, devops, but also any kind of user that
+want improve his daily routine.&lt;/p&gt;
+&lt;p&gt;I will talk about the use of Python with different tools for different
+platforms: Keyboard Maestro/Alfred/Hazel on OsX and
+Synapse/Kupfer/AutoKey on Linux.&lt;/p&gt;
+&lt;p&gt;There will be presented some sample script to give an idea of the
+potentiality of Python mixed with great tools, and these are some of
+the topics that I will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;text manipulation;&lt;/li&gt;
+&lt;li&gt;document template management;&lt;/li&gt;
+&lt;li&gt;clipboard management;&lt;/li&gt;
+&lt;li&gt;stuff internet activities (url shortening, web scraping, etc.);&lt;/li&gt;
+&lt;li&gt;list management.&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>PythonAnywhere and Education</title><link href="https://pyvideo.org/europython-2015/pythonanywhere-and-education.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Harry Percival</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/pythonanywhere-and-education.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Harry Percival - PythonAnywhere and Education
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;Python may be the ideal language for teaching because of its
+simplicity and readability, but actually getting a working and
+consistent development environment installed on a diverse set of
+student (or school) computers can be less than straightforward. And
+then there's pip, numpy, scipy, windows vs unix command lines...&lt;/p&gt;
+&lt;p&gt;As a result, we've had lots of teachers coming to PythonAnywhere over
+the years, to skip all these problems. We've recently started adding
+some extra features to help teachers and students which we're keen to
+share with the EuroPython audience.&lt;/p&gt;
+</summary></entry><entry><title>Scale your data, not your process: Welcome to the Blaze ecosystem</title><link href="https://pyvideo.org/europython-2015/scale-your-data-not-your-process-welcome-to-the-blaze-ecosystem.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Christine Doig</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/scale-your-data-not-your-process-welcome-to-the-blaze-ecosystem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Christine Doig - Scale your data, not your process: Welcome to the Blaze ecosystem
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;NumPy and Pandas have revolutionized data processing and munging in
+the Python ecosystem. As data and systems grow more complex, moving
+and querying becomes more difficult. Python already has excellent
+tools for in-memory datasets, but we inevitably want to scale this
+processing and take advantage of additional hardware. This is where
+Blaze comes in handy by providing a uniform interface to a variety of
+technologies and abstractions for migrating and analyzing data.
+Supported backends include databases like Postgres or MongoDB, disk
+storage systems like PyTables, BColz, and HDF5, or distributed systems
+like Hadoop and Spark.&lt;/p&gt;
+&lt;p&gt;This talk will introduce the Blaze ecosystem, which includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Blaze (data querying): [&lt;a class="reference external" href="http://blaze.pydata.org/en/latest/][1"&gt;http://blaze.pydata.org/en/latest/][1&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Odo (data migration): [&lt;a class="reference external" href="http://odo.readthedocs.org/en/latest/][2"&gt;http://odo.readthedocs.org/en/latest/][2&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Dask (task scheduler): [&lt;a class="reference external" href="http://dask.pydata.org/en/latest/][3"&gt;http://dask.pydata.org/en/latest/][3&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;DyND (dynamic, multidimensional arrays): [&lt;a class="reference external" href="https://github.com/libdynd/dynd-python][4"&gt;https://github.com/libdynd/dynd-python][4&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;Datashape (data description): [&lt;a class="reference external" href="http://datashape.pydata.org/][5"&gt;http://datashape.pydata.org/][5&lt;/a&gt;]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Attendees will get the most out of this talk if they are familiar with
+NumPy and Pandas, have intermediate Python programming skills, and/or
+experience with large datasets.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://blaze.pydata.org/en/latest/"&gt;http://blaze.pydata.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[2]: &lt;a class="reference external" href="http://odo.readthedocs.org/en/latest/"&gt;http://odo.readthedocs.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[3]: &lt;a class="reference external" href="http://dask.pydata.org/en/latest/"&gt;http://dask.pydata.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[4]: &lt;a class="reference external" href="https://github.com/libdynd/dynd-python"&gt;https://github.com/libdynd/dynd-python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[5]: &lt;a class="reference external" href="http://datashape.pydata.org/"&gt;http://datashape.pydata.org/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>The Python Compiler</title><link href="https://pyvideo.org/europython-2015/the-python-compiler.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Kay Hayen</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/the-python-compiler.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kay Hayen - The Python Compiler
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The Python compiler Nuitka has evolved from an absurdly compatible
+Python to C++ translator into a &lt;strong&gt;statically optimizing Python
+compiler&lt;/strong&gt;. The mere peephole optimization is now accompanied by full
+function/module level optimization, with more to come, and only
+increased compatibility.&lt;/p&gt;
+&lt;p&gt;Witness local and module &lt;strong&gt;variable value propagation&lt;/strong&gt;, &lt;strong&gt;function
+in-lining&lt;/strong&gt; with suitable code, and graceful degradation with code
+that uses the full Python power. (This is considered kind of the break
+through for Nuitka, to be finished for EP.) No compromises need to be
+made, full language support, all modules work, including extension
+modules, e.g. PyQt  just works.&lt;/p&gt;
+&lt;p&gt;Also new is a plugin framework that allows the user to provide
+workarounds for the standalone mode (create self contained
+distributions), do his own type hinting to Nuitka based on e.g. coding
+conventions, provide his own optimization based on specific knowledge.&lt;/p&gt;
+&lt;p&gt;Ultimately, Nuitka is intended to grow the Python base into fields,
+where performance is an issue, it will need your help. Scientific
+Python could largely benefit from future Nuitka. Join us now.&lt;/p&gt;
+</summary></entry><entry><title>Writing Domain Specific Languages with Python</title><link href="https://pyvideo.org/europython-2015/writing-domain-specific-languages-with-python.html" rel="alternate"></link><published>2015-08-07T00:00:00+00:00</published><updated>2015-08-07T00:00:00+00:00</updated><author><name>Daniel Pope</name></author><id>tag:pyvideo.org,2015-08-07:europython-2015/writing-domain-specific-languages-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Daniel Pope - Writing Domain Specific Languages with Python
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Python is an expressive general purpose programming language. Its
+syntax provides many ways to represent structure and minimise code
+repetition and boilerplate.&lt;/p&gt;
+&lt;p&gt;But Python not always expressible enough. Perhaps when you've built a
+complicated enough system with hard-to-express inter-relationships,
+the code required to construct or operate on it can become
+complicated, repetitive and unreadable. Or perhaps you have users
+unfamiliar with Python who need to understand or edit a system. In
+cases like these, stepping beyond the syntax and semantics of basic
+Python can be an advantage.&lt;/p&gt;
+&lt;p&gt;Daniel will describe various ways you can  implement your own Domain
+Specific Languages, languages perhaps completely unlike Python that
+can succinctly describe more complicated Python systems.&lt;/p&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What and why of DSLs&lt;/li&gt;
+&lt;li&gt;Metaprogramming tricks&lt;/li&gt;
+&lt;li&gt;Writing simple parsers&lt;/li&gt;
+&lt;li&gt;The libraries PLY and PyParsing&lt;/li&gt;
+&lt;li&gt;Building tooling around your new DSLs&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Building mobile APIs with services at Yelp</title><link href="https://pyvideo.org/europython-2015/building-mobile-apis-with-services-at-yelp.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Stephan Jaensch</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/building-mobile-apis-with-services-at-yelp.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stephan Jaensch - Building mobile APIs with services at Yelp
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;At Yelp, we ship code multiple times a day and have maintained this
+pace as our team has grown to 300+ and our codebase to several million
+lines of Python code. This talk explores the pain points we
+experienced along the ways, how our service-oriented architecture
+alleviates them, and the infrastructure we built to develop, test, and
+deploy in this highly-distributed environment. As a case study, we’ll
+be looking at the backend powering the new Yelp Business Owner Android
+and iOS apps.&lt;/p&gt;
+&lt;p&gt;At the start, most of the development at Yelp occurred in a single,
+monolithic web application, creatively named “yelp-main” (naming is
+hard!). As the company grew, our developers were spending increasing
+amounts of time trying to ship code. After recognizing this pain
+point, we started experimenting with a service oriented architecture
+to scale the development process, and so far it’s been a resounding
+success. Over the course of the last three years, we’ve gone from
+writing our first service to having over seventy production services.
+Along the way, we’ve dabbled with Docker containers, Pyramid,
+SQLAlchemy, uWSGI, gevent, and virtualenv in an effort to build the
+next-generation service platform for our engineers.&lt;/p&gt;
+</summary></entry><entry><title>Citizen Science: Tracking Aliens with Python!</title><link href="https://pyvideo.org/europython-2015/citizen-science-tracking-aliens-with-python.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Alessio Siniscalchi</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/citizen-science-tracking-aliens-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alessio Siniscalchi - Citizen Science: Tracking Aliens with Python!
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The talk discusses the challenges of implementing a Citizen Science
+Paradigm in a Python-centric platform, and the solutions devised for
+the System for observation and monitoring of Marine Alien Species,
+currently used by the italian Institute for Environmental Protection
+and Research (ISPRA). &amp;quot;Alien&amp;quot; Species means species introduced into a
+natural environment where they are not normally found.&lt;/p&gt;
+&lt;p&gt;Topics includes strategies for crowd-friendly forms, work-flow
+definition for collected data, choice of the best technologies for its
+components: app for android devices, web application for citizens and
+experts, webGIS for data browsing and web services for data exporting.&lt;/p&gt;
+</summary></entry><entry><title>Deja de pegarte con tus servicios; import lymph</title><link href="https://pyvideo.org/europython-2015/deja-de-pegarte-con-tus-servicios-import-lymph.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Alejandro Castillo</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/deja-de-pegarte-con-tus-servicios-import-lymph.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alejandro Castillo - Deja de pegarte con tus servicios; import lymph
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[En Español]&lt;/p&gt;
+&lt;p&gt;¿Y si pudieras centrarte en la funcionalidad de tus
+servicios en lugar de programar la integración entre ellos?&lt;/p&gt;
+&lt;p&gt;lymph es un framework con personalidad propia para escribir
+servicios en Python que te permite hacer justo eso. Incluye
+descubrimiento de servicios extensible,  comunicación vía
+petición-respuesta, comunicación vía publicación-subscripción
+extensible y gestión de procesos.&lt;/p&gt;
+&lt;p&gt;A medida que crecen nuestros equipos de desarrollo, nos alejamos
+cada vez más de una arquitectura monolítica. Queremos empezar a
+escribir servicios sin tener que preocuparnos de los requisitos de
+infraestructura. Queremos desarrollar de forma rápida, centrándonos
+en nuestro trabajo.&lt;/p&gt;
+&lt;p&gt;En esta charla os enseñaremos lo fácil que es desarrollar y
+ejecutar servicios con lymph.&lt;/p&gt;
+&lt;p&gt;Echad un ojo a &lt;a class="reference external" href="http://lymph.io"&gt;http://lymph.io&lt;/a&gt;. Esperamos vuestros pull requests.&lt;/p&gt;
+</summary></entry><entry><title>Demystifying Mixins with Django</title><link href="https://pyvideo.org/europython-2015/demystifying-mixins-with-django.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Ana Balica</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/demystifying-mixins-with-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ana Balica - Demystifying Mixins with Django
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Mixins are a great way to keep an application decoupled. This talk is
+about building mixins and dissecting what's behing the mixin &amp;quot;magic&amp;quot;
+and that, in fact, there is no magic involved at all. The main focus
+will be on Django framework while digging into mixins. When using
+Django class-based views, mixins feel very natural.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt;: by the end of this talk, every developer should be confident
+about creating his or her own custom mixins.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites:&lt;/strong&gt;
+- basic understanding of OOP principles and their application in Python
+- Django web framework&lt;/p&gt;
+&lt;p&gt;Generally mixins in Python are pretty straight-forward, easy to create
+and use. Nevertheless a lot of developers stay away from them. I think
+attendees of this talk will be interested to learn that mixins are not
+that complex and their benefit is tremendous.&lt;/p&gt;
+</summary></entry><entry><title>Distributed Workflows with Flowy</title><link href="https://pyvideo.org/europython-2015/distributed-workflows-with-flowy.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Sever Banesiu</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/distributed-workflows-with-flowy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sever Banesiu - Distributed Workflows with Flowy
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This presentation introduces Flowy, a library for building and running
+distributed, asynchronous workflows built on top of different backends
+(such as Amazon’s SWF). Flowy deals away with the spaghetti code that
+often crops up from orchestrating complex workflows. It is ideal for
+applications that do multi-phased batch processing, media encoding,
+long-running tasks, and/or background processing.&lt;/p&gt;
+&lt;p&gt;We'll start by discussing Flowy's unique execution model and see how
+different execution topologies can be implemented on top of it. During
+the talk we'll run and visualize workflows using a local backend.
+We'll then take a look at what it takes to scale beyond a single
+machine by using an external service like SWF.&lt;/p&gt;
+</summary></entry><entry><title>Knowing your garbage collector</title><link href="https://pyvideo.org/europython-2015/europython-2015-francisco-fernandez-castano-knowing-your-garbage-collector.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Francisco Fernández Castaño</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/europython-2015-francisco-fernandez-castano-knowing-your-garbage-collector.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Francisco Fernández Castaño - Knowing your garbage collector
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;As Python programmers we're used to program without taking care about allocating
+memory for our objects and later on freeing them, Python garbage collector
+takes care of this task automatically for us.&lt;/p&gt;
+&lt;p&gt;Garbage collection is one of the most challenging topics in computer science,
+there are a lot of research around the topic and different ways to tackle
+the problem.&lt;/p&gt;
+&lt;p&gt;Knowing how our language does this process give us a better understanding
+of underlying interpreter and allow us to know why problems like cycles
+can happen in CPython interpreters.&lt;/p&gt;
+&lt;p&gt;So, this talk aims to be and introduction to the topic and a walkaround
+through different approaches followed in CPython and PyPy:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Generational Reference counting with cycles detector on CPython.&lt;/li&gt;
+&lt;li&gt;Incremental version of the MiniMark GC on PyPy.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>EuroPython 2016: Help us build the next edition!</title><link href="https://pyvideo.org/europython-2015/europython-2016-help-us-build-the-next-edition.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Fabio Pliger</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/europython-2016-help-us-build-the-next-edition.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fabio Pliger/Marc-André Lemburg - EuroPython 2016: Help us build the next edition!
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;We need help with organizing and running EuroPython 2016.&lt;/p&gt;
+&lt;p&gt;In this session, we will explain how the EuroPython workgroup model works
+and where you could help.&lt;/p&gt;
+</summary></entry><entry><title>External authentication for Django projects</title><link href="https://pyvideo.org/europython-2015/external-authentication-for-django-projects.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Jan Pazdziora</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/external-authentication-for-django-projects.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jan Pazdziora - External authentication for Django projects
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;When applications get deployed in enterprise environment or in large
+organizations, they need to support user accounts and groups that are
+managed externally, in existing directory services like FreeIPA or
+Active Directory, or federated via protocols like SAML. While it is
+possible to  add support for these individual setups and protocols
+directly to application code or to Web frameworks or libraries, often
+it is better to delegate the authentication and identity operations to
+a frontend server and just assume that the application has to be able
+to consume results of the external authentication and identity
+lookups.&lt;/p&gt;
+&lt;p&gt;In this talk, we will look at Django Web framework and how with few
+small changes to the framework and to the application we can extend
+the functionality of existing RemoteUserMiddleware and
+RemoteUserBackend to consume users coming from enterprise identity
+management systems. We will focus on using proven OS-level components
+such as SSSD for Web applications, but will also show setup using
+federation.&lt;/p&gt;
+</summary></entry><entry><title>Getting started with Bokeh / Let's build an interactive data visualization for the web..in Python!</title><link href="https://pyvideo.org/europython-2015/getting-started-with-bokeh-lets-build-an-interactive-data-visualization-for-the-webin-python.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Sarah Bird</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/getting-started-with-bokeh-lets-build-an-interactive-data-visualization-for-the-webin-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarah Bird - Getting started with Bokeh / Let's build an interactive data visualization for the web..in Python!
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Slides: [birdsarah.github.io/europython-2015-bokeh][1]&lt;/p&gt;
+&lt;p&gt;As a web developer, I find myself being asked to make increasing
+numbers of data visualizations, interactive infographics, and more.
+d3.js is great, as are many other javascript toolkits that are out
+there. But if I can write more Python and less JavaScript... well,
+that makes me happy!&lt;/p&gt;
+&lt;p&gt;Bokeh is a new Python library for interactive visualization. Its
+origins are in the data science community, but it has a lot to offer
+web developers. In this mini-tutorial, I'll run through how to build a
+data visualization in Bokeh and how to hook it into your web
+application. This will be a real-world example, that was previously
+built in d3.js.&lt;/p&gt;
+&lt;p&gt;Along the way, I'll provide tips and tricks that I've discovered in my
+experience including how Bokeh works wonderfully with the iPython
+notebook which I use to prototype my visualizations, and many data
+science people use as their native way to explore data.&lt;/p&gt;
+&lt;p&gt;For those of you who already know a little Bokeh, I'll be covering the
+new &amp;quot;actions framework&amp;quot; that lets you write JS callbacks in your
+python code so you can do lots of interactions all on the client side.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://birdsarah.github.io/europython-2015-bokeh/"&gt;http://birdsarah.github.io/europython-2015-bokeh/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Introduction to Baserock</title><link href="https://pyvideo.org/europython-2015/introduction-to-baserock.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Sam Thursfield</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/introduction-to-baserock.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sam Thursfield - Introduction to Baserock
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The Baserock project is about creating system images from source code
+in a clean, reproducible way. All of the tooling is written in Python.&lt;/p&gt;
+&lt;p&gt;In this talk I'll explain a bit about the core idea of Baserock:
+declarative system definitions (expressed in YAML) that can be built
+and deployed in various ways.&lt;/p&gt;
+&lt;p&gt;Then I'll go into more detail about the tools available, and some of
+the cool things that they can do: distributed building, atomic system
+updates, creating custom container images, and more.&lt;/p&gt;
+&lt;p&gt;Find out more about the Baserock project at &lt;a class="reference external" href="http://www.baserock.org/"&gt;http://www.baserock.org/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>It Works on My Machine: Writing Python Code for Any Environment</title><link href="https://pyvideo.org/europython-2015/it-works-on-my-machine-writing-python-code-for-any-environment.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Kyle Knapp</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/it-works-on-my-machine-writing-python-code-for-any-environment.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kyle Knapp - It Works on My Machine: Writing Python Code for Any Environment
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Have you ever developed a nice, well-working python program on one
+environment, only to have it blow up with exceptions and tracebacks
+when you run it on a different environment? Have no fear! This talk
+will show you how to write and maintain python code that is compatible
+across environments that may differ by python versions and/or
+operating systems.&lt;/p&gt;
+&lt;p&gt;Techniques and tips will be drawn from lessons and experiences gained
+from making the AWS CLI, a python-based command line tool to manage
+AWS resources, compatible across a wide range of environments. In a
+case-study-like format, real-life compatibility issues encountered
+while developing the AWS CLI will be presented along with how we
+resolved each of them. These real-life examples will encompass, but
+will not be limited to, the following topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to use functions and classes that may differ across python versions and/or operating systems&lt;/li&gt;
+&lt;li&gt;How to handle version-specific bugs&lt;/li&gt;
+&lt;li&gt;How to handle strings, bytes, and Unicode across python versions&lt;/li&gt;
+&lt;li&gt;How to handle differing locale settings&lt;/li&gt;
+&lt;li&gt;How to handle file operations across operating systems&lt;/li&gt;
+&lt;li&gt;How and when to vendor dependencies&lt;/li&gt;
+&lt;li&gt;How to write tests that are compatible across python versions and operating systems&lt;/li&gt;
+&lt;li&gt;How to create a testing environment that monitors compatibility of code across various environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ultimately, the goal of these examples is introduce to you some
+effective, real-world programming practices to overcome your current
+or next compatibility issue.&lt;/p&gt;
+</summary></entry><entry><title>Karakate magaletik EuroPythoneko tontorrera</title><link href="https://pyvideo.org/europython-2015/karakate-magaletik-europythoneko-tontorrera.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>oier etxaniz</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/karakate-magaletik-europythoneko-tontorrera.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;oier etxaniz - Karakate magaletik EuroPythoneko tontorrera
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[Euskara]&lt;/p&gt;
+&lt;p&gt;Orain dela urte batzuk asi genuen bidea azalduko dut, Python San
+Sebastian elkartea nola sotu genuen eta hortik pixkanaka pixkanaka
+nola sortzen joan den EuroPython sortzeko grina.&lt;/p&gt;
+&lt;p&gt;Gendeari nahi izan eskero eta lan egin eskero EuroPython bezelako
+kongresu bat antolatzea posible dela erakustea du helburu hitzaldi
+honek.&lt;/p&gt;
+</summary></entry><entry><title>Mashing up py.test, coverage.py and ast.py to take TDD to a new level</title><link href="https://pyvideo.org/europython-2015/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Tibor Arpas</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/mashing-up-pytest-coveragepy-and-astpy-to-take-tdd-to-a-new-level.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tibor Arpas - Mashing up py.test, coverage.py and ast.py to take TDD to a new level
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Users and developers especially, hate waiting. Computing has adapted
+and we almost never wait for the computer for more then 10 seconds.
+One big exception is runnig a test suite which takes MINUTES on many
+projects. That is incredibly distracting, frustrating and dragging the
+whole concept of automated tests down.&lt;/p&gt;
+&lt;p&gt;I present a technique and a tool (py.test plugin called &amp;quot;testmon&amp;quot;)
+which automatically selects only tests affected by recent changes.
+Does it sound too good to be true? Python developers rightfully have a
+suspecting attitude towards any tool which tries to be too clever
+about their source code. Code completion and symbol searching doesn't
+need to be 100% reliable but messing with the test suite execution? I
+show that we can cut test suite execution time significantly but
+maintain it's reliability.&lt;/p&gt;
+</summary></entry><entry><title>Metaprogramación en Python</title><link href="https://pyvideo.org/europython-2015/metaprogramacion-en-python.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Raúl Cumplido</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/metaprogramacion-en-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Raúl Cumplido - Metaprogramación en Python
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[En Español]&lt;/p&gt;
+&lt;p&gt;Según wikipedia:
+&amp;quot;La metaprogramación consiste en escribir programas que escriben o
+manipulan otros programas (o a sí mismos) como datos, o que hacen en
+tiempo de compilación parte del trabajo que, de otra forma, se haría
+en tiempo de ejecución. Esto permite al programador ahorrar tiempo en
+la producción de código.&amp;quot;
+En esta charla veremos diferentes mecanismos que Python proporciona como:
+- Decoradores
+- Metaclasses
+- Descriptors
+A través de varios ejemplos veremos como reutilizar código en varias
+funciones y clases, como modificar como nuestras clases se generan,
+como se genera una clase (que funciones se llaman cuando una clase se
+crea) o como se genera una instancia.
+Veremos también que fácilmente se nos puede ir de las manos y como
+utilizar con cuidado las herramientas que Python nos proporciona.&lt;/p&gt;
+</summary></entry><entry><title>Online Education: challenges and opportunities for Staff and Students</title><link href="https://pyvideo.org/europython-2015/online-education-challenges-and-opportunities-for-staff-and-students.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Anders Lehmann</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/online-education-challenges-and-opportunities-for-staff-and-students.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Anders Lehmann - Online Education: challenges and opportunities for Staff and Students
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;From september 2015 Aarhus School of Engineering will offer the
+education Bachelor of Electronic Engineering, as a combined online
+and on campus education. In the talk I will describe the technical and
+pedagogical setup, we are working at to meet the challenges of having
+both on-site and remote students.&lt;/p&gt;
+&lt;p&gt;I will also touch on how IPython Notebook, will be part of the
+technical setup, and how it can be incorporated into the teaching.&lt;/p&gt;
+</summary></entry><entry><title>Practical usage of advanced Python constructs</title><link href="https://pyvideo.org/europython-2015/practical-usage-of-advanced-python-constructs.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Andrey Syschikov</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/practical-usage-of-advanced-python-constructs.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andrey Syschikov - Practical usage of advanced Python constructs
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Python is a language of choice for developers with wide range of
+experience, for some it is a first programming language, others switch
+to Python after years of experience. Python provides friendly syntax
+and smooth learning curve. This sometimes leads to developers lacking
+comprehension of some more advanced constructs.&lt;/p&gt;
+&lt;p&gt;It happens that experienced developers jump into using Python and
+sometimes miss less known Python language constructs. On the other
+hands people who purposefully learned Python sometimes lack practical
+ideas for how to apply those constructs.&lt;/p&gt;
+&lt;p&gt;This talk will be specifically focused on the practical usages of
+advanced Python constructs like iterators, generators, decorators and
+context managers. Goal of the talk is to share ideas about how those
+constructs can be used for practical purposes in real projects. Prior
+knowledge is not required, there will be a brief introduction to every
+construct being presented.&lt;/p&gt;
+</summary></entry><entry><title>Python for Cloud Services and Infrastructure Management</title><link href="https://pyvideo.org/europython-2015/python-for-cloud-services-and-infrastructure-management.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Bhaumik Shukla</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/python-for-cloud-services-and-infrastructure-management.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bhaumik Shukla - Python for Cloud Services and Infrastructure Management
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This talk is about how python is used in cloud computing as well as
+used while configuring cloud infrastructure. It also gives brief about
+tools and technologies/libraries can be used for number of tasks while
+cloud development/execution. Developers and all python lovers are the
+perfect audience for this talk. They will get the brief about reliable
+stack of python based tools used in cloud development and also will be
+sharing the experience with python.&lt;/p&gt;
+&lt;p&gt;Summary:
+Python in cloud.
+Kind of services can be build with python.
+Python based tools used in deployment and configuration management for
+the cloud.
+For every python lovers - How to create a python friendly cloud
+infrastructure with great reliable combination of many stable tools.
+Stability.
+Experience sharing.&lt;/p&gt;
+</summary></entry><entry><title>Python gure etxean: (r)eboluzioa atzo, gaur eta bihar</title><link href="https://pyvideo.org/europython-2015/python-gure-etxean-reboluzioa-atzo-gaur-eta-bihar.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Mikel Larreategi</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/python-gure-etxean-reboluzioa-atzo-gaur-eta-bihar.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mikel Larreategi - Python gure etxean: (r)eboluzioa atzo, gaur eta bihar
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[Euskara]&lt;/p&gt;
+&lt;p&gt;2000 urtean CodeSyntax sortu zenetik Python erabili dugu gure lan ia
+guztiak egiteko. Lan horiek egitean izandako (r)eboluzioa azalduko
+dugu hitzaldi honetan: python script arruntetatik, Zope aplikazioen
+zerbitzarian nabigatzaile baten programatzetik, fitxategi sisteman
+programatzera pasatu gara, Turbogears ere ikutu dugu eta orain Plone,
+Django eta Pyramid darabilgu.&lt;/p&gt;
+&lt;p&gt;Since the beginning of our company in year 2000 we have been using
+Python to do our work. We will explain the (r)evolution we faced
+working with python during this 15 years: small python scripts,
+browser-based-development using Zope Application Server, we touched
+Turbogears and now Plone, Django and Pyramid applications.&lt;/p&gt;
+&lt;p&gt;[Aurkezpena Slidesharen dago][1].&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.slideshare.net/erral/python-gure-etxean-reboluzioa-atzo-gaur-eta-bihar"&gt;http://www.slideshare.net/erral/python-gure-etxean-reboluzioa-atzo-gaur-eta-bihar&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Python Multithreading and Multiprocessing: Concurrency and Parallelism</title><link href="https://pyvideo.org/europython-2015/python-multithreading-and-multiprocessing-concurrency-and-parallelism.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Hitul Mistry</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/python-multithreading-and-multiprocessing-concurrency-and-parallelism.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hitul Mistry - Python Multithreading and Multiprocessing: Concurrency and Parallelism
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk, people will get introduced to python threading and
+multiprocessing packages. This talk will cover
+multiprocessing/threaded development best practices, problems occurs
+in development, things to know before multiprocessing/multi-threading.
+After this talk attendees will be able to develop
+multiprocessing/threaded applications.&lt;/p&gt;
+&lt;p&gt;This talk will cover threads, global interpreter lock, thread pool,
+processes, process pool, synchronization locks - Lock &amp;amp; RLock ,
+semaphores, events, condition, timer, pipes, queue, shared memory.
+This talk will also cover best practices and problems in
+multiprocessing and threaded application development.&lt;/p&gt;
+</summary></entry><entry><title>Raspberry Pi Weather Station</title><link href="https://pyvideo.org/europython-2015/raspberry-pi-weather-station.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>James Robinson</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/raspberry-pi-weather-station.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;James Robinson - Raspberry Pi Weather Station
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;The Raspberry Pi weather station project introduces young people to
+using python programming to  solve real and technical problems. The
+weather station consists of a range of sensors including:
+Anemometer
+Rain gauge
+Wind Vane
+Temperature Probe
+Barometer
+Air Quality Sensor
+Hygrometer&lt;/p&gt;
+&lt;p&gt;1000 kits are being given away to schools to take part in the project
+by following our schemes of work which will involve.
+Programming basic interrupt based sensors
+Advanced Sensors using ADC chips
+Create a pygame based UI
+Logging data to MySQL and Oracle Apex
+Presenting data to a web app
+Deploying the weather station
+Integrating Apex database&lt;/p&gt;
+&lt;p&gt;We would love feedback on the project from Python Developers and
+support in updating some libraries from python 2 to 3.&lt;/p&gt;
+</summary></entry><entry><title>Solving the web most popular code shortening competition in Python.</title><link href="https://pyvideo.org/europython-2015/solving-the-web-most-popular-code-shortening-competition-in-python.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Alessandro Amici</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/solving-the-web-most-popular-code-shortening-competition-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alessandro Amici - Solving the web most popular code shortening competition in Python.
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;“Code shortening” is the “sport” where participants strive to achieve
+the shortest possible source code that solves a programming problem by
+exploiting all the tricks and quirks of the language.&lt;/p&gt;
+&lt;p&gt;The [SIZECON on SPOJ][1] is one of the oldest and most popular code
+shortening problems on the web with a bizarre twist, only character
+above ASCII value 32 are counted for the penalty. During the talk we
+will take a journey into some frightening depths of the Python
+language in order to write shorter and shorter solutions to SIZECON
+until, exploiting a number of truly mind-blowing tricks, we will reach
+the current record solution of 28 characters (above ASCII 32!).&lt;/p&gt;
+&lt;p&gt;I promise I’ll show you the most obfuscated, contrived and sick python
+code you have ever seen and (hopefully!) will ever see. I invite
+participants to give [SIZECON][1] a try and check their score against
+the [Python2][2] and [Python3][3] SPOJ rankings.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Slides:&lt;/em&gt; [&lt;a class="reference external" href="http://slides.com/alessandroamici/solving-the-web-most"&gt;http://slides.com/alessandroamici/solving-the-web-most&lt;/a&gt;-
+popular-shortening-contest-with-python][4]&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.spoj.com/problems/SIZECON/"&gt;http://www.spoj.com/problems/SIZECON/&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://www.spoj.com/ranks/SIZECON/lang=PYTH%202.7"&gt;http://www.spoj.com/ranks/SIZECON/lang=PYTH%202.7&lt;/a&gt;
+[3]: &lt;a class="reference external" href="http://www.spoj.com/ranks/SIZECON/lang=PYTH%203.2.3"&gt;http://www.spoj.com/ranks/SIZECON/lang=PYTH%203.2.3&lt;/a&gt;
+[4]: &lt;a class="reference external" href="http://slides.com/alessandroamici/solving-the-web-most-popular-shortening-contest-with-python"&gt;http://slides.com/alessandroamici/solving-the-web-most-popular-shortening-contest-with-python&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>The Butler and the Snake - Continuous Integration for Python</title><link href="https://pyvideo.org/europython-2015/the-butler-and-the-snake-continuous-integration-for-python.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Timo Stollenwerk</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/the-butler-and-the-snake-continuous-integration-for-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Timo Stollenwerk - The Butler and the Snake - Continuous Integration for Python
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Continuous Integration is a software development practice where
+members of a team integrate their work frequently, leading to multiple
+integrations per day. Each integration is verified by an automated
+process (including tests) to detect integration errors as quickly as
+possible.&lt;/p&gt;
+&lt;p&gt;This talk will introduce the basic principles for building an
+effective Continuous Integration system for Python-based projects. It
+will present the lessons learned from building a Jenkins-based CI
+system for an Open Source project with a distributed team of more than
+340 core developers that ranks  among the top 2% of all open source
+projects worldwide (Plone).&lt;/p&gt;
+</summary></entry><entry><title>Todo es una trampa</title><link href="https://pyvideo.org/europython-2015/todo-es-una-trampa.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Jesús Espino</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/todo-es-una-trampa.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jesús Espino - Todo es una trampa
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]
+[En Español]&lt;/p&gt;
+&lt;p&gt;A día de hoy usamos un enorme conjunto de bibliotecas y frameworks,
+además los usamos con cierta libertad dentro de nuestro código, y
+pasado el tiempo nos damos cuenta de que esa biblioteca, no cubre mis
+necesidades, o tiene algún fallo, o no escala bien en proyectos más
+grandes... en resumen, hemos caído en una trampa. No se puede evitar
+caer en estas trampas, porque depende de nuestras necesidades y las
+bibliotecas que utilizamos, por lo tanto, solo podemos estar lo mejor
+preparados posibles para salir de ellas tan pronto como nos demos
+cuenta.&lt;/p&gt;
+&lt;p&gt;Como solución a esto, plantearé varias vías (nada innovadoras, pero
+menos usadas de lo que deberían). Unit testing (TDD idealmente),
+arquitectura hexagonal, y algunas reglas básicas de clean code.&lt;/p&gt;
+</summary></entry><entry><title>Using Git Hooks to Help Your Engineering Teams Work Autonomously</title><link href="https://pyvideo.org/europython-2015/using-git-hooks-to-help-your-engineering-teams-work-autonomously.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>João Santos</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/using-git-hooks-to-help-your-engineering-teams-work-autonomously.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;João Santos - Using Git Hooks to Help Your Engineering Teams Work Autonomously
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk, Software Engineer Joao Santos will describe how the
+engineering team at Zalando has been migrating to local Git hooks to
+ensure that engineers can work autonomously and flexibly. Zalando---
+Europe’s leading online fashion platform for men, women and children--
+began shifting from SVN to Git in late 2013. Santos and his colleagues
+used Python to create a Git update hook that enabled the team to
+reject changes to a branch while still allowing changes to other
+branches. He’ll explain why his team chose Python for this job instead
+of a bash script, point out mistakes made during the process (and
+solutions his team used to fix them), and the benefits generated by
+this migration. He’ll also talk about turnstile: a set of open-source,
+configurable, optional local Git hooks, created by the Zalando team,
+that enables engineers to abide by internal rules for committing code
+while following their own coding style and workflow preferences.&lt;/p&gt;
+</summary></entry><entry><title>Why storing files for the web is not as straightforward as you might think.</title><link href="https://pyvideo.org/europython-2015/why-storing-files-for-the-web-is-not-as-straightforward-as-you-might-think.html" rel="alternate"></link><published>2015-08-06T00:00:00+00:00</published><updated>2015-08-06T00:00:00+00:00</updated><author><name>Alessandro Molina</name></author><id>tag:pyvideo.org,2015-08-06:europython-2015/why-storing-files-for-the-web-is-not-as-straightforward-as-you-might-think.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alessandro Molina - Why storing files for the web is not as straightforward as you might think.
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;DEPOT ( &lt;a class="reference external" href="http://depot.readthedocs.org/en/latest/"&gt;http://depot.readthedocs.org/en/latest/&lt;/a&gt; ) is a file storage
+framework born from the experience on a project that saved a lot of
+files on disk, until the day it went online and the customer system
+engineering team decided to switch to Heroku, which doesn't support
+storing files on disk.&lt;/p&gt;
+&lt;p&gt;The talk will cover the facets of a feature &amp;quot;saving files&amp;quot; which has
+always been considered straightforward but that can become complex in
+the era of cloud deployment and when infrastructure migration happens.&lt;/p&gt;
+&lt;p&gt;After exposing the major drawbacks and issues that big projects might
+face on short and long terms with file storage the talk will introduce
+DEPOT and how it tried to solve most of the issues while providing a
+super-easy-to-use interface for developers. We will see how to use
+DEPOT to provide attachments on SQLAlchemy or MongoDB and how to
+handle problems like migration to a different storage backend and long
+term evolution.&lt;/p&gt;
+&lt;p&gt;Like SQLAlchemy makes possible to switch your storage on the fly
+without touching code, DEPOT aims at making so possible for files and
+even use multiple different storages together.&lt;/p&gt;
+</summary></entry><entry><title>BDD: You’re doing it wrong!</title><link href="https://pyvideo.org/europython-2015/bdd-youre-doing-it-wrong.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Rafał Nowicki</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/bdd-youre-doing-it-wrong.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Rafał Nowicki - BDD: You’re doing it wrong!
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Talk about mistakes we made and best practises we have elaborated
+while implementation Behave Driven Development into one of the
+projects. Great idea to coverage whole application with functional
+tests fall down in development chaos and reborn on new better
+foundations.&lt;/p&gt;
+&lt;p&gt;Project referred is web-based big data management which main features
+are transcoding and file sharing. Thanks to Django and many Python
+frameworks we have web interface for it and we are able to run
+automation tests with Selenium.&lt;/p&gt;
+</summary></entry><entry><title>Better asynchronous code with Tornado and Python 3</title><link href="https://pyvideo.org/europython-2015/better-asynchronous-code-with-tornado-and-python-3.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Anton Caceres</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/better-asynchronous-code-with-tornado-and-python-3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Anton Caceres - Better asynchronous code with Tornado and Python 3
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The asyncio module introduced in Python 3.4 is a game-changer for I/O
+management and event-driven network programming in Python. Aiming to
+be a lower-level implementation of an asynchronous event loop, it
+intends that higher level frameworks like Tornado, Twisted or Gevent
+will build on top of it, taking advantage of the shared interface for
+writing concurrent event-driven code across different Python
+frameworks.&lt;/p&gt;
+&lt;p&gt;This talk connects theory with practice, presenting how Tornado can
+run in the asyncio event loop and take advantage of the subgenerator
+delegation syntax (yield from) to provide a high degree of concurrency
+while keeping the simplicity of sequential code. It explains the
+concept of coroutines, futures and ioloop, exposing Python 3 code for
+sample web tasks. The talk completes with a basic demo of running this
+code on Tornado, comparing its syntax and performance with popular
+asynchronous frameworks from other languages.&lt;/p&gt;
+</summary></entry><entry><title>Building a multi-purpose platform for bulk data using sqlalchemy</title><link href="https://pyvideo.org/europython-2015/building-a-multi-purpose-platform-for-bulk-data-using-sqlalchemy.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Christian Trebing</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/building-a-multi-purpose-platform-for-bulk-data-using-sqlalchemy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Christian Trebing - Building a multi-purpose platform for bulk data using sqlalchemy
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;At Blue Yonder, we've built a platform that can accept and process
+bulk amounts of data for multiple business domains (e.g. handling
+retail store location and sales data) using SQLAlchemy as a database
+abstraction layer.&lt;/p&gt;
+&lt;p&gt;We wanted to use as much of SQLAlchemy as possible, but we quickly
+found that the ORM (Object Relational Mapper) is not suitable for
+handling large amounts of data at once. At the same time, we did not
+want each team of developers working on individual business domains to
+have to handcraft their own SQL statements. To solve this problem, we
+built an application configuration that closely resembles an
+SQLAlchemy model, but also contains application-specific logic
+settings.&lt;/p&gt;
+&lt;p&gt;In this talk I will demonstrate:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An application architecture for multiple business domains&lt;/li&gt;
+&lt;li&gt;The structure of the domain configuration utilized in the generation of the SQLAlchemy model, SQLAlchemy core statements, and other application functionality&lt;/li&gt;
+&lt;li&gt;How the domain configuration is used throughout the application (consuming and parsing incoming data, storing it in a database and ensuring data quality)&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Can Rust make Python shine?</title><link href="https://pyvideo.org/europython-2015/can-rust-make-python-shine.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Dmitry Trofimov</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/can-rust-make-python-shine.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dmitry Trofimov - Can Rust make Python shine?
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Rust is a new programming language from Mozilla. It is fast, safe and
+beautiful. It is also a very good option when needing performance. In
+this talk we're going to look at Rust and see what it offers and how
+we can leverage it as Python developers. And we'll do it with a case
+study: a statistical profiler for Python.&lt;/p&gt;
+</summary></entry><entry><title>Code Quality in Python - tools and reasons</title><link href="https://pyvideo.org/europython-2015/code-quality-in-python-tools-and-reasons.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Radosław Jan Ganczarek</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/code-quality-in-python-tools-and-reasons.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Radosław Jan Ganczarek - Code Quality in Python - tools and reasons
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Beginner's guide to Python code quality. I'll talk about the tools for
+code analysis, differences between them, extending them with new
+features and ways to running them automatically. In the end, I'll talk
+about reasons behind all of these tools and try to convince you to
+using them in your projects (but if you are against it - I'll gladly
+listen to your arguments).&lt;/p&gt;
+</summary></entry><entry><title>Data Structures with Python</title><link href="https://pyvideo.org/europython-2015/data-structures-with-python.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Fernando Masanori</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/data-structures-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fernando Masanori - Data Structures with Python
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;Data Structures is traditionally a “bogeyman” discipline in Computer
+Science courses and has a high degree of failure. In FATEC São José
+dos Campos we are adopting a hybrid approach, with C and Python
+languages. The failure rate decreased from 85% (2008) to 12% (2014).
+The talk will be extensively illustrated with code in C and Python,
+addressing the various concepts taught in this course: recursion,
+linked lists, queues, stacks, sorting algorithms.&lt;/p&gt;
+</summary></entry><entry><title>Python Not Recommended</title><link href="https://pyvideo.org/europython-2015/europython-2015-adam-forsyth-python-not-recommended.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Adam Forsyth</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/europython-2015-adam-forsyth-python-not-recommended.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Adam Forsyth - Python Not Recommended
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Braintree is a Ruby shop. By default, we use Ruby and Rails for
+projects. We also use Ruby-based projects for much of our tooling,
+including puppet, capistrano, and rake. However, we strongly believe
+in using the right tool for the job. What that means has evolved over
+ti
+me, and I'll discuss what solutions we chose in the past as well as
+our current choices.&lt;/p&gt;
+&lt;p&gt;So what's it like doing Python at a Ruby shop? You get lots of jokes
+about language features Ruby has but Python lacks and lots of
+disbelief that Python will survive the 2/3 split. People also tend to
+apply the best practices and conventions of Ruby to Python code as if
+t
+hey were the same. Python's major inroad at Braintree has been,
+surprisingly enough, as a platform for high-concurrency situations.
+This is a direct result of the power of Tornado as a platform for
+asynchronous I/O. It also helps that many Python is very approachable
+and
+many developers have at least some experience with it.&lt;/p&gt;
+&lt;p&gt;Braintree has three pieces of our infrastructure using Python and
+Tornado -- an incoming request proxy; an outgoing request proxy; and a
+webook delivery service. They've served us well for 3+ years but all
+suffer from a number of problems. The outdated concurrency feature
+s of CPython / Python 2 as well as our lack of experience with and
+commitment to Tornado have always been an issue. As the meat of the
+talk, I'll speak in depth about the other issues we've encountered
+with each of the three applications and our short- and long- term solu
+tions to the problems.&lt;/p&gt;
+&lt;p&gt;The state as of the end of 2014 appeared dire for Python at Braintree.
+All the old Python code in our stack is on the way out, and Python has
+been specifically recommended agaist for new projects. Our Python
+client library is used by some of our largest merchants, and is
+ready for the future by supporting Python 2.6+ and Python 3.3+ in a
+single codebase. We also have a vibrant Python community at Venmo, our
+sister company. Both Braintree and Venmo support Python by attending,
+hosting, sponsoring, and speaking at meetups, conferences, and
+other events in Chicago, New York, and elsewhere. At Braintree, our
+Data Science team uses Python almost exclusively and they're becoming
+a bigger part of our business every day. We also use custom tooling
+written in Python to manage our infrastructure.&lt;/p&gt;
+</summary></entry><entry><title>Terminal Whispering</title><link href="https://pyvideo.org/europython-2015/europython-2015-terminal-whispering.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Thomas Ballinger</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/europython-2015-terminal-whispering.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Thomas Ballinger - Terminal Whispering
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The terminal emulators we run so many of our programming tools in are
+more powerful than we remember to give them credit for, and the key to
+that power is understanding the interface. This talk will cover
+terminal colors and styles, writing to arbitrary portions of the
+screen, handling signals from the terminal, determining the terminal's
+dimensions and scrollback buffer behavior.&lt;/p&gt;
+&lt;p&gt;Terminal programming can get hairy; along the way we'll deal with
+encoding issues, consider cross platform concerns, acknowledge 4
+decades' worth of standards for terminal communication, and consider
+that humans at interactive terminals may not be the only users of our
+interfaces. By gaining an understanding of these issues, we'll be able
+choose from the abstractions over them offered by Python libraries
+Urwid, Blessings, and Python Prompt Toolkit.&lt;/p&gt;
+&lt;p&gt;This talk requires minimal Python knowledge, but does assume
+familiarity with command line tools in a unix environment.&lt;/p&gt;
+&lt;p&gt;An abbreviated version of this talk was presented at PyCon 2015 in
+Montréal: &lt;a class="reference external" href="https://www.youtube.com/watch?v=WAitSilLDUA"&gt;https://www.youtube.com/watch?v=WAitSilLDUA&lt;/a&gt; With the
+additional time I'd hope to present more code examples, a more in-
+depth tour of existing libraries and more practical advice about
+writing programs that use the terminal, and an additional example of a
+difficult terminal details: dealing with reflowing of text in modern
+terminal emulators like GNOME Terminal and iTerm.&lt;/p&gt;
+</summary></entry><entry><title>Get native with Cython</title><link href="https://pyvideo.org/europython-2015/get-native-with-cython.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Stefan Behnel</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/get-native-with-cython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stefan Behnel - Get native with Cython
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;[Cython][1] is not only an excellent and widely used tool to speed up computational Python code, it's also a very comfortable way to talk to native code and libraries. The Cython compiler translates Python code to C or C++ code, and supports static type annotations to allow direct use of C/C++ data types and functions. The tight integration of all three languages makes it possible to freely mix Python features like generators and comprehensions with C/C++ features like native data types, pointer arithmetic or manually tuned memory management in the same code.&lt;/p&gt;
+&lt;p&gt;This talk by a core developer introduces the Cython compiler by
+interactive code examples and presents recent enhancements in the
+language that continue to make Cython the best choice for the
+development of fast and portable Python extensions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Examples used in presentation as &lt;strong&gt;[IPython/Jupyter][3]&lt;/strong&gt;
+or &lt;strong&gt;[HTML][2]&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://cython.org/"&gt;http://cython.org/&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://consulting.behnel.de/ep/2015/ep15-cython.ipynb"&gt;http://consulting.behnel.de/ep/2015/ep15-cython.ipynb&lt;/a&gt;
+[3]: &lt;a class="reference external" href="http://consulting.behnel.de/ep/2015/ep15-cython.html"&gt;http://consulting.behnel.de/ep/2015/ep15-cython.html&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Getting more out of Matplotlib with GR</title><link href="https://pyvideo.org/europython-2015/getting-more-out-of-matplotlib-with-gr.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Josef Heinen</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/getting-more-out-of-matplotlib-with-gr.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Josef Heinen - Getting more out of Matplotlib with GR
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Python is well established in software development departments of
+research and industry, not least because of the proliferation of
+libraries such as &lt;em&gt;SciPy&lt;/em&gt; and &lt;em&gt;Matplotlib&lt;/em&gt;. However, when processing
+large amounts of data, in particular in combination with GUI toolkits
+(&lt;em&gt;Qt&lt;/em&gt;) or three-dimensional visualizations (&lt;em&gt;OpenGL&lt;/em&gt;), Python as an
+interpretative programming language seems to be reaching its limits.
+In particular, large amounts of data or the visualization of three-
+dimensional scenes may overwhelm the system.&lt;/p&gt;
+&lt;p&gt;This presentation shows how visualization applications with special
+performance requirements can be designed on the basis of &lt;em&gt;Matplotlib&lt;/em&gt;
+and &lt;em&gt;GR&lt;/em&gt;, a high-performance visualization library for Linux, OS X and
+Windows. The lecture focuses on the development of a new graphics
+backend for &lt;em&gt;Matplotlib&lt;/em&gt; based on the &lt;em&gt;GR&lt;/em&gt; framework. By combining the
+power of those libraries the responsiveness of animated visualization
+applications and their resulting frame rates can be improved
+significantly. This in turn allows the use of &lt;em&gt;Matplotlib&lt;/em&gt; in real-
+time environments, for example in the area of signal processing.&lt;/p&gt;
+&lt;p&gt;Using concrete examples, the presentation will demonstrate the
+benefits of the &lt;a class="reference external" href="http://gr-framework.org"&gt;GR framework&lt;/a&gt; as a companion module for
+&lt;em&gt;Matplotlib&lt;/em&gt;, both in &lt;em&gt;Python&lt;/em&gt; and &lt;em&gt;Julia&lt;/em&gt;. Based on selected
+applications, the suitability of the &lt;em&gt;GR framework&lt;/em&gt; will be
+highlighted especially in environments where time is critical. The
+system’s performance capabilities will be illustrated using demanding
+live applications. In addition, the special abilities of the &lt;em&gt;GR
+framework&lt;/em&gt; are emphasized in terms of interoperability with graphical
+user interfaces (&lt;em&gt;Qt/PySide&lt;/em&gt;) and &lt;em&gt;OpenGL&lt;/em&gt;, which opens up new
+possibilities for existing &lt;em&gt;Matplotlib&lt;/em&gt; applications.&lt;/p&gt;
+</summary></entry><entry><title>How to GIS with Python</title><link href="https://pyvideo.org/europython-2015/how-to-gis-with-python.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Anders Lehmann</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/how-to-gis-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Anders Lehmann - How to GIS with Python
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk I will present some tools for working with Geographic
+Information Systems in Python.&lt;/p&gt;
+&lt;p&gt;Geographic information Systems are widely used for managing geographic
+(map) data. As an example I will present how to use Open Street Map
+data (&lt;a class="reference external" href="http://openstreetmap.org/"&gt;http://openstreetmap.org/&lt;/a&gt;), in routing, traffic planning and
+estimation of pollution emission.&lt;/p&gt;
+&lt;p&gt;For the purpose of the project EcoSense (&lt;a class="reference external" href="http://ecosense.au.dk"&gt;http://ecosense.au.dk&lt;/a&gt;), GPS
+data from users smartphones are mapped to OSM roads. The map matching
+algorithm is written in Python and uses data from the database
+PostgreSQL, with the PostGIS extension.&lt;/p&gt;
+&lt;p&gt;One of the goals of the EcoSense project is to devise methods to
+improve the estimation of air quality in urban environments.&lt;/p&gt;
+</summary></entry><entry><title>Image recognition and camera positioning with OpenCV. A tourist guide application.</title><link href="https://pyvideo.org/europython-2015/image-recognition-and-camera-positioning-with-opencv-a-tourist-guide-application.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Nazzaro</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/image-recognition-and-camera-positioning-with-opencv-a-tourist-guide-application.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Francesco Nazzaro - Image recognition and camera positioning with OpenCV. A tourist guide application.
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;OpenCV Python bindings provide several ready to use tools for camera
+calibration, image recognition and camera position estimation. This
+talk will show how to recognize a picture, from a library of known
+paintings, and compute the camera position with respect to the
+recognized picture using OpenCV and numpy. This is applied to a
+tourist guide application for Google Glass through the recognition of
+the paintings exposed in the museum.&lt;/p&gt;
+</summary></entry><entry><title>Import Deep Dive</title><link href="https://pyvideo.org/europython-2015/import-deep-dive.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Petr Viktorin</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/import-deep-dive.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Petr Viktorin - Import Deep Dive
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Whatever you need to do with Python, you can probably import a library
+for it. But what exactly happens when you use that import statement?
+How does a source file that you've installed or written become a
+Python module
+object, providing functions or classes for you to play with?&lt;/p&gt;
+&lt;p&gt;While the import mechanism is relatively well-documented in the
+reference and dozens of PEPs, sometimes even Python veterans are
+caught by surprise. And some details are little-known: did you know
+you can import from zip archives? Write CPython modules in C, or even
+a dialect of Lisp? Or import from URLs (which might not be a good
+idea)?&lt;/p&gt;
+&lt;p&gt;This talk explains exactly what can happen when you use the import
+statement – from the mundane machinery of searching PYTHONPATH through
+subtle details of packages and import loops, to deep internals of
+custom importers and C extension loading.&lt;/p&gt;
+</summary></entry><entry><title>"It's about time to take your medication!" or how to write a friendly reminder bot ;-)</title><link href="https://pyvideo.org/europython-2015/its-about-time-to-take-your-medication-or-how-to-write-a-friendly-reminder-bot-.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Florian Wilhelm</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/its-about-time-to-take-your-medication-or-how-to-write-a-friendly-reminder-bot-.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Florian Wilhelm - &amp;quot;It's about time to take your medication!&amp;quot; or how to write a friendly reminder bot ;-)
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The author  shows how to use the [SleekXMPP][1] library in order to
+write a small chatbot that connects to Google Hangouts and reminds you
+or someone else to take medication for instance.  The secure and
+recommended OAuth2  protocol is used to authorize the bot application
+in the [Google Developers Console][2]  in order to access the Google+
+Hangouts API. The author will elaborate then on how to use an event-
+driven library to write a bot that sends scheduled messages, waits for
+a proper reply and repeats the question if need be. Thereby, a primer
+on event-driven architectures will be given.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://sleekxmpp.readthedocs.org/"&gt;http://sleekxmpp.readthedocs.org/&lt;/a&gt;
+[2]: &lt;a class="reference external" href="https://console.developers.google.com/"&gt;https://console.developers.google.com/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="SleekXMPP"></category><category term="chatbot"></category></entry><entry><title>Learnt lessons in a big Django Project</title><link href="https://pyvideo.org/europython-2015/learnt-lessons-in-a-big-django-project.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Yamila Moreno</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/learnt-lessons-in-a-big-django-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Yamila Moreno - Learnt lessons in a big Django Project
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;A Django project, developed for 2 years is a valuable source of
+anecdotes and wisdom. This talk is a review on the decissions, about
+human and tech, that my team took during the project. I'll point out
+the good decissions as well as the bad ones, those which made us learn
+&amp;quot;the hard way&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Both good and bad decissions taught us a lot, and here I compile them,
+together with a handful of tips which can amuse and, hopefully,
+inspire the audience, specially those who are facing for the first
+time a big project.&lt;/p&gt;
+</summary></entry><entry><title>MkDocs: Documenting projects with Markdown</title><link href="https://pyvideo.org/europython-2015/mkdocs-documenting-projects-with-markdown.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Dougal Matthews</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/mkdocs-documenting-projects-with-markdown.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dougal Matthews - MkDocs: Documenting projects with Markdown
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;MkDocs is a Python library for creating documentation with
+Markdown. The primary goal of the project is to lower the barrier
+for documentation writers and to help enable high quality prose
+based documentation.&lt;/p&gt;
+&lt;p&gt;The primary maintainer of MkDocs will cover the following topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;An introduction to MkDocs and the project goals.&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;How and why did the project start?&lt;/li&gt;
+&lt;li&gt;Who uses MkDocs today?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;Discuss what we need to do to create great documentation and how MkDocs can help.&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;A tour of the key features currently in MkDocs&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Adding MkDocs to your project.&lt;/li&gt;
+&lt;li&gt;Using themes in the documentation and making customisations&lt;/li&gt;
+&lt;li&gt;Publishing your documentation with ReadTheDocs and GitHub     pages.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;A look at the up and coming features in MkDocs and how you can help make these happen.&lt;/li&gt;
+&lt;li&gt;A comparison with Sphinx and why you should consider MkDocs.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>New Trends In Storing Large Data Silos With Python</title><link href="https://pyvideo.org/europython-2015/new-trends-in-storing-large-data-silos-with-python.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/new-trends-in-storing-large-data-silos-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Francesc Alted - New Trends In Storing Large Data Silos With Python
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;My talk is meant to provide an overview of our current set of tools
+for storing data and how we arrived to these.  Then, in the light of
+the current bottlenecks, and how hardware and software are evolving,
+provide a brief overview of the emerging technologies that will be
+important for handling Big Data within Python.  Although I expect my
+talk to be a bit prospective, I won't certainly be trying to predict
+the future, but rather showing a glimpse on what I expect we would be
+doing in the next couple of years for properly leveraging modern
+architectures (bar unexpected revolutions ;).&lt;/p&gt;
+&lt;p&gt;As an example of library adapting to recent trends in hardware, I will
+be showing bcolz (&lt;a class="reference external" href="https://github.com/Blosc/bcolz"&gt;https://github.com/Blosc/bcolz&lt;/a&gt;), which implements a
+couple of data containers (and specially a chunked, columnar 'ctable')
+meant for storing large datasets efficiently.&lt;/p&gt;
+</summary></entry><entry><title>PIP Internals</title><link href="https://pyvideo.org/europython-2015/pip-internals.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Xavier Fernandez</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/pip-internals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Xavier Fernandez - PIP Internals
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;pip is certainly one of the most used package in the Python ecosystem,
+but what actually happens when you pip install foo ? The talk will
+mainly focus on two aspects:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how does it perform an installation and resolve dependencies ?&lt;/li&gt;
+&lt;li&gt;how does pip find installation candidates and select the 'best' ?&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Preparing Apps for Dynamic Scaling</title><link href="https://pyvideo.org/europython-2015/preparing-apps-for-dynamic-scaling.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Roy Simkes</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/preparing-apps-for-dynamic-scaling.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Roy Simkes - Preparing Apps for Dynamic Scaling
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Scalability is a big problem for everyone who wants to grow. In order
+to handle the demand, appropriate infrastructure both in terms of
+software and hardware should be met. What if hardware was as dynamic
+as a service where CPU and RAM could have been acquired when only it's
+needed. Is there such an environment? How can you work with it? What
+you should be careful of? How your applications should evolve?&lt;/p&gt;
+</summary></entry><entry><title>Pycon - A teacher's perspective</title><link href="https://pyvideo.org/europython-2015/pycon-a-teachers-perspective.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>James Robinson</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/pycon-a-teachers-perspective.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;James Robinson - Pycon - A teacher's perspective
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]
+[Education Summit]&lt;/p&gt;
+&lt;p&gt;A perspective of the impact of the PyconUK education track from the
+point of view of teachers and educators.&lt;/p&gt;
+&lt;p&gt;Having attended the education track at Pycon UK 2014 as a teacher, my
+talk will share both my experiences and those of other teachers
+attending. The  education track bought educators and developers
+together in a way that allowed the teachers to get support and advice
+whilst developers   get to support teachers in developing exciting &amp;amp;
+real applications for teaching computing.&lt;/p&gt;
+&lt;p&gt;The talk will focus on two aspects of the education track. The
+workshops delivered for teachers by python developers and how this
+helps build teachers confidence.  But also the breakout sessions where
+educators and developers with common interests can work together to
+develop something. This might be a program / library or a teaching
+resource, some developers gave a hands on and bespoke training session
+to a group of teachers.&lt;/p&gt;
+&lt;p&gt;If we are to get more young people programming or at least having  a
+positive experience of programming then we need to minimize obstacles
+to that experience. By having educators and developers working
+together we can identify those obstacles and eliminate them!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://goo.gl/nt05hC"&gt;https://goo.gl/nt05hC&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Python Security &amp; Cryptography</title><link href="https://pyvideo.org/europython-2015/python-security-cryptography.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Jose Ortega</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/python-security-cryptography.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jose Ortega - Python Security &amp;amp; Cryptography
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The talk would aim to introduce cryptography and security from the
+developer point of view, showing ways to encrypt information with
+Python scripts and more sensitive information in web applications
+using django.&lt;/p&gt;
+&lt;p&gt;I will introduce to security in python ,showing some libraries that
+allow encryption and decryption like PyCrypto or M2Crypto,comparing
+theses libraries with the cryptography module.At the same time,I will
+show the main ciphers and hashing  algorithms used in these libraries
+like AES,DES,RSA and some examples illustrating each case.I wil show
+other techniques like steganography for hiding information in
+files(images,documents,programs) with some libraries like Stepic or
+ezPyCrypto.&lt;/p&gt;
+&lt;p&gt;Finally,I will comment OWASP Python Security Project where we can find
+some useful practices
+and secure coding guidelines for detecting  potential security
+vulnerabilities  in our applications like SQL injection or Cross-site
+scripting.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Slides&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[&lt;a class="reference external" href="https://speakerdeck.com/jmortega/python-cryptography-and-security][1"&gt;https://speakerdeck.com/jmortega/python-cryptography-and-security][1&lt;/a&gt;]&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="https://speakerdeck.com/jmortega/python-cryptography-and-security"&gt;https://speakerdeck.com/jmortega/python-cryptography-and-security&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Release Management with Devpi</title><link href="https://pyvideo.org/europython-2015/release-management-with-devpi.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Stephan Erb</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/release-management-with-devpi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stephan Erb - Release Management with Devpi
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Devpi is an open source PyPi-compatible package server. Its versatile
+features make it the Swiss Army knife of Python package and release
+management, enabling anyone to shape a custom release workflow.&lt;/p&gt;
+&lt;p&gt;In this talk, I will detail how we use our company-wide Devpi
+installation in order to share a large set of packages across teams,
+deploy binary packages to our application servers, and mix and mash
+open source packages with our own. With Devpi being a critical part of
+our release and deployment infrastructure, I will also cover our high-
+availability setup and how we perform major version updates with
+minimal downtime.&lt;/p&gt;
+&lt;p&gt;While this talk is not meant to be an exhaustive introduction of all
+available Devpi features, it can offer insights on how Devpi can be
+used at a larger scale.&lt;/p&gt;
+</summary></entry><entry><title>Scaling MySQL with Python</title><link href="https://pyvideo.org/europython-2015/scaling-mysql-with-python.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/scaling-mysql-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Roberto Polli - Scaling MySQL with Python
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Python is the language of choice for the orchestration part of  MySQL 5.6.&lt;/p&gt;
+&lt;p&gt;After a brief introduction of  MySQL replication architecture, the
+talk [Slides here][1] presents the python utilities released by MySQL:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a set of drivers in pure-python&lt;/li&gt;
+&lt;li&gt;mysql-utilites for replication, management and failover&lt;/li&gt;
+&lt;li&gt;fabric, a tool for scaling, sharding and provisioning new servers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You will see how to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;create resilient configurations in minutes&lt;/li&gt;
+&lt;li&gt;use mysql-fabric to create high available infrastructures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;As a plus, we'll show how we:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;implemented a fabric provider for provisioning new databases via docker&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;# Prerequisites&lt;/p&gt;
+&lt;p&gt;Basic database knowledge,  transactions, replication.&lt;/p&gt;
+&lt;p&gt;MySQL specific concepts (eg: binary logs) are briefly introduced in the talk.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://www.slideshare.net/ioggstream/scaling-mysql-with-python"&gt;http://www.slideshare.net/ioggstream/scaling-mysql-with-python&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Speeding up search with locality sensitive hashing</title><link href="https://pyvideo.org/europython-2015/speeding-up-search-with-locality-sensitive-hashing.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Maciej Kula</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/speeding-up-search-with-locality-sensitive-hashing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Maciej Kula - Speeding up search with locality sensitive hashing
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Locality sensitive hashing (LSH) is a technique for reducing complex
+data down to a simple hash code. If two hash codes are similar than
+the original data is similar. Typically, they are used for speeding up
+search and other similarity comparisons.&lt;/p&gt;
+&lt;p&gt;In this presentation I will discuss two ways of implementing LSH in
+python; the first method is completely stateless but only works on
+certain forms of data; the second is stateful but does not make any
+assumptions about the distribution of the underlying data. I will
+conclude the presentation by describing how we apply LSH to search at
+Lyst.&lt;/p&gt;
+</summary></entry><entry><title>Standing on the Shoulders of Giants: The Kotti Web Application Framework</title><link href="https://pyvideo.org/europython-2015/standing-on-the-shoulders-of-giants-the-kotti-web-application-framework.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Andreas Kaiser</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/standing-on-the-shoulders-of-giants-the-kotti-web-application-framework.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andreas Kaiser - Standing on the Shoulders of Giants: The Kotti Web Application Framework
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Kotti is a high-level, Pythonic web application framework based on
+Pyramid, SQLAlchemy and Bootstrap 3.  It includes an extensible
+Content Management System called the Kotti CMS.  Kotti is particularly
+well suited for building custom applications with object level
+security.  It comes with complete user and group management and
+supports the concepts of global and local roles providing management
+views for each of those.&lt;/p&gt;
+&lt;p&gt;The talk will give an overview on Kotti, its philosophy, history and
+future. Target audience are people who want to learn what it is and
+can be used for.  Because Kotti is just a rather small layer on top of
+its foundations, the talk might also give some interesting insights on
+how to build a solid (web) framework that suits your personal
+preferences.&lt;/p&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://kotti.pylonsproject.org/"&gt;http://kotti.pylonsproject.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://kotti.readthedocs.org/en/latest/"&gt;http://kotti.readthedocs.org/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>TDD for APIs</title><link href="https://pyvideo.org/europython-2015/tdd-for-apis.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Michael Kuehne</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/tdd-for-apis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Michael Kuehne - TDD for APIs
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;It is always tough to test a complex API comprehensively. The
+additional level of complexity brings us to the question &amp;quot;How can we
+validate that our API is working as intended?&amp;quot;&lt;/p&gt;
+&lt;p&gt;In this talk I will explain how to use test driven development for
+APIs to solve this problem and even further how TDD can drive an API
+Design towards a more usable design.
+I will outline my practical approach with an implementation example
+based on django. And finally I will give you a brief summary of my
+lessons learned using this approach in customer projects.&lt;/p&gt;
+</summary></entry><entry><title>The Lightweight Cloud Servers War Begins</title><link href="https://pyvideo.org/europython-2015/the-lightweight-cloud-servers-war-begins.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Haikel Guemar</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/the-lightweight-cloud-servers-war-begins.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Haikel Guemar - The Lightweight Cloud Servers War Begins
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Docker has introduced a new model of deployment solving the infamous
+&amp;quot;Deployment Matrix from Hell&amp;quot; by using containers.
+But this also brought the spotlight back on the Operating System side,
+and following the trails of CoreOS and Atomic Host, a new generation
+of Cloud Servers are born by using containers instead of traditional
+RPM/DPKG/tarball/whaterver packages model to deploy services.
+CoreOS/Atomic Host/Snappy Ubuntu and now VMWare Photon also provides
+transactional image-based OS focusing on security and built-in cluster
+management.&lt;/p&gt;
+&lt;p&gt;During this talk, we'll present these next-gen OS, and their
+components and how they fit in.&lt;/p&gt;
+</summary></entry><entry><title>The realities of open source testing: lessons learned from “Adopt pytest month”</title><link href="https://pyvideo.org/europython-2015/the-realities-of-open-source-testing-lessons-learned-from-adopt-pytest-month.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Brianna Laugher</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/the-realities-of-open-source-testing-lessons-learned-from-adopt-pytest-month.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Brianna Laugher - The realities of open source testing: lessons learned from “Adopt pytest month”
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Ever feel like your open source project could be better tested? Lack
+of tests holding you back from contributors but you don’t know where
+to start? You’re not alone.&lt;/p&gt;
+&lt;p&gt;[“Adopt pytest month”][1] was held in April 2015. [Pytest][2] volunteers were paired with open source software projects, to find a path to better testing with pytest. Projects varied from  libraries/command line utilities, to a browser, to a complex Django app. In some cases converting existing tests was necessary, in others writing the first tests in existence for non-trivial amounts of code. Two projects were open sourced specifically to take part in “adopt pytest month”. What began as an experiment in increasing software audience proved to be an interesting exercise in strengthening community and most valuable of all, provided a newcomer’s perspective to veteran contributors.&lt;/p&gt;
+&lt;p&gt;This talk will discuss what worked well with “adopt pytest month”,
+what didn’t, what we learned about pytest and what you could take away
+for your open source project, be it an improved testing environment or
+an improved contributor community. A basic knowledge of testing and
+pytest will be useful.&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="http://pytest.org/latest/adopt.html"&gt;http://pytest.org/latest/adopt.html&lt;/a&gt;
+[2]: &lt;a class="reference external" href="http://pytest.org/latest/"&gt;http://pytest.org/latest/&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>To the Clouds: Why you should deploy to the cloud even if you don't want to</title><link href="https://pyvideo.org/europython-2015/to-the-clouds-why-you-should-deploy-to-the-cloud-even-if-you-dont-want-to.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Michael Foord</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/to-the-clouds-why-you-should-deploy-to-the-cloud-even-if-you-dont-want-to.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Michael Foord - To the Clouds: Why you should deploy to the cloud even if you don't want to
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Do you deploy your Python services to Amazon EC2, or to Openstack, or
+even to HP cloud, joyent or Azure? Do you want to - without being tied
+into any one of them? What about local full stack deployments with lxc
+or kvm containers?&lt;/p&gt;
+&lt;p&gt;Even if you're convinced you don't need &amp;quot;the cloud&amp;quot; because you manage
+your own servers, amazing technologies like Private clouds and MaaS,
+for dynamic server management on bare metal, may change your mind.&lt;/p&gt;
+&lt;p&gt;Fed up with the cloud hype? Let us rehabilitate the buzzword! (A bit anyway.)&lt;/p&gt;
+&lt;p&gt;A fully automated cloud deployment system is essential for rapid
+scaling, but it's also invaluable for full stack testing on continuous
+integration systems. Even better, your service deployment and
+infrastructure can be managed with Python code? (Devops distilled)&lt;/p&gt;
+&lt;p&gt;Treat your servers as cattle not as pets, for service oriented
+repeatable deployments on your choice of back-end. Learn how service
+orchestration is a powerful new approach to deployment management, and
+do it with Python! If any of this sounds interesting then Juju maybe
+for you!&lt;/p&gt;
+&lt;p&gt;In this talk we'll see a demo deployment for a Django application and
+related infrastructure. We'll be looking at the key benefits of cloud
+deployments and how service orchestration is different from the
+&amp;quot;machine provisioning&amp;quot; approach of most existing cloud deployment
+solutions.&lt;/p&gt;
+</summary></entry><entry><title>Use Python to process 12mil events per minute and still keep it simple (Talk)</title><link href="https://pyvideo.org/europython-2015/use-python-to-process-12mil-events-per-minute-and-still-keep-it-simple-talk.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Teodor Dima</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/use-python-to-process-12mil-events-per-minute-and-still-keep-it-simple-talk.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Teodor Dima - Use Python to process 12mil events per minute and still keep it simple (Talk)
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Creating a large-scale event processing system can be a daunting task.
+Especially if you want it “stupid simple” and wrapped around each
+client’s needs. We built a straightforward solution for this using
+Python 3 and other open-source tools.&lt;/p&gt;
+&lt;p&gt;Main issues to solve for a system that needs to be both performant and scalable:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;handling a throughput of 1 million events per minute in a 4 cores AWS instance;&lt;/li&gt;
+&lt;li&gt;following the principle of least astonishment;&lt;/li&gt;
+&lt;li&gt;data aggregation and how Python's standard libraries and data structures can help;&lt;/li&gt;
+&lt;li&gt;failsafe and profiling mechanisms that can be applied to any Linux service in production;&lt;/li&gt;
+&lt;li&gt;addressing unexpected behaviors of Python’s Standard Library; like reading from a file while it is written;&lt;/li&gt;
+&lt;li&gt;tackling a sudden spectacular cloud instance failure;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The alternative to this system would be to adopt existing technology
+stacks that might be too general, add more complexity, bloat, costs
+and which need extensive work to solve your specific problem.
+Moreover, our approach resulted in over 85% drop on hardware
+utilisation.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://eastvisionsystems.com/production-software-part-ii-good-coding-reduces-clients-bill/"&gt;Context: Production Software – II (where good coding reduces the client’s bill)&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Using Scikit-Learn's interface for turning Spaghetti Data Science into Maintainable Software</title><link href="https://pyvideo.org/europython-2015/using-scikit-learns-interface-for-turning-spaghetti-data-science-into-maintainable-software.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Holger Peters</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/using-scikit-learns-interface-for-turning-spaghetti-data-science-into-maintainable-software.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Holger Peters - Using Scikit-Learn's interface for turning Spaghetti Data Science into Maintainable Software
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Finding a good structure for number-crunching code can be a problem,
+this especially applies to routines preceding the core algorithms:
+transformations such as data processing and cleanup, as well as
+feature construction.&lt;/p&gt;
+&lt;p&gt;With such code, the programmer faces the problem, that their code
+easily  turns into a sequence of highly interdependent operations,
+which are hard to separate. It can be challenging to test, maintain
+and reuse such &amp;quot;Data Science Spaghetti code&amp;quot;.&lt;/p&gt;
+&lt;p&gt;Scikit-Learn offers a simple yet powerful interface for data science
+algorithms: the estimator and composite classes (called meta-
+estimators). By example, I show how clever usage of meta-estimators
+can encapsulate elaborate machine learning models into a maintainable
+tree of objects that is both handy to use and simple to test.&lt;/p&gt;
+&lt;p&gt;Looking at examples, I will show how this approach simplifies model
+development, testing and validation and how this brings together best
+practices from software engineering as well as data science.&lt;/p&gt;
+&lt;p&gt;_Knowledge of Scikit-Learn is handy but not necessary to follow this talk._&lt;/p&gt;
+</summary></entry><entry><title>What dojos are and how we run them at pyBCN</title><link href="https://pyvideo.org/europython-2015/what-dojos-are-and-how-we-run-them-at-pybcn.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Núria Pujol</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/what-dojos-are-and-how-we-run-them-at-pybcn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Núria Pujol/Ignasi  Fosch - What dojos are and how we run them at pyBCN
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Coding dojos are a very good way to share coding knowledge among
+members in a community, and, at the same time, introduce people into
+the language and community.
+Sometimes, though, the typical approach to set coding dojos may
+prevent expert coders to join the session. This is the story of the
+pyBCN's dojos, so far.&lt;/p&gt;
+</summary></entry><entry><title>Yak shaving a good place to eat using non negative matrix factorization</title><link href="https://pyvideo.org/europython-2015/yak-shaving-a-good-place-to-eat-using-non-negative-matrix-factorization.html" rel="alternate"></link><published>2015-08-05T00:00:00+00:00</published><updated>2015-08-05T00:00:00+00:00</updated><author><name>Adriano Petrich</name></author><id>tag:pyvideo.org,2015-08-05:europython-2015/yak-shaving-a-good-place-to-eat-using-non-negative-matrix-factorization.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Adriano Petrich - Yak shaving a good place to eat using non negative matrix factorization
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Trying to find a good place to eat has become much easier and
+democratic with online reviews, but on the other hand, that creates
+new problems.  Can you trust that 5 star review of fast food chain as
+much as the 1 star of a fancy restaurant because &amp;quot;Toast arrived far
+too early, and too thin&amp;quot;?&lt;/p&gt;
+&lt;p&gt;We all like enjoy things differently.  Starting of on the assumption
+that the &amp;quot;best pizza&amp;quot; is not the same for everyone.  Can we group
+users into people that has similar tastes? Can we identify  reviews
+and restaurants to make sense of it? Can that lead us to a better way
+to find restaurants that you like?&lt;/p&gt;
+&lt;p&gt;Using some data handling techniques I walk you through my process and
+results that I've got from that idea.  There are no requisites for
+this talk except basic python and math knowledge (matrices exist)&lt;/p&gt;
+</summary></entry><entry><title>Data Analysis and Map-Reduce with mongoDB and pymongo</title><link href="https://pyvideo.org/europython-2015/data-analysis-and-map-reduce-with-mongodb-and-pymongo.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Alexander Hendorf</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/data-analysis-and-map-reduce-with-mongodb-and-pymongo.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Alexander Hendorf - Data Analysis and Map-Reduce with mongoDB and pymongo
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The MongoDB aggregation framework provides a means to calculate
+aggregated values without having to use map-reduce. While map-reduce
+is powerful, it is often more difficult than necessary for many simple
+aggregation tasks, such as totaling or averaging field values.&lt;/p&gt;
+&lt;p&gt;See how to use the build-in data-aggregation-pipelines for averages,
+summation, grouping, reshaping. See how to work with documents, sub-
+documents, grouping by year, month, day, etc.&lt;/p&gt;
+&lt;p&gt;This talk will give many (live) examples how to make the most of your
+data with pymongo with a few lines of code.&lt;/p&gt;
+&lt;p&gt;added 28/07/15:
+iPython notebook &amp;amp; sample data can be found in [this git][1]&lt;/p&gt;
+&lt;p&gt;[1]: &lt;a class="reference external" href="https://bitbucket.org/alanderex/ep2015-dataanalysis-with-mongodb"&gt;https://bitbucket.org/alanderex/ep2015-dataanalysis-with-mongodb&lt;/a&gt;&lt;/p&gt;
+</summary></entry><entry><title>Dive into Scrapy</title><link href="https://pyvideo.org/europython-2015/dive-into-scrapy.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Juan Riaza</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/dive-into-scrapy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Juan Riaza - Dive into Scrapy
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Scrapy is a fast high-level screen scraping and web crawling
+framework, used to crawl websites and extract structured data from
+their pages. It can be used for a wide range of purposes, from data
+mining to monitoring and automated testing.&lt;/p&gt;
+&lt;p&gt;In this talk some advanced techniques will be shown based on how
+Scrapy is used at Scrapinghub.&lt;/p&gt;
+&lt;p&gt;Goals:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Understand why its necessary to &lt;em&gt;Scrapy-ify&lt;/em&gt; early on.&lt;/li&gt;
+&lt;li&gt;Anatomy of a Scrapy Spider.&lt;/li&gt;
+&lt;li&gt;Using the interactive shell.&lt;/li&gt;
+&lt;li&gt;What are items and how to use item loaders.&lt;/li&gt;
+&lt;li&gt;Examples of pipelines and middlewares.&lt;/li&gt;
+&lt;li&gt;Techniques to avoid getting banned.&lt;/li&gt;
+&lt;li&gt;How to deploy Scrapy projects.&lt;/li&gt;
+&lt;/ul&gt;
+</summary></entry><entry><title>Keynote: Designed for Education: A Python Solution</title><link href="https://pyvideo.org/europython-2015/keynote-designed-for-education-a-python-solution.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Carrie Anne Philbin</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/keynote-designed-for-education-a-python-solution.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Carrie Anne Philbin - Keynote: Designed for Education: A Python Solution
+[EuroPython 2015]
+[23 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The problem of introducing children to programming and computer science has
+seen growing attention in the past few years. Initiatives like Raspberry
+Pi, Code Club, code.org, (and many more) have been created to help solve
+this problem. With the introduction of a national computing curriculum in
+the UK, teachers have been searching for a text based programming language
+to help teach computational thinking as a follow on from visual languages
+like Scratch.&lt;/p&gt;
+&lt;p&gt;The educational community has been served well by Python, benefiting from
+its straight-forward syntax, large selection of libraries, and supportive
+community. Education-focused summits are now a major part of most major
+Python Conferences. Assistance in terms of documentation and training is
+invaluable, but perhaps there are technical means of improving the
+experience of those using Python in education. Clearly the needs of
+teachers and their students are different to those of the seasoned
+programmer. Children are unlikely to come to their teachers with
+frustrations about the Global Interpreter Lock! But issues such as
+usability of IDEs or comprehensibility of error messages are of utmost
+importance.&lt;/p&gt;
+&lt;p&gt;In this keynote, Carrie Anne will discuss existing barriers to Python
+becoming the premier language of choice for teaching computer science, and
+how learning Python could be helped immensely through tooling and further
+support from the Python developer community.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: Python now and in the future</title><link href="https://pyvideo.org/europython-2015/keynote-python-now-and-in-the-future.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Guido van Rossum</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/keynote-python-now-and-in-the-future.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Guido van Rossum - Keynote: Python now and in the future
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;This is &lt;em&gt;your&lt;/em&gt; keynote! I will have some prepared remarks on the state
+of the Python community and Python's future directions, but first and
+foremost this will be an interactive Q&amp;amp;A session.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: So, I have all these Docker containers, now what?</title><link href="https://pyvideo.org/europython-2015/keynote-so-i-have-all-these-docker-containers-now-what.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Mandy Waite</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/keynote-so-i-have-all-these-docker-containers-now-what.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mandy Waite - Keynote: So, I have all these Docker containers, now what?
+[EuroPython 2015]
+[24 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;You've solved the issue of process-level reproducibility by packaging up
+your apps and execution environments into a number of Docker containers.
+But once you have a lot of containers running, you'll probably need to
+coordinate them across a cluster of machines while keeping them healthy and
+making sure they can find each other. Trying to do this imperatively can
+quickly turn into an unmanageable mess! Wouldn't it be helpful if you could
+declare to your cluster what you want it to do, and then have the cluster
+assign the resources to get it done and to recover from failures and scale
+on demand?&lt;/p&gt;
+&lt;p&gt;Kubernetes (&lt;a class="reference external" href="http://kubernetes.io"&gt;http://kubernetes.io&lt;/a&gt;) is an open source, cross platform cluster
+management and container orchestration platform that simplifies the complex
+tasks of deploying and managing your applications in Docker containers. You
+declare a desired state, and Kubernetes does all the work needed to create
+and maintain it. In this talk, we’ll look at the basics of Kubernetes and
+at how to map common applications to these concepts. This will include a
+hands-on demonstration and visualization of the steps involved in getting
+an application up and running on Kubernetes.&lt;/p&gt;
+</summary></entry><entry><title>Keynote: Towards a more effective, decentralized web</title><link href="https://pyvideo.org/europython-2015/keynote-towards-a-more-effective-decentralized-web.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/keynote-towards-a-more-effective-decentralized-web.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Holger Krekel - Keynote: Towards a more effective, decentralized web
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Many would like to see more decentralization but what does it mean,
+really?  In this talk, I'll discuss the recent rise of immutable state
+concepts in languages and network protocols.  And how the advent of
+hash-based data structures and replication strategies are shaking the
+client/server web service paradigm which rests on managing mutable
+state through http.  By contrast, building on git, bittorrent and
+other content addressed data structures provides for a more secure,
+efficient decentralized communication topology.   There are projects,
+thoughts and talk to create new web standards to bring such
+technologies to mass deployment and fuel a new wave of
+decentralization.  What can Python bring to the table?&lt;/p&gt;
+</summary></entry><entry><title>Lightning Talks 2015-07-20</title><link href="https://pyvideo.org/europython-2015/lightning-talks-2015-07-20.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/lightning-talks-2015-07-20.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Various speakers - Lightning Talks
+[EuroPython 2015]
+[20 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Lightning talks, presented by Harry Percival&lt;/p&gt;
+</summary><category term="lightning talks"></category></entry><entry><title>Lightning Talks 2015-07-22</title><link href="https://pyvideo.org/europython-2015/lightning-talks-2015-07-22.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Various speakers</name></author><id>tag:pyvideo.org,2015-08-04:europython-2015/lightning-talks-2015-07-22.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Various speakers - Lightning Talks
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Lightning talks, presented by Harry Percival&lt;/p&gt;
+</summary><category term="lightning talks"></category></entry></feed>

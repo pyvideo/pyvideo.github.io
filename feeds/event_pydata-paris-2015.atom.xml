@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pydata-paris-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-04-21T00:00:00+00:00</updated><entry><title>Industrial uses of Scikit-Learn (business roundtable)</title><link href="https://pyvideo.org/pydata-paris-2015/industrial-uses-of-scikit-learn-business-roundta.html" rel="alternate"></link><published>2015-04-21T00:00:00+00:00</published><updated>2015-04-21T00:00:00+00:00</updated><author><name>Benjamin Guinebertière</name></author><id>tag:pyvideo.org,2015-04-21:pydata-paris-2015/industrial-uses-of-scikit-learn-business-roundta.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Industrial uses of scikit-learn (business roundtable)&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Bio: Julien Sananikone is Project manager at PriceMinister.
+
+Benjamin Guinebertière is technical evangelist at Microsoft. Benjamin works with startups and companies of different sizes to help them technically adopt Microsoft Azure cloud, should they use Big Data, Machine Learning or other technologies. He also speaks at conferences, writes (blogs, …) and takes feedback.
+
+Combining a strong background in webmining and big data technologies with a deep interest in machine learning, Samuel Charron has earned the title of Big Data Sergeant at Data Publica, where he alternates between contributions to the development of the infrastructure of the C-Radar product and stints of rapid prototyping with Python data science libs (such as pandas, sklearn). In particular, he works on NLP related problems using unstructured web-scraped data to enrich corporate information.
+
+Thomas is Dataiku’s Chief Data Scientist. Thomas started his career in data mining for large retail and telecommunications companies. Then he lead the data mining team and geo-marketing initiatives at Apple Europe. He was lead data scientist at qunb, a data visualization startup. He spent most of his career deriving value from large datasets using cutting-edge innovations. He is fluent in all the data scientists linguas: R, Python, SAS…
+&lt;/pre&gt;
+</summary></entry><entry><title>Out-of-core NumPy arrays without changing your code with wendelin-core</title><link href="https://pyvideo.org/pydata-paris-2015/out-of-core-numpy-arrays-without-changing-your-co.html" rel="alternate"></link><published>2015-04-21T00:00:00+00:00</published><updated>2015-04-21T00:00:00+00:00</updated><author><name>Kirill Smelkov</name></author><id>tag:pyvideo.org,2015-04-21:pydata-paris-2015/out-of-core-numpy-arrays-without-changing-your-co.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk introduces a new implementation of NumPy arrays that provides
+support for out­of­core data analysis without changing code, without
+breaking APIs and without losing the performance advantage provided by
+FORTRAN libraries or just­in­time compilers. wendelin­core acts
+transparently as distributed shared virtual memory manager for binary
+data handled by python interpreters deployed on a cluster. Thanks to
+wendelin­ core, each python interpreter can access elementary ndarray
+structures of virtually 2 exabytes in a single memory block, whatever
+the amount of RAM available on each node. With wendelin­core, a cluster
+of inexpensive PCs can thus act as a teramory server at much lower cost.
+A cluster of tera­-memory servers can act as an examemory machine.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+In addition to bringing true BIg Data support to NumPy libraries, wendelin­core also provides native persistency of ndarrays thanks to its integration with NEO database. NEO together with wendelin­core can shard and store ndarrays on a redundant array of inexpensive computers and provide native support for python exception handling, thus enforcing a rollback of any change made to data in case of bug or error during a calculation.
+
+The talk will focus on the technical aspects of wendelin­-core. It will explain the technical approach that has been used for the first implementation: what has been achieved, what is still weak, what can be improved. It will explain how to hook wendelin­-core to a persistency layer. It will then present the technical roadmap and suggest how to integrate wendelin­core to other persistency layers or to other data structures.
+&lt;/pre&gt;
+</summary></entry><entry><title>Numba, a JIT compiler for fast numerical code</title><link href="https://pyvideo.org/pydata-paris-2015/numba-a-jit-compiler-for-fast-numerical-code.html" rel="alternate"></link><published>2015-04-20T00:00:00+00:00</published><updated>2015-04-20T00:00:00+00:00</updated><author><name>Antoine Pitrou</name></author><id>tag:pyvideo.org,2015-04-20:pydata-paris-2015/numba-a-jit-compiler-for-fast-numerical-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will be a general introduction to Numba. Numba is a
+just­-in-­time Python compiler that allows you to speed up numerical
+algorithms for which fast linear algebra (i.e. Numpy array operations)
+is not enough. It has backends for the CPU and for CUDA GPUs.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Expected audience: Python programmers / scientists who have an interest in speeding up numerical routines. Also, people who are curious about attempts at high-­performance Python.
+&lt;/pre&gt;
+</summary></entry><entry><title>Pythran: Static Compilation of Parallel Scientific Kernels</title><link href="https://pyvideo.org/pydata-paris-2015/pythran-static-compilation-of-parallel-scientifi.html" rel="alternate"></link><published>2015-04-17T00:00:00+00:00</published><updated>2015-04-17T00:00:00+00:00</updated><author><name>Pierrick Brunet</name></author><id>tag:pyvideo.org,2015-04-17:pydata-paris-2015/pythran-static-compilation-of-parallel-scientifi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As the use of Python coupled to Numpy/SciPy for numerical computation
+increases, many tools to optimize performance have emerged. Indeed, this
+duo has relatively poor performance when compared to scientific codes
+written in legacy languages like C or Fortran. Cython, Numba, numexpr
+and parakeet belongs to this new compiler ecosystem. And so does
+Pythran, a Python to C++11 translator for scientific Python.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Pythran uses a static compilation approach a la Cython, but with full backward compatibility with Python. It does not only turns Python code into C++ code, it also performs Python/Numpy specific optimizations, generates calls to a parallel, vectorized runtime and makes it possible to write OpenMP annotation in the original Python code. It supports a large range of Numpy functions and can combine them in efficient ways: it can optimize high­level modern Python/Numpy codes and not only Fortran­ with­ a­ Python­ flavor ones.
+
+This talk presents the existing compilation approach and optimization opportunities for numerical Python, their strengths and weaknesses, then focus on the specificities of the Pythran compiler.
+&lt;/pre&gt;
+</summary></entry><entry><title>scikit-learn for predictive maintenance at Airbus</title><link href="https://pyvideo.org/pydata-paris-2015/scikit-learn-for-predictive-maintenance-at-airbus.html" rel="alternate"></link><published>2015-04-16T00:00:00+00:00</published><updated>2015-04-16T00:00:00+00:00</updated><author><name>Fabien Mangeant</name></author><id>tag:pyvideo.org,2015-04-16:pydata-paris-2015/scikit-learn-for-predictive-maintenance-at-airbus.html</id><summary type="html"></summary></entry><entry><title>Using Python and Data science to tackle real-time transportation problems at Lyft</title><link href="https://pyvideo.org/pydata-paris-2015/using-python-and-data-science-to-tackle-real-time.html" rel="alternate"></link><published>2015-04-16T00:00:00+00:00</published><updated>2015-04-16T00:00:00+00:00</updated><author><name>Clément Jambou</name></author><id>tag:pyvideo.org,2015-04-16:pydata-paris-2015/using-python-and-data-science-to-tackle-real-time.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I’m interested in giving a talk for this conference as I believe many
+students with the same background as mine would be interested in hearing
+about how Data Science is a crucial tool in building a successful
+startup and its influence on taking decision every day. As part of my
+work I use python and scientific librairies ( pandas, scikit­learn) on a
+daily basis as it is used both on our backend services as well as for
+Data analysis. We tackle complex problems such as Dynamic Pricing
+depending on local demand an supply, dispatching Drivers efficiently,
+Matching multiple passenger routes together for or real time
+ride­sharing product Lyft Line, real­time ETAs and traffic estimation…
+The fact that a lot of or analyses use geolocation data adds a specific
+component to it that leads to complex problems. Optimization is crucial
+as it is beneficial for everyone in our Marketplace: Passenger can get
+lower prices and better service, Drivers spend more time with someone in
+their car and have higher earnings…&lt;/p&gt;
+</summary></entry><entry><title>Python, SQLalchemy and Scrapy for real-time data processing at Kpler</title><link href="https://pyvideo.org/pydata-paris-2015/python-sqlalchemy-and-scrapy-for-real-time-data.html" rel="alternate"></link><published>2015-04-15T00:00:00+00:00</published><updated>2015-04-15T00:00:00+00:00</updated><author><name>Jean Maynier</name></author><id>tag:pyvideo.org,2015-04-15:pydata-paris-2015/python-sqlalchemy-and-scrapy-for-real-time-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Founded in Paris in 2009, Kpler is an intelligence company providing
+transparency solutions in energy markets. We develop proprietary
+technologies that systematically aggregate data from hundreds of
+sources, ranging from logistics and commercial, to governmental and
+shipping databases. By connecting the dots across fragmented information
+landscapes, we are able to deliver our clients with unique real-time
+market coverage.&lt;/p&gt;
+</summary></entry><entry><title>Embarrassingly parallel database calls with Python</title><link href="https://pyvideo.org/pydata-paris-2015/embarrassingly-parallel-database-calls-with-pytho.html" rel="alternate"></link><published>2015-04-14T00:00:00+00:00</published><updated>2015-04-14T00:00:00+00:00</updated><author><name>Niels Zeilemaker</name></author><id>tag:pyvideo.org,2015-04-14:pydata-paris-2015/embarrassingly-parallel-database-calls-with-pytho.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you ever squeezed you SQL queries to the last millisecond, but
+still found yourself with not enough speed in your data­driven Python
+applications? Then this talk is for you. We’ll look at how to shard your
+data, which design changes should happen and how to use the Python
+threading module to bring in the data as quickly as possible by making
+parallel database calls.&lt;/p&gt;
+&lt;p&gt;Expected audience: Python developers building real­time applications
+needing increase their response time.&lt;/p&gt;
+</summary></entry><entry><title>Industrial Monitoring with the Wendelin Big Data platform</title><link href="https://pyvideo.org/pydata-paris-2015/industrial-monitoring-with-the-wendelin-big-data.html" rel="alternate"></link><published>2015-04-14T00:00:00+00:00</published><updated>2015-04-14T00:00:00+00:00</updated><author><name>Jean-Paul Smets</name></author><id>tag:pyvideo.org,2015-04-14:pydata-paris-2015/industrial-monitoring-with-the-wendelin-big-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk presents the Wendelin Big Data “Full Stack” and introduces a
+first success story related to the collection of vibration data in wind
+turbines and the analysis of vibrations.&lt;/p&gt;
+&lt;p&gt;Wendelin (&lt;a class="reference external" href="http://wendelin.io/"&gt;http://wendelin.io/&lt;/a&gt;) combines automated cluster deployment,
+distributed data persistency for NumPy arrays, parallel data processing,
+fluentd compliant data ingestion interface and JIO compliant javascript
+interface. It is an all­in­one open source solution that provides a 100%
+native python alternative to hybrid solutions based on Spark.&lt;/p&gt;
+&lt;p&gt;The talk is derived from the presentation made at MariaDB community
+event (&lt;a class="reference external" href="https://mariadb.org/en/community-events/"&gt;https://mariadb.org/en/community-events/&lt;/a&gt;). The presentation of
+Wendelin Full Stack will be shorter than in Santa Clara in order to
+provide enough time to present the first implementation for Wind
+Turbines. We will show in particular which parts of data analysis are
+handled on server side with pydata libraries, which parts of data
+analysis are handled on browser side in javascript and how both can be
+integrated to minimize implementation costs.&lt;/p&gt;
+&lt;p&gt;The talk concludes on Wendelin platform roadmap.&lt;/p&gt;
+</summary></entry><entry><title>Simulating and visualising commuter flow through the London Underground</title><link href="https://pyvideo.org/pydata-paris-2015/simulating-and-visualising-commuter-flow-through.html" rel="alternate"></link><published>2015-04-14T00:00:00+00:00</published><updated>2015-04-14T00:00:00+00:00</updated><author><name>Camilla Montonen</name></author><id>tag:pyvideo.org,2015-04-14:pydata-paris-2015/simulating-and-visualising-commuter-flow-through.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Every year the London Tube transports about 1.3 billion commuters. With
+multiple intersecting lines, the daily functioning of the London Tube
+network poses many interesting questions: What effects do severe delays
+on the Piccadilly Line have on passengers taking the Northern Line? What
+is the shortest path from station x to station y? How does overcrowding
+on one station affect its neighbouring stations? These are but a few
+examples of the many questions one can start to investigate using two
+Python libraries: graph­tool for manipulating and analysing graphs and
+bokeh for visualizing and streaming “live” data from simulations. In
+this talk, I will briefly show how one can transform structures such as
+the London Underground map into programmatic objects that can be
+analysed and manipulated using Python. Furthermore, I will show examples
+of simulations based on the publicly available data from Transport for
+London and illustrate how simulations can be used to glean insight on
+the large scale behaviour of a complex system. Last but not least, I
+hope to illustrate how the bokeh server can be leveraged to create
+“real­time” visualizations of simulations.&lt;/p&gt;
+</summary></entry><entry><title>Why and how to explain machine learning predictions</title><link href="https://pyvideo.org/pydata-paris-2015/why-and-how-to-explain-machine-learning-predictio.html" rel="alternate"></link><published>2015-04-14T00:00:00+00:00</published><updated>2015-04-14T00:00:00+00:00</updated><author><name>Bora Eang</name></author><id>tag:pyvideo.org,2015-04-14:pydata-paris-2015/why-and-how-to-explain-machine-learning-predictio.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Unfortunately, the predictive models that are most powerful are usually
+the least interpretable. However in some cases, for example fraud
+detection, end users need an understandable explanation of a particular
+prediction, at observation level, and not only at population level (e.g.
+: features importance). During this talk we will present different
+approaches to tackle this issue, both for random forests and gradient
+boosting trees. We will also demonstrate an implementation based on
+scikit-learn.&lt;/p&gt;
+</summary></entry><entry><title>Introduction to Pandas</title><link href="https://pyvideo.org/pydata-paris-2015/introduction-to-pandas-0.html" rel="alternate"></link><published>2015-04-13T00:00:00+00:00</published><updated>2015-04-13T00:00:00+00:00</updated><author><name>Joris Van Den Bossche</name></author><id>tag:pyvideo.org,2015-04-13:pydata-paris-2015/introduction-to-pandas-0.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas is becoming the fundamental library for manipulating and
+analyzing structured data, providing high-performance, easy-to-use data
+structures and data analysis tools. This talk will give a basic
+introduction to pandas, explaining the key concepts and defining
+features.&lt;/p&gt;
+</summary></entry><entry><title>Reaching your DREAMs with Python</title><link href="https://pyvideo.org/pydata-paris-2015/reaching-your-dreams-with-python.html" rel="alternate"></link><published>2015-04-13T00:00:00+00:00</published><updated>2015-04-13T00:00:00+00:00</updated><author><name>Chloe-Agathe Azencott</name></author><id>tag:pyvideo.org,2015-04-13:pydata-paris-2015/reaching-your-dreams-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DREAM challenges (&lt;a class="reference external" href="http://dreamchallenges.org/"&gt;http://dreamchallenges.org/&lt;/a&gt;) gather participants from
+a wide community of researchers to analyze data provided to help solve
+fundamental, cutting­edge questions about systems biology and
+translational medicine.&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+I will show how Python and scikit­learn can be used to process data, try out standard machine learning techniques, and develop ad hoc solutions to address such challenges. This talk will be illustrated by the example of two challenges in which I took part, both times in teams that placed second. The first of these challenges was in toxicogenetics (https://www.synapse.org/#!Synapse:syn1734172), aiming at predicting the toxicity of a chemical on a cell line. The second (https://www.synapse.org/#!Synapse:syn1761567) was aimed at predicting the response of patients to rhematoid arthritis treatment.
+&lt;/pre&gt;
+</summary></entry><entry><title>Tree models with scikit-learn</title><link href="https://pyvideo.org/pydata-paris-2015/tree-models-with-scikit-learn.html" rel="alternate"></link><published>2015-04-13T00:00:00+00:00</published><updated>2015-04-13T00:00:00+00:00</updated><author><name>Gilles Louppe</name></author><id>tag:pyvideo.org,2015-04-13:pydata-paris-2015/tree-models-with-scikit-learn.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk gives an introduction to tree-based methods, both from a
+theoretical and practical point of view. It covers decision trees,
+random forests and boosting estimators, along with concrete examples
+based on Scikit-Learn about how they work, when they work and why they
+work.&lt;/p&gt;
+</summary></entry><entry><title>Cleaning Confused Collections of Characters</title><link href="https://pyvideo.org/pydata-paris-2015/cleaning-confused-collections-of-characters.html" rel="alternate"></link><published>2015-04-10T00:00:00+00:00</published><updated>2015-04-10T00:00:00+00:00</updated><author><name>Ian Ozsvald</name></author><id>tag:pyvideo.org,2015-04-10:pydata-paris-2015/cleaning-confused-collections-of-characters.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Success in data science projects depends upon clean input data. Text
+data is often badly encoded, lacks data types and is inconsistent. Aimed
+at the intermediate Pythonista I’ll talk about the time saving tools I
+use in ModelInsight to clean and normalise my data so you can easily
+work on new projects.&lt;/p&gt;
+</summary></entry><entry><title>Closing Keynote - Francesc Alted, UberResearch GmbH</title><link href="https://pyvideo.org/pydata-paris-2015/closing-keynote-francesc-alted-uberresearch-gm.html" rel="alternate"></link><published>2015-04-10T00:00:00+00:00</published><updated>2015-04-10T00:00:00+00:00</updated><author><name>Francesc Alted</name></author><id>tag:pyvideo.org,2015-04-10:pydata-paris-2015/closing-keynote-francesc-alted-uberresearch-gm.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Teacher, developer and consultant in a wide variety of business
+applications. Particularly interested in the field of very large
+databases, with special emphasis in squeezing the last drop of
+performance out of computer as whole, i.e. not only the CPU, but the
+memory and I/O subsystems.&lt;/p&gt;
+</summary></entry><entry><title>Introduction to scikit-image</title><link href="https://pyvideo.org/pydata-paris-2015/introduction-to-scikit-image.html" rel="alternate"></link><published>2015-04-10T00:00:00+00:00</published><updated>2015-04-10T00:00:00+00:00</updated><author><name>Emmanuelle Gouillart</name></author><id>tag:pyvideo.org,2015-04-10:pydata-paris-2015/introduction-to-scikit-image.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;scikit-image is a general-purpose image processing module for the Python
+programming language. It is designed to interact efficiently with other
+popular scientific Python libraries, such as NumPy and SciPy. In
+particular, scikit-image leverages the powerful data array container of
+NumPy, that can store images of various dimensions (2-D, 2D RGB, 3D,
+4D…).&lt;/p&gt;
+</summary></entry><entry><title>Opening Keynote - Gaël Varoquaux, Inria</title><link href="https://pyvideo.org/pydata-paris-2015/opening-keynote-gael-varoquaux-inria.html" rel="alternate"></link><published>2015-04-09T00:00:00+00:00</published><updated>2015-04-09T00:00:00+00:00</updated><author><name>Gaël Varoquaux</name></author><id>tag:pyvideo.org,2015-04-09:pydata-paris-2015/opening-keynote-gael-varoquaux-inria.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gaël Varoquaux is an INRIA faculty researcher working on computational
+science for brain imaging in the Neurospin brain research institute
+(Paris, France). His research focuses on modeling and mining brain
+activity in relation to cognition. Years before the NSA, he was hoping
+to make bleeding-edge data processing available across new fields, and
+he has been working on a mastermind plan building easy-to-use
+open-source software in Python. He is a core developer of scikit-learn,
+joblib, and Mayavi, a nominated member of the PSF, and often teaches
+scientific computing with Python using
+&lt;a class="reference external" href="http://scipy-lectures.github.com/"&gt;http://scipy-lectures.github.com/&lt;/a&gt;.&lt;/p&gt;
+</summary></entry><entry><title>Linear predictions with scikit-learn: simple and efficient</title><link href="https://pyvideo.org/pydata-paris-2015/linear-predictions-with-scikit-learn-simple-and.html" rel="alternate"></link><published>2015-04-08T00:00:00+00:00</published><updated>2015-04-08T00:00:00+00:00</updated><author><name>Alexandre Gramfort</name></author><id>tag:pyvideo.org,2015-04-08:pydata-paris-2015/linear-predictions-with-scikit-learn-simple-and.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scikit-Learn offers numerous state-of-the-art models for prediction
+(regression and classification). Linear models (e.g. Ridge, Logistic
+Regression) are the simplest of these models. They have pratical
+benefits such as interpretability and limited computation time while
+offering the best performance for some applications. This talk will
+cover the basics of these models with examples and demonstrate how they
+can scale to datasets that do not fit in memory or how they can
+incorporate simple polynomial non-linearities.&lt;/p&gt;
+</summary></entry></feed>

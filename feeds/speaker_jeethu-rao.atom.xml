@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jeethu-rao.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2018-07-27T00:00:00+00:00</updated><entry><title>Faster Python startup</title><link href="https://pyvideo.org/europython-2018/faster-python-startup.html" rel="alternate"></link><published>2018-07-27T00:00:00+00:00</published><updated>2018-07-27T00:00:00+00:00</updated><author><name>Jeethu Rao</name></author><id>tag:pyvideo.org,2018-07-27:europython-2018/faster-python-startup.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The cPython’s startup speed generally quite fast compared to other
+similar dynamic language interpreters. Despite this, the interpreter’s
+startup time increases linearly with the number and size of imported
+python modules. Although interpreter startup speed isn’t a significant
+concern in long running servers, it does matter for the command line and
+other frequently launched applications.&lt;/p&gt;
+&lt;p&gt;One of the oldest tricks in the book, when it comes to performance
+optimizations is to perform frequent and expensive operations fewer
+times and reuse results from previous invocations. We noticed that the
+overhead of reading and un-marshalling .pyc files at startup can be
+eliminated if we could directly embed code objects and their associated
+object graph from .pyc files into the data segment of the cPython
+binary. This technique is quite similar to the approach taken by image
+based languages like Smalltalk in the past. Implementing this for
+cPython is made simpler because marshaled code objects in .pyc files
+contain a subset of the types of objects that marshal format supports.
+With this approach, loading a module included in the python binary is as
+cheap as dereferencing a pointer, albeit at the cost of increased binary
+size.&lt;/p&gt;
+&lt;p&gt;This talk will discuss the approach taken to implement the
+aforementioned idea for Python 3.6 and the challenges faced in
+implementing it. It will also talk about benchmark results from the
+improvements and possible future directions for this work. Although this
+talk delves into cPython internals, no prior experience with cPython
+internals is required to follow along.&lt;/p&gt;
+</summary></entry></feed>

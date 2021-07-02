@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_takeshi-sugiyama.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-09-21T00:00:00+00:00</updated><entry><title>無料でできる、Cloud9上で開発してHerokuにデプロイする手順を共有します</title><link href="https://pyvideo.org/pycon-japan-2016/wu-liao-dedekiru-cloud9shang-dekai-fa-shiteherokunidepuroisurushou-shun-wogong-you-shimasu.html" rel="alternate"></link><published>2016-09-21T00:00:00+00:00</published><updated>2016-09-21T00:00:00+00:00</updated><author><name>Takeshi Sugiyama</name></author><id>tag:pyvideo.org,2016-09-21:pycon-japan-2016/wu-liao-dedekiru-cloud9shang-dekai-fa-shiteherokunidepuroisurushou-shun-wogong-you-shimasu.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pythonを勉強してWebアプリを作ってみたはいいが、サーバーがないのでスマホや会社のPCから使えるようなアプリにはできない、という初心者は多いと思います。そこでこの発表ではHerokuとCloud9というクラウドサービスを無料枠の範囲で使って、簡単な蔵書管理をおこなうWebアプリを立ち上げる方法を順を追って説明します。使用するのはPython3,django,PostgreSQLです。&lt;/p&gt;
+&lt;div class="section" id="abstract"&gt;
+&lt;h4&gt;Abstract&lt;/h4&gt;
+&lt;div class="section" id="web"&gt;
+&lt;h5&gt;せっかく自分で書いたWebアプリ、スマホからも使いたいですよね&lt;/h5&gt;
+&lt;p&gt;Pythonを始めて半年くらい、いろいろ勉強した結果、自分で簡単なWebアプリが書けるようになってくると、自分のパソコン上だけでなく、スマホや会社のパソコンからもアクセスしたくなってきます。例えば蔵書管理アプリ。自宅の蔵書をデータベース化したら、ブックオフの店頭で「あれ、この本この前買ったんだっけ？」みたいになったときに、さっとスマホで検索したいですよね。 でも自宅のPCに外出先からアクセスできる環境や、インターネット上に自作アプリを載せられるサーバーを持っている人は多くないです。 そこで気軽に無料に始められるPaaS(Platform as a Service), Herokuです。&lt;/p&gt;
+&lt;p&gt;私の場合、10年以上昔にPHP+PostgreSQLでゴリゴリ書いた蔵書管理アプリがあまりに使いにくい（特にiPhoneから開いたときのレイアウトがかなりいけてない）ので、Python3+django+PostgreSQLで書き直して、もっと使いやすくてかっこいいアプリにしたい！というのがきっかけでした。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pc"&gt;
+&lt;h5&gt;思いついたことをちょっと試してみたいけど、今日はPC持ってない&lt;/h5&gt;
+&lt;p&gt;私は趣味のプログラマで、平日はがっつり残業ありの事務系サラリーマンなので、プライベートのパソコンを毎日持ち歩いたりはしないです。 でも週末は週末で家族サービスで忙しかったりして、なかなか時間がとれないので会社の昼休みなんかに、ちょっとデバッグができたらいいな、と思うことがよくあります。 そこで気軽に無料で始められるクラウド上の開発環境、Cloud9です。 ご存知ない方のために軽く補足しておくと、Cloud9はクラウド上に自分専用のワークスペースを作って、PyCharmみたいな感じのIDEを使って開発作業ができるクラウドサービスです。無料の場合、CPU1コア/メモリ1GB/HDD5GBで非公開のワークスペースは1つだけという制約がありますが、蔵書管理くらいの軽いアプリなら全然問題ありません。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="herokucloud9"&gt;
+&lt;h5&gt;HerokuやCloud9って、便利らしいけどちょっとハードルが・・・&lt;/h5&gt;
+&lt;p&gt;HerokuもCloud9も、個人で趣味の範囲で使う分には無料サービスの範囲で十分楽しめるのが最大の魅力です。 でも公式サイトはヘルプもドキュメントも英語だし、なかなかとっつきにくいですよね。&lt;/p&gt;
+&lt;p&gt;そこで日本語の情報を探してネット上をさまようわけですが、知りたいことがずばり書いてあることはめったにありません。 Herokuは当初Ruby on Rails向けに開発されたこともあり、Rails系の記事が多くPython3系の情報を選び出すだけでもなかなか苦労します。 Cloud9のほうは「便利だよ」という紹介記事は多いのですが、具体的にCloud9を使ったPython3系の開発についての情報となると、これまたなかなか苦労します。&lt;/p&gt;
+&lt;p&gt;結局は英語の公式ドキュメントを調べたりStack Overflowの質問と回答を追っかけてみたりしながら試行錯誤でかなりの時間を費やすことになります。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cloud9python3-djangoheroku"&gt;
+&lt;h5&gt;Cloud9で開発したPython3+djangoのアプリをHerokuにデプロイする手順を共有します&lt;/h5&gt;
+&lt;p&gt;私が自作の蔵書管理アプリをHerokuにあげた経験を通して会得した、Cloud9上でPython3+django+PostgreSQLのアプリの開発環境を構築する手順と、Cloud9からHerokuにスムースにデプロイする手順を共有します。&lt;/p&gt;
+&lt;p&gt;文字にするとたったこれだけのことですが、いくつもはまりポイントがあります。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cloud9でのPythonはデフォルトでは2.7なのでワークスペースを作ったあとで3.5に切り替える必要がある&lt;/li&gt;
+&lt;li&gt;Cloud9のPythonを3.5に切り替えると、ワークスペースを作ったときに一緒に入れていたはずのdjangoは再インストールが必要&lt;/li&gt;
+&lt;li&gt;Herokuが公式にオススメしているdjangoの設定があるが、デフォルトで構築されるdjangoの設定とは異なるので調整が必要&lt;/li&gt;
+&lt;li&gt;djangoはデフォルトではSQLiteだが、Heroku上ではSQLiteのテーブルは消えてしまうことがあるのでPostgreSQLにすることが必要&lt;/li&gt;
+&lt;li&gt;Cloud9上でPostgreSQLのデータベース初期化が一筋縄ではいかない&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これらのはまりポイントをどうやって切り抜けるかを、発表の中でできるだけわかりやすく説明する予定です。&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry></feed>

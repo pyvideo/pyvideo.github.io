@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 13 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>It's the message, stupid: python &amp; amqp</title><link>https://pyvideo.org/europython-2011/its-the-message-stupid-python-amqp.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Muharem Hrnjadovic - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Messaging is a well established domain in information technology and can
+greatly improve the scalability and throughput of a system when employed
+appropriately. Message queues can be used to achieve&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;spatial decoupling i.e. the systems that produce and consume messages
+may be deployed on different machines, networks, continents etc.&lt;/li&gt;
+&lt;li&gt;temporal decoupling i.e. a system can enqueue a message and carry on
+without waiting for the message consumer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We use e.g. messaging in &lt;a class="reference external" href="http://openquake.org"&gt;OpenQuake&lt;/a&gt; to
+distribute calculations of &lt;a class="reference external" href="http://openquake.org/about/gem/"&gt;seismic
+hazard&lt;/a&gt; and the respective risk to
+human lives and infrastructure.&lt;/p&gt;
+&lt;p&gt;There is a huge number of messaging patterns identified in the
+&lt;a class="reference external" href="http://www.amazon.com/dp/0321200683/"&gt;industry&lt;/a&gt; and a small
+selection of these will be presented to whet your appetite :-)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.amqp.org/"&gt;AMQP&lt;/a&gt; is a fairly new and open messaging
+standard with a number of freely available open source message brokers
+(&lt;a class="reference external" href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.zeromq.org/"&gt;ZeroMQ&lt;/a&gt;, &lt;a class="reference external" href="http://qpid.apache.org/"&gt;qpid&lt;/a&gt;
+etc.) with different features and performance trade-offs.&lt;/p&gt;
+&lt;p&gt;In the course of the presentation you will be - introduced to AMQP
+concepts and jargon - introduced to available Python AMQP bindings
+(focussing on an asynchronous
+(&lt;a class="reference external" href="https://launchpad.net/txamqp"&gt;txAMQP&lt;/a&gt;) and a synchronous variant
+(most likely &lt;a class="reference external" href="http://ask.github.com/kombu/"&gt;kombu&lt;/a&gt;) - shown code
+examples demonstrating how to use these Python bindings&lt;/p&gt;
+&lt;p&gt;The presentation (45 minutes in total) is structured as follows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;7.5 minutes for messaging concepts and patterns&lt;/li&gt;
+&lt;li&gt;7.5 minutes for AMQP concepts&lt;/li&gt;
+&lt;li&gt;5 minutes for an overview of the Python bindings for AMQP&lt;/li&gt;
+&lt;li&gt;10 minutes for txAMQP examples (asynchronous bindings)&lt;/li&gt;
+&lt;li&gt;10 minutes for kombu examples (synchronous bindings)&lt;/li&gt;
+&lt;li&gt;5 minutes for questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.amqp.org/"&gt;http://www.amqp.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.rabbitmq.com/"&gt;http://www.rabbitmq.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.zeromq.org/"&gt;http://www.zeromq.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://qpid.apache.org/"&gt;http://qpid.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/txamqp"&gt;https://launchpad.net/txamqp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ask.github.com/kombu/"&gt;http://ask.github.com/kombu/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.amazon.com/dp/0321200683/"&gt;http://www.amazon.com/dp/0321200683/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Muharem Hrnjadovic</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/its-the-message-stupid-python-amqp.html</guid><category>amqp</category><category>asynchronous</category><category>patterns</category><category>performance</category><category>queues</category><category>scalability</category><category>technology</category></item><item><title>Distributed Tasks with Celery</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--distributed-tasks-with-celery.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Distributed Tasks with Celery&lt;/p&gt;
+&lt;p&gt;Presented by Ryan Petrello&lt;/p&gt;
+&lt;p&gt;Celery is an open source task queueing system based on distributed
+message passing, especially using the AMQP protocol. This talk will
+focus on the need for task distribution, the tools celery provides to
+meet those needs, and an in-depth discussion of how we've used celery at
+ShootQ to improve the efficiency and reliability of our background
+processes.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The talk (including time for questions) will last approximately 30
+minutes and will focus on the following topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The need for distributed tasks in real world systems, especially in a
+web application environment. This portion of the talk will describe
+examples where the traditional request-response model of the web can
+be improved with background processing.&lt;/li&gt;
+&lt;li&gt;A brief overview of traditional distributed message passing models
+and the AMPQ protocol.&lt;/li&gt;
+&lt;li&gt;An overview of Celery and the variety of tools it provides for task
+distribution, scheduling, and execution. This portion of the talk
+will also review production-oriented components of Celery, such as
+monitoring, error detection/reporting, and error recovery.&lt;/li&gt;
+&lt;li&gt;Real world discussion of several problems we solved at ShootQ using
+Celery including before-and-after looks at our implementations.&lt;/li&gt;
+&lt;li&gt;Common pitfalls and gotchas we encountered while working with Celery.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ryan Petrello</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--distributed-tasks-with-celery.html</guid><category>amqp</category><category>celery</category><category>pycon</category><category>pycon2011</category><category>queueing</category></item></channel></rss>

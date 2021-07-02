@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_paul-ivanov.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-09-21T00:00:00+00:00</updated><entry><title>Keynote: Programming Language Tourism: Leave Python and see the world!</title><link href="https://pyvideo.org/pycon-taiwan-2019/keynote-programming-language-tourism-leave-python-and-see-the-world.html" rel="alternate"></link><published>2019-09-21T00:00:00+00:00</published><updated>2019-09-21T00:00:00+00:00</updated><author><name>Paul Ivanov</name></author><id>tag:pyvideo.org,2019-09-21:pycon-taiwan-2019/keynote-programming-language-tourism-leave-python-and-see-the-world.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 09:25–10:25&lt;/p&gt;
+&lt;p&gt;Programming languages are places. The idea of abandoning the convenience and familiarity of your primary coding language might seem anything from tedious and inconvenient to scary and stressful. But, switching to an alternative other than your primary development language -- especially when such a challenge is not a requirement -- can be both fun and productive. You will likely grow your abilities as a developer and gain new perspective that is currently beyond your reach.
+Let's push out of our comfort zone together to leave Python and voyage to a different language! We will go into details about why and how we can do that, along with some possible destinations. Upon our return, we will see -- and appreciate -- Python in a different light. Plus, we can use the justifications for our departure to entice and welcome folks from other language communities to visit us in the land of the snake.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://pirsquared.org/talks/pycon_tw/"&gt;https://pirsquared.org/talks/pycon_tw/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Paul Ivanov&lt;/p&gt;
+&lt;p&gt;Paul Ivanov is a member of the Jupyter Steering Council and a senior software engineer at Bloomberg LP working on IPython- and Jupyter-related open source projects. Previously, Paul worked on backend and data engineering at Disqus; was a code monkey at the Brain Imaging Center at UC Berkeley, where he worked on IPython and taught at UC Berkeley’s Python bootcamps; worked in Bruno Olshausen’s lab at the Redwood Center for Theoretical Neuroscience; and was a PhD candidate in the Vision Science program at UC Berkeley. He holds a degree in computer science from UC Davis.&lt;/p&gt;
+</summary></entry><entry><title>A Portrait of One Scientist as a Graduate Student</title><link href="https://pyvideo.org/scipy-2013/a-portrait-of-one-scientist-as-a-graduate-student.html" rel="alternate"></link><published>2013-07-02T00:00:00+00:00</published><updated>2013-07-02T00:00:00+00:00</updated><author><name>Paul Ivanov</name></author><id>tag:pyvideo.org,2013-07-02:scipy-2013/a-portrait-of-one-scientist-as-a-graduate-student.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;a focus on specific tools and techniques invaluable in doing research in
+a reproducible manner.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Authors: Ivanov, Paul, UC Berkeley&lt;/p&gt;
+&lt;p&gt;Track: General&lt;/p&gt;
+&lt;p&gt;In this talk, I will focus on the how of reproducible research. I will
+focus on specific tools and techniques I have found invaluable in doing
+research in a reproducible manner. In particular, I will cover the
+following general topics (with specific examples in parentheses):
+version control and code provenance (git), code verification (test
+driven development, nosetests), data integrity (sha1, md5, git-annex),
+seed saving ( random seed retention ) distribution of datasets
+(mirroring, git-annex, metalinks), light-weight analysis capture (
+ttyrec, ipython notebook)&lt;/p&gt;
+</summary><category term="git"></category><category term="reproducibility"></category></entry><entry><title>Putting the v in IPython: vim-ipython and ipython-vimception</title><link href="https://pyvideo.org/scipy-2014/putting-the-v-in-ipython-vim-ipython-and-ipython.html" rel="alternate"></link><published>2014-07-13T00:00:00+00:00</published><updated>2014-07-13T00:00:00+00:00</updated><author><name>Paul Ivanov</name></author><id>tag:pyvideo.org,2014-07-13:scipy-2014/putting-the-v-in-ipython-vim-ipython-and-ipython.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk will explain how to intimately integrate IPython with your
+favorite text editor, as well as how to customize the IPython Notebook
+interface to behave in a way that makes sense to &lt;em&gt;you&lt;/em&gt;. Though the
+concrete examples are centered around the world-view of a particular
+text editor, the content will be valuable to anyone wishing to extend
+and customize IPython for their own purposes.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will cover two projects:
+&lt;a class="reference external" href="https://github.com/ivanov/vim-ipython"&gt;vim-ipython&lt;/a&gt; (1) and
+&lt;a class="reference external" href="https://github.com/ivanov/ipython-vimception"&gt;ipython-vimception&lt;/a&gt;
+(2)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; Most people think of IPython as an application - but much of it
+is written as a library, making it possible to integrate with other
+tools.&lt;/p&gt;
+&lt;p&gt;vim-ipython is a Vim plugin that was first written during the sprints at
+SciPy 2011 as a two-way interface between the Vim text editor and a
+running IPython kernel. It turns vim into a frontend for IPython
+kernels, like the qtconsole and the notebook interface. It allows you to
+send lines or whole files for IPython to execute, and also get back
+object introspection and word completions in Vim, like what you get
+with: object?&lt;tt class="docutils literal"&gt;&amp;lt;enter&amp;gt;&lt;/tt&gt; and object.&lt;tt class="docutils literal"&gt;&amp;lt;tab&amp;gt;&lt;/tt&gt; in IPython. It
+currently has over 430 star gazers on GitHub. Because vim-ipython simply
+leverages much of existing IPython machinery, it allows users to
+interact with non-Python kernels (such as IJulia and IHaskell) in the
+same manner from the convenience of their favorite text editor. More
+recently, vim-ipython has gained the ability to conveniently view and
+edit IPython notebooks (.ipynb files) without a running an IPython
+Notebook server.&lt;/p&gt;
+&lt;p&gt;vim-ipython has a small and accessible code base (13 people have
+contributed patches to the project), which has frequently made it &lt;em&gt;the&lt;/em&gt;
+reference example for how to implement and utilize the IPython messaging
+protocol that allows for the language-independent communication between
+frontends and kernels.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.&lt;/strong&gt; The IPython Notebook user interface has become highly
+customizable, and authoring code and content in the Notebook can be more
+pleasant and productive experience if you take the time to make it
+yours.&lt;/p&gt;
+&lt;p&gt;IPython 2.0 brings a modal notion to the Notebook interface. There are
+two modes: edit and mode command mode. In command mode, many single-key
+keyboard shortcuts are available. For example, &lt;tt class="docutils literal"&gt;m&lt;/tt&gt; changes the current
+cell type to Markdown, &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; will insert a new cell above and
+below the current one, and so on. Edit mode removes these single key
+shortcuts so that new code and text can be typed in, but still retains a
+few familiar shortcuts, such as &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Ctrl-Enter&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Alt-Enter&lt;/span&gt;&lt;/tt&gt;, and
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Shift-Enter&lt;/span&gt;&lt;/tt&gt; for cell execution (with some nuanced differences).&lt;/p&gt;
+&lt;p&gt;Part of the motivation behind the introduction of this modal interface
+was that performing operations on notebook cells became a tedious and
+awkward, as most operations required &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Ctrl-m&lt;/span&gt;&lt;/tt&gt; to be typed too many
+times. For example, inserting 3 cells involved
+&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;Ctrl-m&lt;/span&gt; a &lt;span class="pre"&gt;Ctrl-m&lt;/span&gt; a &lt;span class="pre"&gt;Ctrl-m&lt;/span&gt; a&lt;/tt&gt;, whereas now it's just &lt;tt class="docutils literal"&gt;aaa&lt;/tt&gt; in Command
+mode. But the other major reason for the modal refactor was to make it
+possible to add and remove shortcuts. For example, a user who finds it
+annoying that &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; stands for &amp;quot;insert above&amp;quot; and &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; for &amp;quot;insert
+below&amp;quot; and thinks that &lt;tt class="docutils literal"&gt;a&lt;/tt&gt; for &amp;quot;insert after&amp;quot; and &lt;tt class="docutils literal"&gt;b&lt;/tt&gt; for &amp;quot;insert
+before&amp;quot; makes more sense will now be able to make that change for
+herself.&lt;/p&gt;
+&lt;p&gt;Some of the keyboard shortcuts in command mode are already vi-like
+(&lt;tt class="docutils literal"&gt;j&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;k&lt;/tt&gt; to move up and down between cells) but many are not,
+and a few are confusingly placed. ipython-vimception aims to be a
+reference implementation for how to perform shortcut and user interface
+customization in the notebook. In particular, along with vim-ipython's
+new ability to edit .ipynb files, ipython-vimception addresses the
+concerns of many die-hard vim aficionados. Many of them have otherwise
+shied away form the notebook interface as it offends their sensibilities
+for how text editing and document manipulation should be done. However,
+with the new customizable shortcut system in IPython, along with a vim
+emulation mode in cell text input areas, they finally will have a way to
+stay productive without having to change their ways.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_a-cuni.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2012-07-05T00:00:00+00:00</updated><entry><title>Camelot 101</title><link href="https://pyvideo.org/europython-2012/camelot-101.html" rel="alternate"></link><published>2012-07-05T00:00:00+00:00</published><updated>2012-07-05T00:00:00+00:00</updated><author><name>A Cuni</name></author><id>tag:pyvideo.org,2012-07-05:europython-2012/camelot-101.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] J Dierckx A Cuni - 4 JULY 2012 in &amp;quot;Track Pizza Napoli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Camelot , as seen on EuroPython 2010 and 2011 is a framework for
+developing desktop database applications at warp speed. It is to desktop
+applications what Django is to web applications. Some see it as a
+replacement for MS Access, but its tight integration with SQLAlchemy
+enables a vast amount of more advanced features and possibilities. This
+tutorial style course will enable you to get started with your own
+Camelot project. We will tackle the hurdles met when going through the
+lifecycle of a desktop application First Example : We start our little
+Camelot project, have a look at the concepts and terminology used within
+Camelot. We go through the different parts of the application and look
+at the possibilities to customize them. Declarative Models and Views :
+Then we move on by defining a relational model and use introspection
+together with a declarative definition of our view to generate table and
+form views. We look at the various options that can be used to create
+and reuse form and table definitions. Actions and Reports : Next we’ll
+dive into the details of actions the user can trigger, we discuss and
+experiment with the standard actions Camelot offers. One of those
+actions can be the generation of a nicely formatted Word document.
+Advanced Model Definition : Once an application grows, more advanced
+model definition is needed. We will try out some advanced features of
+SQLAlchemy and see how they interact with the graphical interface. Fine
+tuning of the GUI : Here we have a look at how Qt’s model-view-delegate
+framework works and how it is used by Camelot. This will enable us to
+fully customize the graphical interface to our needs. Deployment and
+Users : The last step of the development process is getting the
+application to the users. We will discuss the deployment options and
+list the things to be aware of when submitting an application to its
+users. Q &amp;amp; A : Throw all Camelot questions you have in the group and try
+to resolve them together.&lt;/p&gt;
+</summary></entry><entry><title>Pypy: current status and gil-less future</title><link href="https://pyvideo.org/europython-2012/pypy-current-status-and-gil-less-future.html" rel="alternate"></link><published>2012-07-04T00:00:00+00:00</published><updated>2012-07-04T00:00:00+00:00</updated><author><name>A Cuni</name></author><id>tag:pyvideo.org,2012-07-04:europython-2012/pypy-current-status-and-gil-less-future.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] A. Rigo, A. Cuni, M. Fijalkowski - 2 JULY 2012 in
+&amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the first part of the keynote we will present the current status of
+PyPy, with a particular focus on what happened in the last year. We will
+give a brief overview of the current speed and the on-going development
+efforts. The second part of the keynote is about one particular feature
+whose development is in progress in PyPy: Automatic Mutual Exclusion.
+What it is needs some explanation: The GIL, or Global Interpreter Lock,
+is a well-known issue for Python programmers that want to have a single
+program using the multiple cores of today’s machines. This keynote is
+not about writing a GIL-less Python interpreter; although hard, this has
+been done before, notably in Jython. The real issue is that writing each
+and every multi-threaded Python programs is hard too. The threading
+module offers locks in several variants, conditions, events, semaphores…
+But using them correctly without missing one case is difficult,
+impossible to seriously test, often impossible to retrofit into existing
+programs, and arguably doesn’t scale. (Other solutions like the
+multiprocessing module are at best workarounds, suffering some of the
+same issues plus their own ones.) Instead, this keynote is about an
+alternate solution: a minimal thread-less API that lets programs use
+multiple cores, without worrying about races. This may sound impossible,
+but is in fact similar to the API simplification of using a garbage
+collected language over an explicitly managed one — what is not minimal
+is “just” the internal implementation of that API. I will explain how it
+can actually be done using Automatic Mutual Exclusion, a technique based
+on Transactional Memory. I will give preliminary results on a modified
+version of the PyPy Python interpreter that show that it can actually
+work. I will also explain how the API is used, e.g. in a modified
+Twisted reactor that gives multi-core capability to any existing,
+non-thread-based Twisted program.&lt;/p&gt;
+</summary></entry><entry><title>PyPy JIT under the hood</title><link href="https://pyvideo.org/europython-2012/pypy-jit-under-the-hood.html" rel="alternate"></link><published>2012-07-04T00:00:00+00:00</published><updated>2012-07-04T00:00:00+00:00</updated><author><name>A Cuni</name></author><id>tag:pyvideo.org,2012-07-04:europython-2012/pypy-jit-under-the-hood.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] A Rigo - A Cuni - 4 JULY 2012 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyPy is probably the fastest Python implementation around, thanks to its
+automatically generated JIT compiler. This talk explains how the JIT
+works internally: in particular, it shows all the intermediate steps
+which lead to the compilation of the Python source into fast machine
+code, and how to use the right tools to inspect the output of the JIT
+compiler. By examining the internals of the JIT, you will also learn why
+some code is more “JIT friendly” than other, and how to write programs
+which exploits its full potential.&lt;/p&gt;
+</summary></entry></feed>

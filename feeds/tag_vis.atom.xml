@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_vis.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-14T00:00:00+00:00</updated><entry><title>Epipy: Visualization of Emerging Zoonoses Through Temporal Networks</title><link href="https://pyvideo.org/scipy-2014/epipy-visualization-of-emerging-zoonoses-through.html" rel="alternate"></link><published>2014-07-14T00:00:00+00:00</published><updated>2014-07-14T00:00:00+00:00</updated><author><name>Caitlin Rivers</name></author><id>tag:pyvideo.org,2014-07-14:scipy-2014/epipy-visualization-of-emerging-zoonoses-through.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;We introduce two new plots for visualizing infectious disease outbreaks.
+Case tree plots depict the emergence and growth of clusters of zoonotic
+disease over time. Checkerboard plots also represent temporal case
+clusters, but do not construct transmission trees. These plots visualize
+outbreak dynamics and allow for analyses like case fatality risk
+stratified by generation.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We present two new visualizations, &lt;a class="reference external" href="https://github.com/cmrivers/epipy/blob/master/figs/example_casetree.png"&gt;case tree
+plots&lt;/a&gt;
+and
+&lt;a class="reference external" href="https://github.com/cmrivers/epipy/blob/master/figs/test_checkerboard.png"&gt;checkerboard&lt;/a&gt;
+plots, for visualizing emerging zoonoses.&lt;/p&gt;
+&lt;p&gt;Zoonoses represent an estimated 58% of all human infectious diseases,
+and 73% of emerging infectious diseases. Recent examples of zoonotic
+outbreaks include H1N1, SARS and Middle East Respiratory Syndrome, which
+have caused thousands of deaths combined. The current toolkit for
+visualizing data from these emerging diseases is limited.&lt;/p&gt;
+&lt;p&gt;Case tree and checkerboard plots were developed to address that gap. The
+visualizations are best suited for diseases like SARS for which there
+are a limited number of cases, with data available on human to human
+transmission. They a) allow for easy estimation of epidemiological
+parameters like basic reproduction number b) indicate the frequency of
+introductory events, e.g. spillovers in the case of zoonoses c)
+represent patterns of case attributes like patient sex both by
+generation and over time.&lt;/p&gt;
+&lt;p&gt;Case tree plots depict the emergence and growth of clusters of disease
+over time. Each case is represented by a colored node. Nodes that share
+an epidemiological link are connected by an edge. The color of the node
+varies based on the node attribute; it could represent patient sex,
+health status (e.g. alive, dead), or any other categorical attribute.
+Node placement along the x-axis corresponds with the date of illness
+onset for the case.&lt;/p&gt;
+&lt;p&gt;A second visualization, the checkerboard plot, was developed to
+complement case tree plots. They can be used in conjunction with case
+tree plots, or in situations where representing a hypothetical network
+structure is inappropriate.&lt;/p&gt;
+&lt;p&gt;The plots are available in the open source package epipy, which is
+available on &lt;a class="reference external" href="https://github.com/cmrivers/epipy"&gt;github&lt;/a&gt;. Detailed
+documentation and examples are also
+&lt;a class="reference external" href="cmrivers.github.io/epipy"&gt;available&lt;/a&gt;. In addition to these
+visualizations, epipy includes functions for common epidemiology
+calculations like odds ratio and relative risk.&lt;/p&gt;
+</summary><category term="epipy"></category><category term="vis"></category></entry><entry><title>How to Choose a Good Colour Map</title><link href="https://pyvideo.org/scipy-2014/how-to-choose-a-good-colour-map.html" rel="alternate"></link><published>2014-07-14T00:00:00+00:00</published><updated>2014-07-14T00:00:00+00:00</updated><author><name>Damon McDougall</name></author><id>tag:pyvideo.org,2014-07-14:scipy-2014/how-to-choose-a-good-colour-map.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Representing data through colours is a very common approach to conveying
+important information to an audience. We suggest some best practices
+scientists should consider when deciding how they should present their
+results.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Representing data through colours is a very common approach to conveying
+important information to an audience. This is done throughout all fields
+in the scientific community and stakes a claim in the commercial and
+marketing realm as well. Colour maps and contour maps are the preferred
+way for scientists to visualise three-dimensional data in two
+dimensions. Research has shown that the choice of colourmap is crucial
+since the human brain interpolates hue poorly. We suggest some best
+practices scientists should consider when deciding how they should
+present their results. Specifically, we look at some examples of
+colourmaps that can easily be misinterpreted, making reference to an
+in-depth supportive study, and suggest alternative approaches to improve
+them. We conclude by listing some open source tools that aid making good
+colourmap choices. Kristen Thyng's talk on perception of colourmaps in
+matplotlib is an excellent follow-on from this.&lt;/p&gt;
+</summary><category term="vis"></category></entry><entry><title>Perceptions of Matplotlib Colormaps</title><link href="https://pyvideo.org/scipy-2014/perceptions-of-matplotlib-colormaps.html" rel="alternate"></link><published>2014-07-14T00:00:00+00:00</published><updated>2014-07-14T00:00:00+00:00</updated><author><name>Kristen M. Thyng</name></author><id>tag:pyvideo.org,2014-07-14:scipy-2014/perceptions-of-matplotlib-colormaps.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;On several issues related to the perception of colormaps...&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The choice of colormap in a scientific figure significantly affects the
+way the presented information is perceived by the viewer. This follows
+on Damon McDougall's talk on how to choose a colormap for an application
+by delving deeper into several important issues and how well many of the
+available Matplotlib colormaps stand up against the concerns. For
+example, it is known that the human brain is better able to interpret
+changes in magnitude of the luminance and saturation of colors in
+colormaps instead of the hue. Also, some research has shown that
+logarithmic changes in brightness are perceived as linear changes. Next,
+being able to print a color plot in black and white from a published
+paper is sometimes mandatory and often desirable, and is related to the
+grey scale in a colormap. Finally, it is important to account for
+various types of color blindness when choosing a divergent colormap for
+the plot to be as accessible as possible. All of these concerns have
+implications for the design of colormaps, and will be examined in the
+context of the properties of the available Matplotlib colormaps in order
+to make a best choice for a given application.&lt;/p&gt;
+&lt;p&gt;Abstract and slides available &lt;a class="reference external" href="https://github.com/dmcdougall/scipy14-colormaps"&gt;on
+Github.&lt;/a&gt;&lt;/p&gt;
+</summary><category term="vis"></category></entry><entry><title>Bokeh: Interactive Visualizations in the Browser</title><link href="https://pyvideo.org/scipy-2014/bokeh-interactive-visualizations-in-the-browser.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Bryan Van de Ven</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/bokeh-interactive-visualizations-in-the-browser.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Bokeh is a Python visualization library for large datasets that natively
+uses the latest web technologies. Its goal is to provide concise
+construction of novel graphics, while delivering high-performance
+interactivity over large data to thin clients. This talk will cover the
+motivation and architecture behind Bokeh, demonstrate interesting uses
+and capability, and discuss future plans.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With support from the DARPA XDATA Initiative, and contributions from
+community members, the Bokeh visualization library
+(&lt;a class="reference external" href="http://bokeh.pydata.org"&gt;http://bokeh.pydata.org&lt;/a&gt;) has grown into a large, successful open source
+project with heavy interest and following on GitHub
+(&lt;a class="reference external" href="https://github.com/ContinuumIO/bokeh"&gt;https://github.com/ContinuumIO/bokeh&lt;/a&gt;). The principal goals of Bokeh are
+to provide capability to developers and domain experts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;easily create novel and powerful visualizations&lt;/li&gt;
+&lt;li&gt;that extract insight from remote, possibly large data sets&lt;/li&gt;
+&lt;li&gt;published to the web for others to explore and interact&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will describe how the architecture of Bokeh enables these
+goals, and demonstrate how it can be leveraged by anyone using python
+for analysis to visualize and present their work. We will talk about
+current development and future plans, including a brief discussion of
+Joseph Cottam's exciting academic work on abstract rendering for large
+data sets that is going into Bokeh
+(&lt;a class="reference external" href="https://github.com/JosephCottam/AbstractRendering"&gt;https://github.com/JosephCottam/AbstractRendering&lt;/a&gt;).&lt;/p&gt;
+</summary><category term="bokeh"></category><category term="vis"></category></entry></feed>

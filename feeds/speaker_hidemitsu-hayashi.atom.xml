@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_hidemitsu-hayashi.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-09-21T00:00:00+00:00</updated><entry><title>f2pyとmatplotlibを用いたブラウン粒子動力学のリアルタイム可視化</title><link href="https://pyvideo.org/pycon-japan-2016/f2pytomatplotlibwoyong-itaburaunli-zi-dong-li-xue-noriarutaimuke-shi-hua.html" rel="alternate"></link><published>2016-09-21T00:00:00+00:00</published><updated>2016-09-21T00:00:00+00:00</updated><author><name>Hidemitsu Hayashi</name></author><id>tag:pyvideo.org,2016-09-21:pycon-japan-2016/f2pytomatplotlibwoyong-itaburaunli-zi-dong-li-xue-noriarutaimuke-shi-hua.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fortran言語で記述された、大気中に浮遊してブラウン運動する微小粒子の運動解析プログラムを、f2pyによりPythonプログラムと結合し、matplotlibを用いて粒子運動をリアルタイムで可視化した。その結果、運動解析中に粒子の大きさや大気温度を変更可能となり、これらの変数に依存してブラウン運動が変化する様子を視覚的に把握する事が出来る様になった。&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;リアルタイム可視化とは&lt;/p&gt;
+&lt;p&gt;数値シミュレーションの結果をディスクに保存した後、それを描画プログラムが読み込んで可視化する事をポスト処理と呼ぶ。それとは異なり、数値シミュレーションプログラムの終了を待たずに、シミュレーション結果を逐次描画プログラムが受取り、可視化する事を、本talkではリアルタイム可視化と呼ぶ。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;
+ポスト処理 ： 数値計算 → 結果をディスクに保存 → 描画プロブラム
+リアルタイム可視化 ： 数値計算 → (ネットワーク or メモリ) → 描画プログラム
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;可視化するプログラムの説明&lt;/p&gt;
+&lt;p&gt;近年、大気汚染に関する情報として、毎朝の天気予報においてPM2.5の数値が公表されるようになった。PM2.5とは、直径2.5ミクロン以下の微小粒子(PM)が1立方メートル当り何μg含まれるかを示す指標であるが、本talkで取り上げるのはこのPM2.5の振る舞いを記述する数値計算プログラムである。計算手法としてはBrown動力学法を用いており、Fortran言語を用いてコーディングされている。Brown動力学法は、人為的なランダムウオークとは異なり、粒子の大きさや大気温度に応じて粒子の振る舞いを正確に記述する事を述べる&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;
+Brown動力学法 = Langevin方程式を(コンピュータで)数値的に解く手法
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;FortranプログラムとPythonプログラムの結合&lt;/p&gt;
+&lt;p&gt;Fortran言語で書かれてたBrown動力学法プログラムから、f2pyを用いて、Pythonのモジュールを生成する。その際に留意すべき点を述べる。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;
+Fortranプログラム → (main + interface)に分割 → f2py → brown.so
+f2py -c -m brown --fcompiler=intelem interface.f90 main.o
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;matplotlibによるリアルタイム可視化&lt;/p&gt;
+&lt;p&gt;matplotlibのリアルタイム描画には複数の方法があるのでそれらを簡単に紹介した後、モジュール化されたBrown動力学法プログラムが微小粒子の位置を計算し、これをPythonプログラムが逐次受取り、matplotlibで粒子位置を軌跡もしくは点としてリアルタイムで描画してお見せする。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;
+import matplotlib.pyplot as plt
+import matplotlib.animation as animation
+import brown
+・・・
+&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p class="first"&gt;matplotlibによるGUIプログラム作成&lt;/p&gt;
+&lt;p&gt;微小粒子の運動を追跡中に、matplotlibのイベント処理やwidgetを用いて、粒子の大きさや大気温度を変更し、粒子運動が変化する様子を可視化してお見せする。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;
+from mpl_toolkits.mplot3d import Axes3D
+from matplotlib.widgets import Slider, Button
+import brown
+・・・
+&lt;/pre&gt;
+</summary></entry></feed>

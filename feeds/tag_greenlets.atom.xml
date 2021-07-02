@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_greenlets.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-03-11T00:00:00+00:00</updated><entry><title>An outsider's look at co-routines.</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--an-outsider--39-s-look-at-co-routines.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Peter Portante</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--an-outsider--39-s-look-at-co-routines.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An outsider's look at co-routines.&lt;/p&gt;
+&lt;p&gt;Presented by Peter Portante&lt;/p&gt;
+&lt;p&gt;Let's take an outsiders look at coroutines, the underlying concept used
+by greenlets. First we'll define what they are conceptually, and show
+some typical use cases. Then we'll take a look at a sampling of the
+implementations out there to see what they are actually doing to
+implement the concept. Finally, we'll show their pluses and minuses, and
+highlight some features of packages that use them.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Talk outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Define what a coroutine is&lt;ul&gt;
+&lt;li&gt;Coroutine state not known to operating system&lt;/li&gt;
+&lt;li&gt;Difference between a thread or process&lt;/li&gt;
+&lt;li&gt;What state is required for tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Show how coroutines are used&lt;ul&gt;
+&lt;li&gt;gevent example&lt;/li&gt;
+&lt;li&gt;concurrence example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Review two implementations&lt;ul&gt;
+&lt;li&gt;Greenlets&lt;/li&gt;
+&lt;li&gt;Python based co-routines using generators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantages/Disadvantages&lt;/li&gt;
+&lt;li&gt;Differentiating features of packages that use them&lt;ul&gt;
+&lt;li&gt;Concurrence&lt;/li&gt;
+&lt;li&gt;Gevent&lt;/li&gt;
+&lt;li&gt;Eventlets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="concurrence"></category><category term="coroutines"></category><category term="gevent"></category><category term="greenlets"></category><category term="pycon"></category><category term="pycon2011"></category></entry><entry><title>Prototyping Go's Select with stackless.py for Stackless Python</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Andrew Francis</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--prototyping-go--39-s-select-with-stac.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Prototyping Go's Select with stackless.py for Stackless Python&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Francis&lt;/p&gt;
+&lt;p&gt;Showing how to use Python to prototype powerful concurrency features for
+Stackless Python. We do want you to try this at home.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Google’s introduction of the Go language raised eyebrows in the
+Stackless Python community. Although very different languages, Go and
+Stackless Python’s concurrency model share a common ancestor: the Bell
+Labs family of languages (i.e., Newsqueak, Limbo). The common feature
+are channels: a synchronous message passing mechanism based on Tony
+Hoare’s Communicating Sequential Processes (CSP).&lt;/p&gt;
+&lt;p&gt;Both Go and Python have channels. However with the select language
+statement, Go has the ability to wait on multiple channels
+simultaneously. Select greatly simplifies many concurrent programming
+problems. Stackless Python does not have this feature. Other channel
+based languages also feature powerful concurrency constructs. How hard
+would these constructs be to implement for Stackless Python?&lt;/p&gt;
+&lt;p&gt;This talk explores the prototyping potential of stackless.py, the PyPy's
+framework's implementation of Stackless Python. The beauty of
+stackless.py is that it is written in Python and implements much of
+Stackless Python's API! The &amp;quot;case study&amp;quot; involves prototyping Go's
+select in stackless.py before reimplementing select in C based Stackless
+Python.&lt;/p&gt;
+&lt;p&gt;During this talk, it will be shown how stackless.py can be used with
+CPython and the greenlet package (no need to install another Python).
+The audience will also get an in depth look at how channels are
+implemented. Channels are at the heart of Stackless Python's message
+based concurrency model. Finally the audience will gain insights into
+future directions of Stackless Python.&lt;/p&gt;
+</summary><category term="csp"></category><category term="go"></category><category term="greenlets"></category><category term="pycon"></category><category term="pycon2011"></category><category term="pypy"></category><category term="stackless"></category></entry></feed>

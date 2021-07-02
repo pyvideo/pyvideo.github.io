@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_adrian-dziubek.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-05T00:00:00+00:00</updated><entry><title>Python Descriptors for Better Data Structures</title><link href="https://pyvideo.org/europython-2016/python-descriptors-for-better-data-structures.html" rel="alternate"></link><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><author><name>Adrian Dziubek</name></author><id>tag:pyvideo.org,2016-08-05:europython-2016/python-descriptors-for-better-data-structures.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Adrian Dziubek - Python Descriptors for Better Data Structures
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/python-descriptors-for-better-data-structures"&gt;https://ep2016.europython.eu//conference/talks/python-descriptors-for-better-data-structures&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Have you ever wondered how Django models work? I'll present a story of
+data structure transformation. I will talk about ideas from Django
+models that I used and how I rediscovered descriptor API. I will talk
+about printing, serializing, comparing data structures and some  other
+examples, where descriptors excel at making declarative code easier to
+write.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;I worked as a developer of a testing framework for a C++ server. The
+framework tested binary protocol implemented by the server.&lt;/p&gt;
+&lt;p&gt;Most of the work  involved testers preparing test cases. The data
+format was primitive structures -- hard to read and easy to break.
+Field order and all the data had to be entered manually.&lt;/p&gt;
+&lt;p&gt;At the time, I have already seen the better world --  the models from
+Django. Have you ever wondered how those work? Step by step, I used
+the ideas from there to make the structures more friendly and on my
+way I rediscovered descriptors.&lt;/p&gt;
+&lt;p&gt;I'll show in incremental steps, how:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;used keyword arguments to lower signal to noise ratio,&lt;/li&gt;
+&lt;li&gt;order of definition for sorting the fields,&lt;/li&gt;
+&lt;li&gt;realized that &lt;cite&gt;__call__&lt;/cite&gt; is used instead of assignment,&lt;/li&gt;
+&lt;li&gt;used &lt;cite&gt;__setattribute__&lt;/cite&gt; as first step to extend primitive fields,&lt;/li&gt;
+&lt;li&gt;discovered that I'm actually reimplementing descriptors,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and how it lead me to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;implement printing in a way that is friendly to regression testing,&lt;/li&gt;
+&lt;li&gt;use diff library for less code and better results,&lt;/li&gt;
+&lt;li&gt;implement more readable validation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I want to show how descriptors work in Python and how they enable
+declarative style of programming. By the end of the talk I want you to
+understand what is at the core of the magic behind field types used by
+object relational mappers like Django.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Post-Mortem Debugging with Heap-Dumps</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2014.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2014.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Post-Mortem Debugging with Heap-Dumps" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/europython-2014/post-mortem-debugging-with-heap-dumps.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/0Xt-au2QnRg/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/0Xt-au2QnRg/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/europython-2014/post-mortem-debugging-with-heap-dumps.html" rel="bookmark"
+         title="Permalink to Post-Mortem Debugging with Heap-Dumps">Post-Mortem Debugging with Heap-Dumps
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2014-07-25T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 25 July 2014
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/anselm-kruis.html">Anselm Kruis</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0Xt-au2QnRg" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>UNIX core-dumps, Windows minidumps or Java heap-dumps are well
+established technologies for post-mortem defect analysis. I'll present a
+similar technology for Python. An improved pickling mechanism makes it
+possible to serialise the state of a Python program for subsequent
+analysis with a conventional Python-debugger.</p>
+<h3>Description</h3><p>UNIX core-dumps, Windows minidumps and analogous solutions of other
+operating systems are well established technologies for post-mortem
+defect analysis of native-code processes. In principle those dumps can
+be used to analyse „interpreted“ programs running within a native-code
+interpreter-process. However in practise this approach is tedious and
+not always successful [1]. Therefore operating system independent dump
+methods were developed for some „interpreted“ languages [2]. A prominent
+example are Java heap dumps [3].</p>
+<p>Unfortunately up to now there was no practically usable dump-method for
+Python. Various attempts were made to utilise OS-level dump methods [4,
+5]. In 2012 Eli Finer published the Python module <em>pydump</em> [6]. This
+module pickles the traceback of an exception and subsequently uses the
+pdb debugger to analyse the unpickled traceback. Unfortunately <em>pydump</em>
+fails on PicklingErrors.</p>
+<p>In my talk I'll present the Python package
+<a class="reference external" href="https://pypi.python.org/pypi/pyheapdump">*pyheapdump*</a>. It has the
+same operation principle as Eli's <em>pydump</em>, but is an independent
+implementation. <em>pyheapdump</em> uses an extended pickler
+(<a class="reference external" href="https://pypi.python.org/pypi/sPickle">sPickle</a>) to serialise all
+relevant objects of a Python process to a file. Later on a fault
+tolerant unpickler recreates the objects and a common Python debugger
+can be used to analyse the dump. The pickler extensions make it possible
+to:</p>
+<ul class="simple">
+<li>pickle and unpickle many commonly not pickleable objects [7].</li>
+<li>replace the remaining not pickleable objects by surrogate objects so
+that the resulting object graph is almost isomorphic to the original
+object graph.</li>
+</ul>
+<p>Which objects are relevant? In its default operation mode <em>pyheapdump</em>
+uses the frame-stacks of all threads as start point for pickling.
+Following the usual rules for pickling the dump includes all local
+variables and all objects reachable from a local variable and so on.
+That is usually enough for a successful defect analysis.</p>
+<p>Compared with other Python post-mortem debugging methods <em>pyheapdump</em>
+has several advantages:</p>
+<ul class="simple">
+<li>It is a pure Python solution and independent from the operation
+system.</li>
+<li>Creation of the pyheapdump and fault analysis can be performed
+different computers.</li>
+<li>It is not obstructive. It does not modify / monkey-patch or disturb
+the dumped process in any way, with the exception of loading
+additional modules.</li>
+<li>If used with the Pydev-debugger, it supports multi-threaded
+applications.</li>
+<li>If used with the Pydev-debugger and Stackless Python, it supports
+tasklets.</li>
+</ul>
+<p>The implementation of <em>pyheapdump</em> is fairly small, because it draws
+most of its functionality from the underlying sPickle package and from
+the new Stackless-Support [8] of the Pydev-Debugger. Therefore it is -
+despite of its short history - already a useful piece of software.</p>
+<div class="section" id="outline-of-the-talk">
+<h4>Outline of the talk</h4>
+<ol class="arabic simple">
+<li>Introduction to the problem</li>
+<li>Previous works</li>
+<li>The concept of <em>pyheapdump</em></li>
+<li>Live demonstration</li>
+<li>Open problems and further development</li>
+<li>Questions and Answers</li>
+</ol>
+</div>
+<div class="section" id="references">
+<h4>References</h4>
+<ol class="arabic simple">
+<li>Andraz Tori, Python, 2011-01-16: <em>gdb and a very large core dump</em>,
+blog at <a class="reference external" href="http://www.zemanta.com/blog/python-gdb-large-core-dump/">http://www.zemanta.com/blog/python-gdb-large-core-dump/</a></li>
+<li>David Pacheco, ACM Queue - Programming Languages Volume 9 Issue 10,
+October 2011: <em>Postmortem Debugging in Dynamic Environments</em>, PDF
+<a class="reference external" href="http://dl.acm.org/ft_gateway.cfm?id=2039361&amp;ftid=1050739&amp;dwn=1&amp;CFID=290171300&amp;CFTOKEN=95099236">http://dl.acm.org/ft_gateway.cfm?id=2039361&amp;ftid=1050739&amp;dwn=1&amp;CFID=290171300&amp;CFTOKEN=95099236</a></li>
+<li>Chris Bailey, Andrew Johnson, Kevin Grigorenko, IBM developerWorks,
+2011-03-15: <em>Debugging from dumps - Diagnose more than memory leaks
+with Memory Analyzer</em>, PDF
+<a class="reference external" href="http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf">http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf</a></li>
+<li>Brian Curtin, 2011-09-29: <em>minidumper - Python crash dumps on
+Windows</em>, blog at
+<a class="reference external" href="http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html">http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html</a></li>
+<li>David Malcolm, Fedora Feature, 2010-04-06: <em>Easier Python Debugging</em>
+at <a class="reference external" href="http://fedoraproject.org/wiki/Features/EasierPythonDebugging">http://fedoraproject.org/wiki/Features/EasierPythonDebugging</a></li>
+<li>Eli Finer, Github-Project, 2012: <em>pydump</em> at
+<a class="reference external" href="https://github.com/gooli/pydump">https://github.com/gooli/pydump</a></li>
+<li>Anselm Kruis, EuroPython 2011: <em>Advanced Pickling with Stackless
+Python and sPickle</em>, archived talk at
+<a class="reference external" href="https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle">https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle</a></li>
+<li>Fabio Zadrozny, 2013-12-12: <em>PyDev 3.1.0 released</em>, blog at
+<a class="reference external" href="http://pydev.blogspot.de/2013/12/pydev-310-released.html">http://pydev.blogspot.de/2013/12/pydev-310-released.html</a></li>
+</ol>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/europython-2014.html">EuroPython 2014</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=0Xt-au2QnRg" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html">
+http://blog.briancurtin.com/posts/20110929minidumper-python-crash-dumps-on-windows.html                </a></li><li><a href="http://dl.acm.org/ft_gateway.cfm?id=2039361&ftid=1050739&dwn=1&CFID=290171300&CFTOKEN=95099236">
+http://dl.acm.org/ft_gateway.cfm?id=2039361&ftid=1050739&dwn=1&CFID=290171300&CFTOKEN=95099236                </a></li><li><a href="http://fedoraproject.org/wiki/Features/EasierPythonDebugging">
+http://fedoraproject.org/wiki/Features/EasierPythonDebugging                </a></li><li><a href="http://pydev.blogspot.de/2013/12/pydev-310-released.html">
+http://pydev.blogspot.de/2013/12/pydev-310-released.html                </a></li><li><a href="http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf">
+http://www.ibm.com/developerworks/library/j-memoryanalyzer/j-memoryanalyzer-pdf.pdf                </a></li><li><a href="http://www.zemanta.com/blog/python-gdb-large-core-dump/">
+http://www.zemanta.com/blog/python-gdb-large-core-dump/                </a></li><li><a href="https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle">
+https://ep2013.europython.eu/conference/talks/advanced-pickling-with-stackless-python-and-spickle                </a></li><li><a href="https://github.com/gooli/pydump">
+https://github.com/gooli/pydump                </a></li><li><a href="https://pypi.python.org/pypi/pyheapdump">
+https://pypi.python.org/pypi/pyheapdump                </a></li><li><a href="https://pypi.python.org/pypi/sPickle">
+https://pypi.python.org/pypi/sPickle                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/europython-2014/videos/post-mortem-debugging-with-heap-dumps.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

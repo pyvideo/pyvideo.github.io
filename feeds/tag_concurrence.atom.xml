@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_concurrence.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-21T00:00:00+00:00</updated><entry><title>Emulating Stackless and greenlet with each other</title><link href="https://pyvideo.org/europython-2011/emulating-stackless-and-greenlet-with-each-other.html" rel="alternate"></link><published>2011-07-21T00:00:00+00:00</published><updated>2011-07-21T00:00:00+00:00</updated><author><name>Péter Szabó</name></author><id>tag:pyvideo.org,2011-07-21:europython-2011/emulating-stackless-and-greenlet-with-each-other.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Peter Szabo - 20 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python and the greenlet package for CPython are two different
+implementations of coroutine support for Python. (Coroutines are
+fundamental building blocks of I/O frameworks like gevent, Eventlet,
+Concurrence and Syncless to conveniently handle thousands of socket
+connections at a time without creating threads.) Stackless and greenlet
+implement a different interface. However, each is powerful enough so
+that it can be used to emulate the other one. In this talk we explore
+the differences and discuss design decisions and testing strategies of
+the emulations we have implemented.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/slides_2011-06-20/pts_em%20u_coro_2011-06-20.html"&gt;Slides&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://syncless.googlecode.com/svn/trunk/doc/s%20lides_2010-11-29/pts_coro_2010-11-29.html"&gt;Slides for the bonus
+sub-talk&lt;/a&gt;&lt;/p&gt;
+</summary><category term="concurrence"></category><category term="cpython"></category><category term="design"></category><category term="greenlet"></category><category term="stackless"></category><category term="testing"></category></entry><entry><title>An outsider's look at co-routines.</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--an-outsider--39-s-look-at-co-routines.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Peter Portante</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--an-outsider--39-s-look-at-co-routines.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An outsider's look at co-routines.&lt;/p&gt;
+&lt;p&gt;Presented by Peter Portante&lt;/p&gt;
+&lt;p&gt;Let's take an outsiders look at coroutines, the underlying concept used
+by greenlets. First we'll define what they are conceptually, and show
+some typical use cases. Then we'll take a look at a sampling of the
+implementations out there to see what they are actually doing to
+implement the concept. Finally, we'll show their pluses and minuses, and
+highlight some features of packages that use them.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Talk outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Define what a coroutine is&lt;ul&gt;
+&lt;li&gt;Coroutine state not known to operating system&lt;/li&gt;
+&lt;li&gt;Difference between a thread or process&lt;/li&gt;
+&lt;li&gt;What state is required for tracking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Show how coroutines are used&lt;ul&gt;
+&lt;li&gt;gevent example&lt;/li&gt;
+&lt;li&gt;concurrence example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Review two implementations&lt;ul&gt;
+&lt;li&gt;Greenlets&lt;/li&gt;
+&lt;li&gt;Python based co-routines using generators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Advantages/Disadvantages&lt;/li&gt;
+&lt;li&gt;Differentiating features of packages that use them&lt;ul&gt;
+&lt;li&gt;Concurrence&lt;/li&gt;
+&lt;li&gt;Gevent&lt;/li&gt;
+&lt;li&gt;Eventlets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="concurrence"></category><category term="coroutines"></category><category term="gevent"></category><category term="greenlets"></category><category term="pycon"></category><category term="pycon2011"></category></entry></feed>

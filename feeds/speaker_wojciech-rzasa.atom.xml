@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_wojciech-rzasa.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>From HTTP to Kafka-based microservices</title><link href="https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Wojciech Rząsa</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/from-http-to-kafka-based-microservices.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Communication"></category><category term="Distributed Systems"></category></entry></feed>

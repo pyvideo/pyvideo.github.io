@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Amanda: A New Generation of Distributed Services Framework</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2014.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2014.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Amanda: A New Generation of Distributed Services Framework" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/europython-2014/amanda-a-new-generation-of-distributed-services.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/bPNGn1XHCKw/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/bPNGn1XHCKw/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/europython-2014/amanda-a-new-generation-of-distributed-services.html" rel="bookmark"
+         title="Permalink to Amanda: A New Generation of Distributed Services Framework">Amanda: A New Generation of Distributed Services Framework
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2014-07-22T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Tue 22 July 2014
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/jozef-van-eenbergen.html">Jozef van Eenbergen</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/bPNGn1XHCKw" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>To help create award winning visual effects, MPC developed a distributed
+service-oriented platform, Amanda. Amanda allows developers of any level
+to write a service that is presented to users across 8 facilities
+globally without them requiring any knowledge of building large
+concurrent systems. It allows artists and developers across different
+domains to work with clearly defined API's and gives the service
+developer control over what and how data can and should be accessed. The
+talk will cover how to set up such a platform from the ground up.
+Starting at the service level building it out with additional modules
+and technologies until the fully distributed system, covering topics
+such as concurrency, componetisation and monitoring that allow the fine
+tuning of setups depending on the type of work being undertaken and
+changing business needs.</p>
+<h3>Description</h3><p>We'll start off with a quick overview of a movie production pipeline
+which will set the stage for how Amanda provides artists with the tools
+they need to develop and streamline the production process as well as
+Amanda's crucial function as a robust framework for the support and
+development teams. Going over some stats, up to 250.000 service calls a
+minute during World War Z for example (for frame of reference this is
+twice the average rate of stackoverflow.com), I'll highlight some of the
+problems encountered with the 1st generation. Initially developed in
+2007 and replaced last year it had several flaws in regards to
+scalability, maintainability and future proofing. From there I'll
+introduce the 2nd generation which is build on the principle of
+componentisation and building blocks. Every part of the system needs to
+be replaceable and this needs to be possible from the configuration.</p>
+<p>During the presentation we will be stepping through the different
+building blocks, how they have been set up, how they slot together and
+how we monitor, trace and test the system from the ground up. Starting
+at the lowest level with services we'll slowly step through the
+different blocks necessary to build a fault tolerant, distributed and
+scalable platform. We made sure that the platform is not tied into any
+specific technology but allows the use of the best technologies
+depending on the type of work being undertaken and changing business
+needs and technological advances.</p>
+<div class="section" id="service-development-and-testing">
+<h4>Service development and testing</h4>
+<p>Our development teams build applications for artists creating visual
+effects through to management teams coordinating productions. A
+service-based architecture was chosen to provide consistent interfaces
+across the many different environments where this is required. We
+provide an ecosystem where developers of any level can safely write a
+service (a set of instructions regarding a specific topic) that are
+presented to developers and technical artists globally. To write a
+service the developer doesn't need any knowledge in regards to building
+large concurrent systems. The service is implemented through a simple
+Python API and the provided ecosystem allows services to exist in a
+standalone manner. The service concept was separated from the platform
+hosting it. This allows hosting in any application that provides a
+standard container (a service provider). Extracting this allowed for
+more rigorous and simple testing of services; it also allows developers
+to provide fake versions of their services publicly against which client
+code can be tested. The adage Ê»everything as a serviceÊ¼ was applied to
+the development of internal facilities. This includes our management
+tools and the developer console, which presents the documentation of
+services and methods available to developers through a web interface.
+Infrastructure services were introduced to present an interface to
+facilities provided to a regular service, for example databases,
+configuration and centralized logging. Services can call other services
+and, similarly to infrastructures, services can be replaced with
+different services depending on the configuration. Services are exposed
+to a service (or client as we will see later) via a service provider
+just like in applications. Setting services up with the above patterns
+allows developers to iterate quickly and to include services within
+testing frameworks. It has also provided a standardized form across
+projects allowing developers to support and add to unfamiliar code
+easily. And last but not least it has given us full abstractions at all
+levels, users of services do not need to know the code underneath the
+hood be it at a service level or at an infrastructure level.</p>
+</div>
+<div class="section" id="building-the-cluster">
+<h4>Building the cluster</h4>
+<p>Rather than building a single system, the new architecture defines a set
+of building blocks for constructing a distributed service platform.
+These can provide adapters for best of breed third party tools or, where
+necessary, custom implementations of functionality. Configuration is
+used to determine the number and types of modules to use and the
+parameters with which to initialize them. This allows the same platform
+to be used for small instances at a developerÊ¼s desk up to a production
+environment of many nodes. The design enables improved components to be
+swapped into the existing system whilst forming the basis for an
+entirely new design.</p>
+<p>Most practical applications require the service provider to handle
+multiple requests at the same time. Amanda provides a set of
+interchangeable concurrency modules. This allows the most appropriate
+Python model for parallel processing to be chosen. For work involving
+heavy I/O work we choose approaches that avoid waiting for the GIL, for
+example multiple processes and greenlets/coroutines, whilst for CPU
+bound work we can use threads which may prove more performant. Having
+the option to choose between mechanisms is important since there is not
+a solution that neatly fits all use cases. A pluggable concurrency
+abstraction also allows integration of new libraries as they become
+available. In future this might include the new asyncio (formerly Tulip)
+core library for Python 3.3+.</p>
+<p>To benefit from concurrency, resource pooling, caching etc. we don't
+always want to execute the service locally to the service provider.
+Service proxies implement this behavior; they take the service, method
+and arguments of a request as their input and return the result. The
+proxy should be transparent to the service and service provider
+components. By chaining proxies, complex routing schemes can be built or
+analysis performed on the results returned. Some similarity can be drawn
+with middle-ware in the Web Services Gateway Interface (WSGI)
+specification. Communication between proxy and service provider is
+served by the transport. This abstraction provides an asynchronous
+interface to underlying technologies â€“ Current implementations include
+queue based AMQP, ontop of RabbitMQ, and Ã˜MQ and more naÃ¯ve
+communications with standard UDP and TCP sockets. Most transports define
+both client and server parts of the system â€“ however some,
+particularly HTTP-based transports, are designed to accept requests
+directly from external clients. Requests from external applications
+commonly use XMLRPC, JSONRPC or straight JSON. Transport implementations
+can be interchanged without impacting other components of Amanda or
+service developers.</p>
+<p>In production, a request gateway implemented as a WSGI application
+fronts the HTTP protocols. Using the standard web components NGINX and
+Î¼WSGI we can build a very scalable front end which internally uses the
+service provider, proxy, transport pattern to offload the requests to a
+backend. The gateway can also provide standard web facilities such as
+template rendering (through the Jinja2 library1) for general web
+clients. The gateway was a requirement as requests originate from
+applications written in many languages including C++, Python, JavaScript
+and domain specific languages such as mel. For us it was important that
+the client used across all those languages was a proven standard and
+lightweight. Most requests are served in near realtime (6ms round trip
+times) and are presented to the client in a synchronous way so using a
+frontend that supports a large number of HTTP like protocols allowed us
+to keep the clients simple and present the platform to an extremely wide
+variety of languages. Additionally, through the frontend, we can render
+a web page and present that directly if the requests was made from a
+browser.</p>
+<p>The final behavior of the platform is defined in configuration. This
+allows the platform to be tuned to suit the work that a particular
+service is performing (I/O vs CPU bound). It is important to remember
+that every single component mentioned above be it the concurrency,
+transport, proxies or frontend can be changed, removed, updated without
+it impacting the service, the developer or any of the other components
+that make up the platform.</p>
+<p>Also important to mention that internally and externally everything is a
+queue and presented as a queue. Going from the client to the frontend
+there is a queue, from the frontend onto the backend there is a queue
+etc. all the way down to a request being read of the transport and
+stored inside a queue until a concurrency object is ready to handle the
+request with the service provider.</p>
+<p>This is where we think our platform might take a different approach.
+Rather than building the platform on top of a single great technology we
+didn't want to limit ourselves and be able to use all the other great
+technologies out there. There is no perfect solution for all problems
+but allowing to fine tune the platform according to different problems.
+The setup can now evolve in line with technological advancements and
+changes to the industry.</p>
+</div>
+<div class="section" id="maintenance-and-monitoring-5-mins">
+<h4>Maintenance and Monitoring (5 mins)</h4>
+<p>We will walk through how we are using the same setup with services,
+service providers, proxies and transports to manage clusters around the
+globe. Once again for our maintenance and monitoring we made sure
+everything is done as a service so that if there is a better tool in the
+future we could adopt it.</p>
+<p>Through leveraging the configuration management and remote execute
+platform Salt, a new cluster can now be provisioned quickly. Management
+is itself provided as a service. Through this system, the current state
+is available and configuration changed across all servers globally. This
+has reduced routine maintenance tasks from a half day to a five-minute
+task, with less chance of human error. Monitoring and introspection are
+provided, as a service, to aid in day-to-day support, tuning and to help
+support analysis for future development.</p>
+<p>Developers of services can trace requests from when they enter the
+system, producing a report of the sequence of methods being called, with
+the supplied arguments. For each call the time spent to fulfill each
+request is presented. Care was taken to minimize the impact of this on
+return result of the request. Due to everything being a queue we can
+collect the metrics after the result has been put back onto the
+transport and send to the user and thus minimize the impact of this
+collection on returning the result of the request This means that there
+is no requirement to put the system into a debug mode in order to obtain
+execution metrics.</p>
+<p>With logging being a service we can dynamically change the logging
+configuration on a per service basis by making a request to the logging
+service taking away the need of changing configuration and restarting
+the service which often means a problem might have disappeared due to
+the reset.</p>
+</div>
+<div class="section" id="future-conclusion-1-min">
+<h4>Future/Conclusion (1 min)</h4>
+<p>Whilst developing the new generation of the platform there have been a
+number of possible applications that have emerged. The way in which we
+are able to scale the system would be suitable to run in a cloud
+environment â€“ especially with the improvements to management allowing
+new nodes to be provisioned quickly. The ease of writing and integrating
+new components would allow integration with infrastructure provided by
+third-party cloud vendors. Other areas of interest include a smaller
+version of the platform running locally on a userÊ¼s workstation and
+services for management of generic processes.</p>
+</div>
+<div class="section" id="main-technologies-and-libraries-currently-used">
+<h4>Main technologies and libraries currently used:</h4>
+<ul class="simple">
+<li>Threading</li>
+<li>Gevent</li>
+<li>Eventlet</li>
+<li>Multiprocessing</li>
+<li>ZeroMQ</li>
+<li>RabbitMQ</li>
+<li>uwsgi</li>
+<li>Flask</li>
+<li>Salt</li>
+<li>nginx</li>
+</ul>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/europython-2014.html">EuroPython 2014</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=bPNGn1XHCKw" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/europython-2014/videos/amanda-a-new-generation-of-distributed-services.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

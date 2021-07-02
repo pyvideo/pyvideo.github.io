@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_pypes.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-03-11T00:00:00+00:00</updated><entry><title>Large Scale Data Conditioning &amp; Processing with Stackless Python and Pypes</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--large-scale-data-conditioning--amp--p.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Eric Gaumer</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--large-scale-data-conditioning--amp--p.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Large Scale Data Conditioning &amp;amp; Processing with Stackless Python and
+Pypes&lt;/p&gt;
+&lt;p&gt;Presented by Eric Gaumer&lt;/p&gt;
+&lt;p&gt;Pypes is a component oriented framework for designing dataflow
+applications. It uses Stackless Python to model components as
+computational entities that operate by sending and receiving messages.
+Components are designed to process streams of data modeled as a series
+of messages which are exchanged asynchronously. Data streams are
+initiated over an asynchronous REST interface.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There's been some recent momentum around data flow programming with a
+number of new frameworks having been released. This new found interest
+is due largely in part to the increasing amount of data being produced
+and consumed by applications. MapReduce has become a general topic of
+discussion for analytics over large data sets but it's increasingly
+evident that it's not a panacea.&lt;/p&gt;
+&lt;p&gt;Simple batch processing tools like MapReduce and Hadoop are just not
+powerful enough in any one of the dimensions of the big data space that
+really matters. One particular area where MapReduce falls short is in
+near real-time search. It used to be common to run batch processing jobs
+on a nightly basis which would index the days events, making them
+searchable.&lt;/p&gt;
+&lt;p&gt;Given today's social dynamics, people have come to expect instant access
+to data as opposed to a daily digest. Batch oriented semantics are being
+superseded by event driven architectures that act on live, real-time
+streams of data. This shift in paradigm has sparked new interest in
+dataflow concepts.&lt;/p&gt;
+&lt;p&gt;Dataflow frameworks promote the data to become the main concept behind
+any program. It becomes a matter of &amp;quot;data-flow&amp;quot; over &amp;quot;control-flow&amp;quot;
+where processes are just the way data is created, manipulated and
+destroyed. This concept is well represented in the Unix operating system
+which pipes data between small single-purpose tools to produce more
+sophisticated applications.&lt;/p&gt;
+&lt;p&gt;Pypes is a dataflow framework that leverages Stackless Python to model
+processes as black box operations that communicate by sending and
+receiving messages. These processes are naturally component oriented
+allowing them to be connected in different ways to form new
+applications. Components are inherently stateless making parallel
+processing relatively simple. Because a component is an abstraction of a
+Stackless tasklet (true coroutines), expensive setups such as loading
+machine learning models are done once during initialization and can then
+be used throughout the life of the component. This is in contrast to
+MapReduce frameworks that typically incur this overhead each time the
+map function is called or try to manage some sort of global state.&lt;/p&gt;
+&lt;p&gt;One aspect that differentiates Pypes from other dataflow frameworks is
+its &amp;quot;push&amp;quot; model. Unlike generator based solutions which pull data
+through the system, Pypes provides a RESTful interface that allows data
+to be pushed in. This allows Pypes to sit more natural as an event
+driven middleware component in the context of a larger architecture. A
+data push model also simplifies scalability since an entire cluster of
+nodes can be setup behind a load balancer which will then automatically
+partition the incoming data stream. Generator based &amp;quot;pull models&amp;quot; cannot
+easily partition data without somehow coordinating access to the data
+which involves global state.&lt;/p&gt;
+&lt;p&gt;Pypes was designed to be a highly scalable, event driven, dataflow
+scheduling and execution environment. Writing your own components is
+simple and Pypes provides Paste templates for creating new projects.
+Components are packaged as Python eggs and discovered automatically.
+They can be wired together using a visual editor that runs in any HTML5
+compliant browser. Pypes supports Directed Acyclic Graphs and data
+streams are modeled as a series of JSON (dict) packets which support
+meta-data at both the packet level and the field level.&lt;/p&gt;
+&lt;p&gt;Pypes also leverages the Python multiprocessing module to scale up. Data
+arriving through the REST interface on any given node will be
+distributed across parallel instances of the graph running on different
+cores/CPUs. Data submission is completely asynchronous.&lt;/p&gt;
+&lt;p&gt;This talk will provide a gentle introduction to the Pypes architecture
+and design.&lt;/p&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Brief intro to Stackless Python (benefits it provides)&lt;/li&gt;
+&lt;li&gt;Control-Flow vs Data-Flow&lt;/li&gt;
+&lt;li&gt;Preemptive vs Cooperative Scheduling&lt;/li&gt;
+&lt;li&gt;The Topological Scheduler&lt;/li&gt;
+&lt;li&gt;The REST API (Submitting Data - Asynchronous Web Service)&lt;/li&gt;
+&lt;li&gt;Packet API: A unified data model with meta-data support&lt;/li&gt;
+&lt;li&gt;Writing Custom Components - Paste templates and pluggable eggs&lt;/li&gt;
+&lt;li&gt;Scale up - multiprocessing support&lt;/li&gt;
+&lt;li&gt;Scale out - cloud friendly&lt;/li&gt;
+&lt;li&gt;Questions&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="pycon"></category><category term="pycon2011"></category><category term="pypes"></category><category term="stackless"></category></entry></feed>

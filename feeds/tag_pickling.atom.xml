@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_pickling.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2011-07-07T00:00:00+00:00</updated><entry><title>Advanced Pickling with Stackless Python and sPickle</title><link href="https://pyvideo.org/europython-2011/advanced-pickling-with-stackless-python-and-spick.html" rel="alternate"></link><published>2011-07-07T00:00:00+00:00</published><updated>2011-07-07T00:00:00+00:00</updated><author><name>Anselm Kruis</name></author><id>tag:pyvideo.org,2011-07-07:europython-2011/advanced-pickling-with-stackless-python-and-spick.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Anselm Kruis - 24 June 2011 in &amp;quot;Track Tagliatelle &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Stackless Python supports pickling of a wider range of types than
+conventional C-Python, including stack frames and code objects. On this
+basis it is possible to extend further the pickle.Pickler class in order
+to serialise classes, modules, packages up to certain limits. The
+&lt;a class="reference external" href="http://pypi.python.org/pypi/sPickle"&gt;sPickle package&lt;/a&gt; provides such
+an extended Pickler. The code was developed as part of a commercial
+project and recently released as free software by science + computing
+ag. Currently it requires Stackless Python 2.7.&lt;/p&gt;
+&lt;p&gt;In my presentation, I'll first demonstrate some applications of the
+sPickle package including serialisation of modules and executing parts
+of a program on a remote computer using RPyC and Paramiko.&lt;/p&gt;
+&lt;p&gt;In the second part of my speech, I'll give some insight in the internal
+operations of sPickle and the lessons learned during its development.
+Extending the Pickler showed to be like opening a can of worms. You have
+take care of many odds and ends to get it right. I'll point out some
+weak points in the implementation of the conventional pickling code and
+I'll also show the limits of the current sPickle implementation.&lt;/p&gt;
+</summary><category term="packages"></category><category term="pickling"></category><category term="science"></category><category term="stackless"></category></entry><entry><title>PyCon 2009: Plenary: Morning Lightning Talks</title><link href="https://pyvideo.org/pycon-us-2009/pycon-2009--plenary--morning-lightning-talks.html" rel="alternate"></link><published>2009-02-17T00:00:00+00:00</published><updated>2009-02-17T00:00:00+00:00</updated><author><name>Adam Fast</name></author><id>tag:pyvideo.org,2009-02-17:pycon-us-2009/pycon-2009--plenary--morning-lightning-talks.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Plenary: Morning Lightning Talks covering GeoDjango, Zope, Launchpad,
+JSOT, AppEngine, StackOverflow, Miro, zc.buildout and RPM, ham radio,
+Plyne, GozerBot, picking tools, and stop watch.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;(00:20) GeoDjango - Justin Bronn&lt;/li&gt;
+&lt;li&gt;(05:50) What's up with Zope - Martijn Faassen&lt;/li&gt;
+&lt;li&gt;(10:55) Scripting Launchpad - Paul Hummer&lt;/li&gt;
+&lt;li&gt;(13:50) JSQT - ?&lt;/li&gt;
+&lt;li&gt;(16:10) Python, AppEngine, and Informatics - Charles Severance&lt;/li&gt;
+&lt;li&gt;(20:55) an online game called stackoverflow - John Mulder&lt;/li&gt;
+&lt;li&gt;(25:25) Miro - Chris Webber&lt;/li&gt;
+&lt;li&gt;(28:40) Deploying applications with zc.buildout and RPM - Jim Fulton&lt;/li&gt;
+&lt;li&gt;(34:10) Ham radio and Python - Adam Fast&lt;/li&gt;
+&lt;li&gt;(38:30) Plone + Pylons = Plyne - Roberto Allende&lt;/li&gt;
+&lt;li&gt;(41:35) GozerBot - John Hampton&lt;/li&gt;
+&lt;li&gt;(44:25) Software Engineering and the Pickling Tools - Rich Saunders&lt;/li&gt;
+&lt;li&gt;(48:45) Talks about the stop watch&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="lightning talks"></category><category term="appengine"></category><category term="geodjango"></category><category term="informatics"></category><category term="jsqt"></category><category term="launchpad"></category><category term="miro"></category><category term="pickling"></category><category term="plone"></category><category term="plyne"></category><category term="pycon"></category><category term="pycon2009"></category><category term="pylons"></category><category term="stack overflow"></category><category term="zc.buildout"></category><category term="zope"></category></entry><entry><title>Everything You Wanted To Know About Pickling, But Were Afraid To Ask!</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--everything-you-wanted-to-know-about-p.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Richard T. Saunders</name></author><id>tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--everything-you-wanted-to-know-about-p.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Everything You Wanted To Know About Pickling, But Were Afraid To Ask!&lt;/p&gt;
+&lt;p&gt;Presented by Richard T. Saunders&lt;/p&gt;
+&lt;p&gt;Serializing data structures (in Python-speak &amp;quot;pickling&amp;quot;) to save to
+disk/socket is an important tool for the programmer: We will discuss how
+the pickling protocols (0,1,2, and 3) work as well as real-world issues
+(gotchas, backwards-compatibility, etc). We will concentrate on the
+basics of this stack-based protocol: what it looks like, how to
+encode/decode, speeds of different implementations.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The Pickling Protocols are a fundamental tool for saving state.&lt;/p&gt;
+&lt;p&gt;We will discuss the differences between text serialization and Python
+pickling (as well as marshalling, and simple bit-blitting).&lt;/p&gt;
+&lt;p&gt;We will spend a little time discussing history: why there is a cPickle
+and pickle module in 2.x and only pickle in 3.x., and why there are 4
+different protocols: 0,1,2 and 3.&lt;/p&gt;
+&lt;p&gt;We will then dive right in and look at how the stack-based protocol
+works. We will concentrate on the basics (the stack-based machine), as
+all the protocols adhere to this basic model, but tend to discuss the
+more recent protocols and their differences. We will also discuss how
+the memoization scheme works.&lt;/p&gt;
+&lt;p&gt;We will show some simple examples and then build to more complex
+examples.&lt;/p&gt;
+&lt;p&gt;We will also discuss the relative speeds: the different protocols (text,
+0,1,2,3) and the different implementations (Python, Boost,
+PicklingTools, IronPython?, PyPy? Unladen Swallow?).&lt;/p&gt;
+&lt;p&gt;We will end with some real-world advice and some gotchas to watch out
+for (32-bit vs. 64-bit, different versions of Python serialize
+differently, etc.).&lt;/p&gt;
+</summary><category term="pickling"></category><category term="pycon"></category><category term="pycon2011"></category><category term="serialization"></category></entry></feed>

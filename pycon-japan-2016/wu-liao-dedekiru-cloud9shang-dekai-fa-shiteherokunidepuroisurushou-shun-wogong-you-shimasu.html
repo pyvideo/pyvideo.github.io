@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; 無料でできる、Cloud9上で開発してHerokuにデプロイする手順を共有します</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-japan-2016.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-japan-2016.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="無料でできる、Cloud9上で開発してHerokuにデプロイする手順を共有します" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-japan-2016/wu-liao-dedekiru-cloud9shang-dekai-fa-shiteherokunidepuroisurushou-shun-wogong-you-shimasu.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/ie1CyWS31X4/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/ie1CyWS31X4/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-japan-2016/wu-liao-dedekiru-cloud9shang-dekai-fa-shiteherokunidepuroisurushou-shun-wogong-you-shimasu.html" rel="bookmark"
+         title="Permalink to 無料でできる、Cloud9上で開発してHerokuにデプロイする手順を共有します">無料でできる、Cloud9上で開発してHerokuにデプロイする手順を共有します
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2016-09-21T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Wed 21 September 2016
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/takeshi-sugiyama.html">Takeshi Sugiyama</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ie1CyWS31X4" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Pythonを勉強してWebアプリを作ってみたはいいが、サーバーがないのでスマホや会社のPCから使えるようなアプリにはできない、という初心者は多いと思います。そこでこの発表ではHerokuとCloud9というクラウドサービスを無料枠の範囲で使って、簡単な蔵書管理をおこなうWebアプリを立ち上げる方法を順を追って説明します。使用するのはPython3,django,PostgreSQLです。</p>
+<div class="section" id="abstract">
+<h4>Abstract</h4>
+<div class="section" id="web">
+<h5>せっかく自分で書いたWebアプリ、スマホからも使いたいですよね</h5>
+<p>Pythonを始めて半年くらい、いろいろ勉強した結果、自分で簡単なWebアプリが書けるようになってくると、自分のパソコン上だけでなく、スマホや会社のパソコンからもアクセスしたくなってきます。例えば蔵書管理アプリ。自宅の蔵書をデータベース化したら、ブックオフの店頭で「あれ、この本この前買ったんだっけ？」みたいになったときに、さっとスマホで検索したいですよね。 でも自宅のPCに外出先からアクセスできる環境や、インターネット上に自作アプリを載せられるサーバーを持っている人は多くないです。 そこで気軽に無料に始められるPaaS(Platform as a Service), Herokuです。</p>
+<p>私の場合、10年以上昔にPHP+PostgreSQLでゴリゴリ書いた蔵書管理アプリがあまりに使いにくい（特にiPhoneから開いたときのレイアウトがかなりいけてない）ので、Python3+django+PostgreSQLで書き直して、もっと使いやすくてかっこいいアプリにしたい！というのがきっかけでした。</p>
+</div>
+<div class="section" id="pc">
+<h5>思いついたことをちょっと試してみたいけど、今日はPC持ってない</h5>
+<p>私は趣味のプログラマで、平日はがっつり残業ありの事務系サラリーマンなので、プライベートのパソコンを毎日持ち歩いたりはしないです。 でも週末は週末で家族サービスで忙しかったりして、なかなか時間がとれないので会社の昼休みなんかに、ちょっとデバッグができたらいいな、と思うことがよくあります。 そこで気軽に無料で始められるクラウド上の開発環境、Cloud9です。 ご存知ない方のために軽く補足しておくと、Cloud9はクラウド上に自分専用のワークスペースを作って、PyCharmみたいな感じのIDEを使って開発作業ができるクラウドサービスです。無料の場合、CPU1コア/メモリ1GB/HDD5GBで非公開のワークスペースは1つだけという制約がありますが、蔵書管理くらいの軽いアプリなら全然問題ありません。</p>
+</div>
+<div class="section" id="herokucloud9">
+<h5>HerokuやCloud9って、便利らしいけどちょっとハードルが・・・</h5>
+<p>HerokuもCloud9も、個人で趣味の範囲で使う分には無料サービスの範囲で十分楽しめるのが最大の魅力です。 でも公式サイトはヘルプもドキュメントも英語だし、なかなかとっつきにくいですよね。</p>
+<p>そこで日本語の情報を探してネット上をさまようわけですが、知りたいことがずばり書いてあることはめったにありません。 Herokuは当初Ruby on Rails向けに開発されたこともあり、Rails系の記事が多くPython3系の情報を選び出すだけでもなかなか苦労します。 Cloud9のほうは「便利だよ」という紹介記事は多いのですが、具体的にCloud9を使ったPython3系の開発についての情報となると、これまたなかなか苦労します。</p>
+<p>結局は英語の公式ドキュメントを調べたりStack Overflowの質問と回答を追っかけてみたりしながら試行錯誤でかなりの時間を費やすことになります。</p>
+</div>
+<div class="section" id="cloud9python3-djangoheroku">
+<h5>Cloud9で開発したPython3+djangoのアプリをHerokuにデプロイする手順を共有します</h5>
+<p>私が自作の蔵書管理アプリをHerokuにあげた経験を通して会得した、Cloud9上でPython3+django+PostgreSQLのアプリの開発環境を構築する手順と、Cloud9からHerokuにスムースにデプロイする手順を共有します。</p>
+<p>文字にするとたったこれだけのことですが、いくつもはまりポイントがあります。</p>
+<ul class="simple">
+<li>Cloud9でのPythonはデフォルトでは2.7なのでワークスペースを作ったあとで3.5に切り替える必要がある</li>
+<li>Cloud9のPythonを3.5に切り替えると、ワークスペースを作ったときに一緒に入れていたはずのdjangoは再インストールが必要</li>
+<li>Herokuが公式にオススメしているdjangoの設定があるが、デフォルトで構築されるdjangoの設定とは異なるので調整が必要</li>
+<li>djangoはデフォルトではSQLiteだが、Heroku上ではSQLiteのテーブルは消えてしまうことがあるのでPostgreSQLにすることが必要</li>
+<li>Cloud9上でPostgreSQLのデータベース初期化が一筋縄ではいかない</li>
+</ul>
+<p>これらのはまりポイントをどうやって切り抜けるかを、発表の中でできるだけわかりやすく説明する予定です。</p>
+</div>
+</div>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-japan-2016.html">PyCon Japan 2016</a>
+      </li>
+        <li>Language: Japanese</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=ie1CyWS31X4" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://speakerdeck.com/soogie/wu-liao-dedekiru-cloud9shang-dekai-fa-siteherokunidepuroisurushou-shun-wogong-you-simasu">
+https://speakerdeck.com/soogie/wu-liao-dedekiru-cloud9shang-dekai-fa-siteherokunidepuroisurushou-...                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-jp-2016/videos/2_05-無料でできるcloud9上で開発してherokuにデプロイする手順を共有します.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

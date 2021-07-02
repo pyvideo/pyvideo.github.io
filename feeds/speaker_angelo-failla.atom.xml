@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_angelo-failla.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2016-08-05T00:00:00+00:00</updated><entry><title>FBTFTP: Facebook's open source python3 framework for dynamic TFTP servers.</title><link href="https://pyvideo.org/europython-2016/fbtftp-facebooks-open-source-python3-framework-for-dynamic-tftp-servers.html" rel="alternate"></link><published>2016-08-05T00:00:00+00:00</published><updated>2016-08-05T00:00:00+00:00</updated><author><name>Angelo Failla</name></author><id>tag:pyvideo.org,2016-08-05:europython-2016/fbtftp-facebooks-open-source-python3-framework-for-dynamic-tftp-servers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Angelo Failla - FBTFTP: Facebook's open source python3 framework for dynamic TFTP servers.
+[EuroPython 2016]
+[18 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/fbtftp-facebooks-python3-framework-for-tftp-servers"&gt;https://ep2016.europython.eu//conference/talks/fbtftp-facebooks-python3-framework-for-tftp-servers&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;FBTFTP: facebook's opensource framework for creating dynamic TFTP
+servers in Python3.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;TFTP was first standardized in '81 (same year I was born!) and one of
+its primary uses is in the early stage of network booting. TFTP is
+very simple to implement, and one of the reasons it is still in use is
+that its small footprint allows engineers to fit the code into very
+low resource, single board computers, system-on-a-chip implementations
+and mainboard chipsets, in the case of modern hardware.&lt;/p&gt;
+&lt;p&gt;It is therefore a crucial protocol deployed in almost every data
+center environment. It is used, together with DHCP, to chain load
+Network Boot Programs (NBPs),  like Grub2 and iPXE. They allow
+machines to bootstrap themselves and install operating systems off of
+the network, downloading kernels and initrds via HTTP and starting
+them up.&lt;/p&gt;
+&lt;p&gt;At Facebook, we have been using the standard in.tftpd daemon for
+years, however, we started to reach its limitations.
+Limitations that were partially due to our scale and the way TFTP was
+deployed in our infrastructure, but also to the protocol
+specifications based on requirements from the 80's.&lt;/p&gt;
+&lt;p&gt;To address those limitations we ended up writing our own framework for
+creating dynamic TFTP servers in Python3, and we decided to open
+source it.&lt;/p&gt;
+&lt;p&gt;I will take you thru the framework and the features it offers. I'll
+discuss the specific problems that motivated us to create it. We will
+look at practical examples of how touse it, along with a little code,
+to build your own server that are tailored to your own infra needs.&lt;/p&gt;
+</summary></entry></feed>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_david-cournapeau.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2013-11-30T00:00:00+00:00</updated><entry><title>Depsolver, une librairie pour la gestion de dépendences</title><link href="https://pyvideo.org/pycon-fr-2013/depsolver-une-librairie-pour-la-gestion-de-depen.html" rel="alternate"></link><published>2013-11-30T00:00:00+00:00</published><updated>2013-11-30T00:00:00+00:00</updated><author><name>David Cournapeau</name></author><id>tag:pyvideo.org,2013-11-30:pycon-fr-2013/depsolver-une-librairie-pour-la-gestion-de-depen.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les outils &amp;quot;easy_install/pip&amp;quot; sont devenus populaires en partie grâce à
+l'incorporation d'un système de dépendances. Depsolver est une librairie
+conçue pour résoudre les problèmes de dépendance plus complexes que pip
+et easy_install ne peuvent pas résoudre. La librairie est pure python,
+et conçue pour être réutilisable par de futures systèmes d'installations
+(python ou autre).&lt;/p&gt;
+</summary></entry><entry><title>Vagrant, packer et ruby pour automatiser des builds complexes</title><link href="https://pyvideo.org/pycon-fr-2013/vagrant-packer-et-ruby-pour-automatiser-des-buil.html" rel="alternate"></link><published>2013-11-30T00:00:00+00:00</published><updated>2013-11-30T00:00:00+00:00</updated><author><name>David Cournapeau</name></author><id>tag:pyvideo.org,2013-11-30:pycon-fr-2013/vagrant-packer-et-ruby-pour-automatiser-des-buil.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Vagrant, packer et un peu de ruby pour automatiser des builds complexes.&lt;/p&gt;
+&lt;p&gt;Introduction&lt;/p&gt;
+&lt;p&gt;Tout le monde n'a pas la chance de ne dépendre que de paquets 100 %
+python. Python est devenu un outil de choix pour le calcul numérique,
+mais des paquets tels que numpy, scipy ou scikit-learn dépendent de
+librairies C, C++ et même Fortran qui dépendent fortement des
+plateformes.&lt;/p&gt;
+&lt;p&gt;J'aimerais présenter les outils packer et vagrant comme une solution
+pour produire des builds 100 % reproductibles. S'appuyant sur la
+virtualisation, ils permettent d'appliquer les principes de reproduction
+non seulement pour unix, mais aussi os x et même windows.&lt;/p&gt;
+&lt;p&gt;Le concept de provisionnement, et son application au problème de
+&amp;quot;packaging&amp;quot;&lt;/p&gt;
+&lt;p&gt;Cette section présentera tout d'abord la nécessité de reproduction pour
+la compilation, et justifiera pourquoi les VM sont les outils les plus
+adéquats aujourd'hui si l'on veut supporter toutes les plateformes
+usuelles, en particulier windows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;architectures &amp;quot;3-tier&amp;quot; pour le provisionnement&lt;/li&gt;
+&lt;li&gt;outils disponibles pour chacune des 3 couches&lt;/li&gt;
+&lt;li&gt;présentation de vagrant et packer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;vagrant, un outil simple pour la réutilisation de VM&lt;/p&gt;
+&lt;p&gt;Cette section commencera par illustrer les problèmes usuels du partage
+des VM entre développeurs, et montrera comment vagrant peut résoudre ces
+problèmes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;le provisionnement comme solution au manque de transparence usuel
+avec les VMs&lt;/li&gt;
+&lt;li&gt;flexibilité et traçabilité grâce à la combinaison chef/puppet/salt +
+vagrant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;packer, un complément à vagrant&lt;/p&gt;
+&lt;p&gt;Vagrant suppose l'existence de 'base box', qui sont des images d'OS avec
+juste ce qu'il faut pour &amp;quot;bootstrapper&amp;quot; la suite du provisionnement.
+Packer est un outil qui permet de créer ses propres images:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;illustration du fonctionnement de packer&lt;/li&gt;
+&lt;li&gt;cibler plusieurs technologies de virtualisation à partir d' un même
+template: virtualbox, vmware, mais aussi ec2.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example pour la compilation de paquets 'wheel' pour numpy/scipy&lt;/p&gt;
+&lt;p&gt;Cette partie sera plus didactique, et basé sur un exemple réel pour
+compiler un wheel de numpy et scipy sur windows. L'exemple utilisera à
+la fois vagrant, packer et chef.&lt;/p&gt;
+</summary></entry></feed>

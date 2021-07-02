@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_gijs-molenaar.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-10-22T00:00:00+00:00</updated><entry><title>The Radio astronomical TRAnsient detection Pipeline (TRAP)</title><link href="https://pyvideo.org/euroscipy-2014/the-radio-astronomical-transient-detection-pipeli.html" rel="alternate"></link><published>2014-10-22T00:00:00+00:00</published><updated>2014-10-22T00:00:00+00:00</updated><author><name>Gijs Molenaar</name></author><id>tag:pyvideo.org,2014-10-22:euroscipy-2014/the-radio-astronomical-transient-detection-pipeli.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;LOFAR, the Low Frequency Array, is an innovative new radio telescope in
+the Netherlands, which will continuously monitor the radio sky. The
+study of transient sources is one of the key science projects of LOFAR.
+Under this remit come all time-variable astronomical radio sources,
+including pulsars, gamma-ray bursts, X-ray binaries, radio supernovae,
+flare stars, and even exo-planets. With its continuous monitoring of a
+large area of sky, it is hoped that LOFAR will detect many new transient
+events, and provide alerts to the international community for follow-up
+observations at other wavelengths.&lt;/p&gt;
+&lt;p&gt;To detect and analyse transient sources we’ve created a software
+pipeline named TRAP. The TRAP is almost completely written in Python. In
+short the TRAP consists of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Source detection&lt;/li&gt;
+&lt;li&gt;Storing to database&lt;/li&gt;
+&lt;li&gt;Association in time and frequency (in database)&lt;/li&gt;
+&lt;li&gt;Visualising results (webinterface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since the datarates in the pipeline are high, key in the design of our
+pipeline is that we move most calculations to the database. This implies
+complex and math heavy queries. To assist in managing these queries we
+use SQLAlchemy. TRAP can be used on various database backends like
+PostgreSQL, but also the less known MonetDB. MonetDB is a column store
+database which is believed to outperform traditional SQL databases on
+huge datasets. To interact with MonetDB we developed a Python API,
+SQLALchemy dialect and Django backend. For visualisation of the results
+we’ve created an interactive browser based web interface based on
+Django, bootstrap and highcharts. For parallising the image processing
+we use Celery. In my talk i’ll explain why we use these frameworks and
+dive in the internals of our pipeline.&lt;/p&gt;
+&lt;p&gt;Target audience is people that are interested in how to build a
+scientific processing pipline using off the shelf libraries.&lt;/p&gt;
+</summary></entry></feed>

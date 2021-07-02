@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_failuresmistakes.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2019-07-12T00:00:00+00:00</updated><entry><title>Configuring uWSGI for Production: The defaults are all wrong</title><link href="https://pyvideo.org/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Peter Sperl</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Two years ago, we began migrating from a proprietary service framework
+to a WSGI-compliant one. We chose uWSGI as our host because of its
+performance and feature set. But, while powerful, uWSGI's defaults are
+driven by backward compatibility and are not ideal for new deployments.
+Powerful features can be overlooked due to the sheer magnitude of its
+feature set and spotty documentation. As we've scaled up the number of
+services hosted by uWSGI over the last year, we've had to tweak our
+standard configuration.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll present the base uWSGI configuration we use as a
+starting point for all services, as well as some tips to avoid known
+gotchas and provide a base level of defensiveness and high reliability.
+This base configuration makes use of several &amp;quot;no-cost&amp;quot; uWSGI features
+that help protect services from common, yet difficult to prevent issues
+-- some of which we discovered the hard way. We'll also talk about some
+programmatic uWSGI features which can be leveraged to improve
+reliability and improve outage response.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the topics we'll cover include:&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating memory leaks&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating stuck, hung, or infinitely looping processes&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing misconfigurations&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing wasted development effort&lt;/div&gt;
+&lt;div class="line"&gt;- Improving outage response&lt;/div&gt;
+&lt;/div&gt;
+</summary><category term="Best Practice"></category><category term="Distributed Systems"></category><category term="Microservices"></category><category term="Web Servers and MicroFWs"></category><category term="failures/mistakes"></category></entry><entry><title>Tools of the Trade: The Making of a Code Editor.</title><link href="https://pyvideo.org/europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Nicholas Tollervey</name></author><id>tag:pyvideo.org,2019-07-12:europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk tells the story of Mu, a native code editor written in Python
+(&lt;a class="reference external" href="https://codewith.mu/"&gt;https://codewith.mu/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;One Sunday afternoon I foolishly asked myself, &amp;quot;How hard can it be to
+write a simple code editor?&amp;quot; Several years later an international team
+of volunteers are still working on the project. We have had to address:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cross platform GUI development.&lt;/li&gt;
+&lt;li&gt;Cross platform packaging solutions for Python.&lt;/li&gt;
+&lt;li&gt;Creating an interactive visual debugger.&lt;/li&gt;
+&lt;li&gt;Integrating with iPython notebook.&lt;/li&gt;
+&lt;li&gt;Integrating with various IoT MicroPython devices.&lt;/li&gt;
+&lt;li&gt;Integrating with frameworks such as PyGame/PyGameZero and Flask.&lt;/li&gt;
+&lt;li&gt;Automating cross platform testing.&lt;/li&gt;
+&lt;li&gt;Researching and testing UX with a challenging user base.&lt;/li&gt;
+&lt;li&gt;Accessibility for all.&lt;/li&gt;
+&lt;li&gt;Internationalisation.&lt;/li&gt;
+&lt;li&gt;Creating an inclusive, welcoming and supportive community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will explain why Mu was created, how Mu was created and, most
+importantly, shares the decision making, technical research and
+implementation details of Mu in the hope others can learn from our
+mistakes, mis-steps and muck-ups.&lt;/p&gt;
+</summary><category term="Cross-Platform-Development"></category><category term="Development"></category><category term="Education"></category><category term="Packaging"></category><category term="failures/mistakes"></category></entry><entry><title>A Day Has Only 24±1 Hours</title><link href="https://pyvideo.org/europython-2019/a-day-has-only-24-1-hours.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Miroslav Šedivý</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/a-day-has-only-24-1-hours.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;On the last Sunday of October you may get “one more hour of sleep” but
+as well may spend much more time debugging code dealing with the time
+zones, daylight saving time shifts and datetime stuff in general.&lt;/p&gt;
+&lt;p&gt;We'll look at a few pitfalls you may encounter when working with
+datetimes in Python. We'll dissect the pytz library, explain why it
+contains over 500 individual time zones while focusing on the 63 entries
+in Europe. We'll also find the reason why pytz is not part of the
+standard Python, why it gets updated so often and why even that won't
+solve all your problems. Do you know what happens after 2021 when the EU
+stops DST switching?&lt;/p&gt;
+&lt;p&gt;Two centuries of short-sighted propaganda and long-term chaos in
+forty-five minutes. Maybe that will make you want to avoid time zones in
+your code altogether!&lt;/p&gt;
+</summary><category term="Best Practice"></category><category term="Community"></category><category term="Python general"></category><category term="failures/mistakes"></category></entry><entry><title>How Thinking in Python Made Me a Better Software Engineer</title><link href="https://pyvideo.org/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Johnny Dude</name></author><id>tag:pyvideo.org,2019-07-11:europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a key for
+rapid development and good engineering.&lt;/p&gt;
+&lt;p&gt;Thinking in a programming language affects the amount of information you
+need to keep in your working memory. It also affects the abstractions
+and tools that pop in your mind and then used in constructing solutions.&lt;/p&gt;
+&lt;p&gt;Let’s explore what it means to think in Python. Why Python allows you to
+focus on problem solving, while languages like c++ often distract your
+attention from the problem at hand.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some good and bad practices by examples while
+trying to consider the amount of effort needed to write it, read it, and
+talk about it with other team members.&lt;/p&gt;
+&lt;p&gt;Key Takeaways: Tips for speeding your work without compromising quality,
+and reasoning for using it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience should be comfortably familiar with the process of
+software development, and software problem solving, and experience
+using Python.&lt;/li&gt;
+&lt;/ul&gt;
+</summary><category term="Best Practice"></category><category term="Development"></category><category term="Software Design"></category><category term="failures/mistakes"></category></entry><entry><title>The dos and don'ts of task queues</title><link href="https://pyvideo.org/europython-2019/the-dos-and-donts-of-task-queues.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Petr Stehlík</name></author><id>tag:pyvideo.org,2019-07-10:europython-2019/the-dos-and-donts-of-task-queues.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;At Kiwi.com we heavily rely on task queues and asynchronous execution of
+code to process large amounts of requests coming to our back-ends. With
+the separation of our codebase to microservices, we can quickly try new
+tools and different approaches to process these large volumes of
+requests. The microservice we’ll be talking about is making unreliable
+slow 3rd party services reliable and asynchronous with a bit of business
+logic sprinkled on top of it. We’ll tell a failure story of ours but
+resulting in a valuable lesson.&lt;/p&gt;
+&lt;p&gt;Most of our services use Celery and it’s the go-to tool for new services
+as well but we wanted to be different with this new microservice. RQ is
+the next best choice for task queues and it is presented as simpler and
+more straightforward than Celery. That can definitely be true but after
+3 weeks of research, development and struggling we found out the
+unpleasant truth about being simple and making the right choices. We
+won’t talk about comparing the frameworks but rather about the approach
+on how to experiment with new things in your environment. After that,
+we’ll present our current setup which can take upon any number of
+tasks*. How we orchestrate the app and continuously integrate and
+deploy and what fun things await ahead of us in the development.&lt;/p&gt;
+&lt;p&gt;*Conditions may apply.&lt;/p&gt;
+</summary><category term="ASYNC / Concurrency"></category><category term="Architecture"></category><category term="Best Practice"></category><category term="Case Study"></category><category term="failures/mistakes"></category></entry></feed>

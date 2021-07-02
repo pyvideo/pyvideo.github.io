@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_mark-koh.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2017-10-07T00:00:00+00:00</updated><entry><title>Start Being Static with MyPy</title><link href="https://pyvideo.org/pygotham-2017/start-being-static-with-mypy.html" rel="alternate"></link><published>2017-10-07T00:00:00+00:00</published><updated>2017-10-07T00:00:00+00:00</updated><author><name>Mark Koh</name></author><id>tag:pyvideo.org,2017-10-07:pygotham-2017/start-being-static-with-mypy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python's native dynamic typing is one of the things that makes Python so fast and simple to work in.  However, when python code bases start to become large and have many contributors, they can start to become unmaintainable and error-prone.&lt;/p&gt;
+&lt;p&gt;MyPy is a static type-checking library that you can add to your python projects to check the Type Hints proposed in &lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0484/"&gt;PEP 484&lt;/a&gt;.  Static typing allows you to explicitly specify what types of objects your functions expect -- it looks like this:&lt;/p&gt;
+&lt;!-- code-block: python
+
+from typing import Iterator
+
+def fib(n: int) -&gt; Iterator[int]:
+    a, b = 0, 1
+    while a &lt; n:
+        yield a
+        a, b = b, a + b --&gt;
+&lt;p&gt;MyPy is a project blessed (and being worked on) by Guido himself, and is the key to making Python robust enough for enterprise production code bases.  This talk will cover the following topics:
+- The benefits of static type checking in Python
+- A crash course on adding Type Hints and MyPy to your code base
+- A demo for adding MyPy type checking to your CI/CD pipeline
+- Learnings from adding static type checking to systems at Spotify&amp;amp;trade;&lt;/p&gt;
+</summary></entry></feed>

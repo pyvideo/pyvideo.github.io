@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Intro to scikit-learn (II), SciPy2013 Tutorial, Part 2 of 2</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2013.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_scipy-2013.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Intro to scikit-learn (II), SciPy2013 Tutorial, Part 2 of 2" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/scipy-2013/intro-to-scikit-learn-ii-scipy2013-tutorial-p-3.html" />
+    <meta property="og:image" content="https://i1.ytimg.com/vi/kTLyp10FD60/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i1.ytimg.com/vi/kTLyp10FD60/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="Tech" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/scipy-2013/intro-to-scikit-learn-ii-scipy2013-tutorial-p-3.html" rel="bookmark"
+         title="Permalink to Intro to scikit-learn (II), SciPy2013 Tutorial, Part 2 of 2">Intro to scikit-learn (II), SciPy2013 Tutorial, Part 2 of 2
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2013-06-27T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 27 June 2013
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/unknown.html">Unknown</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kTLyp10FD60" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Summary</h3><p>Presenters: Gaël Varoquaux, Jake Vanderplas, Olivier Grisel</p>
+<p>Description</p>
+<p>Machine Learning is the branch of computer science concerned with the
+development of algorithms which can learn from previously-seen data in
+order to make predictions about future data, and has become an important
+part of research in many scientific fields. This set of tutorials will
+introduce the basics of machine learning, and how these learning tasks
+can be accomplished using Scikit-Learn, a machine learning library
+written in Python and built on NumPy, SciPy, and Matplotlib. By the end
+of the tutorials, participants will be poised to take advantage of
+Scikit-learn's wide variety of machine learning algorithms to explore
+their own data sets. The tutorial will comprise two sessions, Session I
+in the morning (intermediate track), and Session II in the afternoon
+(advanced track). Participants are free to attend either one or both,
+but to get the most out of the material, we encourage those attending in
+the afternoon to attend in the morning as well.</p>
+<p>Session II will build upon Session I, and assume familiarity with the
+concepts covered there. The goals of Session II are to introduce more
+involved algorithms and techniques which are vital for successfully
+applying machine learning in practice. It will cover cross-validation
+and hyperparameter optimization, unsupervised algorithms, pipelines, and
+go into depth on a few extremely powerful learning algorithms available
+in Scikit-learn: Support Vector Machines, Random Forests, and Sparse
+Models. We will finish with an extended exercise applying scikit-learn
+to a real-world problem.</p>
+<p>Outline</p>
+<p>Tutorial 2 (advanced track)</p>
+<p>0:00 - 0:30 -- Model validation and testing Bias, Variance,
+Over-fitting, Under-fitting Using validation curves &amp; learning to
+improve your model Exercise: Tuning a random forest for the digits data
+0:30 - 1:30 -- In depth with a few learners SVMs and kernels Trees and
+forests Sparse and non-sparse linear models 1:30 - 2:00 -- Unsupervised
+Learning Example of Dimensionality Reduction: hand-written digits
+Example of Clustering: Olivetti Faces 2:00 - 2:15 -- Pipelining learners
+Examples of unsupervised data reduction followed by supervised learning.
+2:15 - 2:30 -- Break (possibly in the middle of the previous section)
+2:30 - 3:00 -- Learning on big data Online learning: MiniBatchKmeans
+Stochastic Gradient Descent for linear models Data-reducing transforms:
+random-projections 3:00 - 4:00 -- Parallel Machine Learning with IPython
+IPython.parallel, a short primer Parallel Model Assessment and Selection
+Running a cluster on the EC2 cloud using StarCluster</p>
+<p><a class="reference external" href="https://github.com/jakevdp/sklearn_scipy2013">https://github.com/jakevdp/sklearn_scipy2013</a></p>
+<p>Required Packages</p>
+<p>This tutorial will use Python 2.6 / 2.7, and require recent versions of
+numpy (version 1.5+), scipy (version 0.10+), matplotlib (version 1.1+),
+scikit-learn (version 0.13.1+), and IPython (version 0.13.1+) with
+notebook support. The final requirement is particularly important:
+participants should be able to run IPython notebook and create &amp;
+manipulate notebooks in their web browser. The easiest way to install
+these requirements is to use a packaged distribution: we recommend
+Anaconda CE, a free package provided by Continuum Analytics:
+<a class="reference external" href="http://continuum.io/downloads.html">http://continuum.io/downloads.html</a> or the Enthought Python Distribution:
+<a class="reference external" href="http://www.enthought.com/products/epd_free.php">http://www.enthought.com/products/epd_free.php</a></p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/scipy-2013.html">SciPy 2013</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=kTLyp10FD60" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/tech/">Tech</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="http://continuum.io/downloads.html">
+http://continuum.io/downloads.html                </a></li><li><a href="http://www.enthought.com/products/epd\_free.php">
+http://www.enthought.com/products/epd\_free.php                </a></li><li><a href="https://github.com/jakevdp/sklearn\_scipy2013">
+https://github.com/jakevdp/sklearn\_scipy2013                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/scipy-2013/videos/intro-to-scikit-learn-ii-scipy2013-tutorial-p-3.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

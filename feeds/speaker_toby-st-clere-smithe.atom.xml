@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_toby-st-clere-smithe.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2014-07-09T00:00:00+00:00</updated><entry><title>PyViennaCL: Very Easy GPGPU Linear Algebra Part 1</title><link href="https://pyvideo.org/scipy-2014/pyviennacl-very-easy-gpgpu-linear-algebra-part-1.html" rel="alternate"></link><published>2014-07-09T00:00:00+00:00</published><updated>2014-07-09T00:00:00+00:00</updated><author><name>Toby St Clere Smithe</name></author><id>tag:pyvideo.org,2014-07-09:scipy-2014/pyviennacl-very-easy-gpgpu-linear-algebra-part-1.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PyViennaCL aims to make powerful GPGPU scientific computing really
+transparently easy, especially for users already using NumPy for
+representing matrices, by harnessing the ViennaCL linear algebra and
+numerical computation library for GPGPU and heterogeneous systems. In
+this talk, I will discuss PyViennaCL's mathematical features,
+computational architecture, and current developments.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ViennaCL provides a BLAS-like interface to a set of OpenCL, CUDA and
+OpenMP compute kernels for linear algebra operations, such as dense and
+sparse matrix products, direct and iterative solvers, preconditioners.
+At the C++ API level, ViennaCL uses templates to represent a
+mathematical expression graph, for which it then generates an
+appropriate compute kernel.&lt;/p&gt;
+&lt;p&gt;Interfacing with a C++ templating API from Python, for which users'
+expressions are expected to be set at compile time, poses a number of
+problems for the dynamic creation of objects and execution of arbitrary
+expressions. For the Python interface, we have a scheduler which takes
+an expression tree object constructed in Python (using Boost.Python),
+and then generates and dispatches the relevant kernel, using the
+relevant data types for the operands. Furthermore, so that users do not
+regularly incur expensive copying of matrices across slow system buses,
+PyViennaCL implements various caching mechanisms. Work is currently in
+progress to support multiple, heterogeneous and distributed platforms,
+and custom, user-supplied expression nodes, using PyOpenCL and PyCUDA.&lt;/p&gt;
+&lt;p&gt;To make these features approachable to users familiar with NumPy and
+SciPy, the PyViennaCL API attempts to be as similar to the NumPy API as
+possible, providing recognisable classes, methods, and attributes, and
+transparently converting operand and result types where these things are
+defined.&lt;/p&gt;
+&lt;p&gt;This talk will introduce PyViennaCL, covering in more detail the
+computational architecture described above, as well as these Python API
+features, and the power of upcoming work to extend the PyViennaCL
+scheduler and API to custom compute operations, by integrating with
+PyOpenCL and PyCUDA. In the process, I will provide some comparative
+benchmark results, to demonstrate the utility of this new work.&lt;/p&gt;
+</summary><category term="gpgpu"></category></entry></feed>

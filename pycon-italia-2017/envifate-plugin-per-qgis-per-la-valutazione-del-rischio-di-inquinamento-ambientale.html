@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; ENVIFATE: plugin per QGIS per la valutazione del rischio di inquinamento ambientale</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2017.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-italia-2017.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="ENVIFATE: plugin per QGIS per la valutazione del rischio di inquinamento ambientale" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-italia-2017/envifate-plugin-per-qgis-per-la-valutazione-del-rischio-di-inquinamento-ambientale.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/WUDf0yEHReY/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/WUDf0yEHReY/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+    <meta name="tags" content="risk-management" />
+    <meta name="tags" content="open-source" />
+    <meta name="tags" content="Python" />
+    <meta name="tags" content="matplotlib" />
+    <meta name="tags" content="environment" />
+    <meta name="tags" content="Qgis" />
+    <meta name="tags" content="gis" />
+    <meta name="tags" content="impact-assessment" />
+    <meta name="tags" content="gdal" />
+    <meta name="tags" content="pollution" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-italia-2017/envifate-plugin-per-qgis-per-la-valutazione-del-rischio-di-inquinamento-ambientale.html" rel="bookmark"
+         title="Permalink to ENVIFATE: plugin per QGIS per la valutazione del rischio di inquinamento ambientale">ENVIFATE: plugin per QGIS per la valutazione del rischio di inquinamento ambientale
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2017-04-07T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Fri 07 April 2017
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/francesco-geri.html">Francesco Geri</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WUDf0yEHReY" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Negli ultimi anni è cresciuto in maniera considerevole l’interesse per i
+fenomeni di inquinamento ambientale causati da sostanze tossiche e altre
+fonti di disturbo. La pericolosità di ciascuna di tali sostanze si
+manifesta laddove sia superata una certa soglia di concentrazione che la
+rende tossica. Per proteggere la salute pubblica e gli ecosistemi
+occorre mantenere le concentrazioni di tali inquinanti al di sotto di
+una soglia di sicurezza e risulta di particolare importanza essere in
+grado di prevedere in maniera sufficientemente attendibile le
+concentrazioni che si vengono a stabilire nei diversi comparti
+ambientali. In questo contesto, sia per le PA che per gli operatori
+privati, sta diventando sempre più importante poter disporre di
+strumenti semplici ma efficaci che consentano di effettuare analisi di
+screening tali da individuare le possibili criticità in quest’ambito. Il
+software ENVIFATE viene sviluppato nell’ambito di un progetto di ricerca
+ancora in corso finanziato al DICAM (Università di Trento) dalla Regione
+Veneto proprio per operare analisi di screening per valutare la
+possibilità di rischi di inquinamento ambientale nelle aree protette a
+seguito di pianificazione di potenziali sorgenti inquinanti. Il progetto
+ha previsto lo sviluppo di un’applicazione con i seguenti requisiti: i)
+open-source ii) multipiattaforma iii) user friendly iv) GIS oriented. Si
+è scelto di sviluppare una famiglia di plugin di QGIS, utilizzando un
+linguaggio python multipiattaforma e realizzando un modulo per ciascuna
+matrice ambientale considerata: fiumi, laghi, dispersione atmosferica,
+dispersione in falda, rumore. I plugin sono stati sviluppati a partire
+da una libreria di moduli lanciabili da linea di comando o da
+applicazioni di terze parti con un elevato livello di modularità e
+scalabilità. E’ così anche possibile concatenare i diversi moduli in
+flussi di dati personalizzati. Tutti i plugin forniscono risultati di
+tipo numerico e cartografico. In particolare i tool da linea di comando
+forniscono un risultato “statico”, ovvero collegato ad un particolare
+stato spaziale e temporale, mentre all’interno dei plugin il modulo
+viene reiterato nello spazio e nel tempo allo scopo di fornire mappe
+georiferite e risultati relazionati temporalmente, propedeutici alle
+diverse valutazioni ambientali. I futuri sviluppi del plugin ne
+estenderanno le funzionalità affinché verifichi quando gli effetti
+calcolati causino scostamenti significativi e misurabili dello status
+delle matrici ambientali in relazione a ciò che è tutelato. Questo in
+prima istanza rispetto agli habitat e alle specie della rete Natura 2000
+all’interno di valutazioni di incidenza, ma anche con la prospettiva di
+estendere tali analisi a VIA e VAS o ad una integrazione con i Life
+Cycle Inventories (LCI).</p>
+<p>Autori: Francesco Geri, Oscar Cainelli, Paolo Zatelli, Gianluca Salogni,
+Marco Ciolli</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-italia-2017.html">PyCon Italia 2017</a>
+      </li>
+        <li>Language: Italian</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=WUDf0yEHReY" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/risk-management/">risk-management</a>, <a href="https://pyvideo.org/tag/open-source/">open-source</a>, <a href="https://pyvideo.org/tag/python/">Python</a>, <a href="https://pyvideo.org/tag/matplotlib/">matplotlib</a>, <a href="https://pyvideo.org/tag/environment/">environment</a>, <a href="https://pyvideo.org/tag/qgis/">Qgis</a>, <a href="https://pyvideo.org/tag/gis/">gis</a>, <a href="https://pyvideo.org/tag/impact-assessment/">impact-assessment</a>, <a href="https://pyvideo.org/tag/gdal/">gdal</a>, <a href="https://pyvideo.org/tag/pollution/">pollution</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/master/pycon-italia-2017/videos/francesco-geri-envifate-plugin-per-qgis.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/master/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/master/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>
