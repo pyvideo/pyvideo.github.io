@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><atom:link href="https://pyvideo.org/feeds/speaker_max-lai.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 02 Oct 2021 00:00:00 +0000</lastBuildDate><item><title>我們如何在醫院打造即時醫療影像AI平台 – PyCon Taiwan 2020</title><link>https://pyvideo.org/pycon-taiwan-2020/wo-men-ru-he-zai-yi-yuan-da-zao-ji-shi-yi-liao-ying-xiang-aiping-tai-pycon-taiwan-2020.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;本場演講將以胸部X光腫瘤辨識應用為例，分享我們醫院如何利用 Python 相關技術開發「醫療影像標註系統」、「即時醫療影像辨識AI平台」的經驗。
+演講內容將會包含：
+- 醫學影像標註系統的設計考量：標註肺部腫瘤需要領域專家的參與，將分享如何設計一個流程及標註系統(Flask, Vue.js)以產生高品質的標註資料集。
+- 深度學習模型封裝及佈署：以 AI Model/API/Client 的架構(PyTorch, Flaskrestful api, docker)，讓資料科學家可以方便的佈署訓練好的 AI Model，並讓 AI 平台具備橫向擴展性
+- 即時胸部X光腫瘤AI平台：
+如何利用 micro service 架構串接 data pipeline 各個模組
+串接線上的X光影像PACKS系統：
+整合 APScheduler進行事件排程及觸發
+整合 PyDicom 進行影像檔案解析
+內容會比較著重於如何將深度學習模型包裝成線上服務的經驗，而不會探討深度學習的模型及訓練細節。&lt;/p&gt;
+&lt;p&gt;備註：建議聽眾朋友有一點機器學習背景（入門課程）與略有後端開發經驗（半年+）&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/maxcclai/pycontw2020-ai"&gt;https://www.slideshare.net/maxcclai/pycontw2020-ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Max Lai&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Taichung.py 組織者&lt;/li&gt;
+&lt;li&gt;專長是電腦視覺,機器學習與敏捷開發,業餘的時間也嘗試研究 Python 與 IoT 領域相關的 project.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Max Lai</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid>tag:pyvideo.org,2020-09-06:pycon-taiwan-2020/wo-men-ru-he-zai-yi-yuan-da-zao-ji-shi-yi-liao-ying-xiang-aiping-tai-pycon-taiwan-2020.html</guid></item><item><title>使用 Pytest 進行單元測試 – Max Lai (PyCon Taiwan 2021)</title><link>https://pyvideo.org/pycon-taiwan-2021/shi-yong-pytest-jin-xing-dan-yuan-ce-shi-max-lai-pycon-taiwan-2021.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 13:05-14:35&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;單元測試(Unit Test)是針對程式單元 (軟體設計的最小單位) 來進行正確性檢驗的測試工作，如果能在軟體開發工作流程中落實單元測試，將可以對程式碼品質發揮大大的提升作用。 當我們撰寫一個函式時，可以為它撰寫單元測試，以便驗證該程式單元是否能對於輸入資料進行正確的執行及回應。但在推動單測試的實務上，我們常常遇到要測試的程式碼需要從外部單元來取得所需要資料或是又呼叫了其它外部函式，而這些外部依賴只存在正式上線環境，導致程計師會回覆無法測試該單元。 在本工作坊中，我將介紹「單元測試的基本觀念」、「Pytest 測試框架」、「如何解除依賴」、「test code coverage」以及「Flask test client」，希望讓已經暸解 Python 語法的朋友能進一步了解如何進行單元測試。 適合參加的對象： * 暸解 Python 基本語法 * 有實作 Flask RESTful API 的經驗&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;分享內容預計包涵以下內容：&lt;/p&gt;
+&lt;p&gt;單元測試簡介
+何謂單元測試
+三種測試的出口驗證
+二種外部依賴
+Pytest quick start
+PyCharm Setup for Pytest
+第一個 unit test
+如何測試 exception 的狀況
+使用 Fixtures 來為單元測試作 setup/cleanup
+Parametrizing tests
+使用 Mock 模擬外部相關函式回傳的資料
+進階內容
+使用 PyTest &amp;amp; Flask test client 進行 API test
+使用 code coverage 來衡量測試品質
+一些好用的 Pytest plugin&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/maxcclai/pytest-pycon-tw-2021"&gt;https://www.slideshare.net/maxcclai/pytest-pycon-tw-2021&lt;/a&gt;
+HackMD: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2FHkwu8etMF"&gt;https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2FHkwu8etMF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Max Lai&lt;/p&gt;
+&lt;p&gt;Taichung.py 組織者 • 研究領域是電腦視覺,機器學習,Web程式開發,與敏捷軟體開發方法論.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Max Lai</dc:creator><pubDate>Sat, 02 Oct 2021 00:00:00 +0000</pubDate><guid>tag:pyvideo.org,2021-10-02:pycon-taiwan-2021/shi-yong-pytest-jin-xing-dan-yuan-ce-shi-max-lai-pycon-taiwan-2021.html</guid></item></channel></rss>

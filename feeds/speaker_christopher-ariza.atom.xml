@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_christopher-ariza.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-04-27T00:00:00+00:00</updated><entry><title>Employing NumPy's NPY Format for Faster-Than-Parquet DataFrame Serialization</title><link href="https://pyvideo.org/pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html" rel="alternate"></link><updated>2022-04-27T00:00:00+00:00</updated><author><name>Christopher Ariza</name></author><id>tag:pyvideo.org,2022-04-27:pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over 14 years ago the first NumPy Enhancement Proposal (NEP) defined the NPY format (a binary encoding of array data and metadata) and the NPZ format (zipped bundles of NPY files). Those same formats, extended in a custom NPZ packaged with JSON metadata, can be used in Python to create a stable DataFrame storage format that can materially out-perform Parquet read / write times in a wide range of contexts. Unlike Parquet, all characteristics of a DataFrame can be encoded and all NumPy dtypes are supported. Implemented in StaticFrame, this format can take advantage of an immutable data model to memory-map full DataFrames from un-zipped directories of NPY. Given wide-spread use of Parquet files in data science workflows, a faster-than-Parquet file format can significantly reduce compute costs.&lt;/p&gt;
+&lt;p&gt;I will begin this talk by introducing the challenge of serializing DataFrames, illustrating how nearly all stable encoding formats lack full support for all DataFrame characteristics. While the broadly-used Parquet format has been called a &amp;quot;gold standard&amp;quot; binary file format, its columnar representation will be shown to have limitations when used for encoding DataFrames.&lt;/p&gt;
+&lt;p&gt;I will show how the NPY format, combined with JSON metadata, can be used to create a custom NPZ file with significant performance and compatibility advantages compared to Parquet. The details of this encoding scheme will be explained.&lt;/p&gt;
+&lt;p&gt;I will close the talk by evaluating numerous read / write performance comparisons between Parquet (via Pandas) and NPZ (via StaticFrame), measured with a wide variety of DataFrame shapes and dtype compositions. I will share techniques used in implementing optimized Python routines for reading and writing NPY files, and demonstrate applications for memory-mapping complete DataFrames via the same NPY representation.&lt;/p&gt;
+</summary></entry><entry><title>StaticFrame: An Immutable Alternative to Pandas</title><link href="https://pyvideo.org/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html" rel="alternate"></link><updated>2018-10-23T00:00:00+00:00</updated><author><name>Christopher Ariza</name></author><id>tag:pyvideo.org,2018-10-23:pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;StaticFrame provides Pandas-like data structures that enforce
+immutability. StaticFrame narrows and refines Pandas-style interfaces,
+which, when combined with immutability, reduces opportunities for error.
+In addition, StaticFrame offers a range of new and powerful iterators
+for function application with built-in concurrency.&lt;/p&gt;
+</summary></entry><entry><title>Fitting Many Dimensions into One: The Promise of Hierarchical Indices for Data Beyond Two Dimensions</title><link href="https://pyvideo.org/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html" rel="alternate"></link><updated>2019-12-05T00:00:00+00:00</updated><author><name>Christopher Ariza</name></author><id>tag:pyvideo.org,2019-12-05:pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent versions of Pandas have warned users of the imminent deprecation
+of the Panel, Panda’s name-sake data structure for storing
+three-dimensional data. This talk will examine the tradeoffs in
+performance and interface between two types of Panel alternatives: using
+hierarchical indices in Pandas and StaticFrame, or using true
+n-dimensional arrays in NumPy or xarray.&lt;/p&gt;
+&lt;p&gt;This talk will aid those working in data science and related fields by
+examining the tradeoffs between working with data in true
+multidimensional data structures (i.e., NumPy and xarray) versus working
+with hierarchical index implementations on one- or two-dimensional data.&lt;/p&gt;
+&lt;p&gt;The immediate point of departure is Pandas imminent deprecation of the
+Panel: for Pandas users who have used the Panel, this talk will
+illustrate how to transition away from the Panel and the tradeoffs in
+Panel alternatives.&lt;/p&gt;
+&lt;p&gt;This talk will explain how hierarchical indices work by comparing two
+implementations: the Pandas MultiIndex and the StaticFrame
+IndexHierarchy. The StaticFream IndexHierarchy offers a new, independent
+implementation of hierarchical indices that deviates from Pandas in
+significant ways: the index is literally composed of other index
+objects, permitting usage of specialized index types (such as datetime
+indices), efficient memory usage of shared immutable objects, and the
+enforcement of a strict tree graph.&lt;/p&gt;
+&lt;p&gt;After demonstrating how hierarchical indices can support higher
+dimensional data in one or two-dimensional arrays, the power and
+flexibility of selecting and slicing data with hierarchical indices will
+be demonstrated.&lt;/p&gt;
+&lt;p&gt;The talk will close with performance analysis, isolating the overhead of
+using hierarchical indices over true multi-dimensional array
+representations, and comparing the performance of selection, slicing,
+grouping, and function application of hierarchical data in NumPy,
+xarray, Pandas and StaticFrame.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at both beginners, new to hierarchical indices, and
+more advanced users interested in interface design and performance
+tradeoffs. Basic familiarity with NumPy and Pandas is expected. Audience
+members will leave with a better understanding of how hierarchical
+indices work, and what tradeoffs are made when using them.&lt;/p&gt;
+</summary></entry></feed>
