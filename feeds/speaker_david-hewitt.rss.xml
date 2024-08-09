@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><atom:link href="https://pyvideo.org/feeds/speaker_david-hewitt.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 18 May 2024 00:00:00 +0000</lastBuildDate><item><title>How Python Harnesses Rust through PyO3</title><link>https://pyvideo.org/pycon-us-2024/how-python-harnesses-rust-through-pyo3.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The last few years have seen Rust burst onto the scene as a language for
+implementing much-loved software for the Python ecosystem. The most well
+known examples of these are &lt;tt class="docutils literal"&gt;pydantic&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;polars&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;cryptography&lt;/tt&gt;,
+and &lt;tt class="docutils literal"&gt;ruff&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;These Rust components are usually built on top of
+&lt;a class="reference external" href="https://pyo3.rs/"&gt;PyO3&lt;/a&gt;, a Rust library for binding the two
+languages together, and &lt;a class="reference external" href="https://www.maturin.rs/"&gt;maturin&lt;/a&gt;, a PEP517
+build backend for Rust software. There are a growing number of talks,
+blogs, and guides showing how to use these tools.&lt;/p&gt;
+&lt;p&gt;In this talk I'll lead you through the details of how a Python function
+call ends up executing Rust code via PyO3. We'll first spend some time
+introducing some key ideas as well as the benefits of adding Rust to
+your Python stack. I'll then break down step-by-step what happens inside
+the Python interpreter and PyO3's internals as a seemingly simple enough
+Python expression leads to execution of your Rust function.&lt;/p&gt;
+&lt;p&gt;You should walk away from this talk with an idea of how Rust/PyO3
+software works under the hood. These same stages of a &amp;quot;native&amp;quot; function
+call are similar for multiple other languages too, including Python
+standard library &amp;quot;builtins&amp;quot;, Cython code, and C++/pybind11 software, so
+this may bring you some useful insight even if Rust is not planned to be
+in your software stack soon.&lt;/p&gt;
+&lt;p&gt;While this talk will get technical, no knowledge of Rust will be
+assumed. An understanding of Python functions and types will be useful,
+as I'll use these to introduce the analogous Rust concepts. Expect to
+see Rust code (and maybe a little C), but only for illustration - all
+code will be broken down and stepped through.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Hewitt</dc:creator><pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate><guid>tag:pyvideo.org,2024-05-18:pycon-us-2024/how-python-harnesses-rust-through-pyo3.html</guid></item></channel></rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_josh-thomas.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2023-10-16T00:00:00+00:00</updated><entry><title>Custom Model Managers and QuerySets: Graduating from Django Beginner to ORM Master</title><link href="https://pyvideo.org/djangocon-us-2023/custom-model-managers-and-querysets-graduating-from-django-beginner-to-orm-master.html" rel="alternate"></link><updated>2023-10-16T00:00:00+00:00</updated><author><name>Josh Thomas</name></author><id>tag:pyvideo.org,2023-10-16:djangocon-us-2023/custom-model-managers-and-querysets-graduating-from-django-beginner-to-orm-master.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In my journey as a Django developer, I know the moment when I did not consider myself a beginner anymore: when I started leveraging Django custom model managers and querysets. Initially they can seem intimidating and potentially complex. However, they can help make your use of the ORM more efficient, allow you to encapsulate complex and repetitive queries, and provide an API surface area that makes it easier to introduce certain changes to Model fields and queries, among other benefits.&lt;/p&gt;
+&lt;p&gt;Outline:
+- A general overview of Model Managers/QuerySets
+- How to define a custom Manager/QuerySet and either override the built-in one Django provides or add additional ones.
+- The difference between a custom model manager and queryset and where you may use one over the other
+- A few useful patterns I keep reaching for:
+- &lt;cite&gt;.for_user(user)&lt;/cite&gt; - filtering a queryset to include only the objects a user has access to
+- &lt;cite&gt;.with_complicated_legacy_raw_SQL_query()&lt;/cite&gt; - when migrating a legacy system to Django, I used this extensively before translating the original raw SQL into Django ORM
+- &lt;cite&gt;.exclude_some_condition(condition)&lt;/cite&gt; - excluding certain objects based on a condition&lt;/p&gt;
+&lt;p&gt;This talk is aimed at beginners and intermediates with a basic familiarity with the Django ORM. Towards the end of the talk, we will dip our toes in more advanced parts of the ORM (annotations/aggregations, subqueries, etc.) to show the potential of custom Managers/QuerySets.&lt;/p&gt;
+</summary></entry></feed>
