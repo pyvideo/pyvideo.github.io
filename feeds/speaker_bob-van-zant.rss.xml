@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 11 Mar 2012 00:00:00 +0000</lastBuildDate><item><title>43. What is IPv6 and why does my website I need it</title><link>https://pyvideo.org/pycon-us-2012/43-what-is-ipv6-and-why-does-my-website-i-need-i.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;On February 3rd, 2011 the world ran out of the IPv4 addresses that we
+know and love. Clearly the Internet has survived even though hardly
+anyone has deployed IPv4's successor, IPv6. Drop by to learn about what
+IPv6 is, why you should deploy it and some of the hurdles to deployment.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Background&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;On February 3rd, 2011 the world ran out of the IPv4 addresses that we
+know and love. The Internet continues to work thanks to technologies
+like NAT that enable private IP addresses like 192.168.1.1 and 10.0.0.1
+to be reused across organizations. However, even these large blocks of
+private IP addresses are not large enough for large ISPs like Comcast in
+the United States that give several IP addresses to each customer (ex.
+cable set top box, voip, cable modem).&lt;/p&gt;
+&lt;p&gt;To continue adding new customers large ISPs have begun deploying two
+technologies: IPv6 and large scale NAT.&lt;/p&gt;
+&lt;p&gt;Large scale NAT is a way for large ISPs to put several of their
+customers behind a single public IP address. This means that the one
+public IPv4 address you used to have to yourself is now shared by you
+and several of your neighbors. It means that as a website owner it is
+now more difficult to discern anything useful from the IP addresses
+visiting your website.&lt;/p&gt;
+&lt;p&gt;IPv6 solves the address exhaustion problem by moving from approximately
+4 billion IP addresses to 3.4×10^38 IP addresses; more than the number
+of atoms on Earth. With plenty of IP addresses ISPs can now return to
+giving out unique, public IP addresses to each customer.&lt;/p&gt;
+&lt;p&gt;Many mobile operators are already beginning to deploy IPv6. In 2009
+Verizon issued a mandate that any LTE devices on its network support
+IPv6 with IPv4 support being listed as optional [1]. An IPv6-only device
+will still need access to the IPv4 Internet, however, IPv6 and IPv4 are
+not compatible. Providers like Verizon are putting in place protocol
+translation devices that inspect Internet traffic going through them and
+proxy IPv4-only websites to their IPv6 customers. While this may sound
+wonderful it means that mobile providers are inspecting and rewriting
+your packets. Making things more interesting is that this won't work
+securely over SSL. The solution is to enable IPv6 on your website so
+that IPv6-only hosts can directly access your content.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Joining the IPv6 bandwagon&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Amazon's Elastic Load Balancer supports IPv6 and is already enabled in
+all east coast availability zones [2]. If you're already using ELB
+enabling IPv6 on your website is as easy as making a single DNS change.
+Or so we'd hope, there are still some impediments to a world where your
+site runs seamlessly on IPv6.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The user with broken IPv6&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are people in the world with broken or inferior IPv6 connectivity
+and a web browser or operating system that attempt to use IPv6 anyway.
+What this means is that if you turn on IPv6 on your website you have the
+potential to cut off those users from your site. In this talk I'll
+discuss methods for measuring and analyzing this loss before your
+broadly enable IPv6 so that you can make an informed decision about when
+and how to flip the switch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Geo IP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Geo IP libraries today are still coming to terms with IPv6. One vendor
+in particular is working on IPv6 but only provides limited support in
+their free libraries and not yet in their python driver. In their
+commercial library, the one generally considered better, they do not
+support IPv6 yet due to lack of data [3].&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IPv6 without Amazon&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;At Eventbrite we do development inside of Virtual Box virtual machines.
+In this talk I'll discuss how we configure IPv6 on both the host and
+guest operating systems so that we can test IPv6 before we push to
+Amazon.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IP Address Validation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you accept IP addresses from end users check your IP address
+validation routines (Django has support, see GenericIPAddressField).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[1]
+[&lt;a class="reference external" href="http://www.circleid.com/posts/20090609_verizon_mandates_ipv6_support_for_next_gen_cell_phones/](http://www.circleid.com/posts/20090609_verizon_mandates_ipv6_support_for_next_gen_cell_phones/"&gt;http://www.circleid.com/posts/20090609_verizon_mandates_ipv6_support_for_next_gen_cell_phones/](http://www.circleid.com/posts/20090609_verizon_mandates_ipv6_support_for_next_gen_cell_phones/&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[2]
+[&lt;a class="reference external" href="http://www.allthingsdistributed.com/2011/05/aws_ipv6.html](http://www.allthingsdistributed.com/2011/05/aws_ipv6.html"&gt;http://www.allthingsdistributed.com/2011/05/aws_ipv6.html](http://www.allthingsdistributed.com/2011/05/aws_ipv6.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[3]
+[&lt;a class="reference external" href="http://www.maxmind.com/app/ipv6](http://www.maxmind.com/app/ipv6"&gt;http://www.maxmind.com/app/ipv6](http://www.maxmind.com/app/ipv6&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Bob Van Zant</dc:creator><pubDate>Sun, 11 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-11:pycon-us-2012/43-what-is-ipv6-and-why-does-my-website-i-need-i.html</guid></item></channel></rss>

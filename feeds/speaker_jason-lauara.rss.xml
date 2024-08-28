@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 13 Jul 2014 00:00:00 +0000</lastBuildDate><item><title>Fast Algorithms for Binary Spatial Adjacency Measures</title><link>https://pyvideo.org/scipy-2014/fast-algorithms-for-binary-spatial-adjacency-meas.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Spatial weights matrices, &lt;span class="formula"&gt;&lt;i&gt;W&lt;/i&gt;&lt;/span&gt;, represent potential interaction
+between all &lt;span class="formula"&gt;&lt;i&gt;i&lt;/i&gt;, &lt;i&gt;j&lt;/i&gt;&lt;/span&gt; in a study area and play an essential role in
+many spatial analysis tasks. Commonly applied binary adjacency
+algorithms using decomposition and tree representations scale
+quadratically and are ill suited for large data sets. We present a
+linearly scaling, adjacency algorithm with significantly improved
+performance.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Spatial weights matrices, &lt;span class="formula"&gt;&lt;i&gt;W&lt;/i&gt;&lt;/span&gt;, play an essential role in many
+spatial analysis tasks including measures of spatial association,
+regionalization, and spatial regression. A spatial weight
+&lt;span class="formula"&gt;&lt;i&gt;w&lt;/i&gt;&lt;sub&gt;&lt;i&gt;i&lt;/i&gt;, &lt;i&gt;j&lt;/i&gt;&lt;/sub&gt;&lt;/span&gt; represents potential interaction between each
+&lt;span class="formula"&gt;&lt;i&gt;i&lt;/i&gt;, &lt;i&gt;j&lt;/i&gt;&lt;/span&gt; pair in a set of &lt;span class="formula"&gt;&lt;i&gt;n&lt;/i&gt;&lt;/span&gt; spatial units. The weights are
+generally defined as either binary &lt;span class="formula"&gt;&lt;i&gt;w&lt;/i&gt;&lt;sub&gt;&lt;i&gt;i&lt;/i&gt;, &lt;i&gt;j&lt;/i&gt;&lt;/sub&gt; = &lt;br/&gt;1, 0&lt;br/&gt;&lt;/span&gt;, depending
+on whether or not &lt;span class="formula"&gt;&lt;i&gt;i&lt;/i&gt;&lt;/span&gt; and &lt;span class="formula"&gt;&lt;i&gt;j&lt;/i&gt;&lt;/span&gt; are considered neighbors, or a
+continuous value reflecting some general distance relationship between
+&lt;span class="formula"&gt;&lt;i&gt;i&lt;/i&gt;&lt;/span&gt; and &lt;span class="formula"&gt;&lt;i&gt;j&lt;/i&gt;&lt;/span&gt;. This work focuses on the case of binary weights
+using a contiguity criteria where &lt;span class="formula"&gt;&lt;i&gt;i&lt;/i&gt;&lt;/span&gt; and &lt;span class="formula"&gt;&lt;i&gt;j&lt;/i&gt;&lt;/span&gt; are rook
+neighbors when sharing an edge and queen neighbors when sharing a
+vertex.&lt;/p&gt;
+&lt;p&gt;Population of the &lt;span class="formula"&gt;&lt;i&gt;W&lt;/i&gt;&lt;/span&gt; is computationally expensive, requiring, in
+the naive case, &lt;span class="formula"&gt;&lt;i&gt;O&lt;/i&gt;(&lt;i&gt;n&lt;/i&gt;&lt;sup&gt;2&lt;/sup&gt;)&lt;/span&gt; point or edge comparisons. To improve
+efficiency data decomposition techniques, in the form of regular grids
+and quad-trees, as well as spatial indexing techniques using r-trees
+have be utilized to reduce the total number of local point or edge
+comparisons. Unfortunately, these algorithms still scale quadratically.
+Recent research has also shown that even with the application of
+parallel processing techniques, the gridded decomposition method does
+not scale as &lt;span class="formula"&gt;&lt;i&gt;n&lt;/i&gt;&lt;/span&gt; increases.&lt;/p&gt;
+&lt;p&gt;This work presents the development and testing of a high performance
+&lt;a class="reference external" href="https://github.com/jlaura/pysal/blob/weights/pysal/weights/_contW_binning.py#L181"&gt;implementation&lt;/a&gt;,
+written in pure Python, using time constant and &lt;span class="formula"&gt;&lt;i&gt;O&lt;/i&gt;(&lt;i&gt;n&lt;/i&gt;)&lt;/span&gt; operations,
+by leveraging high performance containers and a vertex comparison
+method. The figures below depict results of initial testing using
+synthetically generated lattices of triangles, squares, and hexagons
+with rook contiguity in black and queen contiguity in gray. These
+geometries were selected to control for average neighbour cardinality
+and average vertex count per geometry. From these initial tests, we
+report a significant speedup over r-tree implementations and a more
+modest speedup over gridded decomposition methods. In addition to
+scaling linearly, while existing methods scale quadratically, this
+method is also more memory efficient. Ongoing work is focusing on
+testing using randomly distributed data, and U.S. Census data, the
+application of parallelization techniques to test further performance
+improvements, and the use of fuzzy operator to account for spatial error
+.&lt;/p&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="raw times" src="http://github.com/pysal/pPysal/blob/master/weights/figures/rawtime.png?raw=true%20&amp;quot;Initial%20Results%20-%20Raw%20Speed&amp;quot;" /&gt;
+&lt;p class="caption"&gt;raw times&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="speedup" src="http://github.com/pysal/pPysal/blob/master/weights/figures/speedup.png?raw=true%20&amp;quot;Initial%20Results%20-%20Speedup&amp;quot;" /&gt;
+&lt;p class="caption"&gt;speedup&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="figure"&gt;
+&lt;img alt="linear speed" src="http://github.com/pysal/pPysal/blob/master/weights/figures/rawl.png?raw=true%20&amp;quot;Initial%20Results%20-%20List%20Raw%20Speed&amp;quot;" /&gt;
+&lt;p class="caption"&gt;linear speed&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jason Lauara</dc:creator><pubDate>Sun, 13 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-13:scipy-2014/fast-algorithms-for-binary-spatial-adjacency-meas.html</guid></item></channel></rss>
