@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 11 Mar 2011 00:00:00 +0000</lastBuildDate><item><title>Backup Is Hard; Let's Go Shopping</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--backup-is-hard--let--39-s-go-shopping.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Backup Is Hard; Let's Go Shopping&lt;/p&gt;
+&lt;p&gt;Presented by Gary Bernhardt&lt;/p&gt;
+&lt;p&gt;We'll fly through the most clever bits of BitBacker, an online backup
+app developed as a startup for three years and eventually abandoned.
+Highlights: a hacked-up httplib/asyncore HTTP client; a real-life,
+HATEOAS-respecting RESTful API, and an encryption scheme that can
+quickly diff a file system against the server while leaking no
+information – not even file timestamps.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;This is the story of a solution to a huge problem: fast, secure online
+backup. A single client generates a hundred gigabytes, millions of data
+chunks, and thousands of file system snapshots. To appreciate the
+problem's scale, consider that a Python array holding content hashes for
+1,000,000 files consumes 100 MB of memory. File hashes are only a
+portion of the required per- file metadata, and that's only one for
+snapshot of thousands.&lt;/p&gt;
+&lt;p&gt;We'll tour the hard parts of this system with no apology for their
+difficulty. The httplib/asyncore hybrid monster that served millions of
+parallel requests, transparently retrying on failures and timeouts, with
+only 300 lines of python. The RESTful API – fully respecting hypertext,
+with every request safely repeatable, even POSTs, and not a single
+hard-coded URL in the client. The encryption scheme that leaked nothing
+– not even modification times – but could quickly diff local file
+systems against the server. And, that one time that a client
+accidentally requested a 4.76 megabyte URL in production.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gary Bernhardt</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--backup-is-hard--let--39-s-go-shopping.html</guid><category>backup</category><category>bigdata</category><category>bitbacker</category><category>pycon</category><category>pycon2011</category></item></channel></rss>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 30 Nov 2013 00:00:00 +0000</lastBuildDate><item><title>Les effets de bord du Global Interpreter Lock</title><link>https://pyvideo.org/pycon-fr-2013/les-effets-de-bord-du-global-interpreter-lock.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&amp;quot;C'est seulement dans le cas de programmes multi-threadés qui passent
+beaucoup de temps au sein du GIL à interpréter du bytecode CPython que
+le GIL devient un goulot d'étranglement&amp;quot;&lt;/p&gt;
+&lt;p&gt;C'est ainsi que le GIL est présenté sur wiki.python.org jusqu'en 2009.
+Suite aux travaux de David Beazley (&lt;a class="reference external" href="http://www.dabeaz.com"&gt;http://www.dabeaz.com&lt;/a&gt;) en 2009 et
+2010, la communauté Python découvre que les effets du GIL vont au delà.&lt;/p&gt;
+&lt;p&gt;En effet, l'implémentation du GIL met en oeuvre une mécanique complexe
+qui ajoute un overhead important d'appels systèmes, particulièrement sur
+les processeurs multi-coeurs. De plus, le GIL pertube la livraison des
+signaux. Enfin, le GIL peut provoquer le scheduling de threads CPU bound
+avant celui de threads I/O bound, provoquant une dégradation des
+performances.&lt;/p&gt;
+&lt;p&gt;Ce talk s'appuyant sur les travaux de David Beazley (avec son aimable
+autorisation) tentera de donner une explication claire et détaillée aux
+effets de bord du GIL mentionnés ci-dessus.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Adrien Guillo</dc:creator><pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-11-30:pycon-fr-2013/les-effets-de-bord-du-global-interpreter-lock.html</guid></item></channel></rss>
