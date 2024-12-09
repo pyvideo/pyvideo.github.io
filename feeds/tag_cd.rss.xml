@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 21 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>PyPy hands-on</title><link>https://pyvideo.org/europython-2011/pypy-hands-on.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &amp;quot;Training
+Pizza Margherita&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.&lt;/p&gt;
+&lt;p&gt;The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.&lt;/p&gt;
+&lt;div class="section" id="part-1-run-your-application-under-pypy"&gt;
+&lt;h4&gt;Part 1: Run your application under PyPy&lt;/h4&gt;
+&lt;p&gt;This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-2-write-your-own-interpreter-with-pypy"&gt;
+&lt;h4&gt;Part 2: Write your own interpreter with PyPy&lt;/h4&gt;
+&lt;p&gt;PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.&lt;/p&gt;
+&lt;p&gt;The students will be given the source code for a toy language
+implemented in RPython. They will learn:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &amp;quot;hints&amp;quot; needed by the JIT generator, and how to place them
+&lt;/pre&gt;
+&lt;p&gt;Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THINGS TO DO BEFORE THE TRAINING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You are encouraged to bring your laptop to the training session.&lt;/p&gt;
+&lt;p&gt;Make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Install PyPy 1.5:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/download.html"&gt;http://pypy.org/download.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy"&gt;http://doc.pypy.org/en/latest/getting-started.html#installing-pypy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;distribute&lt;/tt&gt; are installed (look
+at the URL above for instructions)&lt;/li&gt;
+&lt;li&gt;Clone the pypy repository, and update to the 1.5 version:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/pypy"&gt;http://bitbucket.org/pypy/pypy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd pypy&lt;/p&gt;
+&lt;p&gt;$ hg up -r release-1.5&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Clone the jitviewer repository and install it on pypy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/jitviewer"&gt;http://bitbucket.org/pypy/jitviewer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd jitviewer&lt;/p&gt;
+&lt;p&gt;$ /path/to/pypy-1.5/bin/pypy setup.py develop&lt;/p&gt;
+&lt;p&gt;If you intend to follow also the second part (&amp;quot;Write your own
+interpreter with PyPy&amp;quot;), you need to make sure you have a working
+&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter"&gt;developing
+environment&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Cuni</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/pypy-hands-on.html</guid><category>cd</category><category>cpython</category><category>extensions</category><category>hg</category><category>jit</category><category>optimize</category><category>pypy</category><category>setup.py</category><category>tutorial</category></item><item><title>Writing Books using Python &amp; Open Source Software</title><link>https://pyvideo.org/europython-2011/writing-books-using-python-open-source-software.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] wesley chun - 20 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;All of us are familiar with using open source tools to develop software
+applications with, but instead of writing code, it is also possible to
+create the manuscript of a book in very much the same way. These days,
+authors have many choices in terms of the tools which are available to
+aid them in writing a book. Gone are the times when the only option is
+using a proprietary word processor, so why not try it using open source
+tools? It's especially attractive to those who develop software using
+open source tools as well those who are writing books about open source
+tools. Both code and the written word are created in plain text files.
+These files are easily archived using some version control system. They
+can be shared easily via e-mail and can also be backed up in the same
+manner. In the end, the final product is shipped to the customer: in the
+case of software, it's distribution via CD or DVD, or perhaps a release
+for installation on a server, and for a book, it's delivering a
+manuscript to the publisher, perhaps in a format such as HTML or PDF®.&lt;/p&gt;
+&lt;p&gt;Upon some reflection, writing a book is, in many ways, similar to
+writing an application: you create text or code which is saved to a file
+(or files- typically one but could be more) file in some format,
+proprietary or otherwise. Additions, changes, or deletions are made to
+the file(s), which is then updated when the file is (re)saved. Backups
+need to be made, some versioning may be required to keep track of
+multiple files during the course of development, and finally, the
+resulting file(s) have to be delivered, as described above. Because of
+all the similarities described, we assert that it is possible to use a
+development environment utilizing Python and other open source tools to
+not only write application with, but also be able to create the entire
+manuscript for a book as well! While this entire concept should not
+really be mind-blowing, it does represent a trend seemingly growing in
+popularity in the open source world.&lt;/p&gt;
+&lt;p&gt;In particular, we highlight the following requirements that are
+necessary when creating a manuscript, especially with co-authors:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Text Formatting&lt;/li&gt;
+&lt;li&gt;Editing&lt;/li&gt;
+&lt;li&gt;Versioning and Backups&lt;/li&gt;
+&lt;li&gt;Automated Testing of Code&lt;/li&gt;
+&lt;li&gt;HTML/PDF® Generation&lt;/li&gt;
+&lt;li&gt;Author Communication&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this talk, we highlight one particular case study, the development of
+Addison Wesley's 2009 publication, &amp;quot;Python Web Development with Django&amp;quot;,
+as well as provide some insight into other projects created using
+similar tools. Open source software has radically affected how
+applications are built today, and this phenomenon has the ability to
+affect the book publishing world in the same way.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wesley J. Chun</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/writing-books-using-python-open-source-software.html</guid><category>cd</category><category>html</category><category>testing</category><category>web</category></item><item><title>Continuous deployment</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--continuous-deployment.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Continuous deployment&lt;/p&gt;
+&lt;p&gt;Presented by Laurens Van Houtven&lt;/p&gt;
+&lt;p&gt;This talk is about continuous deployment practices and tools, lessons
+learned from implementing it, and putting them into perspective. The
+goal is to give other people tips and pointers for applying these ideas
+themselves.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Continuous deployment is the practice of putting the latest revision of
+software into production use all the time, as opposed to working towards
+larger releases. The important difference is iteration time: whereas
+large software packages produce new software in timeframes of years or
+months, continuous deployment teams typically put new code into
+production in timeframes of hours or less.&lt;/p&gt;
+&lt;p&gt;The practice is slowly attracting a small but growing group of loyal
+followers, just like continuous integration over the past few years and
+test- driven development did before that. They can be explained in terms
+of being natural extensions of each other. Like TDD and CI, CD gets eyed
+somewhat suspiciously (and rightfully so: skeptical analysis is great),
+but the undersigned believes there's a legitimate advantage for many
+applications.&lt;/p&gt;
+&lt;p&gt;Many years ago, TTD and testing tools in general were mostly ad-hockery.
+Now, with many different production-quality testing tools, this has
+become unthinkable. Similarly, continuous integration was something
+other people did for a long time, but now we have tools such as Buildbot
+and Hudson. Continuous deployment is still somewhat in the early stage
+in terms of ready-to-use tools, but it's likely that we'll see a similar
+evolution.&lt;/p&gt;
+&lt;p&gt;Here's a rough outline of what I plan to cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;a short history of people developed software&lt;/li&gt;
+&lt;li&gt;from the recent models to CD (sort of a working definition of CD
+here)&lt;/li&gt;
+&lt;li&gt;when is it a good idea? pros/cons&lt;/li&gt;
+&lt;li&gt;requirements &amp;amp; battle plan for applying CD in an existing development
+environment (and possibly code base)&lt;/li&gt;
+&lt;li&gt;an overview of existing tools and how they work together&lt;/li&gt;
+&lt;li&gt;caveat emptors, known pitfalls (deployment and recovery strategies go
+here, since most implementations figure out they need them after
+stuff blows up)&lt;/li&gt;
+&lt;li&gt;questions! (hopefully lots of people who've tried or are thinking
+about implementing something similar -- like I said, there are a lot
+of people implementing it but not too many ideas being bounced
+around)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Laurens Van Houtven</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--continuous-deployment.html</guid><category>cd</category><category>ci</category><category>continuousdeployment</category><category>deployment</category><category>pycon</category><category>pycon2011</category><category>softwaredevelopment</category><category>tdd</category><category>workflow</category></item></channel></rss>
