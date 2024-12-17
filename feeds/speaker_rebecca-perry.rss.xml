@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 14 Jul 2014 00:00:00 +0000</lastBuildDate><item><title>How Interactive Visualization Led to Insights in Digital Holographic Microscopy</title><link>https://pyvideo.org/scipy-2014/how-interactive-visualization-led-to-insights-in.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Digital holographic microscopy is a fast 3D imaging technique. A camera
+records a time series of light scattering patterns as standard 2D images
+and then post-processing routines extract 3D information. By creating a
+GPU-accelerated GUI on top of the Holopy package, we noticed unexpected
+discrepancies between the different models used during post-processing.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Digital holographic microscopy is a fast 3D imaging technique ideally
+suited to studies of micron-sized objects that diffuse through random
+walks via Brownian motion
+&lt;a class="reference external" href="http://dx.doi.org/10.1364/OE.15.018275"&gt;[1]&lt;/a&gt;. Microspheres fit this
+category and are widely used in biological assays and as ideal test
+subjects for experiments in statistical mechanics. Microspheres
+suspended in water move too quickly to monitor with confocal microscopy.
+With digital holographic microscopy, 2D images encoding 3D volumes can
+be recorded at thousands of frames per second
+&lt;a class="reference external" href="http://www.nature.com/nmat/journal/v11/n2/abs/nmat3190.html"&gt;[2]&lt;/a&gt;.
+The computationally challenging part of digital holographic microscopy
+is extracting the 3D information during post-processing.&lt;/p&gt;
+&lt;p&gt;The open source &lt;a class="reference external" href="https://launchpad.net/holopy"&gt;Holopy&lt;/a&gt; package which
+relies heavily on SciPy and NumPy is used to recover the 3D information
+via one of two techniques: reconstruction by numerical back-propagation
+of electromagnetic fields or modeling forward light scattering with Mie
+theory. The parameter space describing the imaged volume is
+multidimensional. Even for simple micron-sized spheres, a hologram
+depends on each sphere's radius and index of refraction in addition to
+its 3D position. By supplementing Holopy with a &lt;a class="reference external" href="https://github.com/RebeccaWPerry/holography-gpu"&gt;GPU-accelerated
+GUI&lt;/a&gt; using PyQt4, we
+enabled users to interactively adjust the system parameters and see a
+modeled digital hologram change in response.&lt;/p&gt;
+&lt;p&gt;Simply adding the capability of interactively manipulating holograms in
+a GUI led us to notice unexpected discrepancies between the two modeling
+techniques and failures of both, suggesting further experiments. We
+observed that the numerical light propagation technique only accurately
+characterizes the light within a cone stretching from the extent of the
+image back towards the object. Neither model accurately characterizes
+the light upstream of the object toward the light source. The GUI was a
+natural format to interact with the theory and gain insight because it
+showed us the models in an analogous format to how we see the data on
+the microscope. Other scientific projects may benefit from tools that
+allow experimentalists to interact with theory in the same way they
+interact with their experiments.&lt;/p&gt;
+&lt;p&gt;[1] Lee et.al., Optics Express, Vol. 15, Issue 26, pp. 18275-18282
+(2007) doi: 10.1364/OE.15.018275.&lt;/p&gt;
+&lt;p&gt;[2] Kaz et.al., Nature Materials, Vol. 11, pp. 138013142 (2012)
+doi:10.1038/nmat3190.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rebecca Perry</dc:creator><pubDate>Mon, 14 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-14:scipy-2014/how-interactive-visualization-led-to-insights-in.html</guid><category>holopy</category></item></channel></rss>

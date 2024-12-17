@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 21 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>PyPy hands-on</title><link>https://pyvideo.org/europython-2011/pypy-hands-on.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Antonio Cuni,Armin Rigo - 21 June 2011 in &amp;quot;Training
+Pizza Margherita&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The session is divided into two parts, of roughly 2 hours each. People
+who are interested only in the first part, can leave the session after
+it. However, the first part is a prerequisite for the second one, thus
+people are not advised to join in the middle of the session.&lt;/p&gt;
+&lt;p&gt;The session is meant to be highly interactive. People are invited to
+bring their own laptop and try things by themselves.&lt;/p&gt;
+&lt;div class="section" id="part-1-run-your-application-under-pypy"&gt;
+&lt;h4&gt;Part 1: Run your application under PyPy&lt;/h4&gt;
+&lt;p&gt;This tutorial is targeted to Python users who want to run their favorite
+Python application under PyPy, and exploit the most of it. The following
+topics will be covered:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to fix/avoid CPython implementation details (e.g., refcounting)
+
+- general overview of how the PyPy JIT works
+
+- how to optimize your program for the PyPy JIT
+
+- how to view and interpret the traces produced by the JIT
+
+- how to tweak the parameters of the JIT and the GC
+
+- how to use existing CPython C extensions on PyPy, and fix them if necessary
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-2-write-your-own-interpreter-with-pypy"&gt;
+&lt;h4&gt;Part 2: Write your own interpreter with PyPy&lt;/h4&gt;
+&lt;p&gt;PyPy is not only a Python interpreter, but also a toolchain to implement
+dynamic languages. This tutorial is targeted to people who want to
+implement their own programming languages, or who simply want to know
+more about how the PyPy JIT works internally.&lt;/p&gt;
+&lt;p&gt;The students will be given the source code for a toy language
+implemented in RPython. They will learn:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+- how to translate it to C using the PyPy translation toolchain
+
+- what are the &amp;quot;hints&amp;quot; needed by the JIT generator, and how to place them
+&lt;/pre&gt;
+&lt;p&gt;Then, they will be challenged to add the proper hints to the toy
+interpreter, to get the best result with the JIT.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;THINGS TO DO BEFORE THE TRAINING&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You are encouraged to bring your laptop to the training session.&lt;/p&gt;
+&lt;p&gt;Make sure that the following prerequisites are met:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Install PyPy 1.5:&lt;ul&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://pypy.org/download.html"&gt;http://pypy.org/download.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started.html#installing-pypy"&gt;http://doc.pypy.org/en/latest/getting-started.html#installing-pypy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;tt class="docutils literal"&gt;setuptools&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;distribute&lt;/tt&gt; are installed (look
+at the URL above for instructions)&lt;/li&gt;
+&lt;li&gt;Clone the pypy repository, and update to the 1.5 version:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/pypy"&gt;http://bitbucket.org/pypy/pypy&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd pypy&lt;/p&gt;
+&lt;p&gt;$ hg up -r release-1.5&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Clone the jitviewer repository and install it on pypy:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ hg clone &lt;a class="reference external" href="http://bitbucket.org/pypy/jitviewer"&gt;http://bitbucket.org/pypy/jitviewer&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$ cd jitviewer&lt;/p&gt;
+&lt;p&gt;$ /path/to/pypy-1.5/bin/pypy setup.py develop&lt;/p&gt;
+&lt;p&gt;If you intend to follow also the second part (&amp;quot;Write your own
+interpreter with PyPy&amp;quot;), you need to make sure you have a working
+&lt;a class="reference external" href="http://doc.pypy.org/en/latest/getting-started-python.html%20#translating-the-pypy-python-interpreter"&gt;developing
+environment&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Antonio Cuni</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/pypy-hands-on.html</guid><category>cd</category><category>cpython</category><category>extensions</category><category>hg</category><category>jit</category><category>optimize</category><category>pypy</category><category>setup.py</category><category>tutorial</category></item><item><title>Packaging, from Distutils to Distutils2</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--packaging--from-distutils-to-distutil.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Packaging, from Distutils to Distutils2&lt;/p&gt;
+&lt;p&gt;Tarek Ziadé&lt;/p&gt;
+&lt;p&gt;Packaging or installing a Python application can be extremely painful.
+This talk will deep-dive into the new Distutils2 features and explain
+how you can use them in your project &lt;em&gt;today&lt;/em&gt; to make life easier for
+everyone (users, OS package managers, developers, etc.).&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Distutils2 presentation and goals&lt;ol class="arabic"&gt;
+&lt;li&gt;Framework&lt;/li&gt;
+&lt;li&gt;Command-driven packaging system&lt;/li&gt;
+&lt;li&gt;Changes from Distutils1&lt;/li&gt;
+&lt;li&gt;R.I.P. setup.py&lt;/li&gt;
+&lt;li&gt;The new metadata fields (PEP 345)&lt;/li&gt;
+&lt;li&gt;versions for your project (PEP 386)&lt;/li&gt;
+&lt;li&gt;PyPI goodies&lt;ol class="arabic"&gt;
+&lt;li&gt;browsing&lt;/li&gt;
+&lt;li&gt;uploading docs&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;What's installed ? what to install ? (PEP 376)&lt;ol class="arabic"&gt;
+&lt;li&gt;The Dependency graph tool&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Extensibility !&lt;ol class="arabic"&gt;
+&lt;li&gt;commands&lt;/li&gt;
+&lt;li&gt;compilers&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Pysetup, one command to rule them all&lt;/li&gt;
+&lt;li&gt;install !&lt;/li&gt;
+&lt;li&gt;remove&lt;/li&gt;
+&lt;li&gt;do other things&lt;/li&gt;
+&lt;li&gt;Examples&lt;/li&gt;
+&lt;li&gt;Example 1: A simple Distutils2 project&lt;/li&gt;
+&lt;li&gt;Example 2: Porting your project to Distutils2, and keep it
+working in Distutils/Setuptools/zc.buildout environments.&lt;/li&gt;
+&lt;li&gt;Example 3: Creating and releasing your own commands and compilers&lt;/li&gt;
+&lt;li&gt;Example 4: Developement process made simple with Distutils2&lt;/li&gt;
+&lt;li&gt;Conclusion&lt;/li&gt;
+&lt;li&gt;Roadmap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--packaging--from-distutils-to-distutil.html</guid><category>distutils</category><category>distutils2</category><category>pycon</category><category>pycon2011</category><category>setup.py</category><category>setuptools</category><category>zc.buildout</category></item></channel></rss>
