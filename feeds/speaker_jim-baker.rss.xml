@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 12 Apr 2015 00:00:00 +0000</lastBuildDate><item><title>DjangoCon 2008: Django on Jython</title><link>https://pyvideo.org/djangocon-us-2008/djangocon-2008-django-on-jython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speakers: Jim Baker and Leo Soto&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.djangocon.org"&gt;http://www.djangocon.org&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Sat, 06 Sep 2008 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2008-09-06:djangocon-us-2008/djangocon-2008-django-on-jython.html</guid><category>Django</category><category>djangocon</category><category>djangocon2008</category></item><item><title>Scalable Realtime Architectures in Python</title><link>https://pyvideo.org/europython-2014/scalable-realtime-architectures-in-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;This talk will focus on you can readily implement highly scalable and
+fault tolerant realtime architectures, such as dashboards, using Python
+and tools like Storm, Kafka, and ZooKeeper. We will focus on two related
+aspects: composing reliable systems using at-least-once and idempotence
+semantics and how to partition for locality.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Increasingly we are interested in implementing highly scalable and fault
+tolerant realtime architectures such as the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Realtime aggregation. This is the realtime analogue of working with
+batched map-reduce in systems like Hadoop.&lt;/li&gt;
+&lt;li&gt;Realtime dashboards. Continuously updated views on all your
+customers, systems, and the like, without breaking a sweat.&lt;/li&gt;
+&lt;li&gt;Realtime decision making. Given a set of input streams, policy on
+what you like to do, and models learned by machine learning, optimize
+a business process. One example includes autoscaling a set of
+servers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(We use realtime in the soft sense: systems that are continuously
+computing on input streams of data and make a best effort to keep up; it
+certainly does not imply hard realtime systems that strictly bound their
+computation times.)&lt;/p&gt;
+&lt;p&gt;Obvious tooling for such implementations include Storm (for event
+processing), Kafka (for queueing), and ZooKeeper (for tracking and
+configuration). Such components, written respectively in Clojure
+(Storm), Scala (Kafka), and Java (ZooKeeper), provide the desired
+scalability and reliability. But what may not be so obvious at first
+glance is that we can work with other languages, including Python, for
+the application level of such architectures. (If so inclined, you can
+also try reimplementing such components in Python, but why not use
+something that's been proven to be robust?)&lt;/p&gt;
+&lt;p&gt;In fact Python is likely a better language for the app level, given that
+it is concise, high level, dynamically typed, and has great libraries.
+Not to mention fun to write code in! This is especially true when we
+consider the types of tasks we need to write: they are very much like
+the data transformations and analyses we would have written of say a
+standard Unix pipeline. And no one is going to argue that writing such a
+filter in say Java is fun, concise, or even considerably faster in
+running time.&lt;/p&gt;
+&lt;p&gt;So let's look at how you might solve such larger problems. Given that it
+was straightforward to solve a small problem, we might approach as
+follows. Simply divide up larger problems in small one. For example,
+perhaps work with one customer at a time. And if failure is an ever
+present reality, then simply ensure your code retries, just like you
+might have re-run your pipeline against some input files.&lt;/p&gt;
+&lt;p&gt;Unfortunately both require distributed coordination at scale. And
+distributed coordination is challenging, especially for real systems,
+that will break at scale. Just putting a box in your architecture
+labeled &lt;strong&gt;&amp;quot;ZooKeeper&amp;quot;&lt;/strong&gt; doesn't magically solve things, even if
+ZooKeeper can be a very helpful part of an actual solution.&lt;/p&gt;
+&lt;p&gt;Enter the Storm framework. While Storm certainly doesn't solve all
+problems in this space, it can support many different types of realtime
+architectures and works well with Python. In particular, Storm solves
+two key problems for you.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Partitioning&lt;/strong&gt;. Storm lets you partition streams, so you can break
+down the size of your problem. But if the a node running your code
+fails, Storm will restart it. Storm also ensures such topology
+invariants as the number of nodes (spouts and bolts in Storm's lingo)
+that are running, making it very easy to recover from such failures.&lt;/p&gt;
+&lt;p&gt;This is where the cleverness really begins. What can you do if you can
+ensure that &lt;strong&gt;all the data&lt;/strong&gt; you need for a given continuously updated
+computation - what is the state of this customer's account? - can be put
+in &lt;strong&gt;exactly one place&lt;/strong&gt;, then flow the supporting data through it over
+time? We will look at how you can readily use such locality in your own
+Python code.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Retries&lt;/strong&gt;. Storm tracks success and failure of events being processed
+efficiently through a batching scheme and other cleverness. Your code
+can then choose to retry as necessary. Although Storm also supports
+exactly-once event processing semantics, we will focus on the simpler
+model of at-least-once semantics. This means your code must tolerate
+retry, or in a word, is idempotent. But this is straightforward. We have
+often written code like the following:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+seen = set()
+for record in stream:
+    k = uniquifier(record)
+    if k not in seen:
+       seen.add(k)
+       process(record)
+&lt;/pre&gt;
+&lt;p&gt;Except of course that any such real usage has to ensure it doesn't
+attempt to store all observations (first, download the Internet! ;), but
+removes them by implementing some sort of window or uses data structures
+like HyperLogLog, as we will discuss.&lt;/p&gt;
+&lt;p&gt;One more aspect of reliability we will discuss is how to compose
+reliable systems out of reliable components; we will show how this can
+be readily done with a real example of consuming Kafka and tracking
+consumption progress in ZooKeeper.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Fri, 25 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-25:europython-2014/scalable-realtime-architectures-in-python.html</guid></item><item><title>Jython Concurrency</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--jython-concurrency.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jython Concurrency&lt;/p&gt;
+&lt;p&gt;Presented by Jim Baker&lt;/p&gt;
+&lt;p&gt;Jython is arguably the best Python implementation to target concurrent
+code. Jython has no GIL, it leverages the Java platform to provide
+robust support for concurrency in its runtime, and it enables access to
+a set of high-level abstractions from Java. This talk will walk through
+at the extreme level pertinent Jython implementation details and a
+series of examples, including Java integration.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Jython implements the Python language, but we leverage the underlying
+Java platform to provide an opionated alternative to CPython in our
+support of concurrency.&lt;/p&gt;
+&lt;p&gt;Because of the GIL and related infrastructure, CPython cannot use a
+model in which threads perform concurrent computation defined in Python
+on shared objects in the same process. (Of course, there are
+workarounds, such as multiprocessing or using C extensions.)&lt;/p&gt;
+&lt;p&gt;In contrast, there's no GIL in Jython. Jython instead embraces threads,
+provides extensive support for managing their execution and coordination
+through standard Java platform functionality (java.util.concurrent), and
+threaded code works well with Jython's implementation of standard
+mutable collection types. Lastly, the underlying JVM provides extensive
+instrumentation as well as the ability to set a variety of parameters,
+including choice of GC. There are also the inevitable pitfalls that
+might be seen in complex architectures, such as around the use of
+ClassLoaders.&lt;/p&gt;
+&lt;p&gt;This talk will go into a detailed discussion of some of the interesting
+ramifications of these design points and how they can be effectively
+applied to write concurrent code, as illustrated through a variety of
+short examples.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--jython-concurrency.html</guid><category>concurrency</category><category>java</category><category>jython</category><category>pycon</category><category>pycon2011</category></item><item><title>Making Jython Faster and Better</title><link>https://pyvideo.org/pycon-us-2012/making-jython-faster-and-better.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;As a dynamic language, Python is difficult to optimize. In addition,
+these dynamic features make using Python code from Java currently too
+complex. However, Java 7 adds the invokedynamic bytecode and
+corresponding library support, making it possible to finally address
+these problems in Jython. This talk will describe work in progress to
+make Jython faster and better (improving Java integration).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Sat, 10 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-10:pycon-us-2012/making-jython-faster-and-better.html</guid></item><item><title>Integrating Jython with Java</title><link>https://pyvideo.org/pycon-us-2013/integrating-jython-with-java.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Jython provides a nearly seamless integration when using Java code.
+Using Jython from Java is not nearly as seamless, at least not yet.
+There are also several choices, depending on what you're doing, from
+object factories to using Java Scripting (JSR-223) support. This talk
+will discuss techniques, gotchas, and ongoing work to improve
+integration.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-16:pycon-us-2013/integrating-jython-with-java.html</guid><category>talk</category></item><item><title>A Winning Strategy with The Weakest Link: how to use weak references to make your code more robust</title><link>https://pyvideo.org/pycon-us-2015/a-winning-strategy-with-the-weakest-link-how-to.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Working with weak references should not just be for Python wizards.
+Whether you have a cache, memoizing a function, tracking objects, or
+various other bookkeeping needs, you definitely do not want code leaking
+memory or resources. In this talk, we will look at illuminating examples
+drawn from a variety of sources on how to use weak references to prevent
+such bugs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-12:pycon-us-2015/a-winning-strategy-with-the-weakest-link-how-to.html</guid></item><item><title>Getting to Jython 2.7 and beyond</title><link>https://pyvideo.org/pycon-us-2015/getting-to-jython-27-and-beyond.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;So how did we get to Jython 2.7 anyway? And what are our future plans?
+In this talk, you will get a taste of how Jython works, some new
+functionality, and especially how Jython leverages both Python and Java
+to provide a very compatible solution.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Baker</dc:creator><pubDate>Sun, 12 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-12:pycon-us-2015/getting-to-jython-27-and-beyond.html</guid></item></channel></rss>

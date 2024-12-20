@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 13 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>Massaging the Pony: Message Queues and You</title><link>https://pyvideo.org/djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Message queues are a potential solution for any site that needs to
+facilitate robust asynchronous operations on your website including
+carrying out intensive or long-running actions or synchronizing off-site
+services. We will look at how PBS has used Celery and RabbitMQ to
+provide more reliable service and how to set up a robust message queue
+solution in a cloud hosting environment.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;In maintaining several different site projects written in Django over
+the past four years, the PBS Education team repeatedly found the need
+for the ability to create asynchronous processes that could handle
+long-running actions and mission-critical synchronization. We needed a
+way to handle tasks such as generating reports on large data sets and
+executing remote processes on fussy third-party services. The clear
+solution to the problems we encountered was to implement a robust
+message queue solution.&lt;/p&gt;
+&lt;p&gt;Message queues allow sites to execute processes outside the normal HTTP
+request cycle and then deliver the results of those processes in a
+variety of ways. After a survey of all available message queue solutions
+we settled on a combination of Celery and RabbitMQ to create a reliable,
+always-available system that can handle mission-critical tasks. We can
+easily develop against a message queue in our development builds, and we
+have an infrastucture based in a cloud hosting service that allows us to
+rely on the message queue without reservation.&lt;/p&gt;
+&lt;p&gt;In this talk will will look at what a message queue does for your site,
+how to implement a message queue in your Django code, and how to set up
+a reliable message queue infrastructure on your servers. We will show
+examples from some of our sites at PBS so it is clear how message queues
+work and to present some common use cases that warrant a message queue
+solution. We will also discuss some of the design patterns that made it
+easy to switch to message queue based processing for discreet tasks, as
+well as some of the things we learned that have made the solution even
+easier to implement for new tasks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shawn Rider</dc:creator><pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--massaging-the-pony--message-queue.html</guid><category>celery</category><category>djangocon</category><category>djangocon2010</category><category>messagequeues</category><category>queues</category><category>rabbitmq</category></item><item><title>It's the message, stupid: python &amp; amqp</title><link>https://pyvideo.org/europython-2011/its-the-message-stupid-python-amqp.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Muharem Hrnjadovic - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Messaging is a well established domain in information technology and can
+greatly improve the scalability and throughput of a system when employed
+appropriately. Message queues can be used to achieve&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;spatial decoupling i.e. the systems that produce and consume messages
+may be deployed on different machines, networks, continents etc.&lt;/li&gt;
+&lt;li&gt;temporal decoupling i.e. a system can enqueue a message and carry on
+without waiting for the message consumer.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We use e.g. messaging in &lt;a class="reference external" href="http://openquake.org"&gt;OpenQuake&lt;/a&gt; to
+distribute calculations of &lt;a class="reference external" href="http://openquake.org/about/gem/"&gt;seismic
+hazard&lt;/a&gt; and the respective risk to
+human lives and infrastructure.&lt;/p&gt;
+&lt;p&gt;There is a huge number of messaging patterns identified in the
+&lt;a class="reference external" href="http://www.amazon.com/dp/0321200683/"&gt;industry&lt;/a&gt; and a small
+selection of these will be presented to whet your appetite :-)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.amqp.org/"&gt;AMQP&lt;/a&gt; is a fairly new and open messaging
+standard with a number of freely available open source message brokers
+(&lt;a class="reference external" href="http://www.rabbitmq.com/"&gt;RabbitMQ&lt;/a&gt;,
+&lt;a class="reference external" href="http://www.zeromq.org/"&gt;ZeroMQ&lt;/a&gt;, &lt;a class="reference external" href="http://qpid.apache.org/"&gt;qpid&lt;/a&gt;
+etc.) with different features and performance trade-offs.&lt;/p&gt;
+&lt;p&gt;In the course of the presentation you will be - introduced to AMQP
+concepts and jargon - introduced to available Python AMQP bindings
+(focussing on an asynchronous
+(&lt;a class="reference external" href="https://launchpad.net/txamqp"&gt;txAMQP&lt;/a&gt;) and a synchronous variant
+(most likely &lt;a class="reference external" href="http://ask.github.com/kombu/"&gt;kombu&lt;/a&gt;) - shown code
+examples demonstrating how to use these Python bindings&lt;/p&gt;
+&lt;p&gt;The presentation (45 minutes in total) is structured as follows:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;7.5 minutes for messaging concepts and patterns&lt;/li&gt;
+&lt;li&gt;7.5 minutes for AMQP concepts&lt;/li&gt;
+&lt;li&gt;5 minutes for an overview of the Python bindings for AMQP&lt;/li&gt;
+&lt;li&gt;10 minutes for txAMQP examples (asynchronous bindings)&lt;/li&gt;
+&lt;li&gt;10 minutes for kombu examples (synchronous bindings)&lt;/li&gt;
+&lt;li&gt;5 minutes for questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;References:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.amqp.org/"&gt;http://www.amqp.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.rabbitmq.com/"&gt;http://www.rabbitmq.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.zeromq.org/"&gt;http://www.zeromq.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://qpid.apache.org/"&gt;http://qpid.apache.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://launchpad.net/txamqp"&gt;https://launchpad.net/txamqp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ask.github.com/kombu/"&gt;http://ask.github.com/kombu/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.amazon.com/dp/0321200683/"&gt;http://www.amazon.com/dp/0321200683/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Muharem Hrnjadovic</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/its-the-message-stupid-python-amqp.html</guid><category>amqp</category><category>asynchronous</category><category>patterns</category><category>performance</category><category>queues</category><category>scalability</category><category>technology</category></item></channel></rss>

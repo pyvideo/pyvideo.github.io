@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>Playdoh</title><link>https://pyvideo.org/chipy/playdoh.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Playdoh is Mozilla's starter kit for new Django projects. It aims to be
+secure-by-default and set up all the same goodies we use to scale for
+high traffic, perform background tasks, localize our sites in many
+languages, and other cool things.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kumar McMillan</dc:creator><pubDate>Thu, 14 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-14:chipy/playdoh.html</guid><category>chipy</category><category>playdoh</category></item><item><title>Tox</title><link>https://pyvideo.org/chipy/tox.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;It's a great new open source tool that helps you support all versions of
+python with your existing automated tests. It's not a test runner, it's
+a super test runner runner! Or something. There is no easy way to
+describe it which is why the front page of the website is sort of
+confusing, IMO. We use tox on the Nose project to make sure each code
+change doesn't break the tests in Python 2.4, 2.5, 2.6, 2.7, 3.0 or
+Jython. Not everybody targets so many environments but if you want to
+maintain a widely used module then you probably will want to use tox
+someday.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Here's our Hudson matrix setup w/ tox:
+&lt;a class="reference external" href="http://hudson.testrun.org/job/nose-unstable/"&gt;http://hudson.testrun.org/job/nose-
+unstable/&lt;/a&gt; (we just set
+this up recently which is why most builds were broken in one or two
+envs) I can also spend some time going over how we are currently
+maintaining a test suite that runs in both 2.x and 3.x simultaneously.&lt;/p&gt;
+&lt;p&gt;This will be our Best Meeting Ever!&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://codespeak.net/tox/"&gt;http://codespeak.net/tox/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://chipy.org/"&gt;http://chipy.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kumar McMillan</dc:creator><pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-11-11:chipy/tox.html</guid><category>chipy</category><category>testing</category><category>tox</category></item><item><title>How To Create Amazing Open Source Modules</title><link>https://pyvideo.org/djangocon-us-2013/how-to-create-amazing-open-source-modules.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;HOW TO CREATE AMAZING OPEN SOURCE MODULES&lt;/p&gt;
+&lt;p&gt;Tuesday 4 p.m.--4:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Novice&lt;/p&gt;
+&lt;p&gt;DESCRIPTION Every Django project will eventually benefit from a third
+party module. Whether you're considering publishing your first module or
+your next one, this talk will cover everything you need to know. The
+open source quilt is woven by each of us. How do you make sure your
+module is useful to the community? How do you accept patches? How do you
+maintain your module?&lt;/p&gt;
+&lt;p&gt;ABSTRACT Intended audience:&lt;/p&gt;
+&lt;p&gt;Python/Django developers who understand Python modules but are new to
+publishing them as open source Developers who have built several open
+source modules but want to get better at making them useful and
+effective Developers in closed source companies who want to share code
+with their team more effectively Anyone who wants to make Python
+software better for everyone A sampling of topics:&lt;/p&gt;
+&lt;p&gt;Documenting your module Ensuring stability Supporting multiple versions
+of Python Collaborating with the community&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kumar McMillan</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/how-to-create-amazing-open-source-modules.html</guid></item><item><title>Supporting All Versions of Python All The Time With Tox</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--supporting-all-versions-of-python-all.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Supporting All Versions of Python All The Time With Tox&lt;/p&gt;
+&lt;p&gt;Presented by Kumar McMillan&lt;/p&gt;
+&lt;p&gt;This talk explains the modern techniques that every module maintainer
+needs to know in order to support all major versions of Python. You
+probably already have a massive test suite using a tool like nosetests,
+py.test, unittest, or a custom runner. Using the tox command line tool,
+you'll see how to run your tests in Python 2.x, 3.x, Jython, and
+whatever else in parallel.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;tox is a new tool that lets you set up isolated virtual environments to
+test your module's deployment and compatibility with all major versions
+of Python. It's easy to install and is flexible enough that it probably
+already supports your existing test suite. With one simple command you
+can execute your test suite in each version of Python, you can build its
+documentation with Sphinx, and get a nice printout of the results. It
+has also been designed from the ground up to integrate into continuous
+integration (CI) tools like Hudson.&lt;/p&gt;
+&lt;p&gt;Using practical examples, this talk will show you how to toxify your
+existing test suite and trick it out with the tox.ini config file.
+You'll also see how to leverage Hudson's matrix build so that each code
+checkin will run tests in all versions of Python and report detailed
+failures.&lt;/p&gt;
+&lt;p&gt;Your app supports Python 3, right? No? Tox is the best way to develop in
+parallel with 2.x and 3.x. We'll go over how to set up tox for that.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kumar McMillan</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--supporting-all-versions-of-python-all.html</guid><category>ci</category><category>hudson</category><category>pycon</category><category>pycon2011</category><category>testing</category><category>tox</category></item></channel></rss>

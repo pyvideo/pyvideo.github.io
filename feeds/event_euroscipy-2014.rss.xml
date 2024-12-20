@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 22 Oct 2014 00:00:00 +0000</lastBuildDate><item><title>A Python based Post processing Toolset for Seismic Analyses</title><link>https://pyvideo.org/euroscipy-2014/a-python-based-post-processing-toolset-for-seismi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will discuss the design and implementation of a Python-based
+tool-set to aid in assessing the response of the UK's Advanced Gas
+Reactor nuclear power stations to earthquakes. The seismic analyses
+themselves are carried out with a commercial Finite Element solver, but
+understanding the raw data this produces requires customised
+post-processing and visualisation tools. Extending the existing tools
+had become increasingly difficult and a decision was made to develop a
+new, Python-based tool-set. This comprises of a post-processing
+framework (&amp;quot;aftershock&amp;quot;) which includes an an embedded Python
+interpreter, and a plotting package (&amp;quot;afterplot&amp;quot;) based on numpy and
+matplotlib.&lt;/p&gt;
+&lt;p&gt;The new tool-set had to be significantly more flexible and easier to
+maintain than the existing code-base, while allowing the majority of
+development to be carried out by engineers with little training in
+software development. The resulting architecture will be described with
+a focus on exploring how the design drivers were met and the successes
+and challenges arising from the choices made.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Steve Braiser</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/a-python-based-post-processing-toolset-for-seismi.html</guid></item><item><title>Accelerating Random Forests in Scikit Learn</title><link>https://pyvideo.org/euroscipy-2014/accelerating-random-forests-in-scikit-learn.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Random Forests are without contest one of the most robust, accurate and
+versatile tools for solving machine learning tasks. Implementing this
+algorithm properly and efficiently remains however a challenging task
+involving issues that are easily overlooked if not considered with care.
+In this talk, we present the Random Forests implementation developed
+within the Scikit-Learn machine learning library. In particular, we
+describe the iterative team efforts that led us to gradually improve our
+codebase and eventually make Scikit-Learn's Random Forests one of the
+most efficient implementations in the scientific ecosystem, across all
+libraries and programming languages. Algorithmic and technical
+optimizations that have made this possible include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;An efficient formulation of the decision tree algorithm, tailored for
+Random Forests;&lt;/li&gt;
+&lt;li&gt;Cythonization of the tree induction algorithm;&lt;/li&gt;
+&lt;li&gt;CPU cache optimizations, through low-level organization of data into
+contiguous memory blocks;&lt;/li&gt;
+&lt;li&gt;Efficient multi-threading through GIL-free routines;&lt;/li&gt;
+&lt;li&gt;A dedicated sorting procedure, taking into account the properties of
+data;&lt;/li&gt;
+&lt;li&gt;Shared pre-computations whenever critical.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Overall, we believe that lessons learned from this case study extend to
+a broad range of scientific applications and may be of interest to
+anybody doing data analysis in Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gilles Louppe</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/accelerating-random-forests-in-scikit-learn.html</guid></item><item><title>Advanced Python Profiling</title><link>https://pyvideo.org/euroscipy-2014/advanced-python-profiling.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yury V Zaytsev</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/advanced-python-profiling.html</guid></item><item><title>Developing Scientific Simulation Systems</title><link>https://pyvideo.org/euroscipy-2014/developing-scientific-simulation-systems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scientific simulation models often need to incorporate many aspects into
+a working software system. This talk gives an overview of
+&lt;a class="reference external" href="http://www.pitlakq.com/"&gt;PITLAKQ&lt;/a&gt;, a complex, coupled model for
+water quality predictions of pit lakes. The focus is on experiences
+gained that might be useful for similar projects from other domains.
+This includes wrapping of legacy code, creating flexible but simple to
+use model input approaches and simplifying automation by users.
+Description&lt;/p&gt;
+&lt;p&gt;The model PITLAKQ helps to predict the water quality of pit lakes. These
+lakes can form in voids created by mining and may pose considerable
+environmental challenges. PITLAKQ couples several existing numerical
+models and adds lots of new functionality to account for the complex
+interactions of hydrodynamics, geochemical processes and anthropogenic
+influences.&lt;/p&gt;
+&lt;p&gt;Obviously, there is lots of scientific details. The talk only gives a
+very short overview of the functionality of the software. The main focus
+is on general principles that can be applied to other domains of
+scientific modeling. This includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;wrapping legacy Fortran code&lt;/li&gt;
+&lt;li&gt;coupling models from different domains&lt;/li&gt;
+&lt;li&gt;creating a simple, yet flexible input system for model users&lt;/li&gt;
+&lt;li&gt;simplifying automation of simulation runs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I think the lessons I learned over the last 15 years I've been working
+on this project can be useful for other scientists who need to solve
+simulation and modeling problems in other fields.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mike Müller</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/developing-scientific-simulation-systems.html</guid></item><item><title>Efficient large data operations with Biggus</title><link>https://pyvideo.org/euroscipy-2014/efficient-large-data-operations-with-biggus.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Biggus is a lightweight pure-Python package which implements lazy
+operations on numpy array-like objects. This provides dramatically
+improved efficiency in analysing large datasets, for minimal additional
+effort in the client code.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;As scientific datasets continue to grow exponentially in size, the
+resource requirements of even simple analyses can quickly grow to become
+a problem -- e.g. the job takes an unreasonably long time, or simply
+runs out of space.&lt;/p&gt;
+&lt;p&gt;Existing solutions to this may be powerful, but can also come with a
+large complexity overhead, especially for the non-expert user. This
+makes adapting an existing analysis to the needs of larger datasets
+potentially very costly.&lt;/p&gt;
+&lt;p&gt;Biggus provides simple abstractions of data access and calculations
+which provide lazy evaluation. It exposes this as simple virtual array
+object which mimics a numpy array. Thus, it does not require the user to
+re-cast an operation in unfamiliar terms, or specify unrelated details
+of data storage or concurrency factors.&lt;/p&gt;
+&lt;p&gt;The lazy evaluation approach allows optimised resource usage for both
+storage accesses and the parallelisation of calculations. Pure Python is
+well suited to describing and implementing these techniques, and the
+resulting implementation is easily accessible to the average user.&lt;/p&gt;
+&lt;p&gt;At the Met Office, we develop data analysis tools for a large community
+of research scientists. We developed
+&lt;a class="reference external" href="https://github.com/SciTools/biggus"&gt;Biggus&lt;/a&gt; as a resource for the
+Iris project, our next-generation analysis library for meteorological
+and oceanographic data (see: &lt;a class="reference external" href="http://scitools.org.uk/iris/"&gt;http://scitools.org.uk/iris/&lt;/a&gt;). While Biggus
+is still work-in-progress, within Iris it is already delivering
+significant benefit, in tasks such as catalogueing large datasets and
+accelerating statistical calculations. Here, performance already exceeds
+that of other standard software toolsets.&lt;/p&gt;
+&lt;div class="section" id="schedule"&gt;
+&lt;h4&gt;Schedule&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;the problems Biggus is aiming to solve, and techniques employed&lt;/li&gt;
+&lt;li&gt;an overview of the architecture and code of the current
+implementation&lt;/li&gt;
+&lt;li&gt;a demonstration of current performance, in ease-of-use and efficiency
+benefits&lt;/li&gt;
+&lt;li&gt;suggestions for future developments; how to get involved; questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Patrick Peglar</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/efficient-large-data-operations-with-biggus.html</guid></item><item><title>Firedrake: a High-level Portable Finite Element Computation Framework</title><link>https://pyvideo.org/euroscipy-2014/firedrake-a-high-level-portable-finite-element-c.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In an ideal world, scientific applications are computationally
+efficient, maintainable, composable and allow scientists to work very
+productively. In this talk we demonstrate that these goals are
+achievable for a specific application domain by choosing suitable
+domain-specific abstractions implemented in Python that encapsulate
+domain knowledge with a high degree of expressiveness.&lt;/p&gt;
+&lt;p&gt;We present &lt;a class="reference external" href="http://firedrakeproject.org/"&gt;Firedrake&lt;/a&gt;, a high-level
+Python framework for the portable solution of partial differential
+equations on unstructured meshes with the finite element method widely
+used in science and engineering. Firedrake is built on top of
+&lt;a class="reference external" href="http://op2.github.io/PyOP2"&gt;PyOP2&lt;/a&gt;, a domain-specific language
+embedded in Python for parallel mesh-based computations. Finite element
+local assembly operations execute the same computational kernel for
+every element of the mesh and is therefore efficiently parallelisable.&lt;/p&gt;
+&lt;p&gt;Firedrake allows scientists to describe variational forms and
+discretisations for finite element problems symbolically in a notation
+very close to the maths using the Unified Form Language
+&lt;a class="reference external" href="https://bitbucket.org/fenics-project/ufl/"&gt;UFL&lt;/a&gt; from the &lt;a class="reference external" href="http://fenicsproject.org/"&gt;FEniCS
+project&lt;/a&gt;. Variational forms are translated
+into computational kernels by the FEniCS Form Compiler
+&lt;a class="reference external" href="https://bitbucket.org/fenics-project/ffc/"&gt;FFC&lt;/a&gt;. Numerical linear
+algebra is delegated to PETSc, leveraged via its petsc4py interface.&lt;/p&gt;
+&lt;p&gt;PyOP2 abstracts away the performance-portable parallel execution of
+these kernels on a range of hardware architectures, targeting multi-core
+CPUs with OpenMP and GPUs and accelerators with PyCUDA and PyOpenCL and
+distributed parallel computations with mpi4py. Backend-specific code
+tailored to each specific computation is generated, just-in-time
+compiled and efficiently scheduled for parallel execution at runtime.&lt;/p&gt;
+&lt;p&gt;Due to the composability of the Firedrake and PyOP2 abstractions,
+optimised implementations for different hardware architectures can be
+automatically generated without any changes to a single high-level
+source. Performance matches or exceeds what is realistically attainable
+by hand-written code. Both projects are open source and developed at
+Imperial College London.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Florian Rathgeber</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/firedrake-a-high-level-portable-finite-element-c.html</guid></item><item><title>Introducing Vispy's high level modules: easy, powerful visualization</title><link>https://pyvideo.org/euroscipy-2014/introducing-vispys-high-level-modules-easy-pow.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vispy is an OpenGL-based interactive visualization library in Python.
+Its goal is to make it easy to create beautiful and fast dynamic
+visualizations. For example, scientific plotting of tens of millions of
+points, interacting with complex polygonial models, and (dynamic) volume
+rendering.&lt;/p&gt;
+&lt;p&gt;Vispy is a young library and very actively developed. Until recently, a
+user would have to know OpenGL in order to work with Vispy. Now that the
+higher levels of the package take shape, this is no longer the case.
+When these layers are finalized, the number of people that can benefit
+from vispy will significantly increase.&lt;/p&gt;
+&lt;p&gt;We will give a brief overview of the Vispy package, and focus on the
+higher level modules that will make it easy to visualize images, lines,
+etc., and organize these object in a scene graph. Of course we will
+demonstrate this with several examples.&lt;/p&gt;
+&lt;p&gt;We will also talk about our progress in other areas, such as a browser
+backend and integration with the IPython notebook.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://vispy.org/"&gt;http://vispy.org/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Almar Klein</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/introducing-vispys-high-level-modules-easy-pow.html</guid></item><item><title>IPython Protocol, Kernals and new features</title><link>https://pyvideo.org/euroscipy-2014/ipython-protocol-kernals-and-new-features.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A key idea behind IPython is decoupling code execution from user
+interfaces. IPython relies on a documented protocol, which can be
+implemented by different frontends and different kernels. By
+implementing it, frontends and kernels gain the ability to communicate
+regardless of which language they're written in. The IPython project
+maintains three different frontends, while there are multiple third
+party frontends and kernels already in use.&lt;/p&gt;
+&lt;p&gt;We will show some important features that such a protocol permits, by
+demonstrating some of our alternative frontends, as well as kernels that
+people have written in languages such as Julia and R. Our presentation
+will also feature interactive widgets, a new feature in IPython 2.0, and
+preview the upcoming features that will allow a single notebook server
+to start different types of kernel.&lt;/p&gt;
+&lt;p&gt;This will demonstrate that the IPython Notebook is the perfect polyglot
+tool for scientific computation workflows.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matthias Bussionnier</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/ipython-protocol-kernals-and-new-features.html</guid></item><item><title>Keynote: Crossing Language Barriers with Julia, SciPy, IPython</title><link>https://pyvideo.org/euroscipy-2014/keynote-crossing-language-barriers-with-julia-s.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Julia (julialang.org) is a new language targeted at scientific
+computing, which combines the high-level abstractions and dynamic
+interactivity of languages like Python with the performance of low-level
+languages like C, thanks to being designed from the beginning for
+efficient just-in-time compilation by LLVM. But a major challenge for
+any young programming language is the availability of a large ecosystem
+of mature libraries and tools. To overcome this difficulty, Julia is
+&amp;quot;bootstrapping&amp;quot; off of the Python ecosystem, both by making it easy to
+call Python code and also by exploiting infrastructure such as
+IPython/Jupyter.&lt;/p&gt;
+&lt;p&gt;This talk will begin with an introduction to the Julia language, both
+explaining why it is able to attain C-like performance in many cases. At
+the same time, Julia supports a number of unusual programming features,
+such as multiple dispatch (a kind of generalization of object-oriented
+programming) and metaprogramming. We will also describe how Julia
+connects with Python via the PyCall library, which enables
+straightforward, low-overhead calls to Python libraries, copy-free
+sharing of NumPy arrays and other large data structures, and even
+sharing higher-order callback functions. This gives Julia direct access
+to SciPy and numerous other Python packages, such as SymPy and
+Matplotlib. Another key component of the Python universe is IPython, and
+we will explain how connecting to the IPython &amp;quot;Jupyter&amp;quot; front-end from
+an IJulia back-end allows Julia to benefit from IPython's rich
+multimedia notebook interface, and how Julia can even use IPython 2's
+interactive-widget infrastructure to provide truly interactive
+computations.&lt;/p&gt;
+&lt;p&gt;Although most Julia–Python interaction is from Julia users calling
+Python, there is potential for benefits to flow in both directions in
+the future. The same PyCall software that allows Julia code to call
+Python can also allow Python code to call Julia, with the same
+data-sharing and rich interactivity. And Julia code can also be compiled
+to C-compatible interfaces—currently, this is mainly used to pass Julia
+callback routines to C library functions (including libpython), but in
+the future the same facility should allow the generation of C-callable
+libraries written in Julia.&lt;/p&gt;
+&lt;p&gt;The presentation material and IJulia notebooks for this keynote can be
+found at: &lt;a class="reference external" href="https://github.com/stevengj/Julia-EuroSciPy14"&gt;https://github.com/stevengj/Julia-EuroSciPy14&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephen G. Johnson</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/keynote-crossing-language-barriers-with-julia-s.html</guid></item><item><title>Keynote: Python Programming in Science Education</title><link>https://pyvideo.org/euroscipy-2014/keynote-python-programming-in-science-education.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Nuttall</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/keynote-python-programming-in-science-education.html</guid></item><item><title>Lightning talks</title><link>https://pyvideo.org/euroscipy-2014/lightning-talks-14.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Various speakers</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/lightning-talks-14.html</guid><category>lightning talks</category></item><item><title>Neural Networks for Computer Vision</title><link>https://pyvideo.org/euroscipy-2014/neural-networks-for-computer-vision.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Neural networks with many layers are known as &amp;quot;deep&amp;quot; neural networks.
+While the phrase &amp;quot;deep learning&amp;quot; to describe deep neural networks is
+new, the ideas behind these networks have been around for many years.
+Deep neural networks attempt to learn concise, hierarchical
+representations of complex data, and recent advances in research have
+made it much easier to use these networks on many tasks, including
+computer vision. Due to massive increases in compute power, available
+data, and algorithmic techniques, neural networks have greatly improved
+the state of the art for many aspects of computer vision including
+object recognition and localization.&lt;/p&gt;
+&lt;p&gt;Two key Python packages (pylearn2 and theano) enable machine learning
+researchers easily develop new architectures and algorithms for neural
+networks which utilize GPU processing. This specialized hardware
+improves the computational feasibility of big neural networks, and GPU
+programming was a key driver (along with the development of a technique
+called dropout) in the resurgence of neural networks for machine
+learning tasks.&lt;/p&gt;
+&lt;p&gt;Utilizing networks trained on extremely large compute farms as
+&amp;quot;black-box&amp;quot; preprocessing, a consumer grade desktop or laptop can
+approach state of the art results using standard machine learning
+techniques such as logistic regression and support vector machines
+(SVM). This idea has serious potential in the embedded/FPGA/ASIC space
+as well.&lt;/p&gt;
+&lt;p&gt;The python interface to pylearn2 will be heavily discussed, while also
+using the preprocessing features of scikit-learn for data preparation.
+There will also be discussion of the recent advances for pre-trained
+neural networks as preprocessing.&lt;/p&gt;
+&lt;p&gt;At the end of this talk, I hope you will understand what &amp;quot;deep learning&amp;quot;
+really means, how to apply these techniques to image data using Python,
+and how these techniques will shape the future of machine learning
+research and its applications.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kyle Kastner</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/neural-networks-for-computer-vision.html</guid></item><item><title>Plotly Collaborative Python and Matplotlib Plotting</title><link>https://pyvideo.org/euroscipy-2014/plotly-collaborative-python-and-matplotlib-plotti.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Plotly's Python API and sandbox let you make and share beautiful,
+web-based plots. This talk will be a walk-through of Plotly's library.
+We will craft and embed interactive graphs within an IPython Notebook
+from our gallery, use Plotly's GUI to edit and share graphs, and use
+Plotly's matplotlib wrapper to create web-based graphs and data files
+from matplotlib scripts.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="plotly-github-for-data-and-graphs"&gt;
+&lt;h4&gt;Plotly: GitHub for Data and Graphs&lt;/h4&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://plot.ly/"&gt;Plotly&lt;/a&gt; is an online plotting platform. Think of
+it like GitHub, but for sharing data, graphs, and scripts for plotting.
+Plotly has a GUI and APIs for making graphs with Python, R, MATLAB,
+Perl, Julia, Arduino, Ruby, Raspberry Pi, and REST. The APIs let users
+make and share web-based graphs and interface a desktop environment with
+Plotly. Public sharing is free, users own their data, and users control
+whether data and graphs are public or private. Plotly also always pairs
+data and graphs, and lets you import by uploading or
+&lt;a class="reference external" href="https://github.com/plotly/Streaming-Demos"&gt;live-streaming&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-we-ll-build"&gt;
+&lt;h4&gt;What We'll Build&lt;/h4&gt;
+&lt;p&gt;Plotly allows users to make graphs with the GUI, Python, or other
+programming languages. We will make a number of beautiful graphs. We
+will make graphs with Python, share a graph, and then edit with the GUI
+or another programming language of choice. We will also uses Plotly's
+&lt;a class="reference external" href="http://nbviewer.ipython.org/github/plotly/IPython-plotly/blob/master/See%20more/Plotly%20and%20mpld3.ipynb"&gt;matplotlib
+wrapper&lt;/a&gt;
+to make web-based Plotly graphs from matplotlib figures.&lt;/p&gt;
+&lt;p&gt;We will add data to a pre-existing graph, making a new version and
+always reverting back to previous versions. We will make a graph and
+store scripts, data sets, graphs, and past versions of files in Plotly.&lt;/p&gt;
+&lt;p&gt;Authors, and journalists from the and Wired Science use these Plotly
+features and the capacity to embed graphs in an iframe. We will conclude
+by showing how to optimize your embedding.&lt;/p&gt;
+&lt;p&gt;More examples can be found at &lt;a class="reference external" href="https://plot.ly/python/"&gt;https://plot.ly/python/&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matthew Sundquist</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/plotly-collaborative-python-and-matplotlib-plotti.html</guid></item><item><title>PyFAI: a Python library for high performance azimuthal integration on GPU</title><link>https://pyvideo.org/euroscipy-2014/pyfai-a-python-library-for-high-performance-azim.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the field of X-Ray diffraction, 2D area detectors like ccd or pixel
+detectors have become popular in the last 15 years for diffraction
+experiments thanks to the large solid-angle coverage and to their better
+signal linearity. These detectors have a large sensitive area of
+millions of pixels with high spatial resolution and are getting fast:
+one kilo-Hertz is expected this year. The software package pyFAI we
+present here has been designed to reduce X-ray 2D-diffraction images
+into 1D curves (azimuthal integration) usable by other software for
+in-depth analysis such as Rietveld refinement, ... Other averaging
+patterns like 2D integration, image distortion, ... are also available.
+PyFAI is a library featuring a clean pythonic interface and aiming at
+being integrated into other software. But it also needs to cope with the
+data deluge coming from the detector...&lt;/p&gt;
+&lt;p&gt;In this contribution, we would like to highlight the performance reached
+by this library. To get today’s computers best performances, one needs
+to have parallelized code and azimuthal integration is not directly
+parallelizable. After a scatter-to-gather transformation of the
+algorithm, it got parallel (Cython implementation). Other optimizations
+have been used to get the best performances out of GPU (compensated
+summation, partial parallel reductions, ...).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Giannis Ashiotis</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/pyfai-a-python-library-for-high-performance-azim.html</guid></item><item><title>pyFRET: A Python library for Analysis of Single Molecule Fluorescence Data</title><link>https://pyvideo.org/euroscipy-2014/pyfret-py-lib-for-analysis-of-single-molecule-f.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rebecca R. Murphy</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/pyfret-py-lib-for-analysis-of-single-molecule-f.html</guid></item><item><title>Scriptability in scientific applictions</title><link>https://pyvideo.org/euroscipy-2014/scriptability-in-scientific-applictions.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Didrik Pinte</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/scriptability-in-scientific-applictions.html</guid></item><item><title>Speeding up Scientific Python code using Cython</title><link>https://pyvideo.org/euroscipy-2014/speeding-up-scientific-python-code-using-cython.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stéfan van der Walt</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/speeding-up-scientific-python-code-using-cython.html</guid></item><item><title>State of the Astropy universe</title><link>https://pyvideo.org/euroscipy-2014/state-of-the-astropy-universe.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The &lt;a class="reference external" href="http://www.astropy.org/"&gt;Astropy Project&lt;/a&gt; is a community effort
+to develop a single core package for Astronomy in Python and foster
+interoperability between Python astronomy packages. In addition an
+ecosystem of &lt;a class="reference external" href="http://www.astropy.org/affiliated/index.html"&gt;Astropy affiliated
+packages&lt;/a&gt; is growing,
+some of which are planned for inclusion in the Astropy core when they
+are matured, some with specialised functionality will remain as separate
+repositories.&lt;/p&gt;
+&lt;p&gt;I will give an overview of the features and implementation of the
+Astropy package, focusing on parts that are more generally useful for
+scientists and engineers (e.g.
+&lt;a class="reference external" href="http://docs.astropy.org/en/latest/units/index.html"&gt;astropy.units&lt;/a&gt;
+and
+&lt;a class="reference external" href="http://docs.astropy.org/en/latest/modeling/index.html"&gt;astropy.modeling&lt;/a&gt;)
+and highlight recent developments in the core and affiliated packages.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christoph Deil</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/state-of-the-astropy-universe.html</guid></item><item><title>SunPy for Solar Physics</title><link>https://pyvideo.org/euroscipy-2014/sunpy-for-solar-physics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;SunPy is a data-analysis library specialising in providing the software
+necessary to analyse solar and heliospheric datasets in Python. SunPy is
+open-source software (BSD licence) and has an open and transparent
+development workflow that anyone can contribute to. SunPy provides
+access to solar data through use of the Virtual Solar Observatory (VSO),
+the Heliophysics Event Knowledgebase (HEK), and the HELiophysics
+Integrated Observatory (HELIO) webservice APIs. It currently supports
+image data from major solar missions (e.g., SDO, SOHO, STEREO, and
+IRIS), time-series data from missions such as GOES, SDO/EVE, and
+PROBA2/LYRA, and radio spectra from ground-based e-Callisto and
+STEREO/SWAVES. This talk describes SunPy's core functionality, provides
+examples of solar data analysis in SunPy and layouts the roadmap for
+SunPy's future.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stuart Mumford</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/sunpy-for-solar-physics.html</guid></item><item><title>The failure of python object serialization: why HPC in python is broken, and how to fix it</title><link>https://pyvideo.org/euroscipy-2014/the-failure-of-python-object-serialization-why-h.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Parallel and asynchronous computing in python is crippled by pickle's
+poor object serialization. However, a more robust serialization package
+would drastically improve the situation. To leverage the cores found in
+modern processors we need to communicate functions between different
+processes -- and that means callables must be serialized without pickle
+barfing. Similarly, parallel and distributed computing with MPI, GPUs,
+sockets, and across other process boundaries all need serialized
+functions (or other callables). So why is pickling in python so broken?
+Python's ability to leverage these awesome communication technologies is
+limited by python's own inability to be a fully serializable language.
+In actuality, serialization in python is quite limited, and for really
+no good reason.&lt;/p&gt;
+&lt;p&gt;Many raise security concerns for full object serialization, however it
+can be argued that it is not pickle's responsibility to do proper
+authentication. In fact, one could apply rather insecure serialization
+of all objects the objects were all sent across RSA-encrypted
+ssh-tunnels, for example.&lt;/p&gt;
+&lt;p&gt;Dill is a serialization package that strives to serialize all of python.
+We have forked python's multiprocessing to use dill. Dill can also be
+leveraged by mpi4py, ipython, and other parallel or distributed python
+packages. Dill serves as the backbone for a distributed parallel
+computing framework that is being used to design the next generation of
+large-scale heterogeneous computing platforms, and has been leveraged in
+large-scale calculations of risk and uncertainty. Dill has been used to
+enable state persistence and recovery, global caching, and the
+coordination of distributed parallel calculations across a network of
+the world's largest computers.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://pythonhosted.org/dill"&gt;http://pythonhosted.org/dill&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/uqfoundation"&gt;https://github.com/uqfoundation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/"&gt;http://matthewrocklin.com/blog/work/2013/12/05/Parallelism-and-Serialization/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1"&gt;http://stackoverflow.com/questions/19984152/what-can-multiprocessing-and-dill-do-together?rq=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY"&gt;https://groups.google.com/forum/#!topic/mpi4py/1fd4FwdgpWY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://nbviewer.ipython.org/gist/anonymous/5241793"&gt;http://nbviewer.ipython.org/gist/anonymous/5241793&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael McKerns</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/the-failure-of-python-object-serialization-why-h.html</guid></item><item><title>The Radio astronomical TRAnsient detection Pipeline (TRAP)</title><link>https://pyvideo.org/euroscipy-2014/the-radio-astronomical-transient-detection-pipeli.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;LOFAR, the Low Frequency Array, is an innovative new radio telescope in
+the Netherlands, which will continuously monitor the radio sky. The
+study of transient sources is one of the key science projects of LOFAR.
+Under this remit come all time-variable astronomical radio sources,
+including pulsars, gamma-ray bursts, X-ray binaries, radio supernovae,
+flare stars, and even exo-planets. With its continuous monitoring of a
+large area of sky, it is hoped that LOFAR will detect many new transient
+events, and provide alerts to the international community for follow-up
+observations at other wavelengths.&lt;/p&gt;
+&lt;p&gt;To detect and analyse transient sources we’ve created a software
+pipeline named TRAP. The TRAP is almost completely written in Python. In
+short the TRAP consists of:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Source detection&lt;/li&gt;
+&lt;li&gt;Storing to database&lt;/li&gt;
+&lt;li&gt;Association in time and frequency (in database)&lt;/li&gt;
+&lt;li&gt;Visualising results (webinterface)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Since the datarates in the pipeline are high, key in the design of our
+pipeline is that we move most calculations to the database. This implies
+complex and math heavy queries. To assist in managing these queries we
+use SQLAlchemy. TRAP can be used on various database backends like
+PostgreSQL, but also the less known MonetDB. MonetDB is a column store
+database which is believed to outperform traditional SQL databases on
+huge datasets. To interact with MonetDB we developed a Python API,
+SQLALchemy dialect and Django backend. For visualisation of the results
+we’ve created an interactive browser based web interface based on
+Django, bootstrap and highcharts. For parallising the image processing
+we use Celery. In my talk i’ll explain why we use these frameworks and
+dive in the internals of our pipeline.&lt;/p&gt;
+&lt;p&gt;Target audience is people that are interested in how to build a
+scientific processing pipline using off the shelf libraries.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gijs Molenaar</dc:creator><pubDate>Wed, 22 Oct 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-10-22:euroscipy-2014/the-radio-astronomical-transient-detection-pipeli.html</guid></item></channel></rss>
