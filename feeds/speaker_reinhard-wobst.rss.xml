@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 17 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>OpenOffice-Dokumente selbst modifizieren</title><link>https://pyvideo.org/pycon-de-2012/openoffice-dokumente-selbst-modifizieren.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Der Vortrag stellt eine Python-Klasse vor, die das fast beliebige
+Modifizieren von Open/LibreOffice-Dokumenten bequem ermöglicht. Es geht
+mehr um die Vorstellung einer Methode als um ein fertiges Werkzeug. So
+manche Aufgabe lässt sich damit erheblich einfacher bewerkstelligen als
+mit Makros oder über die pyUNO-Schnittstelle.&lt;/p&gt;
+&lt;p&gt;Hat man eine größere Zahl von ODF-Files (also im Open Document Format)
+oder ein großes ODF-Dokument an vielen Stellen in gleicher Weise zu
+bearbeiten, ist das ermüdend, zeitaufwändig und fehleranfällig. Wozu
+gibt es Computer? Open/LibreOffice erlaubt zwar Makros, doch deren
+Leistung ist beschränkt, und die pyUNO-Schnittstelle ist kompliziert,
+schlecht dokumentiert und noch nicht ausgetestet.&lt;/p&gt;
+&lt;p&gt;Es geht auch anders: ODF-Files sind Zip-Archive von XML-Files, und diese
+lassen sich mit Pythonskripten einfach bearbeiten. Das ODF-Format ist
+relativ leicht zu verstehen (der Standard ist gut lesbar), der Phantasie
+des Anwenders sind keine Grenzen gesetzt - sei es, um manuelle
+Formatierungen zu markieren, in bestimmte Tabellen Spalten einzufügen
+oder diese um Zeilen zu ergänzen, deren Berechnung partout nicht ins
+Konzept der Calc-Formeln passen will.&lt;/p&gt;
+&lt;p&gt;Dabei sind allerdings einige kleine Stolpersteine zu beachten, auf die
+der Vortrag hinweist. Die hier vorgestellte Klasse ist eine mögliche
+Methode, um sich auf die &amp;quot;wesentlichen Dinge&amp;quot; konzentrieren zu können.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Reinhard Wobst</dc:creator><pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-31:pycon-de-2012/openoffice-dokumente-selbst-modifizieren.html</guid></item><item><title>"White Box Debugging" - Debugger für Unittests nutzen</title><link>https://pyvideo.org/pycon-de-2012/white-box-debugging-debugger-f-r-unittests-nut.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;&amp;quot;White Box Testing&amp;quot; ist das Testen von internen Zuständen zur Laufzeit,
+während ubliche Unittests in der Regel nur Funktionen rufen. Man kann
+aber mittels eines Debuggers White Box Testing durchführen - ein
+Pythonskript erlaubt dies fur Python mit pdb wie auch für C/C++ -
+Programme mit gdb.&lt;/p&gt;
+&lt;p&gt;Unittests sind ohne Frage unerlässlich, aber oft aufwändig zu
+programmieren und beschränkt aussagefähig, da in der Regel nur einzelne
+Funktionen oder Module als Black Box getestet werden können. Nicht
+selten ist sogar gesonderter Code notwendig, um sinnvolle Tests zu
+ermöglichen.&lt;/p&gt;
+&lt;p&gt;Aussagekräftiger und naheliegender wären Tests auf Werte mitten im Code,
+doch solch eine Funktionalität bietet bisher nur die assert-Anweisung,
+die bei Fehlern mit einem wenig aussagekräftigen Abbruch endet.&lt;/p&gt;
+&lt;p&gt;Die Idee des Python-Skripts &amp;quot;wbd&amp;quot; (&amp;quot;white box debugging&amp;quot;) ist, aus
+Kommentaren im Quelltext Konfigurationsfiles für Debugger zu erzeugen,
+so dass an bedingten Breakpoints Tests stattfinden. Beim Fehler landet
+man gleich im Debugger und kann die Umgebung analysieren.&lt;/p&gt;
+&lt;p&gt;Das funktioniert derzeit für Pythonskripte und C/C++-Programme und ist
+auch gut als Hilfsmittel beim Debuggen selbst einzusetzen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Reinhard Wobst</dc:creator><pubDate>Wed, 31 Oct 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-10-31:pycon-de-2012/white-box-debugging-debugger-f-r-unittests-nut.html</guid></item><item><title>boost.python - die Nabelschnur zu Python</title><link>https://pyvideo.org/pycon-de-2013/boostpython-die-nabelschnur-zu-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Mit boost.python kann man Klassen und Klasseninstanzen an einen
+eingebetteten Python-Interpreter weiterreichen und die Instanzen dort
+verändern; ebenso lassen sich Python-Objekte bequem in C++ verarbeiten.
+Gegenüber der Python-C-API entfällt das fehlerträchtige
+Referenz-Handling, und der Stil ist näher an Python. Eigentlich ist
+diese Bibliothek die erste Wahl für diese Situation, doch leider ist die
+Dokumentation völlig unzureichend. Hilfe gibt es im Netz, doch
+unstrukturiert und nicht immer optimal. Der Vortrag geht auf
+Missverständnisse und typische Fehler ein, die bei der Nutzung
+wenigstens anfangs auftreten, zeigt die (noch vorhandenen) Grenzen auf
+und bietet einige &amp;quot;Kochrezepte&amp;quot;. Außerdem zeigt er, wozu das alles in
+der Praxis gut sein kann.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Reinhard Wobst</dc:creator><pubDate>Thu, 17 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-17:pycon-de-2013/boostpython-die-nabelschnur-zu-python.html</guid><category>boost.python</category><category>embedded python</category><category>python-c-api</category></item></channel></rss>

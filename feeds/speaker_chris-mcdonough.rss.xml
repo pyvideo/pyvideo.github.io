@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 11 Apr 2015 00:00:00 +0000</lastBuildDate><item><title>About Django from the Pyramid Guy</title><link>https://pyvideo.org/djangocon-us-2012/about-django-from-the-pyramid-guy.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;An opinionated recounting of the features Django shares with the Pyramid
+web framework, and how the two frameworks differ, as well as a
+prescription for collaboration between the Django and Pyramid
+communities.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="section" id="who-am-i"&gt;
+&lt;h4&gt;Who Am I&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;BBS nerd in the 80s.&lt;/li&gt;
+&lt;li&gt;Bad Perl hacker until Python. Came to Python via Zope in 1999. Worked
+at Digital Creations (aka Zope Corporation) until 2003.&lt;/li&gt;
+&lt;li&gt;Primary author of: Pyramid web framework, Supervisor UNIX process
+control system, Deform form system, Repoze collection of middleware,
+and other unmentionables. Contributor to Zope, WebOb, and lots of
+other OSS projects.&lt;/li&gt;
+&lt;li&gt;Quoting Glyph: &amp;quot;I've been doing IRC support for 10 years, so I'm
+pretty much dead inside.&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-is-a-web-framework"&gt;
+&lt;h4&gt;What is a Web Framework&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A web framework receives a request, calls user code in order to
+return a response. Everything else is a bonus.&lt;/li&gt;
+&lt;li&gt;Arguments about how a web framework implements &amp;quot;MVC&amp;quot; are usually
+distractions. Django gets this right.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-docs-do-it-right"&gt;
+&lt;h4&gt;Django Docs Do It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django docs broke the Python documentation curve.&lt;/li&gt;
+&lt;li&gt;Great resources for multiple audiences.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-views-do-it-right"&gt;
+&lt;h4&gt;Django Views Do It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No magical globals (request or response).&lt;/li&gt;
+&lt;li&gt;Django view lookup and execution is very fast.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-forms-do-it-right"&gt;
+&lt;h4&gt;Django Forms Do It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Decoupling of models from forms.&lt;/li&gt;
+&lt;li&gt;Optional recoupling via modelforms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-convenience-vs-explicitness"&gt;
+&lt;h4&gt;Django Convenience vs. Explicitness&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;No thread locals.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-extensibility-does-it-right"&gt;
+&lt;h4&gt;Django Extensibility Does It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Replaceable backends for authentication.&lt;/li&gt;
+&lt;li&gt;Replaceable backends for storage.&lt;/li&gt;
+&lt;li&gt;Encourages an environment of plugins at different levels.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-defaults-do-it-right"&gt;
+&lt;h4&gt;Django Defaults Do It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django provides people with unambiguous ways to solve 80% of their
+web development problems.&lt;/li&gt;
+&lt;li&gt;Doesn't prevent specialization or use of external libraries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-reality-does-it-right"&gt;
+&lt;h4&gt;Django Reality Does It Right&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Can't argue with success.&lt;/li&gt;
+&lt;li&gt;Scores of very successful sites built using Django.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-is-pyramid"&gt;
+&lt;h4&gt;What is Pyramid&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pyramid handles view lookup and execution and provides related
+convenience APIs. It also allows extensive configuration of these
+things.&lt;/li&gt;
+&lt;li&gt;Pyramid is a corner of a corner of Django, magnified.&lt;/li&gt;
+&lt;li&gt;James Bennett's PyCon 2012 &amp;quot;Django In Depth&amp;quot; tutorial: ~20 minutes
+out of 3 hours devoted to things that Pyramid actually does:
+low-level template API, view lookup and execution, HTTP responses,
+middleware.&lt;/li&gt;
+&lt;li&gt;Pyramid is independent of any particular peristence system. It has no
+built-in form generation system. It does not prefer any particular
+templating system. It does not ship with an admininstrative
+application.&lt;/li&gt;
+&lt;li&gt;Something like Pyramid could be used to build something like Django.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pylons-project"&gt;
+&lt;h4&gt;Pylons Project&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Project lead consolidation decision.&lt;/li&gt;
+&lt;li&gt;Attempt to get Pylons, TurboGears and &lt;tt class="docutils literal"&gt;repoze.bfg&lt;/tt&gt; communities
+rowing in the same direction.&lt;/li&gt;
+&lt;li&gt;Pylons 1.x web framework shifted into “legacy” status. Maintained
+indefinitely.&lt;/li&gt;
+&lt;li&gt;New development: Pyramid and related.&lt;/li&gt;
+&lt;li&gt;Turbogears: wildcard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="is-pyramid-a-microframework"&gt;
+&lt;h4&gt;Is Pyramid a Microframework?&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pyramid is sort of microframework-like. You can write a Pyramid
+application in a single file.&lt;/li&gt;
+&lt;li&gt;Self-identifying microframeworks tend to suggest application
+development patterns to its users which promote convenience over
+explicitness. Pyramid (for better or worse) does not do this, because
+it needs to be useful in larger systems where these patterns can lead
+to extensibility problems.&lt;/li&gt;
+&lt;li&gt;In reality, the term &amp;quot;microframework&amp;quot; is a marketing term, not a
+technological term, so whether the answer is yes or no doesn't really
+matter too much unless you have a stake in the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="small-pyramid-program"&gt;
+&lt;h4&gt;Small Pyramid Program&lt;/h4&gt;
+&lt;pre class="literal-block"&gt;
+from wsgiref.simple_server import make_server
+from pyramid.config import Configurator
+from pyramid.response import Response
+
+def hello_world(request):
+   return Response('Hello %(name)s!' % request.matchdict)
+
+if __name__ == '__main__':
+   config = Configurator()
+   config.add_route('hello', '/hello/{name}')
+   config.add_view(hello_world, route_name='hello')
+   app = config.make_wsgi_app()
+   server = make_server('0.0.0.0', 8080, app)
+   server.serve_forever()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pyramid-and-python-3"&gt;
+&lt;h4&gt;Pyramid and Python 3&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pyramid's current release (1.3) supports Python 3.2+ (as well as
+Python 2.6 and 2.7).&lt;/li&gt;
+&lt;li&gt;Most existing add-ons already ported. When feasible, we port add-on
+dependencies (&lt;tt class="docutils literal"&gt;beaker&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;WebOb&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;zope.*&lt;/tt&gt; packages).&lt;/li&gt;
+&lt;li&gt;We have a committment to Python 3. It involves lots of whining and
+bitching.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="i-m-no-genius"&gt;
+&lt;h4&gt;I'm No Genius&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pyramid does things wrong. Many parts of Pyramid make me cringe.
+&lt;a class="reference external" href="https://github.com/Pylons/pyramid/wiki/Mistakes"&gt;https://github.com/Pylons/pyramid/wiki/Mistakes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;The grass is always greener.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pyramid-docs"&gt;
+&lt;h4&gt;Pyramid Docs&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Culture of documentation (if it's not documented, it's broken).&lt;/li&gt;
+&lt;li&gt;Pyramid itself has ~800 printed pages of narrative and API
+documentation, plus a few hundred pages of &amp;quot;cookbook&amp;quot; material.&lt;/li&gt;
+&lt;li&gt;Comprehensive but pretty dry.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="docs-pain"&gt;
+&lt;h4&gt;Docs Pain&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Many pain points are related to plain old bad docs: our fault. Docs
+are at least 10X harder to write well than the associated code and
+take much longer. Most coders hate writing docs. I write lots of
+documentation but it's often not very good.&lt;/li&gt;
+&lt;li&gt;But other pain points people experience when trying to learn Pyramid
+from its docs is due to poorly documented dependencies (setuptools).
+We need to redocument subsystems &amp;quot;in context&amp;quot;, for better or worse.
+(HELP!)&lt;/li&gt;
+&lt;li&gt;And some pain points are due to an audience mismatch; narrative
+documentation assumes people know &amp;quot;Python&amp;quot; &lt;em&gt;and&lt;/em&gt; &amp;quot;the web&amp;quot;. They
+often need remedial help in one or both, which the docs don't
+provide.&lt;/li&gt;
+&lt;li&gt;&amp;quot;Chipin&amp;quot; project raised ~$5K for documentation overhaul.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pyramid-friends"&gt;
+&lt;h4&gt;Pyramid Friends&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Colander/Deform: form handling.&lt;/li&gt;
+&lt;li&gt;SQLAlchemy: SQL database connectivity and querying.&lt;/li&gt;
+&lt;li&gt;Pyramid-specific add-ons like &lt;tt class="docutils literal"&gt;pyramid_mailer&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;pyramid_zodbconn&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;pyramid_socketio&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;pyramid_mongodb&lt;/tt&gt;, and
+so forth.&lt;/li&gt;
+&lt;li&gt;The typical Pyramid application makes use of some combination of
+add-ons.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scaffolding"&gt;
+&lt;h4&gt;Scaffolding&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A scaffold renders a project. A project is installable like any other
+setuptools distribution (it has a &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;, etc).&lt;/li&gt;
+&lt;li&gt;The project depends on some combination of Pyramid, Pyramid plugins,
+and other third-party libraries and frameworks.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;zodb&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;alchemy&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;starter&lt;/tt&gt; scaffolds provided by Pyramid
+itself. Others are contributed to PyPI by third parties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="bindings-packages"&gt;
+&lt;h4&gt;Bindings Packages&lt;/h4&gt;
+&lt;p&gt;A more generic package is specialized for convenient use under Pyramid
+via use of a bindings package.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;deform&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;pyramid_deform&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;repoze.who&lt;/tt&gt; + &lt;tt class="docutils literal"&gt;pyramid_who&lt;/tt&gt;.&lt;/li&gt;
+&lt;li&gt;2X documentation burden: document once in general package docs,
+document again in bindings docs. That's no fun.&lt;/li&gt;
+&lt;li&gt;But this will happen anyway if your code is popular (Celery).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="higher-level-frameworks"&gt;
+&lt;h4&gt;Higher Level Frameworks&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;ptah&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;kotti&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;poolyx&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;substanced&lt;/tt&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="packaging-is-like-a-blast-shield"&gt;
+&lt;h4&gt;Packaging Is Like a Blast Shield&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A blast shield helps keep shrapnel out.&lt;/li&gt;
+&lt;li&gt;It can also help keep shrapnel &lt;em&gt;in&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Shrapnel tends to penetrate anything not within a blast shield.&lt;/li&gt;
+&lt;li&gt;Every piece of software eventually blows up.&lt;/li&gt;
+&lt;li&gt;The more blast shields you have, the more the damage is contained.&lt;/li&gt;
+&lt;li&gt;But blast shields obscure the landscape. More work required for
+users.&lt;/li&gt;
+&lt;li&gt;More packages add more documentation and conceptual overhead, and
+more unwanted choice.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-avoids-setuptools"&gt;
+&lt;h4&gt;Django Avoids Setuptools&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Setup.py develop of django doesn't work.&lt;/li&gt;
+&lt;li&gt;Avoidance of setuptools also prevents use of console scripts (e.g.
+django-admin).&lt;/li&gt;
+&lt;li&gt;Django recreates some of the patterns that setuptools provides (i.e.
+test discovery hooks).&lt;/li&gt;
+&lt;li&gt;Developers whom are ignorant of distribution issues are very confused
+when inevitably faced with them.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-avoids-setuptools-2"&gt;
+&lt;h4&gt;Django Avoids Setuptools (2)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django's defacto avoidance of setuptools is understandable. But it's
+not helping to improve Python packaging. Python packaging and
+distribution needs you very badly.&lt;/li&gt;
+&lt;li&gt;Fewer documentation issues to cope with, but contributing to docs for
+setuptools would float all boats.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="subclassing-is-convenient"&gt;
+&lt;h4&gt;Subclassing Is Convenient&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You don't have to explain a protocol (the protocol is Python).&lt;/li&gt;
+&lt;li&gt;But offering extensibility via subclassing is often a poorer choice
+than offering extensibility via composition and very explicit
+interfaces.&lt;/li&gt;
+&lt;li&gt;Why? People begin depending upon the implementation details of the
+classes you tell them to subclass. Unless you're extremely clear
+about what the API of the superclass is, and the social contract to
+use nothing else but the documented API exists, you'll be pressured
+into making retroactive APIs. Impossible to recover from without
+breaking b/w compat.&lt;/li&gt;
+&lt;li&gt;Not uncommon to see a subclass of a subclass of a subclass of a
+subclass; figuting out how the thing works can be an exercise in pain
+and multiple editor windows.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="globals-are-convenient"&gt;
+&lt;h4&gt;Globals are Convenient&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You don't have to explain a protocol for obtaining a value (the
+protocol is &lt;tt class="docutils literal"&gt;import&lt;/tt&gt;).&lt;/li&gt;
+&lt;li&gt;But the development of circular imports is inevitable.&lt;/li&gt;
+&lt;li&gt;Global registries make it impossible to embed more than one
+application into the same Python process.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="module-scope-work-is-convenient"&gt;
+&lt;h4&gt;Module-Scope Work Is Convenient&lt;/h4&gt;
+&lt;p&gt;From Django tutorial, at module scope:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+from django.contrib import admin
+admin.autodiscover()
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class="section" id="module-scope-work-is-convenient-2"&gt;
+&lt;h4&gt;Module-Scope Work Is Convenient (2)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;These things can be done at module scope without concern:&lt;/li&gt;
+&lt;li&gt;An import of another module or global.&lt;/li&gt;
+&lt;li&gt;Assignment of a variable name in the module to some constant value.&lt;/li&gt;
+&lt;li&gt;The addition of a function via a def statement.&lt;/li&gt;
+&lt;li&gt;The addition of a class via a class statement.&lt;/li&gt;
+&lt;li&gt;Control flow which may handles conditionals for platform-specific
+handling or failure handling of the above.&lt;/li&gt;
+&lt;li&gt;Everything else is at least suspect. Test runners and other code
+scanners can import with abandon, and side effects are often
+undesirable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pluggable-apps-reusable-apps"&gt;
+&lt;h4&gt;Pluggable Apps / Reusable Apps&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pluggable apps probably aren't really that pluggable, reusable apps
+probably aren't as reusable as you might like.&lt;/li&gt;
+&lt;li&gt;IMO, even a framework as high-level as Django can't really offer such
+a feature without stretching the truth just a little bit.&lt;/li&gt;
+&lt;li&gt;The only thing that can truly offer pluggable apps: another app. No
+general-purpose framework can do a great job here. (Examples:
+Wordpress, Jenkins, Plone).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="rendering-is-meta-view"&gt;
+&lt;h4&gt;Rendering Is Meta-View&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;render_to_response&lt;/tt&gt; using template in view is no fun to test.&lt;/li&gt;
+&lt;li&gt;Returning a dict from a view callable is more fun to test.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="unit-tests"&gt;
+&lt;h4&gt;Unit Tests&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Exclusive use of Django test client for tests will cause test suite
+to run more slowly than necessary.&lt;/li&gt;
+&lt;li&gt;A slow enough test suite won't be run before commit.&lt;/li&gt;
+&lt;li&gt;Testers who don't understand any type of testing other than &amp;quot;system&amp;quot;
+or &amp;quot;integration&amp;quot; testing tend to bring poor testing practices to
+unrelated systems.&lt;/li&gt;
+&lt;li&gt;Using setuptools provides nice hooks for test discovery and
+execution.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="static-files"&gt;
+&lt;h4&gt;Static Files&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python WSGI servers are getting better at serving static files. E.g.
+Gunicorn supports &lt;tt class="docutils literal"&gt;sendfile&lt;/tt&gt; on UNIX.&lt;/li&gt;
+&lt;li&gt;Might be time to reconsider offloading media to a dedicated
+non-Python server and make use of what's available in WSGI-land.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="community"&gt;
+&lt;h4&gt;Community&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Pyramid community is maybe 10% the size of the Django community.&lt;/li&gt;
+&lt;li&gt;It's growing.&lt;/li&gt;
+&lt;li&gt;Your success is our success. I'd be very pleased to have Pyramid be
+considered the #2 Python web framework (at least for &amp;quot;Python
+people&amp;quot;). Forever.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collaboration-low-level"&gt;
+&lt;h4&gt;Collaboration (Low-Level)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Create adapter for WebOb or Werkzeug that implements the Django
+request API?&lt;/li&gt;
+&lt;li&gt;Create an adapter for SQLAlchemy that implements the Django ORM API?&lt;/li&gt;
+&lt;li&gt;These are likely losers. They are &amp;quot;30 year plans&amp;quot;. Things change so
+fast. Who will pay immediately? Who will benefit immediately?&lt;/li&gt;
+&lt;li&gt;Might be better to try to use common non-domain-specific dependencies
+(e.g. setuptools, virtualenv, WSGI middleware, etc). It would be a
+great win to share documentation burden, even if we had to &amp;quot;fork&amp;quot; it
+for our own contextual requirements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="collaboration-high-level"&gt;
+&lt;h4&gt;Collaboration (High-Level)&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django is limited by backwards compatibility concerns. It's
+impractical to make large architectural changes now. Your users would
+kill you.&lt;/li&gt;
+&lt;li&gt;But I could imagine somebody from the Django community creating a
+&amp;quot;Django-NG&amp;quot; or a Django-like system from whole cloth. Or break Django
+apart into something that isn't quite bw compatible.&lt;/li&gt;
+&lt;li&gt;It might make sense to consider Pyramid or another smaller framework
+as a base for such an effort. If you used Pyramid, you'd get URL
+routing, internationalization, template bindings, configuration
+extensibility, flexible view lookup and execution, an event system,
+security, documentation, Python 3 compatibility, and other things.
+&lt;tt class="docutils literal"&gt;ptah&lt;/tt&gt; is such a system right now.&lt;/li&gt;
+&lt;li&gt;Pyramid community is very enthusiastic, friendly, helpful, and
+experienced.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="promoting-python"&gt;
+&lt;h4&gt;Promoting Python&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I challenge you to not be complacent.&lt;/li&gt;
+&lt;li&gt;I challenge you to investigate how other frameworks work.&lt;/li&gt;
+&lt;li&gt;I challenge you to embrace existing Python packaging and distribution
+tools.&lt;/li&gt;
+&lt;li&gt;I challenge you to port quickly to Python 3. Commit to supporting it
+in your add-ons and helping folks who have existing add-ons port.&lt;/li&gt;
+&lt;li&gt;I challenge you to speak out when folks bash competitors. Haters are
+everywhere, and when someone bashes Pyramid, Flask, Bottle, or Zope,
+and nobody defends against it, the hate will eventually come back to
+harm you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="unknowns"&gt;
+&lt;h4&gt;Unknowns&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Django Class-Based Views Might Not Do It Right. &lt;tt class="docutils literal"&gt;as_view&lt;/tt&gt;. Hmm. All
+views in Pyramid are potentially generic. They have a context passed
+to them. Class-based views in Pyramid are not things handed down from
+&amp;quot;good devs&amp;quot; to reuse, they're just normal things.&lt;/li&gt;
+&lt;li&gt;How does Django allow for configuration extensibility? Conflict
+detection?&lt;/li&gt;
+&lt;li&gt;Event system&lt;/li&gt;
+&lt;li&gt;Alternate templating languages&lt;/li&gt;
+&lt;li&gt;Exception views&lt;/li&gt;
+&lt;li&gt;View predicates&lt;/li&gt;
+&lt;li&gt;Transaction management&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-09-06:djangocon-us-2012/about-django-from-the-pyramid-guy.html</guid><category>django</category></item><item><title>PyCon 2009: The Big F'ing Tutorial: Development Using the repoze.bfg Web Framework (Part 2 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developm0.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Big F'ing Tutorial: Development Using repoze.bfg Web Framework (Part
+2 of 3)&lt;/p&gt;
+&lt;p&gt;Presented by Chris McDonough&lt;/p&gt;
+&lt;p&gt;Are you a Python web developer who thinks there might be some great
+stuff hidden away in Zope but you consider it inaccessible to you
+because you feel that Zope imposes too many foreign concepts for your
+tastes? Are you a more- or-less happy Zope developer that has the
+nagging feeling that much of Zope is unnecessary &amp;quot;baggage&amp;quot; on your
+current project? Maybe you're a Plone developer who feels that Plone is
+unsuitable for one of your current projects because it's too
+complicated? This tutorial will present everything you need to know
+about repoze.bfg, a small Python web framework in the spirit of Pylons.
+The goals of repoze.bfg are simplicity, familiarity to Zope programmers
+(but no Zope experience is required), execution speed, and complete,
+comprehensive, and up-to-date documentation. In this tutorial, we'll
+explain the core concepts in repoze.bfg, then we'll lead a guided
+development session where we make a small application using the
+framework. We'll also cover packaging and deployment of the application.
+Questions are highly encouraged during the presentation.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: ]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developm0.html</guid><category>pycon</category><category>pycon2009</category><category>repoze</category><category>repoze.bfg</category><category>tutorial</category><category>zope</category></item><item><title>PyCon 2009: The Big F'ing Tutorial: Development Using the repoze.bfg Web Framework (Part 3 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developm1.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Big F'ing Tutorial: Development Using repoze.bfg Web Framework (Part
+3 of 3)&lt;/p&gt;
+&lt;p&gt;Presented by Chris McDonough&lt;/p&gt;
+&lt;p&gt;Are you a Python web developer who thinks there might be some great
+stuff hidden away in Zope but you consider it inaccessible to you
+because you feel that Zope imposes too many foreign concepts for your
+tastes? Are you a more- or-less happy Zope developer that has the
+nagging feeling that much of Zope is unnecessary &amp;quot;baggage&amp;quot; on your
+current project? Maybe you're a Plone developer who feels that Plone is
+unsuitable for one of your current projects because it's too
+complicated? This tutorial will present everything you need to know
+about repoze.bfg, a small Python web framework in the spirit of Pylons.
+The goals of repoze.bfg are simplicity, familiarity to Zope programmers
+(but no Zope experience is required), execution speed, and complete,
+comprehensive, and up-to-date documentation. In this tutorial, we'll
+explain the core concepts in repoze.bfg, then we'll lead a guided
+development session where we make a small application using the
+framework. We'll also cover packaging and deployment of the application.
+Questions are highly encouraged during the presentation.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: ]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developm1.html</guid><category>pycon</category><category>pycon2009</category><category>repoze</category><category>repoze.bfg</category><category>tutorial</category><category>zope</category></item><item><title>PyCon 2009: The Big F'ing Tutorial: Development Using the repoze.bfg Web Framework (Part 1 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developme.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Big F'ing Tutorial: Development Using repoze.bfg Web Framework (Part
+1 of 3)&lt;/p&gt;
+&lt;p&gt;Presented by Chris McDonough&lt;/p&gt;
+&lt;p&gt;Are you a Python web developer who thinks there might be some great
+stuff hidden away in Zope but you consider it inaccessible to you
+because you feel that Zope imposes too many foreign concepts for your
+tastes? Are you a more- or-less happy Zope developer that has the
+nagging feeling that much of Zope is unnecessary &amp;quot;baggage&amp;quot; on your
+current project? Maybe you're a Plone developer who feels that Plone is
+unsuitable for one of your current projects because it's too
+complicated? This tutorial will present everything you need to know
+about repoze.bfg, a small Python web framework in the spirit of Pylons.
+The goals of repoze.bfg are simplicity, familiarity to Zope programmers
+(but no Zope experience is required), execution speed, and complete,
+comprehensive, and up-to-date documentation. In this tutorial, we'll
+explain the core concepts in repoze.bfg, then we'll lead a guided
+development session where we make a small application using the
+framework. We'll also cover packaging and deployment of the application.
+Questions are highly encouraged during the presentation.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: ]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:pycon-us-2009/pycon-2009--the-big-f--39-ing-tutorial--developme.html</guid><category>pycon</category><category>pycon2009</category><category>repoze</category><category>repoze.bfg</category><category>tutorial</category><category>zope</category></item><item><title>Sunday Afternoon Lightning Talks</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--sunday-afternoon-lightning-talks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Plenary: Afternoon Lightning Talks&lt;/p&gt;
+&lt;p&gt;(02:20) Steve Holden - Lightning talk about lightning talks&lt;/p&gt;
+&lt;p&gt;(02:55) Michael Foord - Little Bit of Python podcast, upcoming unittest
+stuff, mock&lt;/p&gt;
+&lt;p&gt;(08:00) Harald Armin Massa - The real harm of functional programming&lt;/p&gt;
+&lt;p&gt;(11:41) Karl ? - FreeBSD certiciation&lt;/p&gt;
+&lt;p&gt;(13:50) Peter Fein - Please Pirate&lt;/p&gt;
+&lt;p&gt;(19;15) Chris McDonough - writing books with Sphinx
+(&lt;a class="reference external" href="http://bfg.repoze.org/book"&gt;repoze.bfg&lt;/a&gt;);
+&lt;a class="reference external" href="https://www.createspace.com/"&gt;createspace&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;(22:05) Chris Petrilli - celery, distributed task queue&lt;/p&gt;
+&lt;p&gt;(26:30) Godefroid Chapelle - vim and pdb&lt;/p&gt;
+&lt;p&gt;(29:20) ? - fork() vs. threads&lt;/p&gt;
+&lt;p&gt;(33:40) - doing pyweek game with a large number of contributors&lt;/p&gt;
+&lt;p&gt;(38:05) Jason Huggins - Orbison&lt;/p&gt;
+&lt;p&gt;(43:20) Noufal Brahim - State of Python community in India&lt;/p&gt;
+&lt;p&gt;(47:40) Mike Müller - EuroSciPy 2010&lt;/p&gt;
+&lt;p&gt;(49:50) David gives away stuff, sprint intros, ...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Steve Holden</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--sunday-afternoon-lightning-talks.html</guid><category>lightning talks</category><category>celery</category><category>euroscipy</category><category>euroscipy2010</category><category>fork</category><category>freebsd</category><category>functionalprogramming</category><category>india</category><category>orbison</category><category>pdb</category><category>pycon</category><category>pycon2010</category><category>pyweek</category><category>sphinx</category><category>threads</category><category>unittest</category><category>vim</category></item><item><title>State of Pylons/TurboGears 2/repoze.bfg</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--state-of-pylons-turbogears-2-repoze-b.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;State of Pylons/TurboGears 2/repoze.bfg&lt;/p&gt;
+&lt;p&gt;Presented by Chris McDonough, Ben Bangert, and Mark Ramm&lt;/p&gt;
+&lt;p&gt;A three-for-one talk by the main developers of three popular Python web
+frameworks! We'll (very) briefly cover the state of each of our
+individual frameworks and communities, and then we'll describe the
+results of our efforts to work together and share code.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Pylons is a popular, lightweight Python web framework.&lt;/p&gt;
+&lt;p&gt;TurboGears 2 is a full-stack framework built atop Pylons.&lt;/p&gt;
+&lt;p&gt;repoze.bfg is a moderately popular, lightweight Python web framework.&lt;/p&gt;
+&lt;p&gt;The main developers and community leaders of these frameworks have been
+working together and sharing as much as possible over the course of
+roughly the last year. We'll very briefly describe to the audience the
+states of our individual efforts, then we'll discuss how we intend to
+move forward and share more code and effort in the year to come. The
+talk will be more socially- oriented than technical.&lt;/p&gt;
+&lt;p&gt;It's unusual for open source code and communities to bridge minor
+perceived differences in scope and style and to start sharing code and
+ideas openly. If you're a user of any of these frameworks, you'll want
+to be present for this talk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ben Bangert</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--state-of-pylons-turbogears-2-repoze-b.html</guid><category>pycon</category><category>pycon2011</category><category>pylons</category><category>pyramid</category><category>repoze.bfg</category><category>turbogears</category></item><item><title>ZODB: A Python Persistence System</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--zodb--a-python-persistence-system.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;ZODB: A Python Persistence System&lt;/p&gt;
+&lt;p&gt;Presented by Chris McDonough&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://zodb.org/"&gt;ZODB&lt;/a&gt; is a transactional persistence system
+written entirely in Python. This talk will serve as an introduction to
+using the ZODB in a Python application.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;This talk will provide a high-level overview of ZODB useful to a novice
+or intermediate Python programmer. The talk will cover the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What Is ZODB?&lt;/li&gt;
+&lt;li&gt;Brief history&lt;/li&gt;
+&lt;li&gt;ZODB vs. relational databases&lt;/li&gt;
+&lt;li&gt;ZODB vs. NoSQL databases&lt;/li&gt;
+&lt;li&gt;ZODB vs. pickle&lt;/li&gt;
+&lt;li&gt;Using ZODB&lt;/li&gt;
+&lt;li&gt;Creating a Persistent Object&lt;/li&gt;
+&lt;li&gt;Storing a Persistent Object&lt;/li&gt;
+&lt;li&gt;Retrieving a Persistent Object&lt;/li&gt;
+&lt;li&gt;Modifying a Persistent Object&lt;/li&gt;
+&lt;li&gt;Saving Changes&lt;/li&gt;
+&lt;li&gt;Folders&lt;/li&gt;
+&lt;li&gt;Aspects&lt;/li&gt;
+&lt;li&gt;Pluggable storages&lt;/li&gt;
+&lt;li&gt;Scaling across multiple clients&lt;/li&gt;
+&lt;li&gt;Caching&lt;/li&gt;
+&lt;li&gt;Indexing and Searching&lt;/li&gt;
+&lt;li&gt;repoze.catalog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of the talk, an attendee should have a basic understanding of
+how to create an application which depends on ZODB persistence.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--zodb--a-python-persistence-system.html</guid><category>pycon</category><category>pycon2011</category><category>zodb</category></item><item><title>Introduction to PDB</title><link>https://pyvideo.org/pycon-us-2012/introduction-to-pdb.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;PDB is an interactive debugging environment for Python programs. It
+allows you to pause your program, look at the values of variables, and
+watch program execution step-by-step, so you can understand what your
+program is actually doing, as opposed to what you think it's doing. This
+talk will show novice and intermediate Python users how to use PDB to
+troubleshoot existing code.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Fri, 09 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-09:pycon-us-2012/introduction-to-pdb.html</guid></item><item><title>Pyramid Auth Is Hard, Let's Ride Bikes</title><link>https://pyvideo.org/pycon-us-2013/pyramid-auth-is-hard-lets-ride-bikes.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pyramid web framework authentication and authorization subsystems are
+powerful and pluggable, but using them to their max isn't always easy.
+This talk will discuss how to get the most out of those subsystems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-16:pycon-us-2013/pyramid-auth-is-hard-lets-ride-bikes.html</guid><category>talk</category></item><item><title>API Design for Library Authors</title><link>https://pyvideo.org/pycon-us-2013/api-design-for-library-authors.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;A library is code distributed in such a way that strangers can use it.
+In this talk we consider: 1) why Python developers make bad libraries
+and poor APIs; 2) how to make your library API maximally useful for
+others; 3) examples of real-world antipatterns involving APIs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Fri, 15 Mar 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-03-15:pycon-us-2013/api-design-for-library-authors.html</guid><category>talk</category></item><item><title>Using Supervisor For Fun And Profit</title><link>https://pyvideo.org/pycon-us-2015/using-supervisor-for-fun-and-profit.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Supervisor is a popular Python application that lets you control and
+monitor process state on UNIX-like systems. This talk describes what it
+is, and how to use it effectively to make your application deployments
+better.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chris McDonough</dc:creator><pubDate>Sat, 11 Apr 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-04-11:pycon-us-2015/using-supervisor-for-fun-and-profit.html</guid></item></channel></rss>
