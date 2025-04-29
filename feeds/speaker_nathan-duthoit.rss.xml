@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 01 Oct 2013 00:00:00 +0000</lastBuildDate><item><title>Denormalize All The Things!</title><link>https://pyvideo.org/djangocon-us-2013/denormalize-all-the-things.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Denormalize All the Things!&lt;/p&gt;
+&lt;p&gt;Thursday 2 p.m.--2:45 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Intermediate&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;What do you do when you need to cache a model but also need to query the
+cached data? You denormalize all the things! In this talk we will see
+how to create and maintain denormalized versions of some of your Django
+models in order to enjoy the benefits of caching while maintaining the
+benefits of relational data. Abstract Denormalized models: another copy
+of your data that you can query&lt;/p&gt;
+&lt;p&gt;Typical usage (with examples): pre-computed data a different view of
+your data combining multiple model&lt;/p&gt;
+&lt;p&gt;Keeping things synced The canonical data is always right&lt;/p&gt;
+&lt;p&gt;You must define the authoritative source of data and maintain it. Know
+thy parent&lt;/p&gt;
+&lt;p&gt;Keeping track of the canonical source (across database shards)
+Propagating changes manually (call a method on save) &amp;quot;use the signals
+Luke&amp;quot; (example)&lt;/p&gt;
+&lt;p&gt;Handling concurrency issues&lt;/p&gt;
+&lt;p&gt;The approach: you can't improve what you can't measure. Measure, fix,
+measure again, repeat.&lt;/p&gt;
+&lt;p&gt;Problems and some solutions (applying computer science goodness) one at
+a time: locks and mutexes (pylock) ensuring update order is correct&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nathan Duthoit</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/denormalize-all-the-things.html</guid></item><item><title>The Path to Smoother Database Migrations</title><link>https://pyvideo.org/djangocon-us-2013/the-path-to-smoother-database-migrations.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;The Path to Smoother Database Migrations&lt;/p&gt;
+&lt;p&gt;Tuesday 4:45 p.m.--5:30 p.m.&lt;/p&gt;
+&lt;p&gt;Audience level: Experienced&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;Migrations are often applied as part of the deploy process. For most
+Django applications, this is fine. However, when your data becomes
+large, slow migrations and locked tables can result in downtime. Running
+migrations outside of the deploy process helps minimize the impact. This
+talk will go over this and other strategies I have found successful in
+minimizing downtime during database migrations. Abstract The common
+approach and its challenges The first step: running migrations
+out-of-band What it means&lt;/p&gt;
+&lt;p&gt;Code deployed should work both before and after the migration is applied
+Step by step examples: adding a new model adding a required field to an
+existing model changing an existing field&lt;/p&gt;
+&lt;p&gt;The challenges introduced: More process and discipline required when
+developing Continuous deployment becomes more challenging&lt;/p&gt;
+&lt;p&gt;Speeding up schema migrations When running the migration with south is
+too slow&lt;/p&gt;
+&lt;p&gt;A showcase of pt-online-schema-change: how it works, its challenges
+Handling long data migrations:&lt;/p&gt;
+&lt;p&gt;The issue with running long data migrations using south: takes too long,
+ssh connection could be lost, no measure of progress Options (advantages
+and challenges of each): management command in screen background
+(celery) tasks: monitoring progress throttling to reduce impact on the
+system&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nathan Duthoit</dc:creator><pubDate>Tue, 01 Oct 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-10-01:djangocon-us-2013/the-path-to-smoother-database-migrations.html</guid></item></channel></rss>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 18 Jul 2012 00:00:00 +0000</lastBuildDate><item><title>Implicit Multicore Parallelism using CnC-Python</title><link>https://pyvideo.org/scipy-2012/implicit-multicore-parallelism-using-cnc-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We introduce CnC-Python (CP), an approach to implicit multicore
+parallelism for Python programmers based on a high-level macro data-flow
+programming model called Concurrent Collections (CnC). With the advent
+of the multi-core era, it is clear that improvements in application
+performance will primarily come from increased parallelism. Extracting
+parallelism from applications often involves the use of low-level
+primitives such as locks and threads. CP is implicitly parallel and
+enables programmers to achieve task, data and pipeline parallelism in a
+declarative fashion while only being required to describe the program as
+a coordination graph with serial Python code for individual nodes
+(steps). Thus, CP makes parallel programming accessible to a broad class
+of programmers who are not trained in parallel programming. The CP
+runtime requires that Python objects communicated between steps be
+picklable, but imposes no restriction on the Python idioms used within
+the serial code. Most data structures of interest to the SciPy
+community, including NumPy arrays, are included in the class of
+picklable data structures in Python.&lt;/p&gt;
+&lt;p&gt;The CnC model is especially effective in exploiting parallelism in
+scientific applications in which the dependences can be represented as
+arbitrary directed acyclic graphs (&amp;quot;dag parallelism&amp;quot;). Such applications
+include, but are not limited to, tiled implementations of iterative
+linear algebra algorithms such as Cholesky decomposition, Gauss-Jordan
+elimination, Jacobi method, and Successive Over-Relaxation (SOR). Rather
+than using explicit threads and locks to exploit parallelism, the
+CnC-Python programmer decomposes their algorithm into individual
+computation steps and identifies data and control dependences among the
+steps to create such computation DAGs. Given the DAG (in the form of
+declarative constraints), it is the responsibility of the CP runtime to
+extract parallelism and performance from the application. By liberating
+the scientific programmer, who is not necessarily trained to write
+explicitly parallel programs, from the nuances of parallel programming,
+CP provides a high-productivity path for scientific programmers to
+achieve multi-core parallelism in Python.&lt;/p&gt;
+&lt;p&gt;LINKS: CnC-Python: &lt;a class="reference external" href="http://cnc-python.rice.edu"&gt;http://cnc-python.rice.edu&lt;/a&gt; Concurrent Collections:
+&lt;a class="reference external" href="http://habanero.rice.edu/cnc"&gt;http://habanero.rice.edu/cnc&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shams Imam</dc:creator><pubDate>Wed, 18 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-18:scipy-2012/implicit-multicore-parallelism-using-cnc-python.html</guid><category>hpc</category></item></channel></rss>

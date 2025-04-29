@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 22 Apr 2018 00:00:00 +0000</lastBuildDate><item><title>Serverless SQL queries from Python with AWS Athena...or power to Data Scientists!</title><link>https://pyvideo.org/pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Audience&lt;/strong&gt; : beginner&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt; The goal of this talk is to explain how Athena, a
+serverless sql-like query service provided by Amazon’s AWS, combined
+with a Python library called PyAthena, made it possible to store and
+query as much data as needed with low costs, high performances and in a
+Pythonesque way.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt; We found ourselves in a sticky situation: for monitoring
+and debugging reasons we had the need to store a large amount of data
+(around 200 million rows), trying not to spend the entire year’s budget
+but still managing to efficiently query the data in an interactive
+setting. With such Big Data, we could not simply resort to Data Science
+tools like Pandas and hope for the best. Our first idea was to just
+shove it all in our Postgres DB: since both data and database were
+stored on Amazon’s AWS infrastructure, all we had to do was to write
+ad-hoc import and update queries. Sadly, our poor Postgres machine took
+the hit, and was not able to respond to our requirements without greatly
+increasing our costs. Then we found out about Athena: a serverless,
+Presto-based, sql compliant database, that reads directly from S3
+folders and creates a virtual table on which you can run sql queries.
+Using Python’s Athena library (PyAthena) our query execution time
+dropped from hours to seconds, we simplified the infrastructure and
+decreased our costs, without the need to pay and maintain a dedicated
+server. In this talk we will show why Athena was the right solution for
+our use case and present its Python library with its functionalities.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 15:30 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniela Scardi</dc:creator><pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-22:pycon-italia-2018/serverless-sql-queries-from-python-with-aws-athenaor-power-to-data-scientists.html</guid><category>Python</category><category>aws</category><category>storage</category><category>cloud</category><category>sql</category></item></channel></rss>

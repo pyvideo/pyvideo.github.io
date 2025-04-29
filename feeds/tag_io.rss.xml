@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 19 Feb 2010 00:00:00 +0000</lastBuildDate><item><title>Eventlet: Asynchronous I/O with a synchronous interface (#141)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--eventlet--asynchronous-i-o-with-a-syn.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Eventlet: Asynchronous I/O with a synchronous interface&lt;/p&gt;
+&lt;p&gt;Presented by Donovan Preston&lt;/p&gt;
+&lt;p&gt;Network servers which scale to thousands of simultaneous connections
+have always been possible in Python thanks to libraries such as asyncore
+and twisted. More recently, FriendFeed's new open source project Tornado
+has stirred debate in this area. These libraries allow a Python process
+to scale to many simultaneous connections using non-blocking I/O (also
+known as asynchronous I/O). However these projects require that the
+programmer learn a custom API to abstract away the complexities of using
+a callback-style API.&lt;/p&gt;
+&lt;p&gt;Eventlet uses greenlet, which provides coroutines as described in &amp;quot;The
+Art of Computer Programming&amp;quot;, to implement efficient cooperative
+concurrency while retaining synchronous semantics. Eventlet also
+provides an implementation of the standard library's socket module. Code
+written to use Python's standard socket library can be transparently
+converted to use nonblocking I/O and green threads with eventlet. This
+leads to much greater code reuse and programmer efficiency.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://www.eventlet.net/"&gt;http://www.eventlet.net/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Donovan Preston</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--eventlet--asynchronous-i-o-with-a-syn.html</guid><category>asynchronous</category><category>eventlet</category><category>greenlet</category><category>i/o</category><category>pycon</category><category>pycon2010</category></item><item><title>Mastering Python 3 I/O (part 1)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--mastering-python-3-i-o.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mastering Python 3 I/O&lt;/p&gt;
+&lt;p&gt;Presented by David Beazley&lt;/p&gt;
+&lt;p&gt;As most Python programmers know, Python 3 breaks backwards compatibility
+with Python 2 in a number of significant ways. Although guides to Python
+3 tend to focus on superficial incompatibilities such as the new print
+function, changes to exception handling, or new language features, the
+most substantial changes concern the strict separation of Unicode and
+bytes as well as the new I/O stack. Not only do these changes have
+far-reaching effects throughout the standard library, but changes to I/O
+are likely to be the most major source of problems for anyone porting an
+existing Python application to Python 3. In this tutorial, we're going
+to take a top-to-bottom tour of the entire Python 3 I/O system. We'll
+focus on how to properly handle both text and binary data, changes to
+standard library modules, examine advanced features such as the buffer
+API, perform some performance experiments, and end with practical advice
+for programmers working on porting applications from Python 2 to 3.
+Intended Audience&lt;/p&gt;
+&lt;p&gt;Intermediate to advanced Python programmers who are either developing
+new applications or contemplating a migration to Python 3. Attendees
+should already be familiar with the basics of Python programming
+including standard datatypes and commonly used library modules. A
+background in systems programming topics such as file handling,
+subprocesses, and socket programming is also recommended. Class Outline&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introducing Python 3 (with a focus on I/O)&lt;/li&gt;
+&lt;li&gt;Text Processing&lt;/li&gt;
+&lt;li&gt;Binary Data Handling&lt;/li&gt;
+&lt;li&gt;Dealing with System Interfaces and External Programs&lt;/li&gt;
+&lt;li&gt;The New io library&lt;/li&gt;
+&lt;li&gt;Network programming&lt;/li&gt;
+&lt;li&gt;The revised buffer API and direct I/O&lt;/li&gt;
+&lt;li&gt;Porting from Python 2 to 3.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Beazley</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:pycon-us-2010/pycon-2010--mastering-python-3-i-o.html</guid><category>io</category><category>pycon</category><category>pycon2010</category><category>python3</category><category>tutorial</category></item></channel></rss>

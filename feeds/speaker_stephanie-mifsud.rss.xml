@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 13 Jul 2017 00:00:00 +0000</lastBuildDate><item><title>Optimizing queries for not so big data in PostgreSQL</title><link>https://pyvideo.org/europython-2017/optimizing-queries-for-not-so-big-data-in-postgresql.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hotjar’s user recordings count above 400 million, with supporting
+tables containing 4.5 billion records. This 5TB data fits nicely into
+Postgres and doesn’t quite merit the full big data suite of tools.
+However, at the rate of 1000 recordings per minute, and overall
+request rate of 750K per minute, the penalty of inefficient queries
+and updates can quickly cause nasty performance spikes if not thought
+out well.&lt;/p&gt;
+&lt;p&gt;This talk is about the challenges we faced at the lower end of big
+data: the good decisions which helped keep our application running
+and other lessons we had to learn the hard way&lt;/p&gt;
+&lt;p&gt;Considerations for Database Design&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Design entities for the domain&lt;/li&gt;
+&lt;li&gt;Balance normalization with performance&lt;/li&gt;
+&lt;li&gt;Sharding later has big migration costs, consider designing for this early&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Speak to the database from your Web Application&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why use ORMs and at which level of abstraction?&lt;/li&gt;
+&lt;li&gt;Stored Procedures are fast, should we have more of those?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bringing data closer to the application&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Materialize Views&lt;/li&gt;
+&lt;li&gt;Defer aggregations&lt;/li&gt;
+&lt;li&gt;Application Level Caching&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Handling Operational Troubles&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Explain(analyze, buffers) is your friend&lt;/li&gt;
+&lt;li&gt;Detect and manage Index Bloat&lt;/li&gt;
+&lt;li&gt;Reduce Deadlocks&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reducing Impact of Background Maintenance Jobs&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Keep impact on database low with cursors and streaming&lt;/li&gt;
+&lt;li&gt;Plan data retention policies early, so cleaning can be an ongoing process&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephanie Mifsud</dc:creator><pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-13:europython-2017/optimizing-queries-for-not-so-big-data-in-postgresql.html</guid></item></channel></rss>
