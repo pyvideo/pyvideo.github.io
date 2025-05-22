@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 17 Oct 2015 00:00:00 +0000</lastBuildDate><item><title>Bokor: distribution de films en BitTorrent et hacking python</title><link>https://pyvideo.org/pycon-fr-2015/bokor-distribution-de-films-en-bittorrent-et-hacking-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Bokor est un logiciel libre (GPL v3) développé par la SCOP Bearstech en
+partenariat avec la société de distribution de films Cinego. Bokor est
+un framework permettant la distribution de fichiers sur un parc
+hétérogène de machines. L'architecture est hybride, un maître coordonne
+un ensemble d'esclaves qui vont partager des fichiers en point à point,
+avec le protocole BitTorrent.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bokor est un logiciel libre (GPL v3) développé par la SCOP Bearstech en
+partenariat avec la société de distribution de films Cinego. Bokor est
+un framework permettant la distribution de fichiers sur un parc
+hétérogène de machines. L'architecture est hybride, un maître coordonne
+un ensemble d'esclaves qui vont partager des fichiers en point à point,
+avec le protocole BitTorrent. Pour le distributeur, la bande passante
+est optimisée, et la résiliance du système maitrisée. La participation
+autoritaire aux échanges BitTorrent garantie des latences optimisées. Il
+est en production avec aujourd'hui 400 cinémas connectés, 10 super
+seeders en datacenter et 400 films, bandes-annonces et courts-métrages
+partagés.&lt;/p&gt;
+&lt;p&gt;Bokor utilise Rtorrent (avec des corrections pour Cygwin) et OpenTracker
+(avec quelques patchs), pour la partie BitTorrent. Pour la partie
+coordination, Python est utilisé, essentiellement pour des appels de
+fonctions dynamiques. Nous allons vous présenter la partie &amp;quot;Appel de
+procédure distante&amp;quot; (RPC en VO) de Bokor. Le système de RPC de Bokor a
+dû être conçu de manière extensible, la liste des fonctionnalités
+requises n'étant pas connue à l'avance. Nous avons choisi une approche
+minimaliste, pour ne pas avoir de soucis de portabilité, et pour limiter
+au maximum la consommation en CPU et bande-passante, qui seront utilisés
+par les très gourmands échanges BitTorrent.&lt;/p&gt;
+&lt;p&gt;L'utilisation des bibliothèques tiers a été réduite au maximum, seul
+py-curl a survécu, préférant l'approche &amp;quot;fourni avec des piles&amp;quot; de
+Python. Par contre, l'introspection de python a été poussée dans ces
+derniers retranchements : décorateurs de classes, de fonctions,
+modifications à chaud de classes, d'objets, méthodes abstraites...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Olivier André</dc:creator><pubDate>Sat, 17 Oct 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-10-17:pycon-fr-2015/bokor-distribution-de-films-en-bittorrent-et-hacking-python.html</guid></item></channel></rss>

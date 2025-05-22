@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 21 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>Exploit your GPU power with PyCUDA (and friends)</title><link>https://pyvideo.org/europython-2011/exploit-your-gpu-power-with-pycuda-and-friends.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Stefano Brilli - 22 June 2011 in &amp;quot;Track Spaghetti&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CUDA technology permits to exploit the power of modern NVIDIA GPUs. In
+this talk, after a brief introduction to GPU architecture, we will focus
+on how CUDA got inside Python through libraries like PyCUDA and others…&lt;/p&gt;
+&lt;p&gt;By some examples we will show the main concepts and techniques for good
+GPU programming.&lt;/p&gt;
+&lt;p&gt;This talk targets anyone who wants to know how to exploit this
+technology from Python, the suitable use cases, the using techniques and
+the do-not-using techniques to get the best from his own GPU&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefano Brilli</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/exploit-your-gpu-power-with-pycuda-and-friends.html</guid><category>gpu</category><category>nvidia</category><category>pycuda</category><category>python,</category><category>technology</category></item><item><title>High-performance computing on gamer PCs</title><link>https://pyvideo.org/europython-2011/high-performance-computing-on-gamer-pcs.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Yann Le Du - 20 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In Electron Paramagnetic Resonance Imaging, we are faced with a
+deconvolution problem that has a strong impact on the image actually
+reconstructed. Faced with the need of mapping the distribution of
+organic matter in Terrestrial and Martian rock samples for applications
+in exobiology, we needed to see how to extract a maximum amount of
+information from our data: our approach uses reservoir computing
+artificial neural networks coupled to a particle swarm algorithm that
+evolves the reservoirs’ weights.&lt;/p&gt;
+&lt;p&gt;The code runs on the Hybrid Processing Units for Science (HPU4Science)
+cluster located at the Laboratoire de Chimie de la Matière Condensée de
+Paris (LCMCP). The cluster is composed of a central data storage machine
+and a heterogeneous ensemble of 6 decentralized nodes. Each node is
+equipped with a Core2 Quad or i7 CPU and 3-7 NVIDIA Graphical Processing
+Units (GPUs) including the GF110 series. Each of the 28 GPUs
+independently explores a different parameter space sphere of the same
+problem. Our application shows a sustained real performance of 15.6
+TFLOPS. The HPU4Science cluster cost
+&lt;span class="formula"&gt;36, 090&lt;i&gt;resulting&lt;/i&gt;&lt;i&gt;in&lt;/i&gt;&lt;i&gt;a&lt;/i&gt;432.3&lt;i&gt;MFLOPS&lt;/i&gt; ⁄ &lt;/span&gt; cost performance.&lt;/p&gt;
+&lt;p&gt;That talk is meant to demonstrate on a practical case how consumer grade
+computer hardware coupled to a very popular computer language can be
+used to tackle a difficult yet very elementary scientific problem: how
+do you go from formulating the problem, to choosing the right hardware
+and software, and all the way to programming the algorithms using the
+appropriate development tools and methodologies (notably Literate
+Programming). On the math side, the talk requires a basic understanding
+of matrix algebra and of the discretization process involved when
+computing integrals.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yann Le Du</dc:creator><pubDate>Thu, 21 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-21:europython-2011/high-performance-computing-on-gamer-pcs.html</guid><category>image</category><category>mapping</category><category>nvidia</category><category>performance</category><category>processing</category><category>science</category><category>scientific</category></item><item><title>Experiences making CPU-bound tasks run much faster</title><link>https://pyvideo.org/europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Ian Ozsvald - 22 June 2011 in &amp;quot;Training Pizza
+Margherita &amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;UPDATE - post-event I've created a &lt;a class="reference external" href="http://ianozsvald.com/2011/06/29/high-performance-python-tutorial-v0-1%20-from-my-4-hour-tutorial-at-europython-2011/"&gt;49 page PDF write-
+up&lt;/a&gt;
+which summarises the 4 hour tutorial&lt;/p&gt;
+&lt;p&gt;As a long-time R&amp;amp;D consultant I'm often working to make slow,
+experimental code run faster for tasks like physics simulation, flood
+modeling and natural language processing. Python allows a smooth
+progression from rough-and-ready (but slow) algorithms through to finely
+tuned tasks that efficiently use as much CPU power as you can bring to
+bear. Speed-ups of 10-500* can be expected for the Mandelbrot code
+we'll use.&lt;/p&gt;
+&lt;p&gt;In this talk I'll cover a set of libraries that make CPU-bound tasks run
+much faster. We'll begin with a look at profiling using RunSnakeRun and
+line_profiler to identify our bottleneck. We'll take a look at slow
+algorithms in Python and how they can run faster using numpy and
+numexpr.&lt;/p&gt;
+&lt;p&gt;Next we'll cover the use of multiprocessing to utilise multiple CPU
+cores along with Cython or ShedSkin to easily use C code in a friendly
+Python wrapper. Multiprocessing on a quad-core system can often provide
+a 4* speed-up for the right tasks. Next parallelpython will let us run
+our code on a network of machines.&lt;/p&gt;
+&lt;p&gt;Finally we'll look at pyCUDA to utilise an NVIDIA GPU. CUDA can give the
+best improvements for mathematical problems (over 100* on the right
+tasks) but works on a narrower set of problems.&lt;/p&gt;
+&lt;p&gt;How it'll work: The tutorial will be hands on, you'll be converting
+example files from normal Python to faster variants using the tools
+below. All of it is optional, you'll get the most benefit by having
+everything installed. We'll work in groups and open discussion is
+encouraged.&lt;/p&gt;
+&lt;p&gt;NOTE - you are expected to have all these tools installed &lt;em&gt;before&lt;/em&gt; the
+tutorial (if you don't, you might find it hard to follow what's going
+on!).&lt;/p&gt;
+&lt;p&gt;I'll be using Python 2.7.1 on a Macbook (Snow Leopard). All of these
+tools run on Windows and Linux, as long as your versions are fairly
+recent everything should run just fine.&lt;/p&gt;
+&lt;p&gt;My versions (roughly ordered by importance):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Python 2.7.1&lt;/li&gt;
+&lt;li&gt;RunSnakeRun 2.0.1b6 (with wxPython 2.8.12.0 Unicode)&lt;/li&gt;
+&lt;li&gt;line_profiler (1.0b2)&lt;/li&gt;
+&lt;li&gt;Cython 0.14.1&lt;/li&gt;
+&lt;li&gt;ShedSkin 0.7.1&lt;/li&gt;
+&lt;li&gt;numpy 1.5.1&lt;/li&gt;
+&lt;li&gt;numexpr 1.4.2&lt;/li&gt;
+&lt;li&gt;ParallelPython 1.6.1&lt;/li&gt;
+&lt;li&gt;pyCUDA HEAD from git as of 14th June 2011 (with CUDA 4.0 drivers)&lt;/li&gt;
+&lt;li&gt;PyPy 1.5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some background reading:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/"&gt;http://ianozsvald.com/2010/07/14/22937-faster-python-math-using-pycuda/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/"&gt;http://ianozsvald.com/2008/11/17/making-python-math-196-faster-with-shedskin/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ian Ozsvald</dc:creator><pubDate>Mon, 18 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-18:europython-2011/experiences-making-cpu-bound-tasks-run-much-faste.html</guid><category>cython</category><category>git</category><category>multiprocessing</category><category>network</category><category>numpy</category><category>nvidia</category><category>profiling</category><category>pycuda</category><category>runsnakerun</category><category>tutorial</category><category>windows</category><category>wxpython</category></item><item><title>Introduction to Parallel Computing on an NVIDIA GPU using PyCUDA</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--introduction-to-parallel-computing-on.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Introduction to Parallel Computing on an NVIDIA GPU using PyCUDA&lt;/p&gt;
+&lt;p&gt;Presented by Roy Hyunjin Han&lt;/p&gt;
+&lt;p&gt;With Andreas Klöckner's PyCUDA, you can harness the massively parallel
+supercomputing power of your NVIDIA graphics card to crunch numerically
+intensive scientific computing applications in a fraction of the runtime
+it would take on a CPU and at a fraction of the development cost of C++.
+We'll cover hardware architecture, API fundamentals and several examples
+to get you started.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There are two approaches to parallelizing a computationally heavy
+procedure: use a messaging queue such as AMQP to distribute tasks among
+a networked cluster or increase the number of processors in a single
+machine. This talk focuses on techniques for adapting mathematical code
+to run on specialized multi-core graphic processors.&lt;/p&gt;
+&lt;p&gt;Modern graphic processors have hard-coded transistors for common vector
+and matrix operations, making them ideal for general scientific
+computing. However, the NVIDIA CUDA's unique design requires knowledge
+of its hardware to adapt algorithms effectively. This talk covers basic
+CUDA architecture, API functions and several examples to illustrate the
+different kinds of problems that will benefit from parallelization.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roy Hyunjin Han</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--introduction-to-parallel-computing-on.html</guid><category>nvidia</category><category>parallel</category><category>pycon</category><category>pycon2011</category><category>pycuda</category></item></channel></rss>
