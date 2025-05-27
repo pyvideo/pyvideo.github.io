@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 25 Oct 2018 00:00:00 +0000</lastBuildDate><item><title>Measuring the hay in the haystack: quantifying hidden variables using Bayesian Inference</title><link>https://pyvideo.org/pycon-de-2018/measuring-the-hay-in-the-haystack-quantifying-hidden-variables-using-bayesian-inference.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Technology-driven trading is a field with many challenges, and
+performance and availability of the network communication is essential
+to the business. To have a good understanding on the performance and
+availability, we monitor certain metrics - however not every interesting
+metric is readily available to measure. Some of these have to be
+inferred from the data we see in production by incorporating our own
+knowledge. What complicates this further is that the relationship
+between the hidden variables and the output data is not a deterministic
+one, as we are often dealing with a stochastic system.&lt;/p&gt;
+&lt;p&gt;Bayesian inference is a suitable way to tackle this issue - it allows
+encoding our knowledge as a prior distribution of the model parameters.
+Here we will go through real-world uses of Bayesian inference at IMC,
+using PyMC3 to make an estimate for the hidden metrics in the network
+traffic.&lt;/p&gt;
+&lt;p&gt;Knowledge: No prior knowledge of PyMC3 is required. Since this is a
+short presentation, the talk with approach the problem and the solution
+at a high level instead of implementation details.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Omer Yuksel</dc:creator><pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-25:pycon-de-2018/measuring-the-hay-in-the-haystack-quantifying-hidden-variables-using-bayesian-inference.html</guid><category>Data Science</category><category>Networks</category></item><item><title>Observe all your applications</title><link>https://pyvideo.org/pycon-de-2018/observe-all-your-applications.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You just deployed your new version of an application or micro-service;
+how do you know everything works as expected? You run your comprehensive
+test suite to verify functional correctness for known scenarios and
+performance tests before deploying, but does your application really
+work at the moment or is it just responding with error messages to all
+incoming requests?&lt;/p&gt;
+&lt;p&gt;I’m part of the team that runs a huge infrastructure for the SAP HANA
+development. This infrastructure is vital for nearly all development &amp;amp;
+testing activities of SAP HANA. As this infrastructure is powered by
+multiple in-house developed applications, we immediately want to know if
+an application starts to fail and we need to be able to quickly diagnose
+what caused the failure.&lt;/p&gt;
+&lt;p&gt;This talk will give you an overview how we monitor our full stack from
+the 2000 physical machines up to the 10,000 parallel running Python
+application processes, micro-service instances and batch processing
+jobs. It includes a review about the used tools, bad and good examples
+of instrumentation in Python code, the resulting visualisation and an
+outlook on upcoming improvements.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christoph Heer</dc:creator><pubDate>Thu, 25 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-25:pycon-de-2018/observe-all-your-applications.html</guid><category>DevOps</category><category>Infrastructure</category><category>Networks</category><category>Programming</category><category>Python</category></item><item><title>Case Study in Travel Business - Understanding agent connections using NetworkX</title><link>https://pyvideo.org/pycon-de-2018/case-study-in-travel-business-understanding-agent-connections-using-networkx.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Network analysis is getting more and more attention in Business
+Intelligence, people hope to get information out of the structure of an
+organization or a communication network. In this talk, we use the hotel
+room search requests from travel agents, including online public
+website, B2C, B2B and B2B2C, to build a relational network among them.
+By using this network as an example, we demonstrate how insights can be
+extract by studying network properties.&lt;/p&gt;
+&lt;p&gt;In the first half of the talk, we will explain how the network is built
+using NetworkX, an open-source python library that is designed for the
+creation, manipulation, and study of the structure, dynamics, and
+functions of complex networks. When 2 agents are making the same search
+at the same time , a link ( or an “edge” in network analysts terms) is
+made pointing form the initial searcher to the subsequent searcher.
+Using a list of these searches, a directed graph is built. We will also
+demonstrate how to pick the biggest connected component out form the
+graph. In the second half, with the graphs created, we show how
+different functions of NetworkX can be used to study the graphs. By
+compare the graph properties of our graph to the other popular network
+graphs, we can get the insight of how the network was created. Also by
+studying the graphs, we can understand the behavior of the agents and
+can even figure out which agents are acting as main hubs in the network.&lt;/p&gt;
+&lt;p&gt;This talk is for people who are interested in network analysis and would
+like to see how it can be used in a business case. Audiences with any
+level of python experience can learn some basic concept of network
+analysis work and how it can be applied to provide business insights.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cheuk Ting Ho</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/case-study-in-travel-business-understanding-agent-connections-using-networkx.html</guid><category>Algorithms</category><category>Networks</category><category>Python</category></item><item><title>Germany's next topic model</title><link>https://pyvideo.org/pycon-de-2018/germanys-next-topic-model.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Identifying topic models for user generated content like hotel reviews
+turns out to be difficult with the standard approach of LDA (Latent
+Dirichlet Allocation; Blei et al., 2003). Hotel review texts usually
+don't differ as much in the topics that are covered as is typical with
+other genres such as Wikipedia or newsgroup articles where there is
+commonly only a very small set of topics present in each document.&lt;/p&gt;
+&lt;p&gt;To this end, we developed our own approach to topic modeling that is
+especially tailored to non-edited texts like hotel reviews. The approach
+can be divided into three major steps. First, using the concept of
+second-order cooccurrences we define a contextual similarity score that
+enables us to identify words that are similar with respect to certain
+topics. This score allows us to build up a topic network where nodes are
+words and edges the contextual similarity between the words. With the
+help of algorithms from graph theory, like the Infomap algorithm
+(Rosvall and Bergstrom, 2008), we are able to detect clusters of highly
+connected words that can be identified as topics in our review texts. In
+a further step, we use these clusters and the respective words to get a
+topic similarity score for each word in the network. In other words, we
+transform a hard clustering of words into topics into a probability
+score of how likely a certain word belongs to a given topic/cluster.&lt;/p&gt;
+&lt;p&gt;The presentation is structured as follows:&lt;/p&gt;
+&lt;p&gt;References: David M. Blei, Andrew Y. Ng, Michael I. Jordan: Latent
+dirichlet allocation. In: Journal of Machine Learning Research, Jg. 3
+(2003), S. 993–1022, ISSN 1532-4435 M. Rosvall and C. T. Bergstrom, Maps
+of information flow reveal community structure in complex networks, PNAS
+105, 1118 (2008) &lt;a class="reference external" href="http://dx.doi.org/10.1073/pnas.0706851105"&gt;http://dx.doi.org/10.1073/pnas.0706851105&lt;/a&gt;,
+&lt;a class="reference external" href="http://arxiv.org/abs/0707.0609"&gt;http://arxiv.org/abs/0707.0609&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Mayer</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/germanys-next-topic-model.html</guid><category>Artificial Intelligence</category><category>Deep Learning &amp; Artificial Intelligence</category><category>Data Science</category><category>Networks</category><category>NLP</category><category>Machine Learning</category><category>Visualisation</category></item><item><title>IoT using Python on Linux: Lessons Learned</title><link>https://pyvideo.org/pycon-de-2018/iot-using-python-on-linux-lessons-learned.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In a distributed sensor network system with a Java based Cloud
+application, mobile apps and a proprietary radio protocol accompanying
+it we developed an IoT appliance that connects the existing radio
+infrastructure to the Cloud service developed in-house.&lt;/p&gt;
+&lt;p&gt;Using CPython 3.5 + Debian GNU/Linux 9 on an ARMv7 platform, we
+developed the following features:&lt;/p&gt;
+&lt;p&gt;Over the course of this project, we learned a lot about Test Driven
+Development of Python apps in teams and DevOps in the IoT space. We
+would now like to share our experience developing a Python application
+for a headless IoT device and the things we would liked to have known
+upfront.&lt;/p&gt;
+&lt;p&gt;The talk is held both by Matthias Schmidt (Senior Architect at diva-e)
+and Thomas Keppler (Software Developer at diva-e).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Keppler</dc:creator><pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-24:pycon-de-2018/iot-using-python-on-linux-lessons-learned.html</guid><category>DevOps</category><category>Infrastructure</category><category>Networks</category><category>Programming</category><category>Python</category></item></channel></rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 09 Mar 2012 00:00:00 +0000</lastBuildDate><item><title>Using Coroutines to Create Efficient, High-Concurrency Web Applications</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Using Coroutines to Create Efficient, High-Concurrency Web Applications&lt;/p&gt;
+&lt;p&gt;Presented by Matt Spitz&lt;/p&gt;
+&lt;p&gt;Creating high-concurrency python web applications is inherently
+difficult for a variety of reasons. In this talk, I'll discuss the
+various iterations of application server paradigms we've used at meebo,
+the advantages/disadvantages of each approach, and why we've settled on
+a coroutine-based WSGI setup to handle our high-concurrency web
+applications going forward.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;There are a number of ways in which to create a web application in
+python. Some examples include a straight-up CGI scripts that run anew
+with each request, preforked Apache workers that each handle multiple
+requests, and using an asynchronous web framework like Twisted.&lt;/p&gt;
+&lt;p&gt;At meebo, we've settled on using gunicorn, a lightweight WSGI server,
+which supports gevent, a coroutine-based network library for python.
+Gevent monkeypatches python's system modules to make network requests
+asynchronous using an event loop based on libevent. This trick allows
+the developer to use a simple blocking CGI as a non-blocking web
+application that can handle many concurrent requests.&lt;/p&gt;
+&lt;p&gt;I'll discuss our iteration process through these approaches to building
+web applications, why we ended up choosing gunicorn+gevent, the
+challenges this new framework presents, and how we've dealt with them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Spitz</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:pycon-us-2011/pycon-2011--using-coroutines-to-create-efficient-.html</guid><category>coroutines</category><category>gevent</category><category>gunicorn</category><category>highconcurrency</category><category>libevent</category><category>pycon</category><category>pycon2011</category><category>wsgi</category></item><item><title>Practical Machine Learning in Python</title><link>https://pyvideo.org/pycon-us-2012/practical-machine-learning-in-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;There are a plethora of options when it comes to deciding how to add a
+machine learning component to your python application. In this talk,
+I'll discuss why python as a language is well-suited to solving these
+particular problems, the tradeoffs of different machine learning
+solutions for python applications, and some tricks you can use to get
+the most out of whatever package you decide to use.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matt Spitz</dc:creator><pubDate>Fri, 09 Mar 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-03-09:pycon-us-2012/practical-machine-learning-in-python.html</guid></item></channel></rss>

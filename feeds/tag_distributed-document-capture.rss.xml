@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 01 Nov 2012 00:00:00 +0000</lastBuildDate><item><title>Pydica - eine Open-Source-Plattform zum Scannen und Validieren von Formularen in Python</title><link>https://pyvideo.org/pycon-de-2012/pydica-eine-open-source-plattform-zum-scannen-un.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Pydica steht für &lt;em&gt;Distributed Document Capture&lt;/em&gt; und ist eine Plattform,
+mit der die verteilte Verarbeitung ausgefüllter Formulare vom Scannen
+über die OCR bis hin zur anschließenden Validierung möglich ist. Wir
+stellen die Plattform, unser Sicherheitskonzept und einen konkreten
+Anwendungsfall vor.&lt;/p&gt;
+&lt;p&gt;Für das Problem der Erfassung, Validierung und Weiterverarbeitung großer
+Mengen ausgefüllter Formulare wie zum Beispiel Verträge, Umfragen,
+Krankenscheine, Rezepte, Überweisungen, Schecks o. ä. existiert keine
+Lösung.&lt;/p&gt;
+&lt;p&gt;Ziele von Pydica sind:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Skalierbarkeit:&lt;/strong&gt; Die verteilte Architektur sorgt dafür, daß mehrere
+Scanner- und Validierungsarbeitsplätze genutzt werden können. Auch die
+Serverkomponenten für OCR und automatische Validierung sind frei
+skalierbar.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Komplexe Validierungsregeln:&lt;/strong&gt; Die Validierung beschränkt sich nicht
+nur auf einzelne Felder, sondern ist auch über mehrere Felder möglich,
+wie dies z. B. bei Prüfsummen der Fall ist.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Offene Toolchain:&lt;/strong&gt; Pydica ist keine abgeschlossene Software, sondern
+darauf ausgelegt, die erfaßten Daten an Drittsoftware, wie zum Beispiel
+Abrechnungssysteme, zu übergeben.&lt;/p&gt;
+&lt;p&gt;Ein konkretes Anwendungsbeispiel von Pydica, welches am Ende des
+Vortrags vorgestellt wird, ist die Verarbeitung von Rezepten im
+Rechenzentrum für Berliner Apotheken Stein &amp;amp; Reichwald GmbH.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniel Szoska</dc:creator><pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-01:pycon-de-2012/pydica-eine-open-source-plattform-zum-scannen-un.html</guid><category>distributed document capture</category><category>formularerfassung</category></item><item><title>Tiffany - Multipage-Tiff Lesen und Schreiben mit PIL ohne PIL</title><link>https://pyvideo.org/pycon-de-2012/tiffany-multipage-tiff-lesen-und-schreiben-mit.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Tiffany steht für beliebiges Tiff. Das kleine Modul löst eine grosse
+Menge&lt;/p&gt;
+&lt;p&gt;von Problemen, hat keine Abhängigkeiten, keine Binaries und läuft&lt;/p&gt;
+&lt;p&gt;überall wo Python läuft.&lt;/p&gt;
+&lt;p&gt;Bei der Entwicklung von Pydica (Distributed Document Capture) wurden wir&lt;/p&gt;
+&lt;p&gt;mit dem Problem konfrontiert, mehrseitige Tiff-Dateien anzuzeigen. Das&lt;/p&gt;
+&lt;p&gt;GUI-Toolkit PySide (Qt) unterstützt zwar Tiff, zeigt jedoch nur die
+erste Seite.&lt;/p&gt;
+&lt;p&gt;Zudem behandeln wir Fax-komprimierte Dateien, was Qt aber unterstützt.&lt;/p&gt;
+&lt;p&gt;PIL verfügt über eine Bereinigung der Tiff-Tags, kommt aber nicht mit
+der&lt;/p&gt;
+&lt;p&gt;Fax-Kompression zurecht. Es gibt seit langem einen Patch dafür, jedoch
+ist&lt;/p&gt;
+&lt;p&gt;der Build-Prozess erschwert und zieht mit libtiff eine Kette von
+Abhängigkeiten&lt;/p&gt;
+&lt;p&gt;nach sich.&lt;/p&gt;
+&lt;p&gt;Daher benutzt Tiffany einige wenige Dateien aus PIL ohne diese zu
+verändern und täuscht&lt;/p&gt;
+&lt;p&gt;vor, die Tiff-Dateien zu entpacken, tut es aber nicht. Es werden
+lediglich die&lt;/p&gt;
+&lt;p&gt;Tiff-Tags ordentlich aufbereitet. Die komprimierten Daten werden so
+übernommen&lt;/p&gt;
+&lt;p&gt;wie sie sind. Beim Schreiben von Dateien werden daher lediglich die
+vorhandenen&lt;/p&gt;
+&lt;p&gt;Daten in anderer Reihenfolge wieder zusammengesetzt.&lt;/p&gt;
+&lt;p&gt;Im Vortrag werde ich die Implementierung vorstellen sowie weitere
+Alternativen,&lt;/p&gt;
+&lt;p&gt;die Zukunft von PIL sowie auf weitere Tips und Kniffe in unserem Projekt
+eingehen.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Tismer</dc:creator><pubDate>Thu, 01 Nov 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-11-01:pycon-de-2012/tiffany-multipage-tiff-lesen-und-schreiben-mit.html</guid><category>distributed document capture</category><category>monkey-patching</category><category>multipage-tiff</category><category>pil</category></item></channel></rss>

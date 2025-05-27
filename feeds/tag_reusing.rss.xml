@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 13 Jul 2011 00:00:00 +0000</lastBuildDate><item><title>Rethinking the Reusable Application Paradigm</title><link>https://pyvideo.org/djangocon-us-2010/djangocon-2010--rethinking-the-reusable-applicati.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For the past few years the reusable application paradigm has been
+considered one of the major selling points of Django, however the common
+wisdom about what it means to make an application reusable isn't really
+accurate. This talk is going to discuss ways to truly make your
+applications reusable across &lt;em&gt;any&lt;/em&gt; project.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;The common wisdom about reusable application says to do things like let
+your views take arguments for things like the form class or the template
+name. However, that doesn't satisfy most of the real need for
+extendability: changing the business logic or altering models. This talk
+is going to look at ways to combat these limitations:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Class based views&lt;/li&gt;
+&lt;li&gt;By making everything overidable in a view you can absolutely minimize
+the need to &amp;quot;copy-paste&amp;quot; when changing the logic of things around.&lt;/li&gt;
+&lt;li&gt;As seen in the admin.&lt;/li&gt;
+&lt;li&gt;Do less&lt;/li&gt;
+&lt;li&gt;brabeion&lt;/li&gt;
+&lt;li&gt;Provide the absolute minimum at the model layer, and only small
+wrappers for the business logic users can implement their own logic
+to control how things happen.&lt;/li&gt;
+&lt;li&gt;Related to the idea of &amp;quot;application frameworks&amp;quot;. Providing the tools
+for others to build their logic around various helpers.&lt;/li&gt;
+&lt;li&gt;Flexibility&lt;/li&gt;
+&lt;li&gt;django-taggit&lt;/li&gt;
+&lt;li&gt;Provide a concrete implementation, but allow swapping out of various
+layers.&lt;/li&gt;
+&lt;li&gt;Don't like the Tag model, swap it out, want a new intermediary model,
+swap it out.&lt;/li&gt;
+&lt;li&gt;django-registration&lt;/li&gt;
+&lt;li&gt;Providing swappable backends to change behavior.&lt;/li&gt;
+&lt;li&gt;Libraries&lt;/li&gt;
+&lt;li&gt;django-filter&lt;/li&gt;
+&lt;li&gt;django-fixture-generator&lt;/li&gt;
+&lt;li&gt;django-templatetag-sugar&lt;/li&gt;
+&lt;li&gt;django-compressor&lt;/li&gt;
+&lt;li&gt;Providing tools for others to build around.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;By using these techniques you can develop reusable application that work
+beyond any single use case. Of course there are cases where you don't
+need any of these, and just need something that fits &amp;quot;traditional&amp;quot;
+reusable application paradigm, so this talk will cover when that works
+as well.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alex Gaynor</dc:creator><pubDate>Thu, 09 Sep 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-09-09:djangocon-us-2010/djangocon-2010--rethinking-the-reusable-applicati.html</guid><category>djangocon</category><category>djangocon2010</category><category>modularizing</category><category>reuse</category><category>reusing</category></item><item><title>django-rdflib and postgresql - the best of both worlds</title><link>https://pyvideo.org/europython-2011/django-rdflib-and-postgresql-the-best-of-both-w.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Stefan Talpalaru - 21 June 2011 in &amp;quot;Track Ravioli&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;rdflib is a python library implementing a database with various triples
+back- end, parser, data serializers, SPARQL is a Python interface to
+extract/insert triples. We integrated it in Django reusing the database
+connection and exposing an ORM interface, along with full-text search on
+literals. This presentation shows a django-rdflib case study with a
+PostgreSQL backend in &lt;a class="reference external" href="http://brancusi1.usc.edu"&gt;Brain Architecture Management
+System&lt;/a&gt; - a neuroscientific project for the
+University of Southern California. Benefits of the flexible RDF
+structure will be shown, allowing researchers to insert free format
+data, making data public with a customizable serialization and use the
+powerful full-text search integrated in PostgreSQL.&lt;/p&gt;
+&lt;p&gt;Objective: show attendees an effective combination of RDF, PostgreSQL
+full- text search and Django ORM via django-rdflib.&lt;/p&gt;
+&lt;p&gt;Requirements: Django familiarity.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stefan Talpalaru</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:europython-2011/django-rdflib-and-postgresql-the-best-of-both-w.html</guid><category>architecture</category><category>database</category><category>django</category><category>orm</category><category>postgresql</category><category>reusing</category><category>search</category><category>serialization</category><category>university</category></item></channel></rss>

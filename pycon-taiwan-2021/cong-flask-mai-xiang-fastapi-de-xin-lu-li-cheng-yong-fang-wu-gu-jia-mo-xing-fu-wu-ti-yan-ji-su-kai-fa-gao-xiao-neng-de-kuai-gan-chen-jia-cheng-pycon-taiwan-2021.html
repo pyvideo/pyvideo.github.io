@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; 從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感! – 陳家丞 (PyCon Taiwan 2021)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感! – 陳家丞 (PyCon Taiwan 2021)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-taiwan-2021/cong-flask-mai-xiang-fastapi-de-xin-lu-li-cheng-yong-fang-wu-gu-jia-mo-xing-fu-wu-ti-yan-ji-su-kai-fa-gao-xiao-neng-de-kuai-gan-chen-jia-cheng-pycon-taiwan-2021.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/5bIJ1SwF2bk/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/5bIJ1SwF2bk/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-taiwan-2021/cong-flask-mai-xiang-fastapi-de-xin-lu-li-cheng-yong-fang-wu-gu-jia-mo-xing-fu-wu-ti-yan-ji-su-kai-fa-gao-xiao-neng-de-kuai-gan-chen-jia-cheng-pycon-taiwan-2021.html" rel="bookmark"
+         title="Permalink to 從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感! – 陳家丞 (PyCon Taiwan 2021)">從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感! – 陳家丞 (PyCon Taiwan 2021)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sun 03 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/chen-jia-cheng.html">陳家丞</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5bIJ1SwF2bk" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Day 2, 13:00-13:45</p>
+<p>Abstract</p>
+<p>過往在使用Python開發API的時候，基於WSGI架構下，運算中遇到IO bound時，可以透過多線程去處理，但遇到cpu bound時，多線程並不是一個好的選擇，因為線程會受限於GIL，並不會有效提升效能，而當遇到運算請求量較大時，為了因應大量的運算請求，可以透過多進程來彌補多線程的不足，但同時也需要承擔過多的資源消耗以及考慮Inter-Process Communication overhead。 而這些問題在FastAPI得到了救贖，FastAPI是一個建立在ASGI架構下的Web框架，以Python所提出的非同步概念為基礎，透過Coroutine的方式，去提高CPU運算效率，去改善多線程、多進程對於cpu bound遇到的問題。 本次演講主要透過房屋估價模型服務程式碼的解說，分享如何從過去使用的Flask框架，轉換為FastAPI框架。透過非同步的設計，即使有GIL的限制，仍舊能夠透過單線程去達到類似多進程的運算效能，減少開啟多進程造成的資源耗費過多。此外，透過程式碼，說明這兩個框架開發上的不同之處，以及轉換過程中曾經遇到的問題，讓想使用FastAPI但還在觀望的人能夠有參考方向，減少未來使用時踩雷的機會!</p>
+<p>Description</p>
+<p>想透過本次演講告訴大家的內容
+ASGI架構是什麼?FastAPI是什麼?是如何應用Async?
+藉由實際痛點(mutli-thread、mutli-process issue)案例-房屋估價模型服務分析Flask與FastAPI開發上相異之處，以及這樣的相異之處對開發上的影響
+非同步框架帶來好處的同時，使用上所需的注意事項
+實際房屋估價模型服務轉換前轉後的數據比較
+除了效能以外，FastAPI所帶來的好處
+轉換上的心路歷程
+本次使用的相關工具
+FastAPI
+Flask</p>
+<p>Slides not uploaded by the speaker.
+HackMD: <a class="reference external" href="https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2Frk6Kg4cfY">https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2Frk6Kg4cfY</a></p>
+<p>Speaker: 陳家丞</p>
+<p>Intelligent System Engineer at E.SUN Bank. Like to study python Web Framework, e.g., Flask、FastAPI.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-taiwan-2021.html">PyCon Taiwan 2021</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=5bIJ1SwF2bk" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/pycon-tw-2021/videos/cong-flask-mai-xiang-fastapi-de-xin-lu-li-cheng-chen-jia-cheng-pycon-taiwan-2021.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

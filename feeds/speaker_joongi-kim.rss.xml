@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Improving debuggability of complex asyncio applications</title><link>https://pyvideo.org/pycon-us-2023/improving-debuggability-of-complex-asyncio-applications.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The key of debugging is observability and reproducibility. Despite a
+series of the asyncio stdlib improvements for the last few years, it is
+still challenging to see what’s happening in complex real-world asyncio
+applications. Particularly, when multiple asyncio libraries and your
+codes are composed together, it is hard to track down silently swallowed
+cancellations and resource-hogging floods of tasks triggered by
+internals of 3rd-party callbacks. Moreoever, such misbehaviors are often
+observed only in production environments where the app faces the actual
+workloads and I/O patterns, making it even harder to reproduce.&lt;/p&gt;
+&lt;p&gt;In this talk, I present an improved version of aiomonitor, called
+aiomonitor-ng (next generation). The original aiomonitor provides a live
+access to a running asyncio process using a telnet socket and a basic
+REPL to inspect the list of tasks and their current stacks. After
+getting several times of assistance in production debugging with it, I
+have added more features to help tracking the above issues of asyncio
+apps running in production: task creation tracker and termination
+tracker. These trackers keeps the stack traces whenever a new task is
+created or terminated, and provides a holistic view of chained stack
+traces when the tasks are nested with arbitrary depths.&lt;/p&gt;
+&lt;p&gt;aiomonitor-ng also demonstrates a rich async TUI (terminal UI) based on
+prompt toolkit and Click, with auto-completion of commands and
+arguments, far enhancing the original version’s simple REPL.&lt;/p&gt;
+&lt;p&gt;With the improved aiomonitor-ng, I could successfully debug several
+production bugs. I hope this talk would help our fellow asyncio
+developers to make more complex yet stable applications at scale.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joongi Kim</dc:creator><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-21:pycon-us-2023/improving-debuggability-of-complex-asyncio-applications.html</guid></item></channel></rss>
