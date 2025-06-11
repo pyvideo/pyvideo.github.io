@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Christopher Ariza</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Employing NumPy's NPY Format for Faster-Than-Parquet DataFrame Serialization</title><link>https://pyvideo.org/pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over 14 years ago the first NumPy Enhancement Proposal (NEP) defined the NPY format (a binary encoding of array data and metadata) and the NPZ format (zipped bundles of NPY files). Those same formats, extended in a custom NPZ packaged with JSON metadata, can be used in Python to create a stable DataFrame storage format that can materially out-perform Parquet read / write times in a wide range of contexts. Unlike Parquet, all characteristics of a DataFrame can be encoded and all NumPy dtypes are supported. Implemented in StaticFrame, this format can take advantage of an immutable data model to memory-map full DataFrames from un-zipped directories of NPY. Given wide-spread use of Parquet files in data science workflows, a faster-than-Parquet file format can significantly reduce compute costs.&lt;/p&gt;
+&lt;p&gt;I will begin this talk by introducing the challenge of serializing DataFrames, illustrating how nearly all stable encoding formats lack full support for all DataFrame characteristics. While the broadly-used Parquet format has been called a &amp;quot;gold standard&amp;quot; binary file format, its columnar representation will be shown to have limitations when used for encoding DataFrames.&lt;/p&gt;
+&lt;p&gt;I will show how the NPY format, combined with JSON metadata, can be used to create a custom NPZ file with significant performance and compatibility advantages compared to Parquet. The details of this encoding scheme will be explained.&lt;/p&gt;
+&lt;p&gt;I will close the talk by evaluating numerous read / write performance comparisons between Parquet (via Pandas) and NPZ (via StaticFrame), measured with a wide variety of DataFrame shapes and dtype compositions. I will share techniques used in implementing optimized Python routines for reading and writing NPY files, and demonstrate applications for memory-mapping complete DataFrames via the same NPY representation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-04-27:/pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html</guid></item><item><title>Building NumPy Arrays from CSV Files, Faster than Pandas</title><link>https://pyvideo.org/pycon-us-2023/building-numpy-arrays-from-csv-files-faster-than-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Twenty years ago, in 2003, Python 2.3 was released with
+&lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;, a function that provided support for parsing CSV
+files. The C implementation, proposed in PEP 305, defines a core
+tokenizer that has been a reference for many subsequent projects. Two
+commonly needed features, however, were not addressed in
+&lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;: determining type per column, and converting strings to
+those types (or columns to arrays). Pandas &lt;tt class="docutils literal"&gt;read_csv()&lt;/tt&gt; implements
+automatic type conversion and realization of columns as NumPy arrays
+(delivered in a DataFrame), with performance good enough to be widely
+regarded as a benchmark. Pandas implementation, however, does not
+support all NumPy dtypes. While NumPy offers &lt;tt class="docutils literal"&gt;loadtxt()&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;genfromtxt()&lt;/tt&gt; for similar purposes, the former (recently
+re-implemented in C) does not implement automatic type discovery, while
+the latter (implemented in Python) suffers poor performance at scale.&lt;/p&gt;
+&lt;p&gt;To support reading delimited files in StaticFrame (a DataFrame library
+built on an immutable data model), I needed something different: the
+full configuration options of Python's &lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;; optional type
+discovery for one or more columns; support for all NumPy dtypes; and
+performance competitive with Pandas &lt;tt class="docutils literal"&gt;read_csv()&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Following the twenty-year tradition of extending &lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;, I
+implemented &lt;tt class="docutils literal"&gt;delimited_to_arrays()&lt;/tt&gt; as a C extension to meet these
+needs. Using a family of C functions and structs, Unicode code points
+are collected per column (with optional type discovery), converted to
+C-types, and written into NumPy arrays, all with minimal &lt;tt class="docutils literal"&gt;PyObject&lt;/tt&gt;
+creation or reference counting. Incorporated in StaticFrame, performance
+tests across a range of DataFrame shapes and type heterogeneity show
+significant performance advantages over Pandas. Independent of usage in
+StaticFrame, &lt;tt class="docutils literal"&gt;delimited_to_arrays()&lt;/tt&gt; provides a powerful new resource
+for converting CSV files to NumPy arrays. This presentation will review
+the background, architecture, and performance characteristics of this
+new implementation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-21:/pycon-us-2023/building-numpy-arrays-from-csv-files-faster-than-pandas.html</guid></item><item><title>StaticFrame: An Immutable Alternative to Pandas</title><link>https://pyvideo.org/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;StaticFrame provides Pandas-like data structures that enforce
+immutability. StaticFrame narrows and refines Pandas-style interfaces,
+which, when combined with immutability, reduces opportunities for error.
+In addition, StaticFrame offers a range of new and powerful iterators
+for function application with built-in concurrency.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-23:/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</guid></item><item><title>Fitting Many Dimensions into One: The Promise of Hierarchical Indices for Data Beyond Two Dimensions</title><link>https://pyvideo.org/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent versions of Pandas have warned users of the imminent deprecation
+of the Panel, Panda’s name-sake data structure for storing
+three-dimensional data. This talk will examine the tradeoffs in
+performance and interface between two types of Panel alternatives: using
+hierarchical indices in Pandas and StaticFrame, or using true
+n-dimensional arrays in NumPy or xarray.&lt;/p&gt;
+&lt;p&gt;This talk will aid those working in data science and related fields by
+examining the tradeoffs between working with data in true
+multidimensional data structures (i.e., NumPy and xarray) versus working
+with hierarchical index implementations on one- or two-dimensional data.&lt;/p&gt;
+&lt;p&gt;The immediate point of departure is Pandas imminent deprecation of the
+Panel: for Pandas users who have used the Panel, this talk will
+illustrate how to transition away from the Panel and the tradeoffs in
+Panel alternatives.&lt;/p&gt;
+&lt;p&gt;This talk will explain how hierarchical indices work by comparing two
+implementations: the Pandas MultiIndex and the StaticFrame
+IndexHierarchy. The StaticFream IndexHierarchy offers a new, independent
+implementation of hierarchical indices that deviates from Pandas in
+significant ways: the index is literally composed of other index
+objects, permitting usage of specialized index types (such as datetime
+indices), efficient memory usage of shared immutable objects, and the
+enforcement of a strict tree graph.&lt;/p&gt;
+&lt;p&gt;After demonstrating how hierarchical indices can support higher
+dimensional data in one or two-dimensional arrays, the power and
+flexibility of selecting and slicing data with hierarchical indices will
+be demonstrated.&lt;/p&gt;
+&lt;p&gt;The talk will close with performance analysis, isolating the overhead of
+using hierarchical indices over true multi-dimensional array
+representations, and comparing the performance of selection, slicing,
+grouping, and function application of hierarchical data in NumPy,
+xarray, Pandas and StaticFrame.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at both beginners, new to hierarchical indices, and
+more advanced users interested in interface design and performance
+tradeoffs. Basic familiarity with NumPy and Pandas is expected. Audience
+members will leave with a better understanding of how hierarchical
+indices work, and what tradeoffs are made when using them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-12-05:/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</guid></item></channel></rss>

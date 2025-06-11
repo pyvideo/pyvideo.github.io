@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Jimmy Lai</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_jimmy-lai.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2023-04-22T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Building a Knowledge Graph - the new search engine technology</title><link href="https://pyvideo.org/pycon-apac-2014/building-a-knowledge-graph-the-new-search-engin.html" rel="alternate"></link><published>2014-06-27T00:00:00+00:00</published><updated>2014-06-27T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2014-06-27:/pycon-apac-2014/building-a-knowledge-graph-the-new-search-engin.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Knowledge graph is the new search engine technology. All the leading
+search engine exploit knowledge graph to provide more accurate result to
+user, e.g. Bing, Google, Yahoo.&lt;/p&gt;
+&lt;p&gt;In this talk, the speaker will demonstrate how to build a searchable
+knowledge graph from scratch. Lots of python tools will …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Knowledge graph is the new search engine technology. All the leading
+search engine exploit knowledge graph to provide more accurate result to
+user, e.g. Bing, Google, Yahoo.&lt;/p&gt;
+&lt;p&gt;In this talk, the speaker will demonstrate how to build a searchable
+knowledge graph from scratch. Lots of python tools will be applied
+during the process. The process includes data wrangling, graph entity
+indexing, full text search and web visualization. The data sources are
+from dbpedia.org. Enormous amount of entities are collected and stored
+to graph database for relationship querying and full text search engine
+for searching. In the web visualization, a searchable interface and
+visualized result demonstrate the knowledgable information to customer.&lt;/p&gt;
+&lt;p&gt;About the speaker&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Python fan, and his interested topics are natural
+language processing and machine learning. He specializes in combining
+machine learning algorithm and cloud computing technology to do big data
+analysis, building application services.&lt;/p&gt;
+</content></entry><entry><title>Python Profilers We Built for Efficiency</title><link href="https://pyvideo.org/pycon-taiwan-2019/python-profilers-we-built-for-efficiency.html" rel="alternate"></link><published>2019-09-20T00:00:00+00:00</published><updated>2019-09-20T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2019-09-20:/pycon-taiwan-2019/python-profilers-we-built-for-efficiency.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 11:30–12:00&lt;/p&gt;
+&lt;p&gt;To solve efficiency issue of our Python application. We started with cProfile to profile function call CPU cost and found it couldn't differentiate call-stacks sharing the same function calls. Asyncio makes the issue worse, since gathered functions all have the event loop …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 11:30–12:00&lt;/p&gt;
+&lt;p&gt;To solve efficiency issue of our Python application. We started with cProfile to profile function call CPU cost and found it couldn't differentiate call-stacks sharing the same function calls. Asyncio makes the issue worse, since gathered functions all have the event loop as caller. We ended up build our own function call profilers:
+* CPU cost profiler: CPU instructions per function call with complete call stack.
+* Latency profiler with asyncio support: collect timestamp/latency per function call and yield from await.
+* Profiler identifies lru_cache opportunities: functions have high cost and high hit rate of parameters/returns.&lt;/p&gt;
+&lt;p&gt;We share how we implemented those profilers. After this talk, you'll have learned how to:
+* Build profilers by registering a callback function for function calls.
+* Handle call stacks in asyncio world.
+* Use different timers and traversing through call-stack.
+* Implement a CPU profiler, latency profiler lru_cache opportunities profiler.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/jimmylai/talks"&gt;https://github.com/jimmylai/talks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Jimmy Lai&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Software Engineer in Instagram Infrastructure. His recent interest is Python efficiency, including profiling, optimization and asyncio. He has been sharing his experiences in PyCon Taiwan since 2012. This year, he plan to share his latency efficiency experiences on large scale Python web application.&lt;/p&gt;
+</content></entry><entry><title>Fixit - a lint framework writes better Python code for you – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/fixit-a-lint-framework-writes-better-python-code-for-you-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/fixit-a-lint-framework-writes-better-python-code-for-you-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:45–14:15&lt;/p&gt;
+&lt;p&gt;Python is flexible and allows us to implement the same function in different ways. Some ways are simpler, more efficient, or more secure than others and are preferred as coding conventions. We have a big codebase with hundreds of developers and thus …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:45–14:15&lt;/p&gt;
+&lt;p&gt;Python is flexible and allows us to implement the same function in different ways. Some ways are simpler, more efficient, or more secure than others and are preferred as coding conventions. We have a big codebase with hundreds of developers and thus coding convention is especially important to prevent bad patterns being copy-pasted and spread around. We started with building lint rules as Flake8 plugins and found limitations. We also wanted to be able to provide auto-fixes for lint violations. So we built Fixit.
+Fixit is a lint framework that complements Flake8. It’s based on LibCST which makes it possible to provide auto-fixes. Lint rules are made easy to build through matcher pattern, test toolkit, utility helpers (e.g. scope analysis) for non-trivial boilerplate. It is optimized for efficiency, easy to customize and comes with many builtin lint rules. In this talk, you’ll learn our story of building Fixit and learn to use it in your project to help you write better Python code!&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/jimmylai/talks/blob/master/pycon_taiwan_2020_fixit.pdf"&gt;https://github.com/jimmylai/talks/blob/master/pycon_taiwan_2020_fixit.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Jimmy Lai&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Software Engineer in Instagram Infrastructure. His recent interest is Python efficiency, including profiling, optimization and asyncio. He has been sharing his experiences in PyCon Taiwan since 2012. This year, he plan to share his automated refactoring experience on large scale Python codebase.&lt;/p&gt;
+</content></entry><entry><title>Python Linters at Scale</title><link href="https://pyvideo.org/pycon-us-2023/python-linters-at-scale.html" rel="alternate"></link><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2023-04-22:/pycon-us-2023/python-linters-at-scale.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Black, Flake8, isort, and Mypy are useful Python linters but it’s
+challenging to use them effectively at scale in the case of multiple
+codebases, in a large codebase, or with many developers. Manually
+managing consistent linter versions and configurations across codebases
+requires endless effort. Linter analysis on large …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Black, Flake8, isort, and Mypy are useful Python linters but it’s
+challenging to use them effectively at scale in the case of multiple
+codebases, in a large codebase, or with many developers. Manually
+managing consistent linter versions and configurations across codebases
+requires endless effort. Linter analysis on large codebases is slow.
+Linters may slow down developers by asking them to fix trivial issues.
+Running linters in distributed CI jobs makes it hard to understand the
+overall developer experience.&lt;/p&gt;
+&lt;p&gt;To handle these scale challenges, we developed a reusable linter
+framework that releases new linter updates automatically, reuses
+consistent configurations, runs linters on only updated code to speedup
+runtime, collects logs and metrics to provide observability, and builds
+auto fixes for common linter issues. Our linter runs are fast and
+scalable. Every week, they run 10k times on multiple millions of lines
+of code in over 25 codebases, generating 25k suggestions for more than
+200 developers. Its autofixes also save 20 hours of developer time every
+week.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll walk you through popular Python linters and
+configuration recommendations, and we will discuss common issues and
+solutions when scaling them out. Using linters more effectively will
+make it much easier for you to apply best practices and more quickly
+write better code.&lt;/p&gt;
+</content></entry><entry><title>Jimmy Lai - Automated Python Refactoring Powered by LibCST - Pyninsula #25</title><link href="https://pyvideo.org/pyninsula-2020/jimmy-lai-automated-python-refactoring-powered-by-libcst-pyninsula-25.html" rel="alternate"></link><published>2020-03-17T00:00:00+00:00</published><updated>2020-03-17T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2020-03-17:/pyninsula-2020/jimmy-lai-automated-python-refactoring-powered-by-libcst-pyninsula-25.html</id><summary type="html"></summary><content type="html"></content></entry></feed>
