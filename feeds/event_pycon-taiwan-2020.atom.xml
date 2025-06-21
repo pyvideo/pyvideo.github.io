@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - PyCon Taiwan 2020</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_pycon-taiwan-2020.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2020-09-06T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Celery meets Singleton – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/celery-meets-singleton-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>郭學聰 (Hsueh-Tsung Kuo)</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/celery-meets-singleton-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;Celery is a popular framework for deferred, offline, or scheduled processing. Celery itself is written in Python, and it can well fit into docker, stack, and cluster structure.
+In real situation, we might have requirement or usage like this: to ensure only one …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;Celery is a popular framework for deferred, offline, or scheduled processing. Celery itself is written in Python, and it can well fit into docker, stack, and cluster structure.
+In real situation, we might have requirement or usage like this: to ensure only one instance of celery task running. Celery itself could not do this out of the box. So there are some patches implementations or usage strategies to support singleton task. However all of them have their pros and cons. Sadly these patches need more dependencies and not robust enough, thus they could not fit to our situations.
+In this talk, I will share some implementation strategies, discuss characteristics, explain their weak points. After that, I will introduce a strategy which has different characteristics, pros, and cons from other strategies. And this strategy totally fit our requirement.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;fieliapm/B10XOgeXD#/"&gt;https://hackmd.io/&amp;#64;fieliapm/B10XOgeXD#/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 郭學聰 (Hsueh-Tsung Kuo)&lt;/p&gt;
+&lt;p&gt;台灣某game會社的小小RD
+目前是CPPRG(C# Perl Python Ruby Golang)熟手
+Smalltalk與Scheme基本教義派
+不是太奇怪的程式語言都會一些&lt;/p&gt;
+&lt;p&gt;請多多指教⎝（˶′◡‵˶）⎠&lt;/p&gt;
+</content></entry><entry><title>Corona-Net: Fighting COVID-19 with Machine Learning – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/corona-net-fighting-covid-19-with-machine-learning-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Choi Ching Lam</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/corona-net-fighting-covid-19-with-machine-learning-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 11:55–12:10&lt;/p&gt;
+&lt;p&gt;In this talk, I will introduce my open source Python project, Corona-Net, COVID-19 chest CT segmentation  with PyTorch. I leverage the EfficientNet model for image-level COVID-19 diagnosis, as well as the UNet -- a Fully Convolutional encoder-decoder network -- for binary and multi-class medical …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 11:55–12:10&lt;/p&gt;
+&lt;p&gt;In this talk, I will introduce my open source Python project, Corona-Net, COVID-19 chest CT segmentation  with PyTorch. I leverage the EfficientNet model for image-level COVID-19 diagnosis, as well as the UNet -- a Fully Convolutional encoder-decoder network -- for binary and multi-class medical segmentation. Through UNet, I successfully detect and localise COVID-19 symptoms, including ground-glass, consolidation and pleural effusion, from axial chest CT slices, using open source datasets and annotations.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Choi Ching Lam&lt;/p&gt;
+&lt;p&gt;Choi Ching Lam is a high school programmer from Hong Kong, keenly interested in Computer Vision and Scientific Computing. She is an open source enthusiast with a deep appreciation for Python and Julia. Presently an intern at NVIDIA's AI Tech Center, Ching Lam aspires to become a Machine Learning researcher.&lt;/p&gt;
+</content></entry><entry><title>Deploy Your Model to Live Trading – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/deploy-your-model-to-live-trading-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>YVictor</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/deploy-your-model-to-live-trading-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;近年機器學習及深度學習讓Python推上一個高峰，有許多人開始將機器學習應用於金融交易模型，但是卻缺乏將模型部署於實際交易環境快速方便地解決方案，模型訓練好後如何串接即時報價，如何高效的把當下即時資料合併歷史資料預處理成模型的輸入資料，並且如何將模型訊號與實際交易下單介接，每一步都相當複雜且有效率考量。本次演講中，會建立一套快速方便且高效率的即時交易系統，首先介紹如何使用dolphindb來將即時的串流報價資料收集，並且整合pandas與numpy等放入訓練好的模型做即時的預測，並串接到交易API進行下單，並簡單介紹如何透過dolphindb快速做模型多商品績效的回測。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://slides.com/yvictor/pycon2020/fullscreen"&gt;https://slides.com/yvictor/pycon2020/fullscreen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: YVictor&lt;/p&gt;
+&lt;p&gt;the deep reinforcement learning player who major in art and design&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;近年機器學習及深度學習讓Python推上一個高峰，有許多人開始將機器學習應用於金融交易模型，但是卻缺乏將模型部署於實際交易環境快速方便地解決方案，模型訓練好後如何串接即時報價，如何高效的把當下即時資料合併歷史資料預處理成模型的輸入資料，並且如何將模型訊號與實際交易下單介接，每一步都相當複雜且有效率考量。本次演講中，會建立一套快速方便且高效率的即時交易系統，首先介紹如何使用dolphindb來將即時的串流報價資料收集，並且整合pandas與numpy等放入訓練好的模型做即時的預測，並串接到交易API進行下單，並簡單介紹如何透過dolphindb快速做模型多商品績效的回測。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://slides.com/yvictor/pycon2020/fullscreen"&gt;https://slides.com/yvictor/pycon2020/fullscreen&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: YVictor&lt;/p&gt;
+&lt;p&gt;the deep reinforcement learning player who major in art and design&lt;/p&gt;
+</content></entry><entry><title>Django, Celery 與 Windows 的美麗邂逅 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/django-celery-yu-windows-de-mei-li-xie-hou-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Hane Liu</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/django-celery-yu-windows-de-mei-li-xie-hou-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 11:55–12:10&lt;/p&gt;
+&lt;p&gt;許多 Python 套件或框架都建議使用者在類 Unix 環境(Linux, OSX)進行開發，能得到較佳的成效。然而有的時候因為專案本身的需求及限制，會需要在 Windows 環境下開發，此時可能會遇到一些沒有紀錄在官方文件上的問題。
+因此，本演講將會使用簡單的範例分享在 Windows 環境開發 Django 專案並使用 Celery 遇到的一些常見問題及解決方式，以及其他因專案需求及限制無法使用官方文件建議做法的替代方案。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1Acj30nVd1X2G6Hhh96lx9fN4tLewUclYPPGxuGPSyV4/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1Acj30nVd1X2G6Hhh96lx9fN4tLewUclYPPGxuGPSyV4/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Hane Liu&lt;/p&gt;
+&lt;p&gt;掛著研究員名牌的全端工程師(我想做研究QQ&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 11:55–12:10&lt;/p&gt;
+&lt;p&gt;許多 Python 套件或框架都建議使用者在類 Unix 環境(Linux, OSX)進行開發，能得到較佳的成效。然而有的時候因為專案本身的需求及限制，會需要在 Windows 環境下開發，此時可能會遇到一些沒有紀錄在官方文件上的問題。
+因此，本演講將會使用簡單的範例分享在 Windows 環境開發 Django 專案並使用 Celery 遇到的一些常見問題及解決方式，以及其他因專案需求及限制無法使用官方文件建議做法的替代方案。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1Acj30nVd1X2G6Hhh96lx9fN4tLewUclYPPGxuGPSyV4/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1Acj30nVd1X2G6Hhh96lx9fN4tLewUclYPPGxuGPSyV4/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Hane Liu&lt;/p&gt;
+&lt;p&gt;掛著研究員名牌的全端工程師(我想做研究QQ&lt;/p&gt;
+</content></entry><entry><title>防疫大作戰！使用 Raspberry Pi + Thermal Camera + Python 自製熱像儀 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/fang-yi-da-zuo-zhan-shi-yong-raspberry-pi-thermal-camera-python-zi-zhi-re-xiang-yi-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>sosorry</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/fang-yi-da-zuo-zhan-shi-yong-raspberry-pi-thermal-camera-python-zi-zhi-re-xiang-yi-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:50–16:40&lt;/p&gt;
+&lt;p&gt;後新冠肺炎時代，出入各種場所都需要進行體溫量測後才能決定是否允許進入。但使用額溫槍速度過慢並且需要大量人工操作，如果使用市售熱像儀所費不貲且功能受限。&lt;/p&gt;
+&lt;p&gt;FusionPi 是一個融合熱影像和光影像的智慧物體辨識的專案。過去光影像能進行物體辨識是基於大量的資料集與人工標示後的成果，但光影像會受到天候或環境的影響讓辨識率降低。我們提出一種使用 Raspberry Pi + FLIR Lepton 相機 + Raspberry Pi Camera 自製熱像儀的方法，可進行非接觸式的溫度量測並辨識物體。在軟體面，我們使用 Python + NumPy + OpenCV 實做相機校正與影像處理，並利用機器學習做物件辨識訓練。&lt;/p&gt;
+&lt;p&gt;我們將在本場次說明
+* 光影像的限制與挑戰
+* 熱影像技術介紹
+* FusionPi 專案使用的軟體和硬體
+* 如何應用機器學習讓 FusionPi 更聰明
+* 未來專案方向與學習資源&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://raspberrypi-tw.s3.amazonaws.com/slides/20200906_make-your-thermal-camera.pdf"&gt;http://raspberrypi-tw.s3.amazonaws.com/slides/20200906_make-your-thermal-camera …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:50–16:40&lt;/p&gt;
+&lt;p&gt;後新冠肺炎時代，出入各種場所都需要進行體溫量測後才能決定是否允許進入。但使用額溫槍速度過慢並且需要大量人工操作，如果使用市售熱像儀所費不貲且功能受限。&lt;/p&gt;
+&lt;p&gt;FusionPi 是一個融合熱影像和光影像的智慧物體辨識的專案。過去光影像能進行物體辨識是基於大量的資料集與人工標示後的成果，但光影像會受到天候或環境的影響讓辨識率降低。我們提出一種使用 Raspberry Pi + FLIR Lepton 相機 + Raspberry Pi Camera 自製熱像儀的方法，可進行非接觸式的溫度量測並辨識物體。在軟體面，我們使用 Python + NumPy + OpenCV 實做相機校正與影像處理，並利用機器學習做物件辨識訓練。&lt;/p&gt;
+&lt;p&gt;我們將在本場次說明
+* 光影像的限制與挑戰
+* 熱影像技術介紹
+* FusionPi 專案使用的軟體和硬體
+* 如何應用機器學習讓 FusionPi 更聰明
+* 未來專案方向與學習資源&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://raspberrypi-tw.s3.amazonaws.com/slides/20200906_make-your-thermal-camera.pdf"&gt;http://raspberrypi-tw.s3.amazonaws.com/slides/20200906_make-your-thermal-camera.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: sosorry&lt;/p&gt;
+&lt;p&gt;Hi, I'm sosorry.&lt;/p&gt;
+</content></entry><entry><title>Four Ways to Boost Your NumPy Performance – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/four-ways-to-boost-your-numpy-performance-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>clyang</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/four-ways-to-boost-your-numpy-performance-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;無論是資料分析師或研究人員，進行科學運算時，經常會使用Python中的NumPy套件輔助計算，常遭遇的問題之一，是在開發時的測試資料上，程式運算速度相當快速，但當將其ㄧ部署到線上，接收到幾個量級大的實際資料後，運算時間遠遠不如預期，而嚴重影響了系統整體效能或是研究產出。&lt;/p&gt;
+&lt;p&gt;本場talk會使用一個常見的數學函數當例子，使用4(*)種熱門的方式對其進行最佳化，比較各方案對同一個函數改進後的效能差異，最後分享實際的使用心得、各方案的易用性、相關優劣並且推薦適合的使用情境。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;會眾需有NumPy使用經驗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/clyang/PyConTW2020"&gt;https://github.com/clyang/PyConTW2020&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: clyang&lt;/p&gt;
+&lt;p&gt;Cybersecurity hobbyist
+Python performance tuning enthusiast&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;無論是資料分析師或研究人員，進行科學運算時，經常會使用Python中的NumPy套件輔助計算，常遭遇的問題之一，是在開發時的測試資料上，程式運算速度相當快速，但當將其ㄧ部署到線上，接收到幾個量級大的實際資料後，運算時間遠遠不如預期，而嚴重影響了系統整體效能或是研究產出。&lt;/p&gt;
+&lt;p&gt;本場talk會使用一個常見的數學函數當例子，使用4(*)種熱門的方式對其進行最佳化，比較各方案對同一個函數改進後的效能差異，最後分享實際的使用心得、各方案的易用性、相關優劣並且推薦適合的使用情境。&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;會眾需有NumPy使用經驗&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/clyang/PyConTW2020"&gt;https://github.com/clyang/PyConTW2020&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: clyang&lt;/p&gt;
+&lt;p&gt;Cybersecurity hobbyist
+Python performance tuning enthusiast&lt;/p&gt;
+</content></entry><entry><title>How to develop ML APIs with Python from Online Learning Dataset – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/how-to-develop-ml-apis-with-python-from-online-learning-dataset-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Tetsuya Jesse Hirata</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/how-to-develop-ml-apis-with-python-from-online-learning-dataset-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 10:30–12:00&lt;/p&gt;
+&lt;p&gt;Recently, Python engineers have more opportunities to work with data scientists than before. At the same time, they are often faced with the research-oriented code written by researchers or data scientists. In order to integrate this code with systems such as APIs, python …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 10:30–12:00&lt;/p&gt;
+&lt;p&gt;Recently, Python engineers have more opportunities to work with data scientists than before. At the same time, they are often faced with the research-oriented code written by researchers or data scientists. In order to integrate this code with systems such as APIs, python engineers need to additionally write the code or refactor it, and make them work on the server.&lt;/p&gt;
+&lt;p&gt;This tutorial will provide chances to experience the whole process from analysis to API development by using python. In more detail, this tutorial covers the gap between the research-oriented code and production code of machine learning APIs. What is the gap between them? How it can be implemented based on real-world python code? How can the code validate whether the dataset is correct? How can machine learning models be continuously inspected? Audiences can earn the answers to these questions from this tutorial.&lt;/p&gt;
+&lt;p&gt;slide: &lt;a class="reference external" href="https://speakerdeck.com/tetsuya0617/how-to-develop-ml-apis-with-python-by-using-online-learning-dataset"&gt;https://speakerdeck.com/tetsuya0617/how-to-develop-ml-apis-with-python-by-using-online-learning-dataset&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Tetsuya Jesse Hirata&lt;/p&gt;
+&lt;p&gt;Jesse is a software engineer working at an EdTech company in Tokyo. He has been developing a recommender engine which can optimize appropriate learning materials according to learner's abilities. Prior to this, he used to research the relationships between online learning behaviors and learning outcomes at the UCL Institute of Education (IOE) in the UK. His interest is in how to bridge the gap between data science and engineering.&lt;/p&gt;
+</content></entry><entry><title>基於數位軌跡資料，釐清客戶需求與建立客戶畫像分群系統 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/ji-yu-shu-wei-gui-ji-zi-liao-li-qing-ke-hu-xu-qiu-yu-jian-li-ke-hu-hua-xiang-fen-qun-xi-tong-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Roye Qiu</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/ji-yu-shu-wei-gui-ji-zi-liao-li-qing-ke-hu-xu-qiu-yu-jian-li-ke-hu-hua-xiang-fen-qun-xi-tong-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;此演講中，會分享我們使用python語言以及支援套件(pyspark,gensim,sklearn,matplotlib)，針對客戶體驗進行分析實作過程(涵蓋五個主要建模步驟)進行分享，並對此模型產生的結果進行更進一步的分析，並隨著過程中說明在各個環節選用何種套件加速實作分析流程。利用使用者的數位軌跡資料(digital footprint)，進行(1) 巨量資料統計現象分析 (2)軌跡雜訊過濾 (3) digital path embedding model 訓練 (4) 利用 step3 的embedding，結合其他深度學習模型, 更精準了解客戶想法 (5) 利用瀏覽軌跡，提升客戶體驗。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1RzFzPZkO2IAAqd3FhR7nm1T1p8j3sof8/view?usp=sharing"&gt;https://drive.google.com/file/d/1RzFzPZkO2IAAqd3FhR7nm1T1p8j3sof8/view …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;此演講中，會分享我們使用python語言以及支援套件(pyspark,gensim,sklearn,matplotlib)，針對客戶體驗進行分析實作過程(涵蓋五個主要建模步驟)進行分享，並對此模型產生的結果進行更進一步的分析，並隨著過程中說明在各個環節選用何種套件加速實作分析流程。利用使用者的數位軌跡資料(digital footprint)，進行(1) 巨量資料統計現象分析 (2)軌跡雜訊過濾 (3) digital path embedding model 訓練 (4) 利用 step3 的embedding，結合其他深度學習模型, 更精準了解客戶想法 (5) 利用瀏覽軌跡，提升客戶體驗。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1RzFzPZkO2IAAqd3FhR7nm1T1p8j3sof8/view?usp=sharing"&gt;https://drive.google.com/file/d/1RzFzPZkO2IAAqd3FhR7nm1T1p8j3sof8/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Roye Qiu&lt;/p&gt;
+&lt;p&gt;一個喜歡數據，架構，機器學習的工程師。
+期望有一天可以真的改變世界。&lt;/p&gt;
+</content></entry><entry><title>Keynote: Oops! I became an open source maintainer! 😱 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/keynote-oops-i-became-an-open-source-maintainer-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Mariatta Wijaya</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/keynote-oops-i-became-an-open-source-maintainer-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 09:10–10:10&lt;/p&gt;
+&lt;p&gt;I consider myself relatively new to the open source world; my first open source contribution was in summer of 2016. Pretty soon I found myself being given commit rights to other people’s open source projects. Being a new open source maintainer brings …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 09:10–10:10&lt;/p&gt;
+&lt;p&gt;I consider myself relatively new to the open source world; my first open source contribution was in summer of 2016. Pretty soon I found myself being given commit rights to other people’s open source projects. Being a new open source maintainer brings a set of unique challenges that I was not fully prepared for. In this talk, I will share my journey and the things I’ve learned along the way, and some advice for other aspiring open source maintainers and contributors.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Mariatta Wijaya&lt;/p&gt;
+&lt;p&gt;Mariatta is a Python Core Developer, a software engineer at Zapier, Vancouver PyLadies co-organizer, and one of the founding members of the PyCascades conference. She moved to Canada almost two decades ago and now lives in Vancouver with her husband and two children. In her free time, she contributes to open source, builds GitHub bots, fixes typos, and likes to tell you about f-strings. Her favorite emoji is 😝.&lt;/p&gt;
+</content></entry><entry><title>Koalas - An Interface for Pandas User to Leverage Spark Framework. – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/koalas-an-interface-for-pandas-user-to-leverage-spark-framework-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>許理賀</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/koalas-an-interface-for-pandas-user-to-leverage-spark-framework-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 11:55–12:10&lt;/p&gt;
+&lt;p&gt;Implementing machine learning solutions at scale can be challenging. Especially, when data processing and modeling need to be deployed in distributed systems.&lt;/p&gt;
+&lt;p&gt;With its in-memory processing capabilities, Apache Spark has been all the rage for large scale data processing and analytics. Adopting …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 11:55–12:10&lt;/p&gt;
+&lt;p&gt;Implementing machine learning solutions at scale can be challenging. Especially, when data processing and modeling need to be deployed in distributed systems.&lt;/p&gt;
+&lt;p&gt;With its in-memory processing capabilities, Apache Spark has been all the rage for large scale data processing and analytics. Adopting Apache Spark in production become common. High-level APIs also make the learning cure of Apache Spark flatter. However, it is still not painless to move experimenting Python scripts into Apache Spark jobs in production.&lt;/p&gt;
+&lt;p&gt;An opensource project, “Koalas”, is aims to relieve the pain by implementing the pandas DataFrame API on top of Apache Spark. We will start by briefly introducing Koalas. Then, the main focus is about how to use Koalas to make machine learning projects running with Spark, including comparing the difference between Apache Spark, Pandas, and Koalas. Then, through a few examples,we will demonstrate how to develop on a single codebase that works both with pandas and with Spark.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1Q4cX-p0U6jvVAm2dxyUslKsLA6R00C2XeIddJGwFH4U/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1Q4cX-p0U6jvVAm2dxyUslKsLA6R00C2XeIddJGwFH4U/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 許理賀&lt;/p&gt;
+&lt;p&gt;I'm a data Engineer who focuses on data ingestion in Hadoop ecosystem. Interested in reading technical books and try new technologies. Primary area of research during my graduate studies is optimization theory and scheduling.&lt;/p&gt;
+</content></entry><entry><title>Modern recommender system in large content website – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/modern-recommender-system-in-large-content-website-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Cyrus Chiu</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/modern-recommender-system-in-large-content-website-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能夠過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/CyrusChienChingChiu/modern-recommender-system-in-large-content-website"&gt;https://www.slideshare.net/CyrusChienChingChiu/modern-recommender-system-in-large-content-website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Cyrus Chiu&lt;/p&gt;
+&lt;p&gt;喜歡影像創作，從獨立製片工作轉換跑道到電腦視覺，現在認為寫程式也是一種創作。曾任PIXNET演算法工程師，負責推薦系統的主要開發。現為Vpon資料科學家。&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;在資訊量爆炸的現在，任何媒體甚至是電商都需要一個能夠過濾雜訊，將有效的資訊正確傳遞給各個不同用戶的推薦系統。標題中的 modern 指的是一個包含召回、排序兩階段推薦的現代化作法，而 large content 則是要談如何透過 pyspark 建立可規模化的推薦系統框架。最後要和大家分享，一個擁有數億篇文章與數千萬每日瀏覽量的部落格網站如何從無到有建立這一套作法。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/CyrusChienChingChiu/modern-recommender-system-in-large-content-website"&gt;https://www.slideshare.net/CyrusChienChingChiu/modern-recommender-system-in-large-content-website&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Cyrus Chiu&lt;/p&gt;
+&lt;p&gt;喜歡影像創作，從獨立製片工作轉換跑道到電腦視覺，現在認為寫程式也是一種創作。曾任PIXNET演算法工程師，負責推薦系統的主要開發。現為Vpon資料科學家。&lt;/p&gt;
+</content></entry><entry><title>My High School Intern Project: Constructing an AI Helper for Cyber Threat Intell – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/my-high-school-intern-project-constructing-an-ai-helper-for-cyber-threat-intell-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Chia-En Tsai</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/my-high-school-intern-project-constructing-an-ai-helper-for-cyber-threat-intell-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;For the last year, I have been interning at CyCraft AI Lab, the leading cybersecurity firm in Taiwan. My team had to process numerous cybersecurity articles and turn them to actionable information. Due to time pressure to respond to cyber attacks, we constructed …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;For the last year, I have been interning at CyCraft AI Lab, the leading cybersecurity firm in Taiwan. My team had to process numerous cybersecurity articles and turn them to actionable information. Due to time pressure to respond to cyber attacks, we constructed a NLP system to tackle this problem.
+In the project, I construct the whole data processing pipeline to turn the articles into intelligence
+1.Crawling the largest Chinese security website
+2. Classifying articles to help security team quickly identify articles related to their daily missions.
+3. Setting up the recommendation system of prevalent attack methods to help security analyst quickly realize the articles’ theme.
+4.Recognizing attack technique in articles and labeling with MITRE ATT&amp;amp;CK technique
+Our system has achieved 95% accuracy on our collected dataset. I will share our solutions to problems we met during the process and how I balance between intern and high school life.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1wk8Hzw6fvqDemKvF2TO2W5Ot04I9iQ_giaIgShnmV9k/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1wk8Hzw6fvqDemKvF2TO2W5Ot04I9iQ_giaIgShnmV9k/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Chia-En Tsai&lt;/p&gt;
+&lt;p&gt;Taipei First Girls Highschool Student
+Artificial Intelligence club President
+Intern in CyCraft AI Lab&lt;/p&gt;
+</content></entry><entry><title>Network Automation with Python – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/network-automation-with-python-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Eric Chou</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/network-automation-with-python-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Networks in your infrastructure set the foundation for how your application can be deployed, maintained, and serviced. Python is the ideal language for network engineers to explore tools that were previously available to systems engineers and application developers. In this talk, we'll …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Networks in your infrastructure set the foundation for how your application can be deployed, maintained, and serviced. Python is the ideal language for network engineers to explore tools that were previously available to systems engineers and application developers. In this talk, we'll embark on a Python-based journey to transition from traditional network engineers to network developers ready for the next-generation of networks.&lt;/p&gt;
+&lt;p&gt;Code examples, further recourses, and latest trends will be provided for audience with different level of needs depends on the scope of their network.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://speakerdeck.com/ericchou/network-automation-with-python"&gt;https://speakerdeck.com/ericchou/network-automation-with-python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Eric Chou&lt;/p&gt;
+&lt;p&gt;Eric Chou is a seasoned technologist with over 20 years of experience. He is an ex-Amazonian, ex-Microsoftee, and other Fortune 500 companies. Eric is the author of the best selling &amp;quot;Mastering Python Networking&amp;quot; (by Packt Publishing) and a few other books. He shares his deep interest in technology through his books, classes, and blog. Eric is passionate about network automation, Python, and helping companies build better security postures.&lt;/p&gt;
+</content></entry><entry><title>Package Python Code the Hard Way – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/package-python-code-the-hard-way-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Tzu-ping Chung</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/package-python-code-the-hard-way-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;You have Python code to publish. First, create setup.py, and setup.cfg, MANIFEST.in, pyproject.toml… What are all these stuff? Python packaging is so confusing! In this talk, we are going to throw all them away, and build a package from …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;You have Python code to publish. First, create setup.py, and setup.cfg, MANIFEST.in, pyproject.toml… What are all these stuff? Python packaging is so confusing! In this talk, we are going to throw all them away, and build a package from the ground up. Because Python packages are not hard, I promise!&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://packaging-the-hard-way.readthedocs.io"&gt;https://packaging-the-hard-way.readthedocs.io&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Tzu-ping Chung&lt;/p&gt;
+&lt;p&gt;TP builds his career around open source software, and enjoys committing his efforts to help make the world better. He builds all kinds of software for a living, from embedded system to single-page web applications, and contributes to the community when he can.&lt;/p&gt;
+&lt;p&gt;These days, he spends most of his time improving Python’s packaging landscape, organising PyCon Taiwan, and building software with Python and other modern technologies. He loves (human) languages, and knows probably too much about linguistics and phonetics to make him boring in parties.&lt;/p&gt;
+&lt;p&gt;TP 的職業生涯建立在開源軟體上，而喜歡花自己的精力讓這個世界更好。為了生活而寫過各式各樣的軟體，從嵌入式系統到 SPA 都是狩獵範圍，且只要有能力，就會盡量回饋社群。最近的時間大多花在對 Python packaging 的改善、籌辦 PyCon Taiwan、以及使用 Python 與現代前端技術開發軟體和應用程式。他有點太喜歡（人類）語言，常常扯到太多語言學和語音學，讓聊天內容變得無聊。&lt;/p&gt;
+</content></entry><entry><title>Practical Enterprise JupyterHub Deployment and MLOps with PrimeHub – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/practical-enterprise-jupyterhub-deployment-and-mlops-with-primehub-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Chia-liang Kao</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/practical-enterprise-jupyterhub-deployment-and-mlops-with-primehub-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;Jupyter has become a critical component of the machine learning life cycle.However, scaled enterprise deployments and making the Data Science Experience frictionless remain challenging.
+We address a few common issues with PrimeHub, an open-source enterprise offering based on JupyterHub, and investigate MLOps …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;p&gt;Jupyter has become a critical component of the machine learning life cycle.However, scaled enterprise deployments and making the Data Science Experience frictionless remain challenging.
+We address a few common issues with PrimeHub, an open-source enterprise offering based on JupyterHub, and investigate MLOps trends adjacent to the Jupyter ecosystem.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Chia-liang Kao&lt;/p&gt;
+&lt;p&gt;clkao (Chia-liang Kao) has been an open source software developer since 2000. He believes that good collaboration model and tools drive innovation.&lt;/p&gt;
+&lt;p&gt;In 2013, he created SVK, a distributed version control system that helps developers collaborate. He co-founded the g0v.tw community in 2012, advocating information transparency and digital-activism through open source model. g0v.tw was awarded as &amp;quot;Digital Communities: Award of Distinction&amp;quot; by Prix Ars Electronica 2018.&lt;/p&gt;
+&lt;p&gt;He started InfuseAI in 2018 to enable data scientists to thrive, and to help wider adoption of AI across industries.&lt;/p&gt;
+</content></entry><entry><title>PyPtt - 當 Python 遇上 PTT – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/pyptt-dang-python-yu-shang-ptt-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>CodingMan</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/pyptt-dang-python-yu-shang-ptt-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 11:10–11:40&lt;/p&gt;
+&lt;p&gt;批踢踢實業坊(PTT)作為一個在臺灣學術網路發展也是目前最具規模的公民發聲平台，每天都有非常大量的文本產生。&lt;/p&gt;
+&lt;p&gt;但在 2017 年，Github 上並未存在一個對 PTT 有比較完整支援的 Python 函式庫。因此進而催生了 PyPtt，可以讓每一個 Python 開發者都可以很簡單地使用 Python 操作 PTT，例如: 推文、發文、寄信、登入式爬文或者查詢帳號的狀態等等。&lt;/p&gt;
+&lt;p&gt;我們可以使用這些功能實作出，爬蟲、看到特定文章關鍵字自動寄送信件給作者、聊天配對服務、批踢踢一次性密碼(PTT OTP)還有水球通訊軟體等等，非常實用的功能。&lt;/p&gt;
+&lt;p&gt;希望每一位鄉民聽完之後，可以激發各位的靈感進而動手開發自己的 PTT 應用。&lt;/p&gt;
+&lt;p&gt;如果你是個鄉民也是一個 Python 開發者 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 11:10–11:40&lt;/p&gt;
+&lt;p&gt;批踢踢實業坊(PTT)作為一個在臺灣學術網路發展也是目前最具規模的公民發聲平台，每天都有非常大量的文本產生。&lt;/p&gt;
+&lt;p&gt;但在 2017 年，Github 上並未存在一個對 PTT 有比較完整支援的 Python 函式庫。因此進而催生了 PyPtt，可以讓每一個 Python 開發者都可以很簡單地使用 Python 操作 PTT，例如: 推文、發文、寄信、登入式爬文或者查詢帳號的狀態等等。&lt;/p&gt;
+&lt;p&gt;我們可以使用這些功能實作出，爬蟲、看到特定文章關鍵字自動寄送信件給作者、聊天配對服務、批踢踢一次性密碼(PTT OTP)還有水球通訊軟體等等，非常實用的功能。&lt;/p&gt;
+&lt;p&gt;希望每一位鄉民聽完之後，可以激發各位的靈感進而動手開發自己的 PTT 應用。&lt;/p&gt;
+&lt;p&gt;如果你是個鄉民也是一個 Python 開發者，這將是你不容錯過的分享!!&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: CodingMan&lt;/p&gt;
+&lt;p&gt;CodingMan, bug maker.
+&lt;a class="reference external" href="https://pttcodingman.github.io/"&gt;https://pttcodingman.github.io/&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><title>Python Application Dependency Management in 2020 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/python-application-dependency-management-in-2020-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Liuyang Wan</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/python-application-dependency-management-in-2020-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;Zendesk's Chat backend platform is largely powered by Python. Over the years, we have introduced hundreds of open source libraries into our codebase. We have seen multiple production incidents that arise from improper pinning of package versions or incompatible versions between different libraries …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;Zendesk's Chat backend platform is largely powered by Python. Over the years, we have introduced hundreds of open source libraries into our codebase. We have seen multiple production incidents that arise from improper pinning of package versions or incompatible versions between different libraries. Thus a proper application management resolution solution is in need.&lt;/p&gt;
+&lt;p&gt;Firstly, I will introduce the concept of application dependency management and why it is a hard problem.&lt;/p&gt;
+&lt;p&gt;Then I will go in depth to share the journey of how we in Zendesk resolved the dependencies issue and slowly prepare itself for the new pip resolver. In particular, I will talk about the behavior of different pip versions when it comes to handling version conflicts and what pip check is and how to use it.&lt;/p&gt;
+&lt;p&gt;Lastly, I will briefly mention other tools available and give recommendation when to use which and answer questions from the audience.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1AZoWKI3OQfpFETD2NoT6C9spanrsrOSG/view?usp=sharing"&gt;https://drive.google.com/file/d/1AZoWKI3OQfpFETD2NoT6C9spanrsrOSG/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Liuyang Wan&lt;/p&gt;
+&lt;p&gt;to be added&lt;/p&gt;
+</content></entry><entry><title>Python Approach to Quantum Computing - Cirq Framework and More – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/python-approach-to-quantum-computing-cirq-framework-and-more-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>何泰祥 Taihsiang Ho (tai271828)</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/python-approach-to-quantum-computing-cirq-framework-and-more-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;This talk will share several python approaches to the thriving field, quantum computing and quantum information. In this talk, Cirq python framework, which is an open source project announced by Google, will be mainly used as examples.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://bit.ly/35cOeeR"&gt;https://bit.ly/35cOeeR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;This talk will share several python approaches to the thriving field, quantum computing and quantum information. In this talk, Cirq python framework, which is an open source project announced by Google, will be mainly used as examples.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://bit.ly/35cOeeR"&gt;https://bit.ly/35cOeeR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 何泰祥 Taihsiang Ho (tai271828)&lt;/p&gt;
+&lt;p&gt;Canonical Software Engineer. FLOSS contributor. Scientific computing amateur. Climber, pianist and cellist.&lt;/p&gt;
+</content></entry><entry><title>使用 airflow 執行爬蟲單元測試來打造網站改版自動偵測通知服務 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/shi-yong-airflow-zhi-xing-pa-chong-dan-yuan-ce-shi-lai-da-zao-wang-zhan-gai-ban-zi-dong-zhen-ce-tong-zhi-fu-wu-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Mark Chang</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/shi-yong-airflow-zhi-xing-pa-chong-dan-yuan-ce-shi-lai-da-zao-wang-zhan-gai-ban-zi-dong-zhen-ce-tong-zhi-fu-wu-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;對於構建大規模爬蟲搜尋引擎系統來說一定會遇到因不同網站不定期改版，而導致爬蟲失效所引發漏資料的問題。如何有效率的在第一時間就從近千個網站中得知有哪些網站改版而去修復爬蟲，對於維持資料的完整性來說是一件非常重要的事。本演講分享如何對舊有的爬蟲系統進行重構，並對各個不同網站爬蟲撰寫單元測試，使得可藉由執行爬蟲單元測試來驗證網站是否改版。然而隨著單元測試越來越多，原來在爬蟲系統CI階段就執行網站爬蟲單元測試時間越來越久，會進而引響其他CI階段的驗證及部署，且利用CI階段來執行單元測試的方式並沒有一個統一且定時的最後結果通知服務。因此，這裡我們看上了排程系統airflow易於管理不同相依任務的便利性，將原來在CI階段執行的網站爬蟲單元測試改為使用airflow定時去執行，單元測試任務執行完後，就進入到彙整爬蟲改版報告階段，最後並將報告發送至通知服務(ex: Mattermost)，來打造出一個基於 airflow dag的爬蟲網站改版自動偵測通知服務，來解決因網站不定期改版所導致爬蟲漏資料的問題。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/open?id=1H7dStQ5LhuyLed_TKG2O1tZpVYIvlxlr"&gt;https://drive.google.com/open?id=1H7dStQ5LhuyLed_TKG2O1tZpVYIvlxlr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Mark Chang&lt;/p&gt;
+&lt;p&gt;我叫張哲瑜(Mark Chang)目前是一名資料工程師，熱愛學習新的技術也很喜歡參與社群活動。&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;對於構建大規模爬蟲搜尋引擎系統來說一定會遇到因不同網站不定期改版，而導致爬蟲失效所引發漏資料的問題。如何有效率的在第一時間就從近千個網站中得知有哪些網站改版而去修復爬蟲，對於維持資料的完整性來說是一件非常重要的事。本演講分享如何對舊有的爬蟲系統進行重構，並對各個不同網站爬蟲撰寫單元測試，使得可藉由執行爬蟲單元測試來驗證網站是否改版。然而隨著單元測試越來越多，原來在爬蟲系統CI階段就執行網站爬蟲單元測試時間越來越久，會進而引響其他CI階段的驗證及部署，且利用CI階段來執行單元測試的方式並沒有一個統一且定時的最後結果通知服務。因此，這裡我們看上了排程系統airflow易於管理不同相依任務的便利性，將原來在CI階段執行的網站爬蟲單元測試改為使用airflow定時去執行，單元測試任務執行完後，就進入到彙整爬蟲改版報告階段，最後並將報告發送至通知服務(ex: Mattermost)，來打造出一個基於 airflow dag的爬蟲網站改版自動偵測通知服務，來解決因網站不定期改版所導致爬蟲漏資料的問題。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/open?id=1H7dStQ5LhuyLed_TKG2O1tZpVYIvlxlr"&gt;https://drive.google.com/open?id=1H7dStQ5LhuyLed_TKG2O1tZpVYIvlxlr&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Mark Chang&lt;/p&gt;
+&lt;p&gt;我叫張哲瑜(Mark Chang)目前是一名資料工程師，熱愛學習新的技術也很喜歡參與社群活動。&lt;/p&gt;
+</content></entry><entry><title>誰識KOL? 2020台灣總統大選在 Facebook 上的社群網絡分析 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/shui-shi-kol-2020tai-wan-zong-tong-da-xuan-zai-facebook-shang-de-she-qun-wang-luo-fen-xi-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>游騰林</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/shui-shi-kol-2020tai-wan-zong-tong-da-xuan-zai-facebook-shang-de-she-qun-wang-luo-fen-xi-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 11:10–11:40&lt;/p&gt;
+&lt;p&gt;KOL 是指在群眾中廣泛地被人們信任並能引導決策的核心人物，因此如何從複雜的社群網絡中找出並認識 KOL 便成為了非常重要的議題！在這次的演講中我將與大家分享我透過 Python 分析 2020台灣總統大選 3 位候選人 Facebook 粉絲專頁資料的發現。首先我以 igraph 套件展開社群網絡分析(SNA)，藉由民眾間的互動行為資料(互動的廣度與強度)，找出位在網絡核心的 KOL。並且透過 sklearn 套件的 LDA 分析進行自然語言處理(NLP)的主題分析(Topic Model)，剖析 KOL 的留言內容並從中萃取出許多在選舉過程中被廣泛討論的熱門話題。最終我結合了 SNA 與 NLP 的分析結果，並視覺化成二維的分析圖，能夠幫助我們快速了解社群網絡的樣貌以及不同社群討論話題的差異與態度。而各產業、公司也可以依據各自擁有的網絡資料進行 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 11:10–11:40&lt;/p&gt;
+&lt;p&gt;KOL 是指在群眾中廣泛地被人們信任並能引導決策的核心人物，因此如何從複雜的社群網絡中找出並認識 KOL 便成為了非常重要的議題！在這次的演講中我將與大家分享我透過 Python 分析 2020台灣總統大選 3 位候選人 Facebook 粉絲專頁資料的發現。首先我以 igraph 套件展開社群網絡分析(SNA)，藉由民眾間的互動行為資料(互動的廣度與強度)，找出位在網絡核心的 KOL。並且透過 sklearn 套件的 LDA 分析進行自然語言處理(NLP)的主題分析(Topic Model)，剖析 KOL 的留言內容並從中萃取出許多在選舉過程中被廣泛討論的熱門話題。最終我結合了 SNA 與 NLP 的分析結果，並視覺化成二維的分析圖，能夠幫助我們快速了解社群網絡的樣貌以及不同社群討論話題的差異與態度。而各產業、公司也可以依據各自擁有的網絡資料進行 SNA 並對資料進行加值，找出並認識屬於你們的 KOL！&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/TLYu0419/FindAndMeetKOLs/blob/master/FindAndMeetKOLsOnFacebook.pdf"&gt;https://github.com/TLYu0419/FindAndMeetKOLs/blob/master/FindAndMeetKOLsOnFacebook.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 游騰林&lt;/p&gt;
+&lt;p&gt;社會學背景的 Python 開發者，目前在國泰世華擔任數據分析師
+&lt;a class="reference external" href="https://tlyu0419.github.io/"&gt;https://tlyu0419.github.io/&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><title>水文監控-以Python走過的那些路(坑) – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/shui-wen-jian-kong-yi-pythonzou-guo-de-na-xie-lu-keng-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Malo</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/shui-wen-jian-kong-yi-pythonzou-guo-de-na-xie-lu-keng-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 10:30–11:00&lt;/p&gt;
+&lt;p&gt;水文監控應用不是一個以Python為主流的應用領域，這個議題中將介紹如何以蟒蛇魂打破原有的框架，完成一個完整專案應用的技術心路歷程。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/maloyang/PyconTW2020-20200906"&gt;https://github.com/maloyang/PyconTW2020-20200906&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Malo&lt;/p&gt;
+&lt;p&gt;由機構工程師轉職的韌體工程師，對IoT的議題感到很有興趣，平時工作因為大多接觸的是較低階的硬體，因此主要使用C語言，近二年開始接觸Python語言後，開始逐步把工作上的需求轉用Python來完成，希望在社群和更多同好一起開心的探索工業控制和IoT的領域。&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R2 10:30–11:00&lt;/p&gt;
+&lt;p&gt;水文監控應用不是一個以Python為主流的應用領域，這個議題中將介紹如何以蟒蛇魂打破原有的框架，完成一個完整專案應用的技術心路歷程。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/maloyang/PyconTW2020-20200906"&gt;https://github.com/maloyang/PyconTW2020-20200906&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Malo&lt;/p&gt;
+&lt;p&gt;由機構工程師轉職的韌體工程師，對IoT的議題感到很有興趣，平時工作因為大多接觸的是較低階的硬體，因此主要使用C語言，近二年開始接觸Python語言後，開始逐步把工作上的需求轉用Python來完成，希望在社群和更多同好一起開心的探索工業控制和IoT的領域。&lt;/p&gt;
+</content></entry><entry><title>So, You Want to Build an Anti-Virus Engine? – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/so-you-want-to-build-an-anti-virus-engine-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>JunWei Song</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/so-you-want-to-build-an-anti-virus-engine-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With Python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With Python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1M1JDb9DKvf-dE_Rrk7gjHdavgexwuUlBfeNZSAOjIUo/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1M1JDb9DKvf-dE_Rrk7gjHdavgexwuUlBfeNZSAOjIUo/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: JunWei Song&lt;/p&gt;
+&lt;p&gt;JunWei is a Security Researcher from Taiwan. A paranoid Pythonista who focuses on cybersecurity, reverse engineering, and malware analysis. And as a PyCon Taiwan Program Committee, presented at DEFCON, HITB, ROOTCON, PyCon Europe/TW/KR/MY. He’s the co-founder of Quark-Engine and a security research group, TWBGC.&lt;/p&gt;
+&lt;p&gt;Speaker: KunYu Chen&lt;/p&gt;
+&lt;p&gt;Security researcher&lt;/p&gt;
+&lt;p&gt;Founder of Quark Engine.
+Presented at DEF CON Blue Team Village | HITB LOCKDOWN 002&lt;/p&gt;
+&lt;p&gt;Have fun through challenging difficulties.&lt;/p&gt;
+</content></entry><entry><title>Speed Up Your Data Processing: Parallel and Asynchronous Programming in Data Sci – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/speed-up-your-data-processing-parallel-and-asynchronous-programming-in-data-sci-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Chin Hwee Ong</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/speed-up-your-data-processing-parallel-and-asynchronous-programming-in-data-sci-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 11:10–11:40&lt;/p&gt;
+&lt;p&gt;Constantly waiting for your data processing code to finish executing? Through real-life stories, we will explore how to leverage on parallel and asynchronous programming in Python to speed up your data processing pipelines - so that you could focus more on getting value …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R3 11:10–11:40&lt;/p&gt;
+&lt;p&gt;Constantly waiting for your data processing code to finish executing? Through real-life stories, we will explore how to leverage on parallel and asynchronous programming in Python to speed up your data processing pipelines - so that you could focus more on getting value out of your data. While this talk assumes a basic understanding of processes in data pipelines and data science workflows, anyone with a basic understanding of the Python language would be able to understand the concepts and use cases illustrated with analogies.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://speakerdeck.com/ongchinhwee/speed-up-your-data-processing-parallel-and-asynchronous-programming-in-python"&gt;https://speakerdeck.com/ongchinhwee/speed-up-your-data-processing-parallel-and-asynchronous-programming-in-python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Chin Hwee Ong&lt;/p&gt;
+&lt;p&gt;Ong Chin Hwee is a data engineer, aspiring polymath and Industry 4.0 enthusiast who happens to be interested in things that fly (and stuff that burn to keep things flying). Hailing from a background in aerospace engineering and computational modelling, Chin Hwee has experience working on innovative projects in collaboration with academia and industry partners. Chin Hwee is a contributor to the documentation for pandas 1.0 and enjoys sharing her experiences at meetups and conferences.&lt;/p&gt;
+</content></entry><entry><title>Why should you learn writing C extension? – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/why-should-you-learn-writing-c-extension-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Gavin Chan</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/why-should-you-learn-writing-c-extension-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Are you sometimes frustrated by the performance of Python?&lt;/li&gt;
+&lt;li&gt;Do you always look for open source library to speed up your process?&lt;/li&gt;
+&lt;li&gt;Do you feel numpy cannot give you much edge to enhance the performance now?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you answer yes in any of …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 15:10–15:40&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Are you sometimes frustrated by the performance of Python?&lt;/li&gt;
+&lt;li&gt;Do you always look for open source library to speed up your process?&lt;/li&gt;
+&lt;li&gt;Do you feel numpy cannot give you much edge to enhance the performance now?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you answer yes in any of the above questions, probably writing C extension will be a great solution to you.&lt;/p&gt;
+&lt;p&gt;First we will go through the reasons to learn writing C extension. Then the modern libraries, e.g. Cython and pybind11, will be introduced to develop C extension and compared with their features and functionalities. Also, a few simple but practical examples are demonstrated that writing C extension can be straightforward, and improves greatly your software quality and performance.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://gavincyi.github.io/pycon-why-should-you-learn-writing-c-extension"&gt;https://gavincyi.github.io/pycon-why-should-you-learn-writing-c-extension&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Gavin Chan&lt;/p&gt;
+&lt;p&gt;Gavin Chan is a principal quantitative developer in AXA Investment Managers Chorus Ltd with 7+ years of experience in software development and finance industry.&lt;/p&gt;
+</content></entry><entry><title>我們如何在醫院打造即時醫療影像AI平台 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/wo-men-ru-he-zai-yi-yuan-da-zao-ji-shi-yi-liao-ying-xiang-aiping-tai-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>Max Lai</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/wo-men-ru-he-zai-yi-yuan-da-zao-ji-shi-yi-liao-ying-xiang-aiping-tai-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;本場演講將以胸部X光腫瘤辨識應用為例，分享我們醫院如何利用 Python 相關技術開發「醫療影像標註系統」、「即時醫療影像辨識AI平台」的經驗。
+演講內容將會包含：
+- 醫學影像標註系統的設計考量：標註肺部腫瘤需要領域專家的參與，將分享如何設計一個流程及標註系統(Flask, Vue.js)以產生高品質的標註資料集。
+- 深度學習模型封裝及佈署：以 AI Model/API/Client 的架構(PyTorch, Flaskrestful api, docker)，讓資料科學家可以方便的佈署訓練好的 AI Model，並讓 AI 平台具備橫向擴展性
+- 即時胸部X光腫瘤AI平台：
+如何利用 micro service 架構串接 data pipeline 各個模組
+串接線上的X光影像PACKS系統：
+整合 APScheduler進行事件排程及觸發 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;本場演講將以胸部X光腫瘤辨識應用為例，分享我們醫院如何利用 Python 相關技術開發「醫療影像標註系統」、「即時醫療影像辨識AI平台」的經驗。
+演講內容將會包含：
+- 醫學影像標註系統的設計考量：標註肺部腫瘤需要領域專家的參與，將分享如何設計一個流程及標註系統(Flask, Vue.js)以產生高品質的標註資料集。
+- 深度學習模型封裝及佈署：以 AI Model/API/Client 的架構(PyTorch, Flaskrestful api, docker)，讓資料科學家可以方便的佈署訓練好的 AI Model，並讓 AI 平台具備橫向擴展性
+- 即時胸部X光腫瘤AI平台：
+如何利用 micro service 架構串接 data pipeline 各個模組
+串接線上的X光影像PACKS系統：
+整合 APScheduler進行事件排程及觸發
+整合 PyDicom 進行影像檔案解析
+內容會比較著重於如何將深度學習模型包裝成線上服務的經驗，而不會探討深度學習的模型及訓練細節。&lt;/p&gt;
+&lt;p&gt;備註：建議聽眾朋友有一點機器學習背景（入門課程）與略有後端開發經驗（半年+）&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/maxcclai/pycontw2020-ai"&gt;https://www.slideshare.net/maxcclai/pycontw2020-ai&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Max Lai&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Taichung.py 組織者&lt;/li&gt;
+&lt;li&gt;專長是電腦視覺,機器學習與敏捷開發,業餘的時間也嘗試研究 Python 與 IoT 領域相關的 project.&lt;/li&gt;
+&lt;/ul&gt;
+</content></entry><entry><title>用 Python 打造機器學習股票交易訊號 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/yong-python-da-zao-ji-qi-xue-xi-gu-piao-jiao-yi-xun-hao-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>韓承佑</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/yong-python-da-zao-ji-qi-xue-xi-gu-piao-jiao-yi-xun-hao-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;交易領域的人工智慧應用，通常是通過機器學習(ML)來實現。機器學習利用神經網路或其他學習方法鑑別、分析、預測特徵或者因子，這些特徵、因子具有經濟價值，可用於構建盈利交易策略。儘管以人工智慧為基礎的策略應用日漸廣泛，但建構出一個可以使用的機器學習策略仍然是個巨大的挑戰，本演講將帶大家瞭解有哪些方法，可以增進機器學習的學習能力，進而應用於量化交易之中，也會有範例原始碼讓大家可以拿回去研究。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf"&gt;https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 韓承佑&lt;/p&gt;
+&lt;p&gt;嗨大家好，我是韓承佑，FinLab創辦人，畢業於巴黎第十一大學資工博士，目前擔任臺灣量化交易協會 學術顧問、台北商業大學 創新育成中心 創業技術顧問與上市科技公司 量化交易顧問。當初，我喜歡寫程式、無意間因為軟體比賽接觸Fintech，從此開始了財經跟程式的學習之路 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 14:30–15:00&lt;/p&gt;
+&lt;p&gt;交易領域的人工智慧應用，通常是通過機器學習(ML)來實現。機器學習利用神經網路或其他學習方法鑑別、分析、預測特徵或者因子，這些特徵、因子具有經濟價值，可用於構建盈利交易策略。儘管以人工智慧為基礎的策略應用日漸廣泛，但建構出一個可以使用的機器學習策略仍然是個巨大的挑戰，本演講將帶大家瞭解有哪些方法，可以增進機器學習的學習能力，進而應用於量化交易之中，也會有範例原始碼讓大家可以拿回去研究。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf"&gt;https://www.finlab.tw/wp-content/uploads/2020/09/slide_mopcon.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 韓承佑&lt;/p&gt;
+&lt;p&gt;嗨大家好，我是韓承佑，FinLab創辦人，畢業於巴黎第十一大學資工博士，目前擔任臺灣量化交易協會 學術顧問、台北商業大學 創新育成中心 創業技術顧問與上市科技公司 量化交易顧問。當初，我喜歡寫程式、無意間因為軟體比賽接觸Fintech，從此開始了財經跟程式的學習之路。我們成立 FinLab 量化投資部落格，用自己研發的軟體，對台灣股市做大量快速的實驗。希望可以在量化投資的路上，當大家的「武器製造商」！&lt;/p&gt;
+&lt;p&gt;學經歷：
+量化交易協會 學術顧問
+台北商業大學 創新育成中心 創業技術顧問
+法國巴黎南區大學資工所 博士
+台灣大學電子所 碩士
+中央大學電機系 學士&lt;/p&gt;
+&lt;p&gt;獲獎經歷：
+中國信託 Fintech 黑客松 第一名
+台大黑客松 2016 Fintech 組 第一名
+台大黑客松 2015 最佳人氣獎 第二名
+2013 電子書創作大賽 第一名
+2013 IC 自動化輔助設計 國內組 第二名&lt;/p&gt;
+</content></entry><entry><title>重力波調查員：鄉民都來分析重力波觀測資料 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/zhong-li-bo-diao-cha-yuan-xiang-min-du-lai-fen-xi-zhong-li-bo-guan-ce-zi-liao-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>蘇羿豪</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/zhong-li-bo-diao-cha-yuan-xiang-min-du-lai-fen-xi-zhong-li-bo-guan-ce-zi-liao-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;黑蛋點開GW150914案發現場調查報告的第0頁：
+「你們的使命不在這個星球，而我，探源小幫手，會在這30分鐘內引領你們進入案發當時的那1秒，藉由【重力波開放科學中心】提供的蒐證資料及分析工具，協助你們重現兩個緻密星體相撞的案發經過，以便完成此調查報告。鄉民們，不要只是瀏覽案件新聞看熱鬧，加入重力波調查員，夢想起飛！」&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;astrobackhacker/rkZ4n-0MD"&gt;https://hackmd.io/&amp;#64;astrobackhacker/rkZ4n-0MD&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 蘇羿豪&lt;/p&gt;
+&lt;p&gt;「開放天文 拉近群眾與星空的距離」
+公民天文學家/Astrohackers in Taiwan社群的共同創辦人/承接網站開發及資料科學相關案子的遠距工作者
+&lt;a class="reference external" href="https://matters.news/&amp;#64;astrobackhacker"&gt;https://matters.news/&amp;#64;astrobackhacker&lt;/a&gt;&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:50–14:20&lt;/p&gt;
+&lt;p&gt;黑蛋點開GW150914案發現場調查報告的第0頁：
+「你們的使命不在這個星球，而我，探源小幫手，會在這30分鐘內引領你們進入案發當時的那1秒，藉由【重力波開放科學中心】提供的蒐證資料及分析工具，協助你們重現兩個緻密星體相撞的案發經過，以便完成此調查報告。鄉民們，不要只是瀏覽案件新聞看熱鬧，加入重力波調查員，夢想起飛！」&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;astrobackhacker/rkZ4n-0MD"&gt;https://hackmd.io/&amp;#64;astrobackhacker/rkZ4n-0MD&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 蘇羿豪&lt;/p&gt;
+&lt;p&gt;「開放天文 拉近群眾與星空的距離」
+公民天文學家/Astrohackers in Taiwan社群的共同創辦人/承接網站開發及資料科學相關案子的遠距工作者
+&lt;a class="reference external" href="https://matters.news/&amp;#64;astrobackhacker"&gt;https://matters.news/&amp;#64;astrobackhacker&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><title>Airflow 於 ETL 的初步應用 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/airflow-yu-etl-de-chu-bu-ying-yong-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>ZenoPeng</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/airflow-yu-etl-de-chu-bu-ying-yong-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 16:15–16:30&lt;/p&gt;
+&lt;p&gt;在做資料萃取(Extract)、轉置(Transform)、載入(Load)任務時，每個階段會有依賴性。為確保任務能順利執行，ETL的任務應該被妥當地管理與監控。&lt;/p&gt;
+&lt;p&gt;Airflow 是以 Python 開發的工作流管理系統，能幫助開發者做標準化及重複性的流程。Airflow 以 DAG 定義工作的流程，確保任務能依序執行。並且，可以使用 Web UI 方便監測、追溯各個流程之間的狀態。&lt;/p&gt;
+&lt;p&gt;本演講主要目的是初步介紹 Airflow 的功能，並應用 Airflow 於周期性地蒐集社群網路的文章做為範例，讓聽眾知道如何使用 Airflow 的介面，方便觀察與追溯每個排程任務之間的狀態。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1P8UjB1KCIHwQF2650dVoLCQxR8_bVdcc/view?usp=sharing"&gt;https://drive.google.com/file …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 16:15–16:30&lt;/p&gt;
+&lt;p&gt;在做資料萃取(Extract)、轉置(Transform)、載入(Load)任務時，每個階段會有依賴性。為確保任務能順利執行，ETL的任務應該被妥當地管理與監控。&lt;/p&gt;
+&lt;p&gt;Airflow 是以 Python 開發的工作流管理系統，能幫助開發者做標準化及重複性的流程。Airflow 以 DAG 定義工作的流程，確保任務能依序執行。並且，可以使用 Web UI 方便監測、追溯各個流程之間的狀態。&lt;/p&gt;
+&lt;p&gt;本演講主要目的是初步介紹 Airflow 的功能，並應用 Airflow 於周期性地蒐集社群網路的文章做為範例，讓聽眾知道如何使用 Airflow 的介面，方便觀察與追溯每個排程任務之間的狀態。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1P8UjB1KCIHwQF2650dVoLCQxR8_bVdcc/view?usp=sharing"&gt;https://drive.google.com/file/d/1P8UjB1KCIHwQF2650dVoLCQxR8_bVdcc/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: ZenoPeng&lt;/p&gt;
+&lt;p&gt;I am a data engineer.&lt;/p&gt;
+</content></entry><entry><title>不顧 PM 反對，工程師執意擔任 3D 美術 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/bu-gu-pm-fan-dui-gong-cheng-shi-zhi-yi-dan-ren-3d-mei-shu-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Rain Wu</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/bu-gu-pm-fan-dui-gong-cheng-shi-zhi-yi-dan-ren-3d-mei-shu-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 16:15–16:30&lt;/p&gt;
+&lt;p&gt;人的成就感有其中一部份源自於創造，而軟體開發或程式撰寫對我而言便是在「邏輯層面」上實現創造。寫 Code 寫了一段時間之後，也許你會開始思考，能否有其他技術能創造新的東西呢？不如試著給自己一個機會，嘗試看看「視覺層面」的創作吧！&lt;/p&gt;
+&lt;p&gt;本次演講將包含開源 3D 繪圖軟體 Blender 的功能及操作簡介，並透過一些優化工作流程的小工具原始碼，淺談並示範如何在 Blender 中使用 Python 語言自行開發套件。演講最後會附上套件原始碼的 GitHub Repo 及講者聯繫資訊，歡迎找講者討論更多 Blender 技巧!&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Rain Wu&lt;/p&gt;
+&lt;p&gt;講者趕時間所以什麼都沒寫&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 16:15–16:30&lt;/p&gt;
+&lt;p&gt;人的成就感有其中一部份源自於創造，而軟體開發或程式撰寫對我而言便是在「邏輯層面」上實現創造。寫 Code 寫了一段時間之後，也許你會開始思考，能否有其他技術能創造新的東西呢？不如試著給自己一個機會，嘗試看看「視覺層面」的創作吧！&lt;/p&gt;
+&lt;p&gt;本次演講將包含開源 3D 繪圖軟體 Blender 的功能及操作簡介，並透過一些優化工作流程的小工具原始碼，淺談並示範如何在 Blender 中使用 Python 語言自行開發套件。演講最後會附上套件原始碼的 GitHub Repo 及講者聯繫資訊，歡迎找講者討論更多 Blender 技巧!&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Rain Wu&lt;/p&gt;
+&lt;p&gt;講者趕時間所以什麼都沒寫&lt;/p&gt;
+</content></entry><entry><title>Build an interactive plot website using Plotly/Dash – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/build-an-interactive-plot-website-using-plotlydash-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>黃坤賢</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/build-an-interactive-plot-website-using-plotlydash-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 13:50–15:20&lt;/p&gt;
+&lt;p&gt;In data visualization, static plots provide the audiences quick grasp on the data. While interactive plots can provide users more information on interested samples, while audiences have to touch the data for specific samples if only static plots are provided. At present, there …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 13:50–15:20&lt;/p&gt;
+&lt;p&gt;In data visualization, static plots provide the audiences quick grasp on the data. While interactive plots can provide users more information on interested samples, while audiences have to touch the data for specific samples if only static plots are provided. At present, there are some interactive graphing library in Python, Among them, &amp;quot;Plotly&amp;quot; is most popular and strongly supported by community.
+&amp;quot;Plotly&amp;quot; company also release &amp;quot;Dash&amp;quot; package that can build web-based online plots in pure Python. The needed technique of UI and web are covered by Dash, so you can focus on data manipulation and visualization. It is easy for data scientist to share their analysis on web interface over whole group by Dash. This tutorial will introduce basic usage of Plotly, then, the procedures of building the apps by Dash are described as following layout by &amp;quot;html&amp;quot; and &amp;quot;core&amp;quot; components, callback to make your apps more interactive, and distributing your apps to Heroku.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1QBCLbgaJKH27CqP-6NlwrnCjGk1J3YuLk4GOvOe8lpI/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1QBCLbgaJKH27CqP-6NlwrnCjGk1J3YuLk4GOvOe8lpI/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 黃坤賢&lt;/p&gt;
+&lt;p&gt;目前從事粒子物理實驗研究，在日本和台灣之間飛來飛去。喜歡python,C++,shell script等程式語言，並用python完成了好累的博士論文。目前栽進了用機器學習來完成實驗數據分析的坑洞，準備挖另一個平行運算的坑掉下去。
+專長是睡過頭，未來方向是尋找一個可叫得醒我的鬧鐘。&lt;/p&gt;
+</content></entry><entry><title>CBFHSS 專為高中生設計的管家型聊天機器人 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/cbfhss-zhuan-wei-gao-zhong-sheng-she-ji-de-guan-jia-xing-liao-tian-ji-qi-ren-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>廖煥杰</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/cbfhss-zhuan-wei-gao-zhong-sheng-she-ji-de-guan-jia-xing-liao-tian-ji-qi-ren-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:00–13:30&lt;/p&gt;
+&lt;p&gt;CBFHSS 是以高中生生活出發所研發之聊天機器人，目的在於避免學生在每日忙碌的學校生活中忘記師長所叮嚀的作業、考試...等。本作品目前的功能包含手動新增、刪除考試、作業、段考、班級公告等重要訊息、到期作業自動刪除、放學前資訊推播及體溫登記與儲存．本作品「專為高中設計的管家型聊天機器人」 已於 2019 年 12 月 30 日於作者所屬班級啟用，透過使用者的應用與實作回饋，整個系統已漸趨穩定。因為 COVID-19 的關係，這個專案目前正漸漸的部署到全校，除了希望可以減少紙筆登記體溫時的感染風險之外，也希望學校能轉型為相對智慧的校園。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1G5QFZ4Jlb8mP3aWJbEbpbImwUhCm1vXy/view?usp=sharing"&gt;https://drive.google.com/file/d/1G5QFZ4Jlb8mP3aWJbEbpbImwUhCm1vXy/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 廖煥杰 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:00–13:30&lt;/p&gt;
+&lt;p&gt;CBFHSS 是以高中生生活出發所研發之聊天機器人，目的在於避免學生在每日忙碌的學校生活中忘記師長所叮嚀的作業、考試...等。本作品目前的功能包含手動新增、刪除考試、作業、段考、班級公告等重要訊息、到期作業自動刪除、放學前資訊推播及體溫登記與儲存．本作品「專為高中設計的管家型聊天機器人」 已於 2019 年 12 月 30 日於作者所屬班級啟用，透過使用者的應用與實作回饋，整個系統已漸趨穩定。因為 COVID-19 的關係，這個專案目前正漸漸的部署到全校，除了希望可以減少紙筆登記體溫時的感染風險之外，也希望學校能轉型為相對智慧的校園。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1G5QFZ4Jlb8mP3aWJbEbpbImwUhCm1vXy/view?usp=sharing"&gt;https://drive.google.com/file/d/1G5QFZ4Jlb8mP3aWJbEbpbImwUhCm1vXy/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 廖煥杰&lt;/p&gt;
+&lt;p&gt;我是煥杰，目前就讀麗山高中。喜歡寫 code，打 CTF，當然還有寫專案。希望2020 結束前可以順利特選上資工系。&lt;/p&gt;
+</content></entry><entry><title>Computation Techniques for Encrypted Data using Python – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/computation-techniques-for-encrypted-data-using-python-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Gajendra Deshpande</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/computation-techniques-for-encrypted-data-using-python-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 16:15–16:30&lt;/p&gt;
+&lt;p&gt;The session begins with a discussion on homomorphic properties of cryptographic algorithms such as RSA, Elgamal, Paillier, Elliptic Curve, and Gentry’s Cryptosystems with the demonstration. The session discusses techniques to reduce computational complexity. This session also discusses a case study on …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 16:15–16:30&lt;/p&gt;
+&lt;p&gt;The session begins with a discussion on homomorphic properties of cryptographic algorithms such as RSA, Elgamal, Paillier, Elliptic Curve, and Gentry’s Cryptosystems with the demonstration. The session discusses techniques to reduce computational complexity. This session also discusses a case study on how machine learning techniques can be applied to encrypted data for secure computation and protecting the machine learning model. The talk will include the demonstration of the Python implementation of the RSA algorithm. To demonstrate the techniques to reduce complexity, we will perform multiplication over large random numbers using common * operator, multiplication using FFT, and Karatsuba algorithm. SciPy package has an in-built implementation for FFT. To demonstrate the implementation of secure machine learning model we used PyBRAIN and cryptography packages of python.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Gajendra Deshpande&lt;/p&gt;
+&lt;p&gt;Mr. Gajendra Deshpande holds a masters degree in Computer Science and Engineering and working as Assistant Professor at the Department of Computer Science and Engineering, KLS Gogte Institute of Technology, Belagavi, Karnataka, India.  He has a teaching experience of 12 years and a Linux and Network Administration experience of one year. Under his mentor-ship teams have won Smart India Hackathon 2018 and Smart India Hackathon 2019. He is the Technical Director for Sestoauto Networks Pvt. Ltd. and Founder of Thingsvalley. His areas of Interest include Programming, Web Designing, Cyber Security, Artificial Intelligence, Machine Learning, Brain-Computer Interface, Internet of Things, and Virtual Reality. He has presented papers at NIT Goa, Scipy India 2017 IIT Bombay, JuliaCon 2018 London, Scipy India 2018 IIT Bombay, Scipy 2019 USA, and PyCon FR 2019, Bordeaux, France.&lt;/p&gt;
+</content></entry><entry><title>Decade of PyCon JP: How we spread the Python community in Japan – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/decade-of-pycon-jp-how-we-spread-the-python-community-in-japan-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Takanori Suzuki</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/decade-of-pycon-jp-how-we-spread-the-python-community-in-japan-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 13:00–13:30&lt;/p&gt;
+&lt;p&gt;About 10 years have passed since PyCon JP was held in 2011. We have been doing various activities to spread Python community in Japan. I hope sharing activities, ideas and results will be helpful to other communities.And I'm happy to get …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 13:00–13:30&lt;/p&gt;
+&lt;p&gt;About 10 years have passed since PyCon JP was held in 2011. We have been doing various activities to spread Python community in Japan. I hope sharing activities, ideas and results will be helpful to other communities.And I'm happy to get new ideas and feedback to expand community from the audience.&lt;/p&gt;
+&lt;p&gt;Our activities:
+- Association
+- mini PyCon
+- Python Boot Camp
+- Pycamp Caravan
+- Local exchange meetup&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://gitpitch.com/takanory/slides?p=20200905pycontw#/"&gt;https://gitpitch.com/takanory/slides?p=20200905pycontw#/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Takanori Suzuki&lt;/p&gt;
+&lt;p&gt;Takanori is a Vice Chairperson of PyCon JP Association(www.pycon.jp).
+He is also a director of BeProud Inc.(www.beproud.jp), and his title is &amp;quot;Python Climber&amp;quot;.
+He held PyCon JP 2014 to 2016 as the chairperson.
+Currently he teaches Python to beginners as a lecturer at Python Boot Camp(pycamp.pycon.jp) all over Japan.
+In addition, he published several Python books.
+Tananori plays trumpet, climbs boulder, loves Lego, ferrets and beer.&lt;/p&gt;
+</content></entry><entry><title>Fixit - a lint framework writes better Python code for you – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/fixit-a-lint-framework-writes-better-python-code-for-you-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Jimmy Lai</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/fixit-a-lint-framework-writes-better-python-code-for-you-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:45–14:15&lt;/p&gt;
+&lt;p&gt;Python is flexible and allows us to implement the same function in different ways. Some ways are simpler, more efficient, or more secure than others and are preferred as coding conventions. We have a big codebase with hundreds of developers and thus …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:45–14:15&lt;/p&gt;
+&lt;p&gt;Python is flexible and allows us to implement the same function in different ways. Some ways are simpler, more efficient, or more secure than others and are preferred as coding conventions. We have a big codebase with hundreds of developers and thus coding convention is especially important to prevent bad patterns being copy-pasted and spread around. We started with building lint rules as Flake8 plugins and found limitations. We also wanted to be able to provide auto-fixes for lint violations. So we built Fixit.
+Fixit is a lint framework that complements Flake8. It’s based on LibCST which makes it possible to provide auto-fixes. Lint rules are made easy to build through matcher pattern, test toolkit, utility helpers (e.g. scope analysis) for non-trivial boilerplate. It is optimized for efficiency, easy to customize and comes with many builtin lint rules. In this talk, you’ll learn our story of building Fixit and learn to use it in your project to help you write better Python code!&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/jimmylai/talks/blob/master/pycon_taiwan_2020_fixit.pdf"&gt;https://github.com/jimmylai/talks/blob/master/pycon_taiwan_2020_fixit.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Jimmy Lai&lt;/p&gt;
+&lt;p&gt;Jimmy Lai is a Software Engineer in Instagram Infrastructure. His recent interest is Python efficiency, including profiling, optimization and asyncio. He has been sharing his experiences in PyCon Taiwan since 2012. This year, he plan to share his automated refactoring experience on large scale Python codebase.&lt;/p&gt;
+</content></entry><entry><title>Join PyCon JP as a staff with Python! – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/join-pycon-jp-as-a-staff-with-python-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>nikkie</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/join-pycon-jp-as-a-staff-with-python-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 13:45–14:15&lt;/p&gt;
+&lt;p&gt;If you're a Pythonista, you've probably experienced the pleasure of automating the boring stuff with Python.
+In this talk, I'll be sharing two examples of automation with Python from the PyCon JP staff activities.
+1. an alternative to a reminder in Slack …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 13:45–14:15&lt;/p&gt;
+&lt;p&gt;If you're a Pythonista, you've probably experienced the pleasure of automating the boring stuff with Python.
+In this talk, I'll be sharing two examples of automation with Python from the PyCon JP staff activities.
+1. an alternative to a reminder in Slack to stop when it's due.
+2. Slack command which enable to copy a document in a Google Drive template.
+You'll learn how to work with Slack and Google Drive in Python.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1uVMYiCewRAVITS7-uw0J9u9F3LTj0w--_vWmzLGr4so/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1uVMYiCewRAVITS7-uw0J9u9F3LTj0w--_vWmzLGr4so/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: nikkie&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Software engineer in Japan&lt;/li&gt;
+&lt;li&gt;Career is in the fourth year after this April&lt;/li&gt;
+&lt;li&gt;start python about 1 year ago&lt;/li&gt;
+&lt;li&gt;building web applications in Flask at work&lt;/li&gt;
+&lt;li&gt;automate some boring stuffs in Python at work&lt;/li&gt;
+&lt;li&gt;joined Django Girls Tutorial Japanese translation from May 2018&lt;/li&gt;
+&lt;li&gt;Django Girls Workshop (Yokohama, Tokyo) coach in autumn 2018&lt;/li&gt;
+&lt;li&gt;self-taught &amp;amp; output-driven&lt;/li&gt;
+&lt;li&gt;Django Basic Hands-on based on Django Girls Tutorial Jan &amp;amp; Feb 2019 (in Japanese)&lt;/li&gt;
+&lt;li&gt;Kaggle Titanic Hands-on based on PyData.Tokyo Tutorial Mar 2019 (in Japanese)&lt;/li&gt;
+&lt;li&gt;Blog: &lt;a class="reference external" href="https://nikkie-ftnext.hatenablog.com/"&gt;https://nikkie-ftnext.hatenablog.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;love anime&lt;/li&gt;
+&lt;/ul&gt;
+</content></entry><entry><title>Keynote: A New Era of Teaching - Starting from Online Machine Learning Platform – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/keynote-a-new-era-of-teaching-starting-from-online-machine-learning-platform-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Wen Yu Su</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/keynote-a-new-era-of-teaching-starting-from-online-machine-learning-platform-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 16:40–17:40&lt;/p&gt;
+&lt;p&gt;The world’s response to COVID-19 has resulted in the most rapid transformation of work styles and teaching methods. Many world-renowned companies like Google and Facebook had made announcements that WFH (Work From Home) will be extended until at least 2021.
+In February …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 16:40–17:40&lt;/p&gt;
+&lt;p&gt;The world’s response to COVID-19 has resulted in the most rapid transformation of work styles and teaching methods. Many world-renowned companies like Google and Facebook had made announcements that WFH (Work From Home) will be extended until at least 2021.
+In February 2020, National Cheng Kung University announced that courses with more than a hundred students enrolled should be moved into online courses. Many professors have to prepare online learning materials in a short time frame. Most of them made teaching videos and used moodle in the school as support for student learning.
+My class, The Basics of Game-based Machine Learning, is an undergraduate elective course. I prepared to move it online for students because of the pandemic. I heard that online classes are not effective in educating students, so my graduate students and I, along with an online learning expert, think together on how to get through this semester of this class without too much effect on students’ learnings.
+Besides pre-recorded teaching videos, we also use several online applications and social media, build collaborative FAQs for all questions, and establish an online competition platform that allows students to upload programming tasks for tests.  The competition for all uploaded programming tasks will be significant evaluation factors and be broadcast live on the platform.
+In my keynote section, I will give details on how the class is conducted, the use of the platform, and the future prospects of it. As a teacher, adapting trends and changes of students and the world in my way of teachings and thinking is a necessary step to maintain the competitive strength of Taiwan.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Wen Yu Su&lt;/p&gt;
+&lt;p&gt;Mr. Wen-Yu Su is a current Professor of Computer Science at National Cheng Kung University (NCKU), Taiwan. He holds a PhD and a Master’s degree in Electrical Engineering at New York University Tandon School of Engineering, and a Bachelor’s degree at NCKU. His prior experience includes being a postdoctoral researcher at Stanford University, an engineer in the Department of Information and Communication Technology at Industrial Technology Research Institute of Taiwan, and an Associate Professor at the Department of Computer Science and Information Engineering of Chung Hua University. Prior to 2011, Prof. Su focused on Digital Audio Signal Processing, Biomedical Signal Analysis, Image/Video Processor Design, Multi-Core Processor Design, Embedded Memory Management, and OpenESL. After 2012, he turned to focus on Audio Processing, Machine Learning, and Virtual Orchestra. Over the years, he has been working on improving students' practical ability.
+Recognizing the increasing importance of information technology and computer programming as well as reduced students' practical and inquiry skills, Prof. Su established the Program the World Association (PTWA) in 2013. Starting from Dongshih Township in Chiayi County, he led a team to teach disadvantaged students in rural elementary and secondary schools how to program in 2014. As of 2020, he has assisted more than 70 schools and non-profit organizations spanning 12 counties and cities, which benefits over 2,500 students and teachers. Over the years, courses have become more diverse. The teaching plan includes Train the Trainer, Seeing Hometown, Programming and Maker Courses, Self-propelled Car Contests, and Coding-X Programming for High School Students. To promote the progress of higher education, PTWA held more than 70 events each year and proactively participated in NCKU’s admissions for disadvantaged students, computer-based exams for special selection, online courses, and exam systems, etc. Although having been using donations to offer educational activities for many years is difficult, it is very gratifying to see children from disadvantaged families growing and developing.
+Artificial Intelligence is becoming increasingly important nowadays, but most courses lack hands-on practice to attract students’ interests. Thus, in 2018, Prof. Su invested in the development of courses and the online platform, ML Game, that use games to beat monsters, modeled after prestigious foreign schools. In 2020, the platform was completed, and courses were successfully launched in the Department of Computer Science and Information Engineering at NCKU. Many schools have approached the platform for promoting courses until now. The platform is also expected to cooperate with Microsoft Taiwan to promote courses in 2020 or 2021 and hold a national Machine Learning competition.
+In addition to general academic works, Prof. Su also published books including &amp;quot;Being Significant Other to Children&amp;quot; and &amp;quot;Teacher is a belated parent of children&amp;quot; that record several years of counseling work for children from disadvantaged families in remote areas.&lt;/p&gt;
+</content></entry><entry><title>Keynote: Python in the Era of ML – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/keynote-python-in-the-era-of-ml-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Peter Wang</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/keynote-python-in-the-era-of-ml-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 10:10–11:10&lt;/p&gt;
+&lt;p&gt;Peter will talk about why he thinks Python has come to popularity, its strengths and weaknesses for data analysis, and why an open, accessible language is critical for a future world that will be dominated by machine learning and AI.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 10:10–11:10&lt;/p&gt;
+&lt;p&gt;Peter will talk about why he thinks Python has come to popularity, its strengths and weaknesses for data analysis, and why an open, accessible language is critical for a future world that will be dominated by machine learning and AI.&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Peter Wang&lt;/p&gt;
+&lt;p&gt;Peter Wang has been developing commercial scientific computing and visualization software for over 15 years. He has extensive experience in software design and development across a broad range of areas, including 3D graphics, geophysics, large data simulation and visualization, financial risk modeling, and medical imaging.&lt;/p&gt;
+&lt;p&gt;Peter’s interests in the fundamentals of vector computing and interactive visualization led him to co-found Anaconda (formerly Continuum Analytics). Peter leads the open source and community innovation group.&lt;/p&gt;
+&lt;p&gt;As a creator of the PyData community and conferences, he devotes time and energy to growing the Python data science community and advocating and teaching Python at conferences around the world. Peter holds a BA in Physics from Cornell University.&lt;/p&gt;
+</content></entry><entry><title>Life is Short - How Python Can Help Developing Intermittent System – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/life-is-short-how-python-can-help-developing-intermittent-system-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>PunchShadow</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/life-is-short-how-python-can-help-developing-intermittent-system-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:00–13:30&lt;/p&gt;
+&lt;p&gt;隨著網路的快速發展，越來越多的嵌入式裝置擁有一定的計算與傳輸能力，邊際運算(Edge Computing)的概念讓應用提供更快的反應與初步計算的能力，但當將運算由雲端(Cloud)轉移到到邊際時，能源與資源管理就變得相對重要，其中電池的老化問題(Aging)是物聯網裝置沒辦法普遍部屬的原因之一(老化問題導致裝置使用壽命降低，使維護成本上升)，因此使用能源汲取器(Energy harvester)利用環境及時獲取運算所需的能量(e.g 太陽能、脈搏等)，大大降低裝置對於電池/電容的需求，但礙於環境的動態變化太大(天氣因素等)，導致電源供給為非連續，甚至可能造成斷電，導致開發者必須去妥善處理間歇式運算(Intermittent Computing)的問題以防止運算出錯與維持效能，現有的容錯系統由於太過複雜，無法直接應用於終端裝置，因此本次提案將由介紹 Intermittent Computing 普遍的問題出發，點出當前學界的解法，介紹如何使用 gem5 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 13:00–13:30&lt;/p&gt;
+&lt;p&gt;隨著網路的快速發展，越來越多的嵌入式裝置擁有一定的計算與傳輸能力，邊際運算(Edge Computing)的概念讓應用提供更快的反應與初步計算的能力，但當將運算由雲端(Cloud)轉移到到邊際時，能源與資源管理就變得相對重要，其中電池的老化問題(Aging)是物聯網裝置沒辦法普遍部屬的原因之一(老化問題導致裝置使用壽命降低，使維護成本上升)，因此使用能源汲取器(Energy harvester)利用環境及時獲取運算所需的能量(e.g 太陽能、脈搏等)，大大降低裝置對於電池/電容的需求，但礙於環境的動態變化太大(天氣因素等)，導致電源供給為非連續，甚至可能造成斷電，導致開發者必須去妥善處理間歇式運算(Intermittent Computing)的問題以防止運算出錯與維持效能，現有的容錯系統由於太過複雜，無法直接應用於終端裝置，因此本次提案將由介紹 Intermittent Computing 普遍的問題出發，點出當前學界的解法，介紹如何使用 gem5 Python介面模擬低功耗處理器運作環境，以及使用 numpy model energy trace並套用在 gem5模擬上。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1DQyYbVodkZdiDjmpx2AP4-VX2CbxEigr/view?usp=sharing"&gt;https://drive.google.com/file/d/1DQyYbVodkZdiDjmpx2AP4-VX2CbxEigr/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: PunchShadow&lt;/p&gt;
+&lt;p&gt;凡事以&amp;quot;瀟灑&amp;quot;為目標的人生哲學，目前就讀台灣大學電機所計算機組博士班一年級，研究領域為嵌入式系統、分散式系統與物聯網，喜歡思考各種問題，享受成長的喜悅；立志打破大眾對工程師的刻板印象，成為斜槓工程師，興趣為跳舞、音樂等&lt;/p&gt;
+</content></entry><entry><title>Loki：自動生成 Python 碼的 Chatbot 意圖分類引擎 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/lokizi-dong-sheng-cheng-python-ma-de-chatbot-yi-tu-fen-lei-yin-qing-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>PeterWolf</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/lokizi-dong-sheng-cheng-python-ma-de-chatbot-yi-tu-fen-lei-yin-qing-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 11:30–12:00&lt;/p&gt;
+&lt;p&gt;現行的聊天機器人意圖分析引擎如 LUIS 或 DiaglogFlow 往往需要大量的範例以及精細的劇本設計，才能產生好像在對話的效果。但透過其系統背後的文本訓練後，因為機器學習的黑盒子特性，遇到邊界問題時，仍然不易修正雞同鴨講的回覆。這個瓶頸使得大部份聊天機器人其實不具備聊天功能，而只是把網站地圖或是文件關鍵字查詢的功能搬上聊天軟體的介面上而已。&lt;/p&gt;
+&lt;p&gt;為了突破這些瓶頸，我們推出 Loki 中文意圖分類引擎。Loki 全文是 Linguistic Oriented Keyword Interface (語言導向的關鍵詞介面)。基於句法分析的方式，自動產生 Python 的 Regular Expression (正則表示式) 的條件式 (if...else...) 區塊程式碼。一次解決了兩個問題：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;相較於語言模型的黑盒子，Loki 的 Regular Expression 是「人類可讀 …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 11:30–12:00&lt;/p&gt;
+&lt;p&gt;現行的聊天機器人意圖分析引擎如 LUIS 或 DiaglogFlow 往往需要大量的範例以及精細的劇本設計，才能產生好像在對話的效果。但透過其系統背後的文本訓練後，因為機器學習的黑盒子特性，遇到邊界問題時，仍然不易修正雞同鴨講的回覆。這個瓶頸使得大部份聊天機器人其實不具備聊天功能，而只是把網站地圖或是文件關鍵字查詢的功能搬上聊天軟體的介面上而已。&lt;/p&gt;
+&lt;p&gt;為了突破這些瓶頸，我們推出 Loki 中文意圖分類引擎。Loki 全文是 Linguistic Oriented Keyword Interface (語言導向的關鍵詞介面)。基於句法分析的方式，自動產生 Python 的 Regular Expression (正則表示式) 的條件式 (if...else...) 區塊程式碼。一次解決了兩個問題：&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;相較於語言模型的黑盒子，Loki 的 Regular Expression 是「人類可讀，且可直接修改」的分類器。&lt;/li&gt;
+&lt;li&gt;不需要大量的資料，一個句型只要出現一次，就可以產生有效的分類條件式。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本次演講的內容，將同時以 LUIS/DiaglogFlow 和 Loki 產生的結果，比較「透過機器學習而來的意圖分析」和「透過句法分析而來的意圖分析」兩種方法在中文 Chatbot (聊天機器人) 應用上的差別。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://bit.ly/Pycontw2020_Loki"&gt;http://bit.ly/Pycontw2020_Loki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: PeterWolf&lt;/p&gt;
+&lt;p&gt;強人工智慧倡議者、設計者與實作者。&lt;/p&gt;
+</content></entry><entry><title>Notes about moving from Python to C++ – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/notes-about-moving-from-python-to-c-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Yung-Yu Chen</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/notes-about-moving-from-python-to-c-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 11:30–12:00&lt;/p&gt;
+&lt;p&gt;Python is fast to write and deliver results, but it is not a good choice when you cannot sacrifice any runtime.  It is the time to switch to C++.  But we certainly don’t want to give up the productivity available to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 11:30–12:00&lt;/p&gt;
+&lt;p&gt;Python is fast to write and deliver results, but it is not a good choice when you cannot sacrifice any runtime.  It is the time to switch to C++.  But we certainly don’t want to give up the productivity available to Python, and we worry about the complexity of C++.  The way to go is to design the backbone system in C++ and expose the API in Python.  Then we can enjoy the capabilities coming from the complex compiler and scripting it just like Python.  (Actually it is Python.)&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/YungYuChen/notes-about-moving-from-python-to-c-py-contw-2020"&gt;https://www.slideshare.net/YungYuChen/notes-about-moving-from-python-to-c-py-contw-2020&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Yung-Yu Chen&lt;/p&gt;
+&lt;p&gt;HPC software developer.&lt;/p&gt;
+</content></entry><entry><title>Practical Report on Programming Education Using Python for Elementary School Stu – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/practical-report-on-programming-education-using-python-for-elementary-school-stu-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Daisuke Saito</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/practical-report-on-programming-education-using-python-for-elementary-school-stu-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 15:55–16:10&lt;/p&gt;
+&lt;p&gt;This lecture will give a practical report on programming education using Python for elementary school
+students. Programming education for elementary school students often uses block-based programming
+languages such as Scratch. In contrast, I chose to teach with Python in order to provide …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 15:55–16:10&lt;/p&gt;
+&lt;p&gt;This lecture will give a practical report on programming education using Python for elementary school
+students. Programming education for elementary school students often uses block-based programming
+languages such as Scratch. In contrast, I chose to teach with Python in order to provide the students
+with insights into computer and hardware mechanisms. In this report, I share an educational method
+for teaching programming, using Python, to elementary school students. In addition, I report the
+difficulties associated with teaching Python to elementary school students.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://waseda.box.com/s/pvo3pmfuexymcs2v651epgoqlji2ptxq"&gt;https://waseda.box.com/s/pvo3pmfuexymcs2v651epgoqlji2ptxq&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Daisuke Saito&lt;/p&gt;
+&lt;p&gt;Daisuke Saito is a assistant professor of the School of Fundamental Science and Engineering, Waseda University in Japan. He acquired a Doctor of Engineering degree from Waseda University in Japan. His research interests include programming education and digital game-based learning.&lt;/p&gt;
+</content></entry><entry><title>Threshold Cryptography with Python – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/threshold-cryptography-with-python-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Chang-Wu Chen</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/threshold-cryptography-with-python-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 11:30–13:00&lt;/p&gt;
+&lt;p&gt;近年來，應用密碼學逐漸受到重視，特別是在區塊鏈技術的發展，無論是零知識證明、同態加密、簽章演算法或金鑰管理等，都快速的在演進。但，當你閱讀完艱澀難懂的論文，想自行實作密碼函式庫，你會如何做呢？在這個演講中，我們將利用 Sage 與 Jupyter notebook 帶你進入密碼學的世界，我們將透過一個秘密分享的實例，由淺入深的說明如何實作一個完整的算法。在本講中，會建議具備一些基礎密碼學或橢圓曲線的相關知識。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/changwu-tw/PyConTW"&gt;https://github.com/changwu-tw/PyConTW&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Chang-Wu Chen&lt;/p&gt;
+&lt;p&gt;Dr. Chang-Wu Chen received the Ph.D. degree in Communication Engineering from …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, 11:30–13:00&lt;/p&gt;
+&lt;p&gt;近年來，應用密碼學逐漸受到重視，特別是在區塊鏈技術的發展，無論是零知識證明、同態加密、簽章演算法或金鑰管理等，都快速的在演進。但，當你閱讀完艱澀難懂的論文，想自行實作密碼函式庫，你會如何做呢？在這個演講中，我們將利用 Sage 與 Jupyter notebook 帶你進入密碼學的世界，我們將透過一個秘密分享的實例，由淺入深的說明如何實作一個完整的算法。在本講中，會建議具備一些基礎密碼學或橢圓曲線的相關知識。&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://github.com/changwu-tw/PyConTW"&gt;https://github.com/changwu-tw/PyConTW&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Chang-Wu Chen&lt;/p&gt;
+&lt;p&gt;Dr. Chang-Wu Chen received the Ph.D. degree in Communication Engineering from National Central University, Taiwan, in 2016. He is currently a chief scientist at AMIS, and serves as an adjunct assistant professor at the Department of Computer Science, National Chengchi University. Prior to that, He has worked for Ethereum Research from 2017-2018. He is also a Taipei Ethereum meetup co-organizer. His research interests include Wireless networks, Network Security, Vehicular Networking and Blockchain.&lt;/p&gt;
+</content></entry><entry><title>Time travel: Let’s learn from the history of Python packaging! – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/time-travel-lets-learn-from-the-history-of-python-packaging-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Kir Chou</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/time-travel-lets-learn-from-the-history-of-python-packaging-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 11:30–12:00&lt;/p&gt;
+&lt;p&gt;Have you ever thought the origin of Python packaging tools like distutils, easy_install, setuptools, pip, tox, venv, pipenv, and poetry? In the first section, you will learn the history of “Python Software Distribution” and the reason behind them.&lt;/p&gt;
+&lt;p&gt;Do you know how …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R3 11:30–12:00&lt;/p&gt;
+&lt;p&gt;Have you ever thought the origin of Python packaging tools like distutils, easy_install, setuptools, pip, tox, venv, pipenv, and poetry? In the first section, you will learn the history of “Python Software Distribution” and the reason behind them.&lt;/p&gt;
+&lt;p&gt;Do you know how those mature solution in big company handle the Python packaging problems before those community’s solutions? In the second section, you will learn the big company’s efforts, lessons learned, and why did they decide to shift to community solution.&lt;/p&gt;
+&lt;p&gt;If you are interested in the history of python packaging or the story behind the big company's build-system, this is the right talk for you.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://www.slideshare.net/ssuser2cbb78/time-travel-lets-learn-from-the-history-of-python-packaging-238397814"&gt;https://www.slideshare.net/ssuser2cbb78/time-travel-lets-learn-from-the-history-of-python-packaging-238397814&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Kir Chou&lt;/p&gt;
+&lt;p&gt;A code monkey builds search services in Amazon jungle. This will be the 4th year of his presence in PyCon TW.&lt;/p&gt;
+&lt;p&gt;在亞馬遜做搜索服務的碼猴，今年將會是它出現在PyCon台灣的第四年。&lt;/p&gt;
+</content></entry><entry><title>Track Machine Learning Applications by MLflow Tracking – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/track-machine-learning-applications-by-mlflow-tracking-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Shuhsi Lin</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/track-machine-learning-applications-by-mlflow-tracking-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 15:55–16:10&lt;/p&gt;
+&lt;p&gt;Productization of machine learning (ML) solutions can be challenging. Therefore, the concept of operationalization on machine learning (MLOps) has emerged in the past few years for effective model lifecycle management. One of the core aspects of MLOps is &amp;quot;monitoring&amp;quot;.&lt;/p&gt;
+&lt;p&gt;ML models are …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R1 15:55–16:10&lt;/p&gt;
+&lt;p&gt;Productization of machine learning (ML) solutions can be challenging. Therefore, the concept of operationalization on machine learning (MLOps) has emerged in the past few years for effective model lifecycle management. One of the core aspects of MLOps is &amp;quot;monitoring&amp;quot;.&lt;/p&gt;
+&lt;p&gt;ML models are built by experimenting with a wide range of datasets. However, since the real data continues to change, it is necessary to monitor and to manage model usage, consumption, and results of models.&lt;/p&gt;
+&lt;p&gt;MLflow is an open-source framework designed to manage the end-to-end ML lifecycle with different components. In the talk, the basic concepts of MLflow will be introduced. Then, MLflow Tracking will be the main focus. You will know how to track experiments for recording and comparing parameters and results by MLflow Tracking.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://speakerdeck.com/sucitw/track-machine-learning-applications-by-mlflow-tracking"&gt;https://speakerdeck.com/sucitw/track-machine-learning-applications-by-mlflow-tracking&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Shuhsi Lin&lt;/p&gt;
+&lt;p&gt;A data engineer and python programmer. Currently working on various data applications in a manufacturing company.&lt;/p&gt;
+&lt;p&gt;Research interests: IoT applications, data streaming processing, data analysis and data visualization.&lt;/p&gt;
+</content></entry><entry><title>網頁自動化測試 -- 從內部工具開始 – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/wang-ye-zi-dong-hua-ce-shi-cong-nei-bu-gong-ju-kai-shi-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Set Mao</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/wang-ye-zi-dong-hua-ce-shi-cong-nei-bu-gong-ju-kai-shi-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 15:55–16:10&lt;/p&gt;
+&lt;p&gt;在大家越來越重視軟體品質的現在，測試所花的時間越來越重
+這個議程將向大家分享講者在資源不足的新創公司是如何從寫內部工具開始一步一步把自動化測試建立起來的&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Set Mao&lt;/p&gt;
+&lt;p&gt;Orderly - Full-Stack Engineer&lt;/p&gt;
+</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 15:55–16:10&lt;/p&gt;
+&lt;p&gt;在大家越來越重視軟體品質的現在，測試所花的時間越來越重
+這個議程將向大家分享講者在資源不足的新創公司是如何從寫內部工具開始一步一步把自動化測試建立起來的&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.&lt;/p&gt;
+&lt;p&gt;Speaker: Set Mao&lt;/p&gt;
+&lt;p&gt;Orderly - Full-Stack Engineer&lt;/p&gt;
+</content></entry><entry><title>用Python與Raspberry Pi打造手持式無線IoT設備-[R-type鐵水溫度計] – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/yong-pythonyu-raspberry-pida-zao-shou-chi-shi-wu-xian-iotshe-bei-r-typetie-shui-wen-du-ji-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Ryan Chen</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-taiwan-2020/yong-pythonyu-raspberry-pida-zao-shou-chi-shi-wu-xian-iotshe-bei-r-typetie-shui-wen-du-ji-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:45–14:15&lt;/p&gt;
+&lt;p&gt;數據收集是走向工業4.0的第一步。有別於定點收集數據的方式，在特殊的製程現場中，移動式的手持設備有更好的便利性;但是這種設備往往要價不斐，而且缺乏日後擴充與修改功能的彈性。
+本演講說明如何使用Python和Raspberry Pi打造出手持式無線IoT設備-以工業用的鐵水溫度計為例。
+演講流程如下:
+1. 從工業現場來說明背景與動機
+2. 相關硬體選用和介紹
+3. 演算法說明
+4. 實作過程的遇到的問題與改善方式
+5. 相關的延伸應用與Python資源介紹&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing"&gt;https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Ryan Chen&lt;/p&gt;
+&lt;p&gt;Python...好用....資...源豐富..社群...活躍...應用廣...泛 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:45–14:15&lt;/p&gt;
+&lt;p&gt;數據收集是走向工業4.0的第一步。有別於定點收集數據的方式，在特殊的製程現場中，移動式的手持設備有更好的便利性;但是這種設備往往要價不斐，而且缺乏日後擴充與修改功能的彈性。
+本演講說明如何使用Python和Raspberry Pi打造出手持式無線IoT設備-以工業用的鐵水溫度計為例。
+演講流程如下:
+1. 從工業現場來說明背景與動機
+2. 相關硬體選用和介紹
+3. 演算法說明
+4. 實作過程的遇到的問題與改善方式
+5. 相關的延伸應用與Python資源介紹&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing"&gt;https://drive.google.com/file/d/1AQDSg8ZbGn94jboCteFyKfczXJ3TT8pl/view?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Ryan Chen&lt;/p&gt;
+&lt;p&gt;Python...好用....資...源豐富..社群...活躍...應用廣...泛
+是我...菁常..使用的..工具
+謝謝..各位...檳友.&lt;/p&gt;
+</content></entry></feed>
