@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; PEP 634 Structural Pattern Matching 參上，你終究還是要用語言學來做 NLP 齁！ – PeterWolf (PyCon Taiwan 2021)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="PEP 634 Structural Pattern Matching 參上，你終究還是要用語言學來做 NLP 齁！ – PeterWolf (PyCon Taiwan 2021)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-taiwan-2021/pep-634-structural-pattern-matching-can-shang-ni-zhong-jiu-huan-shi-yao-yong-yu-yan-xue-lai-zuo-nlp-hou-peterwolf-pycon-taiwan-2021.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/ud1rxK2goSM/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/ud1rxK2goSM/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-taiwan-2021/pep-634-structural-pattern-matching-can-shang-ni-zhong-jiu-huan-shi-yao-yong-yu-yan-xue-lai-zuo-nlp-hou-peterwolf-pycon-taiwan-2021.html" rel="bookmark"
+         title="Permalink to PEP 634 Structural Pattern Matching 參上，你終究還是要用語言學來做 NLP 齁！ – PeterWolf (PyCon Taiwan 2021)">PEP 634 Structural Pattern Matching 參上，你終究還是要用語言學來做 NLP 齁！ – PeterWolf (PyCon Taiwan 2021)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sun 03 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/peterwolf.html">PeterWolf</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ud1rxK2goSM" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Day 2, 13:00-13:45</p>
+<p>Abstract</p>
+<p>PEP622(後改併到 PEP634) 提出的 Structural Pattern Matching (以下簡稱 SPM) 結構讓人乍看之下以為 Python 終於在 3.10 向 case 投降。然而，歹誌並不是表面上一個 case 的保留字所呈現得這麼簡單！ 本講題將從解析「意圖」的角度出發，說明解析程式碼的「意圖」和解析自然語言的「意圖」兩項任務之間，透過語言學的眼光來看，其實有異曲同工之妙。藉由目前世界上唯一利用 SPM 來做 NLU 的 Loki 意圖分析系統和 Python 3.10 在 PEP622 提出的新功能，我們將來回穿梭「自然語言」和「程式語言」兩個平行宇宙說明兩個重點： 1. 為什麼 Structure Pattern Matching 解析語言是個好主意。 2. Structure Pattern Matching 這招，程式語言用，好；自然語言用，更好。 理解了 PEP622 的運作後，更會發現它是對 PEP20: The zen of Python 中的 &quot;Readibility counts.&quot; 這句話非常強烈的支持與實現。它讓程式語言不只是在表層的可讀性獲得了提升，更在底層的運作原理也更接近人類的自然語言。 最後，不論是程式語言還是自然語言，你終究還是要用語言學來做 NLP 的！</p>
+<p>Description</p>
+<p>在 BigData 和各種 ML 框架興起以前，許多學校的資訊教育是包含「編譯器/直譯器」的設計的。在編譯器/直譯器的設計課程裡，本來就會提到「程式語言」和「自然語言」的相似與一致之處。比如說這個影片裡講者
+<a class="reference external" href="https://youtu.be/vstmnbzGbwU">https://youtu.be/vstmnbzGbwU</a> 就是試圖用短短的 5 分鐘解釋什麼是 &quot;Programming logic (程式邏輯)&quot;, &quot;Syntax (句法結構)&quot; 和 &quot;Semantics (語意)&quot;。</p>
+<p>以她舉的例子為例，在某個程式語言中：</p>
+<p>price := 12,99</p>
+<p>是可以執行的，但</p>
+<p>price = A</p>
+<p>則是無法執行的。原因是它的語意和結構都是錯的。</p>
+<p>如果我們想讓 price 的語意指涉一個「數值」的話，那麼很明顯地讓它指涉成為一個「字符」是不對的，這是語意上的錯誤 (Semantic Error)。此外，就算字符 A 背後代表了某個「數值」，但在這個程式語言中使用了 X := Y 這樣的結構來賦值，因此如果是用 X = Y 這樣的結構來賦值時，就是句法上的錯誤 (Syntax Error)。</p>
+<p>這說明了，要讓程式順利地依著「程式邏輯 (意圖)」運作，那麼設計者不只要在語意上合情合理，更要注意「結構」是否正確。因為編譯器/直譯器有賴設計者透過「結構」來進行比對，才能確認程式設計的目標為何。</p>
+<p>我們用自然語言為例：</p>
+<p>我 [ ]了 你的晚餐</p>
+<p>這個結構要合情合理，那麼在 [] 裡一定得放個表示動作的事件。否則如果卡了個：</p>
+<p>我 [昨天]了 你的晚餐</p>
+<p>就成了結構不正確 (該放動詞的地方，放的不是動詞)，而且語意也不正確 (不知道 [昨天] 和 [你的晚餐] 之間究竟發生了什麼) 的結果。</p>
+<p>我必需再一次地強調，PEP622 的提出，是 Python 程式語言對 PEP20: The zen of Python 中的 &quot;Readibility counts.&quot; 這句話非常強烈的支持與實現。它讓程式語言不只是在表層的可讀性獲得了提升，更在底層的運作原理也更接近人類的自然語言。</p>
+<p>我非常期待能有機會和 Python 社群的朋友們從語言學的觀點來分享這個發現。</p>
+<p>Slides not uploaded by the speaker.
+HackMD: <a class="reference external" href="https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2Fr1fu-4cfY">https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2Fr1fu-4cfY</a></p>
+<p>Speaker: PeterWolf</p>
+<p>Droidtown Linguistic Tech. Co. (卓騰語言科技) 創辦人兼核心開發者。 平常開發基於語言學理論的中文斷詞(NLP)、中文語意處理(NLU)、自動語音處理、語音辨識、自然語言文本解析及資料探勘的演算法及前端應用。 創業第一天就決心要做「百年企業」的那個男人！</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-taiwan-2021.html">PyCon Taiwan 2021</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=ud1rxK2goSM" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/pycon-tw-2021/videos/pep-634-structural-pattern-matching-can-shang-ni-zhong-jiu-huan-shi-yao-yong-yu-yan-xue-lai-zuo-nlp-hou-peterwolf-pycon-taiwan-2021.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>
