@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Django & Celery: A love story of async proportions</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2024.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2024.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Django & Celery: A love story of async proportions" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/djangocon-us-2024/django-celery-a-love-story-of-async-proportions.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/NCXtXDn4ppk/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/NCXtXDn4ppk/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/djangocon-us-2024/django-celery-a-love-story-of-async-proportions.html" rel="bookmark"
+         title="Permalink to Django & Celery: A love story of async proportions">Django & Celery: A love story of async proportions
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2024-09-25T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Wed 25 September 2024
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/hugo-bessa.html">Hugo Bessa</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NCXtXDn4ppk" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>### Django: A Framework for perfectionists with deadlines
+1. Batteries included: Security, Authentication, Authorization, Administration, robust and mature ORM, etc.
+2. Opinionated: Django defines the right path for doing things with it. And this open doors for building extensions.
+3. Strong Community: Open source packages, events, meetups, active development of the main framework</p>
+<p>### Django's performance issue is a thing. We need to be careful with:
+1. Avoiding N+1s
+2. Caching
+3. Database indexes
+4. Data denormalization
+5. Running operations in the background</p>
+<p>### Why running operations in the background?
+* Each Django process loads the framework core
+* It's expensive to have too many processes
+* Requests hold one Django process each while being processed
+* Requests should be processed quickly so we don't hold a process for too long
+* We need to give feedback to the user quickly, so they can move forward with other operations</p>
+<p>### What is Celery?
+Asynchronous task queue or job queue which is based on distributed message passing</p>
+<p>### Why Celery?
+1. Distributed: It separates async tasks execution from your application
+2. Fast: Celery has a very small boilerplate and executes tasks REALLY fast
+3. Integrated: You can write Celery tasks within your application, with access to models, services, functions, classes, etc</p>
+<p>### Celery 💘 Django
+1. Documentation: We have dedicated docs for integrating them both
+2. Django Settings: You can configure Celery from Django settings, not extra boilerplate
+3. Django within tasks: Access to Django ORM and other tools on Celery tasks
+4. Community: There are packages for enhancing the integration</p>
+<p>### How does it look like?
+Real world example</p>
+<p>### What async tasks can be used for?
+* Delegate long lasting jobs
+* Execute remote API calls
+* Prepare and cache values
+* Spread bulk database insertions over time
+* Execute recurring jobs</p>
+<p>### How does it work under the hood:
+1. Django uses Celery client to queue a message on the Broker
+2. Celery watches the Broker queue
+3. Celery marks a task as started so other workers don't pick it
+4. Celery marks a task as succeeded
+5. Celery send the result to the Results Backend
+6. Django may read the result from the Results Backend or not
+<strong>Disclaimer:</strong> these steps may vary depending on your configuration.</p>
+<p>### Tough love 💔: As in every good love story, it isn't always rainbows and butterflies.
+* All connections between a service and the other may fail
+* Concurrency becomes your enemy
+* Failures may be harder to handle as they aren't sync anymore
+* Issues that only happens in production
+* Tasks that never finish
+* Infinite retries
+* Conflicting operations
+* Task runs more than once
+* Unbalanced queues
+* Periodic tasks that are queues again before the previous one starts
+* Outdated data</p>
+<p>### We're going to focus on these four problems:
+1. Outdated data
+3. Error feedback
+2. Duplicate runs
+4. Conflicting ops</p>
+<p>### Outdated data
+* Sending complex data as parameters to a Celery task may result in conflicts because we cannot ensure the data doesn't change between the task being schedule and its execution.
+* We must, as much as possible, pass ids and retrieve the most up-to-date data in the scope of the task.</p>
+<p>### Duplicate runs
+* Depending of your Celery setup and task configuration, it may not be guaranteed that the task runs only once:
+- Multiple workers may pick the same task at the same time
+- A task may be interrupted and requeued</p>
+<ul class="simple">
+<li>So we have to ensure:
+- Atomicity
+- Idempotence</li>
+</ul>
+<p>### Complex feedback loops for errors
+* User may receive a success message from the request but the whole operation may still fail.
+* We need to develop flows that take this possibility into consideration and give the user a feedback of this error.
+* We may also need to undo successful operations run by the web service.</p>
+<p>### Conflicting operations
+* While a task haven't still run another operation is triggered by the user. This operation conflicts with the one that is still pending.
+* Consider the following use cases:
+1. User can add notes
+2. User can delete a note
+3. User can bulk create copies of a note</p>
+<p>#### Example of problematic interaction:
+1. User creates a Note
+2. User creates 10 copies of the note, this runs in a background task
+3. User deletes the original note before the task to copy the 10 notes runs
+4. Task runs, but the original note isn't available anymore so it cannot be copied</p>
+<p>#### There are many solutions to this:
+* Implementing soft delete on the note so it's available even after delete
+* Canceling pending tasks before deleting
+* Locking notes with pending operations</p>
+<p>### Couples therapy pt1 (or some tips that help the relationship to flow)
+* Will retry tasks? use exponential backoffs
+* Tasks shouldn't raise exceptions: handle all of them and send reports
+* Monitoring is essential, celery-flower can help
+* ALWAYS_EAGER makes your tasks synchronous and can help on debugging and development
+* RDB is a remote debugger, it can help debug celery tasks</p>
+<p>### Couples therapy pt2 (knowing the boundaries of the relationship)
+* Celery is excellent for asynchronous tasks and for doing simple jobs. For complex workflows it may not be very reliable, there are open issues for that, and many complaints of lost tasks and unpredictable behaviors.
+* Long running tasks may be problematic. Ideally split the task into smaller ones or use a different tool.
+* Monitoring tools are very limited. You may need to implement some monitoring yourself. Ex.: queues heartbeat.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/djangocon-us-2024.html">DjangoCon US 2024</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://youtu.be/NCXtXDn4ppk" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://2024.djangocon.us">
+Conference Website                </a></li><li><a href="https://2024.djangocon.us/talks/django-celery-a-love-story-of-async-proportions/">
+Talk Webpage                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/djangocon-us-2024/videos/django-celery-a-love-story-of-async-proportions.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

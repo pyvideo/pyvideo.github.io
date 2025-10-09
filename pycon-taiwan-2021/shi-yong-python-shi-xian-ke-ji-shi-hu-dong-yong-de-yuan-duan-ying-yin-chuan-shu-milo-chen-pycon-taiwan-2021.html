@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; 使用 Python 實現可即時互動用的遠端影音傳輸 – Milo Chen (PyCon Taiwan 2021)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="使用 Python 實現可即時互動用的遠端影音傳輸 – Milo Chen (PyCon Taiwan 2021)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-taiwan-2021/shi-yong-python-shi-xian-ke-ji-shi-hu-dong-yong-de-yuan-duan-ying-yin-chuan-shu-milo-chen-pycon-taiwan-2021.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/VBWCIgfSHoo/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/VBWCIgfSHoo/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-taiwan-2021/shi-yong-python-shi-xian-ke-ji-shi-hu-dong-yong-de-yuan-duan-ying-yin-chuan-shu-milo-chen-pycon-taiwan-2021.html" rel="bookmark"
+         title="Permalink to 使用 Python 實現可即時互動用的遠端影音傳輸 – Milo Chen (PyCon Taiwan 2021)">使用 Python 實現可即時互動用的遠端影音傳輸 – Milo Chen (PyCon Taiwan 2021)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sun 03 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/milo-chen.html">Milo Chen</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VBWCIgfSHoo" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Day 2, 10:35-11:20</p>
+<p>Abstract</p>
+<p>在過去， Python 是電腦上非常的重要工具，更是許多人第一個學會的程式語言，並且已經在市面上擁有高普及性也成功導入各場域，例如像是物聯網應用以及AI應用。 今日，全球世界趨勢正加速變化，遠端生態圈此時正在快速形成，過去一年來的上市公司及許多獨角戰新創皆是以「遠端生態系」的方式進入新世界；影音傳輸很長見，但速度能快到即時互動的不常見，一個能滿足遠端 &quot;即時互動需求&quot; 的影音傳輸技術及應用，便是這個新生態系的一張入場卷。 可是你們知道嗎? 神奇 Python 也能讓我們作到。 本場演講會介紹如何使用 Python 的 AIORTC 框架來實現 一個能滿足遠端即時互動需求的影音傳輸技術及應用 1. 不知道需要有哪些背景知識嗎? 這邊會告訴你 2. 不知該從何實作起嗎? 這邊會帶你實作 3. 演講結束後怕不知從何繼續嗎 ? 這裡會留參考專案與後續聯絡管道 本演講將適合給每一位有 python 專案開發經驗的人聽， 一方面也鼓勵聽眾能在聽演講之前先初淺了解一下OSI七層網路架構。</p>
+<p>Description</p>
+<p>主要對象是給那些想要以 python 實現各樣即時影音互動應用的人，這些人的背景可以是無任何python框架基礎的人，或是他已經有 ai, 物聯網 網站等等相關框架運用經驗的人，但還想再嘗試結合即時影音互動的開發者。</p>
+<p>這個演講的設計，特別適合那些沒有即時音互動技術概念的人聽，只要他們有 python 開發基礎了，他們真的想用python 去實現各種影音互動的應用，那麼這樣子的就能開始了。這類應用也許是遠端動物照護、遠端教學、遠端陪讀、遠端語音聊天、遠端即時ai運算、遠端醫療等等。只要是對於 python 實現應用有熱情的人，此演講要讓大家滿載而歸，並且回去之後還能實際拿來開發。</p>
+<p>如果你是擁有極大的熱情，想要用 python 作一些有助於社會之應用的朋友們，又有開發python程式經驗的人，
+你將會是最適合這個演講的聽眾。</p>
+<p>Slides not uploaded by the speaker.
+HackMD: <a class="reference external" href="https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FB19Isz9GY">https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FB19Isz9GY</a></p>
+<p>Speaker: Milo Chen</p>
+<p>我是自以為永遠18歲的 Milo Chen, MBTI: INFP 主修法律、電子以及資訊, 喜歡不斷的接觸新知識新領域。 除了對各樣工程類多有探索與了解外。 嗜好就是畫畫、數學，寫程式，接觸新事物。 鋼琴、打高爾夫球以及與野貓交朋友都很不錯， 喜歡穿藍白拖短褲穿梭於都市之間。 對於各種工程領域的技術都略懂略懂， 電子資訊相關比較熟悉一些，是15歲起開始密集接觸的東西。 人生第一次 Python 2.0 是 2002 年，當時是用它寫 TCP/IP 程式。後來在工作上或 freelancer 的時候，也有用在 Raspberry Pi , PC Desktop application、資料處理以及 Web等開發。 我曾經在醫院裡也有傳授 Python 給許多工作人員，發現大部份的人都很能接受他。Python 真的是易於許多領域的人學習，並且在有了這個工具之後，還能使用它作非常多的應用，有利於讓各領域的朋友們，使用程式串聯起各種科技，來改變這個世界。 目前創立並管理以下這些版 Gather Town Taiwan User Group - 推廣大家多多進行線上活動抗疫 MBTI十六型人型 - 推廣大家認識及它人不同的心理特質 ÐApp 101 讀書會 - 推廣區塊鏈科技該如何正面應用 Developer Taiwan - 推廣讓開發者能多接納與自己不同的開發者</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-taiwan-2021.html">PyCon Taiwan 2021</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=VBWCIgfSHoo" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/pycon-tw-2021/videos/shi-yong-python-shi-xian-ke-ji-shi-hu-dong-yong-de-yuan-duan-ying-yin-chuan-shu-milo-chen-pycon-taiwan-2021.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>
