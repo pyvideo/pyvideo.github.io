@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - DjangoCon AU 2015</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_djangocon-au-2015.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2015-08-04T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Don't be afraid to search</title><link href="https://pyvideo.org/djangocon-au-2015/dont-be-afraid-to-search.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Honza Král</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/dont-be-afraid-to-search.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creating a good search experience for your website is perceived as hard
+when it doesn't have to be so.&lt;/p&gt;
+&lt;p&gt;Starting with what is a search engine and how it works we will introduce
+the tools and techniques to help you design a search functionality that
+will make your users …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creating a good search experience for your website is perceived as hard
+when it doesn't have to be so.&lt;/p&gt;
+&lt;p&gt;Starting with what is a search engine and how it works we will introduce
+the tools and techniques to help you design a search functionality that
+will make your users happy.&lt;/p&gt;
+&lt;p&gt;From tips on how to structure your data and tune your settings and
+queries to improve relevancy to features like faceted navigation and
+search-as-you-type autocomplete.&lt;/p&gt;
+&lt;p&gt;All examples will be shown using Elasticsearch and Django, though it
+should be applicable to other technologies as well.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Integrating Django with Identity Management Systems</title><link href="https://pyvideo.org/djangocon-au-2015/integrating-django-with-identity-management-syste.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Fraser Tweedale</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/integrating-django-with-identity-management-syste.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Most Django developers are familiar with authentication and
+authorisation on the open web, but the requirements and technologies
+used inside companies and large organisations are different:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Identities and groups are probably stored in an external identity
+management system's directory rather than in an application's
+database tables.&lt;/li&gt;
+&lt;li&gt;Authorisation decisions will …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Most Django developers are familiar with authentication and
+authorisation on the open web, but the requirements and technologies
+used inside companies and large organisations are different:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Identities and groups are probably stored in an external identity
+management system's directory rather than in an application's
+database tables.&lt;/li&gt;
+&lt;li&gt;Authorisation decisions will be based on group membership and
+policies that are defined outside the application.&lt;/li&gt;
+&lt;li&gt;Users may be expected or required to use a &lt;em&gt;single sign-on&lt;/em&gt;
+technology such as Kerberos or SAML to authenticate to applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will familiarise the audience with these technologies and
+demonstrate how Django applications can be integrated with an identity
+management system to meet business requirements while providing a
+positive user experience. Particular technologies covered will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;FreeIPA: an open-source identity management solution, for defining
+users, groups and authorisation policies&lt;/li&gt;
+&lt;li&gt;mod_auth_gssapi / mod_auth_kerb: Apache modules for Kerberos
+authentication&lt;/li&gt;
+&lt;li&gt;mod_lookup_identity: Apache module to retrieve user information
+from a directory&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk will conclude with discussion about upcoming Kerberos features,
+techniques for dealing with multiple authentication methods, and
+progress in making identity management integration easier for Django
+developers.&lt;/p&gt;
+&lt;p&gt;People developing or deploying Django applications in business
+environments or for large open source projects with centralised identity
+management will get the most out of this talk.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Many-to-many, minus the middleman</title><link href="https://pyvideo.org/djangocon-au-2015/many-to-many-minus-the-middleman.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Alex Hill</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/many-to-many-minus-the-middleman.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about an alternative Django ManyToManyField implementation
+that uses (abuses?) PostgreSQL's full-text search engine instead of an
+intermediary table to store its relationships. As well as showing off
+some handy things you can do with this field, we'll talk along the way
+about full-text search in Postgres …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about an alternative Django ManyToManyField implementation
+that uses (abuses?) PostgreSQL's full-text search engine instead of an
+intermediary table to store its relationships. As well as showing off
+some handy things you can do with this field, we'll talk along the way
+about full-text search in Postgres, inverted indexes, and how Django's
+ManyToManyField is implemented.&lt;/p&gt;
+&lt;p&gt;Behind the scenes, ManyToManyField uses an intermediary table to record
+its relationships –&amp;nbsp;a classic relational database technique you most
+likely mastered in Databases 101. But to believe some present-day
+commentators, classic relational databases with their fixed schemas and
+their ACID habit belong back in the 70s where they came from.&lt;/p&gt;
+&lt;p&gt;Enter Postgres, the hip, switched-on parent who works as a public
+defender and gets on uncomfortably well with your friends. Postgres
+builds on a wealth of relational history while embracing modern
+non-relational ideas in a thoughtful, sane way.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll press full-text search, one of Postgres' repertoire
+of many useful features, into a service it performs remarkably well
+despite being designed for quite a different purpose. Code and
+benchmarks provided!&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Moby and the Beanstalk</title><link href="https://pyvideo.org/djangocon-au-2015/moby-and-the-beanstalk.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Sebastian Vetter</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/moby-and-the-beanstalk.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The popularity of Docker these days is incredible and a lot of people
+are already using it for their production systems. Although it makes a
+lot of things much simpler, it's not a silver bullet and comes with some
+caveats of it's own. This talk will describe the journey …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The popularity of Docker these days is incredible and a lot of people
+are already using it for their production systems. Although it makes a
+lot of things much simpler, it's not a silver bullet and comes with some
+caveats of it's own. This talk will describe the journey of my team at
+Mobify from a self-hosted VM to a AWS-backed web app deployed using
+Docker.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>PostgreSQL in Django 1.8</title><link href="https://pyvideo.org/djangocon-au-2015/postgresql-in-django-18.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Christophe Pettus</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/postgresql-in-django-18.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django 1.8 adds a whole bunch of cool new features that are specifically
+designed for PostgreSQL. We'll take a quick tour through them, and show
+when and how you can use them in real-world applications. We'll also
+talk about how to get the best performance out of PostgreSQL …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django 1.8 adds a whole bunch of cool new features that are specifically
+designed for PostgreSQL. We'll take a quick tour through them, and show
+when and how you can use them in real-world applications. We'll also
+talk about how to get the best performance out of PostgreSQL when using
+the Django ORM.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Realtime websites with Django and Meteor</title><link href="https://pyvideo.org/djangocon-au-2015/realtime-websites-with-django-and-meteor.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Tyson Clugg</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/realtime-websites-with-django-and-meteor.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Create real-time websites and mobile apps that scale using Django and
+the Meteor JavaScript framework. Push data changes in real-time from
+your servers to browsers and app users simultaneously without adding
+overly complex infrastructure to support the real-time updates.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Recreating the Pycon 2015 site in under 30 minutes</title><link href="https://pyvideo.org/djangocon-au-2015/recreating-the-pycon-2015-site-in-under-30-minute.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Tim Heap</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/recreating-the-pycon-2015-site-in-under-30-minute.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Wagtail is a new CMS built for Django. Making sites in it is easy once
+you know Django. To prove it, I will recreate the Pycon 2015 site as you
+watch. Live coding - nothing can go wrong!&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>Stop and smell the Djangos</title><link href="https://pyvideo.org/djangocon-au-2015/stop-and-smell-the-djangos.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Richard Shea</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/stop-and-smell-the-djangos.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A great strength of Django is how much functionality there is baked in
+without the developer doing anything to obtain it.&lt;/p&gt;
+&lt;p&gt;A corollary of this is that there’s a great deal of functionality in
+Django which the average developer is hardly aware exists. The happy dev
+is pleased …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A great strength of Django is how much functionality there is baked in
+without the developer doing anything to obtain it.&lt;/p&gt;
+&lt;p&gt;A corollary of this is that there’s a great deal of functionality in
+Django which the average developer is hardly aware exists. The happy dev
+is pleased to ignore the problems that have been solved for them as
+their requests rush in and their responses rush out.&lt;/p&gt;
+&lt;p&gt;There's Middleware, Signals, Authentication, Caching,
+Internationalization, Serialization and ... a lot more and that's just
+the core framework.&lt;/p&gt;
+&lt;p&gt;In this talk we’re going to stop and admire the view .&lt;/p&gt;
+&lt;p&gt;We’ll demonstrate the effects that these core aspects of Django have on
+a request - response cycle by reviewing how they work and feeling the
+pain of what life would be like without them.&lt;/p&gt;
+&lt;p&gt;My talk is aimed at the average Django dev who has been happy to ignore
+what goes on under the hood. By better understanding the machinery that
+Django relies on it gives us all the opportunity to exploit it in our
+work and, of course, to impress our colleagues!&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>The one true way of doing Django deployments...</title><link href="https://pyvideo.org/djangocon-au-2015/the-one-true-way-of-doing-django-deployments.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Tom Eastman</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/the-one-true-way-of-doing-django-deployments.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;...doesn't exist. (Sorry)&lt;/p&gt;
+&lt;p&gt;The power and flexibility of Django comes with drawbacks. One of the
+toughest for project management is working out how to deploy your Django
+application. If you ask five different authorities on how you should do
+it, you'll get six different answers.&lt;/p&gt;
+&lt;p&gt;And if someone says …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;...doesn't exist. (Sorry)&lt;/p&gt;
+&lt;p&gt;The power and flexibility of Django comes with drawbacks. One of the
+toughest for project management is working out how to deploy your Django
+application. If you ask five different authorities on how you should do
+it, you'll get six different answers.&lt;/p&gt;
+&lt;p&gt;And if someone says &amp;quot;Just use fabric!&amp;quot;: they're not helping.&lt;/p&gt;
+&lt;p&gt;Release management, dependency wrangling, virtualenv care and feeding;
+to .whl or .deb? To containerize or Heroku-ize? Do you really have to
+allow your servers unconstrained Internet access just to build your
+virtualenv?&lt;/p&gt;
+&lt;p&gt;As a Django user, you might end up writing more deployment solutions
+than Django projects. I know I have.&lt;/p&gt;
+&lt;p&gt;There's no one true way of doing Django deployments, but some work
+better than others. Maybe I can show you.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry><entry><title>What Django can learn from Twisted</title><link href="https://pyvideo.org/djangocon-au-2015/what-django-can-learn-from-twisted.html" rel="alternate"></link><published>2015-08-04T00:00:00+00:00</published><updated>2015-08-04T00:00:00+00:00</updated><author><name>Amber Brown ("HawkOwl")</name></author><id>tag:pyvideo.org,2015-08-04:/djangocon-au-2015/what-django-can-learn-from-twisted.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Web frameworks like Django are designed around the traditional
+request-response cycle — a request comes in, a response is generated,
+and that is delivered to the client. In the day of “single page”
+applications, where only sections of the page are updated through
+requests, doing real-time can be clunky. Twisted …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Web frameworks like Django are designed around the traditional
+request-response cycle — a request comes in, a response is generated,
+and that is delivered to the client. In the day of “single page”
+applications, where only sections of the page are updated through
+requests, doing real-time can be clunky. Twisted, and things that build
+off it, like Django Channels, might be worth thinking about, and this is
+what this talk will be about.&lt;/p&gt;
+</content><category term="DjangoCon AU 2015"></category></entry></feed>

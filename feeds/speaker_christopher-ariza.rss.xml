@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Christopher Ariza</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 27 Sep 2025 00:00:00 +0000</lastBuildDate><item><title>The Paradox of Statically Typed Python &amp; Polymorphic C</title><link>https://pyvideo.org/pybeach-2025/the-paradox-of-statically-typed-python-polymorphic-c.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python implements dynamic type behavior using a statically typed language (C), only to then offer static type annotations on top of a dynamically typed language (Python). This paradox is the focus of this talk. We will look at the basics of type annotations, how polymorphism is implemented in C with &lt;cite&gt;PyObject&lt;/cite&gt; and &lt;cite&gt;PyObject_HEAD&lt;/cite&gt;, and how CPython API functions like  &lt;cite&gt;PyObject_TypeCheck()&lt;/cite&gt; work. Despite the chasm between type annotations and runtime reality, their benefits will be demonstrated.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Sat, 27 Sep 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-09-27:/pybeach-2025/the-paradox-of-statically-typed-python-polymorphic-c.html</guid><category>PyBeach 2025</category></item><item><title>Employing NumPy's NPY Format for Faster-Than-Parquet DataFrame Serialization</title><link>https://pyvideo.org/pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over 14 years ago the first NumPy Enhancement Proposal (NEP) defined the NPY format (a binary encoding of array data and metadata) and the NPZ format (zipped bundles of NPY files). Those same formats, extended in a custom NPZ packaged with JSON metadata, can be used in Python to create a stable DataFrame storage format that can materially out-perform Parquet read / write times in a wide range of contexts. Unlike Parquet, all characteristics of a DataFrame can be encoded and all NumPy dtypes are supported. Implemented in StaticFrame, this format can take advantage of an immutable data model to memory-map full DataFrames from un-zipped directories of NPY. Given wide-spread use of Parquet files in data science workflows, a faster-than-Parquet file format can significantly reduce compute costs.&lt;/p&gt;
+&lt;p&gt;I will begin this talk by introducing the challenge of serializing DataFrames, illustrating how nearly all stable encoding formats lack full support for all DataFrame characteristics. While the broadly-used Parquet format has been called a &amp;quot;gold standard&amp;quot; binary file format, its columnar representation will be shown to have limitations when used for encoding DataFrames.&lt;/p&gt;
+&lt;p&gt;I will show how the NPY format, combined with JSON metadata, can be used to create a custom NPZ file with significant performance and compatibility advantages compared to Parquet. The details of this encoding scheme will be explained.&lt;/p&gt;
+&lt;p&gt;I will close the talk by evaluating numerous read / write performance comparisons between Parquet (via Pandas) and NPZ (via StaticFrame), measured with a wide variety of DataFrame shapes and dtype compositions. I will share techniques used in implementing optimized Python routines for reading and writing NPY files, and demonstrate applications for memory-mapping complete DataFrames via the same NPY representation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-04-27:/pycon-us-2022/employing-numpys-npy-format-for-faster-than-parquet-dataframe-serialization.html</guid><category>PyCon US 2022</category></item><item><title>Building NumPy Arrays from CSV Files, Faster than Pandas</title><link>https://pyvideo.org/pycon-us-2023/building-numpy-arrays-from-csv-files-faster-than-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Twenty years ago, in 2003, Python 2.3 was released with
+&lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;, a function that provided support for parsing CSV
+files. The C implementation, proposed in PEP 305, defines a core
+tokenizer that has been a reference for many subsequent projects. Two
+commonly needed features, however, were not addressed in
+&lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;: determining type per column, and converting strings to
+those types (or columns to arrays). Pandas &lt;tt class="docutils literal"&gt;read_csv()&lt;/tt&gt; implements
+automatic type conversion and realization of columns as NumPy arrays
+(delivered in a DataFrame), with performance good enough to be widely
+regarded as a benchmark. Pandas implementation, however, does not
+support all NumPy dtypes. While NumPy offers &lt;tt class="docutils literal"&gt;loadtxt()&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;genfromtxt()&lt;/tt&gt; for similar purposes, the former (recently
+re-implemented in C) does not implement automatic type discovery, while
+the latter (implemented in Python) suffers poor performance at scale.&lt;/p&gt;
+&lt;p&gt;To support reading delimited files in StaticFrame (a DataFrame library
+built on an immutable data model), I needed something different: the
+full configuration options of Python's &lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;; optional type
+discovery for one or more columns; support for all NumPy dtypes; and
+performance competitive with Pandas &lt;tt class="docutils literal"&gt;read_csv()&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;Following the twenty-year tradition of extending &lt;tt class="docutils literal"&gt;csv.reader()&lt;/tt&gt;, I
+implemented &lt;tt class="docutils literal"&gt;delimited_to_arrays()&lt;/tt&gt; as a C extension to meet these
+needs. Using a family of C functions and structs, Unicode code points
+are collected per column (with optional type discovery), converted to
+C-types, and written into NumPy arrays, all with minimal &lt;tt class="docutils literal"&gt;PyObject&lt;/tt&gt;
+creation or reference counting. Incorporated in StaticFrame, performance
+tests across a range of DataFrame shapes and type heterogeneity show
+significant performance advantages over Pandas. Independent of usage in
+StaticFrame, &lt;tt class="docutils literal"&gt;delimited_to_arrays()&lt;/tt&gt; provides a powerful new resource
+for converting CSV files to NumPy arrays. This presentation will review
+the background, architecture, and performance characteristics of this
+new implementation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-21:/pycon-us-2023/building-numpy-arrays-from-csv-files-faster-than-pandas.html</guid><category>PyCon US 2023</category></item><item><title>Elastic Generics: Flexible Static Typing with TypeVarTuple and Unpack</title><link>https://pyvideo.org/pycon-us-2025/elastic-generics-flexible-static-typing-with-typevartuple-and-unpack.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Since Python 3.5, generic tuples can be parameterized as either orderings of component types (e.g. tuple[int, str]) or unbound sequences of a single type (e.g. &lt;tt class="docutils literal"&gt;tuple[float, &lt;span class="pre"&gt;...]&lt;/span&gt;&lt;/tt&gt;). Yet sometimes we need both: for example, a tuple that starts with an int and a str and follows with zero or more floats might describe a row in a dataset that starts with identifiers and follows with a variable number of observations. While we might want to define a generic Record class that can be elastically parameterized in this manner, doing so was not practical until the introduction of &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Unpack&lt;/tt&gt; in Python 3.11.&lt;/p&gt;
+&lt;p&gt;With &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt;, a generic &lt;tt class="docutils literal"&gt;Record&lt;/tt&gt; class can be made concrete as &lt;tt class="docutils literal"&gt;Record[int, str]&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Record[int, str, float]&lt;/tt&gt;, or even &lt;tt class="docutils literal"&gt;Record[int, str, *tuple[float, &lt;span class="pre"&gt;...]]&lt;/span&gt;&lt;/tt&gt;: the same class can be parameterized as requiring two types, three types, or required int and str types followed by zero or more float types (as given with the Unpack notation &lt;tt class="docutils literal"&gt;*tuple[float, &lt;span class="pre"&gt;...]&lt;/span&gt;&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;This presentation will introduce &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;Unpack&lt;/tt&gt;. Starting with annotated tuple types, the flexible, expressive range of mixture between fixed and unbound types will be demonstrated with mypy validation. Next, a variadic generic class, Record, will demonstrate the benefits of such elastic typing.&lt;/p&gt;
+&lt;p&gt;Finally, a compelling application of &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt; will be demonstrated. While DataFrames are widely used, only the StaticFrame library, leveraging &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt;, offers a comprehensively generic DataFrame. DataFrames have variable numbers of columns, each sometimes a different type; further, while DataFrames might have tens or hundreds of columns, it is common for such datasets to have a fixed number of heterogeneously typed columns followed by a variable number of uniformly typed columns. With &lt;tt class="docutils literal"&gt;TypeVarTuple&lt;/tt&gt;, this type of flexible DataFrame typing is now possible.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Sat, 17 May 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-05-17:/pycon-us-2025/elastic-generics-flexible-static-typing-with-typevartuple-and-unpack.html</guid><category>PyCon US 2025</category></item><item><title>StaticFrame: An Immutable Alternative to Pandas</title><link>https://pyvideo.org/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;StaticFrame provides Pandas-like data structures that enforce
+immutability. StaticFrame narrows and refines Pandas-style interfaces,
+which, when combined with immutability, reduces opportunities for error.
+In addition, StaticFrame offers a range of new and powerful iterators
+for function application with built-in concurrency.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-23:/pydata-la-2018/staticframe-an-immutable-alternative-to-pandas.html</guid><category>PyData LA 2018</category></item><item><title>Fitting Many Dimensions into One: The Promise of Hierarchical Indices for Data Beyond Two Dimensions</title><link>https://pyvideo.org/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent versions of Pandas have warned users of the imminent deprecation
+of the Panel, Panda’s name-sake data structure for storing
+three-dimensional data. This talk will examine the tradeoffs in
+performance and interface between two types of Panel alternatives: using
+hierarchical indices in Pandas and StaticFrame, or using true
+n-dimensional arrays in NumPy or xarray.&lt;/p&gt;
+&lt;p&gt;This talk will aid those working in data science and related fields by
+examining the tradeoffs between working with data in true
+multidimensional data structures (i.e., NumPy and xarray) versus working
+with hierarchical index implementations on one- or two-dimensional data.&lt;/p&gt;
+&lt;p&gt;The immediate point of departure is Pandas imminent deprecation of the
+Panel: for Pandas users who have used the Panel, this talk will
+illustrate how to transition away from the Panel and the tradeoffs in
+Panel alternatives.&lt;/p&gt;
+&lt;p&gt;This talk will explain how hierarchical indices work by comparing two
+implementations: the Pandas MultiIndex and the StaticFrame
+IndexHierarchy. The StaticFream IndexHierarchy offers a new, independent
+implementation of hierarchical indices that deviates from Pandas in
+significant ways: the index is literally composed of other index
+objects, permitting usage of specialized index types (such as datetime
+indices), efficient memory usage of shared immutable objects, and the
+enforcement of a strict tree graph.&lt;/p&gt;
+&lt;p&gt;After demonstrating how hierarchical indices can support higher
+dimensional data in one or two-dimensional arrays, the power and
+flexibility of selecting and slicing data with hierarchical indices will
+be demonstrated.&lt;/p&gt;
+&lt;p&gt;The talk will close with performance analysis, isolating the overhead of
+using hierarchical indices over true multi-dimensional array
+representations, and comparing the performance of selection, slicing,
+grouping, and function application of hierarchical data in NumPy,
+xarray, Pandas and StaticFrame.&lt;/p&gt;
+&lt;p&gt;This talk is aimed at both beginners, new to hierarchical indices, and
+more advanced users interested in interface design and performance
+tradeoffs. Basic familiarity with NumPy and Pandas is expected. Audience
+members will leave with a better understanding of how hierarchical
+indices work, and what tradeoffs are made when using them.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Thu, 05 Dec 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-12-05:/pydata-la-2019/fitting-many-dimensions-into-one-the-promise-of-hierarchical-indices-for-data-beyond-two-dimensions.html</guid><category>PyData LA 2019</category></item><item><title>When and How to Try with Your Own C-Extensions</title><link>https://pyvideo.org/scipy-2023/when-and-how-to-try-with-your-own-c-extensions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While the NumPy C API lets developers write C that builds or evaluates arrays, just writing C is often not enough to outperform NumPy. NumPy's usage of Single Instruction Multiple Data routines, as well as multi-source compiling, provide optimizations that are impossible to beat with simple C. This presentation offers principles to help determine if an array-processing routine, implemented as a C-extension, might outperform NumPy called from Python. A C-extension implementing a narrow use case of the np.nonzero() routine will be studied as an example.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Ariza</dc:creator><pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-10:/scipy-2023/when-and-how-to-try-with-your-own-c-extensions.html</guid><category>SciPy 2023</category></item></channel></rss>

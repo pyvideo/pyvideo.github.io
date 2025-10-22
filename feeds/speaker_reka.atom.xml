@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Reka</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_reka.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-04-27T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Actionable insights vs ranking: How to use and how NOT to use code quality metrics?</title><link href="https://pyvideo.org/pycon-us-2022/actionable-insights-vs-ranking-how-to-use-and-how-not-to-use-code-quality-metrics.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Reka</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/actionable-insights-vs-ranking-how-to-use-and-how-not-to-use-code-quality-metrics.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we want to make two major points:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Metrics can facilitate better conversation about code quality. They help you focus more on technical problems and improvements instead of personal preferences and organizational issues.&lt;/li&gt;
+&lt;li&gt;Metrics can be misused very easily. Knowing their limitations is crucial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;METRICS&lt;/p&gt;
+&lt;p&gt;For each …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we want to make two major points:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Metrics can facilitate better conversation about code quality. They help you focus more on technical problems and improvements instead of personal preferences and organizational issues.&lt;/li&gt;
+&lt;li&gt;Metrics can be misused very easily. Knowing their limitations is crucial.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;METRICS&lt;/p&gt;
+&lt;p&gt;For each metric, we'll discuss:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;code examples in Python&lt;/li&gt;
+&lt;li&gt;how to calculate&lt;/li&gt;
+&lt;li&gt;interpretation (incl. some comparison across open source Python projects)&lt;/li&gt;
+&lt;li&gt;actions&lt;/li&gt;
+&lt;li&gt;limitations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;METHOD LENGTH&lt;/p&gt;
+&lt;p&gt;The simple.&lt;/p&gt;
+&lt;p&gt;You can calculate it without specific tools.
+First step: Extract functions.
+It shows well some general limitations of code quality metrics.&lt;/p&gt;
+&lt;p&gt;CYCLOMATIC COMPLEXITY&lt;/p&gt;
+&lt;p&gt;The old.&lt;/p&gt;
+&lt;p&gt;Show the formula, but don't explain it in detail. :-)
+Extract functions. Remove redundant if conditions.
+It doesn't account for nested coding constructs. It ignores some modern language patterns.&lt;/p&gt;
+&lt;p&gt;COGNITIVE COMPLEXITY&lt;/p&gt;
+&lt;p&gt;The human.&lt;/p&gt;
+&lt;p&gt;Calculation and interpretation: see &lt;a class="reference external" href="https://www.sonarsource.com/docs/CognitiveComplexity.pdf"&gt;https://www.sonarsource.com/docs/CognitiveComplexity.pdf&lt;/a&gt;
+Actions: Extract functions. Use shorthand structures. More Pythonic code is also more readable.
+Limitations: It ignores both the length of a linear block and the complexity of the expressions used in it.&lt;/p&gt;
+&lt;p&gt;WORKING MEMORY&lt;/p&gt;
+&lt;p&gt;Another aspect of human understanding.&lt;/p&gt;
+&lt;p&gt;Calculation: see &lt;a class="reference external" href="https://sourcery.ai/blog/working-memory/"&gt;https://sourcery.ai/blog/working-memory/&lt;/a&gt;
+Interpretation: The 7 +/- 2 rule of the human working memory.
+Actions: Extract functions, some more specific refactorings this metric rewards.
+Limitations: It ignores the structure.&lt;/p&gt;
+&lt;p&gt;LIMITATIONS AND PITFALLS&lt;/p&gt;
+&lt;p&gt;GENERAL&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;They can be gamed.&lt;/li&gt;
+&lt;li&gt;They easily encourage one-sided thinking and behaviour.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;SPECIFIC FOR CODE QUALITY METRICS&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Great as warning signs, not good as &amp;quot;proof of excellence&amp;quot;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;COMPOUND METRICS&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Giving a more versatile picture than a single metric.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;WHAT METRICS DON'T CAPTURE&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;naming, consistent terminology, ubiquitous language (DDD)&lt;/li&gt;
+&lt;li&gt;project structure&lt;/li&gt;
+&lt;li&gt;correctness&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="PyCon US 2022"></category><category term="talk"></category></entry></feed>

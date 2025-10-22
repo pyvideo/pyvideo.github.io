@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Ludovico Bianchi</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Make your code come alive: using interactive Jupyter notebooks outside of the sciences</title><link>https://pyvideo.org/north-bay-python-2019/make-your-code-come-alive-using-interactive-jupyter-notebooks-outside-of-the-sciences.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ludovico Bianchi</dc:creator><pubDate>Sun, 03 Nov 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-11-03:/north-bay-python-2019/make-your-code-come-alive-using-interactive-jupyter-notebooks-outside-of-the-sciences.html</guid><category>North Bay Python 2019</category></item><item><title>What's old is new again: using Python's import machinery to handle API deprecations</title><link>https://pyvideo.org/pycon-us-2023/whats-old-is-new-again-using-pythons-import-machinery-to-handle-api-deprecations.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For any software project with an established user base, introducing
+breaking changes in its API can be daunting. To minimize disruptions for
+users, projects are incentivized to plan these transitions carefully,
+which may include &lt;em&gt;API deprecations&lt;/em&gt;, where messages warning users of
+upcoming changes are added to the affected APIs while they’re still
+functional. However, this imposes extra workload for the project’s
+maintainers, as both old and new versions of the API must be kept
+functional throughout the transition period.&lt;/p&gt;
+&lt;p&gt;As a maintainer of a software project undergoing preparations for a
+major version release, I recently found myself in a similar situation:
+our goal was to provide backward compatibility with the previous version
+for as long as possible, without impacting the development of new
+features. Practically, this included dealing with a radical
+restructuring of the Python codebase, resulting in hundreds of modules
+being relocated, split, or removed. Was there any way to ensure that the
+deprecated import paths could still be used without errors, without
+having to maintain two separate versions of the package?&lt;/p&gt;
+&lt;p&gt;Fortunately, the answer to “can you do that in Python?” is more often
+than not “yes!”; for this particular case, the path to success turned
+out to be through the &lt;tt class="docutils literal"&gt;importlib&lt;/tt&gt; package of the standard library. For
+something so close to Python’s internals, &lt;tt class="docutils literal"&gt;importlib&lt;/tt&gt; is both
+accessible and extensible, allowing ordinary code to customize almost
+completely how and what modules can be imported---including modules that
+are not there anymore!&lt;/p&gt;
+&lt;p&gt;This intermediate-level talk will present a complete solution based on
+Python’s importlib machinery that allows to redirect modules or module
+attributes with deprecations in a simple, robust, and scalable way.
+While the context of the solution is especially relevant for project
+maintainers, the focus is on importlib techniques that are generally
+applicable.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Ludovico Bianchi</dc:creator><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-23:/pycon-us-2023/whats-old-is-new-again-using-pythons-import-machinery-to-handle-api-deprecations.html</guid><category>PyCon US 2023</category></item></channel></rss>
