@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Andy Fundinger</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate><item><title>A Taxonomy of Decorators: A-E</title><link>https://pyvideo.org/europython-2018/a-taxonomy-of-decorators-a-e.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will briefly go over the various decorator syntaxes before
+breaking up the common usages of decorators into 5 categories.
+Effectively, these are design patterns for decorators. The usages to be
+considered are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A - Argument Changing Decorators – Decorators that change a
+function’s arguments, including changing its signature&lt;/li&gt;
+&lt;li&gt;B - Binding Decorators – Decorators that implement the Descriptor
+Protocol, such as the builtins: &amp;#64;property, &amp;#64;classmethod, and
+&amp;#64;staticmethod&lt;/li&gt;
+&lt;li&gt;C - Control Flow Decorators – Decorators that change when or whether
+the function will be called, such as &amp;#64;retry or &amp;#64;lrucache&lt;/li&gt;
+&lt;li&gt;D - Descriptive Decorators – Decorators that do not change the
+function, but create a reference to it elsewhere, like pytest.mark
+and flask.app.route&lt;/li&gt;
+&lt;li&gt;E - Execution Decorators – Decorators that retrieve source code
+and/or AST and alter it.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-27:/europython-2018/a-taxonomy-of-decorators-a-e.html</guid><category>EuroPython 2018</category></item><item><title>The spec you never knew you needed</title><link>https://pyvideo.org/europython-2021/the-spec-you-never-knew-you-needed.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The spec you never knew you needed
+[EuroPython 2021 - Talk - 2021-07-30 - Brian]
+[Online]&lt;/p&gt;
+&lt;p&gt;By Andy Fundinger&lt;/p&gt;
+&lt;p&gt;Many of the systems we build fail to account for performance, error rates, data correctness, or other customer reliability needs. This talk discusses the basics of service level objectives by comparing them to ordinary functional specifications. It also serves as an introduction to System Reliability Engineering (SRE).&lt;/p&gt;
+&lt;p&gt;License: This video is licensed under the CC BY-NC-SA 3.0 license: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/3.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/3.0/&lt;/a&gt;
+Please see our speaker release agreement for details: &lt;a class="reference external" href="https://ep2021.europython.eu/events/speaker-release-agreement/"&gt;https://ep2021.europython.eu/events/speaker-release-agreement/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2021-07-26:/europython-2021/the-spec-you-never-knew-you-needed.html</guid><category>EuroPython 2021</category></item><item><title>Adventures in not writing tests</title><link>https://pyvideo.org/europython-2024/adventures-in-not-writing-tests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — North Hall on 2024-07-12]&lt;/p&gt;
+&lt;p&gt;Adventures in not writing tests by Andy Fundinger&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/adventures-in-not-writing-tests"&gt;https://ep2024.europython.eu/session/adventures-in-not-writing-tests&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sometimes we write code that we don't expect to go to production; they are one-offs or analysis to understand our data. However, a good analysis may be worth repeating, and before we know it, the code that was never supposed to go to production is running every day and driving critical decisions – it is in production. Once our code is in production, we have to maintain it, and that means we need tests to ensure that changes made to the code while maintaining it do not change other behavior.&lt;/p&gt;
+&lt;p&gt;Hypothesis is a Python library for creating inputs that are good for exercising code. Hypothesis tests create many different inputs for a single test case, with a special concentration on inputs that are likely to break your code. If the code was originally written to understand data, then new data we feed it over time could be very different from what was initially expected or planned for. With Hypothesis, we randomize our test outputs and they become just as unknown as our real-world outputs. Our tests then confirm certain properties to prove that the analysis was performed as expected.&lt;/p&gt;
+&lt;p&gt;Ghostwriting is a feature of Hypothesis that writes tests based on the type hints in your code. This can not only save time, but also validate our type hints. The savings in time and toil can be significant, but the ghostwritten tests do also need some additions to truly test our code. We'll look at what is needed to both generate proper inputs and check our outputs.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/europython-2024/adventures-in-not-writing-tests.html</guid><category>EuroPython 2024</category></item><item><title>What to do with a Flock of lambdas</title><link>https://pyvideo.org/pybay-2019/what-to-do-with-a-flock-of-lambdas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk was presented at PyBay2019 - 4th annual Bay Area Regional Python conference. See pybay.com for more details about PyBay and click SHOW MORE for more information about this talk.&lt;/p&gt;
+&lt;p&gt;Sponsor Acknowledgement
+This and other PyBay2019 videos are via the help of our media partner AlphaVoice (&lt;a class="reference external" href="https://www.alphavoice.io/"&gt;https://www.alphavoice.io/&lt;/a&gt;)!&lt;/p&gt;
+&lt;p&gt;#pybay #pybay2019 #python #python3&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Fri, 16 Aug 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-08-16:/pybay-2019/what-to-do-with-a-flock-of-lambdas.html</guid><category>PyBay 2019</category></item><item><title>A Taxonomy of Decorators: A-E</title><link>https://pyvideo.org/pycascades-2019/a-taxonomy-of-decorators-a-e.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Since their addition in Python 2.4, Decorators have become an established part of the Python language and many of our development projects. This talk will look at the purpose, implementation, and pitfalls of five types of decorators, from the Argument changing decorator to the Execution decorator.&lt;/p&gt;
+&lt;p&gt;Talk page: &lt;a class="reference external" href="https://2019.pycascades.com/talks/a-taxonomy-of-decorators/"&gt;https://2019.pycascades.com/talks/a-taxonomy-of-decorators/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-02-24:/pycascades-2019/a-taxonomy-of-decorators-a-e.html</guid><category>PyCascades 2019</category></item><item><title>8 things that happen at the dot: Attribute Access &amp; Descriptors</title><link>https://pyvideo.org/pycon-us-2019/8-things-that-happen-at-the-dot-attribute-access-descriptors.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We rarely think about the dot “.” between our objects and their fields,
+but there are quite a lot of things that happen every time we use one in
+Python. This talk will explore the details of what happens, how the
+descriptor protocol works, and how it can be used to alter the Python
+object model.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sat, 04 May 2019 14:35:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-04:/pycon-us-2019/8-things-that-happen-at-the-dot-attribute-access-descriptors.html</guid><category>PyCon US 2019</category><category>talk</category></item><item><title>Practical Approaches to Problems in the Financial Industry using Python</title><link>https://pyvideo.org/pygotham-2014/practical-approaches-to-problems-in-the-financial.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this lecture we will show an applied case with Ipython notebook as a
+quant explores a typical financial problem with the help of various
+Python libraries and software engineering. The specific case is a small
+scale market risk platform using historical simulation to calculate
+value at risk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Tue, 16 Sep 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-09-16:/pygotham-2014/practical-approaches-to-problems-in-the-financial.html</guid><category>PyGotham 2014</category></item><item><title>The 8 things that happen at the "." between an object and the attribute</title><link>https://pyvideo.org/pygotham-2017/the-8-things-that-happen-at-the-between-an-object-and-the-attribute.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We rarely think about the dot &amp;quot;.&amp;quot; between our objects and their fields, but there are quite a lot of things that happen every time we use one in Python. This talk will explore the details of what happens, how the descriptor protocol works, and how it can be used to alter the Python object model.&lt;/p&gt;
+&lt;p&gt;Actions to be explored:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;The instance __dict__ is checked.&lt;/li&gt;
+&lt;li&gt;The class __dict__ is checked.&lt;/li&gt;
+&lt;li&gt;The base classes __dicts__ are checked.&lt;/li&gt;
+&lt;li&gt;__getattr__ runs.&lt;/li&gt;
+&lt;li&gt;__getattribute__ runs.&lt;/li&gt;
+&lt;li&gt;The __get__ method on the object in the class __dict__ is called.&lt;/li&gt;
+&lt;li&gt;The object in the class __dict__ is checked for a __set__ method.&lt;/li&gt;
+&lt;li&gt;raise AttributeError&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Most of the talk will focus on 6 &amp;amp; 7 to explain the Descriptor protocol. Examples will include altering method binding and property behaviors, as well as supporting method implementation reuse via Descriptors.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sat, 07 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-07:/pygotham-2017/the-8-things-that-happen-at-the-between-an-object-and-the-attribute.html</guid><category>PyGotham 2017</category></item><item><title>The 8 things that happen at the "."</title><link>https://pyvideo.org/pylondinium-2018/the-8-things-that-happen-at-the.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We rarely think about the dot &amp;quot;.&amp;quot; between our objects and their fields, but there are quite a lot of things that happen every time we use one in Python. This talk will include the commonly known functions, (dict, getattr, etc), but especially focus on the Descriptor Protocol.&lt;/p&gt;
+&lt;p&gt;Copyright belongs to the speaker.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-06-10:/pylondinium-2018/the-8-things-that-happen-at-the.html</guid><category>PyLondinium 2018</category></item><item><title>Making Multiple Inheritance not work in Python</title><link>https://pyvideo.org/pylondinium-2019/making-multiple-inheritance-not-work-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is a destructive examination of the workings of Python's inheritance model. We'll learn how it works by breaking it. After starting with a discussion of how we got to where we are, we'll then move on to the hooks that Python gives us to interact with it. These include using the metaclass to alter the class during construction, as well as using the &lt;em&gt;__init_subclass__&lt;/em&gt; and &lt;em&gt;__subclasscheck__&lt;/em&gt; hooks.&lt;/p&gt;
+&lt;p&gt;Particular examples will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Implementing interfaces in Python&lt;/li&gt;
+&lt;li&gt;Turning inheritance off in favor of explicit reuse&lt;/li&gt;
+&lt;li&gt;Simplifying classes by disabling a selection of features you don't wish to use&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;While none of these are meant to be particularly useful implementations, they make good use cases to show the machinery.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sun, 16 Jun 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-06-16:/pylondinium-2019/making-multiple-inheritance-not-work-in-python.html</guid><category>PyLondinium 2019</category></item><item><title>Always Use Sets!</title><link>https://pyvideo.org/pytexas-2024/always-use-sets.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Always Use Sets!&lt;/p&gt;
+&lt;p&gt;In this talk, we'll show how to use sets to improve the performance and clarity of our code. We'll even show non-set-like cases that gain enough performance by leveraging sets to make this approach worth some amount of extra complexity.&lt;/p&gt;
+&lt;p&gt;Speaker: Andy Fundinger&lt;/p&gt;
+&lt;p&gt;Andy Fundinger is a senior engineer at Bloomberg, where he develops Python applications in the Data Gateway Platform team and supports Python developers throughout the firm through the company's Python Guild. Andy has spoken several times at PyGotham, as well as other conferences such as QCon, PyCaribbean, and EuroPython.&lt;/p&gt;
+&lt;p&gt;In the past, Andy has worked on private equity and credit risk applications, web services, and virtual worlds. Andy holds a master's degree in engineering from Stevens Institute of Technology.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andy Fundinger</dc:creator><pubDate>Sun, 21 Apr 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-04-21:/pytexas-2024/always-use-sets.html</guid><category>PyTexas 2024</category></item></channel></rss>

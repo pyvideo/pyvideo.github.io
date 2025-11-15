@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Victor Stinner</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 02 Nov 2024 00:00:00 +0000</lastBuildDate><item><title>asyncio community, one year later</title><link>https://pyvideo.org/europython-2015/asyncio-community-one-year-later.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Victor Stinner - asyncio community, one year later
+[EuroPython 2015]
+[22 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;The asyncio project was officially launched with the release of Python
+3.4 in March 2014. The project was public before that under the name
+&amp;quot;tulip&amp;quot;. asyncio is just a core network library, it requires third
+party library to be usable for common protocols. One year later,
+asyncio has a strong community writing libraries on top of it.&lt;/p&gt;
+&lt;p&gt;The most advanced library is aiohttp which includes a complete HTTP
+client but also a HTTP server. There are also libraries to access
+asynchronously the file system, resolve names with DNS, have variables
+local to tasks, read-write locks, etc. There are clients for AMQP,
+Asterisk, ElasticSearch, IRC, XMPP (Jabber), etc. (and even an IRC
+server!). There are asynchronous drivers for all common databases, and
+even for some ORMs. As expected, there are tons of new web frameworks
+based on asyncio. It's also possible to plug asyncio into Gtk, Qt,
+gevent, eventlet, gunicorn, tornado, etc.&lt;/p&gt;
+&lt;p&gt;I will also discuss use cases of asyncio in production and benchmarks.
+Spoiler: asyncio is not slow.&lt;/p&gt;
+&lt;p&gt;The asyncio library also evolved to become more usable: it has a
+better documentation, is easier to debug and has a few new functions.
+There is also a port to Python 2: trollius.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sun, 02 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-02:/europython-2015/asyncio-community-one-year-later.html</guid><category>EuroPython 2015</category></item><item><title>Core Developers' Panel</title><link>https://pyvideo.org/europython-2016/core-developers-panel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Victor Stinner/Larry Hastings/Christian Heimes/Yury Selivanov - Core Developers' Panel
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;Q&amp;amp;A session with Python core developers&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-01:/europython-2016/core-developers-panel.html</guid><category>EuroPython 2016</category></item><item><title>FAT Python: a new static optimizer for Python 3.6</title><link>https://pyvideo.org/europython-2016/fat-python-a-new-static-optimizer-for-python-36.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Victor Stinner - FAT Python: a new static optimizer for Python 3.6
+[EuroPython 2016]
+[20 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/fat-python-a-new-static-optimizer-for-python-36"&gt;https://ep2016.europython.eu//conference/talks/fat-python-a-new-static-optimizer-for-python-36&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;The Python language is hard to optimize. Let's see how guards checked
+at runtime allows to implement new optimizations without breaking the
+Python semantic.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;(Almost) everything in Python is mutable which makes Python a language
+very difficult to optimize. Most optimizations rely on assumptions,
+for example that builtin functions are not replaced. Optimizing Python
+requires a trigger to disable optimization when an assumption is no
+more true. FAT Python exactly does that with guards checked at
+runtime. For example, an optimization relying on the builtin len()
+function is disabled when the function is replaced.&lt;/p&gt;
+&lt;p&gt;Guards allows to implement various optimizations. Examples: loop
+unrolling (duplicate the loop body), constant folding (propagates
+constants), copy builtins to constants, remove unused local variables,
+etc.&lt;/p&gt;
+&lt;p&gt;FAT Python implements guards and an optimizer rewriting the Abstract
+Syntax Tree (AST). The optimizer is implemented in Python so it's easy
+to enhance it and implement new optimizations.&lt;/p&gt;
+&lt;p&gt;FAT Python uses a static optimizer, it is less powerful than a JIT
+compiler like PyPy with tracing, but it was written to be integrated
+into CPython.&lt;/p&gt;
+&lt;p&gt;I wrote 3 PEP (509, 510, 511) targeting Python 3.6. Some changes to
+support FAT Python have already been merged into Python 3.6.&lt;/p&gt;
+&lt;p&gt;We will also see other pending patches to optimize CPython core, and
+the bytecode project which allows to modify bytecode, it also includes
+a peephole optimizer written in pure Python.&lt;/p&gt;
+&lt;p&gt;Links:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://faster-cpython.readthedocs.org/fat_python.html"&gt;http://faster-cpython.readthedocs.org/fat_python.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://fatoptimizer.readthedocs.org/"&gt;http://fatoptimizer.readthedocs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://bytecode.readthedocs.org/"&gt;http://bytecode.readthedocs.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Mon, 01 Aug 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-08-01:/europython-2016/fat-python-a-new-static-optimizer-for-python-36.html</guid><category>EuroPython 2016</category></item><item><title>Python 3: ten years later</title><link>https://pyvideo.org/europython-2018/python-3-ten-years-later.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Draft of the talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Growing populary of the Python programming language&lt;ul&gt;
+&lt;li&gt;Defacto language in the scientific world, replacing other closed
+source and more specialized but limited language&lt;/li&gt;
+&lt;li&gt;Favorite programming language used as the first language to learn
+programming&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Port Python 2 code to Python 3&lt;ul&gt;
+&lt;li&gt;Port Python 2 code to Python 3&lt;/li&gt;
+&lt;li&gt;No: “Add support for Python 3”, don’t loose Python 2 support&lt;/li&gt;
+&lt;li&gt;Port Python 3 code to Python 2&lt;/li&gt;
+&lt;li&gt;Python changes to make the transition smoother:&lt;/li&gt;
+&lt;li&gt;PEP 414: u&amp;quot;syntax” reintroduced in Python 3.3&lt;/li&gt;
+&lt;li&gt;PEP 461: bytes % args, Python 3.5&lt;/li&gt;
+&lt;li&gt;More “Py3k” warnings added to Python 2.7.x&lt;/li&gt;
+&lt;li&gt;Linters like flake8 detect some issues&lt;/li&gt;
+&lt;li&gt;six, futures, modernize, 2to6, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Analysis of the transition&lt;ul&gt;
+&lt;li&gt;Good: At Pycon US 2014, Guido van Rossum announced that the Python
+2.7 support was extended from 2015 to 2020 to give more time to
+companies to port their applications to Python 3.&lt;/li&gt;
+&lt;li&gt;Bad: 2to3: “drop Python2 support at once”, don’t work when you
+have dependencies.&lt;/li&gt;
+&lt;li&gt;If done again, would it be different? Yes, obviously.&lt;/li&gt;
+&lt;li&gt;Python 4 will be different than Python 3: no more “break the
+world” release, but a “regular deprecation period” release, as
+&lt;em&gt;any&lt;/em&gt; other release. Break things, one by one :-)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bugs that won’t be fixed in Python 2 anymore&lt;ul&gt;
+&lt;li&gt;Some bugs cannot be fixed without breaking the backward
+compatibility&lt;/li&gt;
+&lt;li&gt;Unicode Support&lt;/li&gt;
+&lt;li&gt;Python 2 I/O stack bugs: rely on libc stdio.h&lt;/li&gt;
+&lt;li&gt;Security: hash DoS, enabled by default in Python 3.3, Python 3.4
+now uses SipHash&lt;/li&gt;
+&lt;li&gt;subprocess is not thread-safe in Python 2. Python 2 subprocess has
+many race conditions: fixed in Python 3 with a C implementation
+which has less or no race condition. Handling signals while
+forking in complex.&lt;/li&gt;
+&lt;li&gt;threading.RLock is not “signal safe” in Python 2&lt;/li&gt;
+&lt;li&gt;Python 2 requires polling to wait for a lock or for I/O. Python 3
+uses native threading API with timeout and has asyncio.&lt;/li&gt;
+&lt;li&gt;Python 3 uses a monotonic clock to not crash on system clock
+update (ex: DST change).&lt;/li&gt;
+&lt;li&gt;Python 3 has a better GIL.&lt;/li&gt;
+&lt;li&gt;Python 2 inherits file descriptors on fork+exec by default. Python
+3 don’t: PEP 446.&lt;/li&gt;
+&lt;li&gt;Functions can fail with OSError(EINTR) when interrupted by a
+signal, need to be very careful everywhere. SIGCHLD when a child
+process completes, SIGWINCH when using ncurses. Python 3.5
+restarts the interrupted system call for you.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Performance&lt;ul&gt;
+&lt;li&gt;Python 3.6 is now faster than Python 2.7&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://speed.python.org/"&gt;https://speed.python.org/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Evolutions of the Python language&lt;ul&gt;
+&lt;li&gt;Python 3.5&lt;/li&gt;
+&lt;li&gt;PEP 492: async/await “keywords” for asyncio. (Really keywords in
+Python 3.7.)&lt;/li&gt;
+&lt;li&gt;PEP 461: bytes % args and bytearray % args&lt;/li&gt;
+&lt;li&gt;PEP 465, a new matrix multiplication operator: a &amp;#64; b.&lt;/li&gt;
+&lt;li&gt;PEP 448: Generalized unpacking:
+&lt;tt class="docutils literal"&gt;head, *tail = &lt;span class="pre"&gt;list``mylist&lt;/span&gt; = [1, 2, &lt;span class="pre"&gt;**other_list]``mydict&lt;/span&gt; = {&amp;quot;key&amp;quot;: &amp;quot;value&amp;quot;, **other_dict}&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Python 3.6&lt;/li&gt;
+&lt;li&gt;PEP 515: &lt;tt class="docutils literal"&gt;million = 1_000_000&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;PEP 498: f-string: &lt;tt class="docutils literal"&gt;name = &amp;quot;World&amp;quot;; print(f&amp;quot;Hello &lt;span class="pre"&gt;{name}!&amp;quot;)&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;PEP 526, syntax for variable annotations.&lt;/li&gt;
+&lt;li&gt;PEP 525, asynchronous generators.&lt;/li&gt;
+&lt;li&gt;PEP 530: asynchronous comprehensions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Bury Python 2?&lt;ul&gt;
+&lt;li&gt;“Python 3 only”&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pythonclock.org/"&gt;https://pythonclock.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="http://www.python3statement.org/"&gt;http://www.python3statement.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fedora 23, Ubuntu 17.10: no python2 (/usr/bin/python) in the base
+system&lt;/li&gt;
+&lt;li&gt;2017, April: IPython 6.0&lt;/li&gt;
+&lt;li&gt;2017, December: Django 2&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-27:/europython-2018/python-3-ten-years-later.html</guid><category>EuroPython 2018</category></item><item><title>Python Performance: Past, Present and Future</title><link>https://pyvideo.org/europython-2019/python-performance-past-present-and-future.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python Performance: Past, Present and Future&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/python-performance-past-present-and-future.html</guid><category>EuroPython 2019</category><category>python</category></item><item><title>Introducing Incompatible Changes in Python</title><link>https://pyvideo.org/europython-2023/introducing-incompatible-changes-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — Forum Hall on 2023-07-21]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2023.europython.eu/session/introducing-incompatible-changes-in-python"&gt;https://ep2023.europython.eu/session/introducing-incompatible-changes-in-python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python 2 to Python 3 migration used the D-day approach which failed. We learnt from our mistake and we are introducing incompatible changes differently now. Document changes, provide a way to write code compatible with the old and the new way, tooling to ease the migration, design long term approach to reduce the need for incompatible changes.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-17:/europython-2023/introducing-incompatible-changes-in-python.html</guid><category>EuroPython 2023</category></item><item><title>EuroPython 2024 — CPython Core Development Panel</title><link>https://pyvideo.org/europython-2024/europython-2024-cpython-core-development-panel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — South Hall 2B on 2024-07-10]&lt;/p&gt;
+&lt;p&gt;CPython Core Development Panel by Pablo Galindo Salgado, Łukasz Langa, Carol Willing, Hugo van Kemenade, Victor Stinner and Petr Viktorin.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/cpython-core-development-panel"&gt;https://ep2024.europython.eu/session/cpython-core-development-panel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python has been evolving very rapidly in the last few years, and this is because new ideas have been taking over the Core Development. New ideas require new people, a new background and lots of energy.&lt;/p&gt;
+&lt;p&gt;This panel aims for the people to be aware of the changes that are coming in 3.13, and future versions, as well as ways people can contribute by testing features, fixing issues, or even sharing their own ideas.&lt;/p&gt;
+&lt;p&gt;Host: Konstantin Ignatov&lt;/p&gt;
+&lt;p&gt;Panelists: Pablo Galindo Salgado, Łukasz Langa,  Carol Willing, Hugo van Kemenade, Victor Stinner and Petr Viktorin&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pablo Galindo Salgado</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/europython-2024/europython-2024-cpython-core-development-panel.html</guid><category>EuroPython 2024</category></item><item><title>Move the Python ecosystem to the stable ABI</title><link>https://pyvideo.org/europython-2024/move-the-python-ecosystem-to-the-stable-abi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Forum Hall on 2024-07-12]&lt;/p&gt;
+&lt;p&gt;Move the Python ecosystem to the stable ABI by Victor Stinner&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/move-the-python-ecosystem-to-the-stable-abi"&gt;https://ep2024.europython.eu/session/move-the-python-ecosystem-to-the-stable-abi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Python C API is used to extend Python and make C libraries accessible in Python. The C API changes often forcing C extensions maintainers to update frequently their code. Also, new binary packages have to be build for each Python version. The stable ABI provides a more stable C API and only require to distribute a single binary package for all Python versions.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/europython-2024/move-the-python-ecosystem-to-the-stable-abi.html</guid><category>EuroPython 2024</category></item><item><title>How to run a stable benchmark</title><link>https://pyvideo.org/fosdem-2017/how-to-run-a-stable-benchmark.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sun, 05 Feb 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-02-05:/fosdem-2017/how-to-run-a-stable-benchmark.html</guid><category>FOSDEM 2017</category></item><item><title>Python 3: 10 years later</title><link>https://pyvideo.org/fosdem-2018/python-3-10-years-later.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Looking back at Python evolutions of the last 10 years&lt;/p&gt;
+&lt;p&gt;Python 3.0 was released 10 years ago. It's time to look back: analyze the migration from Python 2 to Python 3, see the progress we made on the language, list bugs by cannot be fixed in Python 2 because of the backward compatibility, and discuss if it's time or not to bury Python 2.&lt;/p&gt;
+&lt;p&gt;Python became the defacto language in the scientific world and the favorite programming language as the first language to learn programming.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 03 Feb 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-02-03:/fosdem-2018/python-3-10-years-later.html</guid><category>FOSDEM 2018</category><category>python3</category></item><item><title>Panel: Python 3 Adoption and Barriers</title><link>https://pyvideo.org/montreal-python/panel-python-3-adoption-and-barriers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Montreal, April 14, 2014 - Python 3.4.0 was just released! Many Python developers are enthusiastic about the cleanups in the language and standard library, but many others suffer from missing features in the Python 2 line. What's the status of the migration? How are the core developers in tune with the larger community? Invited representatives, including CPython core developer Nick Coghlan and CPython and PyPy core developer Alex Gaynor share their experience and answer questions from the audience.&lt;/p&gt;
+&lt;p&gt;Useful links:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Brandon Rhodes: &lt;a class="reference external" href="https://twitter.com/brandon_rhodes"&gt;https://twitter.com/brandon_rhodes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Victor Stinner: &lt;a class="reference external" href="https://twitter.com/victor_stinner"&gt;https://twitter.com/victor_stinner&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Nick Coghlan: &lt;a class="reference external" href="https://twitter.com/ncoghlan_dev"&gt;https://twitter.com/ncoghlan_dev&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alex Gaynor: &lt;a class="reference external" href="https://twitter.com/alex_gaynor"&gt;https://twitter.com/alex_gaynor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Selena Deckelmann: &lt;a class="reference external" href="https://twitter.com/selenamarie"&gt;https://twitter.com/selenamarie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Alexandre Vassalotti: &lt;a class="reference external" href="https://twitter.com/avassalotti"&gt;https://twitter.com/avassalotti&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MP45: &lt;a class="reference external" href="http://sflx.ca/mp45e"&gt;http://sflx.ca/mp45e&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Montreal Python: &lt;a class="reference external" href="http://montrealpython.org"&gt;http://montrealpython.org&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Savoir-faire Linux: &lt;a class="reference external" href="http://www.savoirfairelinux.com"&gt;http://www.savoirfairelinux.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brandon Rhodes</dc:creator><pubDate>Mon, 14 Apr 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-04-14:/montreal-python/panel-python-3-adoption-and-barriers.html</guid><category>Montréal-Python</category></item><item><title>Introducing Incompatible Changes in Python｜Victor Stinner｜主題演講 Keynotes｜PyCon APAC 2022</title><link>https://pyvideo.org/pycon-apac-2022/introducing-incompatible-changes-in-pythonvictor-stinnerzhu-ti-yan-jiang-keynotespycon-apac-2022.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyCon APAC 2022｜主題演講 Keynotes｜國泰金控 Cathay Financial Holdings / 美光科技 Micron 冠名贊助&lt;/p&gt;
+&lt;p&gt;🪧 投影片 Slides：&lt;a class="reference external" href="https://github.com/vstinner/talks/blob/main/2022-PyconAPAC/python-incompatible-changes.pdf"&gt;https://github.com/vstinner/talks/blob/main/2022-PyconAPAC/python-incompatible-changes.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;🪄 說明 Description 🪄
+How does Python introduce incompatible changes? How are projects dealing with them? Reverting a few changes breaking most projects.&lt;/p&gt;
+&lt;p&gt;🚀 講者介紹 About Speaker - Victor Stinner 🚀
+Senior Software Engineer at Red Hat, maintains Python upstream and downstream (RHEL and Fedora). Python core developer since 2010.&lt;/p&gt;
+&lt;p&gt;#python #pycontw #pyconapac2022&lt;/p&gt;
+&lt;p&gt;Follow “PyCon Taiwan”
+⭐️ Official Website: &lt;a class="reference external" href="https://tw.pycon.org"&gt;https://tw.pycon.org&lt;/a&gt;
+⭐️ Facebook: &lt;a class="reference external" href="https://www.facebook.com/pycontw"&gt;https://www.facebook.com/pycontw&lt;/a&gt;
+⭐️ Instagram: &lt;a class="reference external" href="https://www.instagram.com/pycontw"&gt;https://www.instagram.com/pycontw&lt;/a&gt;
+⭐️ Twitter: &lt;a class="reference external" href="https://twitter.com/PyConTW"&gt;https://twitter.com/PyConTW&lt;/a&gt;
+⭐️ LinkedIn: &lt;a class="reference external" href="https://www.linkedin.com/company/pycontw"&gt;https://www.linkedin.com/company/pycontw&lt;/a&gt;
+⭐️ Blogger: &lt;a class="reference external" href="https://pycontw.blogspot.com"&gt;https://pycontw.blogspot.com&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 03 Sep 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-09-03:/pycon-apac-2022/introducing-incompatible-changes-in-pythonvictor-stinnerzhu-ti-yan-jiang-keynotespycon-apac-2022.html</guid><category>PyCon APAC 2022</category></item><item><title>Traquer les fuites mémoire en Python</title><link>https://pyvideo.org/pycon-fr-2013/traquer-les-fuites-memoire-en-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Les fuites mémoire en Python ne peuvent pas être analysées avec les
+outils traditionnels car Python repose sur les compteurs de référence.
+Je vais présenter des outils spécifiques à Python pour vous aider à
+localiser vos fuites mémoires.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Consommation globale du processus (mémoire RSS)&lt;/li&gt;
+&lt;li&gt;Comprendre les cycles de référence&lt;/li&gt;
+&lt;li&gt;Générer une image représentant les liens entre les objets&lt;/li&gt;
+&lt;li&gt;Utilisation de gc.get_objects() et calcul manuel de la taille des
+objets&lt;/li&gt;
+&lt;li&gt;Tracer les allocations mémoires à leur création&lt;/li&gt;
+&lt;li&gt;PEP 445: Add new APIs to customize Python memory allocators
+implementée dans Python 3.4&lt;/li&gt;
+&lt;li&gt;Projet pytracemalloc&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 30 Nov 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-11-30:/pycon-fr-2013/traquer-les-fuites-memoire-en-python.html</guid><category>PyCon FR 2013</category></item><item><title>Conférence plénière #3 The CPython community: how to get more contributors?</title><link>https://pyvideo.org/pycon-fr-2018/conference-pleniere-3-the-cpython-community-how-to-get-more-contributors.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The CPython project is now 28 years old. It has active core developers,
+but almost all of them are volunteers. It's difficult to ask someone to
+be commit into a project for 5 years without being paid. Helping
+newcomers and mentoring contributors takes time and few developers are
+available for that. We are working on improving the diversity of CPython
+core developers and get more active core developers, but it's a slow
+process.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-10-06:/pycon-fr-2018/conference-pleniere-3-the-cpython-community-how-to-get-more-contributors.html</guid><category>PyCon FR 2018</category></item><item><title>Nouveautés de Python 3.13</title><link>https://pyvideo.org/pycon-fr-2024/nouveautes-de-python-313.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.13 apporte plusieurs améliorations majeures : nouveau REPL, mise en couleur des erreurs, compilateur à la volée expérimental, exécution expérimentale en parallèle sur plusieurs CPUs, Apple iOS et Android sont supportés officiellement, etc. Faisons un tour rapide de l'ensemble des changements de Python 3.13.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-11-02:/pycon-fr-2024/nouveautes-de-python-313.html</guid><category>PyCon FR 2024</category></item><item><title>Keynote: Python performance Past, Present, Future</title><link>https://pyvideo.org/pycon-india-2020/keynote-python-performance-past-present-future.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 02 Oct 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-10-02:/pycon-india-2020/keynote-python-performance-past-present-future.html</guid><category>PyCon India 2020</category></item><item><title>Python 3: 10 years later - Looking back at Python evolutions of the last 10 years</title><link>https://pyvideo.org/pycon-italia-2018/python-3-10-years-later-looking-back-at-python-evolutions-of-the-last-10-years.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.0 was released 10 years ago. It’s time to look back: analyze
+the migration from Python 2 to Python 3, see the progress we made on the
+language, list bugs by cannot be fixed in Python 2 because of the
+backward compatibility, and discuss if it’s time or not to bury Python
+2. Python became the defacto language in the scientific world and the
+favorite programming language as the first language to learn
+programming.&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;domenica 22 aprile&lt;/strong&gt; at 09:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-22:/pycon-italia-2018/python-3-10-years-later-looking-back-at-python-evolutions-of-the-last-10-years.html</guid><category>PyCon Italia 2018</category></item><item><title>Status of Unicode in Python 3</title><link>https://pyvideo.org/pycon-us-2011/pycon-2011--status-of-unicode-in-python-3.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Introduced in Python 2.0, unicode became the default string type in
+Python 3.0. It took 8 years to switch to unicode, and since Python 3.0,
+a lot of bugs has been fixed. The switch to unicode opened many
+questions. Should Python support both bytes and characters for
+filenames? What to do with undecodable bytes? etc.&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will focus on the recent issues fixed in Python 3.1 and 3.2:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use the PEP 383 (error handler to store undecodable bytes) everywhere&lt;/li&gt;
+&lt;li&gt;Encoding of the command line arguments: utf-8 on Mac OS X, locale
+encoding on UNIX/BSD, unicode on Windows&lt;/li&gt;
+&lt;li&gt;Environment variables: creation of os.environb&lt;/li&gt;
+&lt;li&gt;Filenames: huge work to support the PEP 383 everywhere, creation of
+os.fsencode() and os.fsdecode()&lt;/li&gt;
+&lt;li&gt;Python source code encoding: use tokenize.detect_encoding() instead
+of the locale encoding&lt;/li&gt;
+&lt;li&gt;some library examples: email, ftp, ...&lt;/li&gt;
+&lt;li&gt;etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The talk will present not only the changes in Python, but also in the C
+API.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 11 Mar 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-03-11:/pycon-us-2011/pycon-2011--status-of-unicode-in-python-3.html</guid><category>PyCon US 2011</category><category>pycon</category><category>pycon2011</category><category>python3</category><category>unicode</category></item><item><title>Track memory leaks in Python</title><link>https://pyvideo.org/pycon-us-2014/track-memory-leaks-in-python.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Memory leaks in Python cannot be analyzed with traditional tools because
+Python uses reference counters. I will present tools specific to Python
+to help you to localize your memory leaks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sun, 13 Apr 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-04-13:/pycon-us-2014/track-memory-leaks-in-python.html</guid><category>PyCon US 2014</category></item><item><title>Optimizations which made Python 3.6 faster than Python 3.5</title><link>https://pyvideo.org/pycon-us-2017/optimizations-which-made-python-36-faster-than-python-35.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Various optimizations made Python 3.6 faster than Python 3.5. Let's see
+in detail what was done and how.&lt;/p&gt;
+&lt;p&gt;Python 3.6 is faster than any other Python version on many benchmarks.
+We will see results of the Python benchmark suite on Python 2.7, 3.5 and
+3.6.&lt;/p&gt;
+&lt;p&gt;The bytecode format and instructions to call functions were redesign to
+run bytecode faster.&lt;/p&gt;
+&lt;p&gt;A new C calling convention, called &amp;quot;fast call&amp;quot;, was introduced to avoid
+temporary tuple and dict. The way Python parses arguments was also
+optimized using a new internal cache.&lt;/p&gt;
+&lt;p&gt;Operations on bytes and encodes like UTF-8 were optimized a lot thanks
+to a new API to create bytes objects. The API allows very efficient
+optimizations and reduces memory reallocations.&lt;/p&gt;
+&lt;p&gt;Some parts of asyncio were rewritten in C to speedup code up to 25%. The
+PyMem_Malloc() function now also uses the fast pymalloc allocator also
+giving tiny speedup for free.&lt;/p&gt;
+&lt;p&gt;Finally, we will see optimization projects for Python 3.7: use fast
+calls in more cases, speed up method calls, a cache on opcodes, a cache
+on global variables.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 19 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-19:/pycon-us-2017/optimizations-which-made-python-36-faster-than-python-35.html</guid><category>PyCon US 2017</category></item><item><title>Python 3: ten years later</title><link>https://pyvideo.org/pycon-us-2018/python-3-ten-years-later.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Looking back at Python evolutions over the last 10 years.&lt;/p&gt;
+&lt;p&gt;Python 3.0 was released ten years ago (December 2008). It's time to look back: analyze the migration from Python 2 to Python 3, see the progress we made on the language, list bugs by cannot be fixed in Python 2 because of the backward compatibility, and discuss if it's time or not to bury Python 2.&lt;/p&gt;
+&lt;p&gt;Python became the defacto language in the scientific world and the favorite programming language as the first language to learn programming.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-05-12:/pycon-us-2018/python-3-ten-years-later.html</guid><category>PyCon US 2018</category><category>python3</category></item><item><title>How to engage Python contributors in the long term? Tech is easy, people are hard.</title><link>https://pyvideo.org/pycon-us-2019/how-to-engage-python-contributors-in-the-long-term-tech-is-easy-people-are-hard.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The CPython project is now 28 years old. It has active core developers,
+but almost all of them are volunteers. It's difficult to ask someone to
+be committed into a project for 5 years without being paid. Helping
+newcomers and mentoring contributors takes time and few developers are
+available for that. We are working on improving the diversity of CPython
+core developers and get more active core developers, but it's a slow
+process.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 03 May 2019 17:10:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-03:/pycon-us-2019/how-to-engage-python-contributors-in-the-long-term-tech-is-easy-people-are-hard.html</guid><category>PyCon US 2019</category><category>talk</category></item><item><title>Introducing incompatible changes in Python</title><link>https://pyvideo.org/pycon-us-2023/introducing-incompatible-changes-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the Python 2 era, it was decided to migrate at a D-Day: convert all
+your code base to Python 3. It didn't go as well as expected. We learnt
+lessons from this mistake. Incompatible changes are now introduced
+differently in Python.&lt;/p&gt;
+&lt;p&gt;Today, changes start with a deprecation warning for at least two Python
+releases before removing old functions. We think about how to write a
+single code base working on the old and new Python versions. More and
+more often, instructions to migrate existing code are provided, or even
+automated tools. Changes breaking too many projects are reverted when
+there is not enough time to update enough projects. Code search helps
+detecting affected projects, notify them, and maybe also propose changes
+to prepare their code.&lt;/p&gt;
+&lt;p&gt;In the future, Python is working on a stable ABI to be able to build C
+extensions once and use them on many Python versions. The HPy project is
+an interesting candidate for this goal. More and more projects are being
+tested on the Python version currently under development (Python 3.12)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-21:/pycon-us-2023/introducing-incompatible-changes-in-python.html</guid><category>PyCon US 2023</category></item><item><title>Keynote: Python 3: 10 years later</title><link>https://pyvideo.org/pylondinium-2018/keynote-python-3-10-years-later.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Victor Stinner</dc:creator><pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-06-10:/pylondinium-2018/keynote-python-3-10-years-later.html</guid><category>PyLondinium 2018</category></item></channel></rss>

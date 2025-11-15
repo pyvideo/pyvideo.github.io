@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Borjan Tchakaloff</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate><item><title>Taking charge of your race conditions</title><link>https://pyvideo.org/europython-2022/taking-charge-of-your-race-conditions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;EuroPython 2022 - Taking charge of your race conditions - presented by Borjan Tchakaloff
+
+[Liffey A on 2022-07-13]
+
+
+Anybody working with concurrency (threads, processes, or more abstractly workers) eventually encounters a _race condition_. This kind of hair-pulling problem is a staple in computer science. Sometimes you can offload the problem to a lower layer, usually to the database engine, bundling it with atomic transactions. But there are times when you have to take charge of worst-case concurrency scenarios, when your architecture and constraints do not leave room for implicit concurrency management. Then, you need to carefully craft the paths in and out of the critical section, avoiding deadlocks along the way.
+
+In this talk, we will focus on how to test your program with a manufactured race condition. If you know it can happen, you'd better cover it in your test suite. We will define a server program called in parallel by multiple clients to illustrate the problem at hand. Then, we will manually set-up a race condition during testing to explore broken behaviour and problematic code.
+
+The Python standard library offers all the tools we need to cater for race conditions. We hope the tour we will give allows you to exercise your own race conditions more easily. Why, we even think you will have all the cards in hand to counter them!
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Borjan Tchakaloff</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/europython-2022/taking-charge-of-your-race-conditions.html</guid><category>EuroPython 2022</category></item><item><title>Event Sourcing in production</title><link>https://pyvideo.org/europython-2024/event-sourcing-in-production.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;[EuroPython 2024 — South Hall 2A on 2024-07-10]
+
+Event Sourcing in production by Borjan Tchakaloff
+https://ep2024.europython.eu/session/event-sourcing-in-production
+
+Event Sourcing (ES) is a powerful concept that lets you adapt your business logic without losing data and past states.
+Whether your domain understanding changes or new requirements land on your lap, there is a path forward.
+Join us as we talk about some real-world tactics we relied on to manage Event Sourcing in production.
+We will accumulate a handful of patterns throughout the talk that will hopefully help you avoid pitfalls and bottlenecks.
+
+Our use cases build on the `eventsourcing` library, a mature and well-rounded Python library that deserves more attention.
+We will tackle the three key aspects of a successful event-sourced application: evolution, projection, and runtime.
+
+Software does not run in a vacuum, models need to change and evolve to reflect the world they live in.
+ES records the evolution of how we abstract our domain, how we see things.
+Eventually these abstractions can become clumsy or simply inappropriate.
+We can deal with that without breaking stride (losing data).
+
+ES also gives us the ability to revisit our perspective and change how we present the application state — by creating new projections and replaying the history.
+We will look at how it offers a cheap way to support optimal read-models, which we can can tweak and rebuild in the blink of an eye.
+
+Finally, we will present how such a system actually runs in a typical web application.
+Whether in the request loop (synchronous), or through eventual consistency (asynchronous).
+As a single process, or distributed for parallel processing.
+
+---
+
+This talk assumes some familiarity with _Event Sourcing_ and its friends _Domain Driven Design_ (DDD) and _Command Query Responsibility Seggregation_ (CQRS).
+
+
+---
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Borjan Tchakaloff</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/europython-2024/event-sourcing-in-production.html</guid><category>EuroPython 2024</category></item></channel></rss>

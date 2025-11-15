@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - KunYu Chen</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_kunyu-chen.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2020-09-06T00:00:00+00:00</updated><subtitle></subtitle><entry><title>So, You Want to Build an Anti-Virus Engine?</title><link href="https://pyvideo.org/europython-2020/so-you-want-to-build-an-anti-virus-engine.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>JunWei Song</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/so-you-want-to-build-an-anti-virus-engine.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/quark-engine/quark-engine"&gt;https://github.com/quark-engine/quark-engine&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.&lt;/p&gt;
+&lt;p&gt;We have …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/quark-engine/quark-engine"&gt;https://github.com/quark-engine/quark-engine&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.&lt;/p&gt;
+&lt;p&gt;We have an order theory of criminal which explains stages of committing a crime. For example, crime of murder consists of five stages, they are determined, conspiracy, preparation, start and practice. The latter the stage the more we’re sure that the crime is practiced.&lt;/p&gt;
+&lt;p&gt;According to the above principle, we developed our order theory of android malware. We develop five stages to see if the malicious activity is being practiced. They are&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Permission requested.&lt;/li&gt;
+&lt;li&gt;Native API call.&lt;/li&gt;
+&lt;li&gt;Certain combination of native API.&lt;/li&gt;
+&lt;li&gt;Calling sequence of native API.&lt;/li&gt;
+&lt;li&gt;APIs that handle the same register.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We not only define malicious activities and their stages but also develop weights and thresholds for calculating the threat level of a malware.&lt;/p&gt;
+&lt;p&gt;Malware evolved with new techniques to gain difficulties for reverse engineering. Obfuscation is one of the most commonly used techniques. In this talk, we present a Dalvik bytecode loader with the order theory of android malware to neglect certain cases of obfuscation.&lt;/p&gt;
+&lt;p&gt;Inspired by the design principles of the CPython interpreter, our Dalvik bytecode loader consists of functionalities such as 1. Finding cross-reference and calling sequence of the native API. 2. Tracing the bytecode register. The combination of these functionalities (yes, the order theory) not only can neglect obfuscation but also match perfectly to the design of our malware scoring system.&lt;/p&gt;
+&lt;p&gt;Further, we will also show a case study of Android malware and demonstrate how the obfuscation technique is useless to our engine. Last but not least, we will be open-sourcing everything (Malware Scoring System, Dalvik Bytecode Loader) during our presentation.&lt;/p&gt;
+&lt;p&gt;Audience
+1. Who is this talk for?
+- Anyone who's interested in cyber security or anyone that wants to know how to build an anti-virus engine with Python.&lt;/p&gt;
+&lt;p&gt;2. What background knowledge or experience do you expect the audience to have?
+- A little of Android application development and malware analysis.&lt;/p&gt;
+&lt;p&gt;3. What do you expect the audience to learn or do after watching the talk?
+- The Dalvik bytecode loader is written as a python module, the audiences can use this module to boost up their malware analysis.
+- The malware scoring system can be applied not only to Android malware but also can be applied for PE files or ELF files in other OS. The audience can copy our ideas to extend their work.
+- Everything’s open-sourced.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;1. Introduction of Malware Scoring System.
+First, we will detail how we decode Criminal Law to simple principles. For example, principles to define crime, penalty and the order theory of criminal, etc. And then we will detail how do we develop the order theory of android malware and other developed theories that construct the malware scoring.&lt;/p&gt;
+&lt;p&gt;2. Design Logic of the Dalvik Bytecode Loader.
+Once the malware scoring system were built, this will discuss the design logic of our Dalvik bytecode loader which includes our obfuscation-neglect module and bytecode register tracing module. We will also detail why the order theory of android malware succeeds at neglecting the obfuscation.&lt;/p&gt;
+&lt;p&gt;3. Quark Engine Practice - Case Study of Android Malware
+Next, we will practice our engine and case study through an android malware. Moreover, we will also demonstrate our obfuscation-neglect technique against obfuscation malware.&lt;/p&gt;
+&lt;p&gt;4. Future works
+Here, we will discuss the limitations of our engine. For example, the challenge of our Dalvik bytecode loader. Also, we will share our plans of implementing more detection techniques conquering the escape detection of malware.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Mobile"></category><category term="Open-Source"></category><category term="Security"></category><category term="Static Analysis"></category></entry><entry><title>Click Click Boom! Bombs Over Our Mind!</title><link href="https://pyvideo.org/pycon-taiwan-2019/click-click-boom-bombs-over-our-mind.html" rel="alternate"></link><published>2019-09-20T00:00:00+00:00</published><updated>2019-09-20T00:00:00+00:00</updated><author><name>KunYu Chen</name></author><id>tag:pyvideo.org,2019-09-20:/pycon-taiwan-2019/click-click-boom-bombs-over-our-mind.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:55–14:25&lt;/p&gt;
+&lt;p&gt;We’re doing research about zip bomb and this talk mainly focuses on how we deal with problem and the adventures we had.&lt;/p&gt;
+&lt;p&gt;We share the successful experiences if we made it. Instead we share what we’ve learnt from the progress …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 1, R2 13:55–14:25&lt;/p&gt;
+&lt;p&gt;We’re doing research about zip bomb and this talk mainly focuses on how we deal with problem and the adventures we had.&lt;/p&gt;
+&lt;p&gt;We share the successful experiences if we made it. Instead we share what we’ve learnt from the progress.&lt;/p&gt;
+&lt;p&gt;Most important of all, this is all about having fun! :D&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1qPCPRfHx3ZEoneWOxBUqUE-LswqmTo2J-Pb74NGPPeg/edit#slide=id.g5ac89a5966_0_6"&gt;https://docs.google.com/presentation/d/1qPCPRfHx3ZEoneWOxBUqUE-LswqmTo2J-Pb74NGPPeg/edit#slide=id.g5ac89a5966_0_6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: KunYu Chen&lt;/p&gt;
+&lt;p&gt;Security researcher, working at InfoSec Division, Telecom Technology Center.&lt;/p&gt;
+&lt;p&gt;Have fun through challenging difficulties.
+Recently get heavily involved in cpython work-flow.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://kunyu-chens-notes.rtfd.io/"&gt;http://kunyu-chens-notes.rtfd.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: Jun-Wei Song&lt;/p&gt;
+&lt;p&gt;Cpython Contributor, focuses on security, using Python to deal with real-world problems.&lt;/p&gt;
+&lt;p&gt;Security Researcher at Telecom Technology Center&lt;/p&gt;
+&lt;p&gt;Team Founder of TWBGC&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://krnick.rtfd.io/"&gt;https://krnick.rtfd.io/&lt;/a&gt;&lt;/p&gt;
+</content><category term="PyCon Taiwan 2019"></category></entry><entry><title>So, You Want to Build an Anti-Virus Engine? – PyCon Taiwan 2020</title><link href="https://pyvideo.org/pycon-taiwan-2020/so-you-want-to-build-an-anti-virus-engine-pycon-taiwan-2020.html" rel="alternate"></link><published>2020-09-06T00:00:00+00:00</published><updated>2020-09-06T00:00:00+00:00</updated><author><name>JunWei Song</name></author><id>tag:pyvideo.org,2020-09-06:/pycon-taiwan-2020/so-you-want-to-build-an-anti-virus-engine-pycon-taiwan-2020.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With Python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, R1 10:30–11:00&lt;/p&gt;
+&lt;p&gt;Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With Python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="https://docs.google.com/presentation/d/1M1JDb9DKvf-dE_Rrk7gjHdavgexwuUlBfeNZSAOjIUo/edit?usp=sharing"&gt;https://docs.google.com/presentation/d/1M1JDb9DKvf-dE_Rrk7gjHdavgexwuUlBfeNZSAOjIUo/edit?usp=sharing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: JunWei Song&lt;/p&gt;
+&lt;p&gt;JunWei is a Security Researcher from Taiwan. A paranoid Pythonista who focuses on cybersecurity, reverse engineering, and malware analysis. And as a PyCon Taiwan Program Committee, presented at DEFCON, HITB, ROOTCON, PyCon Europe/TW/KR/MY. He’s the co-founder of Quark-Engine and a security research group, TWBGC.&lt;/p&gt;
+&lt;p&gt;Speaker: KunYu Chen&lt;/p&gt;
+&lt;p&gt;Security researcher&lt;/p&gt;
+&lt;p&gt;Founder of Quark Engine.
+Presented at DEF CON Blue Team Village | HITB LOCKDOWN 002&lt;/p&gt;
+&lt;p&gt;Have fun through challenging difficulties.&lt;/p&gt;
+</content><category term="PyCon Taiwan 2020"></category></entry></feed>
