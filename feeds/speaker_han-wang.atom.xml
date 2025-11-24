@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Han Wang</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_han-wang.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2024-05-18T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Comparing the Different Ways to Scale Python and Pandas Code</title><link href="https://pyvideo.org/pycon-us-2022/comparing-the-different-ways-to-scale-python-and-pandas-code.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Kevin Kho</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/comparing-the-different-ways-to-scale-python-and-pandas-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fugue is an open-source unified interface for Pandas, Spark, and Dask that aims to let data practitioners define their compute workflows in a scale-agnostic manner. By decoupling logic and execution, users can code in a language that they are familiar with (Python, Pandas or SQL), and then choose an …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fugue is an open-source unified interface for Pandas, Spark, and Dask that aims to let data practitioners define their compute workflows in a scale-agnostic manner. By decoupling logic and execution, users can code in a language that they are familiar with (Python, Pandas or SQL), and then choose an execution engine to run it on (Pandas, Spark or Dask). In this talk, we cover the transform() function, which lets a user execute a single function in a distributed setting. This simple interface can be incrementally adopted and allows data practitioners to be productive with distributed computing very quickly.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category></entry><entry><title>Speed is Not All You Need for Data Processing</title><link href="https://pyvideo.org/pycon-us-2024/speed-is-not-all-you-need-for-data-processing.html" rel="alternate"></link><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><author><name>Kevin Kho</name></author><id>tag:pyvideo.org,2024-05-18:/pycon-us-2024/speed-is-not-all-you-need-for-data-processing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas was the dominant local data processing framework for majority of
+the last decade. Now, there are many other options available like Polars
+and DuckDB. Is it worth switching to them? One of the main reasons
+developers switch is because of the supposed speed. TPCH benchmarks show
+Polars and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pandas was the dominant local data processing framework for majority of
+the last decade. Now, there are many other options available like Polars
+and DuckDB. Is it worth switching to them? One of the main reasons
+developers switch is because of the supposed speed. TPCH benchmarks show
+Polars and DuckDB are an order of magnitude faster than Pandas (and
+Dask) because of the Rust-based or C++ implementation.&lt;/p&gt;
+&lt;p&gt;For large-scale data, we are often told to use pure native Spark
+whenever possible. Pandas UDFs are often discouraged because they are
+deemed as a bottleneck. The optimizer works best when it can see the
+entire query plan, but Pandas UDFs are a black box.&lt;/p&gt;
+&lt;p&gt;But as practitioners, we have to ask two related questions: 1. Are these
+assumptions true? Is it universally true that Pandas and Pandas UDFs are
+slower? 2. Even if it it slower, is it worth the development overhead to
+avoid using Pandas?&lt;/p&gt;
+&lt;p&gt;In this talk, we'll show benchmarks across data of various sizes to show
+that these common assumptions are not always true. In fact, we'll see
+that Pandas UDFs can actually be faster than native Spark in some cases.
+With this result in mind, data practitioners should just focus on the
+tools that serve them best rather than adjusting to the tools.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry></feed>

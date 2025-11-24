@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; 嫌 Django 的 Validator 不好用 !? 不如自幹一個 – Kilik Kuo (PyCon Taiwan 2021)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="嫌 Django 的 Validator 不好用 !? 不如自幹一個 – Kilik Kuo (PyCon Taiwan 2021)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-taiwan-2021/xian-django-de-validator-bu-hao-yong-bu-ru-zi-gan-yi-ge-kilik-kuo-pycon-taiwan-2021.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/urOLJqX0lZ0/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/urOLJqX0lZ0/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-taiwan-2021/xian-django-de-validator-bu-hao-yong-bu-ru-zi-gan-yi-ge-kilik-kuo-pycon-taiwan-2021.html" rel="bookmark"
+         title="Permalink to 嫌 Django 的 Validator 不好用 !? 不如自幹一個 – Kilik Kuo (PyCon Taiwan 2021)">嫌 Django 的 Validator 不好用 !? 不如自幹一個 – Kilik Kuo (PyCon Taiwan 2021)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-03T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sun 03 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/kilik-kuo.html">Kilik Kuo</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/urOLJqX0lZ0" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Day 2, 13:55-14:25</p>
+<p>Abstract</p>
+<p>Django Validator 可以是資料在進入 DB 前最終的守門員，但難道我們必須走到最後一步(準備寫入 DB)才能發現外部傳來的資料沒有符合規範嗎？ 若之前業務邏輯已觸碰髒資料而導致問題, 我們是否要在程式碼裡面加上許多錯誤處理? 這樣的問題在引入 DRF(Django Rest Framework)的 ModelSerializer 後會有解決辦法嗎？ 我希望透過介紹 Django Validator/Serializer 的設計目的與使用時機, 並引出在公司專案內使用上的不便之處. 如果上述各種方法都有痛點, 那不如就自做一套 HTTP request validation 的機制吧 ! 想要達成哪些目標 ? 1. 夠簡單用, 且依賴低 2. 不只在 Django Framework 內可用, 單純 Python 函式參數驗證也能使用 3. 便於日後製作 API spec document 4. 容易擴展新的驗證條件 5. 盡可能 functional programming (純粹爽) 向各位介紹 HARDCORE - &quot;SPEC&quot;</p>
+<p>Description</p>
+<p>Django framework 一開始誕生的主要的目標是為了簡化以資料庫為驅動的網站開發, 實際使用上則是將架構分成 Template/View/Model 三大區塊並做直接的串接. 這也讓其設計的 Serializer 系統著重在不同資料類型(xml/ymal/json/python/queryset)的序列化轉換而忽略了驗證資料的合規性. 而其 Validator 的資料驗證系統只著重在 a) 資料進入資料庫欄位時的驗證 b) 將 Template 表單欄位輸入值轉換成 view 內變數時的驗證. 這產生了兩個問題 1) 無法針對 GET 使用的 query paramerter 進行驗證 2) Validator 必須搭配表單 (Form) 使用, 等同於各欄位設計必須基於 Field, 才能將 validator 植入 Field 的 default_validators list 內.</p>
+<p>上述的使用情境與限制, 無法充分地滿足公司內部專案的需求, 現實的狀況是當專案爆長, 許多頁面開始利用前端框架進行渲染, template 上不一定會使用 form; 而後端更引入 DRF, 使得 API 的設計規範出現更多分歧(function v.s view class v.s. APIView-like), ModelSerializer 的出現導致工程師容易在 APIView 內濫用 serializer.is_valid 作為 API request 與資料進入 model 的唯一檢查手段. 久之, 當 view 裡面的商業邏輯越來越多, 但卻都希望勁量靠近圍繞著 serializer 來確保使用資料合乎規範, 程式碼耦合性變高, 越難職責切割, 開始容易疊床架屋...</p>
+<p>幾經思考, 決定明確將 API 設計方向切成數個部分,</p>
+<p>API 進入點部分
+商業邏輯部分
+API 返回值部分
+第一部分: API 進入點.
+這裡會有 HTTP request 透過 view 的 get/post function 被傳入, 我們可以在此處進行所有參數的驗證.
+一來避免錯誤或惡意的參數在接下來的程式碼中被使用導致不預期的錯誤, 二來儘早參數驗證也能減少後面不必要的檢查程式碼.</p>
+<p>第二部分: 商業邏輯部分
+此處可以放心將參數拿出來使用, 並且專注在商業邏輯.</p>
+<p>第三部分: 將上述產生的結果, 經由客製化的 response serializer 轉換成前端使用的資料格式.</p>
+<p>這裡可以看出另一個問題, DRF APIView 的設計只讓使用者指定一個 serializer class, 但其實這三個部分都有需要做類似的事情而且欄位可能不同. (題外話)</p>
+<p>於是我們專注在第一部分, 將 View/APIView 的 HTTP method 介面做了分析, 概念上是將資料( request.GET/request.POST (Django View) 或是 request.query_params, request.data (DRF APIView)) 從 request 截出, 進入參數驗證流程, 將驗證結果(成功或失敗)收集起來, 並根據例外優先權來決定要回傳哪個錯誤.
+更多細節介紹經會透過投影片, 用程式碼的方式來解講.</p>
+<p>Slides not uploaded by the speaker.
+HackMD: <a class="reference external" href="https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FH1d5N45Mt">https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FH1d5N45Mt</a></p>
+<p>Speaker: Kilik Kuo</p>
+<p>改變自己先, 影響世界後. <a class="reference external" href="https://www.linkedin.com/in/kilik-kuo-3923a454/">https://www.linkedin.com/in/kilik-kuo-3923a454/</a></p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-taiwan-2021.html">PyCon Taiwan 2021</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=urOLJqX0lZ0" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/pycon-tw-2021/videos/xian-django-de-validator-bu-hao-yong-bu-ru-zi-gan-yi-ge-kilik-kuo-pycon-taiwan-2021.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

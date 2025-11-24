@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Mattia Giambirtone</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_mattia-giambirtone.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-06-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Modern Python: Alla scoperta delle ultime novità di (C)Python</title><link href="https://pyvideo.org/pycon-italia-2022/modern-python-alla-scoperta-delle-ultime-novita-di-cpython.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Mattia Giambirtone</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/modern-python-alla-scoperta-delle-ultime-novita-di-cpython.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Modern Python: Alla scoperta delle ultime novità di (C)Python - PyCon
+Italia 2022&lt;/p&gt;
+&lt;p&gt;Vi siete mai chiesti se ci fosse un modo migliore di scrivere il vostro
+codice? Una qualche feature di Python oscura di cui eravate all’oscuro?
+Sì? Ebbene, insieme demistificheremo alcune delle ultime feature più
+interessanti …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Modern Python: Alla scoperta delle ultime novità di (C)Python - PyCon
+Italia 2022&lt;/p&gt;
+&lt;p&gt;Vi siete mai chiesti se ci fosse un modo migliore di scrivere il vostro
+codice? Una qualche feature di Python oscura di cui eravate all’oscuro?
+Sì? Ebbene, insieme demistificheremo alcune delle ultime feature più
+interessanti e più sottovalutate del vecchio serpentone: sarà uno
+spasso, promesso! Modern Python: Alla scoperta delle ultime novità di
+(C)Python&lt;/p&gt;
+&lt;p&gt;Pubblico Consigliato&lt;/p&gt;
+&lt;p&gt;Questa presentazione è diretta a sviluppatori Python con almeno qualche
+anno di esperienza sulle spalle e che siano interessati a rendere il
+proprio codice più leggibile, idiomatico e magari anche più &lt;em&gt;veloce&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Introduzione Vi siete mai trovati a dover scrivere codice simile a
+questo:&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="n"&gt;some_var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;some_function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;some_var&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;    &lt;span class="o"&gt;...&lt;/span&gt;    &lt;span class="n"&gt;Code&lt;/span&gt; &lt;span class="n"&gt;Here&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;e aver pensato: &lt;em&gt;”Cavolo, quell’assegnamento sembra proprio di
+troppo!”&lt;/em&gt;? Se la risposta è sì, allora questa presentazione fa per voi!
+Vi mostrerò come migliorare l’estetica, e magari anche la performance,
+del vostro codice, mantenendo la medesima funzionalità. Imparerete
+concetti avanzati quali i generatori asincroni, introdotti nel lontano
+Python 3.6, il mitico operatore “tricheco”, la nuova e scintillante
+istruzione &lt;tt class="docutils literal"&gt;match&lt;/tt&gt;, per un efficiente ed elegante pattern matching, ed
+altro ancora: Sarà una figata, promesso!&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Immagino già che qualcuno di voi si stia chiedendo, &lt;em&gt;”Ma, Matt, Python
+3.6? É vecchissimo! Perchè sei venuto a parlarci di una feature
+introdotta nel 2016?”&lt;/em&gt;: Okay, diciamo che ho mentito (giusto un
+pochino).&lt;/p&gt;
+&lt;p&gt;Non tutte le funzionalità di cui parlerò in questa presentazione sono
+&lt;em&gt;esattamente&lt;/em&gt; nuove di zecca, ma ho sempre avuto la sensazione che
+alcune— specialmente i generatori asincroni— non abbiano mai ricevuto
+l’attenzione che meritavano e che siano andate piuttosto in sordina: ciò
+è stato probabilmente dovuto dal rilascio di Python 3.5 (che per
+rinfrescarvi la memoria ha finalmente standardizzato la programmazione
+asincrona, introducendo il concetto di coroutine e vari altri nuovi
+oggetti), e con questa presentazione vorrei rendere loro giustizia e al
+tempo stesso far notare alcune delle (spesso ben nascoste!) trappole in
+cui si può cadere facendone uso. Giusto per dare un’assaggio degli
+argomenti che voglio trattare, ecco cosa spero impariate dalla
+presentazione: - Migliorare le performance del vostro codice,
+parallelizzando le operazioni di I/O basata su file, utilizzando un solo
+thread grazie all’aiuto dei generatori asincroni - Risparmiare prezioso
+spazio e tempo sostituendo &lt;tt class="docutils literal"&gt;typing.Union[A, B, C]&lt;/tt&gt; con il suo
+(magnificamente idiomatico) equivalente &lt;tt class="docutils literal"&gt;A | B | C&lt;/tt&gt; - Imparare la
+maniera &lt;em&gt;”Pythonica”&lt;/em&gt; di effettuare pattern matching grazie all’uso
+della nuova istruzione &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; introdotta in Python 3.10. Potete dire
+finalmente addio a codice del tipo
+&lt;tt class="docutils literal"&gt;python&amp;nbsp; cases = {1: &amp;quot;one&amp;quot;, 2: &amp;quot;two&amp;quot;, 3: &amp;quot;three&amp;quot;}&amp;nbsp; one_two_three = cases.get(some_var, default_value)&lt;/tt&gt;
+- Altro ancora! Ma vi toccherà venire alla presentazione per scoprirlo
+:)&lt;/p&gt;
+&lt;p&gt;Speaker: Mattia Giambirtone&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="abstractions"></category><category term="best practice"></category><category term="clean code"></category><category term="cpython"></category><category term="performance"></category><category term="type hinting"></category></entry></feed>

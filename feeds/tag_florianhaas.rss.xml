@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - FlorianHaas</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><item><title>What I now know about HAproxied Django DB connections, and wish I'd known sooner</title><link>https://pyvideo.org/pycon-au-2020/what-i-now-know-about-haproxied-django-db-connections-and-wish-id-known-sooner.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Florian Haas&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/YZYTMX"&gt;https://2020.pycon.org.au/program/YZYTMX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When you’re running a Django application, the following things are all pretty commonplace:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You use MySQL or MariaDB as your Django database backend.&lt;/li&gt;
+&lt;li&gt;You don’t run a single standalone MySQL/MariaDB instance, but a Galera cluster.&lt;/li&gt;
+&lt;li&gt;You run asynchronous tasks in Celery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now suppose your application doesn’t talk to your Galera cluster directly, but via HAProxy. That’s not exactly unheard of; in fact it’s an officially documented HA option for Galera. And, to complicate things further, this may be a feature of your setup that you, the application developer, don't necessarily have control over.&lt;/p&gt;
+&lt;p&gt;In such a scenario, you may be dealing with very &amp;quot;interesting&amp;quot; features of HAproxy which — if you are unfamiliar with them — can throw you very nasty curveballs.&lt;/p&gt;
+&lt;p&gt;Having been in the position where, together with my team, I &lt;em&gt;was&lt;/em&gt; indeed unfamiliar with some of HAProxy's/Galera's intricacies and we were thus on he receiving end of those curveballs, I am taking this opportunity to share our findings so that our pain is someone else's gain. You have multiple options at your disposal — some in your infrastructure setup, and some in your Django application code. This talk covers both those angles.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:55:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Florian Haas</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-i-now-know-about-haproxied-django-db-connections-and-wish-id-known-sooner.html</guid><category>PyCon AU 2020</category><category>FlorianHaas</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item></channel></rss>
