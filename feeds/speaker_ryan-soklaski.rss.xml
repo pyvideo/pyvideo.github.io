@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Ryan Soklaski</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 20 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Introduction to Property-Based Testing</title><link>https://pyvideo.org/pycon-us-2023/introduction-to-property-based-testing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Has testing got you down? Ever spent a day writing tests, only to
+discover that you missed a bug because of some edge case you didn’t know
+about? Does it ever feel like writing tests is just a formality - that
+you already know your test cases will pass?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Property-based testing might be just what you need!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;After this introduction to property-based testing, you’ll be comfortable
+with Hypothesis, a friendly but powerful property-based testing library.
+You’ll also known how to check and enforce robust properties in your
+code, and will have hands-on experience finding real bugs.&lt;/p&gt;
+&lt;p&gt;Where traditional example-based tests require you to write out each
+exact scenario to check - for example, &lt;tt class="docutils literal"&gt;assert divide(3, 4) == 0.75&lt;/tt&gt; -
+property-based tests are &lt;em&gt;generalised&lt;/em&gt; and &lt;em&gt;assisted&lt;/em&gt;. You describe what
+kinds of inputs are allowed, write a test that should pass for any of
+them, and Hypothesis does the rest!&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nn"&gt;hypothesis&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;given&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;strategies&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="w"&gt;
+
+&lt;/span&gt;&lt;span class="nd"&gt;&amp;#64;given&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;integers&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;st&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;integers&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nf"&gt;test_divide&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;   &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;   &lt;span class="k"&gt;assert&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;There’s the obvious &lt;tt class="docutils literal"&gt;ZeroDivisionError&lt;/tt&gt;, fixable with
+&lt;tt class="docutils literal"&gt;b = &lt;span class="pre"&gt;st.integers().filter(lambda&lt;/span&gt; b: b != 0)&lt;/tt&gt;, but there’s another bug
+lurking. Can you see it? Hypothesis can!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Audience:&lt;/strong&gt; This tutorial is for anybody who regularly writes tests in
+Python, and would like an easier and more effective way to do so. We
+assume that you are comfortable with traditional unit tests - reading,
+running, and writing; as well as familar with ideas like assertions.
+Most attendees will have heard &amp;quot;given, when, then&amp;quot; and &amp;quot;arrange, act,
+assert&amp;quot;. You may or may not have heard of pre- and post-conditions - we
+will explain what &amp;quot;property-based&amp;quot; means without reference to Haskell or
+anything algebraic.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zac Hatfield-Dodds</dc:creator><pubDate>Thu, 20 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-20:/pycon-us-2023/introduction-to-property-based-testing.html</guid><category>PyCon US 2023</category></item></channel></rss>

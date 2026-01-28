@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Paul Ganssle</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_paul-ganssle.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-05-16T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Time Zone Troubles</title><link href="https://pyvideo.org/pybay-2017/time-zone-troubles.html" rel="alternate"></link><published>2017-08-12T00:00:00+00:00</published><updated>2017-08-12T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2017-08-12:/pybay-2017/time-zone-troubles.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will cover how to deal with time zone-related edge cases like daylight savings time, and will provide an understanding of the way python handles time zones. It will go over how to use the time zone classes provided by dateutil.tz and pytz, and the advantages and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will cover how to deal with time zone-related edge cases like daylight savings time, and will provide an understanding of the way python handles time zones. It will go over how to use the time zone classes provided by dateutil.tz and pytz, and the advantages and disadvantages of each.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ambiguous datetimes occur when a time zone's UTC offset moves backwards (such as during a daylight saving time transition), leading to two datetimes with identical &amp;quot;wall time&amp;quot;; their complement, imaginary datetimes are &amp;quot;wall times&amp;quot; that do not exist in a given time zone, because they were skipped over when a time zone's UTC offset moved forward. Python 3.6 introduces a &amp;quot;fold&amp;quot; attribute to allow for disambiguation of local times (PEP495).&lt;/p&gt;
+&lt;p&gt;This talk will cover dealing with edge cases related to ambiguous and imaginary datetimes, the different approaches taken by pytz and dateutil, what changes with PEP 495, and some lessons learned from implementing backwards-compatible PEP495-compliant tzinfo classes in the dateutil library.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bio&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Paul Ganssle is a software developer at Bloomberg and the maintainer of python-dateutil. He previously was a physical chemist working on low-field NMR.&lt;/p&gt;
+</content><category term="PyBay 2017"></category></entry><entry><title>Patterns for Clean API Design</title><link href="https://pyvideo.org/pybay-2019/patterns-for-clean-api-design.html" rel="alternate"></link><published>2019-08-16T00:00:00+00:00</published><updated>2019-08-16T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2019-08-16:/pybay-2019/patterns-for-clean-api-design.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk was presented at PyBay2019 - 4th annual Bay Area Regional Python conference. See pybay.com for more details about PyBay and click SHOW MORE for more information about this talk.&lt;/p&gt;
+&lt;p&gt;Description
+This talk will arm you with some tools to design a library that &amp;quot;just works&amp;quot;, but also …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk was presented at PyBay2019 - 4th annual Bay Area Regional Python conference. See pybay.com for more details about PyBay and click SHOW MORE for more information about this talk.&lt;/p&gt;
+&lt;p&gt;Description
+This talk will arm you with some tools to design a library that &amp;quot;just works&amp;quot;, but also has obvious escape hatches to handle corner cases. It covers several patterns for cleanly organizing related and overlapping functionality in a way that satisfies both humans and static analysis tools.&lt;/p&gt;
+&lt;p&gt;Abstract
+What do you do when you have to choose between designing your function for one of two common use cases?&lt;/p&gt;
+&lt;p&gt;How about when the same logical operations (say, multiplication or concatenation) need to have different implementations depending on the type of the arguments they are applied to?&lt;/p&gt;
+&lt;p&gt;These kinds of questions can be vexing when trying to design a clean, well-scoped API.&lt;/p&gt;
+&lt;p&gt;This talk will cover several strategies for grouping related functionality in a way that presents a logically clean interface to both humans and static analysis tools like type checkers and document generators.&lt;/p&gt;
+&lt;p&gt;This talk covers:&lt;/p&gt;
+&lt;p&gt;Alternate constructors with &amp;#64;classmethod
+Inheritance with &amp;#64;staticmethod and &amp;#64;classmethod
+Dispatch by type
+A new convention for namespacing functions: variants&lt;/p&gt;
+&lt;p&gt;About the speaker
+Paul Ganssle is a software developer at Google, maintainer of python-dateutil and setuptools, Python core developer and contributor to many other open source projects. He lives in New York City and is interested in programming, languages, wearable electronics and sensors.&lt;/p&gt;
+&lt;p&gt;Expressions of opinion do not necessarily reflect the views of his employer.&lt;/p&gt;
+&lt;p&gt;Sponsor Acknowledgement
+This and other PyBay2019 videos are via the help of our media partner AlphaVoice (&lt;a class="reference external" href="https://www.alphavoice.io/"&gt;https://www.alphavoice.io/&lt;/a&gt;)!&lt;/p&gt;
+&lt;p&gt;#pybay #pybay2019 #python #python3 #gdb&lt;/p&gt;
+</content><category term="PyBay 2019"></category></entry><entry><title>Gathering Related Functionality: Patterns for Clean API Design</title><link href="https://pyvideo.org/pycon-ca-2018/gathering-related-functionality-patterns-for-clean-api-design.html" rel="alternate"></link><published>2018-11-11T00:00:00+00:00</published><updated>2018-11-11T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2018-11-11:/pycon-ca-2018/gathering-related-functionality-patterns-for-clean-api-design.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will arm you with some tools to design a library that 'just works', but also has obvious escape hatches to handle corner cases. It covers several patterns for cleanly organizing related and overlapping functionality in a way that statisfies both humans and static analysis tools.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;What do …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will arm you with some tools to design a library that 'just works', but also has obvious escape hatches to handle corner cases. It covers several patterns for cleanly organizing related and overlapping functionality in a way that statisfies both humans and static analysis tools.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;What do you do when you have to choose between designing your function for one of two common use cases?&lt;/p&gt;
+&lt;p&gt;How about when the same logical operations (say, multiplication or concatenation) need to have different implementations depending on the type of the arguments they are applied to?&lt;/p&gt;
+&lt;p&gt;These kinds of questions can be vexing when trying to design a clean, well-scoped API.&lt;/p&gt;
+&lt;p&gt;This talk will cover several strategies for grouping related functionality in a way that presents a logically clean interface to both humans and static analysis tools like type checkers and document generators.&lt;/p&gt;
+&lt;p&gt;This talk covers:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Alternate constructors with &amp;#64;classmethod&lt;/li&gt;
+&lt;li&gt;Inheritance with &amp;#64;staticmethod and &amp;#64;classmethod&lt;/li&gt;
+&lt;li&gt;Dispatch by type&lt;/li&gt;
+&lt;li&gt;A new convention for namespacing functions: variants&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="PyCon CA 2018"></category><category term="library"></category><category term="api design"></category></entry><entry><title>Lightning talks May 21th, 2017 Morning session</title><link href="https://pyvideo.org/pycon-us-2017/lightning-talks-may-21th-2017-morning-session.html" rel="alternate"></link><published>2017-05-21T00:00:00+00:00</published><updated>2017-05-21T00:00:00+00:00</updated><author><name>Joshua Pan</name></author><id>tag:pyvideo.org,2017-05-21:/pycon-us-2017/lightning-talks-may-21th-2017-morning-session.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks 2017-05-21 Morning&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="12%" /&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="65%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head" rowspan="2"&gt;Start&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Speakers&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Subject&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;0:45&lt;/td&gt;
+&lt;td rowspan="4"&gt;Pan and  C. Lin&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;ZulipBot - Improving GitHub Workflow&lt;/strong&gt;
+- Add Issue Assignment, better Notifications, and
+other improvements to GitHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="5"&gt;6:15&lt;/td&gt;
+&lt;td rowspan="5"&gt;Lennart&lt;/td&gt;
+&lt;td rowspan="5"&gt;&lt;strong&gt;Your Keyboard:  Your Most Important Tool&lt;/strong&gt;
+- Eliminating angle issues and space problems with
+angled, tenkeyless keyboards, stretches, and more …&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks 2017-05-21 Morning&lt;/p&gt;
+&lt;table border="1" class="docutils"&gt;
+&lt;colgroup&gt;
+&lt;col width="12%" /&gt;
+&lt;col width="23%" /&gt;
+&lt;col width="65%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead valign="bottom"&gt;
+&lt;tr&gt;&lt;th class="head" rowspan="2"&gt;Start&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Speakers&lt;/th&gt;
+&lt;th class="head" rowspan="2"&gt;Subject&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody valign="top"&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;0:45&lt;/td&gt;
+&lt;td rowspan="4"&gt;Pan and  C. Lin&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;ZulipBot - Improving GitHub Workflow&lt;/strong&gt;
+- Add Issue Assignment, better Notifications, and
+other improvements to GitHub.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="5"&gt;6:15&lt;/td&gt;
+&lt;td rowspan="5"&gt;Lennart&lt;/td&gt;
+&lt;td rowspan="5"&gt;&lt;strong&gt;Your Keyboard:  Your Most Important Tool&lt;/strong&gt;
+- Eliminating angle issues and space problems with
+angled, tenkeyless keyboards, stretches, and more
+keyboard geekery.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;11:30&lt;/td&gt;
+&lt;td rowspan="4"&gt;Hugh Herter&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Live code reloading in Python&lt;/strong&gt;
+- Using the module autoreload to watch and reload
+during debugging.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;16:00&lt;/td&gt;
+&lt;td rowspan="4"&gt;Don Goodman-Wilson&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Pascal's Wager and You&lt;/strong&gt;
+- Pascal's Wager on the Existence of God is equivalent
+to wagering about a debilitating hack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="4"&gt;20:15&lt;/td&gt;
+&lt;td rowspan="4"&gt;Paul Ganssle&lt;/td&gt;
+&lt;td rowspan="4"&gt;&lt;strong&gt;Time Zone Tools&lt;/strong&gt;
+- Looking at datettime, tzinfo, dateutil and pytz,
+common errors, and timezone geekery.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td rowspan="3"&gt;25:30&lt;/td&gt;
+&lt;td rowspan="3"&gt;Paul &amp;amp; Laura&lt;/td&gt;
+&lt;td rowspan="3"&gt;&lt;strong&gt;State of PyVideo.org&lt;/strong&gt;
+- Current website, traffic, and users.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content><category term="PyCon US 2017"></category><category term="lightning talks"></category></entry><entry><title>Sunday Morning Lightning Talks + Keynote</title><link href="https://pyvideo.org/pycon-us-2018/sunday-morning-lightning-talks-keynote.html" rel="alternate"></link><published>2018-05-13T00:00:00+00:00</published><updated>2018-05-13T00:00:00+00:00</updated><author><name>Brett Cannon</name></author><id>tag:pyvideo.org,2018-05-13:/pycon-us-2018/sunday-morning-lightning-talks-keynote.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keynote Speaker: Brett Cannon&lt;/p&gt;
+</content><category term="PyCon US 2018"></category><category term="keynote"></category><category term="lightning talks"></category></entry><entry><title>Working with Time Zones: Everything You Wish You Didn't Need to Know</title><link href="https://pyvideo.org/pycon-us-2019/working-with-time-zones-everything-you-wish-you-didnt-need-to-know.html" rel="alternate"></link><published>2019-05-05T14:30:00+00:00</published><updated>2019-05-05T14:30:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2019-05-05:/pycon-us-2019/working-with-time-zones-everything-you-wish-you-didnt-need-to-know.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life.
+Time zones have &lt;a class="reference external" href="http://www.bbc.com/news/world-asia-16351377"&gt;skipped entire
+days&lt;/a&gt; and repeated
+others. There are time zones that switch to &lt;a class="reference external" href="https://www.timeanddate.com/time/zone/morocco/casablanca"&gt;DST twice per
+year&lt;/a&gt;. But
+not necessarily every year. In Python it's even possible to create
+datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a …&lt;/tt&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life.
+Time zones have &lt;a class="reference external" href="http://www.bbc.com/news/world-asia-16351377"&gt;skipped entire
+days&lt;/a&gt; and repeated
+others. There are time zones that switch to &lt;a class="reference external" href="https://www.timeanddate.com/time/zone/morocco/casablanca"&gt;DST twice per
+year&lt;/a&gt;. But
+not necessarily every year. In Python it's even possible to create
+datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a == b&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;b == c&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;a != c&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk you'll learn about Python's time zone model and other
+concepts critical to avoiding datetime troubles. Using &lt;tt class="docutils literal"&gt;dateutil&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;pytz&lt;/tt&gt; as examples, this talk covers how to deal with ambiguous and
+imaginary times, datetime arithmetic around a Daylight Savings Time
+transition, and datetime's new &lt;tt class="docutils literal"&gt;fold&lt;/tt&gt; attribute, introduced in Python
+3.6 (&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0495/"&gt;PEP 495&lt;/a&gt;).&lt;/p&gt;
+</content><category term="PyCon US 2019"></category><category term="talk"></category></entry><entry><title>Dealing with Datetimes</title><link href="https://pyvideo.org/pycon-us-2019/dealing-with-datetimes.html" rel="alternate"></link><published>2019-05-01T13:20:00+00:00</published><updated>2019-05-01T13:20:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2019-05-01:/pycon-us-2019/dealing-with-datetimes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dealing with dates and times is famously complicated. In this tutorial,
+you'll work through a few common datetime-handling tasks and handle some
+edge cases you are likely to encounter at some point in your career.&lt;/p&gt;
+&lt;p&gt;This tutorial will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Working with time zones&lt;/li&gt;
+&lt;li&gt;Serializing and deserializing datetimes&lt;/li&gt;
+&lt;li&gt;Datetime arithmetic …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dealing with dates and times is famously complicated. In this tutorial,
+you'll work through a few common datetime-handling tasks and handle some
+edge cases you are likely to encounter at some point in your career.&lt;/p&gt;
+&lt;p&gt;This tutorial will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Working with time zones&lt;/li&gt;
+&lt;li&gt;Serializing and deserializing datetimes&lt;/li&gt;
+&lt;li&gt;Datetime arithmetic&lt;/li&gt;
+&lt;li&gt;Scheduling recurring events&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The format will be a mix of short lectures and hands-on exercises.&lt;/p&gt;
+</content><category term="PyCon US 2019"></category><category term="tutorial"></category></entry><entry><title>What to Do When the Bug Is in Someone Else's Code</title><link href="https://pyvideo.org/pycon-us-2022/what-to-do-when-the-bug-is-in-someone-elses-code.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/what-to-do-when-the-bug-is-in-someone-elses-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It's generally better to use libraries than to write your own code, but what happens when you run into an issue that is correctly solved by modifying the library code rather than your own code? What if you need to deploy a fix today, but you can't count on …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It's generally better to use libraries than to write your own code, but what happens when you run into an issue that is correctly solved by modifying the library code rather than your own code? What if you need to deploy a fix today, but you can't count on the upstream library applying the required fixes and getting a new release through your deployment system before your deadline? This presentation will cover various stop-gap strategies (of varying desirability) for dealing with this situation, including:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Working around the bug with wrapper functions&lt;/li&gt;
+&lt;li&gt;Monkey patching the offending methods or functions&lt;/li&gt;
+&lt;li&gt;Vendoring a patched version of the library into your application&lt;/li&gt;
+&lt;li&gt;Maintaining a forked version in your local package manager&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="PyCon US 2022"></category></entry><entry><title>Working with Time Zones: Everything You Wish You Didn't Need to Know (zoneinfo edition)</title><link href="https://pyvideo.org/pycon-us-2023/working-with-time-zones-everything-you-wish-you-didnt-need-to-know-zoneinfo-edition.html" rel="alternate"></link><published>2023-04-21T00:00:00+00:00</published><updated>2023-04-21T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2023-04-21:/pycon-us-2023/working-with-time-zones-everything-you-wish-you-didnt-need-to-know-zoneinfo-edition.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life.
+Time zones have &lt;a class="reference external" href="http://www.bbc.com/news/world-asia-16351377"&gt;skipped entire
+days&lt;/a&gt; and repeated
+others. There are time zones that switch to &lt;a class="reference external" href="https://www.timeanddate.com/time/zone/morocco/casablanca"&gt;DST twice per
+year&lt;/a&gt;. But
+not necessarily every year. In Python it's even possible to create
+datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a …&lt;/tt&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life.
+Time zones have &lt;a class="reference external" href="http://www.bbc.com/news/world-asia-16351377"&gt;skipped entire
+days&lt;/a&gt; and repeated
+others. There are time zones that switch to &lt;a class="reference external" href="https://www.timeanddate.com/time/zone/morocco/casablanca"&gt;DST twice per
+year&lt;/a&gt;. But
+not necessarily every year. In Python it's even possible to create
+datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a == b&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;b == c&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;a != c&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk you'll learn about Python's time zone model and other
+concepts critical to avoiding datetime troubles. Using the &lt;tt class="docutils literal"&gt;zoneinfo&lt;/tt&gt;
+module introduced in Python 3.9 (&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0615/"&gt;PEP
+615&lt;/a&gt;), this talk covers
+how to deal with ambiguous and imaginary times, datetime arithmetic
+around a Daylight Savings Time transition, and datetime's new &lt;tt class="docutils literal"&gt;fold&lt;/tt&gt;
+attribute, introduced in Python 3.6 (&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0495/"&gt;PEP
+495&lt;/a&gt;).&lt;/p&gt;
+</content><category term="PyCon US 2023"></category></entry><entry><title>pytest for unittesters</title><link href="https://pyvideo.org/pycon-us-2024/pytest-for-unittesters.html" rel="alternate"></link><published>2024-05-17T00:00:00+00:00</published><updated>2024-05-17T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2024-05-17:/pycon-us-2024/pytest-for-unittesters.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you a &lt;tt class="docutils literal"&gt;unittest&lt;/tt&gt; user interested to learn more about &lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt;?
+Do you want to learn to write more idiomatic &lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt; tests? Do you
+use neither and want an overview of some of the differences between the
+two frameworks? If you answered yes to any of these questions, then …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you a &lt;tt class="docutils literal"&gt;unittest&lt;/tt&gt; user interested to learn more about &lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt;?
+Do you want to learn to write more idiomatic &lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt; tests? Do you
+use neither and want an overview of some of the differences between the
+two frameworks? If you answered yes to any of these questions, then this
+talk is for you!&lt;/p&gt;
+&lt;p&gt;Join us for an introduction to fixtures, test parameterization,and an
+explanation of some of &lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt;'s subtler user experience
+enhancements, in a talk that will just scratch the surface of
+&lt;tt class="docutils literal"&gt;pytest&lt;/tt&gt;'s extensive feature set.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry><entry><title>Programming for Yourself</title><link href="https://pyvideo.org/pycon-us-2025/programming-for-yourself.html" rel="alternate"></link><published>2025-05-16T00:00:00+00:00</published><updated>2025-05-16T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2025-05-16:/pycon-us-2025/programming-for-yourself.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The career benefits of learning programming have become increasingly obvious over time, but few people talk about another great super-power you get from learning to program: the ability to make things that solve your own problems.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll go through a few case studies from my own …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The career benefits of learning programming have become increasingly obvious over time, but few people talk about another great super-power you get from learning to program: the ability to make things that solve your own problems.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll go through a few case studies from my own life wherein knowing how to program not only allowed me to solve problems for myself, but also allowed me to recognize that the problem I was having had a solution at all.&lt;/p&gt;
+&lt;p&gt;Additionally, I'll talk about ways the approach to engineering changes (and doesn't change!) when programming bespoke applications for a small audience.&lt;/p&gt;
+</content><category term="PyCon US 2025"></category></entry><entry><title>Contributing to Open Source: A Guide</title><link href="https://pyvideo.org/pydata-new-york-city-2018/contributing-to-open-source-a-guide.html" rel="alternate"></link><published>2018-08-17T00:00:00+00:00</published><updated>2018-08-17T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2018-08-17:/pydata-new-york-city-2018/contributing-to-open-source-a-guide.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Contributing to open source can be a rewarding experience, but many people don't know how, or find the process confusing or frustrating. This talk tries to bridge both the technical and social gap between new contributors and maintainers to help the listener have a positive open source experience.&lt;/p&gt;
+</content><category term="PyData New York City 2018"></category></entry><entry><title>python-dateutil: A delightful romp in the never-confusing world of dates and times</title><link href="https://pyvideo.org/pygotham-2016/python-dateutil-a-delightful-romp-in-the-never-confusing-world-of-dates-and-times.html" rel="alternate"></link><published>2016-07-17T00:00:00+00:00</published><updated>2016-07-17T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2016-07-17:/pygotham-2016/python-dateutil-a-delightful-romp-in-the-never-confusing-world-of-dates-and-times.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The dateutil library provides a number of extensions to Python's standard datetime handling libraries. This talk will provide an overview of how to use (and not use!) dateutil to improve your datetime-handling experience, and also cover some of the recent changes to the library.&lt;/p&gt;
+</content><category term="PyGotham 2016"></category><category term="dateutil"></category></entry><entry><title>The Ministry of Silly Talks</title><link href="https://pyvideo.org/pygotham-2017/the-ministry-of-silly-talks.html" rel="alternate"></link><published>2017-10-06T00:00:00+00:00</published><updated>2017-10-06T00:00:00+00:00</updated><author><name>Fangfei Shen</name></author><id>tag:pyvideo.org,2017-10-06:/pygotham-2017/the-ministry-of-silly-talks.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning Talks from PyGotham 2017&lt;/p&gt;
+</content><category term="PyGotham 2017"></category><category term="lightning talks"></category></entry><entry><title>Gathering Related Functionality: Patterns for Clean API Design</title><link href="https://pyvideo.org/pygotham-2018/gathering-related-functionality-patterns-for-clean-api-design.html" rel="alternate"></link><published>2018-10-05T00:00:00+00:00</published><updated>2018-10-05T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2018-10-05:/pygotham-2018/gathering-related-functionality-patterns-for-clean-api-design.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What do you do when you have to choose between designing your function for one of two common use cases?&lt;/p&gt;
+&lt;p&gt;How about when the same logical operations (say, multiplication or concatenation) need to have different implementations depending on the type of the arguments they are applied to?&lt;/p&gt;
+&lt;p&gt;These kinds …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What do you do when you have to choose between designing your function for one of two common use cases?&lt;/p&gt;
+&lt;p&gt;How about when the same logical operations (say, multiplication or concatenation) need to have different implementations depending on the type of the arguments they are applied to?&lt;/p&gt;
+&lt;p&gt;These kinds of questions can be vexing when trying to design a clean, well-scoped API.&lt;/p&gt;
+&lt;p&gt;This talk will cover several strategies for grouping related functionality in a way that presents a logically clean interface to both humans and static analysis tools like type checkers and document generators.&lt;/p&gt;
+&lt;p&gt;This talk covers:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Alternate constructors with &lt;cite&gt;&amp;#64;classmethod&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;Namespacing functions under a class with &lt;cite&gt;&amp;#64;staticmethod&lt;/cite&gt;&lt;/li&gt;
+&lt;li&gt;Dispatch by type&lt;/li&gt;
+&lt;li&gt;A new convention for namespacing functions: &lt;cite&gt;variants&lt;/cite&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="PyGotham 2018"></category></entry><entry><title>Build your Python Extensions with Rust!</title><link href="https://pyvideo.org/pygotham-2019/build-your-python-extensions-with-rust.html" rel="alternate"></link><published>2019-10-05T00:00:00+00:00</published><updated>2019-10-05T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2019-10-05:/pygotham-2019/build-your-python-extensions-with-rust.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When your Python needs to be fast, one powerful tool is the ability to write
+compiled extension modules. Normally this is done using the C API, but that
+requires managing reference counts and memory allocation and is nearly
+impossible to do &lt;em&gt;correctly&lt;/em&gt; for non-trivial programs. In this talk, we'll …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When your Python needs to be fast, one powerful tool is the ability to write
+compiled extension modules. Normally this is done using the C API, but that
+requires managing reference counts and memory allocation and is nearly
+impossible to do &lt;em&gt;correctly&lt;/em&gt; for non-trivial programs. In this talk, we'll
+look at how you can write extension modules in Rust - a memory-safe systems
+programming language that is increasingly popular as a replacement for C and
+C++, and the [most loved language in the Stack Overflow developer survey 4
+years running](&lt;a class="reference external" href="https://insights.stackoverflow.com/survey/2019#technology-_"&gt;https://insights.stackoverflow.com/survey/2019#technology-_&lt;/a&gt;-
+most-loved-dreaded-and-wanted-languages).&lt;/p&gt;
+&lt;p&gt;This talk will focus on &lt;cite&gt;pyo3&lt;/cite&gt; and &lt;cite&gt;milksnake&lt;/cite&gt;, two popular libraries that
+provide very different approaches for writing Rust extensions; it will cover
+a basic introduction to the libraries, and compare their relative strengths
+and weaknesses. These will also be compared to C and Cython extension
+modules from a performance, safety and maintainability perspective.&lt;/p&gt;
+</content><category term="PyGotham 2019"></category></entry><entry><title>The Ministry of Silly Talks</title><link href="https://pyvideo.org/pygotham-2019/the-ministry-of-silly-talks.html" rel="alternate"></link><published>2019-10-04T00:00:00+00:00</published><updated>2019-10-04T00:00:00+00:00</updated><author><name>Aditya Sirish</name></author><id>tag:pyvideo.org,2019-10-04:/pygotham-2019/the-ministry-of-silly-talks.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyGotham 2019's Lightning Talks&lt;/p&gt;
+</content><category term="PyGotham 2019"></category></entry><entry><title>Working with Time Zones: Everything You Wish You Didn't Need to Know</title><link href="https://pyvideo.org/pylondinium-2018/working-with-time-zones-everything-you-wish-you-didnt-need-to-know.html" rel="alternate"></link><published>2018-06-10T00:00:00+00:00</published><updated>2018-06-10T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2018-06-10:/pylondinium-2018/working-with-time-zones-everything-you-wish-you-didnt-need-to-know.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life. Time zones have skipped entire days and repeated others. There are time zones that switch to DST twice per year. But not necessarily every year. In Python it's even possible to create datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a …&lt;/tt&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Time zones are complicated, but they are a fact of engineering life. Time zones have skipped entire days and repeated others. There are time zones that switch to DST twice per year. But not necessarily every year. In Python it's even possible to create datetimes with non-transitive equality (&lt;tt class="docutils literal"&gt;a == b&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;b == c&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;a != c&lt;/tt&gt;).&lt;/p&gt;
+&lt;p&gt;In this talk you'll learn about Python's time zone model and other concepts critical to avoiding datetime troubles. Using &lt;tt class="docutils literal"&gt;dateutil&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;pytz&lt;/tt&gt; as examples, this talk covers how to deal with ambiguous and imaginary times, datetime arithmetic around a Daylight Saving Time transition, and datetime's new fold attribute, introduced in Python 3.6 ([PEP 495](&lt;a class="reference external" href="https://www.python.org/dev/peps/pep-0495/"&gt;https://www.python.org/dev/peps/pep-0495/&lt;/a&gt;)).&lt;/p&gt;
+</content><category term="PyLondinium 2018"></category></entry><entry><title>Build your Python Extensions with Rust!</title><link href="https://pyvideo.org/pylondinium-2019/build-your-python-extensions-with-rust.html" rel="alternate"></link><published>2019-06-16T00:00:00+00:00</published><updated>2019-06-16T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2019-06-16:/pylondinium-2019/build-your-python-extensions-with-rust.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When your Python needs to be fast, one powerful tool is the ability to write compiled extension modules. Normally this is done using the C API, but that requires managing reference counts and memory allocation and is nearly impossible to do correctly for non-trivial programs. In this talk, we'll …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When your Python needs to be fast, one powerful tool is the ability to write compiled extension modules. Normally this is done using the C API, but that requires managing reference counts and memory allocation and is nearly impossible to do correctly for non-trivial programs. In this talk, we'll look at how you can write extension modules in Rust - a memory-safe systems programming language that is increasingly popular as a replacement for C and C++, and the most loved language in the Stack Overflow developer survey 4 years running.&lt;/p&gt;
+&lt;p&gt;This talk will focus on pyo3 and milksnake, two popular libraries that provide very different approaches for writing Rust extensions; it will cover a basic introduction to the libraries, and compare their relative strengths and weaknesses. These will also be compared to C and Cython extension modules from a performance, safety and maintainability perspective.&lt;/p&gt;
+&lt;p&gt;This talk assumes some basic familiarity with extension modules. It is aimed at Pythonistas who are interested in Rust and at people who currently write extension modules and are looking for a safer alternative to the C API. Familiarity with the syntax and basic concepts of Rust is helpful, but the talk should be understandable even for Rust beginners.&lt;/p&gt;
+</content><category term="PyLondinium 2019"></category></entry><entry><title>What to Do When the Bug Is in Someone Elses Code</title><link href="https://pyvideo.org/pytexas-2020/what-to-do-when-the-bug-is-in-someone-elses-code.html" rel="alternate"></link><published>2020-10-25T00:00:00+00:00</published><updated>2020-10-25T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2020-10-25:/pytexas-2020/what-to-do-when-the-bug-is-in-someone-elses-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When there’s a bug in a library you are using it’s easy to feel stuck or to accrue a lot of technical debt trying to work around it. In this talk, I’ll go over strategies for solving both your short-term needs (fix it!) and your long …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When there’s a bug in a library you are using it’s easy to feel stuck or to accrue a lot of technical debt trying to work around it. In this talk, I’ll go over strategies for solving both your short-term needs (fix it!) and your long term needs (not more technical debt…).&lt;/p&gt;
+&lt;p&gt;Speaker: Paul Ganssle
+Paul Ganssle is a software developer, CPython core developer, maintainer of python-dateutil and setuptools and contributor to many other open source projects. He lives in New York City with 14 cats, 293 geckos and a marmoset (who is currently working her way through dental school).&lt;/p&gt;
+</content><category term="PyTexas 2020"></category></entry><entry><title>xfail and skip: What to do with tests you know will fail</title><link href="https://pyvideo.org/pytexas-2022/xfail-and-skip-what-to-do-with-tests-you-know-will-fail.html" rel="alternate"></link><published>2022-06-21T00:00:00+00:00</published><updated>2022-06-21T00:00:00+00:00</updated><author><name>Paul Ganssle</name></author><id>tag:pyvideo.org,2022-06-21:/pytexas-2022/xfail-and-skip-what-to-do-with-tests-you-know-will-fail.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What do you do with a test you know will fail? Skip it? Mark it as xfail? Or wait until the test is passing before adding it to your test suite? In this talk, I’ll explain &lt;cite&gt;pytest&lt;/cite&gt;’s &lt;cite&gt;skipif&lt;/cite&gt; and &lt;cite&gt;xfail&lt;/cite&gt;, and dive into various strategies for dealing …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What do you do with a test you know will fail? Skip it? Mark it as xfail? Or wait until the test is passing before adding it to your test suite? In this talk, I’ll explain &lt;cite&gt;pytest&lt;/cite&gt;’s &lt;cite&gt;skipif&lt;/cite&gt; and &lt;cite&gt;xfail&lt;/cite&gt;, and dive into various strategies for dealing with tests that will not pass.&lt;/p&gt;
+&lt;p&gt;Speaker: Paul Ganssle
+Paul Ganssle is a software developer, CPython core developer, maintainer of python-dateutil and setuptools and contributor to many other open source projects. He lives just outside of Hartford, CT with his family, where he guards an ancient treasure intended to be mankind’s legacy. Expressions of opinion do not necessarily reflect the views of his employer.&lt;/p&gt;
+</content><category term="PyTexas 2022"></category></entry></feed>

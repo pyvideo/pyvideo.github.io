@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - GenevieveBuckley</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate><item><title>dask-image: distributed image processing for large data</title><link>https://pyvideo.org/pycon-au-2020/dask-image-distributed-image-processing-for-large-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genevieve Buckley&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/KHULAN"&gt;https://2020.pycon.org.au/program/KHULAN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Image datasets are large, and becoming larger. The widely used benchmark dataset COCO (Common Objects in Context) contains 330,000 individual images. The average size of a single entry on the image database EMPIAR is over 1TB, and can easily reach several terabytes.  Even where individual images are small enough to fit in-memory, many existing parallelization methods are difficult to scale seamlessly between a laptop and a supercomputing cluster. For instance, the python multiprocessing module is restricted to a single mode and can't take advantage of multiple compute nodes on a distributed supercomputing cluster.&lt;/p&gt;
+&lt;p&gt;We need easy ways to work with large image data. This talk introduces dask-image, a python library for distributed image processing. The target audience are python programmers currently using numpy and scipy with large array data, where the whole dataset cannot fit in memory or is close to that limit. It's for people who want to get started with parallel processing, either because they have large single-image data, or because they want to do batch processing applying the same analysis to many smaller images (sometimes known an embarrassingly parallel problem). The specific image analysis functions provided by dask-image are of broad interest to a diverse range of analysis applications including (but not limited to) video/streaming data, computer vision, and scientific fields including astronomy, microscopy and geosciences.&lt;/p&gt;
+&lt;p&gt;Specifically, this talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;An overview of the dask-image library&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Lazy image loading&lt;/li&gt;
+&lt;li&gt;Image pre-processing functionality (convolutions, filters, etc.)&lt;/li&gt;
+&lt;li&gt;Analysis of segmented images (distributed labeling, and measurements of those label regions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;Mixing in your own custom analysis functions (using dask delayed, map_blocks, and map_overlap)&lt;/li&gt;
+&lt;li&gt;A practical case study of a Python image processing pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dask-image is open source, released under a BSD 3-Clause license, and can be installed using conda or pip. You can find the source code at &lt;a class="reference external" href="https://github.com/dask/dask-image"&gt;https://github.com/dask/dask-image&lt;/a&gt; and the quickstart guide at &lt;a class="reference external" href="https://github.com/dask/dask-examples/blob/master/applications/image-processing.ipynb"&gt;https://github.com/dask/dask-examples/blob/master/applications/image-processing.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:55:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Genevieve Buckley</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/dask-image-distributed-image-processing-for-large-data.html</guid><category>PyCon AU 2020</category><category>GenevieveBuckley</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item></channel></rss>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - type hinting</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Code quality in Python</title><link>https://pyvideo.org/europython-2019/code-quality-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Four years ago I talked about code quality during EuroPython in
+Bilbao. A lot of things changed from that time. Firstly, most tools I
+presented were still developed and gained new features, but also new
+ones appeared I wanted to discuss with you. Secondly, Python changed,
+Python 3 has type hints on board and there is a new tool dedicated to
+checking the types. Thirdly - I changed. I'm more distanced form my
+zealous approach from four years ago. I got real and reasonable.
+That's why I wanted to talk about code quality tools in Python again.&lt;/div&gt;
+&lt;div class="line"&gt;I'll talk about all the software that can make code review a bit
+simpler by pointing out possible errors, duplicates or unused code.
+I'll talk again about formatters and how can they be used in
+modern-time projects. And I'll talk about hobgoblins, if you know what
+I mean :)&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radosław Ganczarek</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/code-quality-in-python.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Code Analysis</category><category>Python 3</category><category>Tooling</category><category>Type-Hinting</category></item><item><title>The Story of Features Coming in Python 3.8 and Beyond</title><link>https://pyvideo.org/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's coming in Python 3.8? You can learn it by yourself by reading an
+excellent document [What's New in Python 3.8][1]. I'm not going to
+retell this document. Instead I'll focus on things barely described
+there or not mentioned at all:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why will the new features appear in Python 3.8 and what's the story
+behind them?&lt;/li&gt;
+&lt;li&gt;What is being discussed and developed now, but won't appear in Python
+3.8?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll share the news I learned at PyCon 2019 from the talks and
+discussions with Python core developers. I'll mention the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New syntax: &lt;tt class="docutils literal"&gt;x := expr&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f(...,&lt;/span&gt; /, &lt;span class="pre"&gt;...)&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f'{expr=}'&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New types: &lt;tt class="docutils literal"&gt;Literal&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Final&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TypedDict&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Future features of typing and async/await&lt;/li&gt;
+&lt;li&gt;New approaches to optimizing Python: sub-interpreters, mypyc&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrey Vlasovskikh</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Compiler and Interpreters</category><category>New Features</category><category>Python 3</category><category>Type-Hinting</category></item><item><title>Static typing: beyond the basics of def foo(x: int) -&gt; str:</title><link>https://pyvideo.org/europython-2019/static-typing-beyond-the-basics-of-def-foox-int-str.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python community has been warming up to static typing for a few
+years now. You may have seen talks that did a great job of introducing
+the basic concepts, mypy, and high-level strategies to cover existing
+code bases.&lt;/p&gt;
+&lt;p&gt;We need to go deeper.&lt;/p&gt;
+&lt;p&gt;Let’s talk about the challenges you inevitably encounter when you try to
+type- check a large code base. One full of many moving parts, complex
+architectures, metaprogramming tricks, and interfaces with a dozen other
+packages.&lt;/p&gt;
+&lt;p&gt;Static type checking is very powerful – when you use it to maximum
+advantage and explain your code to the typechecker accurately. We will
+cover a few tools at your disposal: generics, signature overloads,
+protocols, custom mypy plug- ins, and more.&lt;/p&gt;
+&lt;p&gt;There is more than just tools, though. Behind them all are universal
+concepts valid in any language. I hope to convince you that thinking in
+terms of the type system helps you write better code…&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vita Smid</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/static-typing-beyond-the-basics-of-def-foox-int-str.html</guid><category>EuroPython 2019</category><category>Static Analysis</category><category>Type-Hinting</category></item><item><title>Full Stack Type Safety</title><link>https://pyvideo.org/europython-2020/full-stack-type-safety.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Beyond PEP-484 – ensure type consistency between layers&lt;/p&gt;
+&lt;p&gt;The introduction of PEP-484 gave us an option to enforce the internal type consistency of our Python applications. Our web projects, however, consist of multiple layers, with the Python app taking the role of an HTTP backend. What options do we have to ensure consistency across our stack?
+In this talk, we will see some technologies that we can employ to enforce the contract between the layers of our stack. Especially between the frontend and backend. We will demo, how this can be achieved with REST/Swagger and with GraphQL. As both the Graphene library and the open API support for django-rest-framework are both a work-in-progress, we would check, what is possible, and what is still lacking. We will also discuss various approaches to the design: backend first, auto-generating backend from the spec, and TDD, with their advantages and disadvantages.
+The topic would be discussed on a simple web application. We would try to play some realistic scenarios, where a careless developer breaks the contract to see how such a mistake can be spotted in the CI phase of the development cycle.
+Basic knowledge of Django and JavaScript is required to understand the talk. Some familiarity with TypeScript and ReactJS would also be helpful. However, I plan to explain the code to the listeners that didn’t have prior exposure to these technologies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Szymon Pyżalski</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/full-stack-type-safety.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>APIs</category><category>Django</category><category>JavaScript</category><category>Type-Hinting</category><category>Web Protocols</category></item><item><title>Static Typing in Python</title><link>https://pyvideo.org/europython-2020/static-typing-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is well-known as a programming language without static types. This means that you don’t need to say what a given variable will hold, or whether your function will return a string or an integer (or sometimes one, and sometimes another!). This has historically made Python a very flexible and beginner-friendly language.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll discuss the advantages and disadvantages to a static type system, as well as recent efforts to introduce static typing to Python via optional “type hints” and various tools to aid in adding types to Python code. We’ll see what this means for Python, for Python programmers, and what the future has in store for Python’s type system.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dustin Ingram</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/static-typing-in-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Python 3</category><category>Static Analysis</category><category>Tooling</category><category>Type-Hinting</category><category>python</category></item><item><title>Writing Good Python</title><link>https://pyvideo.org/europython-2020/writing-good-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Like other programming languages, it is easy to write cryptic, unmaintainable, and rigid Python code. Moreover, in teams, this problem escalates due to varied coding styles of developers. How to ensure code quality and consistency? My goal with this talk is to educate my audience about some tools and libraries that can help us in making our code more consistent.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Prashant Chaubey</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/writing-good-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Best Practice</category><category>Code Analysis</category><category>Documentation</category><category>Static Analysis</category><category>Type-Hinting</category></item><item><title>It's Your Call(able): a tour of Python's callable (function) interface</title><link>https://pyvideo.org/pycon-italia-2022/its-your-callable-a-tour-of-pythons-callable-function-interface.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It’s Your Call(able): a tour of Python’s callable (function) interface -
+PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;A deep dive into python functions and the callable interface surrounding
+them. We take a tour into everything that happens on on a “def” line in
+Python, and explore how to make the most of all the rich metadata
+provided about functions, before going into detail hacking the Python
+decorator pattern. Functions are fundamental to python, and are amongst
+the first features of python that most users learn. We call a function
+with arguments, and it returns a value. However, there is more to this
+callable interface than meets the eye, and there are lots of useful and
+powerful things we can do with the callable interface. You may have come
+across many of these already: (anonymous) lambda functions, the &lt;strong&gt;call&lt;/strong&gt;
+magic method, the decorator pattern, the &lt;strong&gt;doc&lt;/strong&gt; property, and modules
+like functools and inspect which provide detailed about functions and
+allow us to alter functions at runtime. The now-retired Python 3.6
+release added typing annotations to this mix, and opened up a new world
+of metadata to use alongside your callables.&lt;/p&gt;
+&lt;p&gt;Lots of libraries, particularly web frameworks like Flask, Django, and
+FastAPI, and testing toolkits like pytest, use this callable interface
+to implement their API. As developers, understanding these advanced
+features of python’s callable interface is particularly useful when
+writing generic, automation focused code, and understanding how such
+prominent libraries work.&lt;/p&gt;
+&lt;p&gt;This talk gives a deep-dive into python functions, and the associated
+callable interface. We’ll start with a quick tour of the basics, before
+covering python’s more advanced callable features, and exploring some
+examples about how, why, and when you may wish to use these features
+yourself.&lt;/p&gt;
+&lt;p&gt;Speaker: Weldon&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Weldon</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/its-your-callable-a-tour-of-pythons-callable-function-interface.html</guid><category>PyCon Italia 2022</category><category>clean code</category><category>type hinting</category></item><item><title>Modern Python: Alla scoperta delle ultime novità di (C)Python</title><link>https://pyvideo.org/pycon-italia-2022/modern-python-alla-scoperta-delle-ultime-novita-di-cpython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Modern Python: Alla scoperta delle ultime novità di (C)Python - PyCon
+Italia 2022&lt;/p&gt;
+&lt;p&gt;Vi siete mai chiesti se ci fosse un modo migliore di scrivere il vostro
+codice? Una qualche feature di Python oscura di cui eravate all’oscuro?
+Sì? Ebbene, insieme demistificheremo alcune delle ultime feature più
+interessanti e più sottovalutate del vecchio serpentone: sarà uno
+spasso, promesso! Modern Python: Alla scoperta delle ultime novità di
+(C)Python&lt;/p&gt;
+&lt;p&gt;Pubblico Consigliato&lt;/p&gt;
+&lt;p&gt;Questa presentazione è diretta a sviluppatori Python con almeno qualche
+anno di esperienza sulle spalle e che siano interessati a rendere il
+proprio codice più leggibile, idiomatico e magari anche più &lt;em&gt;veloce&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Introduzione Vi siete mai trovati a dover scrivere codice simile a
+questo:&lt;/p&gt;
+&lt;pre class="code python literal-block"&gt;
+&lt;span class="n"&gt;some_var&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;some_function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;some_var&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;    &lt;span class="o"&gt;...&lt;/span&gt;    &lt;span class="n"&gt;Code&lt;/span&gt; &lt;span class="n"&gt;Here&lt;/span&gt;
+&lt;/pre&gt;
+&lt;p&gt;e aver pensato: &lt;em&gt;”Cavolo, quell’assegnamento sembra proprio di
+troppo!”&lt;/em&gt;? Se la risposta è sì, allora questa presentazione fa per voi!
+Vi mostrerò come migliorare l’estetica, e magari anche la performance,
+del vostro codice, mantenendo la medesima funzionalità. Imparerete
+concetti avanzati quali i generatori asincroni, introdotti nel lontano
+Python 3.6, il mitico operatore “tricheco”, la nuova e scintillante
+istruzione &lt;tt class="docutils literal"&gt;match&lt;/tt&gt;, per un efficiente ed elegante pattern matching, ed
+altro ancora: Sarà una figata, promesso!&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Immagino già che qualcuno di voi si stia chiedendo, &lt;em&gt;”Ma, Matt, Python
+3.6? É vecchissimo! Perchè sei venuto a parlarci di una feature
+introdotta nel 2016?”&lt;/em&gt;: Okay, diciamo che ho mentito (giusto un
+pochino).&lt;/p&gt;
+&lt;p&gt;Non tutte le funzionalità di cui parlerò in questa presentazione sono
+&lt;em&gt;esattamente&lt;/em&gt; nuove di zecca, ma ho sempre avuto la sensazione che
+alcune— specialmente i generatori asincroni— non abbiano mai ricevuto
+l’attenzione che meritavano e che siano andate piuttosto in sordina: ciò
+è stato probabilmente dovuto dal rilascio di Python 3.5 (che per
+rinfrescarvi la memoria ha finalmente standardizzato la programmazione
+asincrona, introducendo il concetto di coroutine e vari altri nuovi
+oggetti), e con questa presentazione vorrei rendere loro giustizia e al
+tempo stesso far notare alcune delle (spesso ben nascoste!) trappole in
+cui si può cadere facendone uso. Giusto per dare un’assaggio degli
+argomenti che voglio trattare, ecco cosa spero impariate dalla
+presentazione: - Migliorare le performance del vostro codice,
+parallelizzando le operazioni di I/O basata su file, utilizzando un solo
+thread grazie all’aiuto dei generatori asincroni - Risparmiare prezioso
+spazio e tempo sostituendo &lt;tt class="docutils literal"&gt;typing.Union[A, B, C]&lt;/tt&gt; con il suo
+(magnificamente idiomatico) equivalente &lt;tt class="docutils literal"&gt;A | B | C&lt;/tt&gt; - Imparare la
+maniera &lt;em&gt;”Pythonica”&lt;/em&gt; di effettuare pattern matching grazie all’uso
+della nuova istruzione &lt;tt class="docutils literal"&gt;match&lt;/tt&gt; introdotta in Python 3.10. Potete dire
+finalmente addio a codice del tipo
+&lt;tt class="docutils literal"&gt;python&amp;nbsp; cases = {1: &amp;quot;one&amp;quot;, 2: &amp;quot;two&amp;quot;, 3: &amp;quot;three&amp;quot;}&amp;nbsp; one_two_three = cases.get(some_var, default_value)&lt;/tt&gt;
+- Altro ancora! Ma vi toccherà venire alla presentazione per scoprirlo
+:)&lt;/p&gt;
+&lt;p&gt;Speaker: Mattia Giambirtone&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mattia Giambirtone</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/modern-python-alla-scoperta-delle-ultime-novita-di-cpython.html</guid><category>PyCon Italia 2022</category><category>abstractions</category><category>best practice</category><category>clean code</category><category>cpython</category><category>performance</category><category>type hinting</category></item></channel></rss>

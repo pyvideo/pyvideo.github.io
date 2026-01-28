@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Home on the range with Django - getting comfortable with ranges and range fields</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2022.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2022.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Home on the range with Django - getting comfortable with ranges and range fields" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/zCxDAQZfeIo/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/zCxDAQZfeIo/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html" rel="bookmark"
+         title="Permalink to Home on the range with Django - getting comfortable with ranges and range fields">Home on the range with Django - getting comfortable with ranges and range fields
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2022-10-19T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Wed 19 October 2022
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/jack-linke.html">Jack Linke</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zCxDAQZfeIo" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Objectives</p>
+<p>Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing the examples from the talk, additional examples, and a cheatsheet for working with ranges.</p>
+<p>Outline</p>
+<p>The naive approach to ranges (2 min)</p>
+<ul class="simple">
+<li>Using separate start and stop model fields</li>
+<li>Querying with start and stop values</li>
+<li>Quickly gets complicated</li>
+</ul>
+<p>Range visualization for concrete understanding (3 min)</p>
+<ul class="simple">
+<li>Terminology</li>
+<li>Inclusive vs Exclusive</li>
+<li>Overlap</li>
+<li>Contains</li>
+<li>Contained By</li>
+<li>Comparisons (fully_lt, fully_gt, etc)</li>
+</ul>
+<p>[diagram](<a class="reference external" href="https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png">https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png</a>)</p>
+<p>A before-and-after look at the models (5 min)</p>
+<p>The example project is a Swimming Pool Resource Scheduler that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. The model layout can be visualized in the following diagrams:</p>
+<p>![database schema simple](<a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png">https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png</a>)</p>
+<p>![database schema detailed](<a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png">https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png</a>)</p>
+<p>We will look at the models before and after using range fields.</p>
+<p>The initial (stripped down) models.py file using distinct fields for lower and upper values is:</p>
+<pre class="code literal-block">
+class Pool(models.Model):
+    &quot;&quot;&quot;An instance of a Pool. Multiple pools may exist within the municipality&quot;&quot;&quot;
+
+    name = models.CharField(_(&quot;Pool Name&quot;), max_length=100)
+    address = models.TextField(_(&quot;Address&quot;))
+    depth_minimum = models.IntegerField(_(&quot;Depth Minimum&quot;), help_text=_(&quot;What is the depth in feet of the shallow end of this pool?&quot;))
+    depth_maximum = models.IntegerField(_(&quot;Depth Maximum&quot;), help_text=_(&quot;What is the depth in feet of the deep end of this pool?&quot;))
+    business_hours_start = models.IntegerField(_(&quot;Business Hours Start Hour&quot;), default=9)
+    business_hours_end = models.IntegerField(_(&quot;Business Hours End Hour&quot;), default=17)
+
+    class Meta:
+        verbose_name = _(&quot;Pool&quot;)
+        verbose_name_plural = _(&quot;Pools&quot;)
+
+
+class Closure(models.Model):
+    &quot;&quot;&quot;A way of recording dates that a pool is closed&quot;&quot;&quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;closures&quot;)
+    start_date = models.DateField(_(&quot;Pool Closure Start Date&quot;))
+    end_date = models.DateField(_(&quot;Pool Closure End Date&quot;))
+    reason = models.TextField(_(&quot;Closure Reason&quot;))
+
+    class Meta:
+        verbose_name = _(&quot;Closure&quot;)
+        verbose_name_plural = _(&quot;Closures&quot;)
+
+
+class Lane(models.Model):
+    &quot;&quot;&quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&quot;&quot;&quot;
+
+    name = models.CharField(_(&quot;Lane Name&quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;lanes&quot;)
+    max_swimmers = models.PositiveSmallIntegerField(_(&quot;Maximum Swimmers&quot;), )
+    per_hour_cost = models.DecimalField(_(&quot;Per-Hour Cost&quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&quot;Lane&quot;)
+        verbose_name_plural = _(&quot;Lanes&quot;)
+
+
+class Locker(models.Model):
+    &quot;&quot;&quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&quot;&quot;&quot;
+
+    # Using CharField, because sometimes locker number might be &quot;A23&quot; or &quot;56-B&quot;
+    number = models.CharField(_(&quot;Locker Number&quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;lockers&quot;)
+    per_hour_cost = models.DecimalField(_(&quot;Per-Hour Cost&quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&quot;Locker&quot;)
+        verbose_name_plural = _(&quot;Lockers&quot;)
+
+
+class LaneReservation(models.Model):
+    &quot;&quot;&quot;A lane reservations defines a set of users, a period of time, and a pool lane&quot;&quot;&quot;
+
+    users = models.ManyToManyField(User, on_delete=models.CASCADE, related_name=&quot;lane_reservations&quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&quot;lane_reservations&quot;)
+    period_start = models.DateTimeField(_(&quot;Reservation Period Start&quot;))
+    period_end = models.DateTimeField(_(&quot;Reservation Period End&quot;))
+    actual_start = models.DateTimeField(_(&quot;Actual Usage Period Start&quot;))
+    actual_end = models.DateTimeField(_(&quot;Actual Usage Period End&quot;))
+    cancelled = models.DateTimeField(_(&quot;Reservation is Cancelled&quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&quot;Lane Reservation&quot;)
+        verbose_name_plural = _(&quot;Lane Reservations&quot;)
+
+
+class LockerReservation(models.Model):
+    &quot;&quot;&quot;A locker reservation defines a user, a period of time, and a pool locker&quot;&quot;&quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&quot;locker_reservations&quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&quot;locker_reservations&quot;)
+    period_start = models.DateTimeField(_(&quot;Reservation Period Start&quot;))
+    period_end = models.DateTimeField(_(&quot;Reservation Period End&quot;))
+    actual_start = models.DateTimeField(_(&quot;Actual Usage Period Start&quot;))
+    actual_end = models.DateTimeField(_(&quot;Actual Usage Period End&quot;))
+    cancelled = models.DateTimeField(_(&quot;Reservation is Cancelled&quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&quot;Locker Reservation&quot;)
+        verbose_name_plural = _(&quot;Locker Reservations&quot;)
+</pre>
+<p>The final (stripped down) models.py with range fields is:</p>
+<pre class="code literal-block">
+class Pool(models.Model):
+    &quot;&quot;&quot;An instance of a Pool. Multiple pools may exist within the municipality&quot;&quot;&quot;
+
+    name = models.CharField(_(&quot;Pool Name&quot;), max_length=100)
+    address = models.TextField(_(&quot;Address&quot;))
+    depth_range = IntegerRangeField(
+        _(&quot;Depth Range&quot;),
+        help_text=_(&quot;What is the range in feet for the depth of this pool (shallow to deep)?&quot;),
+    )
+    business_hours = IntegerRangeField(_(&quot;Business Hours&quot;), default=(9, 17))
+
+    class Meta:
+        verbose_name = _(&quot;Pool&quot;)
+        verbose_name_plural = _(&quot;Pools&quot;)
+
+
+class Closure(models.Model):
+    &quot;&quot;&quot;A way of recording dates that a pool is closed&quot;&quot;&quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;closures&quot;)
+    dates = DateRangeField(_(&quot;Pool Closure Dates&quot;))
+    reason = models.TextField(_(&quot;Closure Reason&quot;))
+
+    class Meta:
+        verbose_name = _(&quot;Closure&quot;)
+        verbose_name_plural = _(&quot;Closures&quot;)
+
+
+class Lane(models.Model):
+    &quot;&quot;&quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&quot;&quot;&quot;
+
+    name = models.CharField(_(&quot;Lane Name&quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;lanes&quot;)
+    max_swimmers = models.PositiveSmallIntegerField(
+        _(&quot;Maximum Swimmers&quot;),
+    )
+    per_hour_cost = models.DecimalField(_(&quot;Per-Hour Cost&quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&quot;Lane&quot;)
+        verbose_name_plural = _(&quot;Lanes&quot;)
+
+
+class Locker(models.Model):
+    &quot;&quot;&quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&quot;&quot;&quot;
+
+    # Using CharField, because sometimes locker number might be &quot;A23&quot; or &quot;56-B&quot;
+    number = models.CharField(_(&quot;Locker Number&quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&quot;lockers&quot;)
+    per_hour_cost = models.DecimalField(_(&quot;Per-Hour Cost&quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&quot;Locker&quot;)
+        verbose_name_plural = _(&quot;Lockers&quot;)
+
+
+class LaneReservation(models.Model):
+    &quot;&quot;&quot;A lane reservations defines a set of users, a period of time, and a pool lane&quot;&quot;&quot;
+
+    users = models.ManyToManyField(User, related_name=&quot;lane_reservations&quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&quot;lane_reservations&quot;)
+    period = DateTimeRangeField(
+        _(&quot;Reservation Period&quot;),
+        validators=[
+            DateTimeRangeLowerMinuteValidator(0, 30),
+            DateTimeRangeUpperMinuteValidator(0, 30),
+            validate_zeroed_dt_sec_microsec,
+        ],
+    )
+    actual = DateTimeRangeField(_(&quot;Actual Usage Period&quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&quot;Reservation is Cancelled&quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&quot;Lane Reservation&quot;)
+        verbose_name_plural = _(&quot;Lane Reservations&quot;)
+
+
+class LockerReservation(models.Model):
+    &quot;&quot;&quot;A locker reservation defines a user, a period of time, and a pool locker&quot;&quot;&quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&quot;locker_reservations&quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&quot;locker_reservations&quot;)
+    period = DateTimeRangeField(_(&quot;Reservation Period&quot;))
+    actual = DateTimeRangeField(_(&quot;Actual Usage Period&quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&quot;Reservation is Cancelled&quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&quot;Locker Reservation&quot;)
+        verbose_name_plural = _(&quot;Locker Reservations&quot;)
+</pre>
+<p>Example Project Walkthrough (30 min)</p>
+<p>The models in this project will be used to demonstrate a variety of tasks in django views, including a number of the following:</p>
+<ul class="simple">
+<li>Set constraints for the various range fields</li>
+<li>Access the lower and upper values of a range fields in views and templates</li>
+<li>Get reservations that start at a specific datetime</li>
+<li>Get reservations that overlap with a single date</li>
+<li>Get reservations that overlap with a range</li>
+<li>Check if a reservations start datetime matches any value in a list</li>
+<li>Get reservations with a start or end that falls between two dates</li>
+<li>Get reservations whose lower/upper date falls within a range</li>
+<li>Get reservations for the current week</li>
+<li>Get reservations that end before now</li>
+<li>Get reservations that start on or before September</li>
+<li>Get reservations that end in May OR September</li>
+<li>Given a list of datetimes, get all reservations that overlap with the items in the list</li>
+<li>Order the queryset by lower. If two reservations have the same lower, also sort by upper. (This is the default behavior in django)</li>
+<li>Get reservations with an overdue start (the reservation time started, but the party has not yet checked in)</li>
+<li>Get reservations with an overdue end (the reservation time ended, but the party has not checked out)</li>
+<li>Given a datetime (and other filtering criteria), get the count of reservations at that moment</li>
+<li>For a particular Lane (or set of Lanes), get the aggregate count/sum of reservations during each hour of a daterange</li>
+<li>Sum of all swimmers at a given moment</li>
+<li>Sum of all swimmers at each time period change</li>
+<li>For a particular Lane or entire Pool, get the time and value of all changes in number of swimmers</li>
+<li>Given a start time stop time and a Lane, return a queryset of the swimmers at each 15 minute increment.</li>
+<li>Calculated overall usage (number of swimmers * time interval = swimmer hours) within a time range</li>
+<li>Total usage by day/week/month by Pool/Lane</li>
+<li>Usage by range:  Given a list of ranges, calculate the usage during each range</li>
+<li>Prevent overlapping reservation_period for the same resource (here, it's Rooms), where the reservation has not already been cancelled</li>
+<li>Add validation to model field for minimum and maximum datetimes</li>
+<li>Aggregate the minimum Lower and maximum Upper reservations dates for all reservations in a queryset</li>
+<li>Similarly, annotate the minimum Lower and maximum Lower reservations dates for all reservations in a queryset</li>
+<li>Assuming each reservation is associated with a Resource, annotate Resources with the most recently ending reservation (similar for most recent starting or longest-ago starting/ending reservation)</li>
+<li>Multiple ways of saving a model instance with DateTimeRangeField</li>
+</ul>
+<p><em>Note: Those examples above which we are unable to cover during the talk can be viewed in the example project GitHub repo which will be provided for the talk</em></p>
+<p>Resources (5 min)</p>
+<ul class="simple">
+<li>[psycopg2.extras](<a class="reference external" href="https://www.psycopg.org/docs/extras.html">https://www.psycopg.org/docs/extras.html</a>)</li>
+<li>[This talk &amp; Example Project](<a class="reference external" href="https://github.com/jacklinke/home-on-the-range-with-django">https://github.com/jacklinke/home-on-the-range-with-django</a>)</li>
+<li>[django-range-merge](<a class="reference external" href="https://github.com/jacklinke/django-range-merge/">https://github.com/jacklinke/django-range-merge/</a>) - use <cite>range_merge</cite> aggregate with Django</li>
+<li>[django-generate-series](<a class="reference external" href="https://github.com/jacklinke/django-generate-series">https://github.com/jacklinke/django-generate-series</a>) - create sequences with Django's ORM</li>
+</ul>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/djangocon-us-2022.html">DjangoCon US 2022</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=zCxDAQZfeIo" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://2022.djangocon.us">
+Conference Website                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/djangocon-us-2022/videos/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

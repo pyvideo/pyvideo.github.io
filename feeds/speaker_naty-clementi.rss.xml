@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Naty Clementi</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 18 Apr 2025 00:00:00 +0000</lastBuildDate><item><title>Porque SQL está en todas partes.</title><link>https://pyvideo.org/pycon-us-2024/porque-sql-esta-en-todas-partes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nos encanta usar Python en nuestro trabajo, pero lamentablemente la base
+de datos de tu empresa donde ejecutas tus ETL (extracción,
+transformación y carga) te lo previene. Muy probablemente tu base de
+datos hable SQL, ¿Por qué? Porque SQL está en todos lados, ha estado
+presente durante un largo tiempo, está estandarizado y es conciso.&lt;/p&gt;
+&lt;p&gt;¿Pero realmente está estandarizado? ¿Y siempre es conciso? ¡No! ¿Aún
+necesitamos usarlo? ¡Probablemente sí! ¿Qué puede hacer una persona que
+trabaja con datos? ¿SQL con string-templating (plantilla de cadena de
+caracteres)? print(f&amp;quot;Ese camino conduce a {locura}}&amp;quot;.)&lt;/p&gt;
+&lt;p&gt;Mejor, ¡ven y aprende sobre Ibis!&lt;/p&gt;
+&lt;p&gt;Ibis es una biblioteca completamente en Python que ofrece una una
+interfaz similar a aquellas con estructuras de datos tabulares (data
+frames), que te permite construir queries concisas y componibles que se
+pueden ejecutar en una amplia variedad de backends (SQLite, DuckDB,
+Postgres, Spark, Clickhouse, Snowflake, BigQuery, ¡y más!).&lt;/p&gt;
+&lt;p&gt;¿Alguna vez has tenido que traducir un prototipo de Pandas a PySpark
+para ejecutarlo en &amp;quot;datos reales&amp;quot;?&lt;/p&gt;
+&lt;p&gt;¿O descargar un enorme archivo parquet porque los datos en la fuente son
+el resultado de 500 líneas de SQL denso y tienes miedo de tocarlo?&lt;/p&gt;
+&lt;p&gt;¿Quieres probar esta cosa llamada &amp;quot;DuckDB&amp;quot; pero no quieres aprender SQL?&lt;/p&gt;
+&lt;p&gt;¿Tienes una relación de amor/odio con SQL porque te permite hacer tu
+trabajo, pero piensas que debe haber una mejor manera?&lt;/p&gt;
+&lt;p&gt;¿Te has quedado atascado manteniendo un creciente y amorfo conjunto de
+SQL con plantillas que solo se suponía que se usaría para esa
+demostración?&lt;/p&gt;
+&lt;p&gt;Bueno, si eres un ingeniero de datos, científico de datos, entusiasta de
+los datos o cualquier cosa relacionada con los datos, ¡ven y únete a
+nosotros para descubrir lo que Ibis puede hacer por ti!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Phillip Cloud</dc:creator><pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-05-17:/pycon-us-2024/porque-sql-esta-en-todas-partes.html</guid><category>PyCon US 2024</category></item><item><title>Introduction to Ibis: blazing fast analytics with DuckDB, Polars, Snowflake, and more, from the comfort of your Python repl.</title><link>https://pyvideo.org/pycon-us-2024/introduction-to-ibis-blazing-fast-analytics-with-duckdb-polars-snowflake-and-more-from-the-comfort-of-your-python-repl.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tabular data is ubiquitous, and pandas has been the de facto tool in
+Python for analyzing it. However, as data size scales, analysis using
+pandas may become untenable. Luckily, modern analytical databases (like
+DuckDB) are able to analyze this same tabular data, but perform
+orders-of-magnitude faster than pandas, all while using less memory.
+Many of these systems only provide a SQL interface though; something far
+different from pandas’ dataframe interface, requiring a rewrite of your
+analysis code.&lt;/p&gt;
+&lt;p&gt;This is where Ibis comes in. Ibis provides a common dataframe interface
+to many popular databases and analytics tools (BigQuery, Snowflake,
+Spark, DuckDB, …). This lets users analyze data using the same
+consistent API, regardless of which backend they’re using, and without
+ever having to learn SQL (but you can use SQL if you want to!). No more
+pains rewriting pandas code to something else when you run into
+performance issues; write your code once using Ibis and run it on any
+supported backend.&lt;/p&gt;
+&lt;p&gt;In this tutorial we’ll cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The basic operations of Ibis (&lt;tt class="docutils literal"&gt;select&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;filter&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;group_by&lt;/tt&gt;,
+&lt;tt class="docutils literal"&gt;order_by&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;join&lt;/tt&gt;, and &lt;tt class="docutils literal"&gt;aggregate&lt;/tt&gt;), and how these operations
+may be composed to form more complicated queries.&lt;/li&gt;
+&lt;li&gt;How Ibis may be used on a number of different local and remote
+backend engines to execute the same queries on different systems.&lt;/li&gt;
+&lt;li&gt;The tradeoffs of different database engines, and recommendations for
+how to choose the best tool for the job.&lt;/li&gt;
+&lt;li&gt;How Ibis integrates into the larger Python data ecosystem, including
+tools like Scikit-Learn, Matplotlib, PyArrow, pandas, Altair, and
+VegaFusion.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is a hands-on tutorial, with numerous examples to get your hands
+dirty. Participants should ideally have some experience using Python and
+pandas, but no SQL experience is necessary.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gil Forsyth</dc:creator><pubDate>Wed, 15 May 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-05-15:/pycon-us-2024/introduction-to-ibis-blazing-fast-analytics-with-duckdb-polars-snowflake-and-more-from-the-comfort-of-your-python-repl.html</guid><category>PyCon US 2024</category></item><item><title>RAPIDS: GPU-Accelerated Data Science for PyData Users</title><link>https://pyvideo.org/pydata-virginia-2025/rapids-gpu-accelerated-data-science-for-pydata-users.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this introductory hands-on tutorial, participants will learn how to accelerate their data workflows with RAPIDS (&lt;a class="reference external" href="https://rapids.ai/"&gt;https://rapids.ai/&lt;/a&gt;), an open-source suite of libraries designed to leverage the power of NVIDIA (&lt;a class="reference external" href="https://www.nvidia.com/"&gt;https://www.nvidia.com/&lt;/a&gt;) GPUs for end-to-end data pipelines. Using familiar PyData APIs like cuDF (GPU-accelerated pandas) and cuML (GPU-accelerated machine learning), attendees will explore how to seamlessly integrate these tools into their existing workflows with minimal code changes, achieving significant speedups in tasks such as data processing and model training.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Naty Clementi</dc:creator><pubDate>Fri, 18 Apr 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-04-18:/pydata-virginia-2025/rapids-gpu-accelerated-data-science-for-pydata-users.html</guid><category>PyData Virginia 2025</category></item><item><title>Ibis + DuckDB geospatial: a match made on Earth</title><link>https://pyvideo.org/scipy-2024/ibis-duckdb-geospatial-a-match-made-on-earth.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Geospatial data is becoming more present in data workflows today, and plenty of Python tools allow us to work with it. In the past year, a new contender emerged: DuckDB introduced an extension for analyzing geospatial data. Everyone in the data world has been buzzing about DuckDB (~15k stars on GitHub), and now this duck quacks geospatial data too. But wait a minute, isn’t DuckDB all SQL? Yes, but fear not, Ibis has you covered! Ibis is a Python library that provides a dataframe-like interface, enabling users to write Python code to construct SQL expressions that can be executed on multiple backends, like DuckDB. In this talk, you will learn how to leverage the benefits of DuckDB geospatial while remaining in the Python ecosystem (yes, we will do a live demo). This is an introductory talk; everyone is welcome, and no previous experience with spatial databases or geospatial workflows is needed.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Naty Clementi</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/scipy-2024/ibis-duckdb-geospatial-a-match-made-on-earth.html</guid><category>SciPy 2024</category></item></channel></rss>

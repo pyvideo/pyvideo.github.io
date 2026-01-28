@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - 陳家丞</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_chen-jia-cheng.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2021-10-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>從 Flask 邁向 FastAPI 的心路歷程 - 用房屋估價模型服務體驗急速開發、高效能的快感! – 陳家丞 (PyCon Taiwan 2021)</title><link href="https://pyvideo.org/pycon-taiwan-2021/cong-flask-mai-xiang-fastapi-de-xin-lu-li-cheng-yong-fang-wu-gu-jia-mo-xing-fu-wu-ti-yan-ji-su-kai-fa-gao-xiao-neng-de-kuai-gan-chen-jia-cheng-pycon-taiwan-2021.html" rel="alternate"></link><published>2021-10-03T00:00:00+00:00</published><updated>2021-10-03T00:00:00+00:00</updated><author><name>陳家丞</name></author><id>tag:pyvideo.org,2021-10-03:/pycon-taiwan-2021/cong-flask-mai-xiang-fastapi-de-xin-lu-li-cheng-yong-fang-wu-gu-jia-mo-xing-fu-wu-ti-yan-ji-su-kai-fa-gao-xiao-neng-de-kuai-gan-chen-jia-cheng-pycon-taiwan-2021.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:00-13:45&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;過往在使用Python開發API的時候，基於WSGI架構下，運算中遇到IO bound時，可以透過多線程去處理，但遇到cpu bound時，多線程並不是一個好的選擇，因為線程會受限於GIL，並不會有效提升效能，而當遇到運算請求量較大時，為了因應大量的運算請求，可以透過多進程來彌補多線程的不足，但同時也需要承擔過多的資源消耗以及考慮Inter-Process Communication overhead。 而這些問題在FastAPI得到了救贖，FastAPI是一個建立在ASGI架構下的Web框架，以Python所提出的非同步概念為基礎，透過Coroutine的方式，去提高CPU運算效率，去改善多線程、多進程對於cpu bound遇到的問題。 本次演講主要透過房屋估價模型服務程式碼的解說，分享如何從過去使用的Flask框架，轉換為FastAPI框架。透過非同步的設計，即使有GIL的限制，仍舊能夠透過單線程去達到類似多進程的運算效能，減少開啟多進程造成的資源耗費過多。此外，透過程式碼，說明這兩個框架開發上的不同之處，以及轉換過程中曾經遇到的問題，讓想使用FastAPI但還在觀望的人能夠有參考方向，減少未來使用時踩雷的機會!&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;想透過本次演講告訴大家的內容
+ASGI架構是什麼?FastAPI是什麼?是如何應用Async?
+藉由實際痛點 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:00-13:45&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;過往在使用Python開發API的時候，基於WSGI架構下，運算中遇到IO bound時，可以透過多線程去處理，但遇到cpu bound時，多線程並不是一個好的選擇，因為線程會受限於GIL，並不會有效提升效能，而當遇到運算請求量較大時，為了因應大量的運算請求，可以透過多進程來彌補多線程的不足，但同時也需要承擔過多的資源消耗以及考慮Inter-Process Communication overhead。 而這些問題在FastAPI得到了救贖，FastAPI是一個建立在ASGI架構下的Web框架，以Python所提出的非同步概念為基礎，透過Coroutine的方式，去提高CPU運算效率，去改善多線程、多進程對於cpu bound遇到的問題。 本次演講主要透過房屋估價模型服務程式碼的解說，分享如何從過去使用的Flask框架，轉換為FastAPI框架。透過非同步的設計，即使有GIL的限制，仍舊能夠透過單線程去達到類似多進程的運算效能，減少開啟多進程造成的資源耗費過多。此外，透過程式碼，說明這兩個框架開發上的不同之處，以及轉換過程中曾經遇到的問題，讓想使用FastAPI但還在觀望的人能夠有參考方向，減少未來使用時踩雷的機會!&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;想透過本次演講告訴大家的內容
+ASGI架構是什麼?FastAPI是什麼?是如何應用Async?
+藉由實際痛點(mutli-thread、mutli-process issue)案例-房屋估價模型服務分析Flask與FastAPI開發上相異之處，以及這樣的相異之處對開發上的影響
+非同步框架帶來好處的同時，使用上所需的注意事項
+實際房屋估價模型服務轉換前轉後的數據比較
+除了效能以外，FastAPI所帶來的好處
+轉換上的心路歷程
+本次使用的相關工具
+FastAPI
+Flask&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.
+HackMD: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2Frk6Kg4cfY"&gt;https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2Frk6Kg4cfY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 陳家丞&lt;/p&gt;
+&lt;p&gt;Intelligent System Engineer at E.SUN Bank. Like to study python Web Framework, e.g., Flask、FastAPI.&lt;/p&gt;
+</content><category term="PyCon Taiwan 2021"></category></entry></feed>

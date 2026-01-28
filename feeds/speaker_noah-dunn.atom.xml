@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Noah Dunn</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_noah-dunn.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-07-27T00:00:00+00:00</updated><subtitle></subtitle><entry><title>GDIOCSpider: Extracting and Identifying IOCs from the GDriveverse</title><link href="https://pyvideo.org/pyohio-2025/gdiocspider-extracting-and-identifying-iocs-from-the-gdriveverse.html" rel="alternate"></link><published>2025-07-27T00:00:00+00:00</published><updated>2025-07-27T00:00:00+00:00</updated><author><name>Noah Dunn</name></author><id>tag:pyvideo.org,2025-07-27:/pyohio-2025/gdiocspider-extracting-and-identifying-iocs-from-the-gdriveverse.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Google Drive in recent years has become one of the most abused
+platforms for threat actors to conduct illegal and malicious activity.
+Threat actors use Google accounts to launch, store, and log malware,
+effectively turning Drive into a command and control center. On the
+side of legal and ethical …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Google Drive in recent years has become one of the most abused
+platforms for threat actors to conduct illegal and malicious activity.
+Threat actors use Google accounts to launch, store, and log malware,
+effectively turning Drive into a command and control center. On the
+side of legal and ethical activity, Google Drive remains a popular
+platform for security researchers to store these artifacts in
+summarized write-ups and spreadsheets of malicious and illegal
+activity observed. Much like an archaeologist looks for artifacts
+providing clues of the history of civilization, security researchers
+look for Indicators of Compromise (IOCs), which are clues to what a
+threat actor has done. Security engineers have worked across decades
+to build out tooling to analyze hard drives and network resources;
+however, similar advances to analyze Google Drive resources have
+remained underdeveloped. Along the same line, tools that aggregate and
+summarize collections of records on IOCs stored in Google Drive by
+researchers are also lacking.&lt;/div&gt;
+&lt;div class="line"&gt;The GDIOCSpider (Google Drive IOC Spider) provides a tool for both of
+these use cases. This open-source, configurable, Python tool is
+capable of crawling through an entire Google Drive, analyzing its file
+contents, and searching for various defined IOC (Indicators of
+Compromise) types to extract. This tool outputs a summary of all
+discovered artifacts across all files, erasing the need for security
+researchers to manually sift through cloud stores. Supplementing the
+compromised account use case, the same tool can be used to aggregate
+IOCs collected in personal or corporate Google Drive accounts in the
+form of case records gathered by security researchers. This
+‘environment agnostic’ approach is how GDIOCSpider enables security
+researchers to perform efficient IOC research in Google Drive.&lt;/div&gt;
+&lt;div class="line"&gt;GDIOCSpider supports capabilities for both user accounts and service
+accounts through the Google Drive API. It has allowlist and denylist
+capabilities for both folders and files to prevent access of files
+with compliance and security restrictions. For those that are very
+interested in performing local IOC analysis and extraction,
+GDIOCSpider contains a build abstract tool ‘IOCFlagger’ within the
+context of the source code. IOCFlagger offers a rich IOC parser that
+is capable of both loose and strict matching for use cases where it is
+necessary to search within a string, or simply match a string to an
+IOC type exactly. The full suite of tools under the GDIOCSpider’s
+umbrella enables the user or team operating it to enter the
+“GDriveverse” of Google account incident response, and provide
+meaningful data for case work and research.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="PyOhio 2025"></category></entry></feed>

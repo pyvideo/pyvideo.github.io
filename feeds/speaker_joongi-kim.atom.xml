@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Joongi Kim</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_joongi-kim.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-05-18T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Improving debuggability of complex asyncio applications</title><link href="https://pyvideo.org/pycon-us-2023/improving-debuggability-of-complex-asyncio-applications.html" rel="alternate"></link><published>2023-04-21T00:00:00+00:00</published><updated>2023-04-21T00:00:00+00:00</updated><author><name>Joongi Kim</name></author><id>tag:pyvideo.org,2023-04-21:/pycon-us-2023/improving-debuggability-of-complex-asyncio-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The key of debugging is observability and reproducibility. Despite a
+series of the asyncio stdlib improvements for the last few years, it is
+still challenging to see what’s happening in complex real-world asyncio
+applications. Particularly, when multiple asyncio libraries and your
+codes are composed together, it is hard …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The key of debugging is observability and reproducibility. Despite a
+series of the asyncio stdlib improvements for the last few years, it is
+still challenging to see what’s happening in complex real-world asyncio
+applications. Particularly, when multiple asyncio libraries and your
+codes are composed together, it is hard to track down silently swallowed
+cancellations and resource-hogging floods of tasks triggered by
+internals of 3rd-party callbacks. Moreoever, such misbehaviors are often
+observed only in production environments where the app faces the actual
+workloads and I/O patterns, making it even harder to reproduce.&lt;/p&gt;
+&lt;p&gt;In this talk, I present an improved version of aiomonitor, called
+aiomonitor-ng (next generation). The original aiomonitor provides a live
+access to a running asyncio process using a telnet socket and a basic
+REPL to inspect the list of tasks and their current stacks. After
+getting several times of assistance in production debugging with it, I
+have added more features to help tracking the above issues of asyncio
+apps running in production: task creation tracker and termination
+tracker. These trackers keeps the stack traces whenever a new task is
+created or terminated, and provides a holistic view of chained stack
+traces when the tasks are nested with arbitrary depths.&lt;/p&gt;
+&lt;p&gt;aiomonitor-ng also demonstrates a rich async TUI (terminal UI) based on
+prompt toolkit and Click, with auto-completion of commands and
+arguments, far enhancing the original version’s simple REPL.&lt;/p&gt;
+&lt;p&gt;With the improved aiomonitor-ng, I could successfully debug several
+production bugs. I hope this talk would help our fellow asyncio
+developers to make more complex yet stable applications at scale.&lt;/p&gt;
+</content><category term="PyCon US 2023"></category></entry><entry><title>Lightning Talks - Sunday</title><link href="https://pyvideo.org/pycon-us-2025/lightning-talks-sunday.html" rel="alternate"></link><published>2025-05-18T00:00:00+00:00</published><updated>2025-05-18T00:00:00+00:00</updated><author><name>Illirik Smirnov</name></author><id>tag:pyvideo.org,2025-05-18:/pycon-us-2025/lightning-talks-sunday.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A collection of lightning talks made by the community.&lt;/p&gt;
+&lt;p&gt;1:15 - Illirik Smirnov - Phone numbers and you: tips, tricks, and footguns
+5:15 - Evan Kohilas - What have they done! Why is &lt;cite&gt;re.sub&lt;/cite&gt; changing from Python 3.13?
+9:55 - Adam Silkey - &amp;quot;Solving&amp;quot; Python Packaging on Windows, once and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A collection of lightning talks made by the community.&lt;/p&gt;
+&lt;p&gt;1:15 - Illirik Smirnov - Phone numbers and you: tips, tricks, and footguns
+5:15 - Evan Kohilas - What have they done! Why is &lt;cite&gt;re.sub&lt;/cite&gt; changing from Python 3.13?
+9:55 - Adam Silkey - &amp;quot;Solving&amp;quot; Python Packaging on Windows, once and for all
+12:00 - Jonathan Daniel - Using &lt;cite&gt;uv pip&lt;/cite&gt; to accelerarte Docker
+17:00 - Takanori Suzuki - Put the Cat Emoji in your documents!
+22:30 - Jing Cao - What I learned going on strike with the NYTimes Tech Guild
+28:00 - Michael McCaffrey - Overcoming ADHD and anxiety to achieve long-term goals
+32:50 - Joongi Kim - My 10 years with PyCon KR
+38:10 - Dave Peck - A whirlwind tour of t-strings!
+43:45 - Sheena O'Connell - Python in Africa
+48:00 - Conference Announcements&lt;/p&gt;
+</content><category term="PyCon US 2025"></category></entry></feed>

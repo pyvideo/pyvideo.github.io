@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Python 3</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><item><title>AsyncIO in production - War Stories</title><link>https://pyvideo.org/europython-2019/asyncio-in-production-war-stories.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My team has been running AsyncIO in production for over 2 years now and
+the only thing I can say about my experience with it is: &amp;quot;Oh boy, what a
+rollercoaster of feelings&amp;quot;. I've experienced laughs and tears, sweat and
+blood but also sang songs of glory. AsyncIO is currently the biggest
+buzzword in the Python world advertised as a silver bullet capable of
+solving all Python's shortcomings in the field of performance. However,
+it also brings a burden of being a completely new approach with a fresh
+implementation which is not often mentioned and taken into
+consideration. In some of my team's projects we've achieved a great
+success thanks to AsyncIO, but there's been a few where we decided to
+get rid of it and replace it with a more traditional fork-join
+architecture. I'd like to share my experience with AsyncIO, tell some
+War Stories and discuss which projects it suits perfectly and which ones
+should avoid it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michal Wysokinski</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/asyncio-in-production-war-stories.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Debugging</category><category>Python 3</category><category>Use Case</category></item><item><title>Code quality in Python</title><link>https://pyvideo.org/europython-2019/code-quality-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Four years ago I talked about code quality during EuroPython in
+Bilbao. A lot of things changed from that time. Firstly, most tools I
+presented were still developed and gained new features, but also new
+ones appeared I wanted to discuss with you. Secondly, Python changed,
+Python 3 has type hints on board and there is a new tool dedicated to
+checking the types. Thirdly - I changed. I'm more distanced form my
+zealous approach from four years ago. I got real and reasonable.
+That's why I wanted to talk about code quality tools in Python again.&lt;/div&gt;
+&lt;div class="line"&gt;I'll talk about all the software that can make code review a bit
+simpler by pointing out possible errors, duplicates or unused code.
+I'll talk again about formatters and how can they be used in
+modern-time projects. And I'll talk about hobgoblins, if you know what
+I mean :)&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radosław Ganczarek</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/code-quality-in-python.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Code Analysis</category><category>Python 3</category><category>Tooling</category><category>Type-Hinting</category></item><item><title>Moving big projects to Python 3</title><link>https://pyvideo.org/europython-2019/moving-big-projects-to-python-3.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Next year Python 2 is no longer maintained. But you have a monster code
+base with clever tricks and libraries that don't support Python 2, and
+your data may be stored in a format that is hard to move Python 3. And
+that's the easy bit.&lt;/p&gt;
+&lt;p&gt;This talk focuses on the process of moving, not the code changes.
+Because it's the process that is the hard part. How do you get your code
+in a state where it's ready to move? How do you get the whole team on
+the boat to Python 3?&lt;/p&gt;
+&lt;p&gt;All Python 3 talks I have seen, including those I have given, and all
+the texts on how to port, including the book I wrote, focus on the code
+changes. With increasing backwards compatibility in Python 3 and
+forward-compatibility in Python 2, this actually became a lesser problem
+for big code bases.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The extra issues of large, old code bases&lt;/li&gt;
+&lt;li&gt;Can you stop adding features? (1 min)&lt;/li&gt;
+&lt;li&gt;Separate team vs getting everyone on it (2 min)&lt;/li&gt;
+&lt;li&gt;Python 2 compatibility: You need it (1 min)&lt;/li&gt;
+&lt;li&gt;The steps&lt;/li&gt;
+&lt;li&gt;Fix your development process (2 min)&lt;/li&gt;
+&lt;li&gt;Replace old libraries, or take over maintenance and port them (2 min)&lt;/li&gt;
+&lt;li&gt;Make sure your tests are solid (1 min)&lt;/li&gt;
+&lt;li&gt;Run 2to3 but only backwards compatible fixers (2 min)&lt;/li&gt;
+&lt;li&gt;Run tests on Python 3 to stop backsliding (4 min)&lt;/li&gt;
+&lt;li&gt;Run all tests: Expansive or slow&lt;/li&gt;
+&lt;li&gt;Store passed tests&lt;/li&gt;
+&lt;li&gt;Detect tests that change&lt;/li&gt;
+&lt;li&gt;Turning it off adds a lot of extra work&lt;/li&gt;
+&lt;li&gt;Port all your little utilities and tool scripts (1 min)&lt;/li&gt;
+&lt;li&gt;Fix fix fix fix (1 min)&lt;/li&gt;
+&lt;li&gt;Add tests with Python 2 data, to test migration (2 min)&lt;/li&gt;
+&lt;li&gt;You might need migration scripts&lt;/li&gt;
+&lt;li&gt;Extra careful staging tests (1 min)&lt;/li&gt;
+&lt;li&gt;Production: Try, fail, repeat (1 min)&lt;/li&gt;
+&lt;li&gt;Clean the code up (3 min)&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lennart Regebro</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/moving-big-projects-to-python-3.html</guid><category>EuroPython 2019</category><category>Deployment/Continuous Integration and Delivery</category><category>Management</category><category>Python 3</category><category>Testing</category></item><item><title>The Story of Features Coming in Python 3.8 and Beyond</title><link>https://pyvideo.org/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What's coming in Python 3.8? You can learn it by yourself by reading an
+excellent document [What's New in Python 3.8][1]. I'm not going to
+retell this document. Instead I'll focus on things barely described
+there or not mentioned at all:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why will the new features appear in Python 3.8 and what's the story
+behind them?&lt;/li&gt;
+&lt;li&gt;What is being discussed and developed now, but won't appear in Python
+3.8?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I'll share the news I learned at PyCon 2019 from the talks and
+discussions with Python core developers. I'll mention the following
+topics:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;New syntax: &lt;tt class="docutils literal"&gt;x := expr&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f(...,&lt;/span&gt; /, &lt;span class="pre"&gt;...)&lt;/span&gt;&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;f'{expr=}'&lt;/span&gt;&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;New types: &lt;tt class="docutils literal"&gt;Literal&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;Final&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;TypedDict&lt;/tt&gt;&lt;/li&gt;
+&lt;li&gt;Future features of typing and async/await&lt;/li&gt;
+&lt;li&gt;New approaches to optimizing Python: sub-interpreters, mypyc&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrey Vlasovskikh</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/the-story-of-features-coming-in-python-38-and-beyond.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Compiler and Interpreters</category><category>New Features</category><category>Python 3</category><category>Type-Hinting</category></item><item><title>Exceptional Exceptions</title><link>https://pyvideo.org/europython-2019/exceptional-exceptions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Did you know there are multiple ways to raise and capture exceptions?
+Have you ever wondered if you should raise a built-in exception or
+create your own hierarchy? Did you ever find it hard to understand
+what an exception meant?&lt;/div&gt;
+&lt;div class="line"&gt;This talk will go through the decisions needed to raise and capture
+exceptions when creating a library. We will look at how to translate
+and handle errors, create your own exceptions, and make exceptions
+clear and easy to troubleshoot, while also understanding how they
+actually work, common pitfalls.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk will enable intermediate developers to leave the room with a
+solid understanding of how to work effectively with exceptions. As the
+exception flow usually goes untested, this will help prevent frustrating
+situations when errors occur that are not easy to understand or when an
+unexpected result is produced. The talk will delve into the different
+ways of working with exceptions. We will illustrate this with a
+real-world example to which many developers will be able to relate.&lt;/p&gt;
+&lt;p&gt;Following the talk, intermediate developers will leave the room more
+informed and better prepared to create and handle exceptions, having
+learned about many utilities that were already available to them, but
+were never used or were used improperly.&lt;/p&gt;
+&lt;p&gt;The not-so-advanced Pythonistas will get an in-depth dive into
+exceptions. Even if they might not be able to grasp all of the content,
+they will get a sense of the features that most programmers are unaware
+of and learn to use them when the proper situation arrives.&lt;/p&gt;
+&lt;p&gt;Advanced programmers will find this to be a humorous talk that will
+certainly teach them at least one new thing, as I will dive into parts
+of the grammar of Python that even many advanced programmers are not
+used to.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk is also full of niche information like why the variable that
+catches exceptions doesn’t like outside of the &lt;tt class="docutils literal"&gt;except&lt;/tt&gt; scope.&lt;/div&gt;
+&lt;div class="line"&gt;The talk is comprised of four main sections preceded by an
+introduction to the problem and a conclusion with time for questions
+at the end. We will look at how to raise, capture, create and design
+exceptions, offering tips and pitfalls in each section.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mario Corchero</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/exceptional-exceptions.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Development</category><category>General</category><category>Python 3</category><category>Python Skills</category></item><item><title>Refactoring in Python</title><link>https://pyvideo.org/europython-2019/refactoring-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[Replacement talk]&lt;/div&gt;
+&lt;div class="line"&gt;This talk was a replacement for Stanislav Geidl's talk: From legacy
+code to modern code&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Honest apologies to anyone whose expectations were subverted, but
+Stanislav fell sick and could not attend. Find the updated abstract
+below:&lt;/p&gt;
+&lt;p&gt;This talk will describe experiences and lessons learned from tackling
+extremely demanding code. How to bring order to mismanaged code and
+elevate the code base to a standard that's acceptable in today's tech
+environment.&lt;/p&gt;
+&lt;p&gt;Python makes wonderful code accessible at our fingertips, but it also
+allows us to take a lot of liberty. When you start, code is beautiful
+and makes sense. With each step you walk on, you find more and more
+hacks showing up. Eventually, the brilliant codebase you've started with
+can not be seen under the mud.&lt;/p&gt;
+&lt;p&gt;Not every code-base can be rewritten, not everything can be redone from
+scratch. Cool libraries often take a lot of liberty with code structure
+and make cross-integration difficult, if not impossible. Tests sound
+ideal, but in practice, they're just so hard to make right. Why is this,
+and how to change it?&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk will tackle the problems in three parts:&lt;/div&gt;
+&lt;div class="line"&gt;- The Easy Wins: What to do to instantly increase the code quality in
+your organisation. How? Why isn't it enough?&lt;/div&gt;
+&lt;div class="line"&gt;- Patterns and Antipatterns: How to identify code that &amp;quot;smells&amp;quot;, how
+to replace it? How to integrate into old code, better?&lt;/div&gt;
+&lt;div class="line"&gt;- The Philosophy: What approach to set down for the future? Why to
+care? How to write replace-able code. How to prevent history from
+repeating.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The talk will close with audience discussion and experiences, questions
+and proposals - building a collection of some on-premise tips and
+tricks.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tin Marković</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/refactoring-in-python.html</guid><category>EuroPython 2019</category><category>Architecture</category><category>Clean Code</category><category>Development</category><category>Python 3</category><category>legacy-code</category></item><item><title>Publish a (Perfect) Python Package on PyPI</title><link>https://pyvideo.org/europython-2019/publish-a-perfect-python-package-on-pypi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Always wanted to publish a package on PyPI, but didn't know where to
+start? This talk is for you! Starting with nothing, we'll build a
+package and publish it on PyPI using current best practices.&lt;/p&gt;
+&lt;p&gt;Learn how to structure your project and your code. Discover what goes in
+your &lt;tt class="docutils literal"&gt;requirements.txt&lt;/tt&gt; and your &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;. Ensure your code will
+work in different on different platforms! Document your code so people
+won't ask you loads of questions! Finally, learn how avoid doing any of
+this yourself.&lt;/p&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Why should you package your code for PyPI?&lt;/li&gt;
+&lt;li&gt;How to structure your project and your code, including why you need a
+&lt;tt class="docutils literal"&gt;src&lt;/tt&gt; folder!&lt;/li&gt;
+&lt;li&gt;Discover what goes in your &lt;tt class="docutils literal"&gt;Pipfile&lt;/tt&gt; and your &lt;tt class="docutils literal"&gt;setup.py&lt;/tt&gt;, and
+why. Learn the difference between installing your library to use it,
+and installing it to develop on it.&lt;/li&gt;
+&lt;li&gt;Write tests for your project, and run them using Tox.&lt;/li&gt;
+&lt;li&gt;Ensure your code will work in different on different platforms with
+Continuous Integration!&lt;/li&gt;
+&lt;li&gt;Document your code so people won't ask you loads of questions!&lt;/li&gt;
+&lt;li&gt;How to actually get your code on PyPI using Twine.&lt;/li&gt;
+&lt;li&gt;Finally, learn how avoid doing any of this yourself (or avoid doing
+it twice) using CookieCutter templates.&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Smith</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/publish-a-perfect-python-package-on-pypi.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Packaging</category><category>Python 3</category></item><item><title>Teaching Programming to the Next Generation</title><link>https://pyvideo.org/europython-2019/teaching-programming-to-the-next-generation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Our generation of young people in school (aged 5-18) have noticed the
+connection between Computer pRogramming, Technology &amp;amp; Success and
+Billionaires.On mass they are clamoring to master the skill of Computer
+pRogramming. We describe a successful working model for the teaching of
+Computer pRogamming.&lt;/p&gt;
+&lt;p&gt;Computer Science is now regarded as one of the leading disciplines in
+the 21st century. Computers are ubiquitous and prevalent in most, if not
+all, sectors of our modern society – applications include using them in
+weather forecasting, robotic surgery, space exploration, e-commerce,
+smart cities, driverless cars, etc.&lt;/p&gt;
+&lt;p&gt;Therefore, coding or computer programming is now regarded by many as an
+essential skill for the young person, and it has been dubbed the ‘4th’
+R’ (computer pRogramming) along with Reading, wRiting and aRithmetic.&lt;/p&gt;
+&lt;p&gt;In recognition of the new status of computer programming, governments
+worldwide have launched initiatives to have it taught in schools from
+Kindergarten through to junior school and all the way through secondary
+school.&lt;/p&gt;
+&lt;p&gt;So, the question emerges is how do we best teach and motivate the next
+generation in acquiring this skill? Given the fact that this field is
+very much in its infancy, there are insufficient number of skilled
+Computer Science teachers and very little pedagogy to guide the
+educator. Therefore, the whole world is learning how best to teach this
+subject by trial and error.&lt;/p&gt;
+&lt;p&gt;The talk will describe a case study whereby coding/computer programming,
+in the form of Python programming, was introduced to a group of 110
+young people from the ages of 11 to 18 (Years 7-13 in a U.K secondary
+school). The talk will include descriptions of the various teaching
+methodologies introduced to the young people for this purpose and the
+outcomes; the talk will also address various challenges and questions
+about how to teach coding to young people. The talk will conclude with
+helpful suggestions, based on the findings of the case study, on how to
+proceed with the teaching of computer programming to these people.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lilian Nandi anonymous</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/teaching-programming-to-the-next-generation.html</guid><category>EuroPython 2019</category><category>All Other Programming Languages</category><category>Education</category><category>Programming</category><category>Python 3</category><category>Teaching</category></item><item><title>What about recommendation engines?</title><link>https://pyvideo.org/europython-2019/what-about-recommendation-engines.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;How recommendation engines are taking part in our daily routine and
+how companies as Netflix and Amazon implement it?&lt;/div&gt;
+&lt;div class="line"&gt;This talk aims to show the elements that compound a recommendation
+engine to people who have never been in touch with the matter or want
+to know a bit more. At the end of this session, you might be able to
+reproduce your own recommendation system and also know where to find
+more about it.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Talk structure:&lt;/div&gt;
+&lt;div class="line"&gt;1. What is and why use a recommendation engine?&lt;/div&gt;
+&lt;div class="line"&gt;2. Recommendation engine importance&lt;/div&gt;
+&lt;div class="line"&gt;3. Steps of a recommendation&lt;/div&gt;
+&lt;div class="line"&gt;4. Recommendation algorithms&lt;/div&gt;
+&lt;div class="line"&gt;5. Basic Statistics for distance and correlation&lt;/div&gt;
+&lt;div class="line"&gt;6. Example&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Adriana Dorneles</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/what-about-recommendation-engines.html</guid><category>EuroPython 2019</category><category>Algorithms</category><category>Big Data</category><category>Business</category><category>Data Science</category><category>Python 3</category></item><item><title>Writing a Python autoreloader</title><link>https://pyvideo.org/europython-2019/writing-a-python-autoreloader.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Reloading your code changes quickly is an integral part of the
+development experience in frameworks like Django and Flask that
+developers have come to rely on. But how do they work under the hood and
+what challenges do you face while writing one?&lt;/p&gt;
+&lt;p&gt;In this talk I will explore how I refactored the autoreload
+implementation in Django 2.2 and the lessons I learned along the way
+(hint: it's surprisingly complex!). I will also be introducing a library
+I've developed to simplify this if you ever find yourself writing your
+own.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tom Forbes</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/writing-a-python-autoreloader.html</guid><category>EuroPython 2019</category><category>Architecture</category><category>Development</category><category>Django</category><category>Python 3</category><category>Software Design</category></item><item><title>15 Things You Should Know About Spacy</title><link>https://pyvideo.org/europython-2020/15-things-you-should-know-about-spacy.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Natural Language Processing to Go&lt;/p&gt;
+&lt;p&gt;spaCy is a free, open-source library for advanced Natural Language Processing (NLP) in Python.
+It was specifically designed for production use and it's a great tool to build applications that process text and help  to “understand” large corpuses.&lt;/p&gt;
+&lt;p&gt;In this talk I'll present 15 things you should know about Spacy for the better and worse.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexander Hendorf</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/15-things-you-should-know-about-spacy.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Natural Language Processing</category><category>Python 3</category></item><item><title>A deep dive and comparison of Python drivers for Cassandra and Scylla</title><link>https://pyvideo.org/europython-2020/a-deep-dive-and-comparison-of-python-drivers-for-cassandra-and-scylla.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will explain the thread-per-core data architecture of Scylla and
+detail how we implemented &amp;quot;shard-awareness&amp;quot; in the Cassandra Python driver
+which allows to route queries down to the right CPU!&lt;/p&gt;
+&lt;p&gt;Cassandra's and Scylla's architecture and topology rely on the usage of
+a consistent token ring to distribute their data evenly on the cluster.&lt;/p&gt;
+&lt;p&gt;The cassandra-python driver is used widely to interact with those NoSQL
+databases. It implements connection pools and token awareness allowing the
+driver to route queries to the right node based on its knowledge of where the
+data is.&lt;/p&gt;
+&lt;p&gt;But Scylla goes one step further as it also dedicates CPUs to a smaller portion
+of the data on each node (called shards). This means that &lt;strong&gt;we can route CQL
+queries not only to the right node but to the right CPU&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;This talk will give implementation details on how we have done it.&lt;/p&gt;
+&lt;p&gt;Talk audience requirements: having a minimal knowledge of what Cassandra and
+a consistent hash ring are.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexys Jacob</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/a-deep-dive-and-comparison-of-python-drivers-for-cassandra-and-scylla.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Databases</category><category>NoSQL</category><category>Python 3</category><category>Scaling</category></item><item><title>Creating the Next Generations of Billionaires - Part 2</title><link>https://pyvideo.org/europython-2020/creating-the-next-generations-of-billionaires-part-2.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Teaching the Next Generation of Computer Trillionaires&lt;/p&gt;
+&lt;p&gt;Our generation of young people in school (aged 5-18) have noticed the connection between Computer pRogramming, Technology, Success and Billionaires. On mass they are clamouring to master the skill of Computer pRogramming. It  has been dubbed the ‘4th’ R’ (computer pRogramming) along with Reading, wRiting and aRithmetic. So, governments worldwide have launched initiatives to have it taught in schools from Kindergarten to all the way to high school.&lt;/p&gt;
+&lt;p&gt;So, how do we best teach and motivate the next generation in acquiring this skill?&lt;/p&gt;
+&lt;p&gt;We describe a successful working model for the teaching of Computer pRogamming. We have been building upon this model for a couple of years now.  Last year at EuroPython 2019 in Basel, we spoke about this subject and this year we would like to share more findings with the Python community about what we are learning about the teaching of Computer Programming to children and young people.&lt;/p&gt;
+&lt;p&gt;The talk will describe a case study whereby computer programming (Python) was introduced to a group of 110 young people from the ages of 11 to 18, in a U.K secondary school. The talk will include descriptions of the various teaching methodologies &amp;amp; the outcomes; &amp;amp; the challenges involved. The talk will conclude with helpful suggestions, on how to proceed in this area.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">lil anonymous</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/creating-the-next-generations-of-billionaires-part-2.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Education</category><category>General</category><category>Python 3</category><category>Science</category><category>Teaching</category></item><item><title>Developing GraphQL API in Django using Graphene</title><link>https://pyvideo.org/europython-2020/developing-graphql-api-in-django-using-graphene.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Build GraphQL schema, queries, and mutations in Django using graphene library&lt;/p&gt;
+&lt;p&gt;GraphQL technology has become popular nowadays. While developing REST APIs, there are many things that developers need to take into consideration. There are multiple endpoints and over-fetching is the main problem of REST. GraphQL offers a unique approach and architecture for developing APIs. How is that efficient?&lt;/p&gt;
+&lt;p&gt;While using GraphQL, a client can request the data which is needed. It is an alternative for building APIs in place of REST. It’s a query language that can work as a medium between the frontend and backend.&lt;/p&gt;
+&lt;p&gt;The journey to develop GraphQL APIs in python needs some requirements and knowledge. We will be building APIs in the Django framework using a graphene library which includes many features of GraphQL such as ObjectTypes, Queries, Mutations, etc. We will start by understanding these concepts followed by some code. This includes detailed information about the Query class, what are resolvers, and where to write business logic, how pagination can be incorporated with queries would be included. Also, it will include the information about the Mutation class, arguments needed for mutation, and what type of response can be returned on successful operations.&lt;/p&gt;
+&lt;p&gt;Learning outcomes would be the understanding of code and building GraphQL APIs using graphene in a proper and structured way.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nisarg Shah</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/developing-graphql-api-in-django-using-graphene.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>APIs</category><category>Databases</category><category>Django</category><category>PostgreSQL</category><category>Python 3</category></item><item><title>Ensuring data integrity with asynchronous programming in a cloud IoT core</title><link>https://pyvideo.org/europython-2020/ensuring-data-integrity-with-asynchronous-programming-in-a-cloud-iot-core.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python3.6, AsyncIO, Flask, RabbitMQ. A simple and powerful combination for IoT data integrity.&lt;/p&gt;
+&lt;p&gt;Undoubtedly this will be the decade of low-cost and high-performance cloud IoT core development.
+All cloud IoT solutions will have to meet the same two fundamental requirements: Performance and Data Integrity. Having said that,  AsyncIO comes to mind.
+While researching similar topics on cloud IoT solutions, we noticed that the vast majority of such solutions primarily includes performance. In this discussion we would like to demonstrate how you can ensure that a low-cost, fast developed cloud IoT core can ensure that its data is not corrupted and is accurate  for the user.
+Technically speaking, it is very interesting to analyze how a bucket of async/await tasks can handle (consume or even produce) messages from or to message queues, interact with other (even non pythonic) modules inside the core, manage socket connections and many other functionalities that make Python3.6+ the heart of any IoT core. Note that it is equally important to check imported data with periodic tasks, acquire statistics from devices and sanitize database data in order to ensure data integrity.
+Our goal: Firstly, to encourage new developers to get involved with cloud IoT cores and use Python and AsyncIO as the heart of their core. Secondly, as new developers we would like to show our logic and our prefered python libraries and techniques in order to receive feedback from more experienced developers.
+We are a team of software engineers located in Athens, Greece working for a fast growing startup in San Francisco (&lt;a class="reference external" href="https://www.veturilo.io"&gt;https://www.veturilo.io&lt;/a&gt;). We have developed our own cloud IoT core for a vehicle fleet management SaaS.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Theofanis Petkos</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/ensuring-data-integrity-with-asynchronous-programming-in-a-cloud-iot-core.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>ASYNC / Concurreny</category><category>Internet of Things (IoT)</category><category>Python 3</category><category>Software Design</category><category>Use Case</category></item><item><title>Honey, There Is a Python in My Android Phone!</title><link>https://pyvideo.org/europython-2020/honey-there-is-a-python-in-my-android-phone.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This project was initiated during my Christmas vacation, inspired by Android Barcode Scanner as I was looking on the solution that I could catalogue my books by scanning the ISBN using android phone.
+This quick solution did save me enormous amount of time in cataloguing my books. Intriguing by the design of APIs that can interact with android intents, I decided to dig further to understand how the APIs works. In concept, there is an RPC call between android app and python interpreter within the app that acts as a bridge, which allows python APIs to trigger Android intents, upon calling related APIs. For example, using the code snippet above, when Python GPS API is executed, the API will send request to Android GPS intent via the RPC call. Once Android intent receives the request, it will grab the GPS data, and passes the GPS data back to Python GPS API through the same channel.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Ing Wei Tang</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/honey-there-is-a-python-in-my-android-phone.html</guid><category>EuroPython 2020</category><category>conference</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>python</category><category>Gadgets</category><category>General</category><category>Python 3</category></item><item><title>Migrating codebases with millions of modules from Python 2 to Python 3</title><link>https://pyvideo.org/europython-2020/migrating-codebases-with-millions-of-modules-from-python-2-to-python-3.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This has been mitigated with tooling and education, but for the most part it requires human action and decision. While most codebases have somewhere between tens and thousands of Python modules, some companies may maintain a codebase with millions of modules. This presentation covers techniques and tooling that Google created to enable the developers to scope their migration needs, plan the work required, execute effectively at scale and collaborate across teams/dependencies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Francisco Passos</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/migrating-codebases-with-millions-of-modules-from-python-2-to-python-3.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Best Practice</category><category>Python 2</category><category>Python 3</category></item><item><title>Object Internals</title><link>https://pyvideo.org/europython-2020/object-internals.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory address in Python&lt;/p&gt;
+&lt;p&gt;This talk is intended to explain to participants what is happening under the hood when they are playing around with different python built-in data structures. Explain the concepts such that they are not surprised by the behavior of Python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites:
+Anyone who knows built-in python data structures like List, Dictionaries, set, etc.&lt;/p&gt;
+&lt;p&gt;Curiosity questions that the talk answers:
+1. What happens to the memory address when * operator is used?
+2. When does python create a new object in memory?
+3. What does it refer to the mutability and immutability of objects in Python?
+4. If the outer object is immutable but the reference objects are mutable. Can the elements be added?
+5. What is the difference at the memory level when we refer to deep copy and shallow copy in lists?
+6. Operations like List.sort and sorted in python? What to use, when to use? What happens at the memory level?
+7. What is the difference between is vs ==? When should it be used?
+8. Lots and lots of interesting examples.
+9. How do we determine the memory reference id associated with the object?
+10. Meaning of assigning a value to a variable in Python.&lt;/p&gt;
+&lt;p&gt;The existing slides use screenshots. But, I'll be including more interesting examples and would replace the screenshots with GIFs. So, that folks get a feeling of live coding and remain interested in the presentation. Along with the visual representation of what is happening at the memory level.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mridu Bhatnagar</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/object-internals.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Data-Structures</category><category>Development</category><category>Python 3</category></item><item><title>Python in Prison: how open source can change a criminal justice system</title><link>https://pyvideo.org/europython-2020/python-in-prison-how-open-source-can-change-a-criminal-justice-system.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The United States has the highest incarceration rate in the world, with over 2.2 million people behind bars in our prisons, jails, juvenile facilities, and detention centers.&lt;/p&gt;
+&lt;p&gt;The system is racist and ineffective, but how do we change something so big and so economically entrenched, especially as software engineers?&lt;/p&gt;
+&lt;p&gt;Let’s look at how Python classes in US prisons are transforming rehabilitation and re-entry, and talk about what we can do as individuals and as an open source community to dismantle an unjust system.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jessica McKellar</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/python-in-prison-how-open-source-can-change-a-criminal-justice-system.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Python 3</category><category>Teaching</category></item><item><title>Static Typing in Python</title><link>https://pyvideo.org/europython-2020/static-typing-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is well-known as a programming language without static types. This means that you don’t need to say what a given variable will hold, or whether your function will return a string or an integer (or sometimes one, and sometimes another!). This has historically made Python a very flexible and beginner-friendly language.&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll discuss the advantages and disadvantages to a static type system, as well as recent efforts to introduce static typing to Python via optional “type hints” and various tools to aid in adding types to Python code. We’ll see what this means for Python, for Python programmers, and what the future has in store for Python’s type system.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dustin Ingram</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/static-typing-in-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Python 3</category><category>Static Analysis</category><category>Tooling</category><category>Type-Hinting</category><category>python</category></item><item><title>Telehealth Platform : Python &amp; Django powered</title><link>https://pyvideo.org/europython-2020/telehealth-platform-python-django-powered.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Social Network for Doctors &amp;amp; Telehealth Solution&lt;/p&gt;
+&lt;p&gt;We have built an AI-powered platform (python &amp;amp; django) for doctor's community and Telehealth support for patients during COVID-19 lockdown. The doctor's community interacts related to cases and triage for different patient cases. They can extend Telehealth support using medical practice management solutions. Patients can order medicines online through integrated pharmacies on the platform. AI Platform has digital, voice, and knowledge assistants to provide information to the doctor. Historical
+data is used for predictive analytics by the machine learning platform. The platform helps healthcare enterprises in the following:
+1. Deploy voice tech to facilitate clinical documentation
+2. Reduce physician's administrative burden
+3. Increase patient volume and billable revenue
+4. Eliminate transcription costs
+5. Voice to increase touchpoints and increase patient engagement&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Bhagvan Kommadi</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/telehealth-platform-python-django-powered.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Algorithms</category><category>Deep Learning</category><category>Django</category><category>HTML5</category><category>Python 3</category></item><item><title>The Joy of Creating Art with Code.</title><link>https://pyvideo.org/europython-2020/the-joy-of-creating-art-with-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Art is everywhere and it’s beautiful. Unleash the creative artist inside you with the beauty of Generative Art. Learn how algorithms are used to create these aesthetic art forms, how motion and structures emit sounds and what toolkits are required to do so. This talk looks at Python as an artistic and visual programming language with the simplicity and beauty of generative art using Processing, PyCairo and webGL. The audience will see an evolution of generative art over the last 50 years, how autonomously these art forms are created using algorithms and how we can stimulate paints and other media. The talk will be showing how to create artworks inspired by geometric and mathematical patterns which also includes randomness with hands-on examples (Two such examples are added here: &lt;a class="reference external" href="https://imgur.com/a/lycAYnj"&gt;https://imgur.com/a/lycAYnj&lt;/a&gt; ).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Neeraj Pandey</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/the-joy-of-creating-art-with-code.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Algorithms</category><category>Analytics</category><category>JavaScript</category><category>Physics</category><category>Python 3</category></item><item><title>We have nearly one million lines of Python 2 code in production – and now?</title><link>https://pyvideo.org/europython-2020/we-have-nearly-one-million-lines-of-python-2-code-in-production-and-now.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Porting a rather large code base to Python 3 – lessons learned usable for projects of any size&lt;/p&gt;
+&lt;p&gt;In this talk I am going to present possible approaches for a Python 3 migration of existing Python code running on Python 2.7. I'll evaluate which of these approaches seems suitable for a large code base and which principles should be paid attention to to increase the probability of a successful migration project.&lt;/p&gt;
+&lt;p&gt;I'll use union.cms (a content management system used by German trade unions) to show the story of a successful migration project involving nearly one million lines of Python code. The story will include the obstacles we encountered and what we learned on the way.&lt;/p&gt;
+&lt;p&gt;I believe that most of the discussed ideas and experience can also be used unchanged in smaller projects as the presented principles are very much the same.&lt;/p&gt;
+&lt;p&gt;Goal of the presentation: You should be able to come up with a plan for migrating your Python 2 based projects to Python 3.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michael Howitz</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/we-have-nearly-one-million-lines-of-python-2-code-in-production-and-now.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Best Practice</category><category>Development</category><category>Python 2</category><category>Python 3</category><category>legacy-code</category></item><item><title>Writing Zenlike Python</title><link>https://pyvideo.org/europython-2020/writing-zenlike-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Write beautiful, Pythonic code with insights from the legendary Zen of Python&lt;/p&gt;
+&lt;p&gt;There's a profound gap between working code and Pythonic code. To the developer whose first language is NOT Python, the distinction can appear blurry, even arbitrary. What is this &amp;quot;one obvious way&amp;quot; all those Python nerds are going on about?&lt;/p&gt;
+&lt;p&gt;Most of us are familiar with the &amp;quot;Zen of Python&amp;quot;, Tim Peters's legendary, if tongue-in-cheek, set of guiding principles for the Python language. But can they actually inform Pythonic code?&lt;/p&gt;
+&lt;p&gt;In this talk, Jason C. McDonald will unpack how the twenty principles (including the unwritten rule) of the Zen can guide you to write beautiful, maintainable code, by treating Python AS Python!&lt;/p&gt;
+&lt;p&gt;This talk is intended primarily for developers who have come to Python from another language, no matter their experience level. McDonald will shed light on how to work WITH Python's type system, statements, and iterative tools, rather than against them. You'll walk away with a new appreciation of the language, and an understanding of what Pythonic really means; an understanding which will empower you to find the One Obvious Way to solve any problem in Python.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jason McDonald</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/writing-zenlike-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Beginners</category><category>Clean Code</category><category>Python 3</category><category>Python general</category><category>The Answer to Life the Universe and Everything Else</category></item><item><title>Python3 Panel Talk</title><link>https://pyvideo.org/hsvpy-huntsvilles-python-meetup/python3-panel-talk.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A moderated panel discussing what the Python 2 EOL means, the future of Python3, and how the community responds&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pat Viafore</dc:creator><pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-02-26:/hsvpy-huntsvilles-python-meetup/python3-panel-talk.html</guid><category>HSV.py - Huntsville's Python Meetup</category><category>Python 3</category><category>panel</category></item></channel></rss>

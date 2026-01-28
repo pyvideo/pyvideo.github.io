@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Mark Shannon</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 08 Jul 2024 00:00:00 +0000</lastBuildDate><item><title>Making CPython Fast Using Trace-based Optimisations</title><link>https://pyvideo.org/europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2011] Mark Shannon - 24 June 2011 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;CPython can be made faster by implementing the sort of optimizations
+used in the PyPy VM, and in my HotPy VM. All the necessary changes can
+be made without modifying the language or the API.&lt;/p&gt;
+&lt;p&gt;The CPython VM can be modified to support optimizations by adding an
+effective garbage collector and by separating the virtual-machine state
+from the real- machine state (like Stackless).&lt;/p&gt;
+&lt;p&gt;Optimizations can be implemented incrementally. Since almost all of the
+optimizations are implemented in the interpreter, all hardware platforms
+can benefit. JIT compiler(s) can then be added for common platforms
+(intel, ARM, etc.).&lt;/p&gt;
+&lt;p&gt;For more information see &lt;a class="reference external" href="http://hotpy.blogspot.com/"&gt;http://hotpy.blogspot.com/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Wed, 13 Jul 2011 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2011-07-13:/europython-2011/making-cpython-fast-using-trace-based-optimisatio.html</guid><category>EuroPython 2011</category><category>cpython</category><category>jit</category><category>pypy</category><category>vm</category></item><item><title>HotPy (2) - A High Performance Binary-Compatible Virtual Machine for Python</title><link>https://pyvideo.org/europython-2012/hotpy-2-a-high-performance-binary-compatible.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;[EuroPython 2012] Mark Shannon - 5 JULY 2012 in &amp;quot;Track Lasagne&amp;quot;&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HotPy (2) is a new interpreter for Python. It is binary compatible with
+CPython and reuses CPython’s object and module implementations. The core
+interpreter is new and uses many of the techniques developed during the
+1990s and 2000s plus a technique developed during my PhD. Once the first
+stage of the optimisation chain is completed (May or June), HotPy is
+expected to be between 2 and 3 times as fast as CPython. It will
+probably never be as fast as PyPy, but it might be possible to get
+close. During the talk I will explain how it works (with lots of
+pictures), and how it compares to CPython and PyPy. I will also discuss
+whether the techniques used in HotPy would be suitable for Jython and
+IronPython.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2012-07-06:/europython-2012/hotpy-2-a-high-performance-binary-compatible.html</guid><category>EuroPython 2012</category></item><item><title>Finding bugs for free: The magic of static analysis.</title><link>https://pyvideo.org/europython-2017/finding-bugs-for-free-the-magic-of-static-analysis.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Static analysis is a powerful technique for improving the quality of
+software. It allows you to find bugs in your Python code without any
+the need for any annotations.&lt;/p&gt;
+&lt;p&gt;At lgtm.com we provide state-of-the-art static analysis for a number
+of languages including Python. Our Python analysis can find bugs
+without the annoyance of many false positives. We have already found
+bugs in the standard library, requests, numpy and many others.&lt;/p&gt;
+&lt;p&gt;In this talk I will briefly describe what static analysis is, how it
+can be useful to you, and then give an overview of the techniques we
+use.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;This talk is aimed at all Python developers, although I expect that
+those who have used pyflakes, pep8, pylint or mypy in the past will
+find it the most accessible. I hope that this talk will inspire
+developers to start using static analysis tools (hopefully ours) and
+to produce better code as a result. I will assume that the audience
+knows Python well, but knows little or nothing about static analysis.&lt;/p&gt;
+&lt;p&gt;(lgtm.com is a commercial project that is free to use for open-source software)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-07-14:/europython-2017/finding-bugs-for-free-the-magic-of-static-analysis.html</guid><category>EuroPython 2017</category></item><item><title>Is your code tainted? Finding security vulnerabilities using taint-tracking.</title><link>https://pyvideo.org/europython-2018/is-your-code-tainted-finding-security-vulnerabilities-using-taint-tracking.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;“Taint tracking” is a technique used in code analysis to find security
+vulnerabilities and other problems.&lt;/p&gt;
+&lt;p&gt;Any data that comes from an untrusted source, for example a HTTP
+request, is treated as “tainted”. If that “tainted” data is able to
+reach a vulnerable part of your code, then you have a problem.
+Sophisticated code analysis tools can track this data, and reveal
+potential security problems. Examples of the sort of problem that can be
+found include cross-site scripting (XSS), code injection, SQL injection
+and others.&lt;/p&gt;
+&lt;p&gt;In this talk I will show how taint tracking analysis works in practice,
+introducing the concepts of source, sink and sanitizer. I will then
+demonstrate using taint tracking to find a XSS vulnerability in a django
+app. (We will chose a project that is designed to teach django security,
+where the vulnerability is deliberate.)&lt;/p&gt;
+&lt;p&gt;I will also explain how thinking in terms of “taint” can help you write
+safer code, even without access to code analysis.&lt;/p&gt;
+&lt;p&gt;During this talk I will use the code analysis tools on lgtm.com to
+demonstrate the analysis. lgtm.com is free to use for open-source
+projects. A paid version is available.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Thu, 26 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-26:/europython-2018/is-your-code-tainted-finding-security-vulnerabilities-using-taint-tracking.html</guid><category>EuroPython 2018</category></item><item><title>CPython Developer Panel</title><link>https://pyvideo.org/europython-2022/cpython-developer-panel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroPython 2022 - CPython Developer Panel - presented by Łukasz Langa, Pablo Galindo Salgado, Mark Shannon, Steve Dower, Irit Katriel, Batuhan Taskaya &amp;amp; Ken Jin&lt;/p&gt;
+&lt;p&gt;[The Auditorium on 2022-07-13]&lt;/p&gt;
+&lt;p&gt;Come meet the folks who make the Python programming language!&lt;/p&gt;
+&lt;p&gt;A panel discussion of core Python developers will take place on Wednesday at 2pm. Hear what's on their mind, what they're working on and what the future holds for Python.&lt;/p&gt;
+&lt;p&gt;With Pablo Galindo Salgado, Steve Dower, Batuhan Taskaya, Ken Jin, Irit Katriel and Dr.Mark &amp;quot;&amp;quot;HotPy&amp;quot;&amp;quot; Shannon. Chaired by the esteemed Łukasz &amp;quot;&amp;quot;Any color you like so long as it's black&amp;quot;&amp;quot; Langa.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Łukasz Langa</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/europython-2022/cpython-developer-panel.html</guid><category>EuroPython 2022</category></item><item><title>How we are making Python 3.11 faster</title><link>https://pyvideo.org/europython-2022/how-we-are-making-python-311-faster.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroPython 2022 - How we are making Python 3.11 faster - presented by Mark Shannon&lt;/p&gt;
+&lt;p&gt;[The Auditorium on 2022-07-14]&lt;/p&gt;
+&lt;p&gt;The &amp;quot;Faster CPython&amp;quot; project aims to speed up Python, specifically CPython, by a large factor over the next few releases.
+The first release to see the benefits of this work is Python 3.11.&lt;/p&gt;
+&lt;p&gt;Python 3.11 includes the following major changes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Adaptive specializing interpreter (PEP 659)&lt;/li&gt;
+&lt;li&gt;Consecutively allocated execution frames&lt;/li&gt;
+&lt;li&gt;Zero cost try-except&lt;/li&gt;
+&lt;li&gt;More regular object layout&lt;/li&gt;
+&lt;li&gt;Lazily created object dictionaries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will describe each of these, describing how each helps speed up Python, and how they interact with each other.&lt;/p&gt;
+&lt;p&gt;I will end the talk with some possible directions for Python 3.12.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/europython-2022/how-we-are-making-python-311-faster.html</guid><category>EuroPython 2022</category></item><item><title>CPython Core Developer Panel</title><link>https://pyvideo.org/europython-2023/cpython-core-developer-panel.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — Forum Hall on 2023-07-19]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2023.europython.eu/session/cpython-core-developer-panel"&gt;https://ep2023.europython.eu/session/cpython-core-developer-panel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Come meet the folks who make the Python programming language!&lt;/p&gt;
+&lt;p&gt;A panel discussion of core Python developers will take place on Wednesday at 2pm. Hear what's on their mind, what they're working on, and what the future holds for Python.&lt;/p&gt;
+&lt;p&gt;The panel will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;sitting Steering Council member Pablo Galindo Salgado;&lt;/li&gt;
+&lt;li&gt;cybersecurity expert and aspiring core developer Marta Gómez Macías who made f-strings much better in 3.12;&lt;/li&gt;
+&lt;li&gt;CPython's Windows expert Steve Dower;&lt;/li&gt;
+&lt;li&gt;Red Hat veteran and emeritus Steering Council member Petr Viktorin;&lt;/li&gt;
+&lt;li&gt;and the tech lead of Microsoft's &amp;quot;Faster Python&amp;quot; team Dr. Mark &amp;quot;HotPy&amp;quot; Shannon.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The panel will be chaired by Łukasz &amp;quot;Any-color-you-like-as-long-as-it's-black&amp;quot; Langa.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Łukasz Langa</dc:creator><pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-17:/europython-2023/cpython-core-developer-panel.html</guid><category>EuroPython 2023</category></item><item><title>How we are making CPython faster. Past, present and future</title><link>https://pyvideo.org/europython-2023/how-we-are-making-cpython-faster-past-present-and-future.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — Forum Hall on 2023-07-19]
+&lt;a class="reference external" href="https://ep2023.europython.eu/session/how-we-are-making-cpython-faster-past-present-and-future"&gt;https://ep2023.europython.eu/session/how-we-are-making-cpython-faster-past-present-and-future&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python 3.11 is considerably faster than 3.10.&lt;/p&gt;
+&lt;p&gt;How did we do that? And how are we going to make 3.12 and following releases even faster?&lt;/p&gt;
+&lt;blockquote&gt;
+In this talk, I will present a high level overview of the approach we are taking to speeding up CPython. Starting with a simple overview of some basic principles, I will show how we can apply those to streamline and speedup CPython. I will try to avoid computer science and software engineering terminology, in favor of diagrams, a few simple examples, and some high-school math. Finally, I make some estimates about how much faster the next few releases of CPython will be, and how much faster Python could go.&lt;/blockquote&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-17:/europython-2023/how-we-are-making-cpython-faster-past-present-and-future.html</guid><category>EuroPython 2023</category></item><item><title>EuroPython 2024 — Lightning talks Friday</title><link>https://pyvideo.org/europython-2024/europython-2024-lightning-talks-friday.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Forum Hall on 2024-07-12]&lt;/p&gt;
+&lt;p&gt;Lightning talks Friday&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/lightning-talks-friday"&gt;https://ep2024.europython.eu/session/lightning-talks-friday&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Enjoy Fridays lightning talks. Short talks about everything by everyone. Hosted by Elise Kasai and Mark Smith:&lt;/p&gt;
+&lt;p&gt;00:00 &lt;em&gt;Welcome to Friday's Lightning Talks&lt;/em&gt;
+01:52 &lt;em&gt;Community Conference / Events Announcements &amp;amp; Celebration!&lt;/em&gt;
+07:12 &lt;em&gt;OpenFHE - Matrix Arithmetic Library&lt;/em&gt; — Sukanya Mandal
+10:05 &lt;em&gt;A mysterious case of distorted 3D models&lt;/em&gt; — Miro Hrončok
+15:28 &lt;em&gt;How to `from italia import 🤌`&lt;/em&gt; — Ester Beltrami
+21:26 &lt;em&gt;How the cycle Garbage Collection works&lt;/em&gt; — Mark Shannon
+25:58 &lt;em&gt;A EuroPython Poem&lt;/em&gt; — Emma Cooke
+29:56 &lt;em&gt;Testing Hardware Specs with Pytest&lt;/em&gt; — Thomas Ganahl
+33:30 &lt;em&gt;Presentation slides dos and don'ts&lt;/em&gt; — Reuven Lerner
+38:57 &lt;em&gt;Who wants to be a millionaire?&lt;/em&gt; — Rodrigo Girão Serrão
+44:13 &lt;em&gt;Level Up Your Presentations with Better Screenshots&lt;/em&gt; — Rudolfs Berzins
+48:53 &lt;em&gt;Python C++ API with Nanobind&lt;/em&gt; — Fernando Pereira
+54:43 &lt;em&gt;self.optimize() to become a better programmer&lt;/em&gt; — Muzher Sharif&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sunkanya Mandal</dc:creator><pubDate>Mon, 08 Jul 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-07-08:/europython-2024/europython-2024-lightning-talks-friday.html</guid><category>EuroPython 2024</category><category>lightning talks</category></item><item><title>Finding bugs for free - The magic of code analysis</title><link>https://pyvideo.org/pycon-uk-2017/finding-bugs-for-free-the-magic-of-code-analysis.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Code analysis is a powerful technique for improving the quality of software. It allows you to find bugs in your Python code that would be very hard to find with testing, and without the need for any annotations.&lt;/p&gt;
+&lt;p&gt;In this talk I show examples of &amp;quot;interesting&amp;quot; bugs that we at &lt;a class="reference external" href="https://lgtm.com/"&gt;https://lgtm.com/&lt;/a&gt; have found in real code. For each example, I will describe how we can find that type of error.&lt;/p&gt;
+&lt;p&gt;In order to avoid unnecessary embarrassment, all examples will be anonymised.&lt;/p&gt;
+&lt;p&gt;Intended Audience&lt;/p&gt;
+&lt;p&gt;Most Python developers. I will assume that the audience knows Python reasonably well, but knows little or nothing about code analysis.&lt;/p&gt;
+&lt;p&gt;At &lt;a class="reference external" href="https://lgtm.com/"&gt;https://lgtm.com/&lt;/a&gt; we provide state-of-the-art analysis for a number of languages including Python. We have found bugs in the standard library, requests, numpy and many other&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Sun, 29 Oct 2017 10:30:00 +0100</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-29:/pycon-uk-2017/finding-bugs-for-free-the-magic-of-code-analysis.html</guid><category>PyCon UK 2017</category></item><item><title>Lightning Talks - Day 2 PM</title><link>https://pyvideo.org/pycon-us-2022/lightning-talks-day-2-pm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lightning talks are a ~ 5 minutes long, on any topic of interest to other Python people. It doesn't have to be about something that you wrote, it can be something that you learned, or a technique you think other people will be interested in.&lt;/p&gt;
+&lt;p&gt;Speakers:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;00:35 - Christian Maureia Fredes - Python en Espanol&lt;/li&gt;
+&lt;li&gt;05:35 - Mario Munoz - My First Pycon: Reflections&lt;/li&gt;
+&lt;li&gt;10:20 - Georgi Ker - Open source is a walk in the park&lt;/li&gt;
+&lt;li&gt;14:30 - Bence Nagy - Lint your code, repo, playlist, and fashion sense&lt;/li&gt;
+&lt;li&gt;19:49 - Mark Shannon - Help us speed up Python with benchmarks&lt;/li&gt;
+&lt;li&gt;23:35 - Larry Hastings - Correlate your data with Correlate&lt;/li&gt;
+&lt;li&gt;27:39 - Rich Taggart - The importance of effective concise communication&lt;/li&gt;
+&lt;li&gt;35:38 - William Woodruff - Securing your PyPI account&lt;/li&gt;
+&lt;li&gt;40:18 - Alexa Lindberg - Generating recipes w/ GPT-2 &amp;amp; Python&lt;/li&gt;
+&lt;li&gt;20:53 - Srinivas Bontula - Managing transitive dependencies for Django&lt;/li&gt;
+&lt;li&gt;50:25 - Adrian - When to rewrite in rust&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Maureia Fredes</dc:creator><pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-04-27:/pycon-us-2022/lightning-talks-day-2-pm.html</guid><category>PyCon US 2022</category><category>lightning talks</category></item><item><title>How we are making CPython faster. Past, present and future.</title><link>https://pyvideo.org/pycon-us-2023/how-we-are-making-cpython-faster-past-present-and-future.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many of you will will have heard that Python 3.11 is considerably faster
+than 3.10.&lt;/p&gt;
+&lt;p&gt;How did we do that? How are we going to make 3.12 and following releases
+even faster?&lt;/p&gt;
+&lt;p&gt;In this talk, I will present a high level overview of the approach we
+are taking to speeding up CPython.&lt;/p&gt;
+&lt;p&gt;Starting with a simple overview of some basic principles, I will show
+how we can apply those to streamline and speedup CPython.&lt;/p&gt;
+&lt;p&gt;I will try to avoid computer science and software engineering
+terminology, in favor of diagrams, a few simple examples, and some
+high-school math.&lt;/p&gt;
+&lt;p&gt;Finally, I make some estimates about how much faster the next few
+releases of CPython will be, and how much faster Python could go.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Shannon</dc:creator><pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-22:/pycon-us-2023/how-we-are-making-cpython-faster-past-present-and-future.html</guid><category>PyCon US 2023</category></item></channel></rss>

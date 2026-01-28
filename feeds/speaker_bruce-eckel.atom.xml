@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Bruce Eckel</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_bruce-eckel.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2024-05-18T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Bruce Eckel - Keynote</title><link href="https://pyvideo.org/pycaribbean-2017/bruce-eckel-keynote.html" rel="alternate"></link><published>2017-02-18T00:00:00+00:00</published><updated>2017-02-18T00:00:00+00:00</updated><author><name>Bruce Eckel</name></author><id>tag:pyvideo.org,2017-02-18:/pycaribbean-2017/bruce-eckel-keynote.html</id><content type="html"></content><category term="PyCaribbean 2017"></category></entry><entry><title>Rethinking Errors: Learning from Scala and Go</title><link href="https://pyvideo.org/pycon-us-2013/rethinking-errors-learning-from-scala-and-go.html" rel="alternate"></link><published>2013-03-15T00:00:00+00:00</published><updated>2013-03-15T00:00:00+00:00</updated><author><name>Bruce Eckel</name></author><id>tag:pyvideo.org,2013-03-15:/pycon-us-2013/rethinking-errors-learning-from-scala-and-go.html</id><summary type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;C++ brought exceptions to mainstream programming; Java goes further with
+checked exceptions. But are exceptions the one way to report all errors?
+Scala and Go suggest there is more than one kind of error, so there
+should be more than one kind of error reporting, and different responses
+to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;C++ brought exceptions to mainstream programming; Java goes further with
+checked exceptions. But are exceptions the one way to report all errors?
+Scala and Go suggest there is more than one kind of error, so there
+should be more than one kind of error reporting, and different responses
+to errors. I’ll show the Scala and Go approaches to the error problem,
+and how to apply this to Python.&lt;/p&gt;
+</content><category term="PyCon US 2013"></category><category term="talk"></category></entry><entry><title>Making Data Classes Work for You</title><link href="https://pyvideo.org/pycon-us-2022/making-data-classes-work-for-you.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Bruce Eckel</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/making-data-classes-work-for-you.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This will be a example-driven presentation. The first set of examples looks at
+an int which should be restricted to a value from one through ten.&lt;/p&gt;
+&lt;p&gt;First I'll look at the problems in the traditional approach, passing an int
+to a function and checking to ensure it is within …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This will be a example-driven presentation. The first set of examples looks at
+an int which should be restricted to a value from one through ten.&lt;/p&gt;
+&lt;p&gt;First I'll look at the problems in the traditional approach, passing an int
+to a function and checking to ensure it is within range.&lt;/p&gt;
+&lt;p&gt;Next I'll encapsulate the int in a (regular) class OneToTen, which allows
+the movement of the test into the constructor. Although this guarantees that
+objects will be created correctly, such objects are mutable so they can be
+modified to be invalid after creation.&lt;/p&gt;
+&lt;p&gt;The solution is to use &amp;#64;dataclass together with the frozen=True option, and
+add a __post_init__ function to check the validity of the object once it's
+been initialized. Because such an object is invariant, it cannot be later
+modified into an invalid state. This ensures that the new type can only ever
+exist as a legitimate value.&lt;/p&gt;
+&lt;p&gt;Next I'll use this technique to create a Person type that is composed of
+FullName, BirthDate and EmailAddress fields, each of which validates
+itself. Finally, I'll compose BirthDate using Day, Month and Year
+fields.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category></entry><entry><title>Rethinking Objects</title><link href="https://pyvideo.org/pycon-us-2023/rethinking-objects.html" rel="alternate"></link><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><author><name>Bruce Eckel</name></author><id>tag:pyvideo.org,2023-04-22:/pycon-us-2023/rethinking-objects.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This presentation revisits two core concepts of Object-Oriented
+programming: encapsulation and code reuse. Using a series of examples,
+we'll ask whether these concepts have satisfied their promises, and how
+functional approaches can do a better job. We'll also see that objects
+still have value in making library use easy …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This presentation revisits two core concepts of Object-Oriented
+programming: encapsulation and code reuse. Using a series of examples,
+we'll ask whether these concepts have satisfied their promises, and how
+functional approaches can do a better job. We'll also see that objects
+still have value in making library use easy.&lt;/p&gt;
+</content><category term="PyCon US 2023"></category></entry><entry><title>Functional Error Handling</title><link href="https://pyvideo.org/pycon-us-2024/functional-error-handling.html" rel="alternate"></link><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><author><name>Bruce Eckel</name></author><id>tag:pyvideo.org,2024-05-18:/pycon-us-2024/functional-error-handling.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the early days, people wrote small applications in assembly language,
+using gotos to get around. This didn't scale, so we traded gotos for
+structured functions with single entry and exit points—and then we added
+a new kind of goto with the exception, which not only blows up …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In the early days, people wrote small applications in assembly language,
+using gotos to get around. This didn't scale, so we traded gotos for
+structured functions with single entry and exit points—and then we added
+a new kind of goto with the exception, which not only blows up your
+function but can end up anywhere. This makes functions difficult to
+compose. We’ll look at strategies in Python that bring exceptions under
+control and make functions composable again, including the third-party
+&lt;tt class="docutils literal"&gt;returns&lt;/tt&gt; library.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry></feed>

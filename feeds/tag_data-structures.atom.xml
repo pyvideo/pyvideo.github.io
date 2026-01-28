@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - data structures</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_data-structures.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-06-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Practical decorators</title><link href="https://pyvideo.org/europython-2019/practical-decorators.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Reuven Lerner</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/practical-decorators.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Decorators are one of Python's most powerful features. But even if you
+understand what they do, it's not always obvious what you can do with
+them. Sure, from a practical perspective, they let you remove repeated
+code from your callables. And semantically, they let you think at a
+higher …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Decorators are one of Python's most powerful features. But even if you
+understand what they do, it's not always obvious what you can do with
+them. Sure, from a practical perspective, they let you remove repeated
+code from your callables. And semantically, they let you think at a
+higher level of abstraction, applying the same treatment to functions
+and classes.&lt;/p&gt;
+&lt;p&gt;But what can you actually do with them? For many Python developers I've
+encountered, decorators sometimes appear to be a solution looking for a
+problem.&lt;/p&gt;
+&lt;p&gt;In this talk, I'll show you some practical uses for decorators, and how
+you can use them to make your code more readable and maintainable, while
+also providing more semantic power. Moreover, you'll see examples of
+things would be hard to do without decorators. I hope that after this
+talk, you'll have a good sense of how to use decorators in your own
+Python projects.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Compiler and Interpreters"></category><category term="Data Structures"></category><category term="Programming"></category><category term="Python Skills"></category><category term="Python general"></category></entry><entry><title>Dissecting tf.function to discover AutoGraph strengths and subtleties</title><link href="https://pyvideo.org/europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Paolo Galeone</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AutoGraph is one of the most exciting new features of Tensorflow 2.0: it
+allows transforming a subset of Python syntax into its portable, high-
+performance and language agnostic graph representation bridging the gap
+between Tensorflow 1.x and the 2.0 release based on eager execution.&lt;/p&gt;
+&lt;p&gt;Using AutoGraph …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AutoGraph is one of the most exciting new features of Tensorflow 2.0: it
+allows transforming a subset of Python syntax into its portable, high-
+performance and language agnostic graph representation bridging the gap
+between Tensorflow 1.x and the 2.0 release based on eager execution.&lt;/p&gt;
+&lt;p&gt;Using AutoGraph with the &lt;tt class="docutils literal"&gt;&amp;#64;tf.fuction&lt;/tt&gt; decorator seems easy, but in
+practice, writing efficient and correctly graph-convertible code
+requires to know in detail how AutoGraph and tf.function work.&lt;/p&gt;
+&lt;p&gt;In particular, knowing how:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- A graph is created and when it is re-used;&lt;/div&gt;
+&lt;div class="line"&gt;- To deal with functions that create a state;&lt;/div&gt;
+&lt;div class="line"&gt;- To correctly use the Tensorflow &lt;tt class="docutils literal"&gt;tf.Tensor&lt;/tt&gt; object instead of
+using the Python native types to speed-up the computation;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;defines the minimum skill-set required to write correct
+graph-accelerable code.&lt;/p&gt;
+&lt;p&gt;The talk will guide you trough AutoGraph and &lt;tt class="docutils literal"&gt;tf.function&lt;/tt&gt;
+highlighting all the peculiarities that are worth knowing to build the
+right skill-set.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Data-Structures"></category><category term="Machine-Learning"></category><category term="New Features"></category><category term="Software Design"></category></entry><entry><title>Object Internals</title><link href="https://pyvideo.org/europython-2020/object-internals.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Mridu Bhatnagar</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/object-internals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory address in Python&lt;/p&gt;
+&lt;p&gt;This talk is intended to explain to participants what is happening under the hood when they are playing around with different python built-in data structures. Explain the concepts such that they are not surprised by the behavior of Python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites:
+Anyone who knows built-in python …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory address in Python&lt;/p&gt;
+&lt;p&gt;This talk is intended to explain to participants what is happening under the hood when they are playing around with different python built-in data structures. Explain the concepts such that they are not surprised by the behavior of Python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites:
+Anyone who knows built-in python data structures like List, Dictionaries, set, etc.&lt;/p&gt;
+&lt;p&gt;Curiosity questions that the talk answers:
+1. What happens to the memory address when * operator is used?
+2. When does python create a new object in memory?
+3. What does it refer to the mutability and immutability of objects in Python?
+4. If the outer object is immutable but the reference objects are mutable. Can the elements be added?
+5. What is the difference at the memory level when we refer to deep copy and shallow copy in lists?
+6. Operations like List.sort and sorted in python? What to use, when to use? What happens at the memory level?
+7. What is the difference between is vs ==? When should it be used?
+8. Lots and lots of interesting examples.
+9. How do we determine the memory reference id associated with the object?
+10. Meaning of assigning a value to a variable in Python.&lt;/p&gt;
+&lt;p&gt;The existing slides use screenshots. But, I'll be including more interesting examples and would replace the screenshots with GIFs. So, that folks get a feeling of live coding and remain interested in the presentation. Along with the visual representation of what is happening at the memory level.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Data-Structures"></category><category term="Development"></category><category term="Python 3"></category></entry><entry><title>Python in Space - The N Body Problem</title><link href="https://pyvideo.org/pycon-de-2017/python-in-space-the-n-body-problem.html" rel="alternate"></link><published>2017-10-25T00:00:00+00:00</published><updated>2017-10-25T00:00:00+00:00</updated><author><name>Daniel Jilg</name></author><id>tag:pyvideo.org,2017-10-25:/pycon-de-2017/python-in-space-the-n-body-problem.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Daniel Jilg&lt;/strong&gt; (&amp;#64;breakthesystem)
+I've been an app developer, a CTO, and a Python developer, mostly at the same time. I've carried through it all a desire to learn, a love for data visualisation, and a knack to pass on what I learned. I want to learn, I want to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Daniel Jilg&lt;/strong&gt; (&amp;#64;breakthesystem)
+I've been an app developer, a CTO, and a Python developer, mostly at the same time. I've carried through it all a desire to learn, a love for data visualisation, and a knack to pass on what I learned. I want to learn, I want to mentor, and I want to create inclusive spaces for people to learn and mentor themselves. In my free time, I open tins for my cats (who have their own instagram account), visit various spaceports around the world, and occasionally dabble in some motor sports.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The N Body Problem is a computationally complex problem that we use to predict how planets and galaxies – and everything in between – move through space. I'll show you some interesting ways to calculate it, and we'll have a look at what to do, should you find yourself in a space ship's pilot seat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The N Body Problem is one of those famously hard to solve problems in computer science. It describes the movement and interactions of n bodies in space (where n is usually greater 3). You need a lot of computational power to passably approximate the gravitational influences a group of celestial bodies exert on each other. Can Python do that?&lt;/p&gt;
+&lt;p&gt;I'll give a super brief overview of the history of trying to predict the motion of moon, sun and the visible stars, and then we'll dive deep into the original N Body Problem, followed by creative ways to reduce the amount of calculation needed and still get a reasonable approximation. Doing this, we can see how to tackle some complex mathematic and algorithmic problems easily using Python.&lt;/p&gt;
+&lt;p&gt;If you're a Python beginner or even very early in your career as a developer, you are going to get a first impression of efficient algorithms and complex data structures, and how to measure complexity using Big O notation. If you're more advanced, you'll be treated to a hopefully interesting way of implementing the Barnes-Hutt-algorithm, and some space nerdery.&lt;/p&gt;
+&lt;p&gt;Once we have all the pieces in place, let's play with some orbits. We'll see how orbits actually behave, as opposed to what the untrained mind would expect. We can use our new algorithms to try out some manoeuvres often used by real space craft and help you be prepared for when that call from ESA or NASA finally comes, and you'll be invited to work on Python In Space!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Recorded at&lt;/strong&gt; PyCon.DE 2017 Karlsruhe: &lt;a class="reference external" href="https://de.pycon.org/"&gt;https://de.pycon.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Video editing&lt;/strong&gt;: Sebastian Neubauer &amp;amp; Andrei Dan&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Blender, Avidemux &amp;amp; Sonic Pi&lt;/p&gt;
+</content><category term="PyCon DE 2017"></category><category term="complexity"></category><category term="data structures"></category><category term="algorithms"></category><category term="space"></category><category term="python"></category></entry><entry><title>Databases for Data Science</title><link href="https://pyvideo.org/pycon-italia-2018/databases-for-data-science.html" rel="alternate"></link><published>2018-04-21T00:00:00+00:00</published><updated>2018-04-21T00:00:00+00:00</updated><author><name>Alexander Hendorf</name></author><id>tag:pyvideo.org,2018-04-21:/pycon-italia-2018/databases-for-data-science.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I’ll present the usefulness of databases for data science
+projects.&lt;/p&gt;
+&lt;p&gt;Databases have been around for decades and were highly optimised for
+data aggregations during that time. Not only &lt;em&gt;Big data&lt;/em&gt; has changed the
+landscape of databases massively in the past years - we nowadays can
+find …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I’ll present the usefulness of databases for data science
+projects.&lt;/p&gt;
+&lt;p&gt;Databases have been around for decades and were highly optimised for
+data aggregations during that time. Not only &lt;em&gt;Big data&lt;/em&gt; has changed the
+landscape of databases massively in the past years - we nowadays can
+find many &lt;em&gt;Open Source&lt;/em&gt; projects among the most popular dbs.&lt;/p&gt;
+&lt;p&gt;After this talk you will be enabled to decide if a database can make
+your work more efficient and which direction to look to.&lt;/p&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;A quick recap on database history, &lt;em&gt;it all starts in Florence - where
+else…&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;What is a database? What’s a data store? data lake?…&lt;/li&gt;
+&lt;li&gt;Relational SQL systems and their benefits for DS&lt;/li&gt;
+&lt;li&gt;NoSQL systems and their benefits for DS&lt;/li&gt;
+&lt;li&gt;How to chose the db fitting your needs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;in __on &lt;strong&gt;sabato 21 aprile&lt;/strong&gt; at 17:00 &lt;a class="reference external" href="/p3/schedule/pycon9/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</content><category term="PyCon Italia 2018"></category><category term="data-structures"></category><category term="Deep-Learning"></category><category term="data-science"></category><category term="database"></category></entry><entry><title>Uno sguardo alle Dataclasses: quando una namedtuple non basta</title><link href="https://pyvideo.org/pycon-italia-2019/uno-sguardo-alle-dataclasses-quando-una-namedtuple-non-basta.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Alessandro Cucci</name></author><id>tag:pyvideo.org,2019-05-05:/pycon-italia-2019/uno-sguardo-alle-dataclasses-quando-una-namedtuple-non-basta.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hanno fatto la loro prima apparizione in Python 3.7, sono la moda del
+momento. Sto parlando delle DataClasses, definite nella PEP557 come
+“mutable namedtuples with defaults”. Inizieremo facendo un ripasso
+veloce sulla bellezza, ma anche sui limiti, delle namedtuple,
+continuando poi con un tour alla scoperta di questo …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Hanno fatto la loro prima apparizione in Python 3.7, sono la moda del
+momento. Sto parlando delle DataClasses, definite nella PEP557 come
+“mutable namedtuples with defaults”. Inizieremo facendo un ripasso
+veloce sulla bellezza, ma anche sui limiti, delle namedtuple,
+continuando poi con un tour alla scoperta di questo nuovo strumento
+regalatoci da Eric V. Smith (Python Core Developer) e di come può
+esserci d’aiuto nello scrivere nuove classi con minimo sforzo. Oltre
+alla definizione come Standard Library suggerisce, verranno proposti
+degli esempi di codice per far capire in maniera semplice ai
+programmatori che si avvicinano per la prima volta a questo modulo le
+caratteristiche, le differenze rispetto ad altri strumenti, e i vantaggi
+nell’usare le dataclasses nei loro programmi.&lt;/p&gt;
+&lt;p&gt;Feedback form: &lt;a class="reference external" href="https://python.it/feedback-1534"&gt;https://python.it/feedback-1534&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 12:30 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</content><category term="PyCon Italia 2019"></category><category term="data-structures"></category><category term="object-oriented-programming"></category><category term="Python"></category><category term="python3"></category></entry><entry><title>You don't need n dimensions when you have pandas</title><link href="https://pyvideo.org/pycon-italia-2019/you-dont-need-n-dimensions-when-you-have-pandas.html" rel="alternate"></link><published>2019-05-05T00:00:00+00:00</published><updated>2019-05-05T00:00:00+00:00</updated><author><name>Pietro Battiston</name></author><id>tag:pyvideo.org,2019-05-05:/pycon-italia-2019/you-dont-need-n-dimensions-when-you-have-pandas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://pietrobattiston.it/wiki/python:pycon#talk_you_don_t_need_n_dimensions_when_you_have_pandas"&gt;Click here for slides and material
+used&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After a (very) quick general introduction to &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;, and in
+particular to pandas &lt;strong&gt;indexes&lt;/strong&gt; , this talk will focus on particular
+types of indexes, &lt;tt class="docutils literal"&gt;MultiIndex&lt;/tt&gt;es, and on the many &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;
+features allowing us to use them to store and analyze multidimensional
+data …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://pietrobattiston.it/wiki/python:pycon#talk_you_don_t_need_n_dimensions_when_you_have_pandas"&gt;Click here for slides and material
+used&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;After a (very) quick general introduction to &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;, and in
+particular to pandas &lt;strong&gt;indexes&lt;/strong&gt; , this talk will focus on particular
+types of indexes, &lt;tt class="docutils literal"&gt;MultiIndex&lt;/tt&gt;es, and on the many &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt;
+features allowing us to use them to store and analyze multidimensional
+data.&lt;/p&gt;
+&lt;p&gt;We will discover together &lt;em&gt;why&lt;/em&gt; &lt;tt class="docutils literal"&gt;pandas&lt;/tt&gt; does not have (any more) data
+structures with more than 2 dimensions, and why we should not regret
+them. We will then look at further ways to “restructure” data, including
+&lt;tt class="docutils literal"&gt;groupby&lt;/tt&gt; e &lt;tt class="docutils literal"&gt;window&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1771"&gt;https://python.it/feedback-1771&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Sunday 5 May&lt;/strong&gt; at 11:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</content><category term="PyCon Italia 2019"></category><category term="data-structures"></category><category term="numpy"></category><category term="pandas"></category><category term="data-analysis"></category><category term="pydata"></category></entry><entry><title>From XML to JSON and beyond</title><link href="https://pyvideo.org/pycon-italia-2022/from-xml-to-json-and-beyond.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Davide Brunato</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/from-xml-to-json-and-beyond.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From XML to JSON and beyond - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;I want to share my experience on converting XML data to JSON, talking
+about the existing conventions, some that expect a loss of information
+and others that are lossless, with a focus on conversion methods defined
+by XPath 3.1 …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From XML to JSON and beyond - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;I want to share my experience on converting XML data to JSON, talking
+about the existing conventions, some that expect a loss of information
+and others that are lossless, with a focus on conversion methods defined
+by XPath 3.1. JSON has been often described as an XML alternative or
+even a replacement. This can be true in several applications, but many
+often XML persists due to its more richer characteristics and pretty
+different architectural scopes. So crucial is the build of conversion
+tools and mapping conventions, to let the data communication effective
+between the different formats. Despite many defined conventions also
+XPath 3.1 put a step in this direction. So don’t trash old XML data, but
+use them for what is better suited and convert them to send chunks of
+JSON data to other systems or to submit to other applications.&lt;/p&gt;
+&lt;p&gt;Speaker: Davide Brunato&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="compiler and interpreters"></category><category term="data structures"></category><category term="open source"></category></entry><entry><title>Mutabilità e side effect non sono tuoi amici</title><link href="https://pyvideo.org/pycon-italia-2022/mutabilita-e-side-effect-non-sono-tuoi-amici.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Claudio Stamile</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/mutabilita-e-side-effect-non-sono-tuoi-amici.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mutabilità e side effect non sono tuoi amici - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;La mutabilità di classi ed oggetti in python è croce e delizia degli
+sviluppatori. L’utilizzo di operatori di modifica può generare problemi
+nella consistenza delle strutture dati. In questo talk analizzeremo il
+concetto di mutabilità mostrando alcuni …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mutabilità e side effect non sono tuoi amici - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;La mutabilità di classi ed oggetti in python è croce e delizia degli
+sviluppatori. L’utilizzo di operatori di modifica può generare problemi
+nella consistenza delle strutture dati. In questo talk analizzeremo il
+concetto di mutabilità mostrando alcuni metodi per evitare side effect
+indesiderati. Python lascia agli sviluppatori un’enorme libertà di
+utilizzo quando si tratta di modificare strutture dati o classi. E’
+dunque necessario procedere in modo strutturato e rigoroso quando
+vengono effettuate delle modifiche al fine di evitare che strutture dati
+mutabili possano essere modificate in modo impropio generando dei side
+effect che si ripercuotono all’interno di tutto il codice. Questo
+problema è di particolare importanza quando si scrivono delle pipeline
+di machine learning. In questi casi, infatti, a mutazione di una
+struttura dati può portare ad un errato processing dei dati che, di
+conseguenza, porterà al training di algoritmi di machine learning
+errati. Scopo di questo talk è quello di investigare il concetto di
+mutabilità nelle strutture dati e nelle classi e di quali effetti
+dannosi essi possono generare all’interno del codice ed in particolar
+modo in pipeline di machine learning. Verranno inoltre proposte alcune
+buone norme (che prendono spunto dalla programmazione funzionale) utili
+per poter scrivere codice robusto e privo di effetti indesiderati dati
+dalla mutazione di eventuali strutture dati o classi.&lt;/p&gt;
+&lt;p&gt;Speaker: Claudio Stamile&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="best practice"></category><category term="data structures"></category><category term="functional programming"></category></entry><entry><title>Python Robo-Advisor: Come uso Python per gestire i mie risparmi</title><link href="https://pyvideo.org/pycon-italia-2022/python-robo-advisor-come-uso-python-per-gestire-i-mie-risparmi.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Damiano Dotto</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/python-robo-advisor-come-uso-python-per-gestire-i-mie-risparmi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python Robo-Advisor: Come uso Python per gestire i mie risparmi - PyCon
+Italia 2022&lt;/p&gt;
+&lt;p&gt;Si parla tanto di libertà finanzia e di non lasciare marcire i risparmi
+in banca e allora perché non usare le nostre competenze da developer e
+le librerie di Python per creare un portafoglio basato su …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python Robo-Advisor: Come uso Python per gestire i mie risparmi - PyCon
+Italia 2022&lt;/p&gt;
+&lt;p&gt;Si parla tanto di libertà finanzia e di non lasciare marcire i risparmi
+in banca e allora perché non usare le nostre competenze da developer e
+le librerie di Python per creare un portafoglio basato su algoritmi e
+dati quantitativi? Oggi giorno si sente sempre di più parlare di libertà
+finanziaria, concetto un po’ utopico a mio avviso. Sono un programmatore
+“comune” e tendo spesso ad essere pratico più che teorico (so che anche
+tu non leggi la documentazione prima di scrivere codice ;) )! Ti
+mostrerò in maniera concreta come è possibile sfruttare le nostre
+conoscenze di programmazione per poter assumere un “consulente
+finanziario fedele” (così mi piace definirlo) che prenda decisioni
+obiettive per gestire al meglio i nostri risparmi sui mercati
+finanziari. In 30 minuti, vedremo assieme come costruirci un robot
+automatico che ci permetta di testare, validare, ottimizzare una
+strategia di trading automatico con un esempio REALE, statistico e
+basato sui dati.&lt;/p&gt;
+&lt;p&gt;Speaker: Damiano Dotto&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="data structures"></category><category term="education"></category><category term="static analysis"></category></entry><entry><title>RegEx Strikes Back: Regular Expressions for Text Mining</title><link href="https://pyvideo.org/pycon-italia-2022/regex-strikes-back-regular-expressions-for-text-mining.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Daniel Mesejo</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/regex-strikes-back-regular-expressions-for-text-mining.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;RegEx Strikes Back: Regular Expressions for Text Mining - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;A short time ago in a galaxy not so far away a regular expression was
+taking 5 days to run. In this talk you will learn why regular
+expressions can be slow, how to make them fast using …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;RegEx Strikes Back: Regular Expressions for Text Mining - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;A short time ago in a galaxy not so far away a regular expression was
+taking 5 days to run. In this talk you will learn why regular
+expressions can be slow, how to make them fast using a trie regex data
+structure and the many uses a good old regular expression can have.
+Regular Expressions have a bad reputation, and they are slow (or so they
+say) for text mining tasks. In this talk you’ll learn why regex can be
+slow and how to use a Trie Regex to craft blazingly fast regular
+expressions with no effort. How regular expressions integrate smoothly
+with many libraries (pandas, spacy, etc) and how to use the regex module
+for common text cleaning tasks such as: prefix finding, fuzzy matching
+and many more.&lt;/p&gt;
+&lt;p&gt;Slides:&lt;/p&gt;
+&lt;p&gt;Speaker: Daniel Mesejo&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="data structures"></category><category term="nlp"></category><category term="open source"></category><category term="text mining"></category></entry><entry><title>Self-explaining APIs</title><link href="https://pyvideo.org/pycon-italia-2022/self-explaining-apis.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Roberto Polli</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/self-explaining-apis.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Self-explaining APIs - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;To mash up various APIs you need data to have a well defined meaning:
+imagine meshing up healthcare APIs using different units for human
+temperature, or financial APIs using different currencies.&lt;/p&gt;
+&lt;p&gt;This talk describes strategies and python tools to overcome these
+problems in large …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Self-explaining APIs - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;To mash up various APIs you need data to have a well defined meaning:
+imagine meshing up healthcare APIs using different units for human
+temperature, or financial APIs using different currencies.&lt;/p&gt;
+&lt;p&gt;This talk describes strategies and python tools to overcome these
+problems in large API ecosystems. This talk will present strategies and
+python tools to create semantically interoperable REST APIs. After the
+problem statement, various solutions will be presented, including: -
+contract-first api development with OpenAPI 3, ontologies, controlled
+vocabularies; - the rdflib and pyld python libraries; - the use of
+centralized catalogs.&lt;/p&gt;
+&lt;p&gt;[Very draft slides here](&lt;/p&gt;
+&lt;p&gt;Speaker: Roberto Polli&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="apis"></category><category term="best practice"></category><category term="data structures"></category><category term="rest"></category></entry><entry><title>Learning Algorithms and Data Structures in Python</title><link href="https://pyvideo.org/pycon-japan-2012/learning-algorithms-and-data-structures-in-python.html" rel="alternate"></link><published>2012-09-16T00:00:00+00:00</published><updated>2012-09-16T00:00:00+00:00</updated><author><name>TienVu Ho</name></author><id>tag:pyvideo.org,2012-09-16:/pycon-japan-2012/learning-algorithms-and-data-structures-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Programming languages, data structures and algorithms are the fundamentals of computer science. There are a lot of materials that cover these subjects but often do not link well with each other. This talk will explain how to use Python to learn these topics in a fast and efficient manner …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Programming languages, data structures and algorithms are the fundamentals of computer science. There are a lot of materials that cover these subjects but often do not link well with each other. This talk will explain how to use Python to learn these topics in a fast and efficient manner&lt;/p&gt;
+</content><category term="PyCon Japan 2012"></category><category term="algorithms"></category><category term="data structures"></category></entry></feed>

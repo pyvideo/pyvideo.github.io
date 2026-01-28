@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Nicolò Giso</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_nicolo-giso.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2021-07-26T00:00:00+00:00</updated><subtitle></subtitle><entry><title>From telemetry data to CSVs with Python, Spark and Azure Databricks</title><link href="https://pyvideo.org/europython-2021/from-telemetry-data-to-csvs-with-python-spark-and-azure-databricks.html" rel="alternate"></link><published>2021-07-26T00:00:00+00:00</published><updated>2021-07-26T00:00:00+00:00</updated><author><name>Nicolò Giso</name></author><id>tag:pyvideo.org,2021-07-26:/europython-2021/from-telemetry-data-to-csvs-with-python-spark-and-azure-databricks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From telemetry data to CSVs with Python, Spark and Azure Databricks
+[EuroPython 2021 - Talk - 2021-07-28 - Parrot [Data Science]]
+[Online]&lt;/p&gt;
+&lt;p&gt;By Nicolò Giso&lt;/p&gt;
+&lt;p&gt;Tenova is an engineering company working alongside client-partners to design and develop innovative technologies and services that improve their business, creating solutions that help metals and mining …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From telemetry data to CSVs with Python, Spark and Azure Databricks
+[EuroPython 2021 - Talk - 2021-07-28 - Parrot [Data Science]]
+[Online]&lt;/p&gt;
+&lt;p&gt;By Nicolò Giso&lt;/p&gt;
+&lt;p&gt;Tenova is an engineering company working alongside client-partners to design and develop innovative technologies and services that improve their business, creating solutions that help metals and mining companies to reduce costs, save energy, limit environmental impact and improve working conditions for their employees.&lt;/p&gt;
+&lt;p&gt;In the context of Industry 4.0, Tenova provides each equipment with a field gateway, named Tenova Edge, to collect telemetry data, perform edge analytics with AI models and send data to the Tenova Platform (hosted on Microsoft Azure) for further elaborations.&lt;/p&gt;
+&lt;p&gt;To develop analytics solutions, data scientists and process engineers need the data in a manageable format.&lt;/p&gt;
+&lt;p&gt;Furthermore, continuous retraining of AI models is necessary to guarantee high performances and reliable results.&lt;/p&gt;
+&lt;p&gt;For all of these reasons, we needed to implement an ETL solution to transform the raw data in formats ready for analysis and retraining. In particular, the key requirement was to convert the JSON Lines files coming from the field in CSV files ready to be used.&lt;/p&gt;
+&lt;p&gt;The CSV files have to satisfy the following conditions:
+- each file contains the data for a device
+- only one file for device per day
+- each file has a midnight row containing for each cell the value recorded at midnight or the last value of the previous day (SPOILER: here it’s where the fun happens!)&lt;/p&gt;
+&lt;p&gt;For this purpose, we have implemented a series of Databricks Notebooks, run daily by Azure DataFactory, that leveraging Pyspark and Pandas manipulates the raw JsonLines files in nicely formatted CSVs.&lt;/p&gt;
+&lt;p&gt;License: This video is licensed under the CC BY-NC-SA 4.0 license: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;
+Please see our speaker release agreement for details: &lt;a class="reference external" href="https://ep2021.europython.eu/events/speaker-release-agreement/"&gt;https://ep2021.europython.eu/events/speaker-release-agreement/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2021"></category></entry></feed>

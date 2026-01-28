@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Sebastian Wild</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Quicksort, Timsort, Powersort - Algorithmic ideas, engineering tricks, and trivia behind CPython's new sorting algorithm</title><link>https://pyvideo.org/pycon-us-2023/quicksort-timsort-powersort-algorithmic-ideas-engineering-tricks-and-trivia-behind-cpythons-new-sorting-algorithm.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing a sorting function is easy - coding a fast and reliable
+reference implementation less so. In this talk, I tell the story behind
+CPython's &lt;a class="reference external" href="https://github.com/python/cpython/issues/78742"&gt;latest
+updates&lt;/a&gt; of the list
+sort function.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Aims:&lt;/strong&gt; entertain people with twists of history and algorithmic
+puzzles, which tell a lovely story of how a seemingly useless piece of
+theory lead to the fastest and most elegant solution of a practical
+challenge.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Target audience:&lt;/strong&gt; geeks believing in the power of solid algorithmic
+thinking; programmers interested in engineering performance-critical
+code; all Python enthusiast curious about what makes (sorting lists in)
+Python fast.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Content&lt;/strong&gt;: After using Quicksort for a long while, Tim Peters invented
+&lt;em&gt;Timsort&lt;/em&gt;, a clever Mergesort variant, for the CPython reference
+implementation of Python. Timsort is both effective in Python and a
+popular export product: it is used in many languages and frameworks,
+notably OpenJDK, the Android runtime, and the V8 JavaScript engine.&lt;/p&gt;
+&lt;p&gt;Despite this success, algorithms researchers eventually pinpointed two
+flaws in Timsort's underlying algorithm: The first could lead to a
+&lt;a class="reference external" href="http://www.envisage-project.eu/proving-android-java-and-python-sorting-algorithm-is-broken-and-how-to-fix-it/"&gt;stack overflow in
+CPython&lt;/a&gt;
+(and Java); although it has meanwhile been fixed, it is curious that 10
+years of widespread use didn't bring it to surface. The second flaw is
+related to &lt;em&gt;performance&lt;/em&gt;: the order in which detected sorted segments,
+the “runs” in the input, are merged, can be &lt;a class="reference external" href="https://arxiv.org/abs/1801.04641"&gt;50% more
+costly&lt;/a&gt; than necessary. Based on
+ideas from the little known puzzle of optimal alphabetic trees, the
+&lt;a class="reference external" href="https://arxiv.org/abs/1805.04154"&gt;Powersort merge policy&lt;/a&gt; finds
+nearly optimal merging orders with negligible overhead, and is now
+(Python 3.11.0) part of the CPython implementation.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sebastian Wild</dc:creator><pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-22:/pycon-us-2023/quicksort-timsort-powersort-algorithmic-ideas-engineering-tricks-and-trivia-behind-cpythons-new-sorting-algorithm.html</guid><category>PyCon US 2023</category></item></channel></rss>

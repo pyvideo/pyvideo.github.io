@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - DevOps general</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><item><title>Docker meets Python - A look on the Docker SDK for Python</title><link>https://pyvideo.org/europython-2019/docker-meets-python-a-look-on-the-docker-sdk-for-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;My talk aims to introduce and have a closer look on the Docker SDK for
+Python.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will cover:&lt;/div&gt;
+&lt;div class="line"&gt;- How and where to get the SDK&lt;/div&gt;
+&lt;div class="line"&gt;- How it works and how to use it in general&lt;/div&gt;
+&lt;div class="line"&gt;- Possible use-cases like: Processing Container-Logs, Testing with
+pytest on different Python Versions, Deploy via Python Script, etc..&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;For my talk, you should know what Docker is and how to use it.&lt;/div&gt;
+&lt;div class="line"&gt;A basic idea of pytest and server administration is nice to have, but
+not necessarily needed to follow my talk.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jan Wagner</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/docker-meets-python-a-look-on-the-docker-sdk-for-python.html</guid><category>EuroPython 2019</category><category>Deployment/Continuous Integration and Delivery</category><category>DevOps general</category><category>Docker</category><category>Testing</category><category>Virtualization</category></item><item><title>Google Cloud for Pythonistas</title><link>https://pyvideo.org/europython-2019/google-cloud-for-pythonistas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Support for Python on Google Cloud has never been better. Join us for a
+tour of Python runtimes, services and client libraries, including App
+Engine, Cloud Functions, Cloud Run, and more. We'll also discuss tools
+for monitoring and debugging your Python application, and best practices
+for using Python on Google Cloud.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dustin Ingram</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/google-cloud-for-pythonistas.html</guid><category>EuroPython 2019</category><category>Deployment/Continuous Integration and Delivery</category><category>DevOps general</category><category>Development</category><category>Public Cloud (AWS/Google/...)</category><category>Web</category></item><item><title>Introduction to low-level profiling and tracing</title><link>https://pyvideo.org/europython-2019/introduction-to-low-level-profiling-and-tracing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has built-in tracing and profiling facilities in form of callback
+hooks in the sys module. The settrace and setprofile callbacks have
+several drawbacks. They slow down the Python interpreter considerable
+and only allow tracing of Python code. Modern OS and CPUs come with a
+variety of APIs for efficient and low-level tracing down to system
+calls, Kernel space code, and hardware events. Some tools even create
+code that runs in Kernel space.&lt;/p&gt;
+&lt;p&gt;This talks is an introduction and comparison of various low and high
+level tools for profiling and tracing as well as visualization tools
+like flame graphs. It covers ptrace, perf, SystemTap, and BCC/eBPF.
+Ptrace based commands like strace are easy to use but slow. Perf allows
+lightweight profiling of hardware events and CPU instructions. SystemTap
+is a powerful toolkit plus DSL to instrument probe points inside the
+Kernel as well as static SystemTap/DTrace markers in libs and languages
+like Java, PHP, and Python. CPython comes with a set of instrumentations
+for SystemTap. BCC is a collection of tools that run as JIT optimized
+eBPF code in Kernel space.&lt;/p&gt;
+&lt;p&gt;The talk is an introduction to basic concepts of low-level tracing and
+profiling on Linux. The main goal is the show the potential of the
+tools.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christian Heimes</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/introduction-to-low-level-profiling-and-tracing.html</guid><category>EuroPython 2019</category><category>CPython</category><category>DevOps general</category><category>Performance</category></item><item><title>Advanced Infrastructure Management in Kubernetes using Python</title><link>https://pyvideo.org/europython-2020/advanced-infrastructure-management-in-kubernetes-using-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automate managing complex applications in a cloud native way using Operators written in Python&lt;/p&gt;
+&lt;p&gt;Many of us are using Kubernetes in production. A Kubernetes Operator is a way to automate packaging, deploying, and managing of a Kubernetes Application. It is a software alternative to a human operator who has deep knowledge of how to set up, deploy, and manage a particular piece of infrastructure and what to do if it isn’t behaving correctly. Let’s see how we can automate all of this while staying in the Python ecosystem.&lt;/p&gt;
+&lt;p&gt;It will be helpful to know some basic concepts of Kubernetes(Deployments, Services, Pods, Configmap etc.) and Celery(docs.celeryproject.org) to get the most out of this talk.&lt;/p&gt;
+&lt;p&gt;Talk is divided into four phases.&lt;/p&gt;
+&lt;p&gt;Phase I - Problems and Opportunities
+We're going to see some simple examples/problems where a lot of manual effort is involved so as to connect audience to the problem.
+We're going to discuss problems with configuration management, database cluster setup and introduce the focus problem of the talk which is around automating the setup of a Celery cluster.&lt;/p&gt;
+&lt;p&gt;Phase II - Incrementally Approaching the Solution
+We're going to incrementally approach the automation each of the manual steps involved in running a Celery cluster in Production. We're going to discuss the extension capabilities in Kubernetes using CRDs and Custom Controllers which are going to help us manage our Celery cluster automagically.&lt;/p&gt;
+&lt;p&gt;Phase III - Celery Operator in action
+We're going to see the code of custom controller and the whole operator in action. We create the newly defined celery resource and see how the operator works on bringing up the worker and flower deployments and handles autoscaling based on queue length.&lt;/p&gt;
+&lt;p&gt;Phase IV - Conclusion and Q&amp;amp;A
+We're going to talk about different use-cases and what is world doing with Operators. We'll discuss the next steps for the Celery operator and some resources to help build operators. We'll end the talk with a Q&amp;amp;A.&lt;/p&gt;
+&lt;p&gt;Slides for the talk are available on - &lt;a class="reference external" href="https://bit.ly/europython20-ppt"&gt;https://bit.ly/europython20-ppt&lt;/a&gt;
+Celery Operator POC I built for this talk is open source - &lt;a class="reference external" href="https://github.com/brainbreaker/Celery-Kubernetes-Operator"&gt;https://github.com/brainbreaker/Celery-Kubernetes-Operator&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gautam Prajapati</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/advanced-infrastructure-management-in-kubernetes-using-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>DevOps general</category><category>Distributed Systems</category><category>Infrastructure</category><category>Messaging and Job Queues (RabbitMQ/Redis/...)</category><category>python</category></item><item><title>Best practices for production-ready Docker packaging</title><link>https://pyvideo.org/europython-2020/best-practices-for-production-ready-docker-packaging.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;An iterative packaging plan for your Python application&lt;/p&gt;
+&lt;p&gt;You know the basics of packaging your Python application for Docker, but do you know enough to run that image in production? Bad packaging can result in security and production problems, not to mention wasted time try to debug unreproducible errors.&lt;/p&gt;
+&lt;p&gt;And even if you figure out the best practices, there's still a huge number of details to get right, many of which interact with each other in unexpected ways. My personal list includes over 60 Docker packaging best practices, and it keeps growing. So where do you start? What should you do first?&lt;/p&gt;
+&lt;p&gt;To help you quickly package your application in a production-ready way, this talk will give you a plan to help you prioritize and iteratively implement these best practices, by starting with the highest priority best practices (security, automation), moving on the correctness and reproducibility, and finally focusing on optimization.&lt;/p&gt;
+&lt;p&gt;To make this process more concrete, along the way you'll also learn some of the techniques needed to build production-ready images:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Running as a non-root, for increased security.&lt;/li&gt;
+&lt;li&gt;Debugging C crashes with faulthandler.&lt;/li&gt;
+&lt;li&gt;Faster startup with pre-compiled .pycs.&lt;/li&gt;
+&lt;li&gt;Smaller images by disabling pip caching.&lt;/li&gt;
+&lt;li&gt;Avoiding Alpine Linux.&lt;/li&gt;
+&lt;li&gt;And more!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of the talk you'll also get some resources to teach you even more best practices that can't be fit in a 30-minute talk.&lt;/p&gt;
+&lt;p&gt;This talk is for Python programmers who know the basics of Docker packaging, and need to run the resulting images in a production environment.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Itamar Turner-Trauring</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/best-practices-for-production-ready-docker-packaging.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Deployment/Continuous Integration and Delivery</category><category>DevOps general</category><category>Docker</category><category>Packaging</category><category>Security</category></item><item><title>Cultivating a Culture of Creativity, Collaboration, and Captainship</title><link>https://pyvideo.org/europython-2020/cultivating-a-culture-of-creativity-collaboration-and-captainship.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In my work as a consultant, coach, and organizational leader- I work with amazing companies around the world, helping them craft and implement strategies to build high-performing teams.&lt;/p&gt;
+&lt;p&gt;And when I work with these teams, I notice that there are two factors that make all the difference between a good organization and one that is changing the world.&lt;/p&gt;
+&lt;p&gt;The first is having a culture of collaboration – and this means collaboration across individuals, across departments, and across teams – really - it’s a culture that’s less about competition and cutthroat political systems.. And more about helping each other achieve the extraordinary.&lt;/p&gt;
+&lt;p&gt;The second quality is organizations that treat and expect their employees to act like owners. Owning not just their behaviors, actions, and responsibilities, but owning outcomes and becoming a voice for the organization.&lt;/p&gt;
+&lt;p&gt;No matter where your organization is at today, the good news is– there are proven strategies to create a culture of collaborative ownership at your organization and that’s what I’m going to teach you in this course.&lt;/p&gt;
+&lt;p&gt;I’ll share how you can build momentum from a carefully crafted vision and goals, I’ll help you improve communication and drive ownership, I’ll help you foster creativity, and finally, I’ll help you train up leaders in your organization and help you meet more of your goals.&lt;/p&gt;
+&lt;p&gt;So, if you’re ready to transform your organization. let’s go!&lt;/p&gt;
+&lt;p&gt;LEARNING OBJECTIVES:&lt;/p&gt;
+&lt;p&gt;Attendees will learn: How to transform a command-obey dynamic to one of creativity and innovation through opportunities for ownership. How to collaborate with opportunities for ownership through proven methods to increase connectivity and engagement in the team. How to foster captainship within your organization. How to apply the ideas of collaborative ownership specifically in individual organizations.&lt;/p&gt;
+&lt;p&gt;SESSION OUTLINE: Fostering an Ownership Culture (Creativity and Innovation)- Ownership Activity -Fostering a Collaborative Culture- Collaborative Activity - Fostering Captainship Culture - Captainship activity- The Application of Collaborative Ownership for Personal and Organizational Success- Applying Collaborative Ownership to Organizations and Self Activity -Conclusion Q&amp;amp;A&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Amber Vanderburg</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/cultivating-a-culture-of-creativity-collaboration-and-captainship.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Agile</category><category>Best Practice</category><category>Business</category><category>Community</category><category>DevOps general</category></item><item><title>Painless Machine Learning in Production</title><link>https://pyvideo.org/europython-2020/painless-machine-learning-in-production.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Developing machine learning models is easy; training, deploying, monitoring, scaling, and maintaining them in an automated fashion - all while maintaining your sanity - is hard.&lt;/p&gt;
+&lt;p&gt;In this session, I'll discuss the infrastructure and tooling my small team of data science practitioners and engineers is using to manage and orchestrate the machine learning model lifecycle, including pitfalls we've encountered along the way. Particular attention will be paid to where we've opted to use off-the-shelf solutions versus developing our own, the importance of developer ergonomics, and how to maximally empower data scientists to get their work into production without the need for a dedicated MLOps team.&lt;/p&gt;
+&lt;p&gt;The talk will cover our ML stack as it exists in production today, and will touch on our application of a number of technologies and techniques, including:
+- AWS SageMaker
+- Airflow
+- Docker
+- Cookiecutter
+- Property-based testing
+- Jsonschema
+- Linting
+- Slack integration
+- Model artifacts and diagnostics
+- Automated deployments and rollbacks
+- Healthchecks
+- Autoscaling
+- DBT&lt;/p&gt;
+&lt;p&gt;At the end of the session, attendees should expect to leave with new insights that they can apply immediately to their own ML systems and infrastructure, as well as a better understanding of how to minimize engineering and ops overhead, in the real world, across data science teams of any size and composition.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Chase Stevens</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/painless-machine-learning-in-production.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Case Study</category><category>Data Science</category><category>DevOps general</category><category>Infrastructure</category><category>Machine-Learning</category></item></channel></rss>

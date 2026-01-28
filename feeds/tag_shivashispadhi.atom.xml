@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - ShivashisPadhi</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_shivashispadhi.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2020-09-05T00:00:00+00:00</updated><subtitle></subtitle><entry><title>What happens behind execution of an `import` statement?</title><link href="https://pyvideo.org/pycon-au-2020/what-happens-behind-execution-of-an-import-statement.html" rel="alternate"></link><published>2020-09-05T00:00:00+00:00</published><updated>2020-09-05T00:00:00+00:00</updated><author><name>Shivashis Padhi</name></author><id>tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-happens-behind-execution-of-an-import-statement.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shivashis Padhi&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/Q7GJNZ"&gt;https://2020.pycon.org.au/program/Q7GJNZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;### Introduction&lt;/p&gt;
+&lt;p&gt;Every Python script involves import statements. And if you develop software with Python, you might already have come across import and path related errors like ImportError, ModuleNotFoundError, etc.&lt;/p&gt;
+&lt;p&gt;It's important to know the import mechanics, both for general knowledge …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shivashis Padhi&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/Q7GJNZ"&gt;https://2020.pycon.org.au/program/Q7GJNZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;### Introduction&lt;/p&gt;
+&lt;p&gt;Every Python script involves import statements. And if you develop software with Python, you might already have come across import and path related errors like ImportError, ModuleNotFoundError, etc.&lt;/p&gt;
+&lt;p&gt;It's important to know the import mechanics, both for general knowledge, and to develop custom plugins to tweak the import system. In this talk, we'd discuss in detail about how the import system works, its components and what tasks they perform respectively.&lt;/p&gt;
+&lt;p&gt;### Who should attend this talk?
+This talk is most suitable for beginner to intermediate level Pythonistas.&lt;/p&gt;
+&lt;p&gt;### How does the talk proceed?
+- The talk starts with packages in Python, and how to organize Python files in order to make them distributable, and importable.
+- It proceeds to discuss about $PATH and $PYTHONPATH, and how they are used to enable system-wide imports, and how capable are Python's path based import handlers, if they let a programmer import from remote URIs, etc.
+- Different types of packages such as regular packages, namespace packages, frozen modules, etc. are discussed.
+- After that, some key components are introduced i.e sys.modules and how modules are refreshed and regulated in runtime, what finders and loaders are, and what 'import protocol' is, sys.meta_path, sys.path_hooks.&lt;/p&gt;
+&lt;p&gt;The talk then goes in detail about finders, the default finders in Python, spec object, and its functioning.
+After finders, loaders are discussed with sample code, explaining the steps involved from processing a spec, and creating, executing, and loading a module to sys.modules.
+- After finders and loaders, 'import hooks' are discussed i.e how Python allows injection of custom components to handle a pre-defined import statement.
+- This follows a demonstration of import hooks, implementation of a meta_path finder Class which protects importing of modules from an http server with a token exchange. (So the source code is protected, and it can be logged who requested the source code by a signature to act against misuse.)
+- The demonstration is followed by listing some important use cases of import hooks, and how folks have used it in the past.&lt;/p&gt;
+&lt;p&gt;### What can someone get out of this talk?&lt;/p&gt;
+&lt;p&gt;An understanding of the import system's mechanics, which helps to quickly debug and fix path/import related errors.
+Knowledge of import hooks, to build custom import related plugins.&lt;/p&gt;
+&lt;p&gt;### Outline&lt;/p&gt;
+&lt;p&gt;Time Duration- Topic&lt;/p&gt;
+&lt;p&gt;0- 4 Introduction to packages and how to organize packages&lt;/p&gt;
+&lt;p&gt;4- 7 Types of packages in python, and the default ones the import system supports.&lt;/p&gt;
+&lt;p&gt;7- 12 Components of import system- sys.modules- finders and loaders- chronology of import related tasks&lt;/p&gt;
+&lt;p&gt;12- 15 Finders, examples of finders, and how they function, find_spec function&lt;/p&gt;
+&lt;p&gt;15- 17 sys.meta_path, sys.path_hooks in detail&lt;/p&gt;
+&lt;p&gt;17- 19 Introduction to PEP 302, and import hooks&lt;/p&gt;
+&lt;p&gt;19- 22 explain loaders with template code&lt;/p&gt;
+&lt;p&gt;23- 25 code walkthrough and demonstration of an implementation of import hooks&lt;/p&gt;
+&lt;p&gt;25- 26 briefly cover 'importing of submodules' topic with an example&lt;/p&gt;
+&lt;p&gt;26- 28 present use-cases of import hooks, and usage in industry, conclude.&lt;/p&gt;
+&lt;p&gt;28- 30 Q&amp;amp;A&lt;/p&gt;
+&lt;p&gt;### Prerequisites:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Syntactic knowledge of Python&lt;/li&gt;
+&lt;li&gt;Should have come across import/$PYTHONPATH related errors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you don't know either and still like the talk idea, please follow [this gist](&lt;a class="reference external" href="https://gist.github.com/plant99/9fee5dbe73f25d4da9c7fb956a36b889"&gt;https://gist.github.com/plant99/9fee5dbe73f25d4da9c7fb956a36b889&lt;/a&gt;) to 'intentionally' come across the errors :)&lt;/p&gt;
+&lt;p&gt;## Content URLs&lt;/p&gt;
+&lt;p&gt;[WIP slides](&lt;a class="reference external" href="https://speakerdeck.com/plant99/wip-what-happens-behind-execution-of-an-import-statement"&gt;https://speakerdeck.com/plant99/wip-what-happens-behind-execution-of-an-import-statement&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;[Longer description of the talk idea as blogpost](&lt;a class="reference external" href="https://plant99.bitbucket.io/pages/blogs/ten.html"&gt;https://plant99.bitbucket.io/pages/blogs/ten.html&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:00:00 2020 at Curlyboi&lt;/p&gt;
+</content><category term="PyCon AU 2020"></category><category term="PyCon"></category><category term="PyConAU"></category><category term="PyConline"></category><category term="Python"></category><category term="ShivashisPadhi"></category><category term="pyconau"></category><category term="pyconau_2020"></category></entry></feed>

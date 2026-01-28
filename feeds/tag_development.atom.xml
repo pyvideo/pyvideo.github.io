@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - development</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_development.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-06-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Breaking down the process of building a custom CMS</title><link href="https://pyvideo.org/djangocon-us-2010/djangocon-2010--breaking-down-the-process-of-buil.html" rel="alternate"></link><published>2010-09-07T00:00:00+00:00</published><updated>2010-09-07T00:00:00+00:00</updated><author><name>Brian Luft</name></author><id>tag:pyvideo.org,2010-09-07:/djangocon-us-2010/djangocon-2010--breaking-down-the-process-of-buil.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The purpose of this talk is to share some of the important insights
+gained over a couple years of working on custom CMS-type projects
+serving large organizations. Acknowledging that approx. 30 minutes is a
+short time to cover a broad subject, the focus of the talk would be on …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The purpose of this talk is to share some of the important insights
+gained over a couple years of working on custom CMS-type projects
+serving large organizations. Acknowledging that approx. 30 minutes is a
+short time to cover a broad subject, the focus of the talk would be on
+outlining a basic strategy for managing large projects.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;Over the past couple of years, Brian and Yann's team have built and
+worked on several large Django projects for large organizations. They
+will discuss how to start and manage large CMS projects, with an
+emphasis on pointing people to the best reference information and
+breaking down the common operations.&lt;/p&gt;
+&lt;p&gt;The primary discussion topics would cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Breaking Down the Job: Over the course of the project you'll end up
+accounting for thousands of details; here's how to figure out the
+first few Centering Around a Prototype: Hedging your bets for the
+inevitable &amp;quot;give me a ballpark figure&amp;quot;&lt;/li&gt;
+&lt;li&gt;Dealing With Legacy Data Stores: Migrate legacy information early and
+often.&lt;/li&gt;
+&lt;li&gt;Selecting 3rd Party Components: Reuse exiting app, fork it early or
+Trailblaze&lt;/li&gt;
+&lt;li&gt;Bad News: Django Ain't Perfect - where it has weaknesses and how to
+compensate&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;At the end of this talk the audience will be able to:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+* Break down this type of project into meaningful phases
+* Migrate large dataset to populate the django models that are still under development.
+* Have a rational and objective approach to select django reusable component and understand how to refine them during the different stages of the project lifecycle.
+* Find and evaluate quality information about the tradeoffs Django presents in these types of projects
+&lt;/pre&gt;
+</content><category term="DjangoCon US 2010"></category><category term="development"></category><category term="djangocon"></category><category term="djangocon2010"></category><category term="projectmanagement"></category></entry><entry><title>Advanced asyncio: Solving Real-world Production Problems</title><link href="https://pyvideo.org/europython-2019/advanced-asyncio-solving-real-world-production-problems.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Lynn Root</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/advanced-asyncio-solving-real-world-production-problems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;By building a simplified chaos monkey service, we will walk through how
+to create a good foundation for an asyncio-based service, including
+graceful shutdowns, proper exception handling, and testing asynchronous
+code. We’ll get into the hairier topics as well, covering topics like
+working with synchronous code, debugging and profiling, and working with
+threaded code. We’ll learn how to approach asynchronous and concurrent
+programming with Python’s asyncio library, take away some best
+practices, and learn what pitfalls to avoid.&lt;/p&gt;
+&lt;p&gt;Outline:
+(40 minutes + 5 min Q&amp;amp;A, if unable to get 45 minutes, then 30 min slot
+with no time for Q&amp;amp;A)&lt;/p&gt;
+&lt;div class="section" id="intro-2m"&gt;
+&lt;h4&gt;Intro (2m)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Speaker/company intro&lt;/li&gt;
+&lt;li&gt;Setting the context/purpose of talk&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="foundations-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Foundations (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Initial setup of an asyncio service (2m)&lt;ul&gt;
+&lt;li&gt;Required boilerplate code&lt;/li&gt;
+&lt;li&gt;Inspiration from official asyncio tutorial docs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making a service &lt;em&gt;actually&lt;/em&gt; concurrent (5m)&lt;ul&gt;
+&lt;li&gt;non-blocking vs concurrent&lt;/li&gt;
+&lt;li&gt;when to be concurrent vs serial&lt;/li&gt;
+&lt;li&gt;using callbacks vs awaits vs scheduling tasks (create_task) vs
+asyncio.Events&lt;/li&gt;
+&lt;li&gt;Making synchronous code asyncio-friendly (2m)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="intermediate-9m-trimmed-to-6m-for-30-min-slot"&gt;
+&lt;h4&gt;Intermediate (9m - trimmed to 6m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Graceful shutdowns (3m)&lt;ul&gt;
+&lt;li&gt;What a signal handler is, why it’s needed&lt;/li&gt;
+&lt;li&gt;What signals to listen to&lt;/li&gt;
+&lt;li&gt;Gotchas of cancelling tasks, asyncio.shield + shutdown behavior&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Exception handling (3m)&lt;ul&gt;
+&lt;li&gt;Difference between top-level exception handling and handling
+within other coroutines&lt;/li&gt;
+&lt;li&gt;Avoid mistakenly swallowing/missing raised exceptions&lt;/li&gt;
+&lt;li&gt;Making use of loop.set_exception_handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Making threaded code asyncio-“friendly” (3m)&lt;ul&gt;
+&lt;li&gt;Calling threaded code from coroutines (aka running within a
+ThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Calling coroutines from from threaded code (aka
+run_coroutine_threadsafe)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="advanced-19m-trimmed-to-15m-for-30-min-slot"&gt;
+&lt;h4&gt;Advanced (19m - trimmed to 15m for 30 min slot)&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Testing asyncio code (7m)&lt;ul&gt;
+&lt;li&gt;Benefits of debug mode&lt;/li&gt;
+&lt;li&gt;How to mock coroutines&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Debugging an asyncio service (5m)&lt;ul&gt;
+&lt;li&gt;Reinforce debug mode&lt;/li&gt;
+&lt;li&gt;Using “tricks&amp;quot; like &lt;tt class="docutils literal"&gt;asyncio.all_tasks&lt;/tt&gt; with logging,
+&lt;tt class="docutils literal"&gt;loop.slow_callback_duration&lt;/tt&gt;, adding context/stack trace in default
+exception handler&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Profiling (7m)&lt;ul&gt;
+&lt;li&gt;Basic profiling (cProfile, strace) - not that different from sync
+code&lt;/li&gt;
+&lt;li&gt;Continuous profiling with 3rd party tools, i.e. github.com/what-
+studio/profiling&lt;/li&gt;
+&lt;li&gt;PyCharm’s asyncio &amp;amp; thread profiler&lt;/li&gt;
+&lt;li&gt;How to properly trace a workflow/request (e.g. for the purpose of
+distributed tracing) (to be cut if not enough time)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrap-up-review-1m"&gt;
+&lt;h4&gt;Wrap up/Review (1m)&lt;/h4&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="ASYNC / Concurrency"></category><category term="Best Practice"></category><category term="Development"></category></entry><entry><title>Code review for Beginners and Experts: Tips &amp; Tricks</title><link href="https://pyvideo.org/europython-2019/code-review-for-beginners-and-experts-tips-tricks.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Łukasz Kąkol</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/code-review-for-beginners-and-experts-tips-tricks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Code review is not just boring duty. It's mutual responsibility for
+the software we're releasing. It's one of the most critical aspects of
+code quality, and therefore it's the first step of quality assurance.
+This is also the key to easier programming and better maintainability.
+Clean code is much …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Code review is not just boring duty. It's mutual responsibility for
+the software we're releasing. It's one of the most critical aspects of
+code quality, and therefore it's the first step of quality assurance.
+This is also the key to easier programming and better maintainability.
+Clean code is much easier to debug, and it's much harder to introduce
+a bug in such code.&lt;/div&gt;
+&lt;div class="line"&gt;When you think about code review, you probably think about verifying
+and examining the code. Reviewing the expert's code may look like a
+waste of time because he knows what he's doing. Reviewing the code by
+a beginner may look like a waste of time because he's not able to find
+as many defects as an experienced developer. Code review is a code
+quality tool in the first place, but it's also much beyond that. You
+can teach or help someone, learn from somebody and much more both from
+the position of reviewer and reviewee.&lt;/div&gt;
+&lt;div class="line"&gt;There is much more about the real power of code review which I want to
+share with you.&lt;/div&gt;
+&lt;div class="line"&gt;This talk is also about how to do it the right way and how to not do
+it based on lessons learned and my experience within the diverse teams
+of people with a variety of knowledge and experience. I was reviewing
+the code but, on the other hand, I was also being reviewed. I'd like
+to pass my observations to people who are reviewing the code both in
+commercial and open source projects for a while. This talk is also for
+those who want to start to review the code, but they do not know how
+to do it.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Best Practice"></category><category term="Clean Code"></category><category term="Code Analysis"></category><category term="Development"></category><category term="Programming"></category></entry><entry><title>Delta Chat, CFFI, pytest and all the Rust</title><link href="https://pyvideo.org/europython-2019/delta-chat-cffi-pytest-and-all-the-rust.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Holger Krekel</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/delta-chat-cffi-pytest-and-all-the-rust.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Delta Chat, a new approach to decentralized messaging, uses Python in
+several ways. Delta Chat is a Whatsapp/Telegram-style messenger app
+which uses the existing e-mail server network instead of central
+servers. There is no address book upload, and no necessity to tie
+accounts to mobile numbers. We'll live- …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Delta Chat, a new approach to decentralized messaging, uses Python in
+several ways. Delta Chat is a Whatsapp/Telegram-style messenger app
+which uses the existing e-mail server network instead of central
+servers. There is no address book upload, and no necessity to tie
+accounts to mobile numbers. We'll live- demo how &amp;quot;Chat over E-mail&amp;quot;
+works, with random audience members, in real-time.&lt;/p&gt;
+&lt;p&gt;We'll then look into how Python is used for automated testing (with
+pytest) against the messenger core library which is exposed through
+CFFI. However, the core library will soon be ported to full Rust. Are
+there better ways to interface Rust with Python than going through
+C-interfaces?&lt;/p&gt;
+&lt;p&gt;In the third part we'll introduce first example Chat Bots, written in
+Python. Do you want to send an machine-generated system allert to a
+sysadmin group? Or safely archive all media that is posted to a family
+group? Or have your IoT sensor react to commands or send info? Just do
+it without registering a bot to some central cite, or by exposing all
+content information to (e. g. Telegram) servers. A Chat Bot only needs
+access to a standard IMAP/SMTP account. We'll look at the simple Python
+API for writing and testing powerful and versatile Chat bots.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- Delta Chat: &lt;a class="reference external" href="https://delta.chat"&gt;https://delta.chat&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;- Core library and Py bindings:
+&lt;a class="reference external" href="https://github.com/deltachat/deltachat-core"&gt;https://github.com/deltachat/deltachat-core&lt;/a&gt;&lt;/div&gt;
+&lt;div class="line"&gt;- Deltabot: &lt;a class="reference external" href="https://github.com/deltachat/deltabot/"&gt;https://github.com/deltachat/deltabot/&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Development"></category><category term="Python general"></category><category term="Rust"></category><category term="Sensors"></category><category term="System Administration"></category></entry><entry><title>Evolving a helper script into a 180,000-lines-of-Python-code project</title><link href="https://pyvideo.org/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Mikhail Bushkov</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GRR Rapid Response (&lt;a class="reference external" href="https://github.com/google/grr"&gt;https://github.com/google/grr&lt;/a&gt;) is an incident
+response framework focused on remote live forensics.&lt;/p&gt;
+&lt;p&gt;It consists of a Python client (agent) that is installed on target
+systems, and Python server infrastructure that can manage and talk to
+clients. The goal of GRR is to support …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GRR Rapid Response (&lt;a class="reference external" href="https://github.com/google/grr"&gt;https://github.com/google/grr&lt;/a&gt;) is an incident
+response framework focused on remote live forensics.&lt;/p&gt;
+&lt;p&gt;It consists of a Python client (agent) that is installed on target
+systems, and Python server infrastructure that can manage and talk to
+clients. The goal of GRR is to support forensics and investigations in a
+fast, scalable manner to allow analysts to quickly triage attacks and
+perform analysis remotely.&lt;/p&gt;
+&lt;p&gt;GRR was started at Google in 2009 as a simple Python helper script used
+by Incident Response engineers. Eventually a little Python script got a
+little server component, was adapted to run on multiple systems (Mac,
+Linux, Windows), then a little UI was added and a few nice features were
+introduced (large-scale hunts, collection of predefined artifacts,
+memory analysis). A helper script has eventually evolved into a
+sophisticated framework with 180,000 lines of Python code.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In the presentation we’ll talk about the process of evolving a small
+prototype-like Python project into a production-ready system, using
+GRR as an example. The topics that we’ll cover are:&lt;/div&gt;
+&lt;div class="line"&gt;* Taking shortcuts - both in terms of design and implementation.
+Reasons for taking them and their eventual costs.&lt;/div&gt;
+&lt;div class="line"&gt;* Relying on Python’s power features (i.e. meta-classes, mixins)?
+Long-term consequences on maintainability and readability.&lt;/div&gt;
+&lt;div class="line"&gt;* Organising the project into separate PyPI packages - benefits of
+doing that.&lt;/div&gt;
+&lt;div class="line"&gt;* Continuous integration, testing and automated builds for various
+platforms - implementation costs and maintainability effects.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Databases"></category><category term="Deployment/Continuous Integration and Delivery"></category><category term="Development"></category><category term="Open-Source"></category><category term="Security"></category></entry><entry><title>Google Cloud for Pythonistas</title><link href="https://pyvideo.org/europython-2019/google-cloud-for-pythonistas.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Dustin Ingram</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/google-cloud-for-pythonistas.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Support for Python on Google Cloud has never been better. Join us for a
+tour of Python runtimes, services and client libraries, including App
+Engine, Cloud Functions, Cloud Run, and more. We'll also discuss tools
+for monitoring and debugging your Python application, and best practices
+for using Python on …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Support for Python on Google Cloud has never been better. Join us for a
+tour of Python runtimes, services and client libraries, including App
+Engine, Cloud Functions, Cloud Run, and more. We'll also discuss tools
+for monitoring and debugging your Python application, and best practices
+for using Python on Google Cloud.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Deployment/Continuous Integration and Delivery"></category><category term="DevOps general"></category><category term="Development"></category><category term="Public Cloud (AWS/Google/...)"></category><category term="Web"></category></entry><entry><title>Python Standard Library, The Hidden Gems</title><link href="https://pyvideo.org/europython-2019/python-standard-library-the-hidden-gems.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Alessandro Molina</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/python-standard-library-the-hidden-gems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python Standard Library is a very rich toolset, which is the reason
+why Python is stated to come with &amp;quot;batteries included&amp;quot;. In such an
+amount of features and tools it's easy to get lost and miss some of the
+less unknown modules or gems hidden within the whole …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Python Standard Library is a very rich toolset, which is the reason
+why Python is stated to come with &amp;quot;batteries included&amp;quot;. In such an
+amount of features and tools it's easy to get lost and miss some of the
+less unknown modules or gems hidden within the whole load of functions
+and classes.&lt;/p&gt;
+&lt;p&gt;This talk aims at showcasing some recipes, snippets and usages of
+standard library modules and functions that are less known or that are
+not covered in the most common books and tutorials available for Python.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk will try to showcase a bunch of short examples in the hope to
+foster the &amp;quot;oh, wow! I didn't think about that&amp;quot; reaction at least once
+in the audience.&lt;/div&gt;
+&lt;div class="line"&gt;We will see how frequently for tasks where you used third party
+libraries or frameworks a solution bultin into the standard library is
+already available, and such solution is guaranteed to be maintained
+and well working for the years to come thanks to the standard library
+reliability and stability.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The showcased examples are took from the “Modern Python Standard Library
+Cookbook” book that I authored.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="CPython"></category><category term="Debugging"></category><category term="Development"></category><category term="General"></category><category term="python"></category></entry><entry><title>The Agile comedy: from hell to paradise</title><link href="https://pyvideo.org/europython-2019/the-agile-comedy-from-hell-to-paradise.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Anastasiia Tymoshchuk</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/the-agile-comedy-from-hell-to-paradise.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Nowadays everyone wants to bring Agile Best Practices into all the
+teams, but it's a hard task to implement it and adapt based on
+different teams. Setting up all necessary Agile meetings and using
+buzz words is not enough for the team to be happy and successful while
+working …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Nowadays everyone wants to bring Agile Best Practices into all the
+teams, but it's a hard task to implement it and adapt based on
+different teams. Setting up all necessary Agile meetings and using
+buzz words is not enough for the team to be happy and successful while
+working in Agile environment.&lt;/div&gt;
+&lt;div class="line"&gt;Inspired by the &amp;quot;Divine Comedy&amp;quot; by Dante Alighieri, I decided to
+create a short guide into Agile best practices. It will guide through
+Failures, Challenges to the Success in building a happy dream team!&lt;/div&gt;
+&lt;div class="line"&gt;This talk is divided into three parts:&lt;/div&gt;
+&lt;div class="line"&gt;1. Failures in setting up Agile processes for a team.&lt;/div&gt;
+&lt;div class="line"&gt;2. Challenges on the way to happy and successful team.&lt;/div&gt;
+&lt;div class="line"&gt;3. Successful examples how to have happy and productive Agile team and
+constantly deliver a great product.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Agile"></category><category term="Development"></category><category term="General"></category></entry><entry><title>Tools of the Trade: The Making of a Code Editor.</title><link href="https://pyvideo.org/europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Nicholas Tollervey</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/tools-of-the-trade-the-making-of-a-code-editor.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk tells the story of Mu, a native code editor written in Python
+(&lt;a class="reference external" href="https://codewith.mu/"&gt;https://codewith.mu/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;One Sunday afternoon I foolishly asked myself, &amp;quot;How hard can it be to
+write a simple code editor?&amp;quot; Several years later an international team
+of volunteers are still working on the project …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk tells the story of Mu, a native code editor written in Python
+(&lt;a class="reference external" href="https://codewith.mu/"&gt;https://codewith.mu/&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;One Sunday afternoon I foolishly asked myself, &amp;quot;How hard can it be to
+write a simple code editor?&amp;quot; Several years later an international team
+of volunteers are still working on the project. We have had to address:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Cross platform GUI development.&lt;/li&gt;
+&lt;li&gt;Cross platform packaging solutions for Python.&lt;/li&gt;
+&lt;li&gt;Creating an interactive visual debugger.&lt;/li&gt;
+&lt;li&gt;Integrating with iPython notebook.&lt;/li&gt;
+&lt;li&gt;Integrating with various IoT MicroPython devices.&lt;/li&gt;
+&lt;li&gt;Integrating with frameworks such as PyGame/PyGameZero and Flask.&lt;/li&gt;
+&lt;li&gt;Automating cross platform testing.&lt;/li&gt;
+&lt;li&gt;Researching and testing UX with a challenging user base.&lt;/li&gt;
+&lt;li&gt;Accessibility for all.&lt;/li&gt;
+&lt;li&gt;Internationalisation.&lt;/li&gt;
+&lt;li&gt;Creating an inclusive, welcoming and supportive community.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will explain why Mu was created, how Mu was created and, most
+importantly, shares the decision making, technical research and
+implementation details of Mu in the hope others can learn from our
+mistakes, mis-steps and muck-ups.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Cross-Platform-Development"></category><category term="Development"></category><category term="Education"></category><category term="Packaging"></category><category term="failures/mistakes"></category></entry><entry><title>Deploy Python to the cloud faster with Azure Serverless</title><link href="https://pyvideo.org/europython-2019/deploy-python-to-the-cloud-faster-with-azure-serverless.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Jeff Hollan</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/deploy-python-to-the-cloud-faster-with-azure-serverless.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bringing your Python scripts or apps and running them in the cloud is
+easier than ever with serverless computing. In this talk, we’ll show how
+you can use Azure Functions to easily deploy and scale your Python
+workloads without having to manage any servers or pay for unused …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bringing your Python scripts or apps and running them in the cloud is
+easier than ever with serverless computing. In this talk, we’ll show how
+you can use Azure Functions to easily deploy and scale your Python
+workloads without having to manage any servers or pay for unused compute
+resources. We’ll also show how deep integration with Visual Studio Code
+offers a great local development experience with full support for
+debugging and testing your app, and allows you to seamlessly deploy your
+serverless code to the cloud.&lt;/p&gt;
+&lt;p&gt;We’ll start by giving a brief overview of the value of serverless
+computing. Next, we'll create a brand new Python app in Visual Studio
+Code, and start to add in business logic and ML capabilities. Once we
+get the app running debugged locally, we’ll publish it to the cloud as a
+serverless function, and demonstrate the serverless scalability.
+Finally, we’ll walk you through the tools and capabilities you can
+leverage around monitoring and management of your Python Azure
+Functions.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="APIs"></category><category term="Development"></category><category term="Microservices"></category><category term="Scaling"></category><category term="Tooling"></category></entry><entry><title>Exceptional Exceptions</title><link href="https://pyvideo.org/europython-2019/exceptional-exceptions.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Mario Corchero</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/exceptional-exceptions.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Did you know there are multiple ways to raise and capture exceptions?
+Have you ever wondered if you should raise a built-in exception or
+create your own hierarchy? Did you ever find it hard to understand
+what an exception meant?&lt;/div&gt;
+&lt;div class="line"&gt;This talk will go through the decisions needed to …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Did you know there are multiple ways to raise and capture exceptions?
+Have you ever wondered if you should raise a built-in exception or
+create your own hierarchy? Did you ever find it hard to understand
+what an exception meant?&lt;/div&gt;
+&lt;div class="line"&gt;This talk will go through the decisions needed to raise and capture
+exceptions when creating a library. We will look at how to translate
+and handle errors, create your own exceptions, and make exceptions
+clear and easy to troubleshoot, while also understanding how they
+actually work, common pitfalls.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk will enable intermediate developers to leave the room with a
+solid understanding of how to work effectively with exceptions. As the
+exception flow usually goes untested, this will help prevent frustrating
+situations when errors occur that are not easy to understand or when an
+unexpected result is produced. The talk will delve into the different
+ways of working with exceptions. We will illustrate this with a
+real-world example to which many developers will be able to relate.&lt;/p&gt;
+&lt;p&gt;Following the talk, intermediate developers will leave the room more
+informed and better prepared to create and handle exceptions, having
+learned about many utilities that were already available to them, but
+were never used or were used improperly.&lt;/p&gt;
+&lt;p&gt;The not-so-advanced Pythonistas will get an in-depth dive into
+exceptions. Even if they might not be able to grasp all of the content,
+they will get a sense of the features that most programmers are unaware
+of and learn to use them when the proper situation arrives.&lt;/p&gt;
+&lt;p&gt;Advanced programmers will find this to be a humorous talk that will
+certainly teach them at least one new thing, as I will dive into parts
+of the grammar of Python that even many advanced programmers are not
+used to.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk is also full of niche information like why the variable that
+catches exceptions doesn’t like outside of the &lt;tt class="docutils literal"&gt;except&lt;/tt&gt; scope.&lt;/div&gt;
+&lt;div class="line"&gt;The talk is comprised of four main sections preceded by an
+introduction to the problem and a conclusion with time for questions
+at the end. We will look at how to raise, capture, create and design
+exceptions, offering tips and pitfalls in each section.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Best Practice"></category><category term="Development"></category><category term="General"></category><category term="Python 3"></category><category term="Python Skills"></category></entry><entry><title>How Thinking in Python Made Me a Better Software Engineer</title><link href="https://pyvideo.org/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Johnny Dude</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a key for
+rapid development and good engineering.&lt;/p&gt;
+&lt;p&gt;Thinking in a programming language affects the amount of information you
+need to keep in your working memory. It also affects the abstractions
+and tools that pop in your mind and then used in constructing solutions.&lt;/p&gt;
+&lt;p&gt;Let’s explore what it means to think in Python. Why Python allows you to
+focus on problem solving, while languages like c++ often distract your
+attention from the problem at hand.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some good and bad practices by examples while
+trying to consider the amount of effort needed to write it, read it, and
+talk about it with other team members.&lt;/p&gt;
+&lt;p&gt;Key Takeaways: Tips for speeding your work without compromising quality,
+and reasoning for using it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience should be comfortably familiar with the process of
+software development, and software problem solving, and experience
+using Python.&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="EuroPython 2019"></category><category term="Best Practice"></category><category term="Development"></category><category term="Software Design"></category><category term="failures/mistakes"></category></entry><entry><title>How to write a JIT compiler in 30 minutes</title><link href="https://pyvideo.org/europython-2019/how-to-write-a-jit-compiler-in-30-minutes.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Antonio Cuni</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/how-to-write-a-jit-compiler-in-30-minutes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Real-world JIT compilers like PyPy and Numba are complex and advanced.
+However, the basic ideas behind JIT compilers are easy to understand, as
+this talk aim to show.&lt;/p&gt;
+&lt;p&gt;This is a live-coding exercise: we will start from a blank page and
+write a working (albeit simple and limited) JIT …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Real-world JIT compilers like PyPy and Numba are complex and advanced.
+However, the basic ideas behind JIT compilers are easy to understand, as
+this talk aim to show.&lt;/p&gt;
+&lt;p&gt;This is a live-coding exercise: we will start from a blank page and
+write a working (albeit simple and limited) JIT compiler from scratch.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Compiler and Interpreters"></category><category term="Development"></category><category term="TDD"></category></entry><entry><title>Refactoring in Python</title><link href="https://pyvideo.org/europython-2019/refactoring-in-python.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Tin Marković</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/refactoring-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[Replacement talk]&lt;/div&gt;
+&lt;div class="line"&gt;This talk was a replacement for Stanislav Geidl's talk: From legacy
+code to modern code&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Honest apologies to anyone whose expectations were subverted, but
+Stanislav fell sick and could not attend. Find the updated abstract
+below:&lt;/p&gt;
+&lt;p&gt;This talk will describe experiences and lessons learned from tackling
+extremely …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;[Replacement talk]&lt;/div&gt;
+&lt;div class="line"&gt;This talk was a replacement for Stanislav Geidl's talk: From legacy
+code to modern code&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Honest apologies to anyone whose expectations were subverted, but
+Stanislav fell sick and could not attend. Find the updated abstract
+below:&lt;/p&gt;
+&lt;p&gt;This talk will describe experiences and lessons learned from tackling
+extremely demanding code. How to bring order to mismanaged code and
+elevate the code base to a standard that's acceptable in today's tech
+environment.&lt;/p&gt;
+&lt;p&gt;Python makes wonderful code accessible at our fingertips, but it also
+allows us to take a lot of liberty. When you start, code is beautiful
+and makes sense. With each step you walk on, you find more and more
+hacks showing up. Eventually, the brilliant codebase you've started with
+can not be seen under the mud.&lt;/p&gt;
+&lt;p&gt;Not every code-base can be rewritten, not everything can be redone from
+scratch. Cool libraries often take a lot of liberty with code structure
+and make cross-integration difficult, if not impossible. Tests sound
+ideal, but in practice, they're just so hard to make right. Why is this,
+and how to change it?&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The talk will tackle the problems in three parts:&lt;/div&gt;
+&lt;div class="line"&gt;- The Easy Wins: What to do to instantly increase the code quality in
+your organisation. How? Why isn't it enough?&lt;/div&gt;
+&lt;div class="line"&gt;- Patterns and Antipatterns: How to identify code that &amp;quot;smells&amp;quot;, how
+to replace it? How to integrate into old code, better?&lt;/div&gt;
+&lt;div class="line"&gt;- The Philosophy: What approach to set down for the future? Why to
+care? How to write replace-able code. How to prevent history from
+repeating.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The talk will close with audience discussion and experiences, questions
+and proposals - building a collection of some on-premise tips and
+tricks.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Architecture"></category><category term="Clean Code"></category><category term="Development"></category><category term="Python 3"></category><category term="legacy-code"></category></entry><entry><title>PyRun - Shipping the Python 3.7 runtime in just 4.8MB</title><link href="https://pyvideo.org/europython-2019/pyrun-shipping-the-python-37-runtime-in-just-48mb.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Marc-Andre Lemburg</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/pyrun-shipping-the-python-37-runtime-in-just-48mb.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has become the defacto standard tool for many people to write
+tools, command scripts, smaller applications and even large
+applications.&lt;/p&gt;
+&lt;p&gt;On Windows, it is fairly easy to build application bundles using e.g.
+py2exe, but on Unix, the situation is less obvious, unless you want to
+rely on …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has become the defacto standard tool for many people to write
+tools, command scripts, smaller applications and even large
+applications.&lt;/p&gt;
+&lt;p&gt;On Windows, it is fairly easy to build application bundles using e.g.
+py2exe, but on Unix, the situation is less obvious, unless you want to
+rely on OS specific Python distributions, which often require severall
+100MB with of installation on the system and are usually customized in
+distribution specific ways.&lt;/p&gt;
+&lt;p&gt;Instead of relying on OS installed Python distributions on Unix, our
+open- source eGenix PyRun provides a more or less complete Python
+runtime (interpreter and stdlib modules) in a single file, which can be
+&amp;quot;installed&amp;quot; by simply copying the binary to the destination system. The
+file can be as small as 4.8MB for Python 3.7, by using compressors such
+as upx.&lt;/p&gt;
+&lt;p&gt;Due to its size, it's also the perfect Python distribution for Docker
+containers.&lt;/p&gt;
+&lt;p&gt;The talk will show how PyRun works, is built, how to customize it to
+include additional modules and applications.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="CPython"></category><category term="Development"></category><category term="Linux"></category><category term="Tooling"></category><category term="Use Case"></category></entry><entry><title>Python vs Rust for Simulation</title><link href="https://pyvideo.org/europython-2019/python-vs-rust-for-simulation.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Alisa Dammer</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/python-vs-rust-for-simulation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Both Python and Rust are getting more and more popularity. Although it
+is unfair to compare them directly, this talk aims to provide a clear
+comparison with a pre-defined criteria applied to a specific use-case.&lt;/div&gt;
+&lt;div class="line"&gt;Writing a simulation engine is very similar to writing a game engine
+and requires …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Both Python and Rust are getting more and more popularity. Although it
+is unfair to compare them directly, this talk aims to provide a clear
+comparison with a pre-defined criteria applied to a specific use-case.&lt;/div&gt;
+&lt;div class="line"&gt;Writing a simulation engine is very similar to writing a game engine
+and requires certain features from a language or framework.&lt;/div&gt;
+&lt;div class="line"&gt;Possible comparison criteria:&lt;/div&gt;
+&lt;div class="line"&gt;1. Performance&lt;/div&gt;
+&lt;div class="line"&gt;2. Simplicity&lt;/div&gt;
+&lt;div class="line"&gt;3. Amount of code necessary for a MVP&lt;/div&gt;
+&lt;div class="line"&gt;4. Utilities: docs, tests, profile&lt;/div&gt;
+&lt;div class="line"&gt;5. Compatibility&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Tl;dr&lt;/div&gt;
+&lt;div class="line"&gt;Do I want to go back to Python after Rust? Maybe+)&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Code Analysis"></category><category term="Development"></category><category term="Rust"></category><category term="python"></category></entry><entry><title>Wait, IPython can do that?!</title><link href="https://pyvideo.org/europython-2019/wait-ipython-can-do-that.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Sebastian Witowski</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/wait-ipython-can-do-that.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I've been programming in Python for over 7 years. And from the time
+someone introduced me to IPython, it immediately became my default
+Python REPL. I enjoyed the syntax highlighting, code completion or the
+instant access to the documentation. Over the years, I've picked up more
+and more tricks …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I've been programming in Python for over 7 years. And from the time
+someone introduced me to IPython, it immediately became my default
+Python REPL. I enjoyed the syntax highlighting, code completion or the
+instant access to the documentation. Over the years, I've picked up more
+and more tricks that IPython could do: embedding IPython sessions,
+starting IPython automatically when a test fails, taking advantage of
+the startup files, not to mention all the various magic functions.&lt;/p&gt;
+&lt;p&gt;It took me some time to discover all those features (if there is one
+thing I would like you to take away from this talk, it’s that reading
+the documentation of a tool that you are using &lt;em&gt;every day&lt;/em&gt; is probably a
+good idea) and in this talk, I will give an overview of what you can do
+with IPython REPL.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the things I will talk about:&lt;/div&gt;
+&lt;div class="line"&gt;- Documentation with ? and ??, running shell functions in IPython,
+magic functions&lt;/div&gt;
+&lt;div class="line"&gt;- Profiles, startup files, configuration file, kernels, and extensions&lt;/div&gt;
+&lt;div class="line"&gt;- How to better use IPython for debugging&lt;/div&gt;
+&lt;div class="line"&gt;- How to use IPython for profiling&lt;/div&gt;
+&lt;div class="line"&gt;- Alternatives to IPython REPL&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This talk is for you if you are a casual user of IPython - you know some
+of its features, but maybe not all of them and instead of reading
+through the documentation, you would prefer to see someone giving an
+overview of IPython features and how you can use them.&lt;/p&gt;
+&lt;p&gt;This talk is NOT for you if you are up to date with IPython
+documentation and you think you know most of its features.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Best Practice"></category><category term="Development"></category><category term="Ipython"></category><category term="Tooling"></category><category term="iPython"></category></entry><entry><title>Writing a Python autoreloader</title><link href="https://pyvideo.org/europython-2019/writing-a-python-autoreloader.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Tom Forbes</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/writing-a-python-autoreloader.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Reloading your code changes quickly is an integral part of the
+development experience in frameworks like Django and Flask that
+developers have come to rely on. But how do they work under the hood and
+what challenges do you face while writing one?&lt;/p&gt;
+&lt;p&gt;In this talk I will explore …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Reloading your code changes quickly is an integral part of the
+development experience in frameworks like Django and Flask that
+developers have come to rely on. But how do they work under the hood and
+what challenges do you face while writing one?&lt;/p&gt;
+&lt;p&gt;In this talk I will explore how I refactored the autoreload
+implementation in Django 2.2 and the lessons I learned along the way
+(hint: it's surprisingly complex!). I will also be introducing a library
+I've developed to simplify this if you ever find yourself writing your
+own.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Architecture"></category><category term="Development"></category><category term="Django"></category><category term="Python 3"></category><category term="Software Design"></category></entry><entry><title>Can we deploy yet?</title><link href="https://pyvideo.org/europython-2020/can-we-deploy-yet.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Anastasiia Tymoshchuk</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/can-we-deploy-yet.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to make your code production ready&lt;/p&gt;
+&lt;p&gt;What happens when your features are done, your MVP is ready and you want to deploy your first production build? What do you do then? How do you make your first production build instead of re-using your development one? is your code …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to make your code production ready&lt;/p&gt;
+&lt;p&gt;What happens when your features are done, your MVP is ready and you want to deploy your first production build? What do you do then? How do you make your first production build instead of re-using your development one? is your code ready to handle real user interactions?
+This talk will show a production ready checklist for your Python code; what to look for when creating a production-ready Docker image; what are the differences between development and production environments and builds.
+You will see how to deal with exceptions, logs, and metrics with real-world use cases.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Architecture"></category><category term="Best Practice"></category><category term="Clean Code"></category><category term="Development"></category><category term="Documentation"></category></entry><entry><title>Clean Architectures in Python</title><link href="https://pyvideo.org/europython-2020/clean-architectures-in-python.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Leonardo Giordani</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/clean-architectures-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A practical approach to better software design&lt;/p&gt;
+&lt;p&gt;Architectural considerations are often overlooked by developers or completely delegated to a framework. We should start once again discussing how applications are structured, how components are connected and how to lower coupling between different parts of a system, to avoid creating software …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A practical approach to better software design&lt;/p&gt;
+&lt;p&gt;Architectural considerations are often overlooked by developers or completely delegated to a framework. We should start once again discussing how applications are structured, how components are connected and how to lower coupling between different parts of a system, to avoid creating software that cannot easily be maintained or changed.&lt;/p&gt;
+&lt;p&gt;The “clean architecture” model predates Robert Martin, who recently brought it back to the attention of the community, and is a way of structuring applications that leverages layers separation and internal APIs to achieve a very tidy, fully-tested, and loosely coupled system. The talk introduces the main ideas of the architecture, showing how the layers can be implemented in Python, following the content of the book “Clean Architectures in Python”. The book recently reached 11,000 downloads and many readers found it useful to start learning how to test software and how to structure an application without relying entirely on the framework.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Abstractions"></category><category term="Architecture"></category><category term="Clean Code"></category><category term="Development"></category><category term="TDD"></category></entry><entry><title>Difficulties of Python code development:packages,virtualenvs and package mangers</title><link href="https://pyvideo.org/europython-2020/difficulties-of-python-code-developmentpackagesvirtualenvs-and-package-mangers.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Michał Wodyński</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/difficulties-of-python-code-developmentpackagesvirtualenvs-and-package-mangers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Develop your code effectively with well chosen tools&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;In this presentation I will show different packages that are used in Python. I will point out differences and explain the prons and cons of using them during code development.&lt;/dt&gt;
+&lt;dd&gt;After that we will jump to the topic of virtualenvs and …&lt;/dd&gt;&lt;/dl&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Develop your code effectively with well chosen tools&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;In this presentation I will show different packages that are used in Python. I will point out differences and explain the prons and cons of using them during code development.&lt;/dt&gt;
+&lt;dd&gt;After that we will jump to the topic of virtualenvs and  popular tools that are used for managing them. I will explain what is purpose of the virtualenvs in Python and why we should use them.
+Finally we will focus on the most important topic without which development is not possible – package mangers. Package managers it is wide topic in Python world. There is many package mangers and  currently we have tools like pip, pipenv or poetry but it is not obvious which of them we should use in first place. Which of them are recommended to use? What are prons and cons of certain package mangers? Is there any other not well known packages mangers? How package mangers are packaging Python code? Which of the package mangers are good for data scientists? Is your package manger is resolving dependencies?
+This questions can appear especially when you are beginner and just to want start working with Python. Unfortunately form the beginning you must face the problem which of the package manger you should use. In this presentation I will answer all of this questions. I will list popular package mangers and some not known. I will show differences and which of them are best for which case. Also I will explain differences between packages that are used by different packages mangers. If you are interested in code development and package mangers or you are just confused which of them you should use this presentation is definitely for you. During this presentation I will answer all questions and I will wipe out all doubts about packages, package mangers and virtualenvs.&lt;/dd&gt;
+&lt;/dl&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Beginners"></category><category term="Conda / conda forge"></category><category term="Development"></category><category term="Packaging"></category><category term="Virtual Env"></category></entry><entry><title>Everything You Know About MongoDB is Wrong!</title><link href="https://pyvideo.org/europython-2020/everything-you-know-about-mongodb-is-wrong.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Mark Smith</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/everything-you-know-about-mongodb-is-wrong.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;(Probably)&lt;/p&gt;
+&lt;p&gt;MongoDB is webscale, right? It's a JSON database, it's eventually consistent, and you use map-reduce to query it. Oh, and it's insecure.&lt;/p&gt;
+&lt;p&gt;Let me clear up some things: MongoDB is an ACID-compliant database with transactions, schemas &amp;amp; relationships. It includes a powerful aggregation query language; map-reduce has been deprecated …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;(Probably)&lt;/p&gt;
+&lt;p&gt;MongoDB is webscale, right? It's a JSON database, it's eventually consistent, and you use map-reduce to query it. Oh, and it's insecure.&lt;/p&gt;
+&lt;p&gt;Let me clear up some things: MongoDB is an ACID-compliant database with transactions, schemas &amp;amp; relationships. It includes a powerful aggregation query language; map-reduce has been deprecated for some time now. MongoDB doesn't speak or store JSON, and nowadays it comes with pretty good security defaults (we think).&lt;/p&gt;
+&lt;p&gt;There are many myths around about MongoDB - what it is, how it works, and what it does wrong. Like any database product, you need to know its capabilities and how to get the best out of it. On top of this, the product has changed a lot over the years, but lots of information out there hasn't caught up.&lt;/p&gt;
+&lt;p&gt;I'll cover 8 myths around MongoDB, explain how they're wrong, why the myth originated in the first place (some of them weren't originally myths).&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What exactly is MongoDB?&lt;/li&gt;
+&lt;li&gt;What is the current release of MongoDB?&lt;/li&gt;
+&lt;li&gt;MongoDB is not a JSON database.&lt;/li&gt;
+&lt;li&gt;MongoDB has transactions.&lt;/li&gt;
+&lt;li&gt;MongoDB allows relationships.&lt;/li&gt;
+&lt;li&gt;You should only consider sharding if you must.&lt;/li&gt;
+&lt;li&gt;MongoDB is secure.&lt;/li&gt;
+&lt;li&gt;MongoDB stores your data reliably.&lt;/li&gt;
+&lt;li&gt;MongoDB is a big product, with lots to learn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Along the way, I'll explain some of MongoDB's best-kept secrets, and provide practical tips and tricks for using it. The audience will leave with a good idea of what MongoDB is, what it isn't, and how to best develop with it.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Big Data"></category><category term="Data"></category><category term="Databases"></category><category term="Development"></category><category term="MongoDB"></category></entry><entry><title>Find a new job - Sponsor Presentations</title><link href="https://pyvideo.org/europython-2020/find-a-new-job-sponsor-presentations.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Marc-Andre Lemburg</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/find-a-new-job-sponsor-presentations.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recruiting Session&lt;/p&gt;
+&lt;p&gt;Many of our sponsor are looking to hire more developers and EuroPython is the perfect place to reach out to many of them.&lt;/p&gt;
+&lt;p&gt;In this session, the sponsors will present themselves in short intros and you can then approach them directly in their sponsor virtual rooms (chat …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recruiting Session&lt;/p&gt;
+&lt;p&gt;Many of our sponsor are looking to hire more developers and EuroPython is the perfect place to reach out to many of them.&lt;/p&gt;
+&lt;p&gt;In this session, the sponsors will present themselves in short intros and you can then approach them directly in their sponsor virtual rooms (chat and Zoom) to discuss their offerings in more detail.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Business"></category><category term="Development"></category><category term="Job Hunting"></category><category term="Python Skills"></category><category term="Workforce"></category></entry><entry><title>How to sort anything</title><link href="https://pyvideo.org/europython-2020/how-to-sort-anything.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Reuven Lerner</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/how-to-sort-anything.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keeping your data organized with &amp;quot;sorted&amp;quot; and custom functions&lt;/p&gt;
+&lt;p&gt;Sorting is one of those things that we take for granted in Python. The built-in &amp;quot;sorted&amp;quot; function knows how to sort any iterable of objects that are themselves sortable.&lt;/p&gt;
+&lt;p&gt;But hiding behind that simple description is a great deal of …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Keeping your data organized with &amp;quot;sorted&amp;quot; and custom functions&lt;/p&gt;
+&lt;p&gt;Sorting is one of those things that we take for granted in Python. The built-in &amp;quot;sorted&amp;quot; function knows how to sort any iterable of objects that are themselves sortable.&lt;/p&gt;
+&lt;p&gt;But hiding behind that simple description is a great deal of depth. In this talk, I'll go deep into what it means to sort, and how we can sort any collection of Python data.  We'll see how you can use custom functions to sort built-in data structures in new and interesting ways.  And we'll see how you can design your own custom classes such that they will sort in just the way you want.&lt;/p&gt;
+&lt;p&gt;After watching this talk, you'll have a better understanding of sorting, built-in data structures, function objects, and how &amp;quot;magic methods&amp;quot; affect the our Python classes.  Moreover, you'll be able to write clearer, shorter, and more easily understood code.&lt;/p&gt;
+&lt;p&gt;Topics I'll address in this talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&amp;quot;sorted&amp;quot; and Timsort&lt;/li&gt;
+&lt;li&gt;Sorting a list of simple structures&lt;/li&gt;
+&lt;li&gt;Reversing the direction with &amp;quot;reverse&amp;quot;&lt;/li&gt;
+&lt;li&gt;Custom sorting with &amp;quot;key&amp;quot;&lt;/li&gt;
+&lt;li&gt;Stable sort&lt;/li&gt;
+&lt;li&gt;Sorting a list of dicts&lt;/li&gt;
+&lt;li&gt;Using &amp;quot;lambda&amp;quot;&lt;/li&gt;
+&lt;li&gt;Using operator.itemgetter&lt;/li&gt;
+&lt;li&gt;Sorting a list of named tuples&lt;/li&gt;
+&lt;li&gt;Sorting a list of objects&lt;/li&gt;
+&lt;li&gt;Making your object sortable&lt;/li&gt;
+&lt;li&gt;The functools.total_ordering decorator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is an intermediate-level talk; I'll assume that anyone attending knows how to write functions, classes, and methods.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Data"></category><category term="Development"></category><category term="Functional Programming"></category></entry><entry><title>IPython: The Productivity Booster</title><link href="https://pyvideo.org/europython-2020/ipython-the-productivity-booster.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Miki Tebeka</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/ipython-the-productivity-booster.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn to be productive with IPython&lt;/p&gt;
+&lt;p&gt;IPython seems like a fancy Python shell. Why do we need it when we have PyCharm, VSCode, and other IDEs?&lt;/p&gt;
+&lt;p&gt;In this talk you'll learn how to use the power of IPython for rapid development and how you can integrate it with existing …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn to be productive with IPython&lt;/p&gt;
+&lt;p&gt;IPython seems like a fancy Python shell. Why do we need it when we have PyCharm, VSCode, and other IDEs?&lt;/p&gt;
+&lt;p&gt;In this talk you'll learn how to use the power of IPython for rapid development and how you can integrate it with existing tools. We'll cover magic commands, calling external process, usage of extended history, async/await and more.&lt;/p&gt;
+&lt;p&gt;You'll also learn on some popular extension and cool configuration hacks (such as &lt;cite&gt;%autoreload 2&lt;/cite&gt;)&lt;/p&gt;
+&lt;p&gt;Since Jupyter is based on IPython, you'll be able to use all of what you
+learned in Jupyter Lab/Notebooks as well.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Development"></category><category term="Ipython"></category></entry><entry><title>Object Internals</title><link href="https://pyvideo.org/europython-2020/object-internals.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Mridu Bhatnagar</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/object-internals.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory address in Python&lt;/p&gt;
+&lt;p&gt;This talk is intended to explain to participants what is happening under the hood when they are playing around with different python built-in data structures. Explain the concepts such that they are not surprised by the behavior of Python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites:
+Anyone who knows built-in python …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Memory address in Python&lt;/p&gt;
+&lt;p&gt;This talk is intended to explain to participants what is happening under the hood when they are playing around with different python built-in data structures. Explain the concepts such that they are not surprised by the behavior of Python.&lt;/p&gt;
+&lt;p&gt;Pre-requisites:
+Anyone who knows built-in python data structures like List, Dictionaries, set, etc.&lt;/p&gt;
+&lt;p&gt;Curiosity questions that the talk answers:
+1. What happens to the memory address when * operator is used?
+2. When does python create a new object in memory?
+3. What does it refer to the mutability and immutability of objects in Python?
+4. If the outer object is immutable but the reference objects are mutable. Can the elements be added?
+5. What is the difference at the memory level when we refer to deep copy and shallow copy in lists?
+6. Operations like List.sort and sorted in python? What to use, when to use? What happens at the memory level?
+7. What is the difference between is vs ==? When should it be used?
+8. Lots and lots of interesting examples.
+9. How do we determine the memory reference id associated with the object?
+10. Meaning of assigning a value to a variable in Python.&lt;/p&gt;
+&lt;p&gt;The existing slides use screenshots. But, I'll be including more interesting examples and would replace the screenshots with GIFs. So, that folks get a feeling of live coding and remain interested in the presentation. Along with the visual representation of what is happening at the memory level.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Data-Structures"></category><category term="Development"></category><category term="Python 3"></category></entry><entry><title>Pluggable Architecture</title><link href="https://pyvideo.org/europython-2020/pluggable-architecture.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Aly Sivji</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/pluggable-architecture.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Extend functionality without touching existing code&lt;/p&gt;
+&lt;p&gt;Applications and libraries with a pluggable architecture allow developers to add custom functionality. Plugins can customize user interfaces, create new workflows, and interface with legacy systems. Designing a plugin is often difficult - documentation is sparse, outdated, or non-existent. You end up diving into …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Extend functionality without touching existing code&lt;/p&gt;
+&lt;p&gt;Applications and libraries with a pluggable architecture allow developers to add custom functionality. Plugins can customize user interfaces, create new workflows, and interface with legacy systems. Designing a plugin is often difficult - documentation is sparse, outdated, or non-existent. You end up diving into a unfamiliar codebase to figure out what to do.&lt;/p&gt;
+&lt;p&gt;This talk examines Pluggable Architecture by creating a custom plugin system: we will design an interface, think about where to hook in custom behavior, and discuss testing techniques. Understanding these principles will enable us to write custom plugins for third-party libraries. Extend the functionality of your favourite library without touching existing code!&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Abstractions"></category><category term="Architecture"></category><category term="Development"></category><category term="Software Design"></category><category term="System Architecture"></category></entry><entry><title>Python Memory Management 101</title><link href="https://pyvideo.org/europython-2020/python-memory-management-101.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>J.M. Ortega</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/python-memory-management-101.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deeping in Garbage collector&lt;/p&gt;
+&lt;p&gt;I will review the main mechanims&amp;nbsp;for memory allocation and how the garbage collector works in conjunction with the memory manager for reference counting of the python objects.Finally, I will comment the best practices for memory managment&amp;nbsp;such as writing efficient code.&lt;/p&gt;
+&lt;p&gt;These could …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Deeping in Garbage collector&lt;/p&gt;
+&lt;p&gt;I will review the main mechanims&amp;nbsp;for memory allocation and how the garbage collector works in conjunction with the memory manager for reference counting of the python objects.Finally, I will comment the best practices for memory managment&amp;nbsp;such as writing efficient code.&lt;/p&gt;
+&lt;p&gt;These could be the main talking points:
+-Introduccition&amp;nbsp;to memory management
+-Garbage collector and reference counting with python
+-Review the gc module for configuring the python garbage collector
+-Best practices for memory managment&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Best Practice"></category><category term="Development"></category><category term="Management"></category><category term="Python Skills"></category></entry><entry><title>Roadmap to an Open Source Artificial Pancreas &amp; Diabetes monitoring with Flask</title><link href="https://pyvideo.org/europython-2020/roadmap-to-an-open-source-artificial-pancreas-diabetes-monitoring-with-flask.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Diana Rodriguez Manrique</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/roadmap-to-an-open-source-artificial-pancreas-diabetes-monitoring-with-flask.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nightscout + Python + Voice + SMS - Using tech for good!&lt;/p&gt;
+&lt;p&gt;Open Source has crossed frontiers and is widely used to solve problems in the health &amp;amp; science fields. In this talk we’ll learn about the many moving parts of continuous glucose monitoring for type 1 Diabetes as part of the open-source …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nightscout + Python + Voice + SMS - Using tech for good!&lt;/p&gt;
+&lt;p&gt;Open Source has crossed frontiers and is widely used to solve problems in the health &amp;amp; science fields. In this talk we’ll learn about the many moving parts of continuous glucose monitoring for type 1 Diabetes as part of the open-source artificial pancreas project and building a notifier for the most used OSS continuous glucose monitoring dashboard: Nightscout.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Beginners"></category><category term="Communication"></category><category term="DIY"></category><category term="Development"></category><category term="Open-Source"></category></entry><entry><title>Serverless 2.0 with Cloudstate.io-stateful functions with Python</title><link href="https://pyvideo.org/europython-2020/serverless-20-with-cloudstateio-stateful-functions-with-python.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Sean Walsh</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/serverless-20-with-cloudstateio-stateful-functions-with-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine billions of functions, with in-memory state, distributed across a Kubernetes cluster!&lt;/p&gt;
+&lt;p&gt;Serverless is revolutionary and will dominate the future of Cloud. Function-as-a-Service (FaaS) however—with its stateless and short-lived functions is only the first step.&lt;/p&gt;
+&lt;p&gt;What’s needed is a next-generation Serverless platform and programming model for general-purpose …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine billions of functions, with in-memory state, distributed across a Kubernetes cluster!&lt;/p&gt;
+&lt;p&gt;Serverless is revolutionary and will dominate the future of Cloud. Function-as-a-Service (FaaS) however—with its stateless and short-lived functions is only the first step.&lt;/p&gt;
+&lt;p&gt;What’s needed is a next-generation Serverless platform and programming model for general-purpose application development in the new world of real-time data and event-driven systems. What is missing is ways to manage distributed state in a scalable and available fashion, support for long-lived virtual stateful services, ways to physically co-locate data and processing, and options for choosing the right data consistency model for the job.&lt;/p&gt;
+&lt;p&gt;This talk will discuss the challenges, requirements, and introduce you to our proposed solution: Cloudstate—an Open Source project building the next generation Stateful Serverless, running on Kubernetes, Akka, gRPC, Knative, and GraalVM, with polyglot support for Python, Java, Go, JavaScript, Swift, Scala, Python, Kotlin, and more.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Cross-Platform-Development"></category><category term="Development"></category><category term="Distributed Systems"></category><category term="Public Cloud (AWS/Google/...)"></category></entry><entry><title>The Hidden Power of the Python Runtime</title><link href="https://pyvideo.org/europython-2020/the-hidden-power-of-the-python-runtime.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Elizaveta Shashkova</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/the-hidden-power-of-the-python-runtime.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Retrieve useful information from Python runtime and build development tools based on it&lt;/p&gt;
+&lt;p&gt;Many people like Python for its simplicity and beauty. But every statement in Python, even the simple one, produces a lot of events during the program execution. These events are usually hidden from a user, so …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Retrieve useful information from Python runtime and build development tools based on it&lt;/p&gt;
+&lt;p&gt;Many people like Python for its simplicity and beauty. But every statement in Python, even the simple one, produces a lot of events during the program execution. These events are usually hidden from a user, so it helps developers to skip low-level implementation details and focus on bigger things.&lt;/p&gt;
+&lt;p&gt;At the same time many parts of this hidden information are very useful and interesting to examine. The good news is that Python Runtime allows to retrieve it really simply, so there is no need to configure additional libraries or pass additional parameters to interpreter. Everybody can do it right inside their Python code.&lt;/p&gt;
+&lt;p&gt;During this talk we will learn how Python allows to inspect current program state during the execution. We will learn about Python variables, frame objects and useful information they store. After that we will discuss several powerful tools which are based on the runtime information and which can be helpful for any Python programmer in their everyday life.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Debugging"></category><category term="Development"></category><category term="Python general"></category><category term="Tooling"></category></entry><entry><title>The Hitchhiker's Guide to CLIs in Python</title><link href="https://pyvideo.org/europython-2020/the-hitchhikers-guide-to-clis-in-python.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Vinayak Mehta</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/the-hitchhikers-guide-to-clis-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn all about CLIs and how to create one&lt;/p&gt;
+&lt;p&gt;Command-line applications and interfaces are used by both newcomers and experienced Python developers everyday. But do you know how they came to be? Hop on to this ship as we go through the CLI galaxy and look at its history …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn all about CLIs and how to create one&lt;/p&gt;
+&lt;p&gt;Command-line applications and interfaces are used by both newcomers and experienced Python developers everyday. But do you know how they came to be? Hop on to this ship as we go through the CLI galaxy and look at its history, explore the CLI anatomy and discover some Python packages that can help us create them.&lt;/p&gt;
+&lt;p&gt;We’ll then look at some widely used CLIs of our time. And emulate one of them by creating our own CLI using Click. Finally, we’ll package it and publish it on PyPI. Are you ready to travel faster-than-light using this ship’s Infinite Improbability Drive? Carry your towel!&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Command-Line"></category><category term="Development"></category><category term="Python general"></category><category term="The Answer to Life the Universe and Everything Else"></category><category term="Tooling"></category></entry><entry><title>We have nearly one million lines of Python 2 code in production – and now?</title><link href="https://pyvideo.org/europython-2020/we-have-nearly-one-million-lines-of-python-2-code-in-production-and-now.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Michael Howitz</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/we-have-nearly-one-million-lines-of-python-2-code-in-production-and-now.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Porting a rather large code base to Python 3 – lessons learned usable for projects of any size&lt;/p&gt;
+&lt;p&gt;In this talk I am going to present possible approaches for a Python 3 migration of existing Python code running on Python 2.7. I'll evaluate which of these approaches seems suitable …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Porting a rather large code base to Python 3 – lessons learned usable for projects of any size&lt;/p&gt;
+&lt;p&gt;In this talk I am going to present possible approaches for a Python 3 migration of existing Python code running on Python 2.7. I'll evaluate which of these approaches seems suitable for a large code base and which principles should be paid attention to to increase the probability of a successful migration project.&lt;/p&gt;
+&lt;p&gt;I'll use union.cms (a content management system used by German trade unions) to show the story of a successful migration project involving nearly one million lines of Python code. The story will include the obstacles we encountered and what we learned on the way.&lt;/p&gt;
+&lt;p&gt;I believe that most of the discussed ideas and experience can also be used unchanged in smaller projects as the presented principles are very much the same.&lt;/p&gt;
+&lt;p&gt;Goal of the presentation: You should be able to come up with a plan for migrating your Python 2 based projects to Python 3.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Best Practice"></category><category term="Development"></category><category term="Python 2"></category><category term="Python 3"></category><category term="legacy-code"></category></entry><entry><title>Writing and Scaling Collaborative Data Pipelines with Kedro</title><link href="https://pyvideo.org/europython-2020/writing-and-scaling-collaborative-data-pipelines-with-kedro.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Tam-Sanh Nguyen</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/writing-and-scaling-collaborative-data-pipelines-with-kedro.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to get your Data Scientists and Data Engineers to play nice, both now and in the future.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to introduce data pipeline developers to QuantumBlack's approach for keeping data pipelines healthy and sustainable and facilitating collaboration between data scientists and data engineers by …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to get your Data Scientists and Data Engineers to play nice, both now and in the future.&lt;/p&gt;
+&lt;p&gt;The goal of this talk is to introduce data pipeline developers to QuantumBlack's approach for keeping data pipelines healthy and sustainable and facilitating collaboration between data scientists and data engineers by using our open source framework, Kedro. Attendees need between novice and intermediate knowledge of Python (enough to understand syntactic sugar and funargs) in order to appreciate this talk.&lt;/p&gt;
+&lt;p&gt;As data continues to inform more and more business strategy, high quality, fully featured data pipelines have never been more critical. Small data scripts and single-coder science projects are not enough to keep up with the pace of day-to-day business and their ever-growing list of requirements. Now, more than ever, we need data engineers and data scientists to collaborate effectively. Yet, these two parties come with inherently competing needs.&lt;/p&gt;
+&lt;p&gt;Data scientists need high data volatility and parameterization, for experimentation, and data engineers, on the other hand, need stability and performance, to deliver data. Furthermore, as pipelines grow, the cost of knowledge transfer and training new team members also increases. How can we get scientists and engineers to work well together, and sustain pipeline growth as the team also grows?&lt;/p&gt;
+&lt;p&gt;For this, QuantumBlack created Kedro, a framework for writing data pipelines that addresses both the needs for flexibility and stability in its features and patterns of use. By using Kedro’s tools and operating model, we have enabled our teams to scale our single-developer, micro-pipes to industrial sized data processors with dozens of developers; all without sacrificing readability, quality, or stability. This talk will show you how.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Best Practice"></category><category term="Data"></category><category term="Development"></category><category term="Open-Source"></category><category term="python"></category></entry><entry><title>Automate cleaning code in few easy steps!</title><link href="https://pyvideo.org/pycon-italia-2022/automate-cleaning-code-in-few-easy-steps.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Ester Beltrami</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/automate-cleaning-code-in-few-easy-steps.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automate cleaning code in few easy steps! - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;How annoying is to find out that everything went to hell on the pipeline
+because you forgot to run the formatters? Be smart and learn how to set
+up automations! Have you ever been in the situation where you …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automate cleaning code in few easy steps! - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;How annoying is to find out that everything went to hell on the pipeline
+because you forgot to run the formatters? Be smart and learn how to set
+up automations! Have you ever been in the situation where you check the
+pipeline to see if it has finished and you discover it didn’t even start
+because you forgot to run formatters and linters locally? or when the
+code you’re reading isn’t formatted properly and you’re dying to stop
+doing everything you’re doing and fix it once for all this crap? There
+are wonderful tools out there to avoid this problem, that runs every
+commit or push so you don’t forget anymore! Learn how to configure them
+for your needs and more importantly learn why you need them now!!&lt;/p&gt;
+&lt;p&gt;Slides available [here](&lt;/p&gt;
+&lt;p&gt;Speaker: Ester Beltrami&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="clean code"></category><category term="development"></category></entry><entry><title>Best practices for good(ish) and clean(ish) code</title><link href="https://pyvideo.org/pycon-italia-2022/best-practices-for-goodish-and-cleanish-code.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Ernesto Arbitrio</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/best-practices-for-goodish-and-cleanish-code.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Best practices for good(ish) and clean(ish) code - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;A famous book introduction says:
+&lt;tt class="docutils literal"&gt;The only valid measurement of code quality: WTFs/minute&lt;/tt&gt;. In this
+talk I’d like to share my past and current experience on how to write
+good and clean code and what …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Best practices for good(ish) and clean(ish) code - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;A famous book introduction says:
+&lt;tt class="docutils literal"&gt;The only valid measurement of code quality: WTFs/minute&lt;/tt&gt;. In this
+talk I’d like to share my past and current experience on how to write
+good and clean code and what to do and not to do to achieve good shape
+programs. Sounds interesting uh? Have you ever thought what is the cost
+vs revenue of a well written code and of an ugly code? Nowadays, in most
+companies, code bases are huge (in terms of lines of code and
+complexity) and the number of contributors is also high; this means that
+a well shaped code could benefit the company finance and the mental
+health of the employees (AKA software engineers).&lt;/p&gt;
+&lt;p&gt;Writing clean (and/or good) code requires discipline. This discipline
+can be acquired and increased during your job and doing experience with
+messy code, but more important is that using discipline, respecting and
+following some rules you can achieve elegant and efficient code.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some principles of clean code (they are too
+much for 30 minutes): - Meaningful Names - Formatting - Tests and their
+importance - Continuous Integration - Code Refactoring - Code Review -
+Boundaries&lt;/p&gt;
+&lt;p&gt;All the work contained in this talk is mostly inspired by the book
+&lt;tt class="docutils literal"&gt;Clean Code - Robert C. Martin (AKA Uncle Bob)&lt;/tt&gt; and the experience I
+have made during my current job and the previous one.&lt;/p&gt;
+&lt;p&gt;Speaker: Ernesto Arbitrio&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="clean code"></category><category term="deployment/continuous integration"></category><category term="development"></category><category term="testing"></category></entry><entry><title>Creare API REST su Odoo con OCA REST Framework</title><link href="https://pyvideo.org/pycon-italia-2022/creare-api-rest-su-odoo-con-oca-rest-framework.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Andrea Colangelo</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/creare-api-rest-su-odoo-con-oca-rest-framework.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creare API REST su Odoo con OCA REST Framework - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;La disponibilità di API è spesso un requisito fondamentale per
+l’integrazione di Odoo con terze parti. Tuttavia la mancanza di una
+piattaforma REST nativa su Odoo è un ostacolo, a cui è tuttavia semplice
+porre rimedio …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Creare API REST su Odoo con OCA REST Framework - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;La disponibilità di API è spesso un requisito fondamentale per
+l’integrazione di Odoo con terze parti. Tuttavia la mancanza di una
+piattaforma REST nativa su Odoo è un ostacolo, a cui è tuttavia semplice
+porre rimedio in maniera sistematica e organizzata con il framework
+messo a disposizione da OCA Odoo fornisce di default un’interfaccia RPC
+per le integrazioni di terze parti, ma non un set di API REST. Per
+ovviare a questa mancanza, OCA, la comunità open-source di Odoo, ha
+sviluppato un insieme di moduli che aggiungono un framework molto solido
+e robusto per la realizzazione di API REST, con una integrazione nativa
+di Swagger, un sistema di validazione dei dati in ingresso e in uscita,
+e meccanismi di versionamento delle API stesse. In questo talk vedremo
+come utilizzare questo framework per realizzare API REST su Odoo.&lt;/p&gt;
+&lt;p&gt;Speaker: Andrea Colangelo&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="apis"></category><category term="architecture"></category><category term="cpython"></category><category term="development"></category><category term="odoo"></category><category term="open source"></category><category term="rest"></category></entry><entry><title>Event Driven Applications with Flask and Kafka</title><link href="https://pyvideo.org/pycon-italia-2022/event-driven-applications-with-flask-and-kafka.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Francesco Tisiot</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/event-driven-applications-with-flask-and-kafka.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Event Driven Applications with Flask and Kafka - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Let’s build an event driven application together! Using Flask as
+framework we’ll add the powerful Apache Kafka, a streaming platform, as
+backend… all live on stage! Join to understand how to integrate your
+application with Apache Kafka …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Event Driven Applications with Flask and Kafka - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Let’s build an event driven application together! Using Flask as
+framework we’ll add the powerful Apache Kafka, a streaming platform, as
+backend… all live on stage! Join to understand how to integrate your
+application with Apache Kafka! Solid event driven applications are based
+on a widely adopted coding framework and a resilient data streaming
+technology. While Flask is a common choice for the framework, a wise
+selection of the backend data systems can bring benefits in terms of
+ease of integration and performances.&lt;/p&gt;
+&lt;p&gt;In this session we will explore Apache Kafka, a data streaming platform,
+that enables reliable real-time data integration for your event driven
+application. We will look at the types of problems that Kafka is best at
+solving, and show how to use it in your own applications. We’ll then
+take a look at Kafka in action, by creating a Flask web application.&lt;/p&gt;
+&lt;p&gt;After understanding how to produce and consume events from Apache Kafka,
+we’ll then introduce Kafka Connect, a selection of pre-built connectors
+making Apache Kafka your only backend interface, no matter where your
+data originally sits.&lt;/p&gt;
+&lt;p&gt;If you’re using Flask, and want to understand how to make your
+application event driven by integrating it with the most used streaming
+technology, this session is for you!&lt;/p&gt;
+&lt;p&gt;Speaker: Francesco Tisiot&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="big data"></category><category term="development"></category><category term="flask"></category><category term="open source"></category></entry><entry><title>Linting Python The Elegant Way</title><link href="https://pyvideo.org/pycon-italia-2022/linting-python-the-elegant-way.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Riya Bansal</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/linting-python-the-elegant-way.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Linting Python The Elegant Way - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;This talk is for those people who know basic python but are looking
+forward to writing better and cleaner python code. Python has always
+been known for its easy-to-understand syntax. This talk will empower all
+developers and give perspective on how …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Linting Python The Elegant Way - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;This talk is for those people who know basic python but are looking
+forward to writing better and cleaner python code. Python has always
+been known for its easy-to-understand syntax. This talk will empower all
+developers and give perspective on how can you write code in a much more
+elegant way. Linting is the automated checking of your source code for
+programmatic and stylistic errors. Linters analyze source code to flag
+programming errors, bugs, stylistic errors, and suspicious constructs.
+This is done by using a lint tool. Python being one of the most elegant
+language has got a wide variety of listing tools available that can help
+programmers in Code formatting and styling their code in the best
+suitable form. Python has got some advance listing tools like pylint and
+flake8. In this talk we will have a great deal of discussion around how
+these linters can be used and how these tools can help you find more
+bugs and improve your code quality. These linting tools finds problems
+that are typically caught by a compiler for less dynamic languages. We
+will also discuss about how can we manage import orders, code
+formatting, checking security vulnerabilities, managing dependencies etc
+using these tools. There are also code analysis tools that provide other
+insights into your code. While maybe not linters by definition, these
+tools are usually used side-by-side with linters. They too hope to
+improve the quality of the code. It’s useful to have linters run against
+your code frequently. If automation and consistency aren’t there, it’s
+easy for a large team or project to lose sight of the goal and start
+creating lower-quality code.&lt;/p&gt;
+&lt;p&gt;Attendees will be able to learn 1. What is a linter? 2. Famous linting
+solutions like pylint and flake 8 3. Use cases like ordering imports,
+finding error bugs 4. Managing dependency in python with these linter
+tools.&lt;/p&gt;
+&lt;p&gt;Speaker: Riya Bansal&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="best practice"></category><category term="clean code"></category><category term="code analysis"></category><category term="community"></category><category term="development"></category></entry><entry><title>Python 3.10: let's pattern match! 🔥</title><link href="https://pyvideo.org/pycon-italia-2022/python-310-lets-pattern-match.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Laysa Uchoa</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/python-310-lets-pattern-match.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.10: let’s pattern match! 🔥 - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Python 3.10 is out there and with this comes Pattern Matching. With this
+talk, you will be surprised how simple, yet powerful, Pattern Matching
+really is.&lt;/p&gt;
+&lt;p&gt;This talk and you, it is a match! 🔥 Python 3.10 is …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.10: let’s pattern match! 🔥 - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Python 3.10 is out there and with this comes Pattern Matching. With this
+talk, you will be surprised how simple, yet powerful, Pattern Matching
+really is.&lt;/p&gt;
+&lt;p&gt;This talk and you, it is a match! 🔥 Python 3.10 is out there now. This
+was a two-digit minor version change since the last release, and with
+this release new ways of thinking about programming were brought to the
+Python language - Pattern Matching.&lt;/p&gt;
+&lt;p&gt;We will understand what was there before Python Pattern Matching and how
+to use Pattern Matching in different scenarios. We will pattern match
+from simple data types to more complex ones, such as dictionaries and
+objects. We will also understand how to use guards, and how can build
+composable patterns.&lt;/p&gt;
+&lt;p&gt;By the end of this talk, you will be surprised how simple, yet powerful,
+Pattern Matching really is. This talk and you, it is a match!&lt;/p&gt;
+&lt;p&gt;Speaker: Laysa Uchoa&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="apis"></category><category term="best practice"></category><category term="development"></category></entry><entry><title>Python Developers vs UX/UI Designer, incontri e scontri</title><link href="https://pyvideo.org/pycon-italia-2022/python-developers-vs-uxui-designer-incontri-e-scontri.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Virginia Capoluongo</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/python-developers-vs-uxui-designer-incontri-e-scontri.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python Developers vs UX/UI Designer, incontri e scontri - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;Racconto la mia esperienza come UX/UI Designer che da 4 anni collabora
+con un team di sviluppatori Python, due mondi affini che possono però
+sentirsi distanti e parlare lingue differenti. Come, con un po’ di
+impegno …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python Developers vs UX/UI Designer, incontri e scontri - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;Racconto la mia esperienza come UX/UI Designer che da 4 anni collabora
+con un team di sviluppatori Python, due mondi affini che possono però
+sentirsi distanti e parlare lingue differenti. Come, con un po’ di
+impegno, siamo riusciti a trovare un equilibrio fra call, metodologie e
+qualche birra. Racconto la mia esperienza con un team di sviluppatori
+Python. Quando quattro anni fa ho iniziato a collaborare con loro ho
+sentito per la prima volta parlare di Django, Agile, DevOps… arabo per
+me che venivo da un mondo di colori e creatività. Come designer avevo
+sempre lavorato da freelance con sviluppatori e agenzie, progettando
+interfacce che venivano poi implementate, in molti casi il mio lavoro
+finiva con la consegna del mockup che veniva “dato in pasto” a
+sviluppatori nella maggior parte dei casi sconosciuti.&lt;/p&gt;
+&lt;p&gt;Lavorando in un team coordinato e collaborativo siamo riusciti a trovare
+dei punti di incontro fra design thinking e continuous delivery,
+inserendo nel processo una fase di discovery che include indagini e
+co-design per migliorare i prodotti e l’esperienza degli utenti.&lt;/p&gt;
+&lt;p&gt;Speaker: Virginia Capoluongo&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="agile"></category><category term="development"></category></entry><entry><title>Supercharge Your Shell — Command-Line Power-Ups and Dotfile Automation</title><link href="https://pyvideo.org/pycon-italia-2022/supercharge-your-shell-command-line-power-ups-and-dotfile-automation.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Justin Mayer</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/supercharge-your-shell-command-line-power-ups-and-dotfile-automation.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Supercharge Your Shell — Command-Line Power-Ups and Dotfile Automation -
+PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;We spend hours each day in a terminal console, so let’s make the most of
+that time by enhancing our command-line productivity. We will automate
+dotfile configuration, facilitate Python interpreter and virtual
+environment management, and supercharge our …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Supercharge Your Shell — Command-Line Power-Ups and Dotfile Automation -
+PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;We spend hours each day in a terminal console, so let’s make the most of
+that time by enhancing our command-line productivity. We will automate
+dotfile configuration, facilitate Python interpreter and virtual
+environment management, and supercharge our terminals with powerful
+command-line tools. We spend hours each day in a terminal console, so
+let’s make the most of that time by enhancing our command-line
+productivity. Together we will automate dotfile configuration,
+facilitate Python interpreter and virtual environment management, and
+supercharge our terminals with powerful command-line tools.&lt;/p&gt;
+&lt;p&gt;Managing our shell configuration, commonly referred to collectively as
+“dotfiles”, can be an onerous task. Thankfully there are tools like
+Ansible and Chezmoi that we will use to more effectively automate
+dotfile management in versioned repositories, which we can then easily
+deploy to both personal workstations and remote servers.&lt;/p&gt;
+&lt;p&gt;Given the pitfalls inherent in distro-packaged Python interpreters,
+building and managing our own Python interpreters efficiently
+has never been more important. Thankfully, we will use tools like ASDF
+to make this incredibly easy, as well as examine its similar benefits
+for Node.js/NPM and &lt;em&gt;hundreds&lt;/em&gt; of other languages and tools, all via
+extensible plugins. For Fish shell users, we will see how VirtualFish
+makes it easy to create, upgrade, and activate virtual environments in
+ways that have never been available before.&lt;/p&gt;
+&lt;p&gt;Finally, we will explore how powerful command-line tools like Zoxide,
+Bat, RipGrep-All + fzf, and others can be used to dramatically increase
+our terminal console productivity.&lt;/p&gt;
+&lt;p&gt;Attendees of this talk will take home the following knowledge and
+skills:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how to automate dotfile configuration management and deployment&lt;/li&gt;
+&lt;li&gt;how to build and manage multiple Python interpreter versions&lt;/li&gt;
+&lt;li&gt;how to more efficiently manage Python virtual environments&lt;/li&gt;
+&lt;li&gt;how to use powerful command-line tools to increase terminal console
+productivity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Speaker: Justin Mayer&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="best practice"></category><category term="development"></category><category term="open source"></category></entry><entry><title>Viaggio nel mondo delle librerie python</title><link href="https://pyvideo.org/pycon-italia-2022/viaggio-nel-mondo-delle-librerie-python.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Danilo Abbasciano</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/viaggio-nel-mondo-delle-librerie-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Viaggio nel mondo delle librerie python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;25 utili librerie in 30 minuti Attraverso un affascinate viaggio tra le
+librerie python, tratteremo rapidamente quelle più utili e semplici da
+utilizzare che ci faranno risparmiare tempo e linee di codice. Farò una
+rapida presentazione per ognuna di esse …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Viaggio nel mondo delle librerie python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;25 utili librerie in 30 minuti Attraverso un affascinate viaggio tra le
+librerie python, tratteremo rapidamente quelle più utili e semplici da
+utilizzare che ci faranno risparmiare tempo e linee di codice. Farò una
+rapida presentazione per ognuna di esse facendone risaltare i benefici e
+le principali funzionalità. Da non perdere!&lt;/p&gt;
+&lt;p&gt;Slides:&lt;/p&gt;
+&lt;p&gt;Speaker: Danilo Abbasciano&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="best practice"></category><category term="clean code"></category><category term="development"></category></entry><entry><title>Why is our project late?</title><link href="https://pyvideo.org/pycon-italia-2022/why-is-our-project-late.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Marco Santoni</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/why-is-our-project-late.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Why is our project late? - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Why is it so hard to respect deadlines for a dev team? Is it just a
+wrong planning methodology? Are there fundamental limits in the way our
+brain makes plans? Has it always been like this?&lt;/p&gt;
+&lt;p&gt;We’ll investigate the way …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Why is our project late? - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Why is it so hard to respect deadlines for a dev team? Is it just a
+wrong planning methodology? Are there fundamental limits in the way our
+brain makes plans? Has it always been like this?&lt;/p&gt;
+&lt;p&gt;We’ll investigate the way humans perceive plans and unexpected events.
+Do we have biases in estimates? Why is it so hard to respect deadlines
+for a dev team? Is it just a wrong planning methodology? Are there
+fundamental limits in the way our brain makes plans? Has it always been
+like this?&lt;/p&gt;
+&lt;p&gt;We’ll investigate the way humans perceive plans and unexpected events.
+We’ll find out that we have biases in the way we make plans and
+predictions. Problems are not limited to the planning phase though. When
+the first issues occur during the project, we tend to take decisions
+like increasing the team or taking shortcut that might not have the
+desired outcome.&lt;/p&gt;
+&lt;p&gt;Speaker: Marco Santoni&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="agile"></category><category term="best practice"></category><category term="development"></category></entry><entry><title>Writing Faster Python 3</title><link href="https://pyvideo.org/pycon-italia-2022/writing-faster-python-3.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Sebastian Witowski</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/writing-faster-python-3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing Faster Python 3 - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Source code level optimization is often neglected - people don’t bother,
+because getting a faster server often gives better results. But if you -
+like me - always wonder what is the most efficient way to write some
+code, then this talk is for …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Writing Faster Python 3 - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Source code level optimization is often neglected - people don’t bother,
+because getting a faster server often gives better results. But if you -
+like me - always wonder what is the most efficient way to write some
+code, then this talk is for you! Did you know that Python preallocates
+integers from -5 to 257? Reusing them 1000 times, instead of allocating
+memory for a bigger integer, can save you a couple milliseconds of
+code’s execution time. If you want to learn more about this kind of
+optimizations then, … well, probably this presentation is not for you :)
+Instead of going into such small details, I will talk about more “sane”
+ideas for writing faster code.&lt;/p&gt;
+&lt;p&gt;After a brief overview of different levels of optimization and how they
+work in Python, I will show you simple and fast ways of measuring the
+execution time of your code and finally, discuss examples of how some
+code structures could be improved.&lt;/p&gt;
+&lt;p&gt;You will see: * The fastest way of removing duplicates from a list *
+How much faster your code is when you reuse the built-in functions
+instead of trying to reinvent the wheel * What is faster than the “for
+loop” * If the lookup is faster in a list or a set * When it’s better
+to beg for forgiveness than to ask for permission&lt;/p&gt;
+&lt;p&gt;Speaker: Sebastian Witowski&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="best practice"></category><category term="cpython"></category><category term="development"></category></entry><entry><title>The Development of Python and You</title><link href="https://pyvideo.org/pycon-us-2011/pycon-2011--the-development-of-python-and-you.html" rel="alternate"></link><published>2011-03-11T00:00:00+00:00</published><updated>2011-03-11T00:00:00+00:00</updated><author><name>Brian Curtin</name></author><id>tag:pyvideo.org,2011-03-11:/pycon-us-2011/pycon-2011--the-development-of-python-and-you.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Development of Python and You&lt;/p&gt;
+&lt;p&gt;Presented by Brian Curtin&lt;/p&gt;
+&lt;p&gt;Have an inside look at what it takes to work on CPython, from getting
+setup with the source and navigating the bug tracker, to the best
+practices for having your work accepted. We'll find, categorize, and fix
+an issue …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Development of Python and You&lt;/p&gt;
+&lt;p&gt;Presented by Brian Curtin&lt;/p&gt;
+&lt;p&gt;Have an inside look at what it takes to work on CPython, from getting
+setup with the source and navigating the bug tracker, to the best
+practices for having your work accepted. We'll find, categorize, and fix
+an issue in Python to get you started. This talk is ideal for those who
+are new to open source projects or are interested in the Python
+development process.&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;People from all backgrounds, users of all platforms, and developers of
+all levels are necessary in the development of Python. From writing code
+to documentation, it takes all kinds of people to make an impact. If
+you've used Python, we need you, and what better place to get involved
+than at PyCon?&lt;/p&gt;
+&lt;p&gt;2010 saw a rise in the number of contributors to CPython, and the PSF
+stepped in to support the efforts of those wanting to get involved. Are
+you up for the challenge? This talk dives right into what it takes to
+get involved, covering the who, what, where, when, and why of Python
+development, going through the whole process live.&lt;/p&gt;
+&lt;p&gt;After the conference is over, stick around with the CPython crew and
+hack away!&lt;/p&gt;
+</content><category term="PyCon US 2011"></category><category term="coredev"></category><category term="cpython"></category><category term="development"></category><category term="gettinginvolved"></category><category term="pycon"></category><category term="pycon2011"></category></entry><entry><title>Popping Kernels: An Exploration of Kernel Development for Jupyter Notebooks</title><link href="https://pyvideo.org/pydata-chicago-2016/popping-kernels-an-exploration-of-kernel-development-for-jupyter-notebooks.html" rel="alternate"></link><published>2016-08-26T00:00:00+00:00</published><updated>2016-08-26T00:00:00+00:00</updated><author><name>Safia Abdalla</name></author><id>tag:pyvideo.org,2016-08-26:/pydata-chicago-2016/popping-kernels-an-exploration-of-kernel-development-for-jupyter-notebooks.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Chicago 2016&lt;/p&gt;
+&lt;p&gt;This talk will give individuals with no kernel experience and some Python experience, a brief introduction to the concepts they need to understand in order to develop kernels. This talk will also be useful to individuals who are looking for fun projects that will allow them …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Chicago 2016&lt;/p&gt;
+&lt;p&gt;This talk will give individuals with no kernel experience and some Python experience, a brief introduction to the concepts they need to understand in order to develop kernels. This talk will also be useful to individuals who are looking for fun projects that will allow them to strengthen their skills in a particular programming language.&lt;/p&gt;
+</content><category term="PyData Chicago 2016"></category><category term="development"></category><category term="jupyter"></category><category term="jupyter notebook"></category></entry></feed>

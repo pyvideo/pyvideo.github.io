@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; 自問自答:命名實體識別應用於精準醫療服務-以智能理賠為例 – 江侑倫 (PyCon Taiwan 2021)</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_pycon-taiwan-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="自問自答:命名實體識別應用於精準醫療服務-以智能理賠為例 – 江侑倫 (PyCon Taiwan 2021)" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/pycon-taiwan-2021/zi-wen-zi-da-ming-ming-shi-ti-shi-bie-ying-yong-yu-jing-zhun-yi-liao-fu-wu-yi-zhi-neng-li-pei-wei-li-jiang-you-lun-pycon-taiwan-2021.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/yxczI4BpT8Y/hqdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/yxczI4BpT8Y/hqdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/pycon-taiwan-2021/zi-wen-zi-da-ming-ming-shi-ti-shi-bie-ying-yong-yu-jing-zhun-yi-liao-fu-wu-yi-zhi-neng-li-pei-wei-li-jiang-you-lun-pycon-taiwan-2021.html" rel="bookmark"
+         title="Permalink to 自問自答:命名實體識別應用於精準醫療服務-以智能理賠為例 – 江侑倫 (PyCon Taiwan 2021)">自問自答:命名實體識別應用於精準醫療服務-以智能理賠為例 – 江侑倫 (PyCon Taiwan 2021)
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-02T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sat 02 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/jiang-you-lun.html">江侑倫</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yxczI4BpT8Y" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Day 1, 10:05-10:35</p>
+<p>Abstract</p>
+<p>如何效率地從龐大的非結構化文字資料，萃取重要的結構化資訊是大數據分析的基礎。本次演講以結合金融業務與精準醫療為出發點，藉由智能理賠(醫囑分析)作為案例，探討如何透過自然語言處理技術，將瑣碎且重複性極高的作業流程逐步化繁為簡。 就技術而言，此乃自然語言處理領域中的命名實體識別任務。在現今預訓練與微調兩階段模式盛行之下，以Transformers為基調的模型在此任務已達一定水準。但是，當資料具有多含義實體(同一實體具有兩個以上含義，e.g. 急診日期通常也隱含了入院日期的含義)時，模型僅僅具備七成至八成的辨識水準，而多含義實體在醫囑資料或醫療文獻尤為常見，因此，我提出一種深度學習應用框架-自問自答，同時處理單含義與多含義實體。 以一篇醫囑來說，模型自問多個問題(e.g. 請找出入院日期。)，根據這些問題，回答相應的實體答案。而多含義實體的各個意義，可被不同的獨立問題所切分開來，因而巧妙解決多含義實體問題。 演講過程中，我會以知名的Python套件(Transformers)與Pytorch為實作核心，輔以介紹，透過Transformers套件可快速套用許多預訓練模型，並實現在自身資料集裡。最後，搭配實際展示引導聽眾了解整個問題與解法的脈絡。</p>
+<p>Description</p>
+<p>使用的第三方工具：
+transformers 為自然語言處理領域中熱門的Python套件，提供許多方便好用的API，且提供完整tutorial與免費pretrained model資源。
+seqeval 為處理序列框架的常見評估工具。</p>
+<p>Slides not uploaded by the speaker.
+HackMD: <a class="reference external" href="https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FHkTtQkYfF">https://hackmd.io/&#64;pycontw/2021/%2F%40pycontw%2FHkTtQkYfF</a></p>
+<p>Speaker: 江侑倫</p>
+<p>NLP Engineer at CTBC bank</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/pycon-taiwan-2021.html">PyCon Taiwan 2021</a>
+      </li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=yxczI4BpT8Y" rel="external">YouTube</a>        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/pycon-tw-2021/videos/zi-wen-zi-da-ming-ming-shi-ti-shi-bie-ying-yong-yu-jing-zhun-yi-liao-fu-wu-yi-zhi-neng-li-pei-wei-li-jiang-you-lun-pycon-taiwan-2021.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

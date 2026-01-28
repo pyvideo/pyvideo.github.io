@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - multi processing</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_multi-processing.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-06-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Downloading a Billion Files in Python</title><link href="https://pyvideo.org/europython-2019/downloading-a-billion-files-in-python.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>James Saryerwinnie</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/downloading-a-billion-files-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've been given a task. You need to download some files from a server
+to your local machine. The files are fairly small, and you can list and
+access these files from the remote server through a REST API. You'd like
+to download them as fast as possible. The …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;You've been given a task. You need to download some files from a server
+to your local machine. The files are fairly small, and you can list and
+access these files from the remote server through a REST API. You'd like
+to download them as fast as possible. The catch? There's a billion of
+them. Yes, one billion files.&lt;/p&gt;
+&lt;p&gt;How would would you do this? Would you do this synchronously in a single
+for loop? Would you use a producer/consumer queue with threads?
+Multiprocessing? Asyncio?&lt;/p&gt;
+&lt;p&gt;In this talk, we'll examine 3 different mechanisms for concurrently
+downloading files: multithreading, multiprocessing, and asyncio.&lt;/p&gt;
+&lt;p&gt;For each of these mechanisms we'll look at design best practices, how to
+handle debugging and error handling, and of course the overall
+performance. By examining three different approaches using the same data
+set, we gain a better understanding of the tradeoffs of each approach so
+we can pick the right library for the job.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="ASYNC / Concurrency"></category><category term="Case Study"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="Performance"></category></entry><entry><title>Parallel computing in Python: Current state and recent advances</title><link href="https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html" rel="alternate"></link><published>2019-07-12T00:00:00+00:00</published><updated>2019-07-12T00:00:00+00:00</updated><author><name>Pierre Glaser</name></author><id>tag:pyvideo.org,2019-07-12:/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is …&lt;/div&gt;&lt;/div&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</content><category term="EuroPython 2019"></category><category term="Distributed Systems"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Python's Parallel Programming Possibilities - 4 levels of concurrency</title><link href="https://pyvideo.org/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall into along the way.&lt;/p&gt;
+&lt;p&gt;To do so, I'll give short examples in code of achieving each level:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- leveraging multiple hosts using RQ, and also the possibility of RPC
+with HTTP&lt;/div&gt;
+&lt;div class="line"&gt;- multiprocessing and threading using their respective modules from
+the python standard library&lt;/div&gt;
+&lt;div class="line"&gt;- asyncio demonstrated with AIOHTTP&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That sounds great, but there are &amp;quot;gotchas&amp;quot; you should know about before
+you get started, for example:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple machines can actually be multiple virtual machines on the
+same host&lt;/div&gt;
+&lt;div class="line"&gt;- effectively communicating between processes is hard, how can we go
+about making it easier?&lt;/div&gt;
+&lt;div class="line"&gt;- the limitations of threading and the GIL&lt;/div&gt;
+&lt;div class="line"&gt;- run_in_executor - do we ever really need to use multiprocessing or
+threading directly again&lt;/div&gt;
+&lt;div class="line"&gt;- use of asyncio when dealing with both networking between hosts and
+between processes - you end up using two different kinds of
+concurrency at the same time. That can be confusing, but also awesome.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I'll finish of by showcasing a library I built, arq which is a job
+queueing and RPC library for python which uses asyncio and Redis.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="ASYNC / Concurrency"></category><category term="Messaging and Job Queues"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="python"></category></entry><entry><title>Making Pandas Fly</title><link href="https://pyvideo.org/europython-2020/making-pandas-fly.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Ian Ozsvald</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/making-pandas-fly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Process bigger-than-RAM data using Pandas, Dask and Vaex&lt;/p&gt;
+&lt;p&gt;Larger datasets can't fit into RAM - suddenly you can't use Pandas any more - but we need to analyse that data! First we'll review techniques to compress our data (maybe cutting our DataFrame RAM usage in half!) so we can process more …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Process bigger-than-RAM data using Pandas, Dask and Vaex&lt;/p&gt;
+&lt;p&gt;Larger datasets can't fit into RAM - suddenly you can't use Pandas any more - but we need to analyse that data! First we'll review techniques to compress our data (maybe cutting our DataFrame RAM usage in half!) so we can process more rows using regular Pandas. Next we'll look at clever ways to make common operations run faster on DataFrames including dropping down to numpy, compiling with Numba and running multi-core. Finally for still-larger datasets we'll review Dask on Pandas and the new Vaex competitor solution. You'll leave with new techniques to make your DataFrames smaller and ideas for processing your data faster.
+This talk is inspired by Ian's work updating his O'Reilly book High Performance Python to the 2nd edition for 2020. With over 10 years of evolution the Pandas DataFrame library has gained a huge amount of functionality and it is used by millions of Pythonistas - but the most obvious way to solve a task isn't always the fastest or most RAM efficient. This talk will help any Pandas user (beginner or beyond) process more data faster, making them more effective at their jobs.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Big Data"></category><category term="Data Science"></category><category term="Multi-Processing"></category><category term="Performance"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>Running Unit Test on Top of Serverless Service</title><link href="https://pyvideo.org/europython-2020/running-unit-test-on-top-of-serverless-service.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Adinata Thayib</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/running-unit-test-on-top-of-serverless-service.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Increase your parallelization by 50x&lt;/p&gt;
+&lt;p&gt;I will share on how to utilize serverless architecture for a less common scenario - unit testing.
+As part of the talk, we will also discuss different approaches to parallelizing unit test suite execution.
+Attendees will also learns on cost-benefit analysis related to increasing developer …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Increase your parallelization by 50x&lt;/p&gt;
+&lt;p&gt;I will share on how to utilize serverless architecture for a less common scenario - unit testing.
+As part of the talk, we will also discuss different approaches to parallelizing unit test suite execution.
+Attendees will also learns on cost-benefit analysis related to increasing developer productivity.&lt;/p&gt;
+&lt;p&gt;Outline:
+- Introduction
+- Different approaches to parallelizing unit test execution with pro &amp;amp; cons
+- What we learned (gotcha) when implementing serverless as a unit test runner
+- Cost-Benefit Analysis and usage report,
+- Q&amp;amp;A&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Case Study"></category><category term="Multi-Processing"></category><category term="Public Cloud (AWS/Google/...)"></category><category term="Test Libraries (pytest/nose/...)"></category><category term="Tooling"></category></entry><entry><title>Speed Up Your Data Processing</title><link href="https://pyvideo.org/europython-2020/speed-up-your-data-processing.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Chin Hwee Ong</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/speed-up-your-data-processing.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Parallel and Asynchronous Programming in Data Science&lt;/p&gt;
+&lt;p&gt;In a data science project, one of the biggest bottlenecks (in terms of time) is the constant wait for the data processing code to finish executing. Slow code, as well as connectivity issues, affect every step of a typical data science workflow …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Parallel and Asynchronous Programming in Data Science&lt;/p&gt;
+&lt;p&gt;In a data science project, one of the biggest bottlenecks (in terms of time) is the constant wait for the data processing code to finish executing. Slow code, as well as connectivity issues, affect every step of a typical data science workflow — be it for network I/O operations or computation-driven workloads. In this talk, I will be sharing about common bottlenecks in data processing within a typical data science workflow, and exploring the use of parallel and asynchronous programming using concurrent.futures module in Python to speed up your data processing pipelines so that you could focus more on getting value out of your data. Through real-life analogies, you will learn about:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Sequential vs parallel processing,&lt;/li&gt;
+&lt;li&gt;Synchronous vs asynchronous execution,&lt;/li&gt;
+&lt;li&gt;Network I/O operations vs computation-driven workloads in a data science workflow,&lt;/li&gt;
+&lt;li&gt;When is parallelism and asynchronous programming a good idea,&lt;/li&gt;
+&lt;li&gt;How to implement parallel and asynchronous programming using concurrent.futures module to speed up your data processing pipelines&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This talk assumes basic understanding of data pipelines and data science workflows. While the main target audience are data scientists and engineers building data pipelines, the talk is designed such that anyone with a basic understanding of the Python language would be able to understand the illustrated concepts and use cases.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="ASYNC / Concurreny"></category><category term="Data"></category><category term="Data Science"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category></entry><entry><title>Efficient computer vision on edge devices: How we guide blind people using Python</title><link href="https://pyvideo.org/pycon-italia-2022/efficient-computer-vision-on-edge-devices-how-we-guide-blind-people-using-python.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Vollmer</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/efficient-computer-vision-on-edge-devices-how-we-guide-blind-people-using-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Efficient computer vision on edge devices: How we guide blind people
+using Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;In real-life environments, performance and delay of algorithms matter.
+biped is an AI copilot that guides blind people with limited computation
+capabilities. In this talk we show how we dropped computation time by …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Efficient computer vision on edge devices: How we guide blind people
+using Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;In real-life environments, performance and delay of algorithms matter.
+biped is an AI copilot that guides blind people with limited computation
+capabilities. In this talk we show how we dropped computation time by a
+factor of four relying on profiling, algorithmic design, multi-threading
+and Cython. biped aims to bring autonomous driving capabilities to the
+human level, to safely guide blind and visually impaired people in the
+street. The device acquires 3D images and then detects, tracks and
+predicts trajectories of all surrounding elements, before warning the
+user via spatial sounds. In the process of working on this project we
+realized that for most problems that we encountered there is already an
+existing algorithm that roughly fits our requirements. The majority of
+the existing solutions though only work well on very powerful machines
+with dedicated GPUs. This is especially true for algorithms from the
+domain of Computer Vision.&lt;/p&gt;
+&lt;p&gt;Making the same algorithm work on computationally limited devices, like
+a Raspberry Pi, opens up a new set of interesting and non-trivial
+problems. In this talk we want to explore some options to adjust new or
+existing algorithms to computationally constrained environments to make
+them work in the real world. We want to show some common pitfalls as
+well as best practices to optimize algorithms build with Numpy, OpenCV
+and Python. Furthermore we want to give a swift overview over system and
+algorithmic design decisions as well as what options exist to profile
+Python code.&lt;/p&gt;
+&lt;p&gt;To make it easier to understand the ideas and concepts and to follow
+along we will showcase some examples of our work at biped during the
+presentation. By presenting some algorithms of our perception pipeline,
+we can showcase some of the key aspects for the modelling and
+implementation of algorithms. In particular, we present how we implement
+the detection of ground in an image and how we optimized the algorithm
+to go from roughly two FPS to nearly real-time. We conclude the talk
+with a brief demonstration of the capabilities of our whole perception
+pipeline and discuss the performance we achieved by applying the ideas
+introduced in this talk.&lt;/p&gt;
+&lt;p&gt;Speaker: Vollmer&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="cpython"></category><category term="multi processing"></category><category term="numpy"></category><category term="performance"></category></entry></feed>

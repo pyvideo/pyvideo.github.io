@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Samuel Colvin</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_samuel-colvin.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-05-15T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Python's Parallel Programming Possibilities - 4 levels of concurrency</title><link href="https://pyvideo.org/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/pythons-parallel-programming-possibilities-4-levels-of-concurrency.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;I'm going to talk about the 4 main levels of parallelism in modern
+Computing:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple (virtual) machines&lt;/div&gt;
+&lt;div class="line"&gt;- multiple processes&lt;/div&gt;
+&lt;div class="line"&gt;- multiple threads&lt;/div&gt;
+&lt;div class="line"&gt;- multiple green threads, aka asyncio&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Why you might use each of them, how to go about doing so with python and
+some of the pitfalls you might fall into along the way.&lt;/p&gt;
+&lt;p&gt;To do so, I'll give short examples in code of achieving each level:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- leveraging multiple hosts using RQ, and also the possibility of RPC
+with HTTP&lt;/div&gt;
+&lt;div class="line"&gt;- multiprocessing and threading using their respective modules from
+the python standard library&lt;/div&gt;
+&lt;div class="line"&gt;- asyncio demonstrated with AIOHTTP&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That sounds great, but there are &amp;quot;gotchas&amp;quot; you should know about before
+you get started, for example:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- multiple machines can actually be multiple virtual machines on the
+same host&lt;/div&gt;
+&lt;div class="line"&gt;- effectively communicating between processes is hard, how can we go
+about making it easier?&lt;/div&gt;
+&lt;div class="line"&gt;- the limitations of threading and the GIL&lt;/div&gt;
+&lt;div class="line"&gt;- run_in_executor - do we ever really need to use multiprocessing or
+threading directly again&lt;/div&gt;
+&lt;div class="line"&gt;- use of asyncio when dealing with both networking between hosts and
+between processes - you end up using two different kinds of
+concurrency at the same time. That can be confusing, but also awesome.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I'll finish of by showcasing a library I built, arq which is a job
+queueing and RPC library for python which uses asyncio and Redis.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="ASYNC / Concurrency"></category><category term="Messaging and Job Queues"></category><category term="Multi-Processing"></category><category term="Multi-Threading"></category><category term="python"></category></entry><entry><title>EuroPython 2024 — Open Source Sustainability Panel</title><link href="https://pyvideo.org/europython-2024/europython-2024-open-source-sustainability-panel.html" rel="alternate"></link><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><author><name>Armin Ronacher</name></author><id>tag:pyvideo.org,2024-07-08:/europython-2024/europython-2024-open-source-sustainability-panel.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — South Hall 2B on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;Open Source Sustainability Panel by Armin Ronacher, Çağıl Uluşahin Sönmez, Artur Czepiel, Deb Nicholson, Anwesha Das, Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/open-source-sustainability-panel"&gt;https://ep2024.europython.eu/session/open-source-sustainability-panel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The motivation behind this panel is to provide insights to the audience with regards to funding open source …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — South Hall 2B on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;Open Source Sustainability Panel by Armin Ronacher, Çağıl Uluşahin Sönmez, Artur Czepiel, Deb Nicholson, Anwesha Das, Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/open-source-sustainability-panel"&gt;https://ep2024.europython.eu/session/open-source-sustainability-panel&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The motivation behind this panel is to provide insights to the audience with regards to funding open source projects, manage the community interaction, and options people might find attractive in order to be paid while doing Open source.&lt;/p&gt;
+&lt;p&gt;We can also observe the sustainability of a project by the amount of contributors, even if it’s code or activities around it like conferences, communities, and NGOs that support the ecosystem.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2024"></category></entry><entry><title>FastUI - panacea or pipe dream?</title><link href="https://pyvideo.org/europython-2024/fastui-panacea-or-pipe-dream.html" rel="alternate"></link><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2024-07-08:/europython-2024/fastui-panacea-or-pipe-dream.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Forum Hall on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;FastUI - panacea or pipe dream? by Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/fastui-panacea-or-pipe-dream"&gt;https://ep2024.europython.eu/session/fastui-panacea-or-pipe-dream&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Are web interfaces defined in Python a genius idea, a complete folly, or (like most technologies) a good fit for some use cases but not all?&lt;/p&gt;
+&lt;p&gt;I'll give a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Forum Hall on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;FastUI - panacea or pipe dream? by Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/fastui-panacea-or-pipe-dream"&gt;https://ep2024.europython.eu/session/fastui-panacea-or-pipe-dream&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Are web interfaces defined in Python a genius idea, a complete folly, or (like most technologies) a good fit for some use cases but not all?&lt;/p&gt;
+&lt;p&gt;I'll give a brief tour of packages that let you build web interfaces by writing only Python, including Streamlit, Gradio, NiceGUI, reflex, Solara, dominate, ReactPy and FastUI (recently released by the Pydantic team).&lt;/p&gt;
+&lt;p&gt;The main three questions I'll be asking are:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Is building a web UI in Python really a good idea at all?&lt;/li&gt;
+&lt;li&gt;What fundamental trade-offs are required to make such a tool successful?&lt;/li&gt;
+&lt;li&gt;If someone can answer point 1 and 2, when's the right time to use these tools?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Over the last couple of years, lots of different libraries have emerged to let you develop web interfaces without getting your hands dirty with HTML, CSS, the JS ecosystem; but so far none have got as popular as &amp;quot;traditional&amp;quot; template rendering (Jinja, Django) or modern SPA frameworks like React.&lt;/p&gt;
+&lt;p&gt;So are we at the dawn of a new way era — and one of these frameworks will become ubiquitous. Or is the whole idea that you can build such an interface without engaging with the fundamental technologies that power them mistaken?&lt;/p&gt;
+&lt;p&gt;One important question is &amp;quot;what kind of interface are we aiming at?&amp;quot; If we are trying to give complete control over the browser, allowing Python developers to do everything raw JavaScript can do; our solution will look very different to something that is &amp;quot;just&amp;quot; trying to allow Python developers to plug common components together to build 80% of UIs with 20% of the effort.&lt;/p&gt;
+&lt;p&gt;Looking at the question through this lens will help explain the design choices of the above libraries, and might even allow us to guess at which approaches will be most&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2024"></category></entry><entry><title>Pydantic Logfire — Uncomplicated Observability</title><link href="https://pyvideo.org/europython-2024/pydantic-logfire-uncomplicated-observability.html" rel="alternate"></link><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2024-07-08:/europython-2024/pydantic-logfire-uncomplicated-observability.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Terrace 2B on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;Pydantic Logfire — Uncomplicated Observability by Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/pydantic-logfire-uncomplicated-observability"&gt;https://ep2024.europython.eu/session/pydantic-logfire-uncomplicated-observability&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pydantic Logfire — Uncomplicated Observability&lt;/p&gt;
+&lt;p&gt;From the team behind Pydantic, Logfire is a new type of observability platform built on the same belief as our open source library — that the most …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2024 — Terrace 2B on 2024-07-11]&lt;/p&gt;
+&lt;p&gt;Pydantic Logfire — Uncomplicated Observability by Samuel Colvin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2024.europython.eu/session/pydantic-logfire-uncomplicated-observability"&gt;https://ep2024.europython.eu/session/pydantic-logfire-uncomplicated-observability&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pydantic Logfire — Uncomplicated Observability&lt;/p&gt;
+&lt;p&gt;From the team behind Pydantic, Logfire is a new type of observability platform built on the same belief as our open source library — that the most powerful tools can be easy to use.&lt;/p&gt;
+&lt;p&gt;In this talk we'll introduce Logfire, then demonstrate how it can make understanding and fixing your app faster and more enjoyable with a live demo.&lt;/p&gt;
+&lt;p&gt;We'll touch on some of the most useful integrations including: FastAPI, Postgres and OpenAI.&lt;/p&gt;
+&lt;p&gt;---&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2024"></category></entry><entry><title>How Pydantic V2 leverages Rust's Superpowers</title><link href="https://pyvideo.org/pycon-us-2023/how-pydantic-v2-leverages-rusts-superpowers.html" rel="alternate"></link><published>2023-04-22T00:00:00+00:00</published><updated>2023-04-22T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2023-04-22:/pycon-us-2023/how-pydantic-v2-leverages-rusts-superpowers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://pydantic-docs.helpmanual.io/"&gt;Pydantic&lt;/a&gt; is a data validation
+library for Python that has seen massive adoption over the last few
+years - it is estimated that Pydantic is now used by about 10% of
+professional web developers!&lt;/p&gt;
+&lt;p&gt;Over the last year I've been working full time to rebuild Pydantic from
+the ground up …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&lt;a class="reference external" href="https://pydantic-docs.helpmanual.io/"&gt;Pydantic&lt;/a&gt; is a data validation
+library for Python that has seen massive adoption over the last few
+years - it is estimated that Pydantic is now used by about 10% of
+professional web developers!&lt;/p&gt;
+&lt;p&gt;Over the last year I've been working full time to rebuild Pydantic from
+the ground up, using Rust for virtually all the validation and
+serialization logic. Pydantic V2, with these changes included, has
+recently been released.&lt;/p&gt;
+&lt;p&gt;In this talk I will give a brief introduction to Pydantic and the new
+features in Pydantic V2 before diving into how the use of Rust has
+allowed us to completely change the architecture of Pydantic to make it
+easier to extend and maintain while also improving performance
+significantly.&lt;/p&gt;
+&lt;p&gt;The majority of the talk will be devoted to using examples from the
+pydantic V2 code base to demonstrate the advantages (and disadvantages)
+of writing libraries like Pydantic in Rust. I'll cover the real life
+trade-offs and design decisions you might face while implementing logic
+in Rust rather than Python.&lt;/p&gt;
+&lt;p&gt;This talk should be interesting to any Python developer who's interested
+in combining Python and Rust - no knowledge of Rust or Pydantic is
+required. However if you'd like to get some context or learn more about
+the topics discussed, here are some useful resources:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pydantic-docs.helpmanual.io/blog/pydantic-v2/"&gt;Pydantic V2
+Plan&lt;/a&gt; -
+blog post about the plan for Pydantic V2&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://github.com/pydantic/pydantic-core"&gt;pydantic-core&lt;/a&gt; - the
+python package that provides Rust logic in pydantic&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://pyo3.rs/"&gt;PyO3 docs&lt;/a&gt; - the amazing library that allows
+Rust to be embedded in Python&lt;/li&gt;
+&lt;li&gt;&lt;a class="reference external" href="https://www.youtube.com/watch?v=FolV-xUD3Ko"&gt;Build your Python Extensions with Rust! by Paul
+Ganssle&lt;/a&gt; - good intro
+to building Python extensions in Rust&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="PyCon US 2023"></category></entry><entry><title>Introducing Pydantic's new platform (Sponsor: Pydantic)</title><link href="https://pyvideo.org/pycon-us-2024/introducing-pydantics-new-platform-sponsor-pydantic.html" rel="alternate"></link><published>2024-05-16T00:00:00+00:00</published><updated>2024-05-16T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2024-05-16:/pycon-us-2024/introducing-pydantics-new-platform-sponsor-pydantic.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Come and be the first to hear about what the Pydantic team have been
+building!&lt;/p&gt;
+&lt;p&gt;We will make a public announcement before PyCon US about what we're
+building, and in this presentation we'll explain all and give a demo.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry><entry><title>Building AI Applications the Pydantic Way (Sponsor: Pydantic)</title><link href="https://pyvideo.org/pycon-us-2025/building-ai-applications-the-pydantic-way-sponsor-pydantic.html" rel="alternate"></link><published>2025-05-15T00:00:00+00:00</published><updated>2025-05-15T00:00:00+00:00</updated><author><name>Samuel Colvin</name></author><id>tag:pyvideo.org,2025-05-15:/pycon-us-2025/building-ai-applications-the-pydantic-way-sponsor-pydantic.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AI is becoming an increasingly common part of software development, but best practices for building and maintaining AI-powered applications are still evolving. Many developers are experimenting with LLMs, but figuring out how to structure AI applications effectively—let alone debug and monitor them—can be a challenge. The good …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AI is becoming an increasingly common part of software development, but best practices for building and maintaining AI-powered applications are still evolving. Many developers are experimenting with LLMs, but figuring out how to structure AI applications effectively—let alone debug and monitor them—can be a challenge. The good news? AI development is just software development—with a few unique twists. You don't need to reinvent engineering principles to work with LLMs, but you do need the right design patterns and development tools to build reliable AI applications efficiently. In this talk, we'll share an opinionated blueprint for AI development in Python, covering both PydanticAI, an open-source AI agent framework, and Pydantic Logfire, an observability platform that helps you understand and debug your AI applications. You'll learn practical techniques for structuring LLM-powered systems, tracking and evaluating model behavior, and integrating AI features into larger software projects—using familiar tools and proven patterns. Whether you're already building AI applications or just curious about how best to approach them, this session will give you a clear, pragmatic foundation for writing AI-powered software in Python.&lt;/p&gt;
+</content><category term="PyCon US 2025"></category></entry></feed>
