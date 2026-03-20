@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; Using simple database triggers for complex Django problems</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2021.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_djangocon-us-2021.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="Using simple database triggers for complex Django problems" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/djangocon-us-2021/using-simple-database-triggers-for-complex-django-problems.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/Tte3d4JjxCk/maxresdefault.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/Tte3d4JjxCk/maxresdefault.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+
+
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/djangocon-us-2021/using-simple-database-triggers-for-complex-django-problems.html" rel="bookmark"
+         title="Permalink to Using simple database triggers for complex Django problems">Using simple database triggers for complex Django problems
+      </a>
+    </h2>
+ 
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2021-10-23T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Sat 23 October 2021
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/wes-kendall.html">Wes Kendall</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Tte3d4JjxCk" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p>Over the years I have struggled with a large class of Django problems, and I have found that these problems are much better solved using a common database feature called triggers.</p>
+<p>Let's consider some real-world problems before we get into what triggers are. Say that you want to ensure that a &quot;status&quot; field on a model can only transition between valid states. There are many popular libraries like django-fsm that try to solve this problem. The major problem with these libraries is that it's also very easy to accidentally bypass what the library aims to protect. For example, just doing certain bulk updates with django-fsm will bypass transition protection. This is no fault of django-fsm - it's just nearly impossible to try to intercept every single database call in an application and do certain things. This, however, can lead to some serious errors down the road and confusion about why the library didn't &quot;just work&quot; in the first place.</p>
+<p>Now let's expand this a bit more - consider protecting your models from deletion, making append-only models, versioning models, doing soft deletion, or tracking changes to your models. There are a plethora of libraries just for these very common problems, and the solutions are all prone to the same faults as django-fsm - there are <em>always</em> ways to purposefully or accidentally bypass what those libraries aim to do, and usually without knowing.</p>
+<p>Similar to how you wouldn't rely on your application code to enforce a database uniqueness constraint, this talk aims to illustrate why you may not want your application code to solve these types of problems either. When you try to solve a database problem in the application, you will normally experience pain. Instead, I want to open people's eyes to the power of database triggers and illustrate why they should always be top of mind when designing high-quality Django projects and evaluating solutions to certain problems.</p>
+<p>A database trigger is a method that runs entirely in the database and is based on events and conditions. For example, one can create a database trigger to compute derived fields on a row immediately after the row is inserted or updated. Normally a user will have to write these triggers as database functions that are a superset of the SQL dialect supported by the database, such as PL/pgSQL for Postgres. These intricacies, along with the many barriers for even installing a trigger, have really inhibited adoption of triggers in Django.</p>
+<p>This is terrible though, because triggers are so useful for so many problems people don't even realize. For example, have you ever accidentally used Django's &quot;User.objects.create()&quot; to create a user and not the main &quot;User.objects.create_user()&quot; interface? You can use a trigger to enforce that the engineers of an application always use &quot;Users.objects.create_user()&quot; to create users. And no, it's not through monkey patching - <em>Any</em> creation of a user, even in raw SQL, would be blocked if you didn't go through the proper interface in your application. Examples like these, which sometimes can make people scratch their heads as to how it is even possible to do this, are what make triggers so fun and unique to talk about.</p>
+<p>I have created an open-source library that is battle-tested at various large organizations that integrates triggers into Django. Triggers are registered and automatically migrated with your models, and there are lots of pre-built triggers for you to use. Users can even write conditional triggers with Django idioms like F and Q objects. If you are feeling really adventurous, you can integrate your own native triggers with ease too. I have an interactive tutorial for this library that I use during talks, I have performed this talk at 4 different companies as a tech talk, and I have also performed this talk at a prominent Django city meetup.</p>
+<p>This talk provides the following take-aways for the participants:</p>
+<ol class="arabic simple">
+<li>Understanding how triggers work in databases and what problems they can be used to solve.</li>
+<li>How people can seamlessly integrate triggers in their Postgres Django projects with an open source library. Currently the library only works for Postgres triggers, but I will have MySQL support integrated by Djangocon.</li>
+<li>How people can solve a wide array of difficult problems very easily with triggers.</li>
+</ol>
+<p>Here are some examples of problems we will solve together using an interactive tutorial:</p>
+<ol class="arabic simple">
+<li>Protecting operations - preventing deletes, making append-only models, making read-only columns, and &quot;freezing&quot; published models.</li>
+<li>Soft-deleting models - setting a &quot;is_active&quot; flag to &quot;False&quot; when a model is deleted instead of actually deleting it.</li>
+<li>Finite state machines - ensuring that a &quot;status&quot; field can only transition among valid states.</li>
+<li>Versioning a model - incrementing a version number of a model only when fields have changed.</li>
+<li>Official interfaces - requiring that an &quot;official&quot; interface, like Model.objects.my_create() vs. Model.objects.create(), is used to create a model.</li>
+<li>History tracking - snapshotting before/after versions of your model automatically while still capturing context like the logged-in user.</li>
+</ol>
+<p>All of these problems are solved in a few lines of code. Because of the properties of database triggers, these problems are also enforced at the database level - e.g. a user cannot delete a protected model even if they try to do it in raw SQL. That's the power of triggers, and that's why they are an important concept for Django developers to consider when approaching various problems. This talk aims to open people's eyes to what those problems are, why triggers are useful to them, and how they are actually very easy to use in practice.</p>
+<p>Triggers are inherently an advanced subject, so this talk is not aimed at the beginning Django user. I am tailoring this more to the intermediate/advanced user that has implemented a fair amount of model design. For example, if you've overridden a model's &quot;Meta&quot; and added unique constraints before, you should be able to put lessons from this talk into practice.</p>
+<p>I have been using Django in practice full time for 9 years now, and I have used it exclusively as the foundation for three different startups from the ground up. I went all-in on triggers at my last full-time job when it was the only reliable way to solve our history tracking problem, and that's how the open-source library was born. I love talking to people about Django, and I really love talking about integrating triggers with Django as you might be able to tell. That's why I'm so excited to talk about it at Djangocon and hopefully give people some other great ways to improve their application design.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/djangocon-us-2021.html">DjangoCon US 2021</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://youtu.be/Tte3d4JjxCk" rel="external">YouTube</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://2021.djangocon.us">
+Conference Website                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/djangocon-us-2021/videos/using-simple-database-triggers-for-complex-django-problems.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Henry Fredrick Schreiner III</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_henry-fredrick-schreiner-iii.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2024-05-17T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Building a binary extension</title><link href="https://pyvideo.org/pycon-us-2022/building-a-binary-extension.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Henry Fredrick Schreiner III</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/building-a-binary-extension.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Support for binary extensions is an exceptional advantage of Python that is too often avoided for smaller packages with low developer resources. Binary extensions are used to achieve high performance for libraries like PyTorch, MyPy, and many thousands more. Binary extensions also allow access to a wealth of existing …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Support for binary extensions is an exceptional advantage of Python that is too often avoided for smaller packages with low developer resources. Binary extensions are used to achieve high performance for libraries like PyTorch, MyPy, and many thousands more. Binary extensions also allow access to a wealth of existing compiled libraries. Building your own binary extension is plagued by historically poor documentation, bad common practices, and many misconceptions. But it is actually easy to write extensions today that work seamlessly on all common developer platforms using modern libraries and continuous integration.&lt;/p&gt;
+&lt;p&gt;We will take a look at packaging a binary extension from start to finish. This starts with pybind11 for C++ bindings, providing simple, header only builds and avoiding the need for a new language or pre-processor step. We will look at scikit-build for building, providing powerful CMake based builds with library search, multithreaded builds, and more. We will use PyPA's build to produce SDists. And we will use PyPA's cibuildwheel to produce binaries for all common platforms with minimal setup and simple CI code in GitHub Actions (but trivially movable to any other CI system). We will talk about how to automate common tasks, like using GitHub's Dependabot to keep cibuildwheel up-to-date while also ensuring reproducible builds.&lt;/p&gt;
+&lt;p&gt;After this talk, it is our hope that you will no longer shy away from using compiled code in libraries, but will feel comfortable writing extensions to accelerate or advance your libraries functionality.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category></entry><entry><title>Modern binary build systems</title><link href="https://pyvideo.org/pycon-us-2024/modern-binary-build-systems.html" rel="alternate"></link><published>2024-05-17T00:00:00+00:00</published><updated>2024-05-17T00:00:00+00:00</updated><author><name>Henry Fredrick Schreiner III</name></author><id>tag:pyvideo.org,2024-05-17:/pycon-us-2024/modern-binary-build-systems.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Binary extensions underlie much of the modern Python ecosystem,
+providing performance and access to a wealth of existing code. Packaging
+for these libraries is rapidly changing from thousands of lines of
+distutils and setuptools based hackery to build systems designed for
+binaries like scikit-build-core, meson-python, and maturin. NumPy, for …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Binary extensions underlie much of the modern Python ecosystem,
+providing performance and access to a wealth of existing code. Packaging
+for these libraries is rapidly changing from thousands of lines of
+distutils and setuptools based hackery to build systems designed for
+binaries like scikit-build-core, meson-python, and maturin. NumPy, for
+example, went from around 13K to 2K lines of building related code by
+moving to Meson in NumPy 1.26.&lt;/p&gt;
+&lt;p&gt;These build systems provide a much more integrated experience than was
+previously possible for compiled extensions. For example, CMake or Ninja
+are only required if the system doesn’t already provide an appropriate
+copy, which allows building with an external ninja/cmake on systems
+without binary wheels on PyPI like Pyodide, BSD, and Android. Modern
+editable installs are supported. Support for advanced features like ABI3
+wheels or wheels that don’t call CPython is usually just a single
+configuration option.&lt;/p&gt;
+&lt;p&gt;We will look at how easy it is now to set up a binary extension using
+CMake, Meson, or Maturin (Rust only). It can be done with only three
+files each containing only a handful of lines of code. Unlike the
+previous solutions, this covers cross-compilation,multithreaded builds,
+modern C++ standards, and other features that would each require custom
+code in a classic setup.py. Combined with cibuildwheel for building
+wheels and good support from modern binding tools like pybind11 and
+nanobind, the barrier for entry to reliable compiled extensions has
+dropped dramatically.&lt;/p&gt;
+&lt;p&gt;We will also look at the challenges and solutions from some larger
+conversions to modern build systems, like NumPy’s and RAPIDS.ai.&lt;/p&gt;
+&lt;p&gt;After this talk, you will know how to easily create compiled extensions
+to solve problems you encounter, and how to move existing projects to
+these modern build systems.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry></feed>

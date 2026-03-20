@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Andrew Mshar</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Tue, 09 Sep 2025 00:00:00 +0000</lastBuildDate><item><title>Lessons Learned Teaching Undergraduate Astronomy with a Video Game</title><link>https://pyvideo.org/djangocon-us-2022/lessons-learned-teaching-undergraduate-astronomy-with-a-video-game.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is for anyone interested in using Django. Since I will cover the beginning of our journey, no prior Django knowledge is needed to get something from this talk. It will help to know the basics of web development and Django, but this knowledge is not required. I also hope more experienced developers will learn something from the lessons we'll share.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Mshar</dc:creator><pubDate>Tue, 18 Oct 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-10-18:/djangocon-us-2022/lessons-learned-teaching-undergraduate-astronomy-with-a-video-game.html</guid><category>DjangoCon US 2022</category></item><item><title>Lightning Talks (Wednesday)</title><link>https://pyvideo.org/djangocon-us-2024/lightning-talks-wednesday.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Mshar</dc:creator><pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-09-25:/djangocon-us-2024/lightning-talks-wednesday.html</guid><category>DjangoCon US 2024</category></item><item><title>Lightning Talks (Tuesday)</title><link>https://pyvideo.org/djangocon-us-2024/lightning-talks-tuesday.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Mshar</dc:creator><pubDate>Tue, 24 Sep 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-09-24:/djangocon-us-2024/lightning-talks-tuesday.html</guid><category>DjangoCon US 2024</category></item><item><title>Lightning Talks (Monday)</title><link>https://pyvideo.org/djangocon-us-2024/lightning-talks-monday.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Mshar</dc:creator><pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-09-23:/djangocon-us-2024/lightning-talks-monday.html</guid><category>DjangoCon US 2024</category></item><item><title>Beyond the ORM: from Postgres to OpenSearch</title><link>https://pyvideo.org/djangocon-us-2025/beyond-the-orm-from-postgres-to-opensearch.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Our team at Energy Solutions spent a year building a robust data ingestion and query pipeline using OpenSearch to provide centralized data to a distributed suite of applications. Along the way, we learned to question and rethink a lot of our relational database assumptions and take fuzzy search customization and accuracy to the next level. Meanwhile, we implemented Pydantic wrappers around JSON responses so we could continue to handle responses like native Python objects (along with other benefits we’ll discuss). We addressed long-standing challenges, such as:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Improving the performance of the per-row create/update/delete paradigm (in one case, leading to a ~9x faster data ingest + load!)&lt;/li&gt;
+&lt;li&gt;Putting OpenSearch “aliases” to work to help track current vs archival data&lt;/li&gt;
+&lt;li&gt;Improving search relevancy&lt;/li&gt;
+&lt;li&gt;PII exposure reduction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this presentation, we’ll walk through the decisions that led us to moving to an OpenSearch-based solution that works within a traditional Django framework, how we tackled advanced topics like token analysis, and how we put OpenSearch aliases to work. We’ll also cover some of the cost-benefit equations, summarize our next phase of work in the project, and include real-time demonstrations of some concepts.&lt;/p&gt;
+&lt;p&gt;### Background on Energy Efficiency&lt;/p&gt;
+&lt;p&gt;Utilities, which are often regulated, are responsible for generating a consistent supply of energy for their consumers at a stable price. Efficiency incentive programs that manage demand help insulate utilities from the costs associated with purchasing raw materials (coal, gas, etc.) and help reduce the need to build new power plants that are expensive to build, staff, insure, and supply with consumable, non-renewable resources.&lt;/p&gt;
+&lt;p&gt;Utilities are also usually required by law to spend part of the budget they collect on customer bills on something to reduce the demand for energy in their territory. For instance, a utility might offer a $1,500 rebate (AKA incentive) for the sale of an industrial heat pump that is far more efficient than other industrial heat pumps, via an energy efficiency (EE) program. By incentivizing high efficiency equipment, utilities help move the market towards ever more efficient versions of equipment, thus locking in energy savings even after the EE programs end. In this way, we can help utilities and their customers save energy and move the needle away from climate change.&lt;/p&gt;
+&lt;p&gt;#### Cosmos Project Background
+What Cosmos is, a service for our other projects to access larger datasets such as locations and equipment, and why we needed a new service.&lt;/p&gt;
+&lt;p&gt;#### Motivations for moving from Postgres
+- Elimininate redundancy
+- Reduce PII storage
+- Improve load speed
+- Faster, more accurate fuzzy search&lt;/p&gt;
+&lt;p&gt;#### Why OpenSearch?
+- Super-fast, built on Lucene
+- Open source but supported by AWS
+- Features like aggregation, tokenization well-documented
+- Ranked results (hits sorted by _score)
+- Intuitive and flexible searching for addresses, equipment, etc
+- Performance trade-off between ingesting data and searching data (optimize query performance at the expense of slower indexing)&lt;/p&gt;
+&lt;p&gt;#### Helper Tools
+- opensearch-py
+- Kibana&lt;/p&gt;
+&lt;p&gt;#### Cost Breakdown
+- AWS cost vs our own standalone&lt;/p&gt;
+&lt;p&gt;#### API access
+- Not presenting raw output - transformed for readability, consistency
+- Data passed through Pydantic models
+- Strict access controls for PII
+- “Search Helper” for for non-tech staff&lt;/p&gt;
+&lt;p&gt;#### Load and Query Demos
+- Comparison of a complex PG query vs equivalent OS query&lt;/p&gt;
+&lt;p&gt;#### Django Integration
+- Pydantic models rather than Django models - consistency with old code
+- Validation, dot notation&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Mshar</dc:creator><pubDate>Tue, 09 Sep 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-09-09:/djangocon-us-2025/beyond-the-orm-from-postgres-to-opensearch.html</guid><category>DjangoCon US 2025</category></item></channel></rss>

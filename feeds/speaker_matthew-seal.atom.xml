@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Matthew Seal</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_matthew-seal.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2021-02-20T00:00:00+00:00</updated><subtitle></subtitle><entry><title>"Unit Testing Jupyter Notebooks - testbook" - Rohit Sanjay, Matthew Seal (PyCascades 2021)</title><link href="https://pyvideo.org/pycascades-2021/unit-testing-jupyter-notebooks-testbook-rohit-sanjay-matthew-seal-pycascades-2021.html" rel="alternate"></link><published>2021-02-20T00:00:00+00:00</published><updated>2021-02-20T00:00:00+00:00</updated><author><name>Matthew Seal</name></author><id>tag:pyvideo.org,2021-02-20:/pycascades-2021/unit-testing-jupyter-notebooks-testbook-rohit-sanjay-matthew-seal-pycascades-2021.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Traditionally Jupyter Notebook users have had an excellent experience around exploring code solutions with an interactive development environment. However, the Jupyter Notebook document that’s produced -- the &lt;em&gt;.ipynb&lt;/em&gt; file -- was not easily testable in the same variety of coding situations as other extension formats like plain &lt;em&gt;.py&lt;/em&gt; files. For …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Traditionally Jupyter Notebook users have had an excellent experience around exploring code solutions with an interactive development environment. However, the Jupyter Notebook document that’s produced -- the &lt;em&gt;.ipynb&lt;/em&gt; file -- was not easily testable in the same variety of coding situations as other extension formats like plain &lt;em&gt;.py&lt;/em&gt; files. For certain situations end-to-end execution tools like papermill allow for testing the entire document as one unit, but individual unittesting of code snippets from the file was difficult or impossible to achieve without exporting to a new format and refactoring.&lt;/p&gt;
+&lt;p&gt;Notebooks in recent years have exploded in popularity, with millions of notebooks on github alone. To alleviate the pain point for testing these notebooks, we created a new library called testbook. The testbook library is a unit testing framework for testing code in Jupyter Notebooks with pytest patterns.&lt;/p&gt;
+&lt;p&gt;Previous attempts at unit testing notebooks involved writing the tests in the notebook itself, which was faulty, difficult to read, and even more difficult to maintain. However, testbook allows for unit tests to be run against notebooks in separate test files, hence treating .ipynb files as .py files.&lt;/p&gt;
+&lt;p&gt;### Features of the testbook library&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Write conventional unit tests for Jupyter Notebooks&lt;/li&gt;
+&lt;li&gt;Execute all or some specific cells before unit test&lt;/li&gt;
+&lt;li&gt;Share kernel context across multiple tests (using pytest fixtures)&lt;/li&gt;
+&lt;li&gt;Support for patching objects&lt;/li&gt;
+&lt;li&gt;Inject code into Jupyter notebooks&lt;/li&gt;
+&lt;li&gt;Works with any unit testing library - unittest, pytest or nose&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### Outline of the talk&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Brief context about the landscape of Jupyter notebooks - 2 mins&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Context/Rationale behind creating testbook - 5 mins&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Reproducibility of explored code paths&lt;/li&gt;
+&lt;li&gt;Reliability of re-execution with different inputs&lt;/li&gt;
+&lt;li&gt;Notebooks moving from experimentation to production environments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Intro to testbook and its features - 15-20 mins&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Brief demo of testbook (through images / gifs)&lt;/li&gt;
+&lt;li&gt;How testbook works&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Walkthrough of key features of testbook&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Showing simple test functions&lt;/li&gt;
+&lt;li&gt;Execute specific cells before test&lt;/li&gt;
+&lt;li&gt;Share kernel context&lt;/li&gt;
+&lt;li&gt;Support for patching objects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;When to use or not use testbook (Who is testbook for) - 2 mins&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Future/Roadmap of testbook - what we have in store for future releases - 1 min&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Use cases for education and teaching&lt;/li&gt;
+&lt;li&gt;Better support of non-Python kernels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;### Who the talk is for&lt;/p&gt;
+&lt;p&gt;This talk is for anyone has ever worked with Jupyter Notebooks. Common users of notebooks are Data Scientists, Data Engineers, System Automation Engineers, and Teachers.&lt;/p&gt;
+&lt;p&gt;After three amazing in-person conferences, this time we're moving PyCascades online.&lt;/p&gt;
+&lt;p&gt;PyCascades is a regional PyCon in the Pacific Northwest, celebrating the west coast Python developer and user community. Our organizing team includes members of the Vancouver, Seattle, and Portland Python user groups.&lt;/p&gt;
+&lt;p&gt;Videos are released as CC BY-NC-SA 4.0.&lt;/p&gt;
+&lt;p&gt;Produced by Next Day Video Australia: &lt;a class="reference external" href="https://nextdayvideo.com.au"&gt;https://nextdayvideo.com.au&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#pycascades #pycon #python #conference&lt;/p&gt;
+&lt;p&gt;Sat Feb 20 16:00:00 2021 at Prerecorded Talks&lt;/p&gt;
+</content><category term="PyCascades 2021"></category><category term="#pycascades#pycon#python#conference"></category><category term="pycascades"></category><category term="pycascades2021"></category></entry><entry><title>Programmatic Notebooks with papermill</title><link href="https://pyvideo.org/pycon-us-2019/programmatic-notebooks-with-papermill.html" rel="alternate"></link><published>2019-05-03T13:40:00+00:00</published><updated>2019-05-03T13:40:00+00:00</updated><author><name>Matthew Seal</name></author><id>tag:pyvideo.org,2019-05-03:/pycon-us-2019/programmatic-notebooks-with-papermill.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks have traditionally been a tool for drafting code and avoiding
+repeated expensive computations while exploring solutions. However, with
+new tools like nteract's papermill and scrapbook libraries, this
+technology has been expanded to make a reusable and parameterizable
+template for execution.&lt;/p&gt;
+&lt;p&gt;We'll walk though how Jupyter notebooks are being …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks have traditionally been a tool for drafting code and avoiding
+repeated expensive computations while exploring solutions. However, with
+new tools like nteract's papermill and scrapbook libraries, this
+technology has been expanded to make a reusable and parameterizable
+template for execution.&lt;/p&gt;
+&lt;p&gt;We'll walk though how Jupyter notebooks are being programmatically used
+at Netflix and how this helps with our batch processing world. We'll
+also explore how these use cases connect back with users and why we've
+adopted these tools for Python and non-Python execution.&lt;/p&gt;
+</content><category term="PyCon US 2019"></category><category term="talk"></category></entry><entry><title>Data and ETL with Notebooks in Papermill</title><link href="https://pyvideo.org/pydata-la-2019/data-and-etl-with-notebooks-in-papermill.html" rel="alternate"></link><published>2019-12-04T00:00:00+00:00</published><updated>2019-12-04T00:00:00+00:00</updated><author><name>Matthew Seal</name></author><id>tag:pyvideo.org,2019-12-04:/pydata-la-2019/data-and-etl-with-notebooks-in-papermill.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks have traditionally been a tool for drafting code and avoiding
+repeated expensive computations while exploring solutions. However, with
+new tools like nteract's papermill and scrapbook libraries, this
+technology has been expanded to make a reusable and parameterizable
+template for execution. We'll look at how to make use of …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks have traditionally been a tool for drafting code and avoiding
+repeated expensive computations while exploring solutions. However, with
+new tools like nteract's papermill and scrapbook libraries, this
+technology has been expanded to make a reusable and parameterizable
+template for execution. We'll look at how to make use of this pattern
+for Data and ETL processes.&lt;/p&gt;
+&lt;div class="section" id="intro"&gt;
+&lt;h4&gt;Intro&lt;/h4&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Myself, Netflix, and Why I'm here&lt;/li&gt;
+&lt;li&gt;What does a Data Platform Team do?&lt;/li&gt;
+&lt;li&gt;Projects and Open Source tools discussed in presentation Papermill,
+Jupyter, nteract, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="section" id="notebooks"&gt;
+&lt;h5&gt;Notebooks&lt;/h5&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-are-jupyter-notebooks"&gt;
+&lt;h4&gt;What are Jupyter Notebooks?&lt;/h4&gt;
+&lt;p&gt;We'll some visual examples and breakdowns of notebooks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-notebook-work"&gt;
+&lt;h4&gt;How Notebook Work&lt;/h4&gt;
+&lt;p&gt;A guide through how a notebook executes and the model it uses to run
+your code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="traditional-use-cases"&gt;
+&lt;h4&gt;Traditional Use Cases&lt;/h4&gt;
+&lt;p&gt;Around experimentation and code development.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="new-use-cases"&gt;
+&lt;h4&gt;New Use Cases&lt;/h4&gt;
+&lt;p&gt;For production data and operations without full rewrites of Notebook
+code.&lt;/p&gt;
+&lt;div class="section" id="papermill"&gt;
+&lt;h5&gt;Papermill&lt;/h5&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-is-papermill"&gt;
+&lt;h4&gt;What is papermill?&lt;/h4&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://papermill.readthedocs.io/en/latest/"&gt;papermill&lt;/a&gt; is a library
+for executing notebooks programmatically.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-do-you-use-it"&gt;
+&lt;h4&gt;How do you use it?&lt;/h4&gt;
+&lt;p&gt;You'll see some examples in Python and with it's provided CLI.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-does-it-fit-into-the-notebook-model"&gt;
+&lt;h4&gt;How does it fit into the Notebook model?&lt;/h4&gt;
+&lt;p&gt;We'll relate the execution back into original Notebook execution
+diagrams.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="how-to-extend-papermill"&gt;
+&lt;h4&gt;How to extend papermill&lt;/h4&gt;
+&lt;p&gt;Quick pointer to the extensibility of the library and how to add new
+functionality.&lt;/p&gt;
+&lt;div class="section" id="using-papermill-in-production-data-pipelines"&gt;
+&lt;h5&gt;Using papermill in production data pipelines&lt;/h5&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="operationalizing-notebooks"&gt;
+&lt;h4&gt;Operationalizing Notebooks&lt;/h4&gt;
+&lt;p&gt;Failure analysis, Productionalization, Sharing executions...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dags-of-notebooks"&gt;
+&lt;h4&gt;Dags of Notebooks&lt;/h4&gt;
+&lt;p&gt;Making a pipeline with Notebooks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="integration-testing"&gt;
+&lt;h4&gt;Integration Testing&lt;/h4&gt;
+&lt;p&gt;Good practices Where unittesting doesn't fit&lt;/p&gt;
+&lt;div class="section" id="netflix-usage"&gt;
+&lt;h5&gt;&amp;#64; Netflix usage&lt;/h5&gt;
+&lt;p&gt;Quick blip about adoption and usage at Netflix.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="related-libraries-time-pending"&gt;
+&lt;h5&gt;Related libraries (time pending)&lt;/h5&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="scrapbook"&gt;
+&lt;h4&gt;Scrapbook&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div class="section" id="commuter-nbviewer"&gt;
+&lt;h4&gt;Commuter / NBViewer&lt;/h4&gt;
+&lt;/div&gt;
+</content><category term="PyData LA 2019"></category></entry></feed>

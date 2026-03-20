@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - code analysis</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Code quality in Python</title><link>https://pyvideo.org/europython-2019/code-quality-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Four years ago I talked about code quality during EuroPython in
+Bilbao. A lot of things changed from that time. Firstly, most tools I
+presented were still developed and gained new features, but also new
+ones appeared I wanted to discuss with you. Secondly, Python changed,
+Python 3 has type hints on board and there is a new tool dedicated to
+checking the types. Thirdly - I changed. I'm more distanced form my
+zealous approach from four years ago. I got real and reasonable.
+That's why I wanted to talk about code quality tools in Python again.&lt;/div&gt;
+&lt;div class="line"&gt;I'll talk about all the software that can make code review a bit
+simpler by pointing out possible errors, duplicates or unused code.
+I'll talk again about formatters and how can they be used in
+modern-time projects. And I'll talk about hobgoblins, if you know what
+I mean :)&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radosław Ganczarek</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/code-quality-in-python.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Code Analysis</category><category>Python 3</category><category>Tooling</category><category>Type-Hinting</category></item><item><title>Code review for Beginners and Experts: Tips &amp; Tricks</title><link>https://pyvideo.org/europython-2019/code-review-for-beginners-and-experts-tips-tricks.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Code review is not just boring duty. It's mutual responsibility for
+the software we're releasing. It's one of the most critical aspects of
+code quality, and therefore it's the first step of quality assurance.
+This is also the key to easier programming and better maintainability.
+Clean code is much easier to debug, and it's much harder to introduce
+a bug in such code.&lt;/div&gt;
+&lt;div class="line"&gt;When you think about code review, you probably think about verifying
+and examining the code. Reviewing the expert's code may look like a
+waste of time because he knows what he's doing. Reviewing the code by
+a beginner may look like a waste of time because he's not able to find
+as many defects as an experienced developer. Code review is a code
+quality tool in the first place, but it's also much beyond that. You
+can teach or help someone, learn from somebody and much more both from
+the position of reviewer and reviewee.&lt;/div&gt;
+&lt;div class="line"&gt;There is much more about the real power of code review which I want to
+share with you.&lt;/div&gt;
+&lt;div class="line"&gt;This talk is also about how to do it the right way and how to not do
+it based on lessons learned and my experience within the diverse teams
+of people with a variety of knowledge and experience. I was reviewing
+the code but, on the other hand, I was also being reviewed. I'd like
+to pass my observations to people who are reviewing the code both in
+commercial and open source projects for a while. This talk is also for
+those who want to start to review the code, but they do not know how
+to do it.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Łukasz Kąkol</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/code-review-for-beginners-and-experts-tips-tricks.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Development</category><category>Programming</category></item><item><title>From Python script to Open Source Project</title><link>https://pyvideo.org/europython-2019/from-python-script-to-open-source-project.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you write a cool and useful Python script? Would you like to share
+it with the community, but you're not sure how to go about that? If so,
+then this talks is for you. We'll go over a list of simple steps which
+can turn your script into a fully fledged open-source project.&lt;/p&gt;
+&lt;p&gt;The Python community has a rich set of tools which can help verify the
+quality of your code through automated code-review and linting. You can
+benefit by taking advantage of this ecosystem. Complete the steps in
+this checklist, and your project will be easier to maintain, you'll be
+ready to take contributions from the community and those contributions
+will be up to high standards. Your project will also keep up with other
+projects on PyPI and you will be alerted if any new release causes an
+incompatibility with your code.&lt;/p&gt;
+&lt;p&gt;The same checklist can be used for non open-source projects as well.&lt;/p&gt;
+&lt;p&gt;The project maturity checklist includes:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Properly structure your code&lt;/li&gt;
+&lt;li&gt;Use a setup.py file&lt;/li&gt;
+&lt;li&gt;Add entry_points for your script command&lt;/li&gt;
+&lt;li&gt;Create a requirements.txt file&lt;/li&gt;
+&lt;li&gt;Use Black to format your code&lt;/li&gt;
+&lt;li&gt;Create a tox.ini config and include code linters&lt;/li&gt;
+&lt;li&gt;Set up a Git repo&lt;/li&gt;
+&lt;li&gt;Refactor your code to be unit-testable and add tests&lt;/li&gt;
+&lt;li&gt;Add missing docstrings&lt;/li&gt;
+&lt;li&gt;Add type annotations and a MyPy verification step&lt;/li&gt;
+&lt;li&gt;Upload to GitHub&lt;/li&gt;
+&lt;li&gt;Add a continuous integration service (e.g. Travis)&lt;/li&gt;
+&lt;li&gt;Add a requirements updater (e.g. pyup.bot)&lt;/li&gt;
+&lt;li&gt;Add test coverage checker (e.g. coveralls)&lt;/li&gt;
+&lt;li&gt;Add a Readme file and documentation&lt;/li&gt;
+&lt;li&gt;Publish your project on PyPI&lt;/li&gt;
+&lt;li&gt;Advertise your project&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Michał Karzyński</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/from-python-script-to-open-source-project.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Static Analysis</category><category>Tooling</category></item><item><title>Python vs Rust for Simulation</title><link>https://pyvideo.org/europython-2019/python-vs-rust-for-simulation.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Both Python and Rust are getting more and more popularity. Although it
+is unfair to compare them directly, this talk aims to provide a clear
+comparison with a pre-defined criteria applied to a specific use-case.&lt;/div&gt;
+&lt;div class="line"&gt;Writing a simulation engine is very similar to writing a game engine
+and requires certain features from a language or framework.&lt;/div&gt;
+&lt;div class="line"&gt;Possible comparison criteria:&lt;/div&gt;
+&lt;div class="line"&gt;1. Performance&lt;/div&gt;
+&lt;div class="line"&gt;2. Simplicity&lt;/div&gt;
+&lt;div class="line"&gt;3. Amount of code necessary for a MVP&lt;/div&gt;
+&lt;div class="line"&gt;4. Utilities: docs, tests, profile&lt;/div&gt;
+&lt;div class="line"&gt;5. Compatibility&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Tl;dr&lt;/div&gt;
+&lt;div class="line"&gt;Do I want to go back to Python after Rust? Maybe+)&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alisa Dammer</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/python-vs-rust-for-simulation.html</guid><category>EuroPython 2019</category><category>Code Analysis</category><category>Development</category><category>Rust</category><category>python</category></item><item><title>Effective Code Reviews</title><link>https://pyvideo.org/europython-2020/effective-code-reviews.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The edge between hard skills and soft skills&lt;/p&gt;
+&lt;p&gt;Does your company uses code review? In this talk I will demonstrate why it should start using them immediately, share the many benefits and situations we've gone through, besides good practices that should be used for effective code reviews, that add quality to the product/service that is being delivered.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinicius Gubiani Ferreira</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/effective-code-reviews.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Agile</category><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Communication</category></item><item><title>The joy of deleting code</title><link>https://pyvideo.org/europython-2020/the-joy-of-deleting-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;How to apply YAGNI to practice&lt;/p&gt;
+&lt;p&gt;They say measuring code quality by its LOC is like measuring aircraft quality by its weight. There's a lot of sense in the metaphor, as we often call inefficient code with words like &amp;quot;heavy&amp;quot; or &amp;quot;bloated&amp;quot;.
+In my talk I'll tell you about my approach to deleting unneeded code, tools that could help you and how did it turned out in the end in real world projects.
+As you probably know, detecting unused code automatically is a hard task and doing it in Python is exceptionally hard because we sometimes call methods with getattr or write classes which are only used in non-python configuration files. Tools give us only a partial success. What you could do beyond them? What approach to take? I'd like to discuss it in detail in my talk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radosław Ganczarek</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/the-joy-of-deleting-code.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Architecture</category><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Programming</category></item><item><title>Writing Good Python</title><link>https://pyvideo.org/europython-2020/writing-good-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Like other programming languages, it is easy to write cryptic, unmaintainable, and rigid Python code. Moreover, in teams, this problem escalates due to varied coding styles of developers. How to ensure code quality and consistency? My goal with this talk is to educate my audience about some tools and libraries that can help us in making our code more consistent.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Prashant Chaubey</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/writing-good-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Best Practice</category><category>Code Analysis</category><category>Documentation</category><category>Static Analysis</category><category>Type-Hinting</category></item><item><title>Fuzzing Python code with Atheris</title><link>https://pyvideo.org/pycon-italia-2022/fuzzing-python-code-with-atheris.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fuzzing Python code with Atheris - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Fuzz testing is a well-known technique for uncovering programming
+errors. Atheris is an open-source fuzzing engine for finding bugs in
+Python code and native extensions, released by the Google Information
+Security team. With this talk we’ll learn how Atheris works and how it
+can be used in practice. Fuzz testing is a well-known technique for
+uncovering programming errors. Many of these detectable errors have
+serious security implications. Atheris ( is an open-source fuzzing
+engine for automatically finding bugs in Python code and native
+extensions. Atheris is a “coverage-guided” fuzzer, which means that
+Atheris will repeatedly try various inputs to your program while
+watching how it executes, and try to find interesting execution paths.
+In the past, Atheris was used to find bugs in Pillow’s native code
+(CVE-2020-35653) or to find differences in JSON parsing between Python’s
+standard library and Ultrajson, or between Python’s idna package and the
+native libidn2 library.&lt;/p&gt;
+&lt;p&gt;In this talk you can learn the basics of fuzzing, how Atheris works
+internally, and how it can be used for bug hunting.&lt;/p&gt;
+&lt;p&gt;Speaker: Federico Scrinzi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Federico Scrinzi</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/fuzzing-python-code-with-atheris.html</guid><category>PyCon Italia 2022</category><category>code analysis</category><category>open source</category><category>security</category><category>testing</category></item><item><title>Linting Python The Elegant Way</title><link>https://pyvideo.org/pycon-italia-2022/linting-python-the-elegant-way.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Linting Python The Elegant Way - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;This talk is for those people who know basic python but are looking
+forward to writing better and cleaner python code. Python has always
+been known for its easy-to-understand syntax. This talk will empower all
+developers and give perspective on how can you write code in a much more
+elegant way. Linting is the automated checking of your source code for
+programmatic and stylistic errors. Linters analyze source code to flag
+programming errors, bugs, stylistic errors, and suspicious constructs.
+This is done by using a lint tool. Python being one of the most elegant
+language has got a wide variety of listing tools available that can help
+programmers in Code formatting and styling their code in the best
+suitable form. Python has got some advance listing tools like pylint and
+flake8. In this talk we will have a great deal of discussion around how
+these linters can be used and how these tools can help you find more
+bugs and improve your code quality. These linting tools finds problems
+that are typically caught by a compiler for less dynamic languages. We
+will also discuss about how can we manage import orders, code
+formatting, checking security vulnerabilities, managing dependencies etc
+using these tools. There are also code analysis tools that provide other
+insights into your code. While maybe not linters by definition, these
+tools are usually used side-by-side with linters. They too hope to
+improve the quality of the code. It’s useful to have linters run against
+your code frequently. If automation and consistency aren’t there, it’s
+easy for a large team or project to lose sight of the goal and start
+creating lower-quality code.&lt;/p&gt;
+&lt;p&gt;Attendees will be able to learn 1. What is a linter? 2. Famous linting
+solutions like pylint and flake 8 3. Use cases like ordering imports,
+finding error bugs 4. Managing dependency in python with these linter
+tools.&lt;/p&gt;
+&lt;p&gt;Speaker: Riya Bansal&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Riya Bansal</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/linting-python-the-elegant-way.html</guid><category>PyCon Italia 2022</category><category>best practice</category><category>clean code</category><category>code analysis</category><category>community</category><category>development</category></item><item><title>Vulture eats some Python</title><link>https://pyvideo.org/pycon-italia-2022/vulture-eats-some-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vulture eats some Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Maintaining a high level of code quality is important for any serious
+project. One aspect of this is ensuring that all code is actually used.
+Finding and removing dead code allows to keep the code base clean and
+reduces bugs. This is a practical guide on using and configuring Vulture
+to do so. This talk is focused on how we can use Vulture to find dead
+code. There are many reasons for dead code ending up in a project. The
+most common is refactoring, but another is misspellings, which are only
+detected at runtime for dynamic languages. Vulture helps you find unused
+code in Python programs, and it is useful for cleaning up and finding
+errors in large codebases. If you run Vulture on both your library and
+test suite, you can find untested code.&lt;/p&gt;
+&lt;p&gt;Due to Python’s dynamic nature, static code analyzers like Vulture are
+likely to miss some dead code. Also, code that is only called implicitly
+(e.g., using getattr) may be reported as unused. Nonetheless, Vulture
+can be a very helpful tool for higher code quality.&lt;/p&gt;
+&lt;p&gt;The second part of this talk investigates ways to improve Vulture’s
+reporting such that the results are actionable and optimized for a low
+number of false positives. It also discusses how to automate testing for
+dead code with Vulture – there are quite a few options available: 1. Add
+a step in your continuous integration testing. 2. As a pre-commit hook.
+3. Run a script using Vulture API for more fine-grained control.&lt;/p&gt;
+&lt;p&gt;The third and last part of this talk discusses a brief overview of the
+internal workings of the tool, along with the scope of future
+improvements. After all, the motive of this talk is not only to
+encourage developers to prioritize code hygiene but also to inspire them
+to come up with ideas to &lt;em&gt;enable&lt;/em&gt; it.&lt;/p&gt;
+&lt;p&gt;Speaker: Rahul Jha&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rahul Jha</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/vulture-eats-some-python.html</guid><category>PyCon Italia 2022</category><category>best practice</category><category>clean code</category><category>code analysis</category><category>static analysis</category><category>tooling</category></item></channel></rss>

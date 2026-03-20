@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Erik Welch</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 18 May 2024 00:00:00 +0000</lastBuildDate><item><title>NetworkX is Fast Now: Graph Analytics Unleashed</title><link>https://pyvideo.org/pycon-us-2024/networkx-is-fast-now-graph-analytics-unleashed.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Have you ever wondered how to find connections in your data and to gain
+insights from them? Come discover how NetworkX makes this easy (and
+fast!).&lt;/p&gt;
+&lt;p&gt;This talk is broadly divided into two parts. First we will talk about
+the power of graph analytics and how you can use tools like NetworkX to
+extract information from your data, and then we will talk about how we
+made the machinery behind NetworkX work with heterogeneous backends like
+GraphBLAS (CPU optimized) and cuGraph (GPU optimized).&lt;/p&gt;
+&lt;div class="section" id="part-i"&gt;
+&lt;h4&gt;Part I&lt;/h4&gt;
+&lt;p&gt;NetworkX is the most popular library in Python for graph theory and
+applied network science thanks to its extensive API and
+beginner-friendly documentation. NetworkX is used &amp;quot;everywhere&amp;quot;, because
+graphs are everywhere. Don't believe me? We surveyed more than 300
+Python packages to understand how they use NetworkX in domains ranging
+from geoscience, neuroscience, genomics, biology, chemistry, quantum
+computing, text and language, machine learning, causal inference,
+optimization, and more. We will summarize what we learned to help you
+apply graph analytics to your data.&lt;/p&gt;
+&lt;p&gt;Once you start using NetworkX you will soon realize that the pure-Python
+implementation starts becoming a roadblock to scalable graph analytics.
+This takes us to the second part of the talk...&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="part-ii"&gt;
+&lt;h4&gt;Part II&lt;/h4&gt;
+&lt;p&gt;What should you do when your graph data becomes too large or NetworkX
+becomes too slow? Simple: use an accelerated NetworkX backend!&lt;/p&gt;
+&lt;p&gt;NetworkX 3.0 added the ability to dispatch to other implementations.
+This means you can use other highly tuned libraries from NetworkX to
+achieve up to 100 to 10_000+ times speedup! As &amp;quot;the API for graphs&amp;quot;,
+NetworkX now makes it easy to accelerate your graph workflows on CPUs
+with GraphBLAS and NVIDIA GPUs with nx-cugraph. Other backends are
+welcome, and we plan to support distributed graphs soon for extreme
+scalability 🚀&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mridul Seth</dc:creator><pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-05-18:/pycon-us-2024/networkx-is-fast-now-graph-analytics-unleashed.html</guid><category>PyCon US 2024</category></item><item><title>Functional programming in Python with PyToolz</title><link>https://pyvideo.org/pyohio-2014/functional-programming-in-python-with-pytoolz.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;Learn the principles of functional programming from the comfort of
+Python. I'll motivate the principles of standardization, composability,
+laziness, and purity within a standard workflow. We'll go far beyond the
+standard libraries &lt;tt class="docutils literal"&gt;itertools&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;functools&lt;/tt&gt; by using a functional
+standard library &lt;tt class="docutils literal"&gt;toolz&lt;/tt&gt; and its high-performance counterpart
+&lt;tt class="docutils literal"&gt;cytoolz&lt;/tt&gt; written in Cython.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Erik Welch</dc:creator><pubDate>Sat, 26 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-26:/pyohio-2014/functional-programming-in-python-with-pytoolz.html</guid><category>PyOhio 2014</category><category>talk</category></item><item><title>Building a Faster NetworkX-Like Library Using GraphBLAS</title><link>https://pyvideo.org/pyohio-2022/building-a-faster-networkx-like-library-using-graphblas.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This is a call for engagement to help with
+&lt;a class="reference external" href="https://github.com/python-graphblas/graphblas-algorithms"&gt;graphblas-algorithms&lt;/a&gt;!
+We'll also have weird math and weird Python syntax,
+so you can also come for the fun of getting your mind blown :)&lt;/p&gt;
+&lt;p&gt;GraphBLAS is a mathematical abstraction layer designed to express many
+graph algorithms in the language of linear algebra. It's weird and
+written in C.
+It is also &lt;em&gt;incredibly&lt;/em&gt; fast and powerful.
+Graph analytics has applications across industries and sciences--more
+than you might expect--and we want to get the power of GraphBLAS into
+the hands of Pythonistas and practitioners.&lt;/p&gt;
+&lt;p&gt;Our package, &lt;a class="reference external" href="https://github.com/python-graphblas/python-graphblas"&gt;python-graphblas&lt;/a&gt;, allows us to write GraphBLAS in
+the style of math, not the C API.
+Counterintuitively, by introducing some unconventional notation, we
+were able to make our library more Pythonic.
+However, &lt;a class="reference external" href="https://github.com/python-graphblas/python-graphblas"&gt;python-graphblas&lt;/a&gt; is still low-level, and most users
+probably won't use it directly.
+Instead, most people will probably want to use
+&lt;a class="reference external" href="https://github.com/python-graphblas/graphblas-algorithms"&gt;graphblas-algorithms&lt;/a&gt;,
+a library that looks like &lt;a class="reference external" href="https://networkx.org/"&gt;NetworkX&lt;/a&gt;, the most popular graph library
+in Python.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/python-graphblas/graphblas-algorithms"&gt;graphblas-algorithms&lt;/a&gt; is young.
+It is growing and has great potential, but it could use more help.
+Who can help? Anybody who is interested! We have a well-defined
+target--the &lt;a class="reference external" href="https://networkx.org/"&gt;NetworkX&lt;/a&gt; API and its tests--so
+it's very easy to find things to do.
+We actually find it fun like solving puzzles, and there is still a lot
+of low-lying fruit.
+If you don't know much about graphs or how to contribute to
+open-source, this could be a great way to learn!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Erik Welch</dc:creator><pubDate>Sat, 30 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-30:/pyohio-2022/building-a-faster-networkx-like-library-using-graphblas.html</guid><category>PyOhio 2022</category></item><item><title>GraphBLAS for Sparse Data and Graphs | SciPy 2023</title><link>https://pyvideo.org/scipy-2023/graphblas-for-sparse-data-and-graphs-scipy-2023.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GraphBLAS solves graph problems using sparse linear algebra. We are using it to build graphblas-algorithms, a fast backend to NetworkX. python-graphblas is faster and more capable than scipy.sparse for both graph algorithms and sparse operations. If you have sparse data or graph workloads that you want to scale and make faster, then this is for you. Come learn what makes GraphBLAS special--and fast!--and how to use it effectively.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jim Kitchen</dc:creator><pubDate>Mon, 10 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-10:/scipy-2023/graphblas-for-sparse-data-and-graphs-scipy-2023.html</guid><category>SciPy 2023</category></item></channel></rss>

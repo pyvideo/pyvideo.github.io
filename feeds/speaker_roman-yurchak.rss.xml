@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Roman Yurchak</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 17 Jul 2023 00:00:00 +0000</lastBuildDate><item><title>Running Python packages in the browser with Pyodide</title><link>https://pyvideo.org/europython-2023/running-python-packages-in-the-browser-with-pyodide.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — Forum Hall on 2023-07-20]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2023.europython.eu/session/running-python-packages-in-the-browser-with-pyodide"&gt;https://ep2023.europython.eu/session/running-python-packages-in-the-browser-with-pyodide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Pyodide is a port of CPython to WebAssembly/Emscripten enabling Python packages to run directly in the browser or Node.js. We will provide an overview of Pyodide's architecture, capabilities, and potential use cases before looking into building, running, and testing Python packages for the browser.&lt;/p&gt;
+&lt;p&gt;We will also discuss how browser-specific optimizations, such as code splitting, tree shaking, and lazy loading could be adapted to Python to reduce package size and load time.&lt;/p&gt;
+&lt;p&gt;Finally, we will mention some of the common restrictions of the browser runtime and how they can be overcome in Python packages.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roman Yurchak</dc:creator><pubDate>Mon, 17 Jul 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-07-17:/europython-2023/running-python-packages-in-the-browser-with-pyodide.html</guid><category>EuroPython 2023</category></item><item><title>vtext: fast text processing in Python using Rust</title><link>https://pyvideo.org/euroscipy-2019/vtext-fast-text-processing-in-python-using-rust.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Scientific Python has historically relied on compiled extensions for
+performance critical parts of the code. In this talk, we outline how
+to write Rust extensions for Python using
+&lt;a class="reference external" href="https://github.com/rust-%20numpy/rust-numpy"&gt;rust-numpy&lt;/a&gt;,&lt;/div&gt;
+&lt;div class="line"&gt;project. Advantages and limitations of this approach as compared to
+Cython or wrapping Fortran, C or C++ are also discussed.&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In the second part, we introduce the
+&lt;a class="reference external" href="https://github.com/rth/vtext"&gt;vtext&lt;/a&gt; project that allows fast text
+processing in Python using Rust. In particular, we consider the problems
+of text tokenization, and (parallel) token counting resulting in a
+sparse vector representation of documents. These can then be used as
+input in machine learning or information retrieval applications. We
+outline the approach used in vtext and compare to existing solutions of
+these problems in the Python ecosystem.&lt;/p&gt;
+&lt;p&gt;In this talk, we present some of the benefits of writing extensions for
+Python in Rust. We then illustrate this approach on the
+&lt;a class="reference external" href="https://github.com/rth/vtext"&gt;vtext&lt;/a&gt; project, that aims to be a
+high- performance library for text processing.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roman Yurchak</dc:creator><pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-09-05:/euroscipy-2019/vtext-fast-text-processing-in-python-using-rust.html</guid><category>EuroSciPy 2019</category></item><item><title>Pyodide: A Python distribution for the browser</title><link>https://pyvideo.org/pycon-us-2022/pyodide-a-python-distribution-for-the-browser.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pyodide is a Python distribution for the browser and Node.js based on WebAssembly. It includes a port of CPython 3.9 to WebAssembly/Emscripten, and makes it possible to install and run Python packages in the browser. Pyodide comes with a robust Javascript ⟺ Python foreign function interface so that you can mix these two languages in your code with minimal friction.&lt;/p&gt;
+&lt;p&gt;We will walk through simple examples of how to run Python applications in the browser with Pyodide. We will also discuss the process of porting existing Python packages, including what makes a package suitable to port and what challenges are likely to arise.&lt;/p&gt;
+&lt;p&gt;Some Criteria that Determine Suitability of a Project for Porting:&lt;/p&gt;
+&lt;p&gt;Purely computational projects are simple to port to run in the browser. We are missing threading and multiprocessing, so you will need to be able to run single threaded. File system code mostly works unchanged. However, much of the UI and network access are very different inside the browser. Packages with a clean divide between doing computation and doing UI will be simpler to port, the UI parts may need to be rewritten or shimmed but the pure computation need not be.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roman Yurchak</dc:creator><pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-04-27:/pycon-us-2022/pyodide-a-python-distribution-for-the-browser.html</guid><category>PyCon US 2022</category><category>talk</category></item><item><title>vtext: text processing in Rust with Python bindings</title><link>https://pyvideo.org/pydata-berlin-2019/vtext-text-processing-in-rust-with-python-bindings.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Roman Yurchak&lt;/p&gt;
+&lt;p&gt;Track:PyData
+In this  we talk present how to write Python extensions in Rust, and discusse advantages and limitation of such approach.  We then illustrate this approach on the vtext project, that aims to be a high-performance library for text processing.&lt;/p&gt;
+&lt;p&gt;Recorded at the PyConDE &amp;amp; PyData Berlin 2019 conference.
+&lt;a class="reference external" href="https://pycon.de"&gt;https://pycon.de&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More details at the conference page: &lt;a class="reference external" href="https://de.pycon.org/program/ALRGXS"&gt;https://de.pycon.org/program/ALRGXS&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pydataberlin"&gt;https://twitter.com/pydataberlin&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pyconde"&gt;https://twitter.com/pyconde&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roman Yurchak</dc:creator><pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-10-09:/pydata-berlin-2019/vtext-text-processing-in-rust-with-python-bindings.html</guid><category>PyData Berlin 2019</category></item><item><title>FreeDiscovery - information retrieval and e-Discovery in Python</title><link>https://pyvideo.org/pyparis-2017/freediscovery-information-retrieval-and-e-discovery-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk introduces FreeDiscovery - an open-source Python software that
+provides a REST API for information retrieval applications. Based on the
+scikit-learn machine learning library, its features include text
+categorization, semantic search, hierarchical clustering and duplicates
+detection.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Roman Yurchak</dc:creator><pubDate>Mon, 12 Jun 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-06-12:/pyparis-2017/freediscovery-information-retrieval-and-e-discovery-in-python.html</guid><category>PyParis 2017</category></item></channel></rss>
