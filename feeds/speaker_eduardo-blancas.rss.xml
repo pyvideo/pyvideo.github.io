@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Eduardo Blancas</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Wed, 10 May 2023 00:00:00 +0000</lastBuildDate><item><title>Develop and deploy a Machine Learning pipeline in 30 minutes with Ploomber</title><link>https://pyvideo.org/europython-2021/develop-and-deploy-a-machine-learning-pipeline-in-30-minutes-with-ploomber.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Develop and deploy a Machine Learning pipeline in 30 minutes with Ploomber
+[EuroPython 2021 - Talk - 2021-07-30 - Ni]
+[Online]&lt;/p&gt;
+&lt;p&gt;By Eduardo Blancas&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Description *&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Development tools such as Jupyter are prevalent among data scientists because they provide an environment to explore data visually and interactively. However, when deploying a project, we must ensure the analysis can run reliably in a production environment like Airflow or Argo; this causes data scientists to move code back and forth between their notebooks and these production tools. Furthermore, data scientists have to spend time learning an unfamiliar framework and writing pipeline code, which severely delays the deployment process.&lt;/p&gt;
+&lt;p&gt;Ploomber solves this problem by providing:&lt;/p&gt;
+&lt;p&gt;A workflow orchestrator that automatically infers task execution order using static analysis.
+A sensible layout to bootstrap projects.
+A development environment integrated with Jupyter.
+Capabilities to export to production systems (Kubernetes, Airflow, and AWS Batch) without code changes.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Who and why *&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk is for data scientists (with experience developing Machine Learning projects) looking to enhance their workflow. Experience with production tools such as Airflow or Argo is not necessary.&lt;/p&gt;
+&lt;p&gt;The talk has two objectives:&lt;/p&gt;
+&lt;p&gt;Advocate for more development-friendly tools that let data scientists focus on analyzing data and take off the overhead of popular production tools.
+Demonstrate an example workflow using Ploomber where a pipeline is developed interactively (using Jupyter) and deployed without code changes.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Resources *&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Show your support with a ⭐️ on GitHub! &lt;a class="reference external" href="https://github.com/ploomber/ploomber"&gt;https://github.com/ploomber/ploomber&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Join our community! &lt;a class="reference external" href="http://community.ploomber.io/"&gt;http://community.ploomber.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;License: This video is licensed under the CC BY-NC-SA 4.0 license: &lt;a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;
+Please see our speaker release agreement for details: &lt;a class="reference external" href="https://ep2021.europython.eu/events/speaker-release-agreement/"&gt;https://ep2021.europython.eu/events/speaker-release-agreement/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eduardo Blancas</dc:creator><pubDate>Mon, 26 Jul 2021 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2021-07-26:/europython-2021/develop-and-deploy-a-machine-learning-pipeline-in-30-minutes-with-ploomber.html</guid><category>EuroPython 2021</category></item><item><title>Beyond Papermill: A New Notebook Executor For Running Notebooks in Production</title><link>https://pyvideo.org/jupytercon-2023/beyond-papermill-a-new-notebook-executor-for-running-notebooks-in-production.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Papermill has become a widely used tool for executing Jupyter notebooks. Teams use papermill for many production use cases, such as scheduled report generation, model re-training, etc. However, since papermill relies on spinning up a second process with the IPython kernel to execute code, it has several drawbacks when used in production.&lt;/p&gt;
+&lt;p&gt;This talk will introduce an alternative notebook executor that powers Ploomber, a popular open-source orchestration framework. This new executor runs notebooks in a single process, allowing us to provide capabilities for production workloads, such as interactive debugging with pdb and notebook profiling (CPU, and memory usage). The executor is integrated into the Ploomber project and can also be used from the command line, like papermill.&lt;/p&gt;
+&lt;p&gt;Some experience with Jupyter (notebook or lab) and the terminal is required. Experience with papermill is optional.&lt;/p&gt;
+&lt;p&gt;Outline:
+- [0 - 2 minute] Introduction papermill
+- [2- 6] Papermill's drawbacks
+- [6 - 10] Running notebooks in a single process
+- [10 - 16] Debugging notebook execution with pdb
+- [16 - 22] Profiling notebooks
+- [22 - 26] Orchestrating notebook pipelines in production with Ploomber
+- [26 - 28] Summary and conclusions
+- [28 - 30] Q&amp;amp;A&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eduardo Blancas</dc:creator><pubDate>Wed, 10 May 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-05-10:/jupytercon-2023/beyond-papermill-a-new-notebook-executor-for-running-notebooks-in-production.html</guid><category>JupyterCon 2023</category></item><item><title>Ploomber: Developing Maintainable &amp; Reproducible Data</title><link>https://pyvideo.org/scipy-2022/ploomber-developing-maintainable-reproducible-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Interactive environments such as Jupyter have a reputation for producing low-quality, unmaintainable code. As a result, it is common for practitioners to go through a refactoring process where the notebook's code transforms into a more modular, maintainable form, usually through scripts and functions. However, this creates friction since the refactoring process happens every time the analysis needs changes, causing practitioners to move back and forth between their notebooks and the refactored code. This constant moving slows down the iteration process and risks reproducibility.&lt;/p&gt;
+&lt;p&gt;Ploomber is an open-source framework that addresses this problem. It allows practitioners to stay in the interactive interface they are the most productive with while providing the tools to help them build maintainable and reproducible data workflows from day one. In this tutorial, Eduardo and Ido will introduce Ploomber, going from zero to testing pipelines on GitHub Actions, using Pull Requests to collaborate, parallel experiments, and execution in distributed environments like Kubernetes and SLURM.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/edublancas/scipy-2022"&gt;https://github.com/edublancas/scipy-2022&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eduardo Blancas</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/scipy-2022/ploomber-developing-maintainable-reproducible-data.html</guid><category>SciPy 2022</category></item></channel></rss>

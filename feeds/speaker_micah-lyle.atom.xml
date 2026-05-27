@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Micah Lyle</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_micah-lyle.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-09-10T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Lightning Talks Day 2</title><link href="https://pyvideo.org/djangocon-us-2019/lightning-talks-day-2.html" rel="alternate"></link><published>2019-09-24T00:00:00+00:00</published><updated>2019-09-24T00:00:00+00:00</updated><author><name>Adem Gaygusuz</name></author><id>tag:pyvideo.org,2019-09-24:/djangocon-us-2019/lightning-talks-day-2.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DjangoCon 2019 - Lightning Talks by Kojo Idrissa&lt;/p&gt;
+&lt;p&gt;Adem Gaygusuz 00:00
+Laura Lorenz 5:24
+Micah Lyle 10:23
+Vince Salvino 15:14
+Russell Keith-Magee 20:24
+Brad Martsberger 25:19
+Jeremy Gatens 30:21
+Dane Hillard 35:31
+Caleb Collins-Parks 40:27&lt;/p&gt;
+&lt;p&gt;This talk was presented at: &lt;a class="reference external" href="https://2019.djangocon.us/talk/lightning-talks/"&gt;https …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;DjangoCon 2019 - Lightning Talks by Kojo Idrissa&lt;/p&gt;
+&lt;p&gt;Adem Gaygusuz 00:00
+Laura Lorenz 5:24
+Micah Lyle 10:23
+Vince Salvino 15:14
+Russell Keith-Magee 20:24
+Brad Martsberger 25:19
+Jeremy Gatens 30:21
+Dane Hillard 35:31
+Caleb Collins-Parks 40:27&lt;/p&gt;
+&lt;p&gt;This talk was presented at: &lt;a class="reference external" href="https://2019.djangocon.us/talk/lightning-talks/"&gt;https://2019.djangocon.us/talk/lightning-talks/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;LINKS:
+Follow Kojo Idrissa 👇
+On Twitter: &lt;a class="reference external" href="https://twitter.com/Transition"&gt;https://twitter.com/Transition&lt;/a&gt;
+Official homepage: &lt;a class="reference external" href="http://kojoidrissa.com/"&gt;http://kojoidrissa.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Follow DjangCon US 👇
+&lt;a class="reference external" href="https://twitter.com/djangocon"&gt;https://twitter.com/djangocon&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Follow DEFNA 👇
+&lt;a class="reference external" href="https://twitter.com/defnado"&gt;https://twitter.com/defnado&lt;/a&gt;
+&lt;a class="reference external" href="https://www.defna.org/"&gt;https://www.defna.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Intro music: &amp;quot;This Is How We Quirk It&amp;quot; by Avocado Junkie.
+Video production by Confreaks TV.
+Captions by White Coat Captioning.&lt;/p&gt;
+</content><category term="DjangoCon US 2019"></category></entry><entry><title>Operations: The Missing Django Piece</title><link href="https://pyvideo.org/djangocon-us-2024/operations-the-missing-django-piece.html" rel="alternate"></link><published>2024-09-24T00:00:00+00:00</published><updated>2024-09-24T00:00:00+00:00</updated><author><name>Micah Lyle</name></author><id>tag:pyvideo.org,2024-09-24:/djangocon-us-2024/operations-the-missing-django-piece.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, I’m going to demonstrate a new perspective on how to structure Django codebases using something I call “Operations”, so that Django codebases can scale well with any amount of features or complexity inside an application as it grows over time.&lt;/p&gt;
+</content><category term="DjangoCon US 2024"></category></entry><entry><title>Free Threaded Django</title><link href="https://pyvideo.org/djangocon-us-2025/free-threaded-django.html" rel="alternate"></link><published>2025-09-10T00:00:00+00:00</published><updated>2025-09-10T00:00:00+00:00</updated><author><name>Micah Lyle</name></author><id>tag:pyvideo.org,2025-09-10:/djangocon-us-2025/free-threaded-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will likely have three or four major sections. Some of this is subject to change when we get out to ~1 to ~2 months from the conference given changes/breakthroughs in the Python free threading world, and any additional changes that are projected to happen in Python …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will likely have three or four major sections. Some of this is subject to change when we get out to ~1 to ~2 months from the conference given changes/breakthroughs in the Python free threading world, and any additional changes that are projected to happen in Python 3.14. That being said, here is the current outline:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;What is the GIL, and what are the positive and negative consequences of free threading and removing the GIL. What does the GIL protect against? What kind of bugs are &amp;quot;impossible&amp;quot; with the GIL that are now possible without it? And, given all of that, what does removing the GIL enable?&lt;/li&gt;
+&lt;li&gt;If Django was in free threading mode (without the GIL), what parts of it and dependencies of it would likely be thread safe? What parts might not be thread safe, or would need some additional to work to become thread safe? We'll dive into various Django internals and demonstrate places that might need attention. We'll also look at database adapters like psycopg and talk about how free threading impacts those. Finally, we'll talk about sync/async Django, and how free threading would impact both, from a thread safety angle and also from a performance angle.&lt;/li&gt;
+&lt;li&gt;On the WSGI/ASGI broker side, we'll look at gunicorn, uvicorn, and granian, a newer option that provides free threaded support. We'll talk about if and how these can (or can't currently be) run in free threading mode. We'll then do a live demo profiling a Django application running with and without free threading, and look at both speed/performance and memory efficiency.&lt;/li&gt;
+&lt;li&gt;Finally, we'll conclude with a summary of the current state of things. Can you run Django applications on Python 3.13 (or soon to come out 3.14) in free threaded mode? Should you do so in production (at your own risk)? And if not, what needs to happen, both on the Django side and related libraries, before free threaded mode is a viable production option for Django.&lt;/li&gt;
+&lt;/ol&gt;
+</content><category term="DjangoCon US 2025"></category></entry></feed>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Software Design</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/tag_software-design.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2020-07-23T00:00:00+00:00</updated><subtitle></subtitle><entry><title>How Thinking in Python Made Me a Better Software Engineer</title><link href="https://pyvideo.org/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html" rel="alternate"></link><published>2019-07-11T00:00:00+00:00</published><updated>2019-07-11T00:00:00+00:00</updated><author><name>Johnny Dude</name></author><id>tag:pyvideo.org,2019-07-11:/europython-2019/how-thinking-in-python-made-me-a-better-software-engineer.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Did you ever wonder why development in Python can be x10 faster than
+development in languages like c++?&lt;/p&gt;
+&lt;p&gt;Observing my teams’ experimentations, the python community, and reading,
+I have adopted various habits, patterns, and tools. But most importantly
+I learned thinking in Python. I consider thinking in Python a key for
+rapid development and good engineering.&lt;/p&gt;
+&lt;p&gt;Thinking in a programming language affects the amount of information you
+need to keep in your working memory. It also affects the abstractions
+and tools that pop in your mind and then used in constructing solutions.&lt;/p&gt;
+&lt;p&gt;Let’s explore what it means to think in Python. Why Python allows you to
+focus on problem solving, while languages like c++ often distract your
+attention from the problem at hand.&lt;/p&gt;
+&lt;p&gt;In this talk I will cover some good and bad practices by examples while
+trying to consider the amount of effort needed to write it, read it, and
+talk about it with other team members.&lt;/p&gt;
+&lt;p&gt;Key Takeaways: Tips for speeding your work without compromising quality,
+and reasoning for using it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The audience should be comfortably familiar with the process of
+software development, and software problem solving, and experience
+using Python.&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="EuroPython 2019"></category><category term="Best Practice"></category><category term="Development"></category><category term="Software Design"></category><category term="failures/mistakes"></category></entry><entry><title>Dissecting tf.function to discover AutoGraph strengths and subtleties</title><link href="https://pyvideo.org/europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Paolo Galeone</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/dissecting-tffunction-to-discover-autograph-strengths-and-subtleties.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AutoGraph is one of the most exciting new features of Tensorflow 2.0: it
+allows transforming a subset of Python syntax into its portable, high-
+performance and language agnostic graph representation bridging the gap
+between Tensorflow 1.x and the 2.0 release based on eager execution.&lt;/p&gt;
+&lt;p&gt;Using AutoGraph …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;AutoGraph is one of the most exciting new features of Tensorflow 2.0: it
+allows transforming a subset of Python syntax into its portable, high-
+performance and language agnostic graph representation bridging the gap
+between Tensorflow 1.x and the 2.0 release based on eager execution.&lt;/p&gt;
+&lt;p&gt;Using AutoGraph with the &lt;tt class="docutils literal"&gt;&amp;#64;tf.fuction&lt;/tt&gt; decorator seems easy, but in
+practice, writing efficient and correctly graph-convertible code
+requires to know in detail how AutoGraph and tf.function work.&lt;/p&gt;
+&lt;p&gt;In particular, knowing how:&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;- A graph is created and when it is re-used;&lt;/div&gt;
+&lt;div class="line"&gt;- To deal with functions that create a state;&lt;/div&gt;
+&lt;div class="line"&gt;- To correctly use the Tensorflow &lt;tt class="docutils literal"&gt;tf.Tensor&lt;/tt&gt; object instead of
+using the Python native types to speed-up the computation;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;defines the minimum skill-set required to write correct
+graph-accelerable code.&lt;/p&gt;
+&lt;p&gt;The talk will guide you trough AutoGraph and &lt;tt class="docutils literal"&gt;tf.function&lt;/tt&gt;
+highlighting all the peculiarities that are worth knowing to build the
+right skill-set.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Data-Structures"></category><category term="Machine-Learning"></category><category term="New Features"></category><category term="Software Design"></category></entry><entry><title>Writing a Python autoreloader</title><link href="https://pyvideo.org/europython-2019/writing-a-python-autoreloader.html" rel="alternate"></link><published>2019-07-10T00:00:00+00:00</published><updated>2019-07-10T00:00:00+00:00</updated><author><name>Tom Forbes</name></author><id>tag:pyvideo.org,2019-07-10:/europython-2019/writing-a-python-autoreloader.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Reloading your code changes quickly is an integral part of the
+development experience in frameworks like Django and Flask that
+developers have come to rely on. But how do they work under the hood and
+what challenges do you face while writing one?&lt;/p&gt;
+&lt;p&gt;In this talk I will explore …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Reloading your code changes quickly is an integral part of the
+development experience in frameworks like Django and Flask that
+developers have come to rely on. But how do they work under the hood and
+what challenges do you face while writing one?&lt;/p&gt;
+&lt;p&gt;In this talk I will explore how I refactored the autoreload
+implementation in Django 2.2 and the lessons I learned along the way
+(hint: it's surprisingly complex!). I will also be introducing a library
+I've developed to simplify this if you ever find yourself writing your
+own.&lt;/p&gt;
+</content><category term="EuroPython 2019"></category><category term="Architecture"></category><category term="Development"></category><category term="Django"></category><category term="Python 3"></category><category term="Software Design"></category></entry><entry><title>Ensuring data integrity with asynchronous programming in a cloud IoT core</title><link href="https://pyvideo.org/europython-2020/ensuring-data-integrity-with-asynchronous-programming-in-a-cloud-iot-core.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Theofanis Petkos</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/ensuring-data-integrity-with-asynchronous-programming-in-a-cloud-iot-core.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python3.6, AsyncIO, Flask, RabbitMQ. A simple and powerful combination for IoT data integrity.&lt;/p&gt;
+&lt;p&gt;Undoubtedly this will be the decade of low-cost and high-performance cloud IoT core development.
+All cloud IoT solutions will have to meet the same two fundamental requirements: Performance and Data Integrity. Having said that,  AsyncIO …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python3.6, AsyncIO, Flask, RabbitMQ. A simple and powerful combination for IoT data integrity.&lt;/p&gt;
+&lt;p&gt;Undoubtedly this will be the decade of low-cost and high-performance cloud IoT core development.
+All cloud IoT solutions will have to meet the same two fundamental requirements: Performance and Data Integrity. Having said that,  AsyncIO comes to mind.
+While researching similar topics on cloud IoT solutions, we noticed that the vast majority of such solutions primarily includes performance. In this discussion we would like to demonstrate how you can ensure that a low-cost, fast developed cloud IoT core can ensure that its data is not corrupted and is accurate  for the user.
+Technically speaking, it is very interesting to analyze how a bucket of async/await tasks can handle (consume or even produce) messages from or to message queues, interact with other (even non pythonic) modules inside the core, manage socket connections and many other functionalities that make Python3.6+ the heart of any IoT core. Note that it is equally important to check imported data with periodic tasks, acquire statistics from devices and sanitize database data in order to ensure data integrity.
+Our goal: Firstly, to encourage new developers to get involved with cloud IoT cores and use Python and AsyncIO as the heart of their core. Secondly, as new developers we would like to show our logic and our prefered python libraries and techniques in order to receive feedback from more experienced developers.
+We are a team of software engineers located in Athens, Greece working for a fast growing startup in San Francisco (&lt;a class="reference external" href="https://www.veturilo.io"&gt;https://www.veturilo.io&lt;/a&gt;). We have developed our own cloud IoT core for a vehicle fleet management SaaS.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="ASYNC / Concurreny"></category><category term="Internet of Things (IoT)"></category><category term="Python 3"></category><category term="Software Design"></category><category term="Use Case"></category></entry><entry><title>Pluggable Architecture</title><link href="https://pyvideo.org/europython-2020/pluggable-architecture.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Aly Sivji</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/pluggable-architecture.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Extend functionality without touching existing code&lt;/p&gt;
+&lt;p&gt;Applications and libraries with a pluggable architecture allow developers to add custom functionality. Plugins can customize user interfaces, create new workflows, and interface with legacy systems. Designing a plugin is often difficult - documentation is sparse, outdated, or non-existent. You end up diving into …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Extend functionality without touching existing code&lt;/p&gt;
+&lt;p&gt;Applications and libraries with a pluggable architecture allow developers to add custom functionality. Plugins can customize user interfaces, create new workflows, and interface with legacy systems. Designing a plugin is often difficult - documentation is sparse, outdated, or non-existent. You end up diving into a unfamiliar codebase to figure out what to do.&lt;/p&gt;
+&lt;p&gt;This talk examines Pluggable Architecture by creating a custom plugin system: we will design an interface, think about where to hook in custom behavior, and discuss testing techniques. Understanding these principles will enable us to write custom plugins for third-party libraries. Extend the functionality of your favourite library without touching existing code!&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Abstractions"></category><category term="Architecture"></category><category term="Development"></category><category term="Software Design"></category><category term="System Architecture"></category></entry></feed>

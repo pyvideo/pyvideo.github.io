@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Camila Maia</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_camila-maia.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-10-17T00:00:00+00:00</updated><subtitle></subtitle><entry><title>factory_boy: testing like a pro</title><link href="https://pyvideo.org/djangocon-us-2022/factory_boy-testing-like-a-pro.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/factory_boy-testing-like-a-pro.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After working using the factory_boy library for over 3 years on a Django monolith containing +230 tables, +2200 relevant files, and +75k relevant lines of code, I've collected and listed all my biggest learnings.&lt;/p&gt;
+&lt;p&gt;In this presentation, I try to share some of my experiences, showing what I consider …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After working using the factory_boy library for over 3 years on a Django monolith containing +230 tables, +2200 relevant files, and +75k relevant lines of code, I've collected and listed all my biggest learnings.&lt;/p&gt;
+&lt;p&gt;In this presentation, I try to share some of my experiences, showing what I consider to be good practices in using factory_boy in complex systems.&lt;/p&gt;
+&lt;p&gt;Content:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A short introduction of myself&lt;/li&gt;
+&lt;li&gt;factory_boy: what is it? - the definition and the purpose of the tool&lt;/li&gt;
+&lt;li&gt;Example application - a quick overview of the application we will use to demonstrate the best practices&lt;/li&gt;
+&lt;li&gt;How to install factory_boy&lt;/li&gt;
+&lt;li&gt;How to use factory_boy&lt;/li&gt;
+&lt;li&gt;Best Practices:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Factories must represent their models&lt;/li&gt;
+&lt;li&gt;Do not rely on defaults from factories&lt;/li&gt;
+&lt;li&gt;Factories must have only the required data. if the field is nullable -&amp;gt; under traits.&lt;/li&gt;
+&lt;li&gt;Build over create&lt;/li&gt;
+&lt;li&gt;If FK is in the table -&amp;gt; SubFactory. If FK is in the other table -&amp;gt; RelatedFactory + trait&lt;/li&gt;
+&lt;li&gt;Fixtures only to wrap factories in the test file&lt;/li&gt;
+&lt;li&gt;Avoid using fixtures on shared files like conftest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Wrapping up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Repository: &lt;a class="reference external" href="https://github.com/camilamaia/factory-boy-best-practices"&gt;https://github.com/camilamaia/factory-boy-best-practices&lt;/a&gt;&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>ScanAPI</title><link href="https://pyvideo.org/europython-2020/scanapi.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/scanapi.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automated Integration Testing and Live Documentation for your API&lt;/p&gt;
+&lt;p&gt;In the current IT scenario, the use of APIs is, without question, widely vast, popular, and significant. It seems at least prudent to ensure they are working properly, as expected. To guarantee the quality of the data that is being …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automated Integration Testing and Live Documentation for your API&lt;/p&gt;
+&lt;p&gt;In the current IT scenario, the use of APIs is, without question, widely vast, popular, and significant. It seems at least prudent to ensure they are working properly, as expected. To guarantee the quality of the data that is being consumed or used. To ensure that communication between services is occurring as expected. To ensure the system does, in fact, what it should do.&lt;/p&gt;
+&lt;p&gt;ScanAPI is an open-source library that was created to solve all these points. ScanAPI provides an easy way to create integration tests for REST APIs via configuration files.&lt;/p&gt;
+&lt;p&gt;The three main reasons that led me to the creation of this library were:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;To be a firefighter in a scenario where most of the reported bugs were directly related to some API contract being broken or some endpoint having a behavior different from that expected by the consumer.&lt;/li&gt;
+&lt;li&gt;To need to deal with APIs with outdated or mistaken documentation.&lt;/li&gt;
+&lt;li&gt;To need to debug an endpoint in the middle of a &amp;quot;chain&amp;quot; of other endpoints. Where I needed to recreate a state that depends on the action of other endpoints.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Given a fictitious example: debug an endpoint to reserve seats on an airplane, which depends directly on the previous call of an endpoint for user registration.&lt;/p&gt;
+&lt;p&gt;The ScanAPI is open-source and written in Python. However, it can be used in APIs created in any other programming language, since the tests provided by it are integration tests.&lt;/p&gt;
+&lt;p&gt;With ScanAPI you can:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Use environment variables&lt;/li&gt;
+&lt;li&gt;Create variables&lt;/li&gt;
+&lt;li&gt;Chaining requests - making a request from a result of previous responses&lt;/li&gt;
+&lt;li&gt;Hide sensitive information of the requests and responses in the generated report&lt;/li&gt;
+&lt;li&gt;Write Python code - if you want, it's not necessary :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Topics I intend to address in this talk:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Motivation to create the library&lt;/li&gt;
+&lt;li&gt;What problems the library solves&lt;/li&gt;
+&lt;li&gt;How to test an API using a ScanAPI&lt;/li&gt;
+&lt;li&gt;Show the documentation generated by ScanAPI&lt;/li&gt;
+&lt;li&gt;An overview of how it is implemented&lt;/li&gt;
+&lt;li&gt;Where it is currently being used&lt;/li&gt;
+&lt;li&gt;Next steps&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Project Link: &lt;a class="reference external" href="https://github.com/scanapi/scanapi"&gt;https://github.com/scanapi/scanapi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Prerequisites:
+- Python
+- REST APIs
+- Integration tests&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="APIs"></category><category term="Open-Source"></category><category term="RESTful"></category><category term="Test Libraries (pytest/nose/...)"></category><category term="Testing"></category></entry><entry><title>Encerramento oficial</title><link href="https://pyvideo.org/pyjamas-conf-2019/encerramento-oficial.html" rel="alternate"></link><published>2019-12-14T00:00:00+00:00</published><updated>2019-12-14T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2019-12-14:/pyjamas-conf-2019/encerramento-oficial.html</id><content type="html"></content><category term="Pyjamas Conf 2019"></category></entry><entry><title>Mesa redonda</title><link href="https://pyvideo.org/pyjamas-conf-2019/mesa-redonda.html" rel="alternate"></link><published>2019-12-14T00:00:00+00:00</published><updated>2019-12-14T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2019-12-14:/pyjamas-conf-2019/mesa-redonda.html</id><content type="html"></content><category term="Pyjamas Conf 2019"></category></entry><entry><title>ScanAPI: Automatização de Testes de Integração para a sua API</title><link href="https://pyvideo.org/pyjamas-conf-2019/scanapi-automatizacao-de-testes-de-integracao-para-a-sua-api.html" rel="alternate"></link><published>2019-12-14T00:00:00+00:00</published><updated>2019-12-14T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2019-12-14:/pyjamas-conf-2019/scanapi-automatizacao-de-testes-de-integracao-para-a-sua-api.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A ScanAPI é uma biblioteca de código aberto que possibilita a criação de testes de integração para REST APIs.&lt;/p&gt;
+&lt;p&gt;Através de um arquivo de configuração yaml, você consegue implementar testes automatizados para os endpoints da sua API. A biblioteca gera um relatório da execução dos testes que também pode …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A ScanAPI é uma biblioteca de código aberto que possibilita a criação de testes de integração para REST APIs.&lt;/p&gt;
+&lt;p&gt;Através de um arquivo de configuração yaml, você consegue implementar testes automatizados para os endpoints da sua API. A biblioteca gera um relatório da execução dos testes que também pode ser utilizado como a própria documentação da API,&lt;/p&gt;
+&lt;p&gt;A biblioteca ainda está em fase de desenvolvimento. Essa palestra visa mostrar um pouco do funcionamento da ScanAPI, discutir os próximos passos a serem implementados e também divulgar a ferramenta para quem possa ter interesse, seja para sua utilização ou contribuição com o projeto.&lt;/p&gt;
+</content><category term="Pyjamas Conf 2019"></category></entry><entry><title>Abertura Oficial</title><link href="https://pyvideo.org/pyjamas-conf-2019/abertura-oficial.html" rel="alternate"></link><published>2019-12-13T00:00:00+00:00</published><updated>2019-12-13T00:00:00+00:00</updated><author><name>Bruno Rocha</name></author><id>tag:pyvideo.org,2019-12-13:/pyjamas-conf-2019/abertura-oficial.html</id><content type="html"></content><category term="Pyjamas Conf 2019"></category></entry></feed>

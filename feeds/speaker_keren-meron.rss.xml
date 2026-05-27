@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Keren Meron</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><item><title>Supercharging Pipeline Efficiency with ML Performance Prediction</title><link>https://pyvideo.org/pycon-us-2023/supercharging-pipeline-efficiency-with-ml-performance-prediction.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;To process our customers' data, Singular's pipeline runs hundreds of
+thousands of daily tasks, each with a different processing time and
+resource requirements. We deal with this scale by using Celery and
+Kubernetes as our tasks infrastructure, letting us allocate dedicated
+workers and queues to each type of task based on its requirements.
+Originally, this was configured manually.&lt;/p&gt;
+&lt;p&gt;As our customer base grew, we noticed that heavier and longer tasks were
+grabbing all the resources and causing unacceptable queues in our
+pipeline. Moreover, some of the heavier tasks required significantly
+more memory, leading to OOM kills and infrastructure issues.&lt;/p&gt;
+&lt;p&gt;If we could classify tasks by their expected duration and memory
+requirements, we could have segregated tasks in Celery based on these
+properties and thus minimized interruptions to the rest of the pipeline.
+However, the variance in the size and granularity of the fetched data
+made it impossible to classify if a task was about to take one minute or
+one hour.&lt;/p&gt;
+&lt;p&gt;Our challenge was: how do we categorize these tasks, accurately and
+automatically? To solve the issue we implemented a machine-learning
+model that could predict the expected duration and memory usage of a
+given task. Using Celery’s advanced task routing capabilities, we could
+then dynamically configure different task queues based on the model's
+prediction.&lt;/p&gt;
+&lt;p&gt;This raised another challenge - how could we use the classified queues
+in the best way? Configuring workers statically for each queue would be
+inadequate at scale. We utilized Kubernetes’ vertical and horizontal
+autoscaling capabilities to dynamically allocate workers for each
+classified queue based on its length. This improved our ability to
+respond to pipeline load automatically, increasing performance and
+availability. Additionally, we were able to deploy shorter-lived workers
+on AWS Spot instances, giving us higher performance while lowering cloud
+costs.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Boaz Wiesner</dc:creator><pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2023-04-23:/pycon-us-2023/supercharging-pipeline-efficiency-with-ml-performance-prediction.html</guid><category>PyCon US 2023</category></item></channel></rss>

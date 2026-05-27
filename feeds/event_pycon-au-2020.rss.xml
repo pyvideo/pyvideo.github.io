@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - PyCon AU 2020</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 06 Sep 2020 00:00:00 +0000</lastBuildDate><item><title>dask-image: distributed image processing for large data</title><link>https://pyvideo.org/pycon-au-2020/dask-image-distributed-image-processing-for-large-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genevieve Buckley&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/KHULAN"&gt;https://2020.pycon.org.au/program/KHULAN&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Image datasets are large, and becoming larger. The widely used benchmark dataset COCO (Common Objects in Context) contains 330,000 individual images. The average size of a single entry on the image database EMPIAR is over 1TB, and can easily reach several terabytes.  Even where individual images are small enough to fit in-memory, many existing parallelization methods are difficult to scale seamlessly between a laptop and a supercomputing cluster. For instance, the python multiprocessing module is restricted to a single mode and can't take advantage of multiple compute nodes on a distributed supercomputing cluster.&lt;/p&gt;
+&lt;p&gt;We need easy ways to work with large image data. This talk introduces dask-image, a python library for distributed image processing. The target audience are python programmers currently using numpy and scipy with large array data, where the whole dataset cannot fit in memory or is close to that limit. It's for people who want to get started with parallel processing, either because they have large single-image data, or because they want to do batch processing applying the same analysis to many smaller images (sometimes known an embarrassingly parallel problem). The specific image analysis functions provided by dask-image are of broad interest to a diverse range of analysis applications including (but not limited to) video/streaming data, computer vision, and scientific fields including astronomy, microscopy and geosciences.&lt;/p&gt;
+&lt;p&gt;Specifically, this talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;An overview of the dask-image library&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Lazy image loading&lt;/li&gt;
+&lt;li&gt;Image pre-processing functionality (convolutions, filters, etc.)&lt;/li&gt;
+&lt;li&gt;Analysis of segmented images (distributed labeling, and measurements of those label regions)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;Mixing in your own custom analysis functions (using dask delayed, map_blocks, and map_overlap)&lt;/li&gt;
+&lt;li&gt;A practical case study of a Python image processing pipeline&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dask-image is open source, released under a BSD 3-Clause license, and can be installed using conda or pip. You can find the source code at &lt;a class="reference external" href="https://github.com/dask/dask-image"&gt;https://github.com/dask/dask-image&lt;/a&gt; and the quickstart guide at &lt;a class="reference external" href="https://github.com/dask/dask-examples/blob/master/applications/image-processing.ipynb"&gt;https://github.com/dask/dask-examples/blob/master/applications/image-processing.ipynb&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:55:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Genevieve Buckley</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/dask-image-distributed-image-processing-for-large-data.html</guid><category>PyCon AU 2020</category><category>GenevieveBuckley</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>DevOps for Data Science? - automate the boring stuff and leverage the OSS ecosystem</title><link>https://pyvideo.org/pycon-au-2020/devops-for-data-science-automate-the-boring-stuff-and-leverage-the-oss-ecosystem.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dr. Tania Allard&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/WMMVSQ"&gt;https://2020.pycon.org.au/program/WMMVSQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Does your work (either research, non-profit or industry-based) depend on Machine learning, Data Science or data-intensive analyses? Have you ever wished you could automate some of the boring stuff while adding extra robustness to your workflows so that you and your team can have greater confidence and work more efficiently?&lt;/p&gt;
+&lt;p&gt;In this talk, I will present the concept of MLOps (kind of DevOps for ML scenarios, also referred to as DataOps or AIOps) and how adopting these practices can improve your team's workflows. You will learn how to automate some tasks within the ML lifecycle: from data transformation to model training, testing and validation, and deployment — making your workflows not only more seamless but your entire work more reproducible, reliable, and robust.
+You do not need to be a DevOps engineer to benefit from these practices, but you can indeed leverage existing open-source tools and platforms to improve your Data Science workflows.
+For completeness, I'll show a live end to end example, integrating MLOps practices for Machine Learning - from data processing to model training, validation and deployment. I will highlight the essential tips and tricks for each of the involved stages. You will leave the talk with practical recommendations and examples to get you started on adopting MLOps practices.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 16:35:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dr.Tania Allard</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/devops-for-data-science-automate-the-boring-stuff-and-leverage-the-oss-ecosystem.html</guid><category>PyCon AU 2020</category><category>Dr.TaniaAllard</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Extracting data from Excel with Python</title><link>https://pyvideo.org/pycon-au-2020/extracting-data-from-excel-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;samuel oranyeli&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/FAEAH3"&gt;https://2020.pycon.org.au/program/FAEAH3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;How do you read data from Excel? How do you read data that has meaningful formats(rows or cells are colour coded)? Or pivot tables that need to be in tidy format? Or data with hierarchical formatting ? This talk will show how to use Pandas, Openpyxl, and some other make-life-easy tools to extract data from Excel into Python in a tidy form and proceed to the next phase of our data analysis.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:20:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">samuel oranyeli</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/extracting-data-from-excel-with-python.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category><category>samueloranyeli</category></item><item><title>Rube Codeberg Competition</title><link>https://pyvideo.org/pycon-au-2020/rube-codeberg-competition.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rube Codeberg Competition</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/rube-codeberg-competition.html</guid><category>PyCon AU 2020</category><category>australia</category><category>conference</category><category>programming</category><category>python</category></item><item><title>Technosolutionism and human rights</title><link>https://pyvideo.org/pycon-au-2020/technosolutionism-and-human-rights.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lucie Krahulcova&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/XWQNFM"&gt;https://2020.pycon.org.au/program/XWQNFM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Technosolutionism proves that we need a multidisciplinary approach to tech design. In this session we will use the latest examples of the COVID19 apps to illustrate how a solution can be technically perfect while being perfectly inappropriate as a solution to a given problem. We will work backwards from the location/data sharing/API changes which were happily adopted for covid apps to illustrate how/when those sorts of opportunities can be seized by governments and malicious third parties. We will cover the ways in which every dataset aggregated and generated is likely to be appropriated and abused. Why does that happen? How can we prevent that at the design stages? I will lean on my extensive history in the field to pull together examples where policy and agencies have grabbed at opportunities like this to seize additional power, and use it to highlight the urgency of addressing this issue as we go through the everyday. We can change the chaotic technosolutionism that happens by being better informed and better prepared to do our jobs with a critical eye.&lt;/p&gt;
+&lt;p&gt;The session should leave the audience with a broader understanding of the challenges posed by one-stop-shop-technosolutionism and the essential questions that we as participants in the tech space have a responsibility for baking into our thinking and decision making.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:15:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lucie Krahulcova</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/technosolutionism-and-human-rights.html</guid><category>PyCon AU 2020</category><category>LucieKrahulcova</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Why the float did it NaN?</title><link>https://pyvideo.org/pycon-au-2020/why-the-float-did-it-nan.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jakub Nabaglo&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/RTT87N"&gt;https://2020.pycon.org.au/program/RTT87N&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Floating point numbers are designed to be magic. For most mundane tasks, your calculations ‘just work’, and you are not supposed to think too much about it.&lt;/p&gt;
+&lt;p&gt;From time to time though, the magic stops working. The maths that’s correct on a sheet of paper no longer gives the right results when done on a computer. Results of NaN or Inf, division by zero errors, and inaccurate answers have caused great frustration to many.&lt;/p&gt;
+&lt;p&gt;To see why this happens, we will look under the hood of floating point numbers. Their structure in memory, and how it affects the accuracy of different operations. This is particularly relevant to data science, which entails lots of number crunching.&lt;/p&gt;
+&lt;p&gt;We will see why subtraction is sometimes dangerous, why you should avoid multiplying probabilities, and why you should never invert a matrix. We will explore the tools Python, NumPy, and SciPy give us to avoid these pitfalls, such as LU decomposition and the LogAddExp trick.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 12:45:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jakub Nabaglo</dc:creator><pubDate>Sun, 06 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-06:/pycon-au-2020/why-the-float-did-it-nan.html</guid><category>PyCon AU 2020</category><category>JakubNabaglo</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>3 ways to test S3 in Python</title><link>https://pyvideo.org/pycon-au-2020/3-ways-to-test-s3-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sanjay Siddhanti&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/VXXUWE"&gt;https://2020.pycon.org.au/program/VXXUWE&lt;/a&gt;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Benefits of testing code that uses S3&lt;/li&gt;
+&lt;li&gt;In-depth code examples of three ways to test S3:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Mock out the S3 API responses using botocore stubs&lt;/li&gt;
+&lt;li&gt;Mock the S3 API using moto&lt;/li&gt;
+&lt;li&gt;Spin up a LocalStack S3 instance and test against that&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:00:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sanjay Siddhanti</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/3-ways-to-test-s3-in-python.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SanjaySiddhanti</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>A Reflection on Software Testing</title><link>https://pyvideo.org/pycon-au-2020/a-reflection-on-software-testing.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Richard Jones&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/MXZVY8"&gt;https://2020.pycon.org.au/program/MXZVY8&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is an opinionated talk about issues I have observed during my career around software testing, including our conversations about it, but also the many materials produced describing how it should be done. One of my inspirations for this talk is the realisation that in some ways we have lost our way with testing, losing sight of some of the very early wisdom.&lt;/p&gt;
+&lt;p&gt;I will talk about some of those conversations we have, the language we use, but I will also present some advice, with concrete examples, of how we all might improve how we approach and implement testing.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:00:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Richard Jones</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/a-reflection-on-software-testing.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>RichardJones</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>A sack full of angry snakes: Taming your python dependencies with Nix</title><link>https://pyvideo.org/pycon-au-2020/a-sack-full-of-angry-snakes-taming-your-python-dependencies-with-nix.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Thomas Woolford&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/USWEYZ"&gt;https://2020.pycon.org.au/program/USWEYZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Scientists, Researchers and Software Engineering projects should be paying attention to the reproducibility of their results. The best way to guarantee that the project you build today will be the same when built next week is to exactly specify your dependency tree.&lt;/p&gt;
+&lt;p&gt;Imperative package management approaches (such as apt/pip/conda) provide few assurances that the package version you get today is the same version you'll get tomorrow, or that installing packages in a different order won't change the versions resolved. The problem gets even harder when you want to integrate with native extensions that rely on platform libraries and the ephemeral contents of /usr/share/.&lt;/p&gt;
+&lt;p&gt;In this talk I'll discuss how Nix package manager can provide a complete dependency management solution for python projects on Linux and Mac. Nix can install and track exact, reproducible versions of python packages and their transitive dependencies including platform libraries, down to the compiler version that created them. No more guessing why your teammate can trigger a bug that you can't reproduce.&lt;/p&gt;
+&lt;p&gt;Nix can use this dependency info to quickly get new teammates up and running with a full development environment, no worries about the setup instructions being out of date or incompatible with their chosen OS flavor. Finally, Nix can build your project in a sealed build environment that prevents your project sneakily including files that haven't been declared as dependencies. You can then confidently deploy these builds as minimal docker images, VM images, or directly via nix package caches.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:20:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Thomas Woolford</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/a-sack-full-of-angry-snakes-taming-your-python-dependencies-with-nix.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ThomasWoolford</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>A website controlled Lego Robot using the Raspberry Pi</title><link>https://pyvideo.org/pycon-au-2020/a-website-controlled-lego-robot-using-the-raspberry-pi.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Brad Nielsen&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/TVFCVP"&gt;https://2020.pycon.org.au/program/TVFCVP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 11:00:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Brad Nielsen</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/a-website-controlled-lego-robot-using-the-raspberry-pi.html</guid><category>PyCon AU 2020</category><category>BradNielsen</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>All Hands on Deck – Handling Security Issues</title><link>https://pyvideo.org/pycon-au-2020/all-hands-on-deck-handling-security-issues.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Markus Holtermann&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/U9GBBD"&gt;https://2020.pycon.org.au/program/U9GBBD&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We live in a world of technology and engineering where almost everything around us requires software. Unfortunately, the software we use or build has bugs. While most bugs can &amp;quot;just&amp;quot; be fixed, there are these other types of bugs, called vulnerabilities. Vulnerabilities can be found in our own infrastructure, on customers' infrastructure, or — worse — around user data.&lt;/p&gt;
+&lt;p&gt;Sadly, we see reports of leaked personal data on a daily basis. And when it comes to the companies who just had data leaked, it is astounding how rattled and unprepared they are for the situation. In fact, a lot of companies are puzzled when someone external approaches them about a possible security issue publicly. They don't know how to react and often react in the worst possible way: denial. But it is also about issues that are found from within the company. Issues that may not directly affect personal information. There is more to do than telling customers there is a security release of some software.&lt;/p&gt;
+&lt;p&gt;IT security is a sheer endless topic to talk about. It is a mindset and a company culture that must be lived by each and everyone within a company. In this talk, I will point out what roles individual departments play. Because there are more questions to be answered than “how and when are customers informed about an issue and a corresponding solution”. Are details about the issue released, and if so, when, and will the details be released publicly or only to customers? How will a public outcry about an issue on social media be dealt with? Is the social media team equipped to handle the masses? Will the sales and marketing teams be able to handle a hesitant customers base? What legal implications does the issue have? Who coordinates, makes decisions, and stays on top all of these moving parts?&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 14:30:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Markus Holtermann</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/all-hands-on-deck-handling-security-issues.html</guid><category>PyCon AU 2020</category><category>MarkusHoltermann</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>At The Root : Wagtail + Gatsby + GitPod</title><link>https://pyvideo.org/pycon-au-2020/at-the-root-wagtail-gatsby-gitpod.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dawn Wages&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/KBXD9E"&gt;https://2020.pycon.org.au/program/KBXD9E&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Exploring if a GatsbyJS progressive web app generator frontend with a headless Wagtail backend could be a solution for small-sized clients and personal projects when I want to &amp;quot;whip something up&amp;quot; quickly without sacrificing design, performance/hosting costs, user or site editor experience (Can I have it all)? Gatsby (&lt;a class="reference external" href="https://www.gatsbyjs.org/"&gt;https://www.gatsbyjs.org/&lt;/a&gt;) is a open source framework based on React. Wagtail (&lt;a class="reference external" href="https://wagtail.io/"&gt;https://wagtail.io/&lt;/a&gt;) is a Django CMS with LOTS of cool features for content creators, and &amp;quot;plays nicely with everything else in your tech stack&amp;quot; (source: Wagtail) because its built on and easily integrates with all uses of Python.&lt;/p&gt;
+&lt;p&gt;Why? Not only do I enjoy the new and shiny things as a consultant, both Wagtail and GatsbyJS are established frameworks and active communities that put considerable effort in providing a great product with a smooth developer experience. We enjoy the benefits of Django / Wagtail CMS, with a incredibly fast pre-fetched progressive web app with GatsbyJS. The goal is nice, fast and fun.&lt;/p&gt;
+&lt;p&gt;I am approaching this talk by walking through how I started out with minimal experience with GatsbyJS or GraphQL, and moderate experience with React and headless Wagtail to creating and deploying (Netlify) this app. I am not an expert in either technology, but was able to quickly navigate getting started as well as identify lots of resources in both communities to build out in a more complex experience.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 10:25:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dawn Wages</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/at-the-root-wagtail-gatsby-gitpod.html</guid><category>PyCon AU 2020</category><category>DawnWages</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Biometric Unsecurity</title><link>https://pyvideo.org/pycon-au-2020/biometric-unsecurity.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Carina C. Zona&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/9L3NTY"&gt;https://2020.pycon.org.au/program/9L3NTY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Examples are drawn from a globally geographically diverse range of areas.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 10:25:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Carina C. Zona</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/biometric-unsecurity.html</guid><category>PyCon AU 2020</category><category>CarinaC.Zona</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Build your own data warehouse for personal analytics with SQLite and Datasette</title><link>https://pyvideo.org/pycon-au-2020/build-your-own-data-warehouse-for-personal-analytics-with-sqlite-and-datasette.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Simon Willison&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/73UK8X"&gt;https://2020.pycon.org.au/program/73UK8X&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Many data enthusiasts dream of analyzing their own personal data, but few find time to build their own pipeline for it. This talk will show you how to get started with personal analytics with the highest possible return on your invested effort.&lt;/p&gt;
+&lt;p&gt;SQLite is the ideal tool for building a personal data analysis pipeline: it's free, fast and widely supported. Each database is a single file on disk, so you don't need to set up a database server to start using it. Tools that import data into SQLite can be written in any programming language, and its JSON support means it can even ingest data that may not fit neatly in a standard relational database table.&lt;/p&gt;
+&lt;p&gt;Datasette is a Python application that provides an interface over SQLite. It lets you bookmark and queries in your browser and export the results as JSON and CSV. The Datasette plugin ecosystem has over 30 plugins that extend Datasette in different ways, adding visualization tools, alternative export formats and more.&lt;/p&gt;
+&lt;p&gt;I'll show how to combine SQLite, Datasette and some simple Python scripts to ingest personal data from multiple different sources and build a personal data warehouse for your digital life. Data sources will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Apple Photos&lt;/li&gt;
+&lt;li&gt;LinkedIn&lt;/li&gt;
+&lt;li&gt;Google (via Google Takeout)&lt;/li&gt;
+&lt;li&gt;Foursquare / Swarm&lt;/li&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;li&gt;Apple Health&lt;/li&gt;
+&lt;li&gt;23AndMe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Techniques that work for an individual can work for organizations too. I'll finish by showing how this approach to working with data can scale up to solving professional problems in addition to personal analytics.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 16:00:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Simon Willison</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/build-your-own-data-warehouse-for-personal-analytics-with-sqlite-and-datasette.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SimonWillison</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Can you keep a secret?</title><link>https://pyvideo.org/pycon-au-2020/can-you-keep-a-secret.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Aaron Bassett&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/UKBKTR"&gt;https://2020.pycon.org.au/program/UKBKTR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We've all been guilty of hard-coding secrets at some point. It's just a quick hack, and you'll definitely go back and tidy it up later. But then you forget, and it's all too easy to &lt;cite&gt;git push&lt;/cite&gt; your API keys to GitHub.&lt;/p&gt;
+&lt;p&gt;This easy to make mistake could end up [costing you thousands of dollars](&lt;a class="reference external" href="https://dev.to/juanmanuelramallo/i-was-billed-for-14k-usd-on-amazon-web-services-17fn"&gt;https://dev.to/juanmanuelramallo/i-was-billed-for-14k-usd-on-amazon-web-services-17fn&lt;/a&gt;), and with the [median time to discovery for a secret key leaked to GitHub being 20 seconds](&lt;a class="reference external" href="https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04B-3_Meli_paper.pdf"&gt;https://www.ndss-symposium.org/wp-content/uploads/2019/02/ndss2019_04B-3_Meli_paper.pdf&lt;/a&gt;) you could end up compromised before you have a chance to correct your error.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll look at techniques that you can use personally and within your development teams to properly store, share, and manage your secrets, as easily as possible, and most importantly without disrupting your workflow.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 12:45:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Aaron Bassett</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/can-you-keep-a-secret.html</guid><category>PyCon AU 2020</category><category>AaronBassett</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Cracking open the COVIDSafe</title><link>https://pyvideo.org/pycon-au-2020/cracking-open-the-covidsafe.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Yaakov Smith&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/URD9ER"&gt;https://2020.pycon.org.au/program/URD9ER&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As health authorities raced against the clock to restrict the spread of the Novel Coronavirus, bringing cities to a standstill, software developers too were racing to build a technological innovation. Their solution was ⁎✧˚₊ an app ༚⁎✧⁺  that would mystically allow you once again to go to the footy, hang out in pubs, return to work, and re-open the economy.&lt;/p&gt;
+&lt;p&gt;With the Australian Government running an unprecedented campaign to get as many people as possible to download their particular app, what this app actually does is still widely misunderstood. Furthermore, the app is somehow supposed to be safe and protect your privacy, whilst still being useful enough to track you and provide that information to medical contact tracers. How can that even work?&lt;/p&gt;
+&lt;p&gt;In this talk we will:
+‹ul›
+‹li›discover what contact-tracing is and why it is vital to curb the spread of the coronavirus‹/li›
+‹li›explore how technology can be used to assist in the contact-tracing process‹/li›
+‹li›analyze the COVIDSafe mobile apps for iOS and Android,‹/li›
+‹li›discuss why you should, or shouldn’t, install COVIDSafe, and how contact-tracing apps try to balance personal security and privacy with the health needs of the greater community‹/li›
+‹/ul›&lt;/p&gt;
+&lt;p&gt;Those who attend this talk will learn about bluetooth-assisted contact tracing, exposure notification, and the shiny new new COVID-19 settings on their mobile phone&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:50:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yaakov Smith</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/cracking-open-the-covidsafe.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>YaakovSmith</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Deceptive Security using Python</title><link>https://pyvideo.org/pycon-au-2020/deceptive-security-using-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gajendra Deshpande&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/GGGTVY"&gt;https://2020.pycon.org.au/program/GGGTVY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Imagine you are passing through an unknown street at midnight and you find that some anti-social elements are following you. To save yourself from them you start running and look for a safe place to hide yourself. On the way, you will find a good person and request the person to help you. The person hides you in the secure place to protect you. When these anti-social elements visit a good person’s place and enquire about you, the good person misguides them and redirects them to some other place in order to protect you. This is exactly how deception works. In this analogy, YOU are the resources to be protected, anti-social elements are the hackers who want to gain access to the resources, and a good person is a deception technique that protects the resources from hackers by making them fall in the trap.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How we implemented deception tool in python using machine learning&lt;/strong&gt;
+We designed a deception tool in python language using PyBRAIN package to model and mitigate XPath injection attacks for web services. It is known that XML can be used to store the data and this data can be queried using XPath query language. XPath as a query language, it has injection issues similar to SQL. To handle this issue, we proposed a solution, which uses count-based validation technique and Long Short-Term Memory (LSTM) modular neural networks to identify and classify atypical behavior in user input. Once the atypical user input is identified, the attacker is redirected to fake resources to protect the critical data. Our experiment resulted in over 90% accuracy in classification of input vectors.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:20:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gajendra Deshpande</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/deceptive-security-using-python.html</guid><category>PyCon AU 2020</category><category>GajendraDeshpande</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Decoding: programming beyond text files</title><link>https://pyvideo.org/pycon-au-2020/decoding-programming-beyond-text-files.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nick Moore&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/LYRJGY"&gt;https://2020.pycon.org.au/program/LYRJGY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We'll explore the history of typewriters and find homoiconicity where you might not
+be expecting it.&lt;/p&gt;
+&lt;p&gt;We'll talk about structured data and explore the early visions of hypertext.&lt;/p&gt;
+&lt;p&gt;We'll look at some specific examples of unusual programming environments
+and consider how a fresh look at these ideas can be applied to modern development.&lt;/p&gt;
+&lt;p&gt;And finally we'll consider what a difference this could make to the work of programming.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:00:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nick Moore</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/decoding-programming-beyond-text-files.html</guid><category>PyCon AU 2020</category><category>NickMoore</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Engineers to Data-Scientists with Python</title><link>https://pyvideo.org/pycon-au-2020/engineers-to-data-scientists-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;James Schulte&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/BAC9R3"&gt;https://2020.pycon.org.au/program/BAC9R3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk centers around an early stage start-up reaching the scale-up phase of growth and having to move from an ad-hoc collection of MATLAB scripts to a functioning Python analysis pipeline. All while transforming a team of mechanical engineers into a functioning software engineering and data-science team.&lt;/p&gt;
+&lt;p&gt;I will paint a picture of the work we do, and how the product was first created - including the wild selection of technologies, before talking about some of the challenges faced in migrating a large monolithic product to a modular codebase. I’ll discuss some the advantages and pitfalls of using Python, and how we trained non-software engineers to produce quality code.&lt;/p&gt;
+&lt;p&gt;The talk has something for everyone, whether you’re a tech-lead responsible for training &amp;amp; developing your team, a business leader in a scaling startup, or a junior engineer thinking about how to improve.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:00:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">James Schulte</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/engineers-to-data-scientists-with-python.html</guid><category>PyCon AU 2020</category><category>JamesSchulte</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Ensemble-X: Your personal strataGEM to build Ensembled Deep Learning Models for Medical Imaging</title><link>https://pyvideo.org/pycon-au-2020/ensemble-x-your-personal-stratagem-to-build-ensembled-deep-learning-models-for-medical-imaging.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dipam Paul, Alankrita Tewari&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DUGUZZ"&gt;https://2020.pycon.org.au/program/DUGUZZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Almost every individual today in the field of Data Science would know about the concept of Ensemble Learning in ML (ideally, the last chapter we read in the Machine Learning pedagogy). However, it is to also note that very few literatures exists to ensemble Deep Neural Architectures. Therefore, this is where we step forward and propose an approach to solve (almost) any medical imaging problem with the means of our Ensemble approach. Our approach does not just &amp;quot;solve&amp;quot; medical imaging problems but help practitioners to build unique and seamless architectures that almost never goes wrong (at least, not on your good days).&lt;/p&gt;
+&lt;p&gt;Why use an Ensemble at all?&lt;/p&gt;
+&lt;p&gt;In this section, I will try to anticipate the common notions one would have while reading this proposal and try to address the same in advance.&lt;/p&gt;
+&lt;p&gt;Of course, there are brilliant pre-trained architectures available and building up a custom CNN architecture takes seconds today, right? Then, why take the extra headache of combining architectures after all?&lt;/p&gt;
+&lt;p&gt;I wanted to give you a solid reason why then I thought I'll give you three:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Attaining state-of-the-art accuracy:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To elucidate on this, let's recall a very famous (or, infamous) chapter from our old books on Elementary Statistics that is - Central Limit Theorem. This theorem gives us two very important implications:&lt;/p&gt;
+&lt;p&gt;There are two big implications of the Central Limit theorem:&lt;/p&gt;
+&lt;p&gt;Ensembles of many random processes/variables converge to Gaussian distributions. That’s why normal distributions are everywhere.
+When adding together random numbers, the variance of the sum is the sum of the variances of those numbers.
+Which, in the essence of Machine/Deep Learning, translates to the fact that when we combine n (number of) architectures together then the combined architecture let's say, x will at all times produce better performance or results on standard metrics that every individual model in the n-cluster of models.&lt;/p&gt;
+&lt;p&gt;A slight limitation:&lt;/p&gt;
+&lt;p&gt;Central Limit Theorem also states that no matter how many models one tries to Ensemble one can never reach the accuracy of 1 (or, 100).&lt;/p&gt;
+&lt;p&gt;But that's alright, I believe. We don't need to attain a full 100% accuracy to prove the reliability of a model, do we?&lt;/p&gt;
+&lt;p&gt;Furthermore, we have proven this hypothesis of ours of attaining state-of-the-art accuracy in our published works with regards to the same. Kindly, refer.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Model Diversity:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is arguably the most important contribution of ours out of all three which gives an indication of the reliability of our approach. Our experiments (which are also included in our papers) also goes on to show how well the architecture performs on external unseen examples - images which are not even part of the dataset.&lt;/p&gt;
+&lt;p&gt;Why is this important?&lt;/p&gt;
+&lt;p&gt;Elementary. We are dealing with Medical data where there is a plethora of possibilities, complications and unique cases. Hence, we can NEVER be too sure. Therefore, this was one of the most instrumental steps we had to set in motion in order to know if it's actually working or not.&lt;/p&gt;
+&lt;p&gt;Future tangible implementation scope: Mobile App or Web App to be used in Clinics and Hospitals.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Tackling the problem of Model Over-fitting:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In this contribution, we try to mitigate the problem of over-fitting to the greatest extent possible WITHOUT employing techniques such as Cross-Validation. The reason behind taking the entire dataset at once is very simple: Let's say you are dealing with a Binary-Class data with a huge class imbalance problem. Cross-Validation will not let you manually select the number of images that goes into each split that you make from each individual classes. It is also important to mention that the randomisation process ain't so bad altogether however, there's always room for improvements and alternate doors can also lead to better destinations.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:00:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alankrita Tewari</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/ensemble-x-your-personal-stratagem-to-build-ensembled-deep-learning-models-for-medical-imaging.html</guid><category>PyCon AU 2020</category><category>AlankritaTewari</category><category>DipamPaul</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Ensuring Black voices matter: Why your voice assistant is racist, and what we can do about it</title><link>https://pyvideo.org/pycon-au-2020/ensuring-black-voices-matter-why-your-voice-assistant-is-racist-and-what-we-can-do-about-it.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kathy Reid&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/99XMUR"&gt;https://2020.pycon.org.au/program/99XMUR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By 2025, there will be over 8 million voice assistants in the world. They are found on your mobile phone, in your home, in your car, and over time, will be embedded in many cyber-physical systems across the world. At the same time, there are over 7000 languages spoken in the world - &amp;quot;living languages&amp;quot;.&lt;/p&gt;
+&lt;p&gt;But voice assistants support just a fraction of these languages. Moreover, accents and diversity within a spoken language are not well handled by voice assistants. For example, African American voices are much less likely to be correctly recognised by the speech recognition algorithms used within voice assistants. And as we start to interact with systems using voice, we have a human desire to listen to voices we resonate with. Voices like us. For many people, there are no synthesised voices that reflect their heritage, language, and gender expression.&lt;/p&gt;
+&lt;p&gt;There are several techno-social reasons behind this state of affairs.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The intent of a commercial voice assistant is to make money. This drives technical development in certain ways, such as certain languages being seen as more lucrative than others, irrespective of the number of speakers of that language. For example, there is more voice assistant support for Icelandic, a language spoken by 314,000 people, than there is for Kiswahili, a language spoken by over 100,000,000 people in Eastern Africa. Why? Money.&lt;/li&gt;
+&lt;li&gt;The big tech companies behind voice assistants have typically poor gender and racial diversity in their talent pool. Diversity in developers leads to diversity in development.&lt;/li&gt;
+&lt;li&gt;The data used for training speech recognition and speech synthesis models often has racial and gender biases. These can stem from both selection bias, but also broader systemic issues of inequality, such as the use of voice assistant technology to gather data - and the affordability of both that technology and its pre-requisites, such as internet access.&lt;/li&gt;
+&lt;li&gt;Many languages are considered &amp;quot;low resource languages&amp;quot;. This means they often don't have written transcriptions, which are needed to train machine learning models. Those creating transcriptions often face the &amp;quot;transcription bottleneck&amp;quot; - a workflow impediment that means the creation of resources consumes significant labour time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There are many established and emerging open source tools - many in Python - and movements that individually are addressing aspects of this broader techno-social system. &lt;strong&gt;Together&lt;/strong&gt;, they can effect change so that everyone, everywhere can be afforded the benefits of voice technology.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub%5Fconfirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub%5Fconfirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:05:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kathy Reid</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/ensuring-black-voices-matter-why-your-voice-assistant-is-racist-and-what-we-can-do-about-it.html</guid><category>PyCon AU 2020</category><category>KathyReid</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>geospatial data and analysis is :exploding_head:</title><link>https://pyvideo.org/pycon-au-2020/geospatial-data-and-analysis-is-exploding_head.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Gala&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/QJTSEP"&gt;https://2020.pycon.org.au/program/QJTSEP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here is my top level summary:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;its hard for everyone, you are not alone.&lt;/li&gt;
+&lt;li&gt;snacks:
+- points, lines and polygons
+- projections (scream quietly into the void)
+- WKT
+- file types
+- &amp;quot;simple&amp;quot; calculations&lt;/li&gt;
+&lt;li&gt;pantry:
+- libraries
+- useful stuff on the internet
+- quick wins
+- other software
+- debugging&lt;/li&gt;
+&lt;li&gt;dinner:
+- interesting problems
+- other fun things&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub%5Fconfirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub%5Fconfirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:50:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gala</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/geospatial-data-and-analysis-is-exploding_head.html</guid><category>PyCon AU 2020</category><category>Gala</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Getting Over the Boring Stuff Quicker - Building a Semi-Automated Speech Audio Annotation Tool</title><link>https://pyvideo.org/pycon-au-2020/getting-over-the-boring-stuff-quicker-building-a-semi-automated-speech-audio-annotation-tool.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Xin Liang&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/MQWLLM"&gt;https://2020.pycon.org.au/program/MQWLLM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:35:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Xin Liang</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/getting-over-the-boring-stuff-quicker-building-a-semi-automated-speech-audio-annotation-tool.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>XinLiang</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>GitHub Actions &amp; Python</title><link>https://pyvideo.org/pycon-au-2020/github-actions-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jack McKew&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/MRUT7W"&gt;https://2020.pycon.org.au/program/MRUT7W&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Actions are free-to-use, plug &amp;amp; play blocks of continuous integration / continuous delivery (CICD).&lt;/p&gt;
+&lt;p&gt;This talk will go into how GitHub actions help me maintain my open source Python packages (Pandas_Alive), and how I released my own GitHub Actions for automating the packaging of Python code to executables with PyInstaller.&lt;/p&gt;
+&lt;p&gt;Tutorial blog posts I've written:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://jackmckew.dev/github-actions-for-cicd.html"&gt;https://jackmckew.dev/github-actions-for-cicd.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://jackmckew.dev/how-to-make-github-actions.html"&gt;https://jackmckew.dev/how-to-make-github-actions.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Actions I've released:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/marketplace/actions/pyinstaller-windows"&gt;https://github.com/marketplace/actions/pyinstaller-windows&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/marketplace/actions/pyinstaller-linux"&gt;https://github.com/marketplace/actions/pyinstaller-linux&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/marketplace/actions/python-interrogate-check"&gt;https://github.com/marketplace/actions/python-interrogate-check&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Open source Python projects that GitHub actions help me maintain:&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/JackMcKew/pandas_alive"&gt;https://github.com/JackMcKew/pandas_alive&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk has a brief mention of animated graphs to do with the COVID-19 pandemic.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:35:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack McKew</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/github-actions-python.html</guid><category>PyCon AU 2020</category><category>JackMcKew</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Graph Databases will change your (freakin') life</title><link>https://pyvideo.org/pycon-au-2020/graph-databases-will-change-your-freakin-life.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Elena Williams&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/A878CA"&gt;https://2020.pycon.org.au/program/A878CA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Relational and NoSQL DBs have ruled the roost for a couple of decades now, but in real life there's more to data than just tables or key-pairs. Graph DBMS technology has been coming along for the last decade-or-so and is now quite mature. Everyone wants one, just ask a Fortune 500 company.&lt;/p&gt;
+&lt;p&gt;I mean: why have a table when you can have a knowledge graph? Why not be able to whip up a recommendations engine (or indeed a fraud detector) in a few minutes?&lt;/p&gt;
+&lt;p&gt;Graph databases store data in Graphs -- that is NOT chart-visualisation nor syntax standard on API layers (NOT a GraphQL talk), but per the paper written by the mathematician Euler in 1736: those data structures which are &amp;quot;nodes&amp;quot; connected by &amp;quot;relationships&amp;quot;.&lt;/p&gt;
+&lt;p&gt;This talk will be a primer on what this all means, how they work and when they're a good idea to use. There will also be a demonstration and discussion about how to kick off with graph DBs driven by python, specifically for people who are familiar with conventional databases, but have never used Graph databases before, but might be curious.&lt;/p&gt;
+&lt;p&gt;See code sample: &lt;a class="reference external" href="https://github.com/elena/graph-fun"&gt;https://github.com/elena/graph-fun&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:05:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Elena Williams</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/graph-databases-will-change-your-freakin-life.html</guid><category>PyCon AU 2020</category><category>ElenaWilliams</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Hacking Playable Ads: What REALLY are they?</title><link>https://pyvideo.org/pycon-au-2020/hacking-playable-ads-what-really-are-they.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Evan Kohilas&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/8TA7ZA"&gt;https://2020.pycon.org.au/program/8TA7ZA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Have you ever clicked the &lt;em&gt;FREE GEMS&lt;/em&gt; button and been served an ad, only to find you're now trialing a game?&lt;/p&gt;
+&lt;p&gt;What are they? Are they running code?
+If they are, can we hijack them?
+If we can't, can we bypass, or even replace them?&lt;/p&gt;
+&lt;p&gt;And more importantly, what are they actually doing?
+Are you really playing a game? Or are they bitcoin miners in disguise?&lt;/p&gt;
+&lt;p&gt;Come along and join my adventurous curiosity as we learn to man in the middle these ads and discover what they're really about!&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:55:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Evan Kohilas</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/hacking-playable-ads-what-really-are-they.html</guid><category>PyCon AU 2020</category><category>EvanKohilas</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>How a major museum runs on Python</title><link>https://pyvideo.org/pycon-au-2020/how-a-major-museum-runs-on-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Greg Turner, Ali Haberfield, Simon Loffler&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/UKZXNT"&gt;https://2020.pycon.org.au/program/UKZXNT&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ACMI, the Australian Centre for the Moving Image, is the most visited museum of the moving image in the world. In 2019 we closed our doors, to reshape our Federation Square building in order to become more public-facing, and to house a major new permanent exhibition, The Story of the Moving Image.&lt;/p&gt;
+&lt;p&gt;As you might imagine, we have a &lt;em&gt;lot&lt;/em&gt; of moving image to show, and a lot of fascinating objects to tell people about, all of which can be overwhelming to some audiences. That's why we designed and built a system called The Lens. Every visitor to the museum can pick up a Lens, which they use to collect objects and media to watch and explore in their own time. The Lens depends on a network of hundreds of Raspberry Pi devices to display media and interact with visitors, all running Opensourced Python code. All these devices need to be robust and maintainable in order to survive the 10-year lifespan of the exhibition.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll give you a tour of the technology at ACMI, including our Internet-of-Things fleet and management tools, and XOS, the eXperience Operating System, which provides content and configuration to the devices.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:35:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Greg Turner</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/how-a-major-museum-runs-on-python.html</guid><category>PyCon AU 2020</category><category>AliHaberfield</category><category>GregTurner</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SimonLoffler</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>How learning python helped me teach C in tertiary education</title><link>https://pyvideo.org/pycon-au-2020/how-learning-python-helped-me-teach-c-in-tertiary-education.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shrey Somaiya&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/73HFNJ"&gt;https://2020.pycon.org.au/program/73HFNJ&lt;/a&gt;&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;This talk is simply one about my experience of learning C from a python background&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;what python features helped me understand C better (control flow, algorithm and problem breakdown design, functions, etc)&lt;/li&gt;
+&lt;li&gt;what C features helped me understand python better (ie pointers in C helped me understand python lists, etc)&lt;/li&gt;
+&lt;li&gt;how I use my python knowledge to teach C at University&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 10:25:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shrey Somaiya</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/how-learning-python-helped-me-teach-c-in-tertiary-education.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ShreySomaiya</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>I don't need friends, I can build my own</title><link>https://pyvideo.org/pycon-au-2020/i-dont-need-friends-i-can-build-my-own.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarah Levins&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/E9AXJE"&gt;https://2020.pycon.org.au/program/E9AXJE&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Chatbots have become commonplace in our lives. These days, you may find they are largely used as a form of customer service. But how does it make us feel when we know we’re talking to a program? A poor interaction can sour the user’s experience and put them off using a product.&lt;/p&gt;
+&lt;p&gt;There is an art to making programmed responses feel natural. It’s not just about replying to our questions with the correct answer. Chatbots need to be programmed with the same abilities humans have to communicate. They need to be able to listen, understand and remember. This gives them the context of the conversation. So where do you start?&lt;/p&gt;
+&lt;p&gt;In this talk i’ll cover some of the core concepts behind how web chatbots work, strategies used to train them to feel more human, and some Python tools that you can use to start building your own.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:00:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sarah Levins</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/i-dont-need-friends-i-can-build-my-own.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SarahLevins</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Interactive Mapmaking with Python</title><link>https://pyvideo.org/pycon-au-2020/interactive-mapmaking-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sangarshanan&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DVV7W8"&gt;https://2020.pycon.org.au/program/DVV7W8&lt;/a&gt;&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Introduction (2 mins)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Who am I?&lt;/li&gt;
+&lt;li&gt;Setting the expectations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Working with Geodataframes (5 mins)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Reading Spatial data as a GeoDataframe&lt;/li&gt;
+&lt;li&gt;The awesomeness of GeoDataframes (An overview of some of the amazing things you can do with a single line of code eg: Spatial joins, Manipulations and transformations)&lt;/li&gt;
+&lt;li&gt;Now that we has established our love for geopandas lets map geodataframes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Let the Mapmaking begin (10 mins)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Basic Non-Interactive maps with Geopandas and Matplotlib&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Creating basic interactive maps with Folium, Plotly &amp;amp; Kepler (GeoJSONPlots, Clustermaps, Heatmaps, H3gridmaps)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Conforming geodataframes to a format accepted by these libraries (usually JSON or a list of lists)&lt;/li&gt;
+&lt;li&gt;Setting the right parameters for different plots&lt;/li&gt;
+&lt;li&gt;Jazzing up the maps with additional layers, custom styles, tooltips, popups, colors etc&lt;/li&gt;
+&lt;li&gt;Spatiotemporal Maps with Kepler.gl + Jupyter for handling huge datasets with ease&lt;/li&gt;
+&lt;li&gt;Can we make it any easier ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;Why can't making interactive maps be as easy as gdf.folium.plot()?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Enter Geopatra (8 mins)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;The need for Geopatra (Could it be any Easier and Faster)&lt;/li&gt;
+&lt;li&gt;Wrapping up popular mapmaking libraries for GeoDataframes&lt;/li&gt;
+&lt;li&gt;Create interactive maps with just a single line&lt;/li&gt;
+&lt;li&gt;Future work and Discussion :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Github: &lt;a class="reference external" href="https://github.com/Sangarshanan/geopatra"&gt;https://github.com/Sangarshanan/geopatra&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 17:10:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sangarshanan</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/interactive-mapmaking-with-python.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>Sangarshanan</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Introducing Lambda Calculus with Python</title><link>https://pyvideo.org/pycon-au-2020/introducing-lambda-calculus-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Indranil Ghosh&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/AL8WB3"&gt;https://2020.pycon.org.au/program/AL8WB3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We will be focusing on untyped lambda calculus and start by the simple definition of a function, that can be implemented with Python lambda. We will then discuss the concepts of &lt;strong&gt;abstraction&lt;/strong&gt; and &lt;strong&gt;application&lt;/strong&gt; in lambda calculus and then move on to understand what a &lt;strong&gt;substitution&lt;/strong&gt; is and how can these be implemented in Python. We will finally study some combinators which are the basic building blocks of combinatory logic, before ending with encoding datatypes in lambda calculus and implementing the same with Python lambda. Datatypes we will be discussing are:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Boolean values like TRUE and FALSE&lt;/li&gt;
+&lt;li&gt;Logical operators like AND, OR and NOT&lt;/li&gt;
+&lt;li&gt;Church Numerals&lt;/li&gt;
+&lt;li&gt;Predicates&lt;/li&gt;
+&lt;li&gt;Recursions&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:40:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Indranil Ghosh</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/introducing-lambda-calculus-with-python.html</guid><category>PyCon AU 2020</category><category>IndranilGhosh</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Journey into the Deep World of Web Development</title><link>https://pyvideo.org/pycon-au-2020/journey-into-the-deep-world-of-web-development.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andrew Kim&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/RMY7LZ"&gt;https://2020.pycon.org.au/program/RMY7LZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Are you from a non-tech industry but want to learn web development? Have you tried doing the official Django tutorial and had no idea what was going on?&lt;/p&gt;
+&lt;p&gt;This talk is a story about how I learnt Django and Python coming from a non-tech industry, during the COVID-19 pandemic. I will cover tips for beginners on how best to get started with Django and Python.&lt;/p&gt;
+&lt;p&gt;I will be sharing about mistakes that I made, resources that I found useful, and how I created connections both online and offline.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 16:00:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Kim</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/journey-into-the-deep-world-of-web-development.html</guid><category>PyCon AU 2020</category><category>AndrewKim</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Making Codebases Easier to Learn and Maintain</title><link>https://pyvideo.org/pycon-au-2020/making-codebases-easier-to-learn-and-maintain.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tennessee Leeuwenburg&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/AT33MZ"&gt;https://2020.pycon.org.au/program/AT33MZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Learning a new codebase, returning to an old one, or exploring a new part of a system can sometimes be harder than it needs to be. This talk outlines tips and tricks for writing code that is both easier to maintain and easier for other people to learn.&lt;/p&gt;
+&lt;p&gt;Topics covered will include:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Documentation: both written and in-code&lt;/li&gt;
+&lt;li&gt;Structure: how to organise code for readability and easy re-use&lt;/li&gt;
+&lt;li&gt;Expression: how to improve comprehensibility of code&lt;/li&gt;
+&lt;li&gt;Tests: how to maximise their usefulness&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:05:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tennessee Leeuwenburg</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/making-codebases-easier-to-learn-and-maintain.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>TennesseeLeeuwenburg</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Model Selection with Python: An Introduction to Hyper Parameter Tuning</title><link>https://pyvideo.org/pycon-au-2020/model-selection-with-python-an-introduction-to-hyper-parameter-tuning.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Patrick Robotham&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/LYBU8S"&gt;https://2020.pycon.org.au/program/LYBU8S&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The world of machine learning is like a restaurant that presents an incredibly complex menu. There are so many choices for modelling algorithms and settings that it's hard to keep up.  This talk discusses strategies for handling these choices in a principled, simple manner.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 14:30:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Patrick Robotham</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/model-selection-with-python-an-introduction-to-hyper-parameter-tuning.html</guid><category>PyCon AU 2020</category><category>PatrickRobotham</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Of Django, PostgreSQL schemas, and your multi-million dollar idea</title><link>https://pyvideo.org/pycon-au-2020/of-django-postgresql-schemas-and-your-multi-million-dollar-idea.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lorenzo Peña&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/CRSJXF"&gt;https://2020.pycon.org.au/program/CRSJXF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Although rough for the world, 2020 is proving a good year (and decade start) for Django. Boring batteries-included frameworks and established monolith makers are shining again, in a world where the hype-enchantment of JavaScript and micro-everything is starting to wear off and fall into a more mature position of tradeoffs. After 15 years of life, Django continues to prove solid, battle tested, and very capable of major undertakings in the web arena.&lt;/p&gt;
+&lt;p&gt;Over the last decade, the competence of the framework has extended to the SaaS world, through a number of packages that have emerged as viable options for making Django multi-tenant. PostgreSQL concept of _schemas_ has opened a new exploration space for multi-tenancy, by combining the power of RDBMS native isolation with the reduced costs of managing a single database.&lt;/p&gt;
+&lt;p&gt;However, nothing comes for free. The ease of using PostgreSQL schemas for multi-tenancy in Django comes at the expense of some challenges that must be overcome in the short, medium, and long term, if the project seeks to survive while gracefully escaling to success.&lt;/p&gt;
+&lt;p&gt;In this talk we will cover the major challenges of doing multi-tenancy in Django through PostgreSQL schemas. You will learn the pros and cons of the approach as you move from tutorial-grade projects to massive multi-tenant behemoths. By the end, you will be able to answer whether or not this is going to be a feasible approach for your next multi-million dollar idea.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 17:45:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lorenzo Peña</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/of-django-postgresql-schemas-and-your-multi-million-dollar-idea.html</guid><category>PyCon AU 2020</category><category>LorenzoPeña</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Oh no! I think my project is outgrowing my Jupyter notebook. How do I survive?</title><link>https://pyvideo.org/pycon-au-2020/oh-no-i-think-my-project-is-outgrowing-my-jupyter-notebook-how-do-i-survive.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lydia Peabody&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/BAAES3"&gt;https://2020.pycon.org.au/program/BAAES3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;An example-focused discussion of the pitfalls and strengths of interactive Python notebooks. Topics up for discussion:
+Namespace pollution - what is it and why do I care?
+Speed - when might my notebook be holding me back?
+Pretty pictures - are there times when even for visuals I might skip the notebook?
+Transitions - I’m so comfortable using my notebook. How do I change in useful ways without grinding to a halt?
+Functional combinations - can there be a happy middle ground between notebooks and scripts?&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 11:00:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lydia Peabody</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/oh-no-i-think-my-project-is-outgrowing-my-jupyter-notebook-how-do-i-survive.html</guid><category>PyCon AU 2020</category><category>LydiaPeabody</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>On a shoe-string and a t2.small: scaling on a [zero] budget.</title><link>https://pyvideo.org/pycon-au-2020/on-a-shoe-string-and-a-t2small-scaling-on-a-zero-budget.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tom Eastman&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/CNNG8R"&gt;https://2020.pycon.org.au/program/CNNG8R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When you work for a company, you probably have a decent-sized infrastructure budget. And when you're building a Django project, you have a lot of scope for scaling it up: Add more gunicorn workers! Split the async task workers into their own servers! Quadruple the RAM of the database instance! Beef up your Elasticache!&lt;/p&gt;
+&lt;p&gt;Okay, but what if you can't just throw your employers' money at it? What if, to keep your side project affordable, you bought a reserved instance for it just a week before it started to go viral? What if the number of users starts going up 50% per week and... doesn't... stop...&lt;/p&gt;
+&lt;p&gt;You're gonna have to get clever.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 14:30:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tom Eastman</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/on-a-shoe-string-and-a-t2small-scaling-on-a-zero-budget.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>TomEastman</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Oops! I Became an Open Source Maintainer! 😱</title><link>https://pyvideo.org/pycon-au-2020/oops-i-became-an-open-source-maintainer.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Mariatta&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/JZW83Q"&gt;https://2020.pycon.org.au/program/JZW83Q&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:15:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mariatta</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/oops-i-became-an-open-source-maintainer.html</guid><category>PyCon AU 2020</category><category>Mariatta</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Opening Keynote: MirrorWorld</title><link>https://pyvideo.org/pycon-au-2020/opening-keynote-mirrorworld.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Heidi Waterhouse&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/WAY9J7"&gt;https://2020.pycon.org.au/program/WAY9J7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk is for anyone who feels alone, sitting in front of a monitor, with a mask hung on the door to the outside. Technology can't solve all our problems, and we shouldn't try, but the collective action of aligned communities can change the world. What has the Python community done, and what can we work on doing next? Where should we spend our resources, and how should we agree on priorities? What is investing in our present and what is for our future?&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 09:25:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Heidi Waterhouse</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/opening-keynote-mirrorworld.html</guid><category>PyCon AU 2020</category><category>HeidiWaterhouse</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Outbreak Outreach - How COVID broke our program for the better</title><link>https://pyvideo.org/pycon-au-2020/outbreak-outreach-how-covid-broke-our-program-for-the-better.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Renee Noble&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/J9P8FY"&gt;https://2020.pycon.org.au/program/J9P8FY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Girls’ Programming Network has a well tested-formula for creating communities of girls and women centred around a passion for coding. But when pandemic strikes, is maintaining communities based around connecting with hundreds of like-minded people even possible? Is it even possible to run an online event that upholds our values? And will kids even want to sign up for more hours of online learning?&lt;/p&gt;
+&lt;p&gt;I’ll take you through how we devised a plan to keep the GPN spirit alive online, with a dynamic schedule of learning, socialising and fun! I’ll show you the tech that made it all possible, tell you the lessons we learnt along the way, and let you in on some of the things we’ll be keeping in the long term.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:15:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Renee Noble</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/outbreak-outreach-how-covid-broke-our-program-for-the-better.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ReneeNoble</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Panel Discussion: Ethical AI - From talk to practice</title><link>https://pyvideo.org/pycon-au-2020/panel-discussion-ethical-ai-from-talk-to-practice.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nigel Dalton, Fiona Milne, Arna Karick, Lizzie Silver&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/FNTEDL"&gt;https://2020.pycon.org.au/program/FNTEDL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;As the fabric of civic infrastructure becomes increasingly digitised and data-driven, and our lives are nudged in the direction of what is presented as optimal many times a day, there is an increasing awareness of the importance of ethical AI. Issues that have been called out in particular are: data privacy, the harm that algorithmic bias can have, and the negative repercussions of unchecked recommendation systems blindly maximising engagement.&lt;/p&gt;
+&lt;p&gt;That ethical AI has become part of the discourse of data and AI is a positive sign, but how do we move from just talk? Who is responsible? What can you do about these issues?&lt;/p&gt;
+&lt;p&gt;In this moderated panel, we'll hear from three experienced data science practitioners on how these issues play out in their professional lives, as well as their perspectives on how we can actively work towards more ethical AI.&lt;/p&gt;
+&lt;p&gt;We hope this discussion will provide a valuable backdrop upon which to reflect throughout the rest of the day as we cover a range of exciting topics in science, data, and analytics.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:15:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">From talk to practice</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/panel-discussion-ethical-ai-from-talk-to-practice.html</guid><category>PyCon AU 2020</category><category>ArnaKarick</category><category>FionaMilne</category><category>LizzieSilver</category><category>NigelDalton</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Piping Rain in Python - Adventures in a minute latency Radar Pipeline</title><link>https://pyvideo.org/pycon-au-2020/piping-rain-in-python-adventures-in-a-minute-latency-radar-pipeline.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Tishampati Dhar&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/ZKKE98"&gt;https://2020.pycon.org.au/program/ZKKE98&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In Australia we are used to live radar images provided by Bureau on Meterology (BoM). This agency provides forecasting and myriads of other services and has around 500 million in Annual budget. This is not the case in developing countries like Kenya where the last operational weather radar instrument was seen some 30 years ago.&lt;/p&gt;
+&lt;p&gt;Frustrated with the lack of live radar while in Nairobi a couple of engineers put together a passive radar system with an SDR and an Intel NUC. The data from this system travels via S3 and DynamoDB from screen capture tools on the endpoint device. Eventually gets exposed via API's to web and mobile apps running on some EC2 boxes ( no fancy kubernetes cluster to see here) . There are also a couple of Cron Jobs acting as Twitter and WhatsApp bots for followers. All this scratching your own itch infrastructure has slowly improved in uptime to 70% and supports around 5000 regular users. The entire data pipeline and web applications are written as set of small Python Services using Flask, OpenCV and ImageMagick.&lt;/p&gt;
+&lt;p&gt;This talk will describe how the pipeline was put together incrementally with intermediate outputs and rapidly deployed using a basic &lt;cite&gt;git pull&lt;/cite&gt; based workflow. Along the way we will enumerate the numerous gotchas including the excessive S3 List usage, power failures on sensor site and dogpiling Twitter bots.  The budget for the operations remains 100's of dollars per month.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 10:25:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Tishampati Dhar</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/piping-rain-in-python-adventures-in-a-minute-latency-radar-pipeline.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>TishampatiDhar</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Practicality Beats Purity: The Zen of Python’s Escape Hatch?</title><link>https://pyvideo.org/pycon-au-2020/practicality-beats-purity-the-zen-of-pythons-escape-hatch.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Christopher Neugebauer&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/VVNEZR"&gt;https://2020.pycon.org.au/program/VVNEZR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When you type “import this” into a Python interpreter, you get PEP-20, 20* aphorisms that describe what “Good” Python code looks like. Most of these are prescriptive, and have been used to settle countless arguments about how Python should grow, or how new ideas should be implemented.&lt;/p&gt;
+&lt;p&gt;But in these 20 aphorisms (which you may know as the “Zen of Python”), there are some inherent contradictions.&lt;/p&gt;
+&lt;p&gt;When “explicit is better than implicit” and “simple is better than complex”, what does it mean when being explicit means you must introduce complexity?&lt;/p&gt;
+&lt;p&gt;When “readability counts” and “special cases aren’t special enough to break the rules”, what does it mean when making code more readable presents a special case in your codebase?&lt;/p&gt;
+&lt;p&gt;The answer lies in one often-forgotten aphorism: “practicality beats purity”. When you can weigh practicality as a factor, you can decide that other factors are restrictive, and discard them as “impractical”. This idea shows up in many places in Python:&lt;/p&gt;
+&lt;p&gt;Type hints can help you to be explicit, but they introduce complexity. Focusing on practicality means you can adopt type hints only when you need them. Decorators are simple, but can be used to introduce ambiguity. In many cases, the practical benefits of decorators outweigh their potential for misuse.&lt;/p&gt;
+&lt;p&gt;But how far can the pursuit of practicality let you go? Does practicality let you treat the other 19 aphorisms as optional? Does practicality give you an escape hatch from the rest of the Zen of Python?&lt;/p&gt;
+&lt;p&gt;In this talk, we’ll look at how practicality has been a guiding principle in the evolution of Python. We’ll look at how to weigh practicality in the face of the other 19 aphorisms of PEP-20, and we’ll look at how focusing on practicality can guide you towards these other attributes of good Python.&lt;/p&gt;
+&lt;p&gt;(* per PEP-20, the Zen of Python contains “20 aphorisms, only 19 of which have been written down.”)&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 10:25:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Christopher Neugebauer</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/practicality-beats-purity-the-zen-of-pythons-escape-hatch.html</guid><category>PyCon AU 2020</category><category>ChristopherNeugebauer</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Procedural Generation of Terrain</title><link>https://pyvideo.org/pycon-au-2020/procedural-generation-of-terrain.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Suzanne Baxter&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/KLALFC"&gt;https://2020.pycon.org.au/program/KLALFC&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Procedural generation is the process of programmatically creating data. Its value is in generating large quantities of similar but not identical assets such as textures and models. This talk will cover the topic of using procedural generation to create a landscape, which will give an illustration of the strengths of procedural generation and ways to overcome its weaknesses.&lt;/p&gt;
+&lt;p&gt;More specifically, the topics covered are:
+- using layered opensimplex noise to create a heightmap, as well as an overview of types of noise and the shortcomings of purely noise-based terrain
+- using image processing techniques to add mountain ranges in a manner more consistent with real-world geography than noise alone would allow
+- further enhancing the terrain by converting it from a heightmap to voxels, and then applying an erosion simulation&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:35:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Suzanne Baxter</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/procedural-generation-of-terrain.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SuzanneBaxter</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Publishing well-formed Python packages</title><link>https://pyvideo.org/pycon-au-2020/publishing-well-formed-python-packages.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Julin S&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/HWU9J7"&gt;https://2020.pycon.org.au/program/HWU9J7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;#### Why
+Most of the well established projects follow some practices and has some mechanism in place to ensure better maintainability.&lt;/p&gt;
+&lt;p&gt;But we can find a good number of packages online which are being developed without an equivalent mechanism.&lt;/p&gt;
+&lt;p&gt;In this talk, I will mention some tools, which when used, can lay the foundation for a well formed package.&lt;/p&gt;
+&lt;p&gt;#### Well-formed package&lt;/p&gt;
+&lt;p&gt;A package whose source has some structure which makes testing and development more efficient and less error-prone.&lt;/p&gt;
+&lt;p&gt;Such a package also makes working with its source a more pleasant experience.&lt;/p&gt;
+&lt;p&gt;A well-formed package makes things easier for both the developer and the user.&lt;/p&gt;
+&lt;p&gt;But it is easier to get started with a structure than to maintain that form. Which calls for a mechanism to maintain that structure.&lt;/p&gt;
+&lt;p&gt;#### How&lt;/p&gt;
+&lt;p&gt;The source code should adopt a style and stick with it. A linting tool like pylint can help with it.
+Or you could use black.&lt;/p&gt;
+&lt;p&gt;Use type annotations along with tools like mypy.&lt;/p&gt;
+&lt;p&gt;Eliminate unused code with &lt;cite&gt;vulture&lt;/cite&gt;.&lt;/p&gt;
+&lt;p&gt;Add tests to be sure that the different functionalities work as intended using tools like pytest or the built-in unittest.
+This will be extremely useful to be sure that further modifications do not break existing code.&lt;/p&gt;
+&lt;p&gt;Ensure proper test coverage with coverage.py
+After all, adding tests isn't everything. One got to make sure it reaches every nook and corner.&lt;/p&gt;
+&lt;p&gt;Automate tests with tox, nox, etc.&lt;/p&gt;
+&lt;p&gt;Package the project in tune with the future of packaging.
+setuptools, flit or poetry&lt;/p&gt;
+&lt;p&gt;And add some CI/CD.&lt;/p&gt;
+&lt;p&gt;Other tools like pre-commit, bumpversion, etc may also be used.&lt;/p&gt;
+&lt;p&gt;#### Intended audience&lt;/p&gt;
+&lt;p&gt;People who create and publish python packages.
+The presentation is from the package developer's perspective and not exactly about the innards of the different python packaging tools.&lt;/p&gt;
+&lt;p&gt;#### Pre-requisites&lt;/p&gt;
+&lt;p&gt;Basic Python programming.
+Git&lt;/p&gt;
+&lt;p&gt;## Tentative talk outline&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Linting&lt;/li&gt;
+&lt;li&gt;Type checking&lt;/li&gt;
+&lt;li&gt;Eliminating dead code&lt;/li&gt;
+&lt;li&gt;Tests&lt;/li&gt;
+&lt;li&gt;Test coverage&lt;/li&gt;
+&lt;li&gt;Test automation&lt;/li&gt;
+&lt;li&gt;Packaging&lt;/li&gt;
+&lt;li&gt;CI/CD&lt;/li&gt;
+&lt;li&gt;Other tools&lt;/li&gt;
+&lt;li&gt;Future of packaging&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;#### Speaker info (anonymized):&lt;/p&gt;
+&lt;p&gt;Using Python for 5 years. Interested in text processing.&lt;/p&gt;
+&lt;p&gt;Published a few packages to PyPI using different packaging tools.&lt;/p&gt;
+&lt;p&gt;The proposed talk is derived from experience of creating them.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:00:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Julin S</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/publishing-well-formed-python-packages.html</guid><category>PyCon AU 2020</category><category>JulinS</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Python Emergency Remote Teaching</title><link>https://pyvideo.org/pycon-au-2020/python-emergency-remote-teaching.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Fernando Masanori&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/PWZLAJ"&gt;https://2020.pycon.org.au/program/PWZLAJ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;During the pandemic lockdown of COVID-19, we found a very different context from the usual: a) students with much more time available for learning b) many students who did not have a personal computer and could only access classes by cell phone c) difficulty to realistically assess learning. In this lecture we will present the real experiences in a traditional programming course given during the Covid-19 pandemic.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 09:50:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fernando Masanori</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/python-emergency-remote-teaching.html</guid><category>PyCon AU 2020</category><category>FernandoMasanori</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Python for Accessibility</title><link>https://pyvideo.org/pycon-au-2020/python-for-accessibility.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Rory Preddy&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/VP3D73"&gt;https://2020.pycon.org.au/program/VP3D73&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;My life is a hilarious roller coaster of miss-intended programming bugs because at 4 foot tall and 50 kilograms I completely fall off your radar.&lt;/p&gt;
+&lt;p&gt;Why did my scale call me! Why does facial recognition see me as a child? These are all valid questions I often ask myself as I navigate my weird and different world. Have you heard the phrase “You have to be this tall for Micro-services”? well what about: “You have to be this tall to operate a mobile phone?”. I am finding it harder and harder to reach any button except for “#” and “9”.&lt;/p&gt;
+&lt;p&gt;Building accessibility into the planning stages of programming can eliminate barriers for participation and create an inclusive environment for people with disabilities. Programming for diversity serves as an unquestionable indicator that your software embraces the diversity of your users and cares about their safety and comfort.&lt;/p&gt;
+&lt;p&gt;Join me on a fascinating and thought-provoking look at how you can program for Accessibility with Python.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 16:00:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rory Preddy</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/python-for-accessibility.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>RoryPreddy</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Queues - The Secret Sauce</title><link>https://pyvideo.org/pycon-au-2020/queues-the-secret-sauce.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jeremy Rotstein&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/NKWBA3"&gt;https://2020.pycon.org.au/program/NKWBA3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:40:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jeremy Rotstein</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/queues-the-secret-sauce.html</guid><category>PyCon AU 2020</category><category>JeremyRotstein</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Raising Heretics</title><link>https://pyvideo.org/pycon-au-2020/raising-heretics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Linda McIver&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DD7SGY"&gt;https://2020.pycon.org.au/program/DD7SGY&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this talk, I want to show you how Data Science Education is key to nurturing a rationally sceptical, creative, ethical, problem solving population who can save the world.
+I’m going to do that by looking at the problems we have in the Data Science and Technology communities today, and how those communities are shaping our world - problems and all.
+We’re then going to explore the issues with our current education system in more depth. There is no such thing as perfect data, yet we treat data with more reverence than it deserves. Our entire education system is built on the idea of being measurable, yet all too often “measurable” winds up being the opposite of “meaningful”. We’ll consider how we got here, and how we can create an education system that focuses on meaningful outcomes, and develops our students into rational, ethical heretics,
+All of these goals require us to get comfortable with the idea of uncertainty. To be prepared to challenge the status quo, query accepted wisdom, and even to question our own findings. We're going to talk about why uncertainty is important, and how we can get comfortable with it, especially in education.
+Why should you take my word for it? I'll show you how data science projects work, with case studies from my own teaching, and examples of units ADSEI has created right across the curriculum, from Humanities to STEM.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 12:45:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Linda McIver</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/raising-heretics.html</guid><category>PyCon AU 2020</category><category>LindaMcIver</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>So what is this time thing anyway?</title><link>https://pyvideo.org/pycon-au-2020/so-what-is-this-time-thing-anyway.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Samuel Bishop&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DDCVAM"&gt;https://2020.pycon.org.au/program/DDCVAM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This is a whirlwind tour of modern timekeeping. From the weird and wonderful timekeeping of astronomers, to what goes into the normal civil time you read on your watch. With fun stops through calendaring, atomic clocks, GPS, space probes, and more along the way! As programmers, we work with dates and times on a regular basis and while most of us will never come across a TAI timestamp, or convert from UTC to TCB, there is a rich history behind our modern timekeeping with all its wonderful acronyms. Regardless of your level of skill or familiarity with timekeeping, I hope you can get something out of this introduction to timekeeping, illustrated with Python where applicable.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:40:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Samuel Bishop</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/so-what-is-this-time-thing-anyway.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>SamuelBishop</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Speeding up Your Docker Image Build</title><link>https://pyvideo.org/pycon-au-2020/speeding-up-your-docker-image-build.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vladislav Supalov&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/7FP8AB"&gt;https://2020.pycon.org.au/program/7FP8AB&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Are your Docker builds taking forever? Docker can be a valuable part of your tool belt, or a constant source of annoyance. This talk will walk you through frequent sources of slowness when building Docker images for Python projects, and ways how you can avoid or fix them. Let’s speed up an utterly slow Docker build together using the right high-level approach, easy to implement tricks and brand-new Docker features to speed up your build protect your coding flow from annoying delays.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:00:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vladislav Supalov</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/speeding-up-your-docker-image-build.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>VladislavSupalov</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Staircase: fast analysis with step functions</title><link>https://pyvideo.org/pycon-au-2020/staircase-fast-analysis-with-step-functions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Riley Clement&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/3TDS8K"&gt;https://2020.pycon.org.au/program/3TDS8K&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk introduces the Staircase package – a new open source package with applications in data analysis.  It aims to take the audience on a journey from basics to more advanced usage at a comfortable pace.   A tutorial-esque style will be used to introduce fundamentals, followed by four examples abstracted from real world use cases.&lt;/p&gt;
+&lt;p&gt;If you work with timestamped data and enjoy a little bit of math, mixed with a terrible sense of humour, then this talk could be right up your alley.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 10:25:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Riley Clement</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/staircase-fast-analysis-with-step-functions.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>RileyClement</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Stop Writing Tests!</title><link>https://pyvideo.org/pycon-au-2020/stop-writing-tests.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Zac Hatfield-Dodds&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/TCT3GH"&gt;https://2020.pycon.org.au/program/TCT3GH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We often think of manual testing as slower and less effective than automated testing,
+but most test suites haven't automated that much!  Computers can execute all our
+pre-defined tests very quickly - and this is definitely a good thing, especially for
+regression tests - but the tricky parts are still done by humans.&lt;/p&gt;
+&lt;p&gt;We select test cases (inputs) and check that the corresponding outputs make sense;
+we write functions that &amp;quot;arrange, act, and assert&amp;quot; for our tests; and we decide -
+or script via CI systems - which tests to execute and when.&lt;/p&gt;
+&lt;p&gt;So lets explore some next-generation tools that we could use to automate these
+remaining parts of a testing workflow!&lt;/p&gt;
+&lt;p&gt;PROPERTY-BASED TESTING helps you to write more powerful tests by automating selection
+of test cases: instead of listing input-output pairs, you describe the kind of data
+you want and write a test that passes &lt;em&gt;for all X...&lt;/em&gt;.  We'll see a live demo, and
+learn something about the Python builtins in the process!&lt;/p&gt;
+&lt;p&gt;CODE INTROSPECTION, and a handy templating tool, can help write tests for you.
+Do you need to know any more than which code to test, and what properties should hold?&lt;/p&gt;
+&lt;p&gt;ADAPTIVE FUZZING tools take CI to its logical conclusion: instead of running a fixed
+set of tests on each push, they sit on a server and run tests full-time... fine-tuning
+themselves to find bugs in &lt;em&gt;your&lt;/em&gt; project and pulling each new commit as it lands!&lt;/p&gt;
+&lt;p&gt;By the end of this talk, you'll know what these three kinds of tools can do -
+and how to get started with automating the &lt;em&gt;rest&lt;/em&gt; of your testing tomorrow.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:35:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Zac Hatfield-Dodds</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/stop-writing-tests.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ZacHatfield-Dodds</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Streamlit - Build interactive data dashboards quickly</title><link>https://pyvideo.org/pycon-au-2020/streamlit-build-interactive-data-dashboards-quickly.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Jaimin Khanderia&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/RL8S3N"&gt;https://2020.pycon.org.au/program/RL8S3N&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Streamlit is a framework that allows you to build interactive analytical apps very rapidly. It is gaining popularity among data scientists and analysts around the world as it helps them make a data dashboard that is elegant and aesthetically pleasing. In my presentation, I’ll briefly state what is Streamlit and how it is super useful for data scientists and analysts. I’ll then go over the basic Streamlit components and examples that demonstrate how easy it is to make an interactive data dashboard in Python. (Yes you heard it right, no JavaScript required :D) By the end of this talk, you’ll know the basics of Streamlit and would be able to build an interactive web application for data visualization and analysis with just a few lines of code in Python.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 11:00:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jaimin Khanderia</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/streamlit-build-interactive-data-dashboards-quickly.html</guid><category>PyCon AU 2020</category><category>JaiminKhanderia</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Sunday Lightning Talks (PyConline AU 2020)</title><link>https://pyvideo.org/pycon-au-2020/sunday-lightning-talks-pyconline-au-2020.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Extremely Online Lightning Talks from the extremely online PyConline AU 2020.
+CONTENT WARNING: Swearing, discussion of genocide.&lt;/p&gt;
+&lt;p&gt;0:00 - Intro 🐈
+1:40 - Tisham Dhar - Coding at Home with Kids
+6:33 - Juan Morais - A bot that shares game development content in Spanish
+11:11 - Peter Hall - Java is better than Python
+16:57 - Evan Kohilas - How did we miss this?
+21:28 - Kit Darko - why not throw my devices in the sea, and go live in a cave?
+26:32 - Henry Walshaw - Calculating 5km of travel distance in Python
+32:00 - Allan Whatmough - Meltano: open-source data pipelines
+37:20 - Matt Cengia - Event Diversity, Inclusion, and Accessibility
+40:32 - Keira Paterson - Why won't they just use password managers already!?
+45:13 - Jason King - The king has entered the area
+50:33 - Carl Karsten - My fav answer to &amp;quot;How can I program?&amp;quot;
+56:10 - Anthony Agius - 5 minutes to explain 5 ways Facebook causes harm
+1:01:28 - Jared Quinn - Take Full Control of Your Smart Home
+1:06:52 - Rachel Bunder - Curly boi or cake?&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sunday Lightning Talks</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/sunday-lightning-talks-pyconline-au-2020.html</guid><category>PyCon AU 2020</category><category>australia</category><category>conference</category><category>programming</category><category>pycon</category><category>pyconau</category><category>pyconline</category><category>pyconlineau</category><category>python</category></item><item><title>Taking Django's ORM Async</title><link>https://pyvideo.org/pycon-au-2020/taking-djangos-orm-async.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Andrew Godwin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/SLXVBU"&gt;https://2020.pycon.org.au/program/SLXVBU&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The quest to add &amp;quot;hybrid&amp;quot; asynchronous support to Django - where it can run both synchronous and asynchronous code - is a long one. Django 3.1 reached an important milestone with synchronous and asynchronous views, and now the next big step is to take a long, hard look at the thing that makes up over half the Django codebase: the ORM.&lt;/p&gt;
+&lt;p&gt;The ORM is gigantic, old, and complex - and has an API designed and tweaked over many years. We'll look at some of those design decisions and how they reflect in the world of async, the challenges that underlie a hybrid API, as well as how the safety-first nature of the ORM has to evolve to deal with new and exciting async ways of breaking things.&lt;/p&gt;
+&lt;p&gt;We'll also dive into what it means to have asynchronous database backends, and how support for those are progressing in the Python world - and how we're trying to ship something that's useful before fully asynchronous database APIs are done.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 17:10:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Godwin</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/taking-djangos-orm-async.html</guid><category>PyCon AU 2020</category><category>AndrewGodwin</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Text files full of punctuation? There must be a better way to code.</title><link>https://pyvideo.org/pycon-au-2020/text-files-full-of-punctuation-there-must-be-a-better-way-to-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Katie Bell&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/HHPFHW"&gt;https://2020.pycon.org.au/program/HHPFHW&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The vast majority of code is written through some kind of text editor, whether it's notepad, a sophisticated IDE, or a heavily customised Vim environment. These tools mitigate common text editing problems like unclosed brackets and syntax errors, but can't eliminate them completely.&lt;/p&gt;
+&lt;p&gt;In this talk we'll explore the underlying nature of code as a tree structure using Python's abstract syntax trees, and we'll compare real world examples of coding interfaces which represent these trees in different ways.&lt;/p&gt;
+&lt;p&gt;So much of our thinking and tooling revolves around code being represented as text files that to step outside of this world means re-imagining how version control works and what real programming even is.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:35:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Katie Bell</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/text-files-full-of-punctuation-there-must-be-a-better-way-to-code.html</guid><category>PyCon AU 2020</category><category>KatieBell</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>The art of categorical encoding for Tabular data problems</title><link>https://pyvideo.org/pycon-au-2020/the-art-of-categorical-encoding-for-tabular-data-problems.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shubh Chatterjee&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/M3HPHA"&gt;https://2020.pycon.org.au/program/M3HPHA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When developing a predictive machine learning model for a tabular data problem, we are normally inundated with variety of predictive features to try out.The features are a blend of numerical and categorical features.When handling the categorical features normally an analysts defaults to the most convenient method or most documented method on the web or on stack-overflow forums.But this is where there is a high possibility of missing out on significant predictive gain by representing a feature to an algorithm in a format where it adds the most to overall predictive efficiency .&lt;/p&gt;
+&lt;p&gt;This talk aims to share a quick overview of categorical encoding techniques and some time-tested intuitions on when to use what.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:00:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shubh Chatterjee</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/the-art-of-categorical-encoding-for-tabular-data-problems.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ShubhChatterjee</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>The Art of Micropython- using Python to create award winning art</title><link>https://pyvideo.org/pycon-au-2020/the-art-of-micropython-using-python-to-create-award-winning-art.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Peter van der Burg&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/XLL9US"&gt;https://2020.pycon.org.au/program/XLL9US&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The artwork’s description is: “Using the Fibonacci sequence as the basis for the work, I create a dynamic image of the &amp;quot;whole&amp;quot;- an intact and technological world, transitioning through to what appears to be broken and in crisis. The  four Fibonacci boards move in a cyclic and synchronous way from an &amp;quot;S&amp;quot; to the whole &amp;quot;O&amp;quot; back to the &amp;quot;S&amp;quot; enhanced with the use of colour LEDs progressing from red to green back to red palette expressing my narrative.”&lt;/p&gt;
+&lt;p&gt;This talk will focus on the MicroPython code that synchronises electro-mechanical aspects of the project and how I overcame the specific challenges of keeping a ‘hobby’ servo in sync with the LED light sequencing.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:05:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Petervander Burg</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/the-art-of-micropython-using-python-to-create-award-winning-art.html</guid><category>PyCon AU 2020</category><category>PetervanderBurg</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>The Hitchhiker's Guide to CLIs in Python</title><link>https://pyvideo.org/pycon-au-2020/the-hitchhikers-guide-to-clis-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vinayak Mehta&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/UFBPBV"&gt;https://2020.pycon.org.au/program/UFBPBV&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Command-line applications and interfaces are used by both newcomers and experienced Python developers everyday. But do you know how they came to be? Hop on to this ship as we go through the CLI galaxy and look at its history, explore the CLI anatomy and discover some Python packages that can help us create them.&lt;/p&gt;
+&lt;p&gt;We’ll then emulate one of the most popular CLIs of our time by writing our own CLI using Click, and see how we can package it and publish it on PyPI. Are you ready to travel faster-than-light using this ship’s Infinite Improbability Drive? Carry your towel!&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:35:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinayak Mehta</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/the-hitchhikers-guide-to-clis-in-python.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>VinayakMehta</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>The Software Engineering Part of Data Science</title><link>https://pyvideo.org/pycon-au-2020/the-software-engineering-part-of-data-science.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Niño Eclarin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/BPPLYM"&gt;https://2020.pycon.org.au/program/BPPLYM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In this session, I will discuss the software engineering side of data science and how python bridges the gap between data science and software engineering.&lt;/p&gt;
+&lt;p&gt;Will highlight some of the challenges involved in working with data scientists. Will also demonstrate some sample codes and best practices that shows how to work as a software engineer in a data science company. Lastly, I will discuss how software engineers can shift to a more data science related job like a data engineer.&lt;/p&gt;
+&lt;p&gt;Outline:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Intro: Data science vs software engineering&lt;/li&gt;
+&lt;li&gt;Challenges working with a data science team and how Python bridges the two domains&lt;/li&gt;
+&lt;li&gt;Common problems and solutions
+- Development setup
+- Performance considerations
+- Deployment&lt;/li&gt;
+&lt;li&gt;Transitions from software engineering to data science&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 10:25:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Niño Eclarin</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/the-software-engineering-part-of-data-science.html</guid><category>PyCon AU 2020</category><category>NiñoEclarin</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>The worst outage I never caused</title><link>https://pyvideo.org/pycon-au-2020/the-worst-outage-i-never-caused.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Julien Goodwin&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/VKMUTH"&gt;https://2020.pycon.org.au/program/VKMUTH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In 2017 I came one keypress from causing Google's main backbone to largely fall off the Internet. This is the story of how we used that incident as a learning opportunity, how a lack of buy-in hindered further improvements, and how an existing toolkit of python libraries allowed testing and validation tools to be quickly built, preventing any chance of a recurrence.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 16:35:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Julien Goodwin</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/the-worst-outage-i-never-caused.html</guid><category>PyCon AU 2020</category><category>JulienGoodwin</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>This Talk Has Been Disabled</title><link>https://pyvideo.org/pycon-au-2020/this-talk-has-been-disabled.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dawn E. Collett&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/7AVW7C"&gt;https://2020.pycon.org.au/program/7AVW7C&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk consists of the following sections:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Introduction and Definitions&lt;/li&gt;
+&lt;li&gt;How good design principles can improve accessibility&lt;/li&gt;
+&lt;li&gt;Resources for accessible design&lt;/li&gt;
+&lt;li&gt;The benefits and limitations of guidelines&lt;/li&gt;
+&lt;li&gt;Case Study: Designing for visually impaired users&lt;/li&gt;
+&lt;li&gt;Case Study: Designing for screen reader users&lt;/li&gt;
+&lt;li&gt;Case Study: Safe design for people with photosensitive epilepsy&lt;/li&gt;
+&lt;li&gt;Case Study: Conveying information without using colour&lt;/li&gt;
+&lt;li&gt;Case Study: Conveying information without using audio&lt;/li&gt;
+&lt;li&gt;Case Study: Accessibility and security of medical devices&lt;/li&gt;
+&lt;li&gt;Case Study: Access for disabled people in the tech industry&lt;/li&gt;
+&lt;li&gt;Summary and Questions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:00:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dawn E. Collett</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/this-talk-has-been-disabled.html</guid><category>PyCon AU 2020</category><category>DawnE.Collett</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Tweaking the rise and fall of empires and economies</title><link>https://pyvideo.org/pycon-au-2020/tweaking-the-rise-and-fall-of-empires-and-economies.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Bosco Ho&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/SEZQAL"&gt;https://2020.pycon.org.au/program/SEZQAL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;## Outline&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Show examples of beautiful numerical models that use differential equations&lt;/li&gt;
+&lt;li&gt;Show how painful it is to build the models yourself&lt;/li&gt;
+&lt;li&gt;Describe a python framework that simplifies this&lt;/li&gt;
+&lt;li&gt;Demonstrate how the built-in interactive UI opens up exploration&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 17:45:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Bosco Ho</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/tweaking-the-rise-and-fall-of-empires-and-economies.html</guid><category>PyCon AU 2020</category><category>BoscoHo</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Under and Dunder - Python secret functions</title><link>https://pyvideo.org/pycon-au-2020/under-and-dunder-python-secret-functions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cheuk Ting Ho&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/VLPJZL"&gt;https://2020.pycon.org.au/program/VLPJZL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At the start, we will be using &lt;cite&gt;dir&lt;/cite&gt; to look into the secret functions Python objects have. Eg:
+&lt;cite&gt;__getitem__&lt;/cite&gt;, &lt;cite&gt;__iter__&lt;/cite&gt; and &lt;cite&gt;__next__&lt;/cite&gt; Then, we will investigate where is the dunder function goes? Why is it not accessible. And at the end, we will see how dunder functions can change the identity of the Python objects.&lt;/p&gt;
+&lt;p&gt;This talk is for attendees who have just begin their Python journey. By explaining the dunder functions and the nature of Python objects, attendees will have a better understanding of why Python is fundamentally different from other programming languages. Hopefully, this knowledge will help them out when they continue their Python journeys.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 13:35:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cheuk Ting Ho</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/under-and-dunder-python-secret-functions.html</guid><category>PyCon AU 2020</category><category>CheukTingHo</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Using Jupyter Notebooks to Empower the Public with Environmental Data</title><link>https://pyvideo.org/pycon-au-2020/using-jupyter-notebooks-to-empower-the-public-with-environmental-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Maalvika Bhat&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/3EKYA9"&gt;https://2020.pycon.org.au/program/3EKYA9&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Attendees will learn how to use Jupyter Notebooks and other Python tools to engage the public to create meaningful outcomes and positive social change. The Notebooks we’ve created serve to empower interested members of the public in participatory learning about industry-related pollution that is meaningful to them and their networks, as well as creating strategic, compelling, and informative reports of environmental injustices to inform community action. Our goal is to create a future in which justice and equity are at the center of environmental, climate, and data governance.
+No environmental justice knowledge required to attend.&lt;/p&gt;
+&lt;p&gt;Authors: Maalvika Bhat, Kelsey Breseman, Steve Hansen, Gil Jang, Eric Nost, Chris Sellers, Paul St. Denis, Lourdes Vera, Sara Wylie, and EDGI&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:35:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Maalvika Bhat</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/using-jupyter-notebooks-to-empower-the-public-with-environmental-data.html</guid><category>PyCon AU 2020</category><category>MaalvikaBhat</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Walled gardens for growing students</title><link>https://pyvideo.org/pycon-au-2020/walled-gardens-for-growing-students.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Kenni Bawden&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/RZCSSP"&gt;https://2020.pycon.org.au/program/RZCSSP&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Creating learning environments for teaching students programming and cyber security skills is hard.
+Do we give them professional software engineering  environments? They'll learn something &amp;quot;real&amp;quot; but they will likely only understand a fraction of the context.
+Do we use a small, safe educational environment?
+They'll understand all of the concepts, but they may be hard to translate into practical, open-ended projects and they'll never learn to thrive.&lt;/p&gt;
+&lt;p&gt;How can we select or craft environments that give us the best of both worlds?&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:20:00 2020 at Floperator&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kenni Bawden</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/walled-gardens-for-growing-students.html</guid><category>PyCon AU 2020</category><category>KenniBawden</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Wearing Your Python, and Making It Sing Too!</title><link>https://pyvideo.org/pycon-au-2020/wearing-your-python-and-making-it-sing-too.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Rowena Stewart&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/7A9QQF"&gt;https://2020.pycon.org.au/program/7A9QQF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The Circuit Playground Express (cpx) is a palm-sized programmable electronics board packed full of sensors and 10 Neopixel LEDs. It also has a speaker and 7 capacitative touch pads making it perfect for sewing onto fabrics. .&lt;/p&gt;
+&lt;p&gt;In this talk, I will be giving an overview of everything you need to know to get started on your own eTextiles project by taking you through one of my own projects: making a singing curlyboi tote bag.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 14:40:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rowena Stewart</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/wearing-your-python-and-making-it-sing-too.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>RowenaStewart</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>What happens behind execution of an `import` statement?</title><link>https://pyvideo.org/pycon-au-2020/what-happens-behind-execution-of-an-import-statement.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Shivashis Padhi&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/Q7GJNZ"&gt;https://2020.pycon.org.au/program/Q7GJNZ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;### Introduction&lt;/p&gt;
+&lt;p&gt;Every Python script involves import statements. And if you develop software with Python, you might already have come across import and path related errors like ImportError, ModuleNotFoundError, etc.&lt;/p&gt;
+&lt;p&gt;It's important to know the import mechanics, both for general knowledge, and to develop custom plugins to tweak the import system. In this talk, we'd discuss in detail about how the import system works, its components and what tasks they perform respectively.&lt;/p&gt;
+&lt;p&gt;### Who should attend this talk?
+This talk is most suitable for beginner to intermediate level Pythonistas.&lt;/p&gt;
+&lt;p&gt;### How does the talk proceed?
+- The talk starts with packages in Python, and how to organize Python files in order to make them distributable, and importable.
+- It proceeds to discuss about $PATH and $PYTHONPATH, and how they are used to enable system-wide imports, and how capable are Python's path based import handlers, if they let a programmer import from remote URIs, etc.
+- Different types of packages such as regular packages, namespace packages, frozen modules, etc. are discussed.
+- After that, some key components are introduced i.e sys.modules and how modules are refreshed and regulated in runtime, what finders and loaders are, and what 'import protocol' is, sys.meta_path, sys.path_hooks.&lt;/p&gt;
+&lt;p&gt;The talk then goes in detail about finders, the default finders in Python, spec object, and its functioning.
+After finders, loaders are discussed with sample code, explaining the steps involved from processing a spec, and creating, executing, and loading a module to sys.modules.
+- After finders and loaders, 'import hooks' are discussed i.e how Python allows injection of custom components to handle a pre-defined import statement.
+- This follows a demonstration of import hooks, implementation of a meta_path finder Class which protects importing of modules from an http server with a token exchange. (So the source code is protected, and it can be logged who requested the source code by a signature to act against misuse.)
+- The demonstration is followed by listing some important use cases of import hooks, and how folks have used it in the past.&lt;/p&gt;
+&lt;p&gt;### What can someone get out of this talk?&lt;/p&gt;
+&lt;p&gt;An understanding of the import system's mechanics, which helps to quickly debug and fix path/import related errors.
+Knowledge of import hooks, to build custom import related plugins.&lt;/p&gt;
+&lt;p&gt;### Outline&lt;/p&gt;
+&lt;p&gt;Time Duration- Topic&lt;/p&gt;
+&lt;p&gt;0- 4 Introduction to packages and how to organize packages&lt;/p&gt;
+&lt;p&gt;4- 7 Types of packages in python, and the default ones the import system supports.&lt;/p&gt;
+&lt;p&gt;7- 12 Components of import system- sys.modules- finders and loaders- chronology of import related tasks&lt;/p&gt;
+&lt;p&gt;12- 15 Finders, examples of finders, and how they function, find_spec function&lt;/p&gt;
+&lt;p&gt;15- 17 sys.meta_path, sys.path_hooks in detail&lt;/p&gt;
+&lt;p&gt;17- 19 Introduction to PEP 302, and import hooks&lt;/p&gt;
+&lt;p&gt;19- 22 explain loaders with template code&lt;/p&gt;
+&lt;p&gt;23- 25 code walkthrough and demonstration of an implementation of import hooks&lt;/p&gt;
+&lt;p&gt;25- 26 briefly cover 'importing of submodules' topic with an example&lt;/p&gt;
+&lt;p&gt;26- 28 present use-cases of import hooks, and usage in industry, conclude.&lt;/p&gt;
+&lt;p&gt;28- 30 Q&amp;amp;A&lt;/p&gt;
+&lt;p&gt;### Prerequisites:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Syntactic knowledge of Python&lt;/li&gt;
+&lt;li&gt;Should have come across import/$PYTHONPATH related errors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you don't know either and still like the talk idea, please follow [this gist](&lt;a class="reference external" href="https://gist.github.com/plant99/9fee5dbe73f25d4da9c7fb956a36b889"&gt;https://gist.github.com/plant99/9fee5dbe73f25d4da9c7fb956a36b889&lt;/a&gt;) to 'intentionally' come across the errors :)&lt;/p&gt;
+&lt;p&gt;## Content URLs&lt;/p&gt;
+&lt;p&gt;[WIP slides](&lt;a class="reference external" href="https://speakerdeck.com/plant99/wip-what-happens-behind-execution-of-an-import-statement"&gt;https://speakerdeck.com/plant99/wip-what-happens-behind-execution-of-an-import-statement&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;[Longer description of the talk idea as blogpost](&lt;a class="reference external" href="https://plant99.bitbucket.io/pages/blogs/ten.html"&gt;https://plant99.bitbucket.io/pages/blogs/ten.html&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 11:00:00 2020 at Curlyboi&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Shivashis Padhi</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-happens-behind-execution-of-an-import-statement.html</guid><category>PyCon AU 2020</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>ShivashisPadhi</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>What happens when you run manage.py test ?</title><link>https://pyvideo.org/pycon-au-2020/what-happens-when-you-run-managepy-test.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Adam Johnson&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DQM9JQ"&gt;https://2020.pycon.org.au/program/DQM9JQ&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Testing frameworks do a lot of work for us, so much that they can even appear like magic. But if we go under the hood, we can find better ways of working with them. This talk looks at Django's testing framework and pytest together, so it can show the common features as well as the differences. The general test lifecycle will be examined, from start to finish. We'll then use this knowledge to write a couple of customizations.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:35:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Adam Johnson</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-happens-when-you-run-managepy-test.html</guid><category>PyCon AU 2020</category><category>AdamJohnson</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>What I now know about HAproxied Django DB connections, and wish I'd known sooner</title><link>https://pyvideo.org/pycon-au-2020/what-i-now-know-about-haproxied-django-db-connections-and-wish-id-known-sooner.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Florian Haas&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/YZYTMX"&gt;https://2020.pycon.org.au/program/YZYTMX&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;When you’re running a Django application, the following things are all pretty commonplace:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;You use MySQL or MariaDB as your Django database backend.&lt;/li&gt;
+&lt;li&gt;You don’t run a single standalone MySQL/MariaDB instance, but a Galera cluster.&lt;/li&gt;
+&lt;li&gt;You run asynchronous tasks in Celery.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Now suppose your application doesn’t talk to your Galera cluster directly, but via HAProxy. That’s not exactly unheard of; in fact it’s an officially documented HA option for Galera. And, to complicate things further, this may be a feature of your setup that you, the application developer, don't necessarily have control over.&lt;/p&gt;
+&lt;p&gt;In such a scenario, you may be dealing with very &amp;quot;interesting&amp;quot; features of HAproxy which — if you are unfamiliar with them — can throw you very nasty curveballs.&lt;/p&gt;
+&lt;p&gt;Having been in the position where, together with my team, I &lt;em&gt;was&lt;/em&gt; indeed unfamiliar with some of HAProxy's/Galera's intricacies and we were thus on he receiving end of those curveballs, I am taking this opportunity to share our findings so that our pain is someone else's gain. You have multiple options at your disposal — some in your infrastructure setup, and some in your Django application code. This talk covers both those angles.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 13:55:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Florian Haas</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-i-now-know-about-haproxied-django-db-connections-and-wish-id-known-sooner.html</guid><category>PyCon AU 2020</category><category>FlorianHaas</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>What The GIL Means For Containers</title><link>https://pyvideo.org/pycon-au-2020/what-the-gil-means-for-containers.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Noah Kantrowitz&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/SL3C7M"&gt;https://2020.pycon.org.au/program/SL3C7M&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This talk covers a very basic introduction to the Python Global Interpreter Lock from the point of view of container operations and deployment, along with the knowledge and tools to architect high quality Python application infrastructure. This includes how various application servers interact with the GIL, what problems is causes from an ops-centric point of view, and best practices for running Python applications efficiently and at scale despite the limitations.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 10:25:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Noah Kantrowitz</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-the-gil-means-for-containers.html</guid><category>PyCon AU 2020</category><category>NoahKantrowitz</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>What We Do in the Shadows</title><link>https://pyvideo.org/pycon-au-2020/what-we-do-in-the-shadows.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Lilly Ryan&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/DM7UVV"&gt;https://2020.pycon.org.au/program/DM7UVV&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We've all done it. Setting up a Slack to chat to our colleagues when the proper system doesn't cut it. Forwarding a document from work to our personal email address so we can read it on the device we want to. Building out experimental services on our personal AWS accounts because we couldn't get the permissions we needed on the company's systems.&lt;/p&gt;
+&lt;p&gt;Every organisation's infrastructure has its shadow, the unofficial system of servers, accounts, and hardware that crisscrosses and bypasses the sanctioned pathways. It is every security department's nightmare and every development team's open secret. From the newest graduate to the CEO, we all know at least some of these shortcuts.&lt;/p&gt;
+&lt;p&gt;This talk is a space for both confession and redemption: in it, we will delve into the psychology that leads to the development of shadow IT, the opportunities that can grow out of this corporate underground, and how to get these systems out of the shadows and into the light. Developers and security professionals alike will emerge from this talk with the tools they need to build the systems they actually want.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Fri Sep  4 12:45:00 2020 at Python 2&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lilly Ryan</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/what-we-do-in-the-shadows.html</guid><category>PyCon AU 2020</category><category>LillyRyan</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item><item><title>Your Escape Plan From Numpy + Cython</title><link>https://pyvideo.org/pycon-au-2020/your-escape-plan-from-numpy-cython.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Cheng-Lin Yang&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://2020.pycon.org.au/program/Y3SXGF"&gt;https://2020.pycon.org.au/program/Y3SXGF&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you've been a data scientist or researcher long enough, you must have encountered a situation where your NumPy code ran quickly on small datasets in a testing environment but performed poorly on real-world datasets (100x larger or more). In this talk, I will introduce three Pythonic solutions to improve NumPy performance drastically without modifying too many codes.&lt;/p&gt;
+&lt;p&gt;At the beginning of the talk, a math equation: logsumexp, which is widely used in machine learning, will be illustrated. I will show how it is implemented with pure NumPy and use it as a benchmark so we can compare it to three proposed solutions at the end of the talk.&lt;/p&gt;
+&lt;p&gt;Then, three solutions: CuPy, Numba, and Pythran will be presented in separate sections. In each section, I will give a brief introduction to the solution and show how to apply this solution to our benchmark code.&lt;/p&gt;
+&lt;p&gt;At the end of the talk, I will compare these solutions from different aspects:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How much performance is boosted after each solution is applied&lt;/li&gt;
+&lt;li&gt;Ease to apply on your existing code (including the ease of debugging)&lt;/li&gt;
+&lt;li&gt;Limitations of each solution&lt;/li&gt;
+&lt;li&gt;Which solution should be applied first in given scenarios&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Last but not the least, I will show a relatively new but interesting solution: Transonic to the audience so they can give it a try on their side project.&lt;/p&gt;
+&lt;p&gt;Produced by NDV: &lt;a class="reference external" href="https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1"&gt;https://youtube.com/channel/UCQ7dFBzZGlBvtU2hCecsBBg?sub_confirmation=1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Python, PyCon, PyConAU, PyConline&lt;/p&gt;
+&lt;p&gt;Sat Sep  5 16:00:00 2020 at Obvious&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lin Yang</dc:creator><pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-09-05:/pycon-au-2020/your-escape-plan-from-numpy-cython.html</guid><category>PyCon AU 2020</category><category>Cheng-LinYang</category><category>PyCon</category><category>PyConAU</category><category>PyConline</category><category>Python</category><category>pyconau</category><category>pyconau_2020</category></item></channel></rss>

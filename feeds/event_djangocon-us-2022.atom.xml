@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - DjangoCon US 2022</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/event_djangocon-us-2022.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-10-19T00:00:00+00:00</updated><subtitle></subtitle><entry><title>A pythonic full-text search</title><link href="https://pyvideo.org/djangocon-us-2022/a-pythonic-full-text-search.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Paolo Melchiorre</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/a-pythonic-full-text-search.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;full-text search&lt;/strong&gt; on a website is the best way to make its &lt;strong&gt;contents&lt;/strong&gt; easily accessible to &lt;strong&gt;users&lt;/strong&gt; because it returns better results and is in fact used in &lt;em&gt;online search engines&lt;/em&gt; or &lt;em&gt;social networks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The implementation of full-text search can be complex and many adopt the strategy of …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;full-text search&lt;/strong&gt; on a website is the best way to make its &lt;strong&gt;contents&lt;/strong&gt; easily accessible to &lt;strong&gt;users&lt;/strong&gt; because it returns better results and is in fact used in &lt;em&gt;online search engines&lt;/em&gt; or &lt;em&gt;social networks&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The implementation of full-text search can be complex and many adopt the strategy of using &lt;strong&gt;dedicated search engines&lt;/strong&gt; in addition to the &lt;strong&gt;database&lt;/strong&gt;, but in most cases this strategy turns out to be a big problem of &lt;strong&gt;architecture&lt;/strong&gt; and &lt;strong&gt;performance&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;In this talk we'll see a &lt;strong&gt;pythonic&lt;/strong&gt; way to implement full-text search on a website using only Django and PostgreSQL, taking advantage of all the &lt;strong&gt;innovations&lt;/strong&gt; introduced in latest years, and we'll analyze the &lt;strong&gt;problems&lt;/strong&gt; of using additional search engines with examples deriving from my experience (e.g. &lt;em&gt;djangopoject.com&lt;/em&gt; or &lt;em&gt;readthedocs.org&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;Through this talk you can learn how to add a full-text search on your &lt;strong&gt;website&lt;/strong&gt;, if it's based on &lt;strong&gt;Django&lt;/strong&gt; and &lt;strong&gt;PostgreSQL&lt;/strong&gt;, or you can learn how to update the search function of your website if you use other search engines.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Async Django: The practical guide you've been **awaiting** for.</title><link href="https://pyvideo.org/djangocon-us-2022/async-django-the-practical-guide-youve-been-awaiting-for.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Carlton Gibson</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/async-django-the-practical-guide-youve-been-awaiting-for.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There’s a lot of excitement about Django going async in 3.0+ but also many questions. This talk will provide a brief introduction to async, cover its pros/cons, and show how to build async into your Django app.&lt;/p&gt;
+&lt;p&gt;We’ll look at four different ways to build …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There’s a lot of excitement about Django going async in 3.0+ but also many questions. This talk will provide a brief introduction to async, cover its pros/cons, and show how to build async into your Django app.&lt;/p&gt;
+&lt;p&gt;We’ll look at four different ways to build a real-time chat app and see how the need for async comes up:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Polling&lt;/li&gt;
+&lt;li&gt;Long-polling&lt;/li&gt;
+&lt;li&gt;Server-sent events&lt;/li&gt;
+&lt;li&gt;Websockets&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Getting async online can be the hardest bit, so we’ll wrap up with a few pointers on deployment to get you on your way.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Full Text Search with Django and PostgreSQL: More Facets, Less Dependencies!</title><link href="https://pyvideo.org/djangocon-us-2022/full-text-search-with-django-and-postgresql-more-facets-less-dependencies.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Jason Judkins</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/full-text-search-with-django-and-postgresql-more-facets-less-dependencies.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ll describe some issues we faced with some bulkier and less supported search options. Django’s core functionality has come a long way since 1.10 and all the tools you need are there without having to bring in more dependencies. We’ll discuss the history and evolution …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ll describe some issues we faced with some bulkier and less supported search options. Django’s core functionality has come a long way since 1.10 and all the tools you need are there without having to bring in more dependencies. We’ll discuss the history and evolution of django-haystack and backends including Elasticsearch.  We’ll explore adding facets, queryset annotations, and FTS techniques to whittle down the data into more efficient chunks of Data in a Django application. We’ll use a simple project to demonstrate how to extend django-filter to do what we needed and how we separated and rebuilt indexes. Hopefully, after our talk, more developers will be better equipped to use the built in tools already available.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Hidden gems of Django Admin</title><link href="https://pyvideo.org/djangocon-us-2022/hidden-gems-of-django-admin.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Maxim Danilov</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/hidden-gems-of-django-admin.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Django Admin Panel is a complex and bad-documented tool in the Django that can greatly speed up development if you start to understand it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&amp;quot;Isn't it easier for us to write our Backend?&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will answer: “No, it’s not easier!”.&lt;/p&gt;
+&lt;p&gt;Seven years of insights and discoveries in …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The Django Admin Panel is a complex and bad-documented tool in the Django that can greatly speed up development if you start to understand it.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&amp;quot;Isn't it easier for us to write our Backend?&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I will answer: “No, it’s not easier!”.&lt;/p&gt;
+&lt;p&gt;Seven years of insights and discoveries in my report.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Home on the range with Django - getting comfortable with ranges and range fields</title><link href="https://pyvideo.org/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Jack Linke</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Objectives&lt;/p&gt;
+&lt;p&gt;Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Objectives&lt;/p&gt;
+&lt;p&gt;Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing the examples from the talk, additional examples, and a cheatsheet for working with ranges.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;The naive approach to ranges (2 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Using separate start and stop model fields&lt;/li&gt;
+&lt;li&gt;Querying with start and stop values&lt;/li&gt;
+&lt;li&gt;Quickly gets complicated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Range visualization for concrete understanding (3 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Inclusive vs Exclusive&lt;/li&gt;
+&lt;li&gt;Overlap&lt;/li&gt;
+&lt;li&gt;Contains&lt;/li&gt;
+&lt;li&gt;Contained By&lt;/li&gt;
+&lt;li&gt;Comparisons (fully_lt, fully_gt, etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[diagram](&lt;a class="reference external" href="https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png"&gt;https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A before-and-after look at the models (5 min)&lt;/p&gt;
+&lt;p&gt;The example project is a Swimming Pool Resource Scheduler that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. The model layout can be visualized in the following diagrams:&lt;/p&gt;
+&lt;p&gt;![database schema simple](&lt;a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png"&gt;https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;![database schema detailed](&lt;a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png"&gt;https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;We will look at the models before and after using range fields.&lt;/p&gt;
+&lt;p&gt;The initial (stripped down) models.py file using distinct fields for lower and upper values is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+class Pool(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;An instance of a Pool. Multiple pools may exist within the municipality&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Pool Name&amp;quot;), max_length=100)
+    address = models.TextField(_(&amp;quot;Address&amp;quot;))
+    depth_minimum = models.IntegerField(_(&amp;quot;Depth Minimum&amp;quot;), help_text=_(&amp;quot;What is the depth in feet of the shallow end of this pool?&amp;quot;))
+    depth_maximum = models.IntegerField(_(&amp;quot;Depth Maximum&amp;quot;), help_text=_(&amp;quot;What is the depth in feet of the deep end of this pool?&amp;quot;))
+    business_hours_start = models.IntegerField(_(&amp;quot;Business Hours Start Hour&amp;quot;), default=9)
+    business_hours_end = models.IntegerField(_(&amp;quot;Business Hours End Hour&amp;quot;), default=17)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Pool&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Pools&amp;quot;)
+
+
+class Closure(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A way of recording dates that a pool is closed&amp;quot;&amp;quot;&amp;quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;closures&amp;quot;)
+    start_date = models.DateField(_(&amp;quot;Pool Closure Start Date&amp;quot;))
+    end_date = models.DateField(_(&amp;quot;Pool Closure End Date&amp;quot;))
+    reason = models.TextField(_(&amp;quot;Closure Reason&amp;quot;))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Closure&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Closures&amp;quot;)
+
+
+class Lane(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Lane Name&amp;quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lanes&amp;quot;)
+    max_swimmers = models.PositiveSmallIntegerField(_(&amp;quot;Maximum Swimmers&amp;quot;), )
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lanes&amp;quot;)
+
+
+class Locker(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&amp;quot;&amp;quot;&amp;quot;
+
+    # Using CharField, because sometimes locker number might be &amp;quot;A23&amp;quot; or &amp;quot;56-B&amp;quot;
+    number = models.CharField(_(&amp;quot;Locker Number&amp;quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lockers&amp;quot;)
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lockers&amp;quot;)
+
+
+class LaneReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A lane reservations defines a set of users, a period of time, and a pool lane&amp;quot;&amp;quot;&amp;quot;
+
+    users = models.ManyToManyField(User, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    period_start = models.DateTimeField(_(&amp;quot;Reservation Period Start&amp;quot;))
+    period_end = models.DateTimeField(_(&amp;quot;Reservation Period End&amp;quot;))
+    actual_start = models.DateTimeField(_(&amp;quot;Actual Usage Period Start&amp;quot;))
+    actual_end = models.DateTimeField(_(&amp;quot;Actual Usage Period End&amp;quot;))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lane Reservations&amp;quot;)
+
+
+class LockerReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A locker reservation defines a user, a period of time, and a pool locker&amp;quot;&amp;quot;&amp;quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    period_start = models.DateTimeField(_(&amp;quot;Reservation Period Start&amp;quot;))
+    period_end = models.DateTimeField(_(&amp;quot;Reservation Period End&amp;quot;))
+    actual_start = models.DateTimeField(_(&amp;quot;Actual Usage Period Start&amp;quot;))
+    actual_end = models.DateTimeField(_(&amp;quot;Actual Usage Period End&amp;quot;))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Locker Reservations&amp;quot;)
+&lt;/pre&gt;
+&lt;p&gt;The final (stripped down) models.py with range fields is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+class Pool(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;An instance of a Pool. Multiple pools may exist within the municipality&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Pool Name&amp;quot;), max_length=100)
+    address = models.TextField(_(&amp;quot;Address&amp;quot;))
+    depth_range = IntegerRangeField(
+        _(&amp;quot;Depth Range&amp;quot;),
+        help_text=_(&amp;quot;What is the range in feet for the depth of this pool (shallow to deep)?&amp;quot;),
+    )
+    business_hours = IntegerRangeField(_(&amp;quot;Business Hours&amp;quot;), default=(9, 17))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Pool&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Pools&amp;quot;)
+
+
+class Closure(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A way of recording dates that a pool is closed&amp;quot;&amp;quot;&amp;quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;closures&amp;quot;)
+    dates = DateRangeField(_(&amp;quot;Pool Closure Dates&amp;quot;))
+    reason = models.TextField(_(&amp;quot;Closure Reason&amp;quot;))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Closure&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Closures&amp;quot;)
+
+
+class Lane(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Lane Name&amp;quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lanes&amp;quot;)
+    max_swimmers = models.PositiveSmallIntegerField(
+        _(&amp;quot;Maximum Swimmers&amp;quot;),
+    )
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lanes&amp;quot;)
+
+
+class Locker(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&amp;quot;&amp;quot;&amp;quot;
+
+    # Using CharField, because sometimes locker number might be &amp;quot;A23&amp;quot; or &amp;quot;56-B&amp;quot;
+    number = models.CharField(_(&amp;quot;Locker Number&amp;quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lockers&amp;quot;)
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lockers&amp;quot;)
+
+
+class LaneReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A lane reservations defines a set of users, a period of time, and a pool lane&amp;quot;&amp;quot;&amp;quot;
+
+    users = models.ManyToManyField(User, related_name=&amp;quot;lane_reservations&amp;quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    period = DateTimeRangeField(
+        _(&amp;quot;Reservation Period&amp;quot;),
+        validators=[
+            DateTimeRangeLowerMinuteValidator(0, 30),
+            DateTimeRangeUpperMinuteValidator(0, 30),
+            validate_zeroed_dt_sec_microsec,
+        ],
+    )
+    actual = DateTimeRangeField(_(&amp;quot;Actual Usage Period&amp;quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lane Reservations&amp;quot;)
+
+
+class LockerReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A locker reservation defines a user, a period of time, and a pool locker&amp;quot;&amp;quot;&amp;quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    period = DateTimeRangeField(_(&amp;quot;Reservation Period&amp;quot;))
+    actual = DateTimeRangeField(_(&amp;quot;Actual Usage Period&amp;quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Locker Reservations&amp;quot;)
+&lt;/pre&gt;
+&lt;p&gt;Example Project Walkthrough (30 min)&lt;/p&gt;
+&lt;p&gt;The models in this project will be used to demonstrate a variety of tasks in django views, including a number of the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Set constraints for the various range fields&lt;/li&gt;
+&lt;li&gt;Access the lower and upper values of a range fields in views and templates&lt;/li&gt;
+&lt;li&gt;Get reservations that start at a specific datetime&lt;/li&gt;
+&lt;li&gt;Get reservations that overlap with a single date&lt;/li&gt;
+&lt;li&gt;Get reservations that overlap with a range&lt;/li&gt;
+&lt;li&gt;Check if a reservations start datetime matches any value in a list&lt;/li&gt;
+&lt;li&gt;Get reservations with a start or end that falls between two dates&lt;/li&gt;
+&lt;li&gt;Get reservations whose lower/upper date falls within a range&lt;/li&gt;
+&lt;li&gt;Get reservations for the current week&lt;/li&gt;
+&lt;li&gt;Get reservations that end before now&lt;/li&gt;
+&lt;li&gt;Get reservations that start on or before September&lt;/li&gt;
+&lt;li&gt;Get reservations that end in May OR September&lt;/li&gt;
+&lt;li&gt;Given a list of datetimes, get all reservations that overlap with the items in the list&lt;/li&gt;
+&lt;li&gt;Order the queryset by lower. If two reservations have the same lower, also sort by upper. (This is the default behavior in django)&lt;/li&gt;
+&lt;li&gt;Get reservations with an overdue start (the reservation time started, but the party has not yet checked in)&lt;/li&gt;
+&lt;li&gt;Get reservations with an overdue end (the reservation time ended, but the party has not checked out)&lt;/li&gt;
+&lt;li&gt;Given a datetime (and other filtering criteria), get the count of reservations at that moment&lt;/li&gt;
+&lt;li&gt;For a particular Lane (or set of Lanes), get the aggregate count/sum of reservations during each hour of a daterange&lt;/li&gt;
+&lt;li&gt;Sum of all swimmers at a given moment&lt;/li&gt;
+&lt;li&gt;Sum of all swimmers at each time period change&lt;/li&gt;
+&lt;li&gt;For a particular Lane or entire Pool, get the time and value of all changes in number of swimmers&lt;/li&gt;
+&lt;li&gt;Given a start time stop time and a Lane, return a queryset of the swimmers at each 15 minute increment.&lt;/li&gt;
+&lt;li&gt;Calculated overall usage (number of swimmers * time interval = swimmer hours) within a time range&lt;/li&gt;
+&lt;li&gt;Total usage by day/week/month by Pool/Lane&lt;/li&gt;
+&lt;li&gt;Usage by range:  Given a list of ranges, calculate the usage during each range&lt;/li&gt;
+&lt;li&gt;Prevent overlapping reservation_period for the same resource (here, it's Rooms), where the reservation has not already been cancelled&lt;/li&gt;
+&lt;li&gt;Add validation to model field for minimum and maximum datetimes&lt;/li&gt;
+&lt;li&gt;Aggregate the minimum Lower and maximum Upper reservations dates for all reservations in a queryset&lt;/li&gt;
+&lt;li&gt;Similarly, annotate the minimum Lower and maximum Lower reservations dates for all reservations in a queryset&lt;/li&gt;
+&lt;li&gt;Assuming each reservation is associated with a Resource, annotate Resources with the most recently ending reservation (similar for most recent starting or longest-ago starting/ending reservation)&lt;/li&gt;
+&lt;li&gt;Multiple ways of saving a model instance with DateTimeRangeField&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Those examples above which we are unable to cover during the talk can be viewed in the example project GitHub repo which will be provided for the talk&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Resources (5 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[psycopg2.extras](&lt;a class="reference external" href="https://www.psycopg.org/docs/extras.html"&gt;https://www.psycopg.org/docs/extras.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[This talk &amp;amp; Example Project](&lt;a class="reference external" href="https://github.com/jacklinke/home-on-the-range-with-django"&gt;https://github.com/jacklinke/home-on-the-range-with-django&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[django-range-merge](&lt;a class="reference external" href="https://github.com/jacklinke/django-range-merge/"&gt;https://github.com/jacklinke/django-range-merge/&lt;/a&gt;) - use &lt;cite&gt;range_merge&lt;/cite&gt; aggregate with Django&lt;/li&gt;
+&lt;li&gt;[django-generate-series](&lt;a class="reference external" href="https://github.com/jacklinke/django-generate-series"&gt;https://github.com/jacklinke/django-generate-series&lt;/a&gt;) - create sequences with Django's ORM&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>How to turn your Website into an App (and why maybe you shouldn't!)</title><link href="https://pyvideo.org/djangocon-us-2022/how-to-turn-your-website-into-an-app-and-why-maybe-you-shouldnt.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Russell Keith-Magee</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/how-to-turn-your-website-into-an-app-and-why-maybe-you-shouldnt.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The web is an amazing platform for building and deploying code so that users can access functionality. As Django developers, you know how to use Python to build views and APIs that integrate with a database, and how to develop frontend HTML, CSS and Javascript. But sometimes, you need …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The web is an amazing platform for building and deploying code so that users can access functionality. As Django developers, you know how to use Python to build views and APIs that integrate with a database, and how to develop frontend HTML, CSS and Javascript. But sometimes, you need a little bit more than a website can provide. You need an app.&lt;/p&gt;
+&lt;p&gt;Apps provide a different experience for end users, and access to more of your device's native capabilities. If you were to look into the Apple's developer resources for iOS, or Google's developer resources for Android, you might come to the conclusion that, as Python web developers, you're locked out of these app ecosystems. The good news: you're not.&lt;/p&gt;
+&lt;p&gt;In this talk, you'll learn multiple techniques for leveraging your existing Python skills and Django codebase to develop an app you can distribute to your end-users. You'll also learn the advantages,  disadvantages and limits of these approaches - and what to do when you hit those limits.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Integrating React in the Django way!</title><link href="https://pyvideo.org/djangocon-us-2022/integrating-react-in-the-django-way.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Jiten Sidhpura</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/integrating-react-in-the-django-way.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Why Frontend Frameworks are getting Popular?&lt;/p&gt;
+&lt;p&gt;Your User Interface is the first impression you make on your website visitors. Thus User Interface is a critical component of your web application. It becomes necessary to make it simple, efficient, and at the same time attractive. Developing complex user interfaces with …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Why Frontend Frameworks are getting Popular?&lt;/p&gt;
+&lt;p&gt;Your User Interface is the first impression you make on your website visitors. Thus User Interface is a critical component of your web application. It becomes necessary to make it simple, efficient, and at the same time attractive. Developing complex user interfaces with traditional methods like Vanilla Javascript or Jquery library is time-consuming and can get messy after some time. Nowadays, there are many frontend frameworks such as React, Angular, Vue, and more. These frameworks make the process of frontend development much cleaner, faster, and easier.&lt;/p&gt;
+&lt;p&gt;## How to use React with Django?&lt;/p&gt;
+&lt;p&gt;The most common solution shown by many tutorials and blogs on the Internet is to develop two isolated projects, one for the frontend and the other for the backend. All the interactions between these two projects happen through APIs. This approach is used in large projects since they generally have dedicated teams for the backend and frontend. But this approach may not be suitable for individual or small-scale projects due to a variety of reasons like the cost for deployment, time consumption, and losses of features provided by Django Framework (forms).&lt;/p&gt;
+&lt;p&gt;A more Django-friendly approach would be to serve a single template (HTML) document, and then let React take over. This approach gives you the liberty to use plain HTML and Vanilla Javascript for simple pages or forms, and for highly interactive pages, one can take advantage of React. Using HTML and Vanilla Javascript for the simple pages can help reduce the bundle size of the frontend and thus help in reducing the loading time and improving the overall User Experience.&lt;/p&gt;
+&lt;p&gt;## Why did I develop this Package?&lt;/p&gt;
+&lt;p&gt;When I decided to integrate Django and React, it took me two full days only to configure the project. I had many errors while writing the Webpack configuration file and many dependencies issues. After this experience, I realized why not automate these steps so other users will not get demotivated from trying Django and React, and this is how django_webpack_dev_server was born.&lt;/p&gt;
+&lt;p&gt;## How this Package Helps you!&lt;/p&gt;
+&lt;p&gt;The package provides a command to set up a React app in both Javascript and Typescript programming languages. The resulting app would be a Django app with a webpack configuration with CSS and SCSS support. The webpack dev server would proxy the Django server in the development phase. After running the build script, the frontend code gets bundled into a single Javascript file and is available for Django to serve from an HTML template. After the setup, it is easy to install other npm packages and modify the webpack configuration as per specific requirements. Since the package is used in development only, there is no need to add it to the requirements.txt file of the production environment.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Keynote: State of the Object-Relational Mapping (ORM)</title><link href="https://pyvideo.org/djangocon-us-2022/keynote-state-of-the-object-relational-mapping-orm.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Simon Charette</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/keynote-state-of-the-object-relational-mapping-orm.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent releases of Django introduced ORM (object-relational mapping) features that made it easier to perform complex data manipulations efficiently in the context of web applications. Abstractions such as &lt;cite&gt;FilteredRelation&lt;/cite&gt;, &lt;cite&gt;Constraint&lt;/cite&gt;, &lt;cite&gt;Window&lt;/cite&gt; functions, &lt;cite&gt;JSONField&lt;/cite&gt;/&lt;cite&gt;JSONObject&lt;/cite&gt;, expression support for &lt;cite&gt;Index&lt;/cite&gt;, &lt;cite&gt;Queryset.alias&lt;/cite&gt;, and other features and improvements untapped the full potential …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Recent releases of Django introduced ORM (object-relational mapping) features that made it easier to perform complex data manipulations efficiently in the context of web applications. Abstractions such as &lt;cite&gt;FilteredRelation&lt;/cite&gt;, &lt;cite&gt;Constraint&lt;/cite&gt;, &lt;cite&gt;Window&lt;/cite&gt; functions, &lt;cite&gt;JSONField&lt;/cite&gt;/&lt;cite&gt;JSONObject&lt;/cite&gt;, expression support for &lt;cite&gt;Index&lt;/cite&gt;, &lt;cite&gt;Queryset.alias&lt;/cite&gt;, and other features and improvements untapped the full potential of the prior expression API work.&lt;/p&gt;
+&lt;p&gt;On the other hand, initiatives such as the &lt;cite&gt;async&lt;/cite&gt; work, bugs, and limitations in usage of recently introduced ORM/SQL features are shedding light on fundamental and long-standing issues that will require complex work to address.&lt;/p&gt;
+&lt;p&gt;How can we lift these anchors and ensure Django remains a powerful tool to define and manipulate data models in the future? Join us as we walk through ongoing development and review the state of the ORM and how you can contribute to it.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Lightning Talks</title><link href="https://pyvideo.org/djangocon-us-2022/lightning-talks.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Kojo Idrissa</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/lightning-talks.html</id><content type="html"></content><category term="DjangoCon US 2022"></category></entry><entry><title>Modern apps with Django, HTMX, Tailwind CSS and Alpine.js</title><link href="https://pyvideo.org/djangocon-us-2022/modern-apps-with-django-htmx-tailwind-css-and-alpinejs.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Andrej Baranovskij</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/modern-apps-with-django-htmx-tailwind-css-and-alpinejs.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After evaluating various toolkits and frameworks for UI development, I decided to go with Django. This choice was made for various reasons - Python backend, Django HTML templates, included security infrastructure and included ORM. I explored options to execute partial requests from Django HTML templates, without submitting requests to reload …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After evaluating various toolkits and frameworks for UI development, I decided to go with Django. This choice was made for various reasons - Python backend, Django HTML templates, included security infrastructure and included ORM. I explored options to execute partial requests from Django HTML templates, without submitting requests to reload the complete page. This is possible with HTMX and Alpine.js. I thought I should share my experience with the broader Django community. I will prepare a sample CRUD app to explain the functionality, this will be styled with Tailwind CSS to look modern and usable.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Panel Discussion: The State of Django</title><link href="https://pyvideo.org/djangocon-us-2022/panel-discussion-the-state-of-django.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Andrew Godwin</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/panel-discussion-the-state-of-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Join us for a panel on the State of Django: the state of the Django codebase and also the state of the Django community as represented by organizations like the Django Software Foundation, Django Girls, the Python Software Foundation and DEFNA.&lt;/p&gt;
+&lt;p&gt;Moderated by Dawn Wages, our panelists will discuss …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Join us for a panel on the State of Django: the state of the Django codebase and also the state of the Django community as represented by organizations like the Django Software Foundation, Django Girls, the Python Software Foundation and DEFNA.&lt;/p&gt;
+&lt;p&gt;Moderated by Dawn Wages, our panelists will discuss:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;how we can continue to grow the Django community and create a welcoming space for beginners&lt;/li&gt;
+&lt;li&gt;the priorities for the continued development and maturation of Django&lt;/li&gt;
+&lt;li&gt;ways to improve Django events and bring them to new regions worldwide, especially in the COVID landscapee&lt;/li&gt;
+&lt;li&gt;success stories from Django communities&lt;/li&gt;
+&lt;li&gt;concrete steps toward better and more effective diversity and inclusion efforts&lt;/li&gt;
+&lt;li&gt;how Django fits into the larger Python ecosystem, especially as other fields like data science continue to grow&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;and much more. It’s been a long time since we gathered leaders of the Django community on one stage to have an open-ended discussion about Django’s present and future, and we hope you’ll join us for this special event.&lt;/p&gt;
+&lt;p&gt;## Panelists&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[Carlton Gibson](/presenters/carlton-gibson/), Django Fellow and co-host of the Django Chat podcast&lt;/li&gt;
+&lt;li&gt;[Andrew Godwin](&lt;a class="reference external" href="https://aeracode.org/"&gt;https://aeracode.org/&lt;/a&gt;), longtime Django core contributor&lt;/li&gt;
+&lt;li&gt;[Jeff Triplett](&lt;a class="reference external" href="https://webology.dev/"&gt;https://webology.dev/&lt;/a&gt;), DEFNA President and PSF board member&lt;/li&gt;
+&lt;li&gt;[Will Vincent](&lt;a class="reference external" href="https://wsvincent.com/"&gt;https://wsvincent.com/&lt;/a&gt;), DSF Treasurer and co-host of the Django Chat podcast&lt;/li&gt;
+&lt;li&gt;[Rachell Calhoun](&lt;a class="reference external" href="https://www.rachellcalhoun.com/"&gt;https://www.rachellcalhoun.com/&lt;/a&gt;), DjangoGirls Trustee, DjangoGirls Grand Rapids (Michigan), PyLadies Grand Rapids&lt;/li&gt;
+&lt;li&gt;[Mariusz Felisiak](&lt;a class="reference external" href="https://twitter.com/MariuszFelisiak"&gt;https://twitter.com/MariuszFelisiak&lt;/a&gt;), Django Fellow and core team member&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Sponsored Talk: An Introduction to Summit Technology Group</title><link href="https://pyvideo.org/djangocon-us-2022/sponsored-talk-an-introduction-to-summit-technology-group.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Thulasidharan LG</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/sponsored-talk-an-introduction-to-summit-technology-group.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;ul class="simple"&gt;
+&lt;li&gt;An Intro to Summit Technology Group (STG)&lt;/li&gt;
+&lt;li&gt;Unique Challenges &amp;amp; Growth Opportunities&lt;/li&gt;
+&lt;li&gt;Announcement of Winner (STG will be doing a challenge for attendees)&lt;/li&gt;
+&lt;/ul&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>The Best of Both Worlds: Using Vue and Django Together in a Hybrid Approach</title><link href="https://pyvideo.org/djangocon-us-2022/the-best-of-both-worlds-using-vue-and-django-together-in-a-hybrid-approach.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Brent O'Connor</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/the-best-of-both-worlds-using-vue-and-django-together-in-a-hybrid-approach.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we’ll discuss our rationale for choosing this approach over other approaches like XHTML, etc. We’ll then dive into some code and show what exactly we mean by a Hybrid of Vue and Django. Then we’ll discuss some of the lessons we learned and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we’ll discuss our rationale for choosing this approach over other approaches like XHTML, etc. We’ll then dive into some code and show what exactly we mean by a Hybrid of Vue and Django. Then we’ll discuss some of the lessons we learned and what we might do differently next time.&lt;/p&gt;
+&lt;p&gt;We hope that those that attend this talk would walk away feeling inspired to try things that leverage the strengths of your team and the best features of the technologies in your toolbox.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Why large Django projects need a data (prefetching) layer</title><link href="https://pyvideo.org/djangocon-us-2022/why-large-django-projects-need-a-data-prefetching-layer.html" rel="alternate"></link><published>2022-10-19T00:00:00+00:00</published><updated>2022-10-19T00:00:00+00:00</updated><author><name>Flávio Juvenal</name></author><id>tag:pyvideo.org,2022-10-19:/djangocon-us-2022/why-large-django-projects-need-a-data-prefetching-layer.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The main building blocks of Django REST Framework projects, i.e. Views, Serializers, Managers, and Querysets allow developers to implement complex APIs with very little code repetition while reusing built-ins for essential API features. Developers feel guided by DRF to architect the project in a “Don’t Repeat Yourself …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The main building blocks of Django REST Framework projects, i.e. Views, Serializers, Managers, and Querysets allow developers to implement complex APIs with very little code repetition while reusing built-ins for essential API features. Developers feel guided by DRF to architect the project in a “Don’t Repeat Yourself” way by using inheritance, nesting, annotations, and model / app-based separation of concerns. They can group code in viewsets, inherit from base classes, reuse the same serializer across views, nest serializers into others, compute fields dynamically with ORM annotations, select or prefetch relations for performance, organize custom behavior with managers and querysets, and much more. All this DRYness is great because it integrates well with common web API concerns like permissions, pagination, filters, etc.&lt;/p&gt;
+&lt;p&gt;Based on our multi-year experience in building and maintaining several large Django projects, while using those built-in concepts really yields a DRY code, the overuse also results in a codebase full of complicated bugs and performance issues, especially related to ORM usage. View, serializer, and model methods are often heavily coupled to querysets’ annotations and prefeches, but those methods are spread across the codebase. Django’s default queryset laziness, together with its heavy usage of inheritance and nesting is the perfect recipe for a codebase where N+1 issues and heavy unnecessary queries can happen in any line of code after some less careful change.&lt;/p&gt;
+&lt;p&gt;For example, to prevent N+1 issues, if a serializer method field uses a filtered relationship, you must ensure this relationship is prefetched in all querysets related to that serializer. But this serializer can be nested into others, so you must now be careful to change all queryset references in seemingly unrelated views. Other sorts of “change amplification” situations also happen on large DRF codebases with heavy ORM usage. Requiring developers to be careful while navigating through lots of files to perform changes isn’t reasonable. Maybe being DRY is leading to the wrong abstraction?&lt;/p&gt;
+&lt;p&gt;It’s possible to design a better architecture that’s optimized both for enabling changes and avoiding performance regressions. With a new custom data prefetching layer that keeps compatibility with serializers and views, we can respect DRY while keeping performance and maintainability. That’s what we’ve been doing in our Django projects, and we will share our learnings in this talk. Hopefully, that applies to other maintainers of complex DRF projects.&lt;/p&gt;
+&lt;p&gt;Here's the planned outline:
+- Django REST Framework is DRY: the good side
+- Trade-offs of DRY in DRF: when reusing serializers leads to Change Amplification on prefetches and annotations
+- How view querysets and serializers are coupled
+- How vanilla Django suffers from the same issues
+- Incomplete solutions that weren't enough for us
+- Solving with a data prefetching layer: [django-virtual-models](&lt;a class="reference external" href="https://github.com/vintasoftware/django-virtual-models/"&gt;https://github.com/vintasoftware/django-virtual-models/&lt;/a&gt;)
+- Warn programmers during dev time about missing prefetches and annotations for each serializer
+- Automatically run necessary prefetches and annotations
+- Automatically prevent unnecessary prefetches and annotations
+- Keep serializer nesting support
+- Keep &lt;cite&gt;SerializerMethodField&lt;/cite&gt; support
+- Other solutions, including [django-readers](&lt;a class="reference external" href="https://github.com/dabapps/django-readers/"&gt;https://github.com/dabapps/django-readers/&lt;/a&gt;)&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>A Management Layer for Scalable, Multitenant Django</title><link href="https://pyvideo.org/djangocon-us-2022/a-management-layer-for-scalable-multitenant-django.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Addison Hardy</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/a-management-layer-for-scalable-multitenant-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Networking&lt;/p&gt;
+&lt;p&gt;To handle networking within the containers, the management layer integrates with Nginx and uWSGI.  During container startup, and when network configuration changes, the management layer generates Nginx site files and uWSGI config files on the fly based on current platform state.&lt;/p&gt;
+&lt;p&gt;We are running uWSGI in “emperor” mode …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Networking&lt;/p&gt;
+&lt;p&gt;To handle networking within the containers, the management layer integrates with Nginx and uWSGI.  During container startup, and when network configuration changes, the management layer generates Nginx site files and uWSGI config files on the fly based on current platform state.&lt;/p&gt;
+&lt;p&gt;We are running uWSGI in “emperor” mode, which allows us to create (and configure) separate uWSGI workers for each site.  Within the uWSGI config files, we are setting an environment variable based on each site’s unique identifier.  As uWSGI initializes each worker, it also initializes Django.  We use that environment variable in our Django settings files to configure the database, cache key prefix, AWS S3 bucket (for file storage) and other site-specific settings.  This allows all platform sites to share a single codebase, but keeps each site’s data completely separate.&lt;/p&gt;
+&lt;p&gt;## Cluster Configuration&lt;/p&gt;
+&lt;p&gt;All cluster configuration data is stored in a Postgres database, which serves as the source of truth for platform state.  The management layer exposes an API and web dashboard for querying the current platform state and making configuration changes.  Administrators can perform actions like creating new sites, associating hostnames with sites, managing user permissions and monitoring platform health.&lt;/p&gt;
+&lt;p&gt;## State Synchronization&lt;/p&gt;
+&lt;p&gt;Within each container, the management layer listens for state change events on a Postgres notification channel.  The change events are sent as JSON, and include the event type, timestamp and any associated metadata.  When a configuration change is made via the API, the container that handled the API request will broadcasts that change event to the entire cluster.  The management layer also performs regular integrity checks to ensure the state of each container matches the state of the platform.&lt;/p&gt;
+&lt;p&gt;## Health Monitoring&lt;/p&gt;
+&lt;p&gt;The management layer performs automated healthchecks within each container by sending an internal request to each hostname associated with a site on the platform.  The response codes and latency for those requests are then stored and used to power monitoring tools and alerts via the API and web dashboard.&lt;/p&gt;
+&lt;p&gt;If an issue is detected, the management layer will attempt to resolve the issue by querying the latest platform state, and regenerating configuration files.  If the issue persists, the container will be automatically replaced within the cluster.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Astrodigenous: an online portal for Indigenous sky-knowledge resources in Canada</title><link href="https://pyvideo.org/djangocon-us-2022/astrodigenous-an-online-portal-for-indigenous-sky-knowledge-resources-in-canada.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Dr. Heidi White</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/astrodigenous-an-online-portal-for-indigenous-sky-knowledge-resources-in-canada.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Our web portal can be reached at &lt;a class="reference external" href="http://www.astrodigenous.ca"&gt;http://www.astrodigenous.ca&lt;/a&gt;!&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>AyudaPy.org: From Weekend Project to Key Civic Movement During the Pandemic</title><link href="https://pyvideo.org/djangocon-us-2022/ayudapyorg-from-weekend-project-to-key-civic-movement-during-the-pandemic.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Marcelo Elizeche Landó</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/ayudapyorg-from-weekend-project-to-key-civic-movement-during-the-pandemic.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk is about the AyudaPy.org project that began as an experiment / weekend project and became a social force in Paraguay that in many cases replaced the response of the state, its origins, future, how the technology and UX choices were key for its success and the challenges …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk is about the AyudaPy.org project that began as an experiment / weekend project and became a social force in Paraguay that in many cases replaced the response of the state, its origins, future, how the technology and UX choices were key for its success and the challenges of becoming overnight as project manager, mantainer and spokesperson for an Open Source project replicated in several countries and above all how to survive the burnout of this situation.&lt;/p&gt;
+&lt;p&gt;The technologies used in this project: Python, Django, PostGIS, OpenStreet Maps&lt;/p&gt;
+&lt;p&gt;This talk is for everyone and it helps to demonstrate how something simple can cause a great impact with the help of the community&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Django Migrations: Pitfalls and Solutions</title><link href="https://pyvideo.org/djangocon-us-2022/django-migrations-pitfalls-and-solutions.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Benjamin "Zags" Zagorsky</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/django-migrations-pitfalls-and-solutions.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django's migration system is one of its greatest strengths as a framework.  It can automatically generate migrations based on your changes to your models and can detect which migrations need to be applied to a database.  But, as the size of your development team and user base scale, there …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django's migration system is one of its greatest strengths as a framework.  It can automatically generate migrations based on your changes to your models and can detect which migrations need to be applied to a database.  But, as the size of your development team and user base scale, there are pitfalls that you need to be aware of.  Not all migrations can be safely reversed, and trying to rewind bad migrations on a production database can cause a data disaster.  Not all migrations can be safely deployed without downtime, and trying to deploy them can give your users and your engineers a wall of errors.&lt;/p&gt;
+&lt;p&gt;This talk will cover the following:
+1. How to manage migrations across multiple code branches
+2. Reversible migrations: how to write migrations so that they can be safely undone
+3. Backwards compatible migrations: which migrations can be run as part of a deploy without causing downtime or errors
+4. Handling failed migrations as part of a deployment&lt;/p&gt;
+&lt;p&gt;This talk assumes familiarity with the management commands &lt;cite&gt;makemigrations&lt;/cite&gt; and &lt;cite&gt;migrate&lt;/cite&gt;.  It's likely to be most helpful for people working on a Django project where there are many branches being worked on simultaneously or for those working on applications with moderate to high uptime requirements.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Django Through the Years</title><link href="https://pyvideo.org/djangocon-us-2022/django-through-the-years.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Andrew Godwin</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/django-through-the-years.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django has now been around for seventeen years, and in that time it's gone from strength to strength. But sometimes, the road was not so clear, and our future still isn't - so let's take a look back at some of Django's early problems, what it takes to grow an …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django has now been around for seventeen years, and in that time it's gone from strength to strength. But sometimes, the road was not so clear, and our future still isn't - so let's take a look back at some of Django's early problems, what it takes to grow an open-source project, and what Andrew's excited about in the future.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Explaining EXPLAIN: A dive into PostgreSQL's EXPLAIN plans</title><link href="https://pyvideo.org/djangocon-us-2022/explaining-explain-a-dive-into-postgresqls-explain-plans.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Richard Yen</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/explaining-explain-a-dive-into-postgresqls-explain-plans.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are two types of people: people who want to use Postgres, and people who want to use Postgres well.  The latter will not be content with a poorly-performing query when they know that better performance can be achieved with some tuning, an index, and/or a query rewrite …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are two types of people: people who want to use Postgres, and people who want to use Postgres well.  The latter will not be content with a poorly-performing query when they know that better performance can be achieved with some tuning, an index, and/or a query rewrite.  For developers and DBAs, this talk discusses what EXPLAIN does, how to interpret its output, what inferences can be extracted from its output, and what can be done to improve query performance.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>How To Be a Postgres DBA in a Pinch</title><link href="https://pyvideo.org/djangocon-us-2022/how-to-be-a-postgres-dba-in-a-pinch.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Elizabeth Garrett Christensen</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/how-to-be-a-postgres-dba-in-a-pinch.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This will be an intro level talk for folks unfamiliar with hosting or managing Postgres. Topics will include hosting options, backups, connection pooling, basic tuning, monitoring, and indexing. Just enough to keep you out of trouble and your database humming along.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>I Can't Believe It's Not Real Data! An Introduction into Synthetic Data</title><link href="https://pyvideo.org/djangocon-us-2022/i-cant-believe-its-not-real-data-an-introduction-into-synthetic-data.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Mason Egger</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/i-cant-believe-its-not-real-data-an-introduction-into-synthetic-data.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From Data Science and Machine Learning to Software Engineering and testing, access to accurate data is one of the biggest bottlenecks hindering development. Developers need accurate, relevant data to safely experiment when building applications, machine learning models, testing, etc. However, developers often run into issues gathering data, from a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;From Data Science and Machine Learning to Software Engineering and testing, access to accurate data is one of the biggest bottlenecks hindering development. Developers need accurate, relevant data to safely experiment when building applications, machine learning models, testing, etc. However, developers often run into issues gathering data, from a lack of data to the inability to access the data due to privacy policies. But what if you could have instant access to an unlimited supply of high-fidelity data that’s statistically accurate, privacy-protected, and safe to share? This is where Synthetic Data comes in. In this talk, you'll learn about Synthetic Data, the problems it solves, and how to get started generating as much relevant data as you want.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll discuss what Synthetic Data is, the benefits of using Synthetic Data, and the efficacy of it. You'll see real-world situations where Synthetic Data removes bias, augments data sets, and makes once private data easily shareable while still protecting the privacy of the initial data set.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Just enough ops for developers</title><link href="https://pyvideo.org/djangocon-us-2022/just-enough-ops-for-developers.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Peter Baumgartner</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/just-enough-ops-for-developers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Most developers don't want to think about operations (aka Ops, DevOps…). PaaS providers (Heroku, Fly, Render, etc.) do an awesome job of getting your app live on the internet, but there's a lot to ops beyond just deployment.&lt;/p&gt;
+&lt;p&gt;This talk will answer the following questions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How much CPU and …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Most developers don't want to think about operations (aka Ops, DevOps…). PaaS providers (Heroku, Fly, Render, etc.) do an awesome job of getting your app live on the internet, but there's a lot to ops beyond just deployment.&lt;/p&gt;
+&lt;p&gt;This talk will answer the following questions:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How much CPU and memory should I give my services?&lt;/li&gt;
+&lt;li&gt;How do I know if the app is overallocated (costing too much money) or underallocated (slow/overloaded)?&lt;/li&gt;
+&lt;li&gt;How can I make my app faster?&lt;/li&gt;
+&lt;li&gt;Will autoscaling help me save costs?&lt;/li&gt;
+&lt;li&gt;What about serverless?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you're a developer and want to run your applications successfully without deep DevOps knowledge, this talk is for you. It will help if you have some basic Django developer experience, but other than that, no specific knowledge is necessary!&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Keeping track of architectural-ish decisions in a sustainable way</title><link href="https://pyvideo.org/djangocon-us-2022/keeping-track-of-architectural-ish-decisions-in-a-sustainable-way.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Juan Saavedra</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/keeping-track-of-architectural-ish-decisions-in-a-sustainable-way.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we will be presenting one way to keep track of decisions made in the context of software development.&lt;/p&gt;
+&lt;p&gt;That certainly reads like a very short talk, yet, how is it that there is no abundance of examples about this in the software development world? Why is …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk, we will be presenting one way to keep track of decisions made in the context of software development.&lt;/p&gt;
+&lt;p&gt;That certainly reads like a very short talk, yet, how is it that there is no abundance of examples about this in the software development world? Why is it that this seemingly simple and mundane thing is so seldom neglected? Is it that burdensome 8 pages long technical decision template that is getting in the way?&lt;/p&gt;
+&lt;p&gt;For a while now, some have stated that the problem is the lack of a suitable method and have proposed some new ways to do so. Architectural Decision Records is one of those and from our experience, it's a breeze to work with. Most importantly, they have shaped the decision process to provide more thoughtful decisions with almost the same amount of effort.&lt;/p&gt;
+&lt;p&gt;We will be covering:
+- A bit about the problem and the motivation for alternatives.
+- Understanding what an Architecture Decision is (spoiler: less transcendental and more flexible than many think).
+- The lightweight process of deciding with an ADR
+- Example based on a case!&lt;/p&gt;
+&lt;p&gt;This talk requires no prior knowledge and welcomes all seniorities. If you have faced the problem before and you are not familiar with the concept of an ADR, this intro talk might provide some new tools on how to improve your decision and documentation process.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Keynote: Women of Open Source Community Africa; Emerging a Star</title><link href="https://pyvideo.org/djangocon-us-2022/keynote-women-of-open-source-community-africa-emerging-a-star.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Ruth Ikegah</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/keynote-women-of-open-source-community-africa-emerging-a-star.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It’s not just a zero-hero story but also about consistency and strategic effort. I began my journey into Open Source through the Women of Open Source Community Africa (WOSCA) initiative in Africa. WOSCA is an initiative of She Code Africa and Open Source Community Africa to promote a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;It’s not just a zero-hero story but also about consistency and strategic effort. I began my journey into Open Source through the Women of Open Source Community Africa (WOSCA) initiative in Africa. WOSCA is an initiative of She Code Africa and Open Source Community Africa to promote a more gender diverse, inclusive, and innovative culture within the African open source ecosystem.&lt;/p&gt;
+&lt;p&gt;Taking on challenges from WOSCA brought me into contact with the open-source community, influencing my career to date. Despite the difficulties I faced in finding an OSS project, using Git, and navigating through project codebases, in less than a year, I launched myself from being a code newbie to being an advocate for beginners, the first African Female GitHub Star, and a Maintainer in the CHAOSS community.&lt;/p&gt;
+&lt;p&gt;I want to share how my strategy, lessons, and paths worked for me and how we can be more proactive about diversifying open source contributions in Africa.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Lessons Learned Teaching Undergraduate Astronomy with a Video Game</title><link href="https://pyvideo.org/djangocon-us-2022/lessons-learned-teaching-undergraduate-astronomy-with-a-video-game.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Andrew Mshar</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/lessons-learned-teaching-undergraduate-astronomy-with-a-video-game.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is for anyone interested in using Django. Since I will cover the beginning of our journey, no prior Django knowledge is needed to get something from this talk. It will help to know the basics of web development and Django, but this knowledge is not required. I …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is for anyone interested in using Django. Since I will cover the beginning of our journey, no prior Django knowledge is needed to get something from this talk. It will help to know the basics of web development and Django, but this knowledge is not required. I also hope more experienced developers will learn something from the lessons we'll share.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Lint All the Things!</title><link href="https://pyvideo.org/djangocon-us-2022/lint-all-the-things.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Luke Lee</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/lint-all-the-things.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many teams document the conventions for their projects. However, documentation gets out of date, forgotten, or sometimes ignored. Simple documentation requires team members to constantly remember all the ‘rules’ for your project. You can better enforce those rules and free up your team members to think about harder problems …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Many teams document the conventions for their projects. However, documentation gets out of date, forgotten, or sometimes ignored. Simple documentation requires team members to constantly remember all the ‘rules’ for your project. You can better enforce those rules and free up your team members to think about harder problems using linting tools like flake8, import linter, and pre-commit.&lt;/p&gt;
+&lt;p&gt;These tools provide tons of useful stuff out of the box, but you can push them so much further with customization. This allows your project to formally document conventions, but also enforce them automatically on every commit, merge, and build. This can make code reviews faster and more focused on the problems your code is meant to solve.&lt;/p&gt;
+&lt;p&gt;This talk will introduce tools like flake8, import linter, and pre-commit along with some of their built-in functionality. Then, we’ll briefly explore some ways to customize them to fit your projects’ specific needs. Some examples of custom linter rules we’ll tour are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Code formatted automatically and uniformly&lt;/li&gt;
+&lt;li&gt;Code doesn’t import across architecture layers violating separation of concerns&lt;/li&gt;
+&lt;li&gt;Common conventions are used&lt;/li&gt;
+&lt;li&gt;Common anti-patterns are avoided&lt;/li&gt;
+&lt;li&gt;Specific layers are fully tested&lt;/li&gt;
+&lt;li&gt;Proper git commit message formatting&lt;/li&gt;
+&lt;li&gt;Merge commits don’t exist in topic/feature branches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, we’ll discuss ways to use those custom linter rules on every commit, merge, and build with continuous integration or git hooks.&lt;/p&gt;
+&lt;p&gt;By the end of the talk, you’ll see several real-world linter rules used on Kraken, which is a large Django-based project used to supply green energy to millions of users across the world. In addition, expect no shortage of ideas for your own projects along the way!&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Method Resolution Order (MRO) in Python</title><link href="https://pyvideo.org/djangocon-us-2022/method-resolution-order-mro-in-python.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Sanyam Khurana</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/method-resolution-order-mro-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine implementing inheritance in a programming language. At first, it looks like all the methods and attributes will be inherited by the child class. While it works for the majority of scenarios, as soon as we hit multiple-inheritance, deciding what method/attribute will take precedence, becomes a  daunting task …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine implementing inheritance in a programming language. At first, it looks like all the methods and attributes will be inherited by the child class. While it works for the majority of scenarios, as soon as we hit multiple-inheritance, deciding what method/attribute will take precedence, becomes a  daunting task.&lt;/p&gt;
+&lt;p&gt;This is also known as the diamond problem. While some languages use an algorithm such as right-first-depth-first search to solve this, Python 2 used Depth-first from Left to Right (DLR) and Python3 uses C3 Linearization Algorithm. Getting hold of this information will help you not succumbing to the common pitfalls with the arrangement of name lookups in a class hierarchy.&lt;/p&gt;
+&lt;p&gt;MRO (Method Resolution Order) defines the class search path for linearizing the class ancestor tree. We’ll also have a look at how C3 algorithm is monotonic as it guarantees that base class declaration is preserved and subclasses appear before base classes. We’ll further explore MRO using &lt;cite&gt;__bases__&lt;/cite&gt;, &lt;cite&gt;__base__&lt;/cite&gt;, &lt;cite&gt;__mro__&lt;/cite&gt; magic methods.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Scheming with CSRF: When platforms manage to break things.</title><link href="https://pyvideo.org/djangocon-us-2022/scheming-with-csrf-when-platforms-manage-to-break-things.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Katie McLaughlin</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/scheming-with-csrf-when-platforms-manage-to-break-things.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When Django 4.0 was released, a small change to the &lt;cite&gt;CSRF_TRUSTED_ORIGINS&lt;/cite&gt; was in the change notes: the scheme must now be provided.&lt;/p&gt;
+&lt;p&gt;This change would cause any deployment on Cloud Run to fail. But not App Engine. 🤔&lt;/p&gt;
+&lt;p&gt;Follow along as we dive into the complexities that Django saves …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When Django 4.0 was released, a small change to the &lt;cite&gt;CSRF_TRUSTED_ORIGINS&lt;/cite&gt; was in the change notes: the scheme must now be provided.&lt;/p&gt;
+&lt;p&gt;This change would cause any deployment on Cloud Run to fail. But not App Engine. 🤔&lt;/p&gt;
+&lt;p&gt;Follow along as we dive into the complexities that Django saves you from, what managed services handle for you (that you have no control over), and what happens when these things don't work as expected. We'll dive into PEP-3333, CGI specifications, WSGI implementations, and what happens when the standards don't actually tell you what to do.&lt;/p&gt;
+&lt;p&gt;Attendees will come away with an understanding of how important it is to set &lt;cite&gt;ALLOWED_HOSTS&lt;/cite&gt; and &lt;cite&gt;CSRF_TRUSTED_ORIGINS&lt;/cite&gt; to prevent all this in the first place.&lt;/p&gt;
+&lt;p&gt;A note on Audience Level: This talk is written to be accessible to beginners, while tackling advanced topics. This speaker is happy to help any attendee lost with the content after the talk in the conference hallway ✨&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Security Best Practices for Django Applications</title><link href="https://pyvideo.org/djangocon-us-2022/security-best-practices-for-django-applications.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Gajendra Deshpande</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/security-best-practices-for-django-applications.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security is of utmost importance to most applications in general and web applications in particular. Django being one of the most popular Python-based web frameworks, applications developed using Django are always on the radar of hackers who try to find the vulnerabilities in the Django application and exploit the …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Security is of utmost importance to most applications in general and web applications in particular. Django being one of the most popular Python-based web frameworks, applications developed using Django are always on the radar of hackers who try to find the vulnerabilities in the Django application and exploit the same for their benefit. Many times security is ignored or not well done due to a lack of awareness and the cost associated with it. But Security is too costly to be ignored. Although Django has many built-in security features, they are not sufficient to safeguard the application.  The talk begins with highlighting the importance of security and identifying security issues in Django applications using the Mozilla Observatory tool, then using the recommendations of the tool to secure them. Next, I will compare and contrast Mozilla's Web Security recommendations and Open Web Application Security Project(OWASP) Top 10 recommendations. Next, I will discuss built-in security features in Django. Finally, I will discuss the configuration settings and issues that may affect the secure deployment of Django applications.&lt;/p&gt;
+&lt;p&gt;Outline
+1. Importance of Security with respect to Web applications (02 Minutes)
+2. Identifying security issues using Mozilla Observatory (05 Minutes)
+3. OWASP Top 10 issues and how to address them in Django (8 Minutes)
+4. Built-in Security features in Django (7 Minutes)
+5. Secure Deployment of Django applications (03 Minutes)&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Sponsored Talk: Production Django on Platform.sh: reaching operational maturity in days, not years</title><link href="https://pyvideo.org/djangocon-us-2022/sponsored-talk-production-django-on-platformsh-reaching-operational-maturity-in-days-not-years.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Chad Carlson</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/sponsored-talk-production-django-on-platformsh-reaching-operational-maturity-in-days-not-years.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Delivering Django applications doesn’t just mean deployment. It means clearly defining
+a delivery lifecycle so that updates and upgrades are consistently tested and packaged,
+infrastructure is reliably provisioned, and deployed production code comes with a level
+of observability that makes responding to problems feasible. Throughout it all, it …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Delivering Django applications doesn’t just mean deployment. It means clearly defining
+a delivery lifecycle so that updates and upgrades are consistently tested and packaged,
+infrastructure is reliably provisioned, and deployed production code comes with a level
+of observability that makes responding to problems feasible. Throughout it all, it needs
+to be secure and increasingly compliant, with those same standards replicated for all of
+the apps important to your organization.&lt;/p&gt;
+&lt;p&gt;This real need can lead organizations to grow “platform teams”, or “Cloud Centers of
+Excellence” - an interdisciplinary group of people tasked with defining, creating and
+maintaining a high level of operational standards so complexity can be managed, drift is
+minimized, and so everything stays relatively stable as technologies deprecate and
+people off- and on-board. The thing is, implementing stability in-house is an expensive
+moving target - in time, money, and environmental impact. Deprecating tools and
+essential people with too many responsibilities leaving the organization will have you
+reinventing the wheel forever.&lt;/p&gt;
+&lt;p&gt;In this session, I’ll show you how Platform.sh can allow your team to deploy updates and
+upgrades that are secure, compliant, stable, and consistently tested. We’ll explore ways
+that our tooling provides insights into your code’s performance, all while providing your
+teams with clearly defined lifecycles and guardrails that ensure standards are replicated
+for all your organization’s apps. And for far less money and time than trying to build it
+in-house.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>The Software Supply Chain and You: How to Build and Ship More Secure Django Apps</title><link href="https://pyvideo.org/djangocon-us-2022/the-software-supply-chain-and-you-how-to-build-and-ship-more-secure-django-apps.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Lisa Tagliaferri</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/the-software-supply-chain-and-you-how-to-build-and-ship-more-secure-django-apps.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will provide a high-level overview of the developer-first open source project, Sigstore, within the Django context. We’ll go through each component of Sigstore, including how to sign a software artifact with Cosign, how Fulcio issues certificates, and finally how developers and end users alike can verify …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will provide a high-level overview of the developer-first open source project, Sigstore, within the Django context. We’ll go through each component of Sigstore, including how to sign a software artifact with Cosign, how Fulcio issues certificates, and finally how developers and end users alike can verify claims made on the Rekor public ledger. We’ll discuss how PyPI is leveraging Sigstore to help with verifying and trusting dependencies we all rely on. Finally, we’ll go through a demonstration of creating, publishing, and signing a containerized Django app.&lt;/p&gt;
+&lt;p&gt;The audience will walk away with an understanding of how they can navigate software security more effectively and be better citizens of open source through implementing recommended security practices.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Tips and tricks for optimizing Django response times</title><link href="https://pyvideo.org/djangocon-us-2022/tips-and-tricks-for-optimizing-django-response-times.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Carmela Beiro</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/tips-and-tricks-for-optimizing-django-response-times.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the last 6 years I've been working on many different projects that needed to manage great amounts of data. I've stumbled upon some common response time issues that could arise while developing production web applications in Django.&lt;/p&gt;
+&lt;p&gt;This talk will present some of these real use cases and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Over the last 6 years I've been working on many different projects that needed to manage great amounts of data. I've stumbled upon some common response time issues that could arise while developing production web applications in Django.&lt;/p&gt;
+&lt;p&gt;This talk will present some of these real use cases and how to prevent and solve them using best practices, most of them proposed by Django in their documentation, and different debug tools. The idea is also to stand out the importance of understanding which queries are performed under the hood in Django in order to determine what's the best solution in case response times need to be improved.&lt;/p&gt;
+&lt;p&gt;We’ll cover:
+What could improve or prevent high response times in the Django admin. How to determine what's the cause if this happens.
+What could improve or prevent high response times with DRF. How to determine what's the cause if this happens.
+Understanding which queries are performed by Django and what we could do to improve them, such as checking the execution plan, which indexes are being used and their order, restricting the attributes in select clauses, filters and joins.
+What other options there are if no improvements could be done (cache, pre-calculated tables with Celery, materialized views)&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Your First Deployment Shouldn't Be So Hard!</title><link href="https://pyvideo.org/djangocon-us-2022/your-first-deployment-shouldnt-be-so-hard.html" rel="alternate"></link><published>2022-10-18T00:00:00+00:00</published><updated>2022-10-18T00:00:00+00:00</updated><author><name>Eric Matthes</name></author><id>tag:pyvideo.org,2022-10-18:/djangocon-us-2022/your-first-deployment-shouldnt-be-so-hard.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;About This Talk&lt;/p&gt;
+&lt;p&gt;When people are first learning Django, they do a lot of work to reach the point where they have a project that works locally. Then they think, &amp;quot;All right! Now I can deploy my project and everyone can see how wonderful it is!&amp;quot;&lt;/p&gt;
+&lt;p&gt;What comes next …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;About This Talk&lt;/p&gt;
+&lt;p&gt;When people are first learning Django, they do a lot of work to reach the point where they have a project that works locally. Then they think, &amp;quot;All right! Now I can deploy my project and everyone can see how wonderful it is!&amp;quot;&lt;/p&gt;
+&lt;p&gt;What comes next? They have to identify a hosting service, hopefully find docs that are up to date enough to use, make a bunch of changes to their project, hope for no typos or misunderstandings, and maybe they'll end up with a deployed project. Many projects languish on local systems because of how difficult it can be to carry out your first deployment.&lt;/p&gt;
+&lt;p&gt;I've written &lt;cite&gt;django-simple-deploy&lt;/cite&gt; as a standalone management command that inspects a local project, and automatically configures the project for deployment to the specified hosting platform. If a project is being tracked with Git and has a requirements file, and you have an account on a hosting platform with their CLI installed, you can deploy in a few steps without ever visiting the hosting platform's docs.&lt;/p&gt;
+&lt;p&gt;This talk will cover:
+- A live demo.
+- Why the Django community needs a project like &lt;cite&gt;django-simple-deploy&lt;/cite&gt;.
+- What does this mean for people who have just finished the Polls tutorial?
+- What does this mean for hosting companies?
+- How it works: What changes does &lt;cite&gt;django-simple-deploy&lt;/cite&gt; make to your project?
+- How it works: How does &lt;cite&gt;django-simple-deploy&lt;/cite&gt; make these changes?
+- Deep dive: How do you test a Django project that acts on another Django project, and targets a remote platform?
+- Open questions (my open questions)
+- Contributing&lt;/p&gt;
+&lt;p&gt;This talk is not just for beginners. Beginners will benefit from knowing about a simple deployment tool, but intermediate developers will probably learn something from peeking under the hood of a management command that acts on another project. And people who teach Django will probably appreciate having a tool that configures a project for deployment, without having to talk their students through all the steps of deploying to a specific platform.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Building a dev-focused learner management system with Django</title><link href="https://pyvideo.org/djangocon-us-2022/building-a-dev-focused-learner-management-system-with-django.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Sheena O'Connell</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/building-a-dev-focused-learner-management-system-with-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will cover:
+- our mission
+- how we ran as an on-premises training provider
+- the utter chaos of our transition to remote (there were about 250 sim cards registered on our MD's name. Lol)
+- how we prioritised what we built
+- how we ended up choosing Django
+- high level view …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The talk will cover:
+- our mission
+- how we ran as an on-premises training provider
+- the utter chaos of our transition to remote (there were about 250 sim cards registered on our MD's name. Lol)
+- how we prioritised what we built
+- how we ended up choosing Django
+- high level view of how we train different kinds of coders
+- where we are heading&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Django from queryset to serialization</title><link href="https://pyvideo.org/djangocon-us-2022/django-from-queryset-to-serialization.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Iuri de Silvio</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/django-from-queryset-to-serialization.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django don´t have an obvious way to avoid N+1 queries during objects serialization and it is easy to miss the right way in large projects.&lt;/p&gt;
+&lt;p&gt;This talk aims to show how I joined a project with a rudimentary serialization solution and improved it to be able to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django don´t have an obvious way to avoid N+1 queries during objects serialization and it is easy to miss the right way in large projects.&lt;/p&gt;
+&lt;p&gt;This talk aims to show how I joined a project with a rudimentary serialization solution and improved it to be able to handle serializations without causing N+1 queries by accident, using django-qserializer (I'm the author).&lt;/p&gt;
+&lt;p&gt;I will discuss other solutions, how to do that with plain Django, how DRF do the same thing, how other libs can contribute or make your code worse.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Django Logging Demystified</title><link href="https://pyvideo.org/djangocon-us-2022/django-logging-demystified.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Lee Trout</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/django-logging-demystified.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is geared toward Django developers of all skill levels. You will come away with a fundamental understanding of logging in Python and Django that will empower you to tackle logging in your applications with confidence.&lt;/p&gt;
+&lt;p&gt;Since Django uses Python's built-in logging capabilities it will start with a …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is geared toward Django developers of all skill levels. You will come away with a fundamental understanding of logging in Python and Django that will empower you to tackle logging in your applications with confidence.&lt;/p&gt;
+&lt;p&gt;Since Django uses Python's built-in logging capabilities it will start with a quick refresher on Python logging before diving into how the logging configuration is exposed in Django settings using the dictionary format.&lt;/p&gt;
+&lt;p&gt;We will then explore customizing logging to support your application throughout the development lifecycle including adding custom handlers and formatters, common logging patterns and practices such as structured logging and how to debug issues when logging isn't behaving as you expected.&lt;/p&gt;
+&lt;p&gt;The talk will close with a brief survey of popular logging platforms and how their services and libraries interact with your logs.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Documenting Django Code in 2022</title><link href="https://pyvideo.org/djangocon-us-2022/documenting-django-code-in-2022.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Eric Holscher</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/documenting-django-code-in-2022.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There have been a number of updates in the Python &amp;amp; Django documentation ecosystem, and this talk is an overview of those changes. The goal is to give everyone in attendance the tools that they need to help their organization or open source project build good documentation culture.&lt;/p&gt;
+&lt;p&gt;Authoring: Historically …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There have been a number of updates in the Python &amp;amp; Django documentation ecosystem, and this talk is an overview of those changes. The goal is to give everyone in attendance the tools that they need to help their organization or open source project build good documentation culture.&lt;/p&gt;
+&lt;p&gt;Authoring: Historically using Sphinx &amp;amp; reStructuredText has been the standard in the Django community, but not using Markdown has been a historical barrier to adoption, especially when adapting standards inside a company that aren't just using Python. With Sphinx having solid Markdown support, this worry has now been mostly removed, and enables the full power of Sphinx without having to learn a new markdown format.&lt;/p&gt;
+&lt;p&gt;Design: Similarly, the style of the documentation that is created has been a very important consideration for most projects and companies. With new Sphinx themes like the Furo theme, it's much easier to have a modern theme that is customizable enough to make it fit into the style of the rest of your site and brand.&lt;/p&gt;
+&lt;p&gt;User experience: Once you have the basic authoring and styles for your documentation, there are a number of ways to improve the user experience of the site. In this section we cover a few of the newest Sphinx extensions that provide a nicer UX for users:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;sphinx-copybotton: A simple extension that adds a copy button to every code block&lt;/li&gt;
+&lt;li&gt;sphinx-tabs: An extension that lets you have nice toggable tabs in your docs, for example multiple language examples&lt;/li&gt;
+&lt;li&gt;sphinx-hoverxref: An extension that gives you automatic tooltips on links to your documentation and other sphinx documentation via intersphinx&lt;/li&gt;
+&lt;li&gt;sphinx-design: A toolkit that adds a large number of design elements easily to your docs (buttons, grids, cards, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Deployment: On the deployment side, there have also been a number of updates to Read the Docs, which is a common deployment platform. They now support pre-build steps that allow you to do a number of things before the building of your documentation. This talk will cover a few examples of valuable pre-build steps like generating API documentation from an external tool, doing a check in your git repo to see if you should even run the build, and a few other options.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>factory_boy: testing like a pro</title><link href="https://pyvideo.org/djangocon-us-2022/factory_boy-testing-like-a-pro.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Camila Maia</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/factory_boy-testing-like-a-pro.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After working using the factory_boy library for over 3 years on a Django monolith containing +230 tables, +2200 relevant files, and +75k relevant lines of code, I've collected and listed all my biggest learnings.&lt;/p&gt;
+&lt;p&gt;In this presentation, I try to share some of my experiences, showing what I consider …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;After working using the factory_boy library for over 3 years on a Django monolith containing +230 tables, +2200 relevant files, and +75k relevant lines of code, I've collected and listed all my biggest learnings.&lt;/p&gt;
+&lt;p&gt;In this presentation, I try to share some of my experiences, showing what I consider to be good practices in using factory_boy in complex systems.&lt;/p&gt;
+&lt;p&gt;Content:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A short introduction of myself&lt;/li&gt;
+&lt;li&gt;factory_boy: what is it? - the definition and the purpose of the tool&lt;/li&gt;
+&lt;li&gt;Example application - a quick overview of the application we will use to demonstrate the best practices&lt;/li&gt;
+&lt;li&gt;How to install factory_boy&lt;/li&gt;
+&lt;li&gt;How to use factory_boy&lt;/li&gt;
+&lt;li&gt;Best Practices:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Factories must represent their models&lt;/li&gt;
+&lt;li&gt;Do not rely on defaults from factories&lt;/li&gt;
+&lt;li&gt;Factories must have only the required data. if the field is nullable -&amp;gt; under traits.&lt;/li&gt;
+&lt;li&gt;Build over create&lt;/li&gt;
+&lt;li&gt;If FK is in the table -&amp;gt; SubFactory. If FK is in the other table -&amp;gt; RelatedFactory + trait&lt;/li&gt;
+&lt;li&gt;Fixtures only to wrap factories in the test file&lt;/li&gt;
+&lt;li&gt;Avoid using fixtures on shared files like conftest&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Wrapping up&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Repository: &lt;a class="reference external" href="https://github.com/camilamaia/factory-boy-best-practices"&gt;https://github.com/camilamaia/factory-boy-best-practices&lt;/a&gt;&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Fighting Climate Change with Django</title><link href="https://pyvideo.org/djangocon-us-2022/fighting-climate-change-with-django.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Erin Mullaney</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/fighting-climate-change-with-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Background on Energy Efficiency&lt;/p&gt;
+&lt;p&gt;Utilities, which are often regulated, are responsible for generating a consistent supply of energy for their consumers at a stable price. Efficiency incentive programs that manage demand help insulate utilities from the costs associated with purchasing raw materials (coal, gas, etc.) and help reduce the …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Background on Energy Efficiency&lt;/p&gt;
+&lt;p&gt;Utilities, which are often regulated, are responsible for generating a consistent supply of energy for their consumers at a stable price. Efficiency incentive programs that manage demand help insulate utilities from the costs associated with purchasing raw materials (coal, gas, etc.) and help reduce the need to build new power plants that are expensive to build, staff, insure, and supply with consumable, non-renewable resources.&lt;/p&gt;
+&lt;p&gt;Utilities are also usually required by law to spend part of the budget they collect on customer bills on something to reduce the demand for energy in their territory. For instance, a utility might offer a $1,500 rebate (AKA incentive) for the sale of an industrial heat pump that is far more efficient than other industrial heat pumps, via an energy efficiency (EE) program. By incentivizing high efficiency equipment, utilities help move the market towards ever more efficient versions of equipment, thus locking in energy savings even after the EE programs end. In this way, we can help utilities and their customers save energy and move the needle away from climate change.&lt;/p&gt;
+&lt;p&gt;Django and Iris&lt;/p&gt;
+&lt;p&gt;What is Iris?
+- Background of what Iris is, a measure matching application that allows multiple utilities from around the country, and vendors, offer rebates to consumers&lt;/p&gt;
+&lt;p&gt;Measure Matching: improving our algorithm by leaps and bounds
+- What are measures? How does an energy efficient water heater purchase turn into a claim for an energy efficiency rebate?
+- How we switched from a long-running loop over individual database records to a single database query and JSON data objects, and what were the performance gains from this change.&lt;/p&gt;
+&lt;p&gt;Multi-tenancy for energy efficiency programs: One website - many different EE programs
+- Energy efficiency program design includes setting up qualifications and assigning incentives that allow the efficiency program to meet energy savings goals.
+- How we moved away from efficiency program-specific (ie. user-specific) code (AKA spaghetti code) in our former system, and how we built flexibility into Iris to allow many different utilities to use a single website.&lt;/p&gt;
+&lt;p&gt;Major Database Architecture Changes 2 years Later
+- In 2021, after Iris had been in production for about 2 years, we had a new feature request that would require a major change to our underlying database structures. Background on the changes we decided to make and how we made them.&lt;/p&gt;
+&lt;p&gt;Reporting on energy efficiency in Iris
+- Proving that energy efficiency programs are in fact saving energy and helping us fight climate change through reporting features&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Herding your database queries: diagnosing, improving and guarding performance of DB interactions in your Django apps</title><link href="https://pyvideo.org/djangocon-us-2022/herding-your-database-queries-diagnosing-improving-and-guarding-performance-of-db-interactions-in-your-django-apps.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Ilya Bass</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/herding-your-database-queries-diagnosing-improving-and-guarding-performance-of-db-interactions-in-your-django-apps.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django ORM allows to seamlessly represent DB data as instances of Python classes (models).  This includes relationships between objects, such that when a model (A) has a foreign key relationship (let’s say field name ‘related_b’) to another model (B), all you need to do to navigate from an …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django ORM allows to seamlessly represent DB data as instances of Python classes (models).  This includes relationships between objects, such that when a model (A) has a foreign key relationship (let’s say field name ‘related_b’) to another model (B), all you need to do to navigate from an instance of A (a) to the related instance of B (b) is “a.related_b”.  By default, this will fetch “b” from the database, which is both amazingly convenient and also terrifying.  I say terrifying with some degree of jest, but also plenty of seriousness that will be appreciated by those of us who know what it’s like to deal with a production database that is melting under load.  While Django provides ways of dealing with this, such as select_related and prefetch_related, as well as cached properties, the need for intervention is not easy to realize until the said database starts melting.  In an application that has any degree of complexity, it would be advisable to guard against excessive queries at some granular level, such as, for example, a request.  The talk will cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to Implement a middleware class that can accumulate and report on different sources of DB queries encountered during a request&lt;/li&gt;
+&lt;li&gt;A few non-trivial examples of excessive queries and showing various practical approaches to eliminating them&lt;/li&gt;
+&lt;li&gt;How to write tests that guard against increases in number of DB queries&lt;/li&gt;
+&lt;li&gt;How to ensure that all your endpoints are covered in the above tests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you are familiar with basic workings of Django models and how they are persisted in relational databases, this talk will give some ideas for how to optimize your database interactions, especially in more complex and high-scale applications.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Keynote: Come on in, the Water’s Fine: Making Python More Approachable</title><link href="https://pyvideo.org/djangocon-us-2022/keynote-come-on-in-the-waters-fine-making-python-more-approachable.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Melanie Arbor</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/keynote-come-on-in-the-waters-fine-making-python-more-approachable.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has grown to be the largest programming language in the world; that’s one big pool. But like all things tech there are too many things that keep folx out of the water, and lots of ways we can get them diving into the deep end.&lt;/p&gt;
+&lt;p&gt;This talk …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python has grown to be the largest programming language in the world; that’s one big pool. But like all things tech there are too many things that keep folx out of the water, and lots of ways we can get them diving into the deep end.&lt;/p&gt;
+&lt;p&gt;This talk shares the perspectives of two developers who benefitted from a community that was welcoming, supportive, and awesome. They’ll share the advice they did and DIDN'T receive; stories from along the way; and how those of us already floating can make room for all the new people wanting to join in on the fun. Grab your floaties, kids—let’s jump in.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Massively increase your productivity on personal projects with comprehensive documentation and automated tests</title><link href="https://pyvideo.org/djangocon-us-2022/massively-increase-your-productivity-on-personal-projects-with-comprehensive-documentation-and-automated-tests.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Simon Willison</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/massively-increase-your-productivity-on-personal-projects-with-comprehensive-documentation-and-automated-tests.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When I worked for a company that grew to have an engineering team spanning three continents I learned that the only way to keep things productive was to embrace comprehensive documentation and automated tests.&lt;/p&gt;
+&lt;p&gt;Then I decided to see if the techniques that worked for software development at large …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When I worked for a company that grew to have an engineering team spanning three continents I learned that the only way to keep things productive was to embrace comprehensive documentation and automated tests.&lt;/p&gt;
+&lt;p&gt;Then I decided to see if the techniques that worked for software development at large team sizes could scale down to my personal projects with a team size of one.&lt;/p&gt;
+&lt;p&gt;I expected that embracing comprehensive testing and documentation for my personal projects would slow me down. To my surprise, they had the opposite effect: I have found that my productivity has increased by an order of magnitude through my embrace of testing and documentation.&lt;/p&gt;
+&lt;p&gt;This has worked even for projects where I am the only maintainer and the only end-user. I find myself able to actively maintain dozens of projects by acting like I'm part of a much larger team. I can return to a project a year later having forgotten everything about it and be up-to-speed and productively hacking on changes in just a few minutes.&lt;/p&gt;
+&lt;p&gt;I'll talk you through my test and documentation-driven development process, and give you a whole bag of actionable tricks that you can apply to both your personal projects and your work in larger teams.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Miracles in Anarchy</title><link href="https://pyvideo.org/djangocon-us-2022/miracles-in-anarchy.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Timothy Allen</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/miracles-in-anarchy.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The amazing layers of technology that are required to deliver online experiences can be
+staggering and feel miraculous. It is easy to become overwhelmed, feeling we should
+understand all of these layers, and end up wallowing in impostor syndrome. This talk
+will take an opportunity to poke fun at …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The amazing layers of technology that are required to deliver online experiences can be
+staggering and feel miraculous. It is easy to become overwhelmed, feeling we should
+understand all of these layers, and end up wallowing in impostor syndrome. This talk
+will take an opportunity to poke fun at some of the more absurd moments in my own life,
+and celebrate the miracle that &lt;strong&gt;anything&lt;/strong&gt; we do actually works at all!&lt;/p&gt;
+&lt;p&gt;We work in ecosystems that are often anarchies. What can our communities learn from
+some of the most successful anarchies in human history, addiction recovery programs?
+There may be more parallels than you think!&lt;/p&gt;
+&lt;p&gt;Join Tim on a journey where we pan the camera around to the third-person perspective,
+and laugh at ourselves a bit. It'll be therapeutic: laughter is the best cure for
+impostor syndrome!&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Nurturing a "Legacy" Codebase</title><link href="https://pyvideo.org/djangocon-us-2022/nurturing-a-legacy-codebase.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Karen Tracey</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/nurturing-a-legacy-codebase.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will begin with a discussion of what is “legacy code” and why it tends to be feared. Then, ways of evaluating a codebase to determine if it is worth nurturing or not will be touched on. The bulk of the talk will focus on techniques for nurturing …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will begin with a discussion of what is “legacy code” and why it tends to be feared. Then, ways of evaluating a codebase to determine if it is worth nurturing or not will be touched on. The bulk of the talk will focus on techniques for nurturing a legacy codebase, spanning from changes to the code itself (e.g. incremental modernization, automated testing) to ensuring that the past “story” of the code is accessible to all working on maintaining and improving it.  Hopefully by the end of the talk developers who previously would have avoided legacy code at all costs would be open to taking on the challenge.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Opening Remarks</title><link href="https://pyvideo.org/djangocon-us-2022/opening-remarks.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Logan Kilpatrick</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/opening-remarks.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Logan will officially open DjangoCon US and introduce our opening keynote speaker, Ruth Ikegah.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Orientation and Welcome</title><link href="https://pyvideo.org/djangocon-us-2022/orientation-and-welcome.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Kojo Idrissa</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/orientation-and-welcome.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you:
+-  attending your first tech conference?
+-  attending DjangoCon US alone?
+-  a member of an underrepresented group&lt;/p&gt;
+&lt;p&gt;If you answered &amp;quot;yes&amp;quot; to any or all of those, Orientation is for you!&lt;/p&gt;
+&lt;p&gt;DjangoCon US is packed with awesome people and awesome information. But that much awesome can be overwhelming.  Orientation …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you:
+-  attending your first tech conference?
+-  attending DjangoCon US alone?
+-  a member of an underrepresented group&lt;/p&gt;
+&lt;p&gt;If you answered &amp;quot;yes&amp;quot; to any or all of those, Orientation is for you!&lt;/p&gt;
+&lt;p&gt;DjangoCon US is packed with awesome people and awesome information. But that much awesome can be overwhelming.  Orientation is designed to help you get your bearings on all the awesome. Living your best life is up to you, but we &lt;em&gt;can&lt;/em&gt; help you have your best DjangoCon US.&lt;/p&gt;
+&lt;p&gt;More details will be published in a blog post. We look forward to helping you start your DjangoCon US journey in the best way.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Predict Lightning Strikes using Django and AWS</title><link href="https://pyvideo.org/djangocon-us-2022/predict-lightning-strikes-using-django-and-aws.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Calvin Hendryx-Parker</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/predict-lightning-strikes-using-django-and-aws.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Predicting a lightning strike with 99.6% accuracy requires advanced algorithms, expert developers and data — a lot of data. FLASH Scientific Technology pulls data from a variety of sources including weather radars and location-specific information like altitude, moisture, wind direction and temperature. It was imperative that FLASH develop an …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Predicting a lightning strike with 99.6% accuracy requires advanced algorithms, expert developers and data — a lot of data. FLASH Scientific Technology pulls data from a variety of sources including weather radars and location-specific information like altitude, moisture, wind direction and temperature. It was imperative that FLASH develop an application that could pull, read and process the data both quickly and accurately.&lt;/p&gt;
+&lt;p&gt;In this case study and product demo, you’ll learn how to take an algorithm and idea from a Jupyter Notebook to production ready and cloud native.&lt;/p&gt;
+&lt;p&gt;(1) Optimize Python code structure
+-- As the Zen of Python states, “simple is better than complex.” The first part of this presentation will focus on the importance of reviewing and simplifying code to ensure faster data processing speeds and that the code is easy to both read and duplicate.
+(2) Build fast, efficient and accurate APIs with Django
+--Once the code is optimized, it’s ready for production. You’ll learn how we built an interface that could both request data from various web services and quickly make accurate predictions using FLASH’s proprietary and patent-issued algorithm. Specifically, this talk will feature:
+1. best practices and lessons learned, including insight into why we stored all of the Django application elements in a single library;
+2. why all of the data needed to be pulled directly from the cache; and
+3. why the algorithm was kept separate.
+(3) Deploy serverless and scalable applications using AWS Lambda and AWS Fargate
+--Finally, this talk will:
+1. showcase how the Django application we built integrates seamlessly with the serverless components of AWS including AWS Lambda and AWS Fargate;
+2. unveil the secrets of building Python Container Images for AWS Lambda (Hint: by using container images for Lambda code vs. manually submitting .zip files we saved significant time, money, and effort. We also reduced errors associated with manual changes.);
+3. review the importance of building applications to be serverless from the beginning.
+(4) Product Demo
+-- Today, the application — which initially took minutes to make lightning strike predictions with 99.6% accuracy and a 15- to 25-minute lead time (saving time, money and lives) — can predict when and where lightning will strike in just seconds. The presentation will conclude with a demo of the product, which is deployed with GitLab CI/CD merge request pipeline.&lt;/p&gt;
+&lt;p&gt;Both beginner and intermediate developers will benefit from this talk, and it is ideal for developers wanting to learn how to use Django for complex predictive-technology projects.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Sponsored Talk: Make an IMPACT with Django</title><link href="https://pyvideo.org/djangocon-us-2022/sponsored-talk-make-an-impact-with-django.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Calvin Hendryx-Parker</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/sponsored-talk-make-an-impact-with-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you using technology to make the world a better place? We all have a role to play. As technologists, we have the opportunity to find solutions for complex challenges — and Django has the superpowers to meet the need. Django is used every day to bring impressive, purposeful and …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Are you using technology to make the world a better place? We all have a role to play. As technologists, we have the opportunity to find solutions for complex challenges — and Django has the superpowers to meet the need. Django is used every day to bring impressive, purposeful and transformative projects to life. Calvin Hendryx-Parker, Six Feet Up CTO and AWS Community Hero, will discuss what makes a project IMPACTFUL. He’ll share examples of how Django has been used to: predict when and where lightning will strike in just seconds, map forest fire trajectory, streamline battery energy storage operations and more.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>The Django Admin Is Your Oyster: Let’s Extend Its Functionality</title><link href="https://pyvideo.org/djangocon-us-2022/the-django-admin-is-your-oyster-lets-extend-its-functionality.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Adrienne Franke</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/the-django-admin-is-your-oyster-lets-extend-its-functionality.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ll start out simple by speeding up search results for big models so you can traverse through 40 million row tables in seconds. We’ll continue on and gain a deeper understanding of the &lt;cite&gt;clean&lt;/cite&gt;, &lt;cite&gt;save_model&lt;/cite&gt; and the &lt;cite&gt;__init__&lt;/cite&gt; functions as these functions are where a lot of …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;We’ll start out simple by speeding up search results for big models so you can traverse through 40 million row tables in seconds. We’ll continue on and gain a deeper understanding of the &lt;cite&gt;clean&lt;/cite&gt;, &lt;cite&gt;save_model&lt;/cite&gt; and the &lt;cite&gt;__init__&lt;/cite&gt; functions as these functions are where a lot of customization happens in the Admin. I’ll show you how to use multiple databases within one Admin website and even customize the basic Admin templates so you can have documentation right there on the CRUD pages.&lt;/p&gt;
+&lt;p&gt;By the end of the talk, you’ll have a new mindset and a toolkit for how to customize the Django Admin to your unique needs.&lt;/p&gt;
+&lt;dl class="docutils"&gt;
+&lt;dt&gt;If you attend this talk, you’ll walk away with the following:&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;An understanding of how key functions work behind the scenes&lt;/li&gt;
+&lt;li&gt;The ability to go a step beyond the basic out-of-the-box setup and functionality&lt;/li&gt;
+&lt;li&gt;Confidence that you can implement custom features for your team&lt;/li&gt;
+&lt;li&gt;A sense of excitement about the Django Admin!&lt;/li&gt;
+&lt;li&gt;A new mindset for how to customize the Django Admin to your needs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>The Django Jigsaw Puzzle: Aligning All the Pieces</title><link href="https://pyvideo.org/djangocon-us-2022/the-django-jigsaw-puzzle-aligning-all-the-pieces.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Will Vincent</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/the-django-jigsaw-puzzle-aligning-all-the-pieces.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learning Django often feels like trying to solve an immense jigsaw puzzle with the pieces all turned upside down. It's hard to align all the pieces when you don't know how they should fit together.&lt;/p&gt;
+&lt;p&gt;This talk is based on over a decade of using and teaching Django professionally …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learning Django often feels like trying to solve an immense jigsaw puzzle with the pieces all turned upside down. It's hard to align all the pieces when you don't know how they should fit together.&lt;/p&gt;
+&lt;p&gt;This talk is based on over a decade of using and teaching Django professionally. I will cover all the major puzzle pieces of Django: how they work independently and together. I don’t expect anyone to have mastery over all these pieces--I certainly don’t--but knowing the overall picture of Django and what the pieces are will provide a roadmap for learning and improving your Django abilities no matter your current level.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Type checking your Django code with django-types and Pyright</title><link href="https://pyvideo.org/djangocon-us-2022/type-checking-your-django-code-with-django-types-and-pyright.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Kyle Bebak</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/type-checking-your-django-code-with-django-types-and-pyright.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Among the topics we'll cover are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A brief history of Django type stubs&lt;/li&gt;
+&lt;li&gt;Which type stubs, and which type checker: &lt;cite&gt;django-stubs&lt;/cite&gt; or &lt;cite&gt;django-types&lt;/cite&gt;, &lt;cite&gt;mypy&lt;/cite&gt; or &lt;cite&gt;pyright&lt;/cite&gt;?&lt;/li&gt;
+&lt;li&gt;Starting a project with type hints, or adding type hints to an existing project&lt;/li&gt;
+&lt;li&gt;Where to focus: adding type hints to Django models …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Among the topics we'll cover are:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;A brief history of Django type stubs&lt;/li&gt;
+&lt;li&gt;Which type stubs, and which type checker: &lt;cite&gt;django-stubs&lt;/cite&gt; or &lt;cite&gt;django-types&lt;/cite&gt;, &lt;cite&gt;mypy&lt;/cite&gt; or &lt;cite&gt;pyright&lt;/cite&gt;?&lt;/li&gt;
+&lt;li&gt;Starting a project with type hints, or adding type hints to an existing project&lt;/li&gt;
+&lt;li&gt;Where to focus: adding type hints to Django models and views&lt;/li&gt;
+&lt;li&gt;Workarounds for when the type stubs aren't quite right&lt;/li&gt;
+&lt;li&gt;Configuring &lt;cite&gt;pyright&lt;/cite&gt; for type checking: running &lt;cite&gt;pyright&lt;/cite&gt; on the host, in a container, on a CI server&lt;/li&gt;
+&lt;li&gt;&lt;cite&gt;pyright&lt;/cite&gt; and LSP clients: turning your text editor (Vim, Emacs, Sublime Text, VS Code, etc) into a full-fledged Python/Django IDE&lt;/li&gt;
+&lt;li&gt;Type hints for documentation, code navigation, and refactoring&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;There will be live coding in the presentation. All code is open-sourced on GitHub, and links will be provided.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Why I Didn't Start With Django</title><link href="https://pyvideo.org/djangocon-us-2022/why-i-didnt-start-with-django.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Mario Munoz</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/why-i-didnt-start-with-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When I started learning Python, it was exciting&amp;amp;mdash;uncharted territory ahead. With powerful tools at my fingertips and plenty of ideas, they needed to find a place to land. A web framework, perhaps?&lt;/p&gt;
+&lt;p&gt;I bombarded my search engine with variations of &amp;quot;which Python framework should I use.&amp;quot; This …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When I started learning Python, it was exciting&amp;amp;mdash;uncharted territory ahead. With powerful tools at my fingertips and plenty of ideas, they needed to find a place to land. A web framework, perhaps?&lt;/p&gt;
+&lt;p&gt;I bombarded my search engine with variations of &amp;quot;which Python framework should I use.&amp;quot; This led me to several &amp;quot;batteries included&amp;quot; vs &amp;quot;microframework&amp;quot; comparisons, with varying degrees of usefulness.&lt;/p&gt;
+&lt;p&gt;This talk will highlight some reasons I ultimately decided to build my blog, [Python By Night](&lt;a class="reference external" href="https://www.pythonbynight.com"&gt;https://www.pythonbynight.com&lt;/a&gt;), on the backbone of FastAPI, and where I am today on my Python journey.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>Working with time series data using Django and Timescale</title><link href="https://pyvideo.org/djangocon-us-2022/working-with-time-series-data-using-django-and-timescale.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Joaquín Scocozza</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/working-with-time-series-data-using-django-and-timescale.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For the last two years we’ve been working on a software development project based on displaying and processing telemetry data for multiple services. The product is a cloud-based, heavy-data application that provides users with key insights after processing a variety of metrics.&lt;/p&gt;
+&lt;p&gt;In the app's first development phase …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;For the last two years we’ve been working on a software development project based on displaying and processing telemetry data for multiple services. The product is a cloud-based, heavy-data application that provides users with key insights after processing a variety of metrics.&lt;/p&gt;
+&lt;p&gt;In the app's first development phase, we explored the best options for gathering and processing high volume streams of data and presenting it in an efficient way. We finally opted for using Timescale, a relational PostgreSQL based time series database that combined with Django was a successful choice for this project.&lt;/p&gt;
+&lt;p&gt;In this talk we want to share the experience of creating a time series system based on Django and Timescale, our learning points and challenges faced in the process.&lt;/p&gt;
+&lt;p&gt;We’ll cover:
+- Business case context
+- Basics of time series data and different alternatives we evaluated
+- Quick overview of the solution, the Timescale database and how we managed to still leverage the power of Django
+- Review several examples of what went smoothly and what didn't&lt;/p&gt;
+&lt;p&gt;This is an entry level talk for people interested in time series, even those who are unfamiliar with the concept, but want to learn. Basic Django and database knowledge is recommended but all people are welcome.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry><entry><title>You Don't Need Containers to Run Django in Production</title><link href="https://pyvideo.org/djangocon-us-2022/you-dont-need-containers-to-run-django-in-production.html" rel="alternate"></link><published>2022-10-17T00:00:00+00:00</published><updated>2022-10-17T00:00:00+00:00</updated><author><name>Eduardo Felipe Castegnaro</name></author><id>tag:pyvideo.org,2022-10-17:/djangocon-us-2022/you-dont-need-containers-to-run-django-in-production.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While containers have a lot of advantages they can also bring a lot complexity into deploying Django to production, but you don't need them to have a stable, reliable site.&lt;/p&gt;
+&lt;p&gt;To get started, you need to choose a web server. In this talk we'll compare synchronous servers, like gunicorn …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;While containers have a lot of advantages they can also bring a lot complexity into deploying Django to production, but you don't need them to have a stable, reliable site.&lt;/p&gt;
+&lt;p&gt;To get started, you need to choose a web server. In this talk we'll compare synchronous servers, like gunicorn and cherrypy, to asynchronous servers such as Daphne and Uvicorn. We'll look at benchmarks, how they are configured, how they are managed and what they do to avoid resource contention and improve reliability of your site.&lt;/p&gt;
+&lt;p&gt;We'll also take a look at how your server of choice can be restarted during deploy by using supervisord or systemd.&lt;/p&gt;
+&lt;p&gt;By the end you'll be more informed on how to deploy your code, the complexities associated with it and have a set of best practices that can be used to bootstrap your production environment.&lt;/p&gt;
+</content><category term="DjangoCon US 2022"></category></entry></feed>

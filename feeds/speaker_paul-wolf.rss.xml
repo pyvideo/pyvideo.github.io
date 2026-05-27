@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Paul Wolf</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 03 Jun 2021 00:00:00 +0000</lastBuildDate><item><title>Clean Architecture with Django Rethinking basic assumptions</title><link>https://pyvideo.org/djangocon-europe-2021/clean-architecture-with-django-rethinking-basic-assumptions.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Clean Architectures and related architecture patterns like Hexagonal and Onion architecture are intended to provide more maintainable code and lower technical debt.&lt;/p&gt;
+&lt;p&gt;Two parts of Django's architecture, the Django ORM and 3rd party Django REST Frameworks, make it difficult to get the benefits of a Clean Architecture. We look at ways we can achieve the benefits of Clean Architecture (CA) while using the Django framework.&lt;/p&gt;
+&lt;p&gt;What are the various Clean Architecture Patterns and what do they promise to do for you?&lt;/p&gt;
+&lt;p&gt;What is the ideal architecture pattern that Django supports?&lt;/p&gt;
+&lt;p&gt;Problem 1: most Object Relational Mappings including Django's do two things:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Specify the persistence model: normalisation of data, efficient storage, efficient lookup, etc.&lt;/li&gt;
+&lt;li&gt;Specify the business entity domain: what business objects does the domain manage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The problem is that these are two different goals handled in one framework component, the ORM.&lt;/p&gt;
+&lt;p&gt;Problem 2: REST frameworks have a heavy reliance on the ORM. This ties together the business domain to storage semantics making it hard to achieve some of the benefits of a Clean Architecture.&lt;/p&gt;
+&lt;p&gt;Two solutions paths exist:&lt;/p&gt;
+&lt;p&gt;Django can serve a clean architecture-like paradigm, under specific circumstances. But there is some confusion about what CA looks like in practice that causes developers to go for solutions that are the opposite of CA.&lt;/p&gt;
+&lt;p&gt;The other solution is a more fundamental rethink of how to implement and use ORMs and REST frameworks (including remote request frameworks like GraphQL).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Paul Wolf</dc:creator><pubDate>Thu, 03 Jun 2021 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2021-06-03:/djangocon-europe-2021/clean-architecture-with-django-rethinking-basic-assumptions.html</guid><category>DjangoCon Europe 2021</category><category>Django</category><category>DjangoConEU</category><category>djangoconeu2021</category></item></channel></rss>

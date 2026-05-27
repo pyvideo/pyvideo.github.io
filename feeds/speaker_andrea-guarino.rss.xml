@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Andrea Guarino</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 11 Jul 2022 00:00:00 +0000</lastBuildDate><item><title>Managing the code quality of your project. Leave the past behind: Focus on new code</title><link>https://pyvideo.org/europython-2022/managing-the-code-quality-of-your-project-leave-the-past-behind-focus-on-new-code.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;EuroPython 2022 - Managing the code quality of your project. Leave the past behind: Focus on new code. - presented by Andrea Guarino
+
+[Wicklow Hall 1 on 2022-07-13]
+
+
+As developers we often have to deal with legacy projects and, at the same time, we want to keep the quality and security of our deliverables under control.
+
+As soon as we start running some linter (like Pylint or Flake8) on such a legacy project, there is a huge number of violations. To handle those issues, we might want to start by only looking at the changed files in a pull request instead of the entire project, for example by using _git diff_
+
+_pylint `git diff --name-only --diff-filter=d`_
+
+During this talk I’d like to push this concept a bit further and outline an approach and philosophy that can be helpful in dealing with code quality : Clean as you code.
+
+1. What is "Clean as you code"?
+- Not only about violations: It can be extended to code coverage and all code metrics in general.
+- The quality you want to measure should be based only on recent changes.
+
+2. "Clean as you code" matters?
+- It helps your team stay focused on delivering new features
+- It helps you deal with technical debt incrementally: Sometimes you might need to modify old code, and, at that point, you might be able to fix existing violations
+
+3. How to apply "Clean as you code"?
+- Shaping a *quality gate* in order to define code quality standards for the software delivered by your team today
+- Using appropriate tools (like SonarQube)
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrea Guarino</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/europython-2022/managing-the-code-quality-of-your-project-leave-the-past-behind-focus-on-new-code.html</guid><category>EuroPython 2022</category></item></channel></rss>

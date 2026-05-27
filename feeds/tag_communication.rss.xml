@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - communication</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Efficient Python development with small teams</title><link>https://pyvideo.org/europython-2013/efficient-python-development-with-small-teams.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Marc-André Lemburg</dc:creator><pubDate>Fri, 05 Jul 2013 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2013-07-05:/europython-2013/efficient-python-development-with-small-teams.html</guid><category>EuroPython 2013</category><category>quality-assurance</category><category>project-management</category><category>business</category><category>communication</category><category>testing</category><category>principles</category><category>application-design</category><category>design</category><category>software-engineering</category><category>strategies</category><category>best-practices</category><category>architecture</category></item><item><title>From HTTP to Kafka-based microservices</title><link>https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wojciech Rząsa</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/from-http-to-kafka-based-microservices.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Communication</category><category>Distributed Systems</category></item><item><title>Software patterns for productive teams</title><link>https://pyvideo.org/europython-2019/software-patterns-for-productive-teams.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Software development is a team game.&lt;/p&gt;
+&lt;p&gt;When we want to deliver more work, one of the variables that we can
+change is the team size. But as we all know, increasing the team size
+does not automatically translate into increased productivity &amp;amp; more
+features shipped.&lt;/p&gt;
+&lt;p&gt;If things are left unmanaged, people can step on each other toes, block
+each other &amp;amp; generally decrease the overall productivity of a given
+software project.&lt;/p&gt;
+&lt;p&gt;In this talk we'll identify different problems teams can face &amp;amp; see how
+we can solve them using different strategies &amp;amp; patterns.&lt;/p&gt;
+&lt;p&gt;In the end, we want to enable the team to perform better &amp;amp; ship features
+with high confidence. We want enable the team &amp;amp; put its potential into
+building good software.&lt;/p&gt;
+&lt;p&gt;Problems we are going to cover:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Constant merge conflicts / working in the same files&lt;/li&gt;
+&lt;li&gt;Blocking each other on different features / Feature deadlock&lt;/li&gt;
+&lt;li&gt;Constantly switching between bugfixing &amp;amp; feature development&lt;/li&gt;
+&lt;li&gt;Constant regressions and things breaking down&lt;/li&gt;
+&lt;li&gt;Fighting with local setup &amp;amp; not being able to properly test things,
+especially when working with 3rd parties&lt;/li&gt;
+&lt;li&gt;Merge strategies &amp;amp; improving the work with git &amp;amp; GitHub&lt;/li&gt;
+&lt;li&gt;Communication between team members &amp;amp; ego fights&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For each problem, we are going to propose different solutions with
+provided real-life examples from our experience &amp;amp; projects.&lt;/p&gt;
+&lt;p&gt;The examples show are going to be in the context of large Python /
+Django projects.&lt;/p&gt;
+&lt;p&gt;This talk is the natural sequel of the following talks from previous
+EuroPythons:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;EuroPython 2017 - Practical Debugging - Tips, Tricks and Ways to
+think - &lt;a class="reference external" href="https://www.youtube.com/watch?v=9Ys4gCUtTh8"&gt;https://www.youtube.com/watch?v=9Ys4gCUtTh8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;EuroPython 2018 - Django structure for scale and longevity -
+&lt;a class="reference external" href="https://www.youtube.com/watch?v=yG3ZdxBb1oo"&gt;https://www.youtube.com/watch?v=yG3ZdxBb1oo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Radoslav Georgiev</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/software-patterns-for-productive-teams.html</guid><category>EuroPython 2019</category><category>Abstractions</category><category>Best Practice</category><category>Communication</category><category>Django Projects</category><category>Management</category></item><item><title>How To Build a Python Microservice Without Losing a Job</title><link>https://pyvideo.org/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarcastic talk, sharing real-life experience on both technical and
+social aspects of doing an architecture migration to microservices
+without losing a job.&lt;/p&gt;
+&lt;p&gt;Any change in software architecture is a significant time investment.
+Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;I would like to share typical pitfalls of choosing a framework stack,
+communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</guid><category>EuroPython 2019</category><category>Architecture</category><category>Best Practice</category><category>Communication</category><category>Distributed Systems</category><category>Microservices</category></item><item><title>Opt Out of Online Sexism – Open Source Activism</title><link>https://pyvideo.org/europython-2019/opt-out-of-online-sexism-open-source-activism.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;&amp;quot;Although people of all genders can experience violence and abuse
+online, the abuse experienced by women is often sexist or misogynistic
+in nature, and online threats of violence against women are often
+sexualized and include specific references to women’s bodies. &amp;quot; -
+Amnesty International. This abuse pushes women offline, affecting their
+social well-being, representation and economic potential.&lt;/p&gt;
+&lt;p&gt;In this talk I will discuss how we plan to help resolve this with our
+browser extension, Opt Out. I will discuss the online global tragedy
+that is online sexual harassment, our idea and where we’re at with
+current implementation. I will also talk about what it’s like to build
+an open source activism project, one which aims to be lead by the
+community it’s trying to protect.&lt;/p&gt;
+&lt;p&gt;We will cover current research and results from our own engagement with
+the community, where the idea came from and challenges we have faced and
+plan to face in the future. I will also dive into the intricate world of
+natural language processing (NLP) for online harassment and talk about
+balancing state-of-the-art data science with web development in an open
+source community, one being managed by someone relatively new to tech.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Teresa Ingram</dc:creator><pubDate>Wed, 10 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-10:/europython-2019/opt-out-of-online-sexism-open-source-activism.html</guid><category>EuroPython 2019</category><category>Communication</category><category>Data Science</category><category>Open-Source</category><category>TDD</category><category>Web</category></item><item><title>Community-oriented conference status during COVID-19</title><link>https://pyvideo.org/europython-2020/community-oriented-conference-status-during-covid-19.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;what can we do during/after COVID-19&lt;/p&gt;
+&lt;p&gt;due to COVID-19(Coronavirus disease 2019), we changed our life, social, and our community. most of us are engineer/organizer/designer/contributor with passion to communicate to everyone who has similar background. in COVID-19 disease, we are forced to reduce social event for keeping safe. in case from China/Korea/Malaysia.... we can see the number is decreasing and be controlled after each government announced new policy: Face masked, Social Distancing, Quarantine, and Isolation. it meant we can not go to some place to hangout like usual, of course we have a lot of SMS tools/platform/media to keep relationship with our love, but for community, we easily lost our passion. and now, I want to share some doing/status of communities in Asia or other region I knew during/after COVID-19.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Noah Chen</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/community-oriented-conference-status-during-covid-19.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Communication</category><category>Community</category><category>EuroPython</category><category>freelancing</category></item><item><title>Creating an inclusive team culture in times of change</title><link>https://pyvideo.org/europython-2020/creating-an-inclusive-team-culture-in-times-of-change.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What can we do as technical leaders to make sure everyone feels accepted and build a supportive team culture during the turbulent times? This talk shares concrete steps that we can take to lead by example, and navigate our team through crisis:&lt;/p&gt;
+&lt;p&gt;Prioritizing Safety &amp;amp; Self-care
+Revisit our Expectations
+Effective Communication
+Lead Inclusive Meetings
+Check our Biases&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yenny Cheung</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/creating-an-inclusive-team-culture-in-times-of-change.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Communication</category><category>Community</category><category>Diversity</category><category>Management</category></item><item><title>Effective Code Reviews</title><link>https://pyvideo.org/europython-2020/effective-code-reviews.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The edge between hard skills and soft skills&lt;/p&gt;
+&lt;p&gt;Does your company uses code review? In this talk I will demonstrate why it should start using them immediately, share the many benefits and situations we've gone through, besides good practices that should be used for effective code reviews, that add quality to the product/service that is being delivered.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vinicius Gubiani Ferreira</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/effective-code-reviews.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Agile</category><category>Best Practice</category><category>Clean Code</category><category>Code Analysis</category><category>Communication</category></item><item><title>Roadmap to an Open Source Artificial Pancreas &amp; Diabetes monitoring with Flask</title><link>https://pyvideo.org/europython-2020/roadmap-to-an-open-source-artificial-pancreas-diabetes-monitoring-with-flask.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Nightscout + Python + Voice + SMS - Using tech for good!&lt;/p&gt;
+&lt;p&gt;Open Source has crossed frontiers and is widely used to solve problems in the health &amp;amp; science fields. In this talk we’ll learn about the many moving parts of continuous glucose monitoring for type 1 Diabetes as part of the open-source artificial pancreas project and building a notifier for the most used OSS continuous glucose monitoring dashboard: Nightscout.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Diana Rodriguez Manrique</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/roadmap-to-an-open-source-artificial-pancreas-diabetes-monitoring-with-flask.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Beginners</category><category>Communication</category><category>DIY</category><category>Development</category><category>Open-Source</category></item><item><title>Communicating Between Microservices</title><link>https://pyvideo.org/pycon-italia-2019/communicating-between-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Microservices are not just a bunch of little apps, it’s a connected
+ecosystem.&lt;/p&gt;
+&lt;p&gt;Within a monolith, code modules invoke each other simply by using
+language- level function calls, but in a microservice architecture,
+communication between components does not come for free anymore.
+Choosing not just a protocol, but a paradigm for communication between
+endpoints is considered the most tricky issue of microservice approach.&lt;/p&gt;
+&lt;p&gt;Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;Having a bunch of smooth as well as tricky microservice migrations in
+the past, I would like to share typical pitfalls of choosing a framework
+stack, communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1638"&gt;https://python.it/feedback-1638&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 17:15 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-04:/pycon-italia-2019/communicating-between-microservices.html</guid><category>PyCon Italia 2019</category><category>MessageQueues</category><category>microservices</category><category>HTTP</category><category>communication</category><category>architecture</category><category>websockets</category></item><item><title>Addestramento d'emergenza alla fase di Discovery per sviluppatori frustrati</title><link>https://pyvideo.org/pycon-italia-2022/addestramento-demergenza-alla-fase-di-discovery-per-sviluppatori-frustrati.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Addestramento d’emergenza alla fase di Discovery per sviluppatori
+frustrati - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Quante notti avete passato a produrre codice ‘importantissimo’ poi mai
+andato in produzione? E la vostra idea di app del secolo che non ha mai
+portato a nulla? Quanti soldi buttati per produrre software mai
+utilizzato? Troppi. Ma non deve andare per forza così,e la chiave è in
+una parola: Discovery! Come programmatori, tutti noi abbiamo provato la
+frustrazione di lavorare col massimo dell’impegno su software che poi
+nella migliore delle ipotesi non hanno prodotto i risultati sperati, e
+nella peggiore non sono neanche mai andati in produzione. Giorni (e
+quindi soldi) buttati a realizzare cose che non andavano fatte, a
+sviluppare “requisiti” imposti dall’alto senza capirne il contesto.
+Usarci come ingranaggi in una fabbrica di funzionalità, invece che come
+specialisti di team che puntino a risolvere dei problemi ed avere un
+impatto reale sul mondo, è uno spreco senza precedenti. Scrivere codice
+nel modo corretto, fare i test, impostare pipeline di Continuous
+Integration è solo una parte del nostro lavoro, ma se quel codice in
+primis non andava neanche scritto, sarà tutto inutile. Da parecchi anni
+ormai sono nate metodologie e strumenti che aiutano a risolvere questo
+problema, dal Design Thinking al Lean Startup, l’Impact Mapping o
+l’Opportunity Solution Tree. Non è una roba solo da Designer o Product
+Manager, gli sviluppatori devono essere i protagonisti di questo
+processo cosiddetto di Discovery anche se spesso se ne tengono alla
+larga. Questo addestramento è diviso in 3 mini lezioni di 10 minuti, per
+definire il contesto, la teoria e la pratica di questa fase, con
+l’obiettivo di dare gli strumenti e qualche spunto per iniziare questa
+piccola rivoluzione, a livello personale e di team.&lt;/p&gt;
+&lt;p&gt;Speaker: Gabriele Giaccari&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gabriele Giaccari</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/addestramento-demergenza-alla-fase-di-discovery-per-sviluppatori-frustrati.html</guid><category>PyCon Italia 2022</category><category>agile</category><category>best practice</category><category>communication</category></item><item><title>Exploring Patterns to Debug your Life</title><link>https://pyvideo.org/pycon-italia-2022/exploring-patterns-to-debug-your-life.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Exploring Patterns to Debug your Life - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Just as in code, in our daily life we have patterns that can be
+returning patterns. Can we debug our life, via debugging skills we
+learned in coding? Come to experience this talk to learn how to debug
+your life! In daily life we have patterns and even returning patterns,
+at least if you take time to recognize some parts happening in your
+life. This can be in your career, customer relations, and even in
+personal and family relations. Nice patterns lead to success and
+inspiration. Bad pattens leads to bore-out, burn-out or even worse… In
+this talk Dennie and special guest speaker Miriam – a well-known Belgian
+speaker and experience expert in Autism – will take you on a journey
+where they explain life patterns via metaphors in the tech/ developer
+world. You will learn how to recognize life patterns exactly as in code,
+engineering, and business patterns. When you recognize the patterns it’s
+finally time to learn to debug those patterns! Just as you debug code
+patterns with changing the source code, you learn to debug life patterns
+via changing lifestyle, and in specific thoughts. As you see, those are
+just the same. Slides:&lt;/p&gt;
+&lt;p&gt;Speakers: Miriam Perrone, Dennie Declercq&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miriam Perrone</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/exploring-patterns-to-debug-your-life.html</guid><category>PyCon Italia 2022</category><category>communication</category><category>community</category><category>teaching</category></item><item><title>Optimal design &amp; control of a telecommunications network</title><link>https://pyvideo.org/pycon-italia-2022/optimal-design-control-of-a-telecommunications-network.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Optimal design &amp;amp; control of a telecommunications network - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;Everyone wants to go faster on the Internet, or design faster networks.
+You can throw a lot of money to it or you can squeeze every bit from it.
+I’ll show through a research project how can we do the latter and create
+better networks. These two years have shown big weaknesses in the design
+and usage of the Internet and many other important enterprise networks.
+A good Quality of Experience and cost-effectiveness are paramount for
+network operators and designers. Enter optimal design and control…
+Through the use of optimal control it’s possibile to double the
+performance with respect to how it’s operated today, furthermore it
+allows us to better organize the network in order to minimally distrupt
+the users in the event of a failure. I’ll show through two examples the
+algorithms, the theory behind them and the code.&lt;/p&gt;
+&lt;p&gt;Speaker: Andi Dulla&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andi Dulla</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/optimal-design-control-of-a-telecommunications-network.html</guid><category>PyCon Italia 2022</category><category>abstractions</category><category>architecture</category><category>case study</category><category>communication</category></item><item><title>What do you want to be known for?</title><link>https://pyvideo.org/pycon-italia-2022/what-do-you-want-to-be-known-for.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;What do you want to be known for? - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;If you feel professionally unsatisfied, struggle to make decisions, or
+have a burning desire to leave behind an epic legacy – this session is
+for you!&lt;/p&gt;
+&lt;p&gt;In this fun + interactive session you’ll discover your Top 2 Personal
+Values that are the secret to creating impact through your work. You
+work hard. You are great at your job.&lt;/p&gt;
+&lt;p&gt;But hard work is not what creates FULFILLMENT.&lt;/p&gt;
+&lt;p&gt;If you feel professionally unsatisfied, struggle to make decisions, want
+to feel more creative, or desire to leave behind an epic legacy – this
+session is for you!&lt;/p&gt;
+&lt;p&gt;In this fun + interactive session you’ll discover the secret to creating
+impact through your work.&lt;/p&gt;
+&lt;p&gt;When you get clear about what you value – finding your purpose, choosing
+a direction, and making important career decisions becomes easy.&lt;/p&gt;
+&lt;p&gt;In this session you’ll discover: - Your top two personal values - How to
+quickly make career decisions that feel right - How to use creativity to
+get clarity - Who you are now by modernizing your value system&lt;/p&gt;
+&lt;p&gt;Join certified coach, master workshop facilitator, community creator,
+and international entrepreneur Angela Parker for this unique session
+that will help you get clear and inspire you to take action.&lt;/p&gt;
+&lt;p&gt;Although Angela is American she lives half the year in Trentino Italy
+and is a big supporter of the Python Community.&lt;/p&gt;
+&lt;p&gt;Official Bio: Angela Parker is an international entrepreneur, CPCC
+Certified Coach, ICF Coach Member, and AJ&amp;amp;Smart Master Workshop
+Facilitator who teaches deep-feeling leaders &amp;amp; entrepreneurs how to use
+creativity, values, self-compassion, and radical self-care – to create
+deeply fulfilling work.&lt;/p&gt;
+&lt;p&gt;Angela designs and facilitates impactful in-person and on-line
+workshops, masterminds, and experiences for leaders and teams.&lt;/p&gt;
+&lt;p&gt;Angela founded the largest and longest running outdoor fitness program
+in Santa Monica CA. After her exit in 2018 she began coaching and
+offering workshop facilitation. She’s known for her empathy, intuition,
+directness, humor, and ability to thread the most impactful details into
+all her sessions.&lt;/p&gt;
+&lt;p&gt;Angela and her work has been featured on CBS, The LA Times, ESPN, MTV,
+ABC, The Hallmark Channel, Carson Magazine, and Self Magazine.&lt;/p&gt;
+&lt;p&gt;When Covid possible, Angela splits her time between the Italian Alps,
+Los Angeles, Chicago, and Japan.&lt;/p&gt;
+&lt;p&gt;Speaker: Angela Parker&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Angela Parker</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/what-do-you-want-to-be-known-for.html</guid><category>PyCon Italia 2022</category><category>communication</category><category>community</category><category>education</category><category>scaling</category><category>teaching</category></item></channel></rss>

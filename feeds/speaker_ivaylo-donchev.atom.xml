@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Ivaylo Donchev</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_ivaylo-donchev.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2023-07-17T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Django queries optimization</title><link href="https://pyvideo.org/europython-2018/django-queries-optimization.html" rel="alternate"></link><published>2018-07-26T00:00:00+00:00</published><updated>2018-07-26T00:00:00+00:00</updated><author><name>Ivaylo Donchev</name></author><id>tag:pyvideo.org,2018-07-26:/europython-2018/django-queries-optimization.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Collecting data from multiple Models is a common flow in Django
+development. In most of the cases &lt;tt class="docutils literal"&gt;prefetch_related&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;select_related&lt;/tt&gt; do all of the job for optimizing the queries.&lt;/p&gt;
+&lt;p&gt;When the models structure become complicated enough and we’ve put our
+logic for collecting these items in models’ properties …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Collecting data from multiple Models is a common flow in Django
+development. In most of the cases &lt;tt class="docutils literal"&gt;prefetch_related&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;select_related&lt;/tt&gt; do all of the job for optimizing the queries.&lt;/p&gt;
+&lt;p&gt;When the models structure become complicated enough and we’ve put our
+logic for collecting these items in models’ properties we suddenly
+cannot use &lt;tt class="docutils literal"&gt;prefetch_related&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;select_related&lt;/tt&gt; anymore. Our View
+‘s queries count depends on selected items count with high complexity.
+The problem is in the selection logic: we’ve implemented an algorithm
+which calculates something and we cannot prefetch or select all of the
+objects.&lt;/p&gt;
+&lt;p&gt;So this talk’s purpose is: To show how to use Django ORM to move the
+selection logic, the calculations, the aggregations over group of
+objects from our python code to our database and moving all of the logic
+for this in one place - the queryset and test it easily.&lt;/p&gt;
+</content><category term="EuroPython 2018"></category></entry><entry><title>Async Django</title><link href="https://pyvideo.org/europython-2022/async-django.html" rel="alternate"></link><published>2022-07-11T00:00:00+00:00</published><updated>2022-07-11T00:00:00+00:00</updated><author><name>Ivaylo Donchev</name></author><id>tag:pyvideo.org,2022-07-11:/europython-2022/async-django.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroPython 2022 - Async Django - presented by Ivaylo Donchev&lt;/p&gt;
+&lt;p&gt;[Wicklow Hall 1 on 2022-07-14]&lt;/p&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;What is the difference between asynchrony and concurrency?&lt;/li&gt;
+&lt;li&gt;Python and Django tools for asynchronous programming.&lt;/li&gt;
+&lt;li&gt;Examples of efficient and inefficient &amp;quot;async&amp;quot; Django views.&lt;/li&gt;
+&lt;li&gt;How does Django handle requests asynchronously - the path from …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroPython 2022 - Async Django - presented by Ivaylo Donchev&lt;/p&gt;
+&lt;p&gt;[Wicklow Hall 1 on 2022-07-14]&lt;/p&gt;
+&lt;p&gt;This talk will cover:&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;What is the difference between asynchrony and concurrency?&lt;/li&gt;
+&lt;li&gt;Python and Django tools for asynchronous programming.&lt;/li&gt;
+&lt;li&gt;Examples of efficient and inefficient &amp;quot;async&amp;quot; Django views.&lt;/li&gt;
+&lt;li&gt;How does Django handle requests asynchronously - the path from &lt;cite&gt;NGINX&lt;/cite&gt; to the database&lt;/li&gt;
+&lt;li&gt;How should we handle thread-blocking operations?&lt;/li&gt;
+&lt;li&gt;A brief history and roadmap of Django's async support&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2022"></category></entry><entry><title>A quick guide to logging for Django developers</title><link href="https://pyvideo.org/europython-2023/a-quick-guide-to-logging-for-django-developers.html" rel="alternate"></link><published>2023-07-17T00:00:00+00:00</published><updated>2023-07-17T00:00:00+00:00</updated><author><name>Ivaylo Donchev</name></author><id>tag:pyvideo.org,2023-07-17:/europython-2023/a-quick-guide-to-logging-for-django-developers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — South Hall 2A on 2023-07-19]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2023.europython.eu/session/a-quick-guide-to-logging-for-django-developers"&gt;https://ep2023.europython.eu/session/a-quick-guide-to-logging-for-django-developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The python &lt;cite&gt;logging&lt;/cite&gt; module is a really powerful tool for troubleshooting with a lot of potential to save us hours of debugging.&lt;/p&gt;
+&lt;p&gt;The aim for the talk is to provide an overview how the logging module …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;[EuroPython 2023 — South Hall 2A on 2023-07-19]&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://ep2023.europython.eu/session/a-quick-guide-to-logging-for-django-developers"&gt;https://ep2023.europython.eu/session/a-quick-guide-to-logging-for-django-developers&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The python &lt;cite&gt;logging&lt;/cite&gt; module is a really powerful tool for troubleshooting with a lot of potential to save us hours of debugging.&lt;/p&gt;
+&lt;p&gt;The aim for the talk is to provide an overview how the logging module in python works, how Django uses it and how to improve our logging to make it better for our web project.&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</content><category term="EuroPython 2023"></category></entry><entry><title>PyCon Balkan Belgrade 2018 - Day 1 - LIVE STREAM</title><link href="https://pyvideo.org/pycon-balkan-belgrade-2018/pycon-balkan-belgrade-2018-day-1-live-stream.html" rel="alternate"></link><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><author><name>Luka Kladarić</name></author><id>tag:pyvideo.org,2018-11-16:/pycon-balkan-belgrade-2018/pycon-balkan-belgrade-2018-day-1-live-stream.html</id><content type="html"></content><category term="PyCon Balkan Belgrade 2018"></category></entry><entry><title>PyCon Balkan Belgrade 2018 - LIVE STREAM</title><link href="https://pyvideo.org/pycon-balkan-belgrade-2018/pycon-balkan-belgrade-2018-live-stream.html" rel="alternate"></link><published>2018-11-16T00:00:00+00:00</published><updated>2018-11-16T00:00:00+00:00</updated><author><name>Luka Kladarić</name></author><id>tag:pyvideo.org,2018-11-16:/pycon-balkan-belgrade-2018/pycon-balkan-belgrade-2018-live-stream.html</id><content type="html"></content><category term="PyCon Balkan Belgrade 2018"></category></entry></feed>

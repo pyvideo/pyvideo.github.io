@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Jack Linke</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 16 May 2025 00:00:00 +0000</lastBuildDate><item><title>Server-Side is Dead! Long Live Server-Side (+ HTMX)</title><link>https://pyvideo.org/djangocon-us-2021/server-side-is-dead-long-live-server-side-htmx.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Objectives&lt;/p&gt;
+&lt;p&gt;By the end of this talk, audience members will have a better understanding of what HTMX is, will understand concrete examples of how it can be applied to their django projects, and will have a list of resources for further learning and discussion.&lt;/p&gt;
+&lt;p&gt;## Outline&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;The current state&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;Frameworks for days&lt;/li&gt;
+&lt;li&gt;Front-end roadmap&lt;/li&gt;
+&lt;li&gt;Django templates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;One potential approach&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;Feature and approach walk-throughs
+For a variety of common web application features, we will take a look at a typical django approach and how one might approach the problem with django + htmx.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Messaging inbox functionality (read/archive)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;A traditional Django approach&lt;/li&gt;
+&lt;li&gt;Django + HTMX approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;One-click settings&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;A traditional Django approach&lt;/li&gt;
+&lt;li&gt;Django + HTMX approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Multiple forms in multiple tabs&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;A traditional Django approach&lt;/li&gt;
+&lt;li&gt;Django + HTMX approach&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Tips, best practices, and pitfalls&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last simple"&gt;
+&lt;li&gt;CSRF Tokens&lt;/li&gt;
+&lt;li&gt;More Views&lt;/li&gt;
+&lt;li&gt;Complimentary JS libraries&lt;/li&gt;
+&lt;li&gt;Simplifying things with django-htmx&lt;/li&gt;
+&lt;li&gt;Additional resources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Code examples and slides: [&lt;a class="reference external" href="https://github.com/jacklinke/htmx-talk-2021](https://github.com/jacklinke/htmx-talk-2021"&gt;https://github.com/jacklinke/htmx-talk-2021](https://github.com/jacklinke/htmx-talk-2021&lt;/a&gt;)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Linke</dc:creator><pubDate>Fri, 22 Oct 2021 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2021-10-22:/djangocon-us-2021/server-side-is-dead-long-live-server-side-htmx.html</guid><category>DjangoCon US 2021</category></item><item><title>Home on the range with Django - getting comfortable with ranges and range fields</title><link>https://pyvideo.org/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Objectives&lt;/p&gt;
+&lt;p&gt;Audience members will learn why ranges are more useful than distinct start and end values, will become familiar with range-based terminology, will have the opportunity to see a number of approaches to using and querying with ranges, and will have resources for further reading and learning. These resources will include a link to a GitHub repository containing the examples from the talk, additional examples, and a cheatsheet for working with ranges.&lt;/p&gt;
+&lt;p&gt;Outline&lt;/p&gt;
+&lt;p&gt;The naive approach to ranges (2 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Using separate start and stop model fields&lt;/li&gt;
+&lt;li&gt;Querying with start and stop values&lt;/li&gt;
+&lt;li&gt;Quickly gets complicated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Range visualization for concrete understanding (3 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Terminology&lt;/li&gt;
+&lt;li&gt;Inclusive vs Exclusive&lt;/li&gt;
+&lt;li&gt;Overlap&lt;/li&gt;
+&lt;li&gt;Contains&lt;/li&gt;
+&lt;li&gt;Contained By&lt;/li&gt;
+&lt;li&gt;Comparisons (fully_lt, fully_gt, etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[diagram](&lt;a class="reference external" href="https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png"&gt;https://lucid.app/publicSegments/view/19424336-bc96-4a42-a5cb-a8ff04928caf/image.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;A before-and-after look at the models (5 min)&lt;/p&gt;
+&lt;p&gt;The example project is a Swimming Pool Resource Scheduler that makes heavy use of ranges (probably more than would be used in most projects) in order to demonstrate various approaches. The model layout can be visualized in the following diagrams:&lt;/p&gt;
+&lt;p&gt;![database schema simple](&lt;a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png"&gt;https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd_light.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;![database schema detailed](&lt;a class="reference external" href="https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png"&gt;https://raw.githubusercontent.com/jacklinke/home-on-the-range-with-django/master/presentation/img/erd.png&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;We will look at the models before and after using range fields.&lt;/p&gt;
+&lt;p&gt;The initial (stripped down) models.py file using distinct fields for lower and upper values is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+class Pool(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;An instance of a Pool. Multiple pools may exist within the municipality&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Pool Name&amp;quot;), max_length=100)
+    address = models.TextField(_(&amp;quot;Address&amp;quot;))
+    depth_minimum = models.IntegerField(_(&amp;quot;Depth Minimum&amp;quot;), help_text=_(&amp;quot;What is the depth in feet of the shallow end of this pool?&amp;quot;))
+    depth_maximum = models.IntegerField(_(&amp;quot;Depth Maximum&amp;quot;), help_text=_(&amp;quot;What is the depth in feet of the deep end of this pool?&amp;quot;))
+    business_hours_start = models.IntegerField(_(&amp;quot;Business Hours Start Hour&amp;quot;), default=9)
+    business_hours_end = models.IntegerField(_(&amp;quot;Business Hours End Hour&amp;quot;), default=17)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Pool&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Pools&amp;quot;)
+
+
+class Closure(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A way of recording dates that a pool is closed&amp;quot;&amp;quot;&amp;quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;closures&amp;quot;)
+    start_date = models.DateField(_(&amp;quot;Pool Closure Start Date&amp;quot;))
+    end_date = models.DateField(_(&amp;quot;Pool Closure End Date&amp;quot;))
+    reason = models.TextField(_(&amp;quot;Closure Reason&amp;quot;))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Closure&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Closures&amp;quot;)
+
+
+class Lane(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Lane Name&amp;quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lanes&amp;quot;)
+    max_swimmers = models.PositiveSmallIntegerField(_(&amp;quot;Maximum Swimmers&amp;quot;), )
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lanes&amp;quot;)
+
+
+class Locker(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&amp;quot;&amp;quot;&amp;quot;
+
+    # Using CharField, because sometimes locker number might be &amp;quot;A23&amp;quot; or &amp;quot;56-B&amp;quot;
+    number = models.CharField(_(&amp;quot;Locker Number&amp;quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lockers&amp;quot;)
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lockers&amp;quot;)
+
+
+class LaneReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A lane reservations defines a set of users, a period of time, and a pool lane&amp;quot;&amp;quot;&amp;quot;
+
+    users = models.ManyToManyField(User, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    period_start = models.DateTimeField(_(&amp;quot;Reservation Period Start&amp;quot;))
+    period_end = models.DateTimeField(_(&amp;quot;Reservation Period End&amp;quot;))
+    actual_start = models.DateTimeField(_(&amp;quot;Actual Usage Period Start&amp;quot;))
+    actual_end = models.DateTimeField(_(&amp;quot;Actual Usage Period End&amp;quot;))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lane Reservations&amp;quot;)
+
+
+class LockerReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A locker reservation defines a user, a period of time, and a pool locker&amp;quot;&amp;quot;&amp;quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    period_start = models.DateTimeField(_(&amp;quot;Reservation Period Start&amp;quot;))
+    period_end = models.DateTimeField(_(&amp;quot;Reservation Period End&amp;quot;))
+    actual_start = models.DateTimeField(_(&amp;quot;Actual Usage Period Start&amp;quot;))
+    actual_end = models.DateTimeField(_(&amp;quot;Actual Usage Period End&amp;quot;))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Locker Reservations&amp;quot;)
+&lt;/pre&gt;
+&lt;p&gt;The final (stripped down) models.py with range fields is:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;
+class Pool(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;An instance of a Pool. Multiple pools may exist within the municipality&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Pool Name&amp;quot;), max_length=100)
+    address = models.TextField(_(&amp;quot;Address&amp;quot;))
+    depth_range = IntegerRangeField(
+        _(&amp;quot;Depth Range&amp;quot;),
+        help_text=_(&amp;quot;What is the range in feet for the depth of this pool (shallow to deep)?&amp;quot;),
+    )
+    business_hours = IntegerRangeField(_(&amp;quot;Business Hours&amp;quot;), default=(9, 17))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Pool&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Pools&amp;quot;)
+
+
+class Closure(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A way of recording dates that a pool is closed&amp;quot;&amp;quot;&amp;quot;
+
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;closures&amp;quot;)
+    dates = DateRangeField(_(&amp;quot;Pool Closure Dates&amp;quot;))
+    reason = models.TextField(_(&amp;quot;Closure Reason&amp;quot;))
+
+    class Meta:
+        verbose_name = _(&amp;quot;Closure&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Closures&amp;quot;)
+
+
+class Lane(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lanes, each of which can be reserved by multiple people&amp;quot;&amp;quot;&amp;quot;
+
+    name = models.CharField(_(&amp;quot;Lane Name&amp;quot;), max_length=50)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lanes&amp;quot;)
+    max_swimmers = models.PositiveSmallIntegerField(
+        _(&amp;quot;Maximum Swimmers&amp;quot;),
+    )
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lanes&amp;quot;)
+
+
+class Locker(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;Each pool may have multiple lockers, each of which can be reserved by only one person at a time&amp;quot;&amp;quot;&amp;quot;
+
+    # Using CharField, because sometimes locker number might be &amp;quot;A23&amp;quot; or &amp;quot;56-B&amp;quot;
+    number = models.CharField(_(&amp;quot;Locker Number&amp;quot;), max_length=20)
+    pool = models.ForeignKey(Pool, on_delete=models.CASCADE, related_name=&amp;quot;lockers&amp;quot;)
+    per_hour_cost = models.DecimalField(_(&amp;quot;Per-Hour Cost&amp;quot;), max_digits=5, decimal_places=2)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lockers&amp;quot;)
+
+
+class LaneReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A lane reservations defines a set of users, a period of time, and a pool lane&amp;quot;&amp;quot;&amp;quot;
+
+    users = models.ManyToManyField(User, related_name=&amp;quot;lane_reservations&amp;quot;)
+    lane = models.ForeignKey(Lane, on_delete=models.CASCADE, related_name=&amp;quot;lane_reservations&amp;quot;)
+    period = DateTimeRangeField(
+        _(&amp;quot;Reservation Period&amp;quot;),
+        validators=[
+            DateTimeRangeLowerMinuteValidator(0, 30),
+            DateTimeRangeUpperMinuteValidator(0, 30),
+            validate_zeroed_dt_sec_microsec,
+        ],
+    )
+    actual = DateTimeRangeField(_(&amp;quot;Actual Usage Period&amp;quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Lane Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Lane Reservations&amp;quot;)
+
+
+class LockerReservation(models.Model):
+    &amp;quot;&amp;quot;&amp;quot;A locker reservation defines a user, a period of time, and a pool locker&amp;quot;&amp;quot;&amp;quot;
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    locker = models.ForeignKey(Locker, on_delete=models.CASCADE, related_name=&amp;quot;locker_reservations&amp;quot;)
+    period = DateTimeRangeField(_(&amp;quot;Reservation Period&amp;quot;))
+    actual = DateTimeRangeField(_(&amp;quot;Actual Usage Period&amp;quot;), default=(None, None))
+    cancelled = models.DateTimeField(_(&amp;quot;Reservation is Cancelled&amp;quot;), null=True)
+
+    class Meta:
+        verbose_name = _(&amp;quot;Locker Reservation&amp;quot;)
+        verbose_name_plural = _(&amp;quot;Locker Reservations&amp;quot;)
+&lt;/pre&gt;
+&lt;p&gt;Example Project Walkthrough (30 min)&lt;/p&gt;
+&lt;p&gt;The models in this project will be used to demonstrate a variety of tasks in django views, including a number of the following:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Set constraints for the various range fields&lt;/li&gt;
+&lt;li&gt;Access the lower and upper values of a range fields in views and templates&lt;/li&gt;
+&lt;li&gt;Get reservations that start at a specific datetime&lt;/li&gt;
+&lt;li&gt;Get reservations that overlap with a single date&lt;/li&gt;
+&lt;li&gt;Get reservations that overlap with a range&lt;/li&gt;
+&lt;li&gt;Check if a reservations start datetime matches any value in a list&lt;/li&gt;
+&lt;li&gt;Get reservations with a start or end that falls between two dates&lt;/li&gt;
+&lt;li&gt;Get reservations whose lower/upper date falls within a range&lt;/li&gt;
+&lt;li&gt;Get reservations for the current week&lt;/li&gt;
+&lt;li&gt;Get reservations that end before now&lt;/li&gt;
+&lt;li&gt;Get reservations that start on or before September&lt;/li&gt;
+&lt;li&gt;Get reservations that end in May OR September&lt;/li&gt;
+&lt;li&gt;Given a list of datetimes, get all reservations that overlap with the items in the list&lt;/li&gt;
+&lt;li&gt;Order the queryset by lower. If two reservations have the same lower, also sort by upper. (This is the default behavior in django)&lt;/li&gt;
+&lt;li&gt;Get reservations with an overdue start (the reservation time started, but the party has not yet checked in)&lt;/li&gt;
+&lt;li&gt;Get reservations with an overdue end (the reservation time ended, but the party has not checked out)&lt;/li&gt;
+&lt;li&gt;Given a datetime (and other filtering criteria), get the count of reservations at that moment&lt;/li&gt;
+&lt;li&gt;For a particular Lane (or set of Lanes), get the aggregate count/sum of reservations during each hour of a daterange&lt;/li&gt;
+&lt;li&gt;Sum of all swimmers at a given moment&lt;/li&gt;
+&lt;li&gt;Sum of all swimmers at each time period change&lt;/li&gt;
+&lt;li&gt;For a particular Lane or entire Pool, get the time and value of all changes in number of swimmers&lt;/li&gt;
+&lt;li&gt;Given a start time stop time and a Lane, return a queryset of the swimmers at each 15 minute increment.&lt;/li&gt;
+&lt;li&gt;Calculated overall usage (number of swimmers * time interval = swimmer hours) within a time range&lt;/li&gt;
+&lt;li&gt;Total usage by day/week/month by Pool/Lane&lt;/li&gt;
+&lt;li&gt;Usage by range:  Given a list of ranges, calculate the usage during each range&lt;/li&gt;
+&lt;li&gt;Prevent overlapping reservation_period for the same resource (here, it's Rooms), where the reservation has not already been cancelled&lt;/li&gt;
+&lt;li&gt;Add validation to model field for minimum and maximum datetimes&lt;/li&gt;
+&lt;li&gt;Aggregate the minimum Lower and maximum Upper reservations dates for all reservations in a queryset&lt;/li&gt;
+&lt;li&gt;Similarly, annotate the minimum Lower and maximum Lower reservations dates for all reservations in a queryset&lt;/li&gt;
+&lt;li&gt;Assuming each reservation is associated with a Resource, annotate Resources with the most recently ending reservation (similar for most recent starting or longest-ago starting/ending reservation)&lt;/li&gt;
+&lt;li&gt;Multiple ways of saving a model instance with DateTimeRangeField&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Note: Those examples above which we are unable to cover during the talk can be viewed in the example project GitHub repo which will be provided for the talk&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Resources (5 min)&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;[psycopg2.extras](&lt;a class="reference external" href="https://www.psycopg.org/docs/extras.html"&gt;https://www.psycopg.org/docs/extras.html&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[This talk &amp;amp; Example Project](&lt;a class="reference external" href="https://github.com/jacklinke/home-on-the-range-with-django"&gt;https://github.com/jacklinke/home-on-the-range-with-django&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;[django-range-merge](&lt;a class="reference external" href="https://github.com/jacklinke/django-range-merge/"&gt;https://github.com/jacklinke/django-range-merge/&lt;/a&gt;) - use &lt;cite&gt;range_merge&lt;/cite&gt; aggregate with Django&lt;/li&gt;
+&lt;li&gt;[django-generate-series](&lt;a class="reference external" href="https://github.com/jacklinke/django-generate-series"&gt;https://github.com/jacklinke/django-generate-series&lt;/a&gt;) - create sequences with Django's ORM&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Linke</dc:creator><pubDate>Wed, 19 Oct 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-10-19:/djangocon-us-2022/home-on-the-range-with-django-getting-comfortable-with-ranges-and-range-fields.html</guid><category>DjangoCon US 2022</category></item><item><title>Troubleshooting is a Lifestyle 😎</title><link>https://pyvideo.org/djangocon-us-2024/troubleshooting-is-a-lifestyle.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;## Audience Level&lt;/p&gt;
+&lt;p&gt;Beginner to Intermediate&lt;/p&gt;
+&lt;p&gt;This talk is suitable for anyone who wants to improve their troubleshooting skills, regardless of their industry or technical background. No prior troubleshooting experience is required, but a basic understanding of technology concepts will be helpful. We will start with general concepts, and move into some practical and technical examples specific to Django and Python.&lt;/p&gt;
+&lt;p&gt;## Objectives&lt;/p&gt;
+&lt;p&gt;By the end of this talk, attendees will understand how to:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Break down complex problems into manageable parts&lt;/li&gt;
+&lt;li&gt;Utilize the tools and resources available for effective troubleshooting&lt;/li&gt;
+&lt;li&gt;Learn to ask for help and leverage online communities&lt;/li&gt;
+&lt;li&gt;Avoid tunnel vision and maintain a broad perspective when diagnosing issues&lt;/li&gt;
+&lt;li&gt;Document the troubleshooting process to track progress and learn from experiences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;## Outline&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Introduction (4 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;My background in electronics design, radar maintenance, and software development&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;The Troubleshooting Mindset (5 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;The importance of troubleshooting skills in various fields&lt;/li&gt;
+&lt;li&gt;Why troubleshooting is a lifestyle 😎, not just a job skill&lt;/li&gt;
+&lt;li&gt;The importance of persistence and curiosity&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Breaking Down Problems (6 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Strategies for dissecting complex issues into manageable components&lt;/li&gt;
+&lt;li&gt;The power of isolating variables and narrowing down the scope&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Utilizing Tools and Resources (10 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Introduction to a wide variety of troubleshooting tools and indicators for solving problems with Django and Python&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Asking for Help (6 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;The importance of knowing when to seek assistance&lt;/li&gt;
+&lt;li&gt;How to ask for help effectively and provide the necessary information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Avoiding Tunnel Vision (5 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Recognizing the dangers of focusing too narrowly on a single solution or part of the problem&lt;/li&gt;
+&lt;li&gt;Techniques for maintaining a broad perspective and exploring alternative approaches&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Documenting The Process (5 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;The benefits of writing down your troubleshooting steps and findings&lt;/li&gt;
+&lt;li&gt;How to create a troubleshooting log and learn from your experiences&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;dl class="first docutils"&gt;
+&lt;dt&gt;Conclusion and Q&amp;amp;A (4 minutes)&lt;/dt&gt;
+&lt;dd&gt;&lt;ul class="first last"&gt;
+&lt;li&gt;Summarize key points.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;## Prerequisites&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Basic understanding of technology concepts&lt;/li&gt;
+&lt;li&gt;Curiosity and a willingness to learn&lt;/li&gt;
+&lt;li&gt;Pen and paper or a digital note-taking device&lt;/li&gt;
+&lt;/ul&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Linke</dc:creator><pubDate>Mon, 23 Sep 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-09-23:/djangocon-us-2024/troubleshooting-is-a-lifestyle.html</guid><category>DjangoCon US 2024</category></item><item><title>Diving into the Deep End: A Python Journey in Water Management</title><link>https://pyvideo.org/pycon-us-2025/diving-into-the-deep-end-a-python-journey-in-water-management.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Six years ago, I was asked to create a better Excel spreadsheet to track water requests for a small irrigation district. That request sparked an unexpected journey: from knowing only basic Python syntax to building a SaaS platform that models physical water delivery systems. This platform now handles water accounting, delivery tracking, scheduling, reporting, and even simulation for real-world use.&lt;/p&gt;
+&lt;p&gt;In this talk, I’ll share how I tackled challenges like: - Transitioning from spreadsheets to a Python-powered solution. - Modeling physical systems without a background in discrete mathematics, graph theory, or simulation. - Scaling a personal learning project into a production-ready SaaS application.&lt;/p&gt;
+&lt;p&gt;I’ll also explore the tools and techniques that made it possible, the lessons I learned along the way, and the moments of failure and success that shaped my journey. Whether new to Python, considering tackling a big project, or just curious about real-world applications of Python, this talk will inspire attendees to dive in and solve problems beyond their comfort zone.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jack Linke</dc:creator><pubDate>Fri, 16 May 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-05-16:/pycon-us-2025/diving-into-the-deep-end-a-python-journey-in-water-management.html</guid><category>PyCon US 2025</category></item></channel></rss>

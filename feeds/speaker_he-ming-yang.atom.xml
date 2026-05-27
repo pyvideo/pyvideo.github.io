@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - 何明洋</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_he-ming-yang.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2021-10-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>用Python刻一個深度學習圖片重點裁切系統 – 何明洋 (PyCon Taiwan 2021)</title><link href="https://pyvideo.org/pycon-taiwan-2021/yong-pythonke-yi-ge-shen-du-xue-xi-tu-pian-zhong-dian-cai-qie-xi-tong-he-ming-yang-pycon-taiwan-2021.html" rel="alternate"></link><published>2021-10-03T00:00:00+00:00</published><updated>2021-10-03T00:00:00+00:00</updated><author><name>何明洋</name></author><id>tag:pyvideo.org,2021-10-03:/pycon-taiwan-2021/yong-pythonke-yi-ge-shen-du-xue-xi-tu-pian-zhong-dian-cai-qie-xi-tong-he-ming-yang-pycon-taiwan-2021.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:00-13:45&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;在現代社群媒體興起下，許多網站、app都能允許使用者上傳圖片與文字發布貼文，然而圖片/照片大小不一很容易使頁面排版混亂，要求使用者每次上傳時都手動裁切也非常耗時，而通常圖片都隱含著重點區域，本演講將講述如何以python實作、應用已開源的深度學習模型來做出圖片自動裁切系統。本演講將會簡單引入深度學習，接著分享三個開源的相關模型(圖片重點、臉、文字)細節、單一使用的缺點、如何疊加三個模型來達到最好的效果，而過程中也會說明實作方法。&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;整體而言，本演講將會介紹三個以python開發的模型(或有python接口)以及其開源專案，並舉出單一使用缺點及如何同時使用達到最佳效果&lt;/p&gt;
+&lt;p&gt;Salient object detection (&lt;a class="reference external" href="https://github.com/sairajk/PyTorch-Pyramid-Feature-Attention-Network-for-Saliency-Detection"&gt;https://github.com/sairajk/PyTorch-Pyramid-Feature-Attention-Network-for-Saliency-Detection&lt;/a&gt;)
+Zhao, T., &amp;amp; Wu, X. (2019). Pyramid feature attention network for saliency …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Day 2, 13:00-13:45&lt;/p&gt;
+&lt;p&gt;Abstract&lt;/p&gt;
+&lt;p&gt;在現代社群媒體興起下，許多網站、app都能允許使用者上傳圖片與文字發布貼文，然而圖片/照片大小不一很容易使頁面排版混亂，要求使用者每次上傳時都手動裁切也非常耗時，而通常圖片都隱含著重點區域，本演講將講述如何以python實作、應用已開源的深度學習模型來做出圖片自動裁切系統。本演講將會簡單引入深度學習，接著分享三個開源的相關模型(圖片重點、臉、文字)細節、單一使用的缺點、如何疊加三個模型來達到最好的效果，而過程中也會說明實作方法。&lt;/p&gt;
+&lt;p&gt;Description&lt;/p&gt;
+&lt;p&gt;整體而言，本演講將會介紹三個以python開發的模型(或有python接口)以及其開源專案，並舉出單一使用缺點及如何同時使用達到最佳效果&lt;/p&gt;
+&lt;p&gt;Salient object detection (&lt;a class="reference external" href="https://github.com/sairajk/PyTorch-Pyramid-Feature-Attention-Network-for-Saliency-Detection"&gt;https://github.com/sairajk/PyTorch-Pyramid-Feature-Attention-Network-for-Saliency-Detection&lt;/a&gt;)
+Zhao, T., &amp;amp; Wu, X. (2019). Pyramid feature attention network for saliency detection. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 3085-3094).
+Face recognition (&lt;a class="reference external" href="https://github.com/ageitgey/face_recognition"&gt;https://github.com/ageitgey/face_recognition&lt;/a&gt;)
+Chinese OCR (&lt;a class="reference external" href="https://github.com/DayBreak-u/chineseocr_lite"&gt;https://github.com/DayBreak-u/chineseocr_lite&lt;/a&gt;)
+with PSENet (Wang, W., Xie, E., Li, X., Hou, W., Lu, T., Yu, G., &amp;amp; Shao, S. (2019). Shape robust text detection with progressive scale expansion network. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 9336-9345).)
+以上模型皆已訓練完畢並也提供了所有參數權重，使用者僅須從github clone下來或是從PyPI安裝使用，不須花時間重新訓練模型，故可以很快將整個架構建起來。&lt;/p&gt;
+&lt;p&gt;演講過程首先先提出許多社群媒體有圖片裁切需求但不可能在使用者上傳圖片時都有人工幫忙裁切，因此有一個自動裁切系統將會有所助益。然而若單一使用Salient object detection模型(previous work)，那結果會忽略許多文字且著重奇怪的物件，故後續會需要加入臉部與文字偵測，藉由三者的輸出以不同權重疊加，最後利用dynamic programming計算疊加權重最大的矩陣區域，來得到最終裁切結果，另外會分享在不同情境下三個權重該如何調整。&lt;/p&gt;
+&lt;p&gt;本演講也會在介紹每個模型時說明如何以python實作及使用，整個大專案屆時將會提供code置於github上讓會眾可以直接使用或參考。&lt;/p&gt;
+&lt;p&gt;Slides not uploaded by the speaker.
+HackMD: &lt;a class="reference external" href="https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2FBkzKJVqMt"&gt;https://hackmd.io/&amp;#64;pycontw/2021/%2F%40pycontw%2FBkzKJVqMt&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Speaker: 何明洋&lt;/p&gt;
+&lt;p&gt;A passionate data scientist and full stack developer who excels at solving practical problems, especially in 2D/3D CV, audio, and medical signal, by designing ML/DL algorithms and building full-stack web applications to provide service. In addition, I am also a graphic designer and clinical pharmacist familiar with psychiatry.&lt;/p&gt;
+</content><category term="PyCon Taiwan 2021"></category></entry></feed>

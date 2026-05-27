@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Daniele Pompa</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Patti chiari, amicizia lunga. Disaccoppiamo lo sviluppo con test di contratto</title><link>https://pyvideo.org/pycon-italia-2022/patti-chiari-amicizia-lunga-disaccoppiamo-lo-sviluppo-con-test-di-contratto.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Patti chiari amicizia lunga. Come disaccoppiamo lo sviluppo tramite i
+test di contratto - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Front-end, vi è mai capitato che nonostante vi siate messi d’accordo con
+il back-end l’endpoint non vi espone qualcosa? Noi abbiamo risolto
+utilizzando il Contract testing, vi mostrerò i vantaggi e alcuni casi
+reali di come scrivere un patto aiuta a rendere più semplice lo sviluppo
+per tutti. Quando sono entrato in 20tab l’azienda seguiva già le
+metodologie Lean e Agile ed era composta principalmente da sviluppatori
+Python/Django. Quando abbiamo deciso di disaccoppiare i servizi
+(back-end in Django e front-end in React JS) siamo andati incontro a
+difficoltà dovute ai differenti tempi di sviluppo o limiti tecnici. Come
+prima soluzione avevamo provato con alternare lo sviluppo dei due
+servizi prima iniziava il back-end, una volta completato partiva lo
+sviluppo front-end. Questo ci rendeva inefficienti a volte i dati che
+arrivavano al front-end erano insufficienti o eccessivi rispetto
+all’interfaccia che doveva costruire. Quindi abbiamo provato a
+dettagliare con maggior rigore tutti i requisiti tecnici necessari per
+partire in parallelo, ma lato front-end dovevamo sempre costruirci un
+server finto per procedere con lo sviluppo. In questo ci è venuto
+incontro il contract testing, entrambi i rappresentanti dei servizi si
+riuniscono prendono il design lo analizzano insieme e il front-end
+scrive un test di contratto dopo di che entrambi i servizi possono
+procedere con i rispettivi sviluppi in maniera svincolata tra di loro.
+Il front-end può sfruttare il pact-stub-server per scrivere test
+funzionali con cypress e per lavorare senza neanche tirare su il
+servizio back-end. Questo ha portato il front-end a riorganizzare il
+proprio template, ora abbiamo 3 tipi di test diversi, quelli unitari sui
+componenti, quelli funzionali con cypress e quelli di contratto con Pact
+JS. Tutti questi test tramite Docker vengono eseguiti nelle nostre
+pipeline e bloccano il nostro processo di deploy in caso di fallimento.&lt;/p&gt;
+&lt;p&gt;Slide:&lt;/p&gt;
+&lt;p&gt;Speaker: Daniele Pompa&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Daniele Pompa</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/patti-chiari-amicizia-lunga-disaccoppiamo-lo-sviluppo-con-test-di-contratto.html</guid><category>PyCon Italia 2022</category><category>apis</category><category>django</category><category>docker</category><category>javascript</category><category>testing</category></item></channel></rss>

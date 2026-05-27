@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Yan Yanchii</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 16 May 2024 00:00:00 +0000</lastBuildDate><item><title>Pointers in Python</title><link>https://pyvideo.org/pycon-us-2024/pointers-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Remember pointers from C/C++? Why don’t we add them to Python? Make any
+Python object mutable by manipulating it directly in memory through the
+pointer as you would do in C/C++. Why do this? Well, pointers have no
+use in Python, but the point is not implementation itself, but all the
+internal parts of Python programming language that you will touch while
+implementing it. What you will learn:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;How to add new piece of syntax to Python. We will implement &lt;tt class="docutils literal"&gt;&amp;amp;&lt;/tt&gt; and
+&lt;tt class="docutils literal"&gt;*&lt;/tt&gt; (address of and dereference) operators just like in C/C++.&lt;/li&gt;
+&lt;li&gt;How to add custom builtin object. Adding new syntax has to do
+something, right? In our case it will operate on new &lt;tt class="docutils literal"&gt;pointer&lt;/tt&gt;
+builtin object.&lt;/li&gt;
+&lt;li&gt;Internal layout of Python objects.&lt;/li&gt;
+&lt;li&gt;How to make our &lt;tt class="docutils literal"&gt;pointer&lt;/tt&gt; object behave well. Everything in Python
+is an object and every object internally has to make sure it’s
+lifecycle does not cause any issues and your program works in a
+predictable way.&lt;/li&gt;
+&lt;li&gt;How to do something with new object. Having new syntax and object is
+cool, but it has to interact with other objects somehow. Remember
+double underscore methods like &lt;tt class="docutils literal"&gt;__add__&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;__eq__&lt;/tt&gt;? We will
+see how they are implemented internally and our object will have
+them.&lt;/li&gt;
+&lt;li&gt;How Python objects are garbage collected. Our &lt;tt class="docutils literal"&gt;pointer&lt;/tt&gt; object will
+cover all ways Python objects can be garbage collected and all tricky
+parts of this process. These involve reference counting and tracing
+garbage collector for cyclic objects.&lt;/li&gt;
+&lt;li&gt;And many more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Optional: to minimise chances of inconsistencies, it is recommended to
+have Docker installed&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Yan Yanchii</dc:creator><pubDate>Thu, 16 May 2024 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2024-05-16:/pycon-us-2024/pointers-in-python.html</guid><category>PyCon US 2024</category></item></channel></rss>

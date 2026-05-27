@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Ariel Ortiz</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_ariel-ortiz.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2024-07-08T00:00:00+00:00</updated><subtitle></subtitle><entry><title>From Diamonds to Mixins: Demystifying Multiple Inheritance in Python</title><link href="https://pyvideo.org/europython-2024/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python.html" rel="alternate"></link><published>2024-07-08T00:00:00+00:00</published><updated>2024-07-08T00:00:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2024-07-08:/europython-2024/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;[EuroPython 2024 — South Hall 2A on 2024-07-12]
+
+From Diamonds to Mixins: Demystifying Multiple Inheritance in Python by Ariel Ortiz
+https://ep2024.europython.eu/session/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python
+
+Most Python programmers are probably aware that Python supports multiple inheritance. However, few are likely to be aware of its implications and inner workings …&lt;/pre&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;[EuroPython 2024 — South Hall 2A on 2024-07-12]
+
+From Diamonds to Mixins: Demystifying Multiple Inheritance in Python by Ariel Ortiz
+https://ep2024.europython.eu/session/from-diamonds-to-mixins-demystifying-multiple-inheritance-in-python
+
+Most Python programmers are probably aware that Python supports multiple inheritance. However, few are likely to be aware of its implications and inner workings. This talk aims to shed light on this commonly overlooked topic. 
+
+In the first part of the talk we will start by reviewing the “diamond problem,” where a class inherits from two classes that have a common ancestor, and contrast how this issue is handled in Python compared to other object oriented languages. Next, we will discuss the Method Resolution Order (MRO) to see how Python determines the sequence in which classes are considered when searching for a method or attribute. We will also review the use of the `super()` function that allows a subclass to call a method from its superclass in a way that adheres to the MRO.
+
+During the second part of the talk, we will explore real-world scenarios related to the benefits,  problems, and alternatives of using multiple inheritance in our programs. We will dedicate some time to examining the concept of a _mixin_ and how to implement it effectively in Python. Finally, we will delve into the _Interface Segregation Principle_ and explore collaboration and composition as mechanisms for avoiding the pitfalls of inheritance in general.
+
+
+---
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License: https://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/pre&gt;</content><category term="EuroPython 2024"></category></entry><entry><title>Los riesgos de la herencia: por qué es preferible usar composición</title><link href="https://pyvideo.org/pycon-latam-2019/los-riesgos-de-la-herencia-por-que-es-preferible-usar-composicion.html" rel="alternate"></link><published>2019-08-30T00:00:00+00:00</published><updated>2019-08-30T00:00:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2019-08-30:/pycon-latam-2019/los-riesgos-de-la-herencia-por-que-es-preferible-usar-composicion.html</id><content type="html"></content><category term="PyCon Latam 2019"></category></entry><entry><title>The Perils of Inheritance: Why We Should Prefer Composition</title><link href="https://pyvideo.org/pycon-us-2019/the-perils-of-inheritance-why-we-should-prefer-composition.html" rel="alternate"></link><published>2019-05-04T16:30:00+00:00</published><updated>2019-05-04T16:30:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2019-05-04:/pycon-us-2019/the-perils-of-inheritance-why-we-should-prefer-composition.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Inheritance is among the first concepts we learn when studying
+object-oriented programming. But inheritance comes with some unhappy
+strings attached. Inheritance, by its very nature, tends to bind a
+subclass to its superclass. This means that modifying the behavior of a
+superclass might alter the behavior of all its …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Inheritance is among the first concepts we learn when studying
+object-oriented programming. But inheritance comes with some unhappy
+strings attached. Inheritance, by its very nature, tends to bind a
+subclass to its superclass. This means that modifying the behavior of a
+superclass might alter the behavior of all its subclasses, sometimes in
+unanticipated ways. Furthermore, it’s commonly accepted that inheritance
+actually breaks encapsulation. So, if inheritance has these issues, what
+alternative do we have? More than two decades ago, The Gang of Four
+(Erich Gamma, Richard Helm, Ralph Johnson and John Vlissides) suggested
+in their famous &lt;em&gt;Design Patterns&lt;/em&gt; book that we should favor object
+composition over class inheritance.&lt;/p&gt;
+&lt;p&gt;In this talk I will show some code examples in Python where inheritance
+goes astray and demonstrate how to correct them by using composition. My
+intention is not to demonize inheritance, but instead present how to use
+it wisely in order to improve the design of our object-oriented software
+so that it’s more flexible and easier to maintain.&lt;/p&gt;
+</content><category term="PyCon US 2019"></category><category term="talk"></category></entry><entry><title>Design Patterns in Python for the Untrained Eye</title><link href="https://pyvideo.org/pycon-us-2019/design-patterns-in-python-for-the-untrained-eye.html" rel="alternate"></link><published>2019-05-01T13:20:00+00:00</published><updated>2019-05-01T13:20:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2019-05-01:/pycon-us-2019/design-patterns-in-python-for-the-untrained-eye.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Design patterns are prepackaged solutions to common software design
+problems. We get two important benefits when using them. Firstly, we get
+a way to solve typical software development issues by using a proven
+solution. Secondly, we get a shared vocabulary that allows us to
+communicate more effectively with other …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Design patterns are prepackaged solutions to common software design
+problems. We get two important benefits when using them. Firstly, we get
+a way to solve typical software development issues by using a proven
+solution. Secondly, we get a shared vocabulary that allows us to
+communicate more effectively with other software designers. Getting
+acquainted with design patterns is the next step to become a better
+object oriented programmer.&lt;/p&gt;
+&lt;p&gt;In this tutorial we'll answer some of the most important questions
+surrounding design patterns: What are they? How can we use them in our
+programs? When should we avoid them? We'll also have the opportunity to
+explore and play with the Python implementations of some of the
+classical design patterns made famous by the Gang of Four (Gamma, Helm,
+Johnson &amp;amp; Vlissides) while learning relevant design principles at the
+same time. Don't forget to bring your own laptop with your preferred
+Python 3 development environment.&lt;/p&gt;
+</content><category term="PyCon US 2019"></category><category term="tutorial"></category></entry><entry><title>A Pythonista's Introductory Guide to Web Assembly</title><link href="https://pyvideo.org/pycon-us-2022/a-pythonistas-introductory-guide-to-web-assembly.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/a-pythonistas-introductory-guide-to-web-assembly.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Wasm is a binary code format specification first released in 2017. This technology can be implemented in web browsers or standalone applications in a secure, open, portable, and efficient fashion. More precisely, Wasm is an intermediate language for a stack-based virtual machine that uses a just-in-time (JIT) compiler to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Wasm is a binary code format specification first released in 2017. This technology can be implemented in web browsers or standalone applications in a secure, open, portable, and efficient fashion. More precisely, Wasm is an intermediate language for a stack-based virtual machine that uses a just-in-time (JIT) compiler to produce native machine code. Although Wasm was primarily designed as a compilation target for languages such as C/C++ or Rust, it can be integrated with Python in interesting ways. And that’s what we’ll be focusing on during this tutorial. Some experience with JavaScript and web development might come in handy but is not strictly required. At the end, we’ll show how to develop a tiny compiler that has Wasm as it’s compilation target.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category><category term="tutorial"></category></entry><entry><title>Match case para principiantes</title><link href="https://pyvideo.org/pycon-us-2022/match-case-para-principiantes.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Ariel Ortiz</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/match-case-para-principiantes.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python ha carecido durante mucho tiempo de un mecanismo de control de flujo condicional presente en muchos otros lenguajes de programación, algo que permita tomar un valor y compararlo de manera directa y sencilla contra varias opciones. El lenguaje C y sus derivados cuentan con la instrucción switch/case …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python ha carecido durante mucho tiempo de un mecanismo de control de flujo condicional presente en muchos otros lenguajes de programación, algo que permita tomar un valor y compararlo de manera directa y sencilla contra varias opciones. El lenguaje C y sus derivados cuentan con la instrucción switch/case. Otros lenguajes tienen un soporte más sofisticado de pattern matching. Las formas tradicionales para lograr un comportamiento equivalente en Python no eran del todo elegantes. Una opción era escribir una cadena de expresiones if/elif/else. Una segunda opción era utilizar un diccionario con llaves asociadas a funciones. En general esto funciona adecuadamente, pero puede ser complicado de construir, entender y mantener.&lt;/p&gt;
+&lt;p&gt;Después de varias propuestas fallidas para agregar una sintaxis tipo switch/case a Python, se aceptó finalmente una propuesta reciente para Python 3.10: structural pattern matching (búsquedas de coincidencias de patrones estructurales). Este esquema de pattern matching no solo hace posible realizar coincidencias simples de estilos de switch/case, sino que también admite una gama más amplia de casos de uso. En esta charla se mostrará cómo aprovechar en nuestros programas esta nueva facilidad.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category><category term="charla"></category></entry></feed>

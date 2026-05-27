@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Sammie Jiang</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sat, 21 Mar 2026 00:00:00 +0000</lastBuildDate><item><title>Climbing Out of Fixture Hell, Indirectly</title><link>https://pyvideo.org/pycascades-2026/climbing-out-of-fixture-hell-indirectly.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;pre&gt;Once you've moved past the basics of assert and test_ functions, developers often run into a new set of challenges when projects and test suites grow in complexity. This talk explores using pytest's indirect fixtures to create modular, maintainable test suites that scale with your codebase. 
+
+Fixture overuse and mismanagement is one of the most common areas of difficulty with testing/pytest 
+- passing data to fixtures: they want to parametrize a `fixture` itself (this is how I initially discovered indirect parametrization)
+- fixture hell: conftest.py becomes a dumping ground for poorly named, complex, and interdependent fixtures, making it hard to comprehend what a single test is doing
+- scope confusion: struggles with when to use `function`, `class`, `module` or `session` scopes that lead to tests that are either slow (re-creating expensive resources for every test) or flaky (tests interfering with each other via session-scoped fixtures).
+
+You'll discover how `indirect=True` parametrization can elegantly address each of these pain points and see examples of how to refactor messy, hard-to-read tests into clean, declarative patterns. Come away with a clearer mental model of fixture scopes and how to optimize them to reduce test run times.
+
+This talk is for intermediate developers who have basic experience with fixtures and parametrization, who may have encountered the pain points of maintaining a growing test suite.
+
+&lt;/pre&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sammie Jiang</dc:creator><pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2026-03-21:/pycascades-2026/climbing-out-of-fixture-hell-indirectly.html</guid><category>PyCascades 2026</category></item></channel></rss>

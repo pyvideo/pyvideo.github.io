@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Web Protocols</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><item><title>Better WebSockets - Server-Sent Events, a carefree alternative</title><link>https://pyvideo.org/europython-2019/better-websockets-server-sent-events-a-carefree-alternative.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Have you ever found yourself in a situation where you:&lt;/div&gt;
+&lt;div class="line"&gt;- had to use WbSockets?&lt;/div&gt;
+&lt;div class="line"&gt;- had to to create a separate project and had the issue of interfacing
+both?&lt;/div&gt;
+&lt;div class="line"&gt;- had to handle disconnections?&lt;/div&gt;
+&lt;div class="line"&gt;- had to handle reconnections?&lt;/div&gt;
+&lt;div class="line"&gt;- had to handle all the above and scale WebSockets?&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If your experience was horrible (like mine was), we shall take a look at
+Server-Sent Events, an alternative to WebSockets.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The following arguments will be discussed:&lt;/div&gt;
+&lt;div class="line"&gt;- intro to the subject&lt;/div&gt;
+&lt;div class="line"&gt;- inner workings&lt;/div&gt;
+&lt;div class="line"&gt;- differences from WebSockets&lt;/div&gt;
+&lt;div class="line"&gt;- implementation explanation for a generic HTTP server in Python&lt;/div&gt;
+&lt;div class="line"&gt;- use cases&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrei Neagu</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/better-websockets-server-sent-events-a-carefree-alternative.html</guid><category>EuroPython 2019</category><category>Mobile</category><category>System Architecture</category><category>Web</category><category>Web Protocols</category><category>Web Servers and MicroFWs</category></item><item><title>Look Ma, No HTTP!</title><link>https://pyvideo.org/europython-2019/look-ma-no-http.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I'm going to live code a web application that is built
+exclusively on top of WebSocket, without using HTTP at all!&lt;/p&gt;
+&lt;p&gt;What's the benefit of using WebSocket over HTTP, you may ask? With
+WebSocket each client establishes a permanent connection to the server,
+so there is no request/response cycle and no need for the client to poll
+the server for data. Each side can freely send data to the other side at
+any time, so this is an ideal stack for building highly dynamic,
+event-driven applications.&lt;/p&gt;
+&lt;p&gt;For this live coding exercise I'm going to use the Socket.IO server for
+Python, and the Socket.IO client for JavaScript. No Flask, no Django, no
+HTTP!&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miguel Grinberg</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/look-ma-no-http.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Web Protocols</category><category>Web Servers and MicroFWs</category></item><item><title>An ASGI Server from scratch</title><link>https://pyvideo.org/europython-2020/an-asgi-server-from-scratch.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Echo server to a basic ASGI server in a talk&lt;/p&gt;
+&lt;p&gt;I intend for this to be a fairly advanced talk that shows the steps required to go from a TCP echo server to a basic HTTP/1 ASGI server using asyncio for the IO. This is aimed at people who've read about asyncio, coroutines, etc and want to see them used in practice.&lt;/p&gt;
+&lt;p&gt;This is a tutorial on how to build a HTTP/1 ASGI server using asyncio. I plan to start by building a TCP echo server and then add HTTP parsing and ASGI compliance.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Philip Jones</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/an-asgi-server-from-scratch.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>ASYNC / Concurreny</category><category>Web</category><category>Web Protocols</category><category>Web Servers and MicroFWs (Flask/Tornado/Nginx/...)</category></item><item><title>Full Stack Type Safety</title><link>https://pyvideo.org/europython-2020/full-stack-type-safety.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Beyond PEP-484 – ensure type consistency between layers&lt;/p&gt;
+&lt;p&gt;The introduction of PEP-484 gave us an option to enforce the internal type consistency of our Python applications. Our web projects, however, consist of multiple layers, with the Python app taking the role of an HTTP backend. What options do we have to ensure consistency across our stack?
+In this talk, we will see some technologies that we can employ to enforce the contract between the layers of our stack. Especially between the frontend and backend. We will demo, how this can be achieved with REST/Swagger and with GraphQL. As both the Graphene library and the open API support for django-rest-framework are both a work-in-progress, we would check, what is possible, and what is still lacking. We will also discuss various approaches to the design: backend first, auto-generating backend from the spec, and TDD, with their advantages and disadvantages.
+The topic would be discussed on a simple web application. We would try to play some realistic scenarios, where a careless developer breaks the contract to see how such a mistake can be spotted in the CI phase of the development cycle.
+Basic knowledge of Django and JavaScript is required to understand the talk. Some familiarity with TypeScript and ReactJS would also be helpful. However, I plan to explain the code to the listeners that didn’t have prior exposure to these technologies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Szymon Pyżalski</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/full-stack-type-safety.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>APIs</category><category>Django</category><category>JavaScript</category><category>Type-Hinting</category><category>Web Protocols</category></item><item><title>HTTP/3 – Why should I care?</title><link>https://pyvideo.org/europython-2020/http3-why-should-i-care.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Internet foundations reworked.&lt;/p&gt;
+&lt;p&gt;HTTP is the foundation of the current web, and HTTP/3 is the upcoming major version of it. The new version is built on top of the QUIC transport protocol, originally developed in Google.&lt;/p&gt;
+&lt;p&gt;HTTP/3 can change the Internet as we know it today. Since its beginning in the 90s, HTTP transfers data over TCP to ensure reliable connections between clients and servers. QUIC is a TCP alternative, reimplemented on top of unreliable and connectionless UDP.&lt;/p&gt;
+&lt;p&gt;Proprietary Google implementation of QUIC is deployed worldwide and supported by Chrome browsers. Future HTTP/3 will be hopefully standardized by IETF soon, but many diverse implementations are available already today.&lt;/p&gt;
+&lt;p&gt;HTTP/3 improves performance and increases privacy. The switch from TCP to QUIC allows us to address the inherent limitations of previous HTTP versions. The QUIC protocol is completely encrypted, including traffic control headers, which are visible in TCP.&lt;/p&gt;
+&lt;p&gt;This talk introduces HTTP/3 and the underlaying QUIC protocol. It shows both advantages and disadvantages of the new technology, and it describes the landscape of the current implementations and suggests what you can try today.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Miloslav Pojman</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/http3-why-should-i-care.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>HTTP</category><category>Internet</category><category>Privacy</category><category>Web</category><category>Web Protocols</category></item></channel></rss>

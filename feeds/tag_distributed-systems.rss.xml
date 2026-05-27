@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - distributed systems</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Configuring uWSGI for Production: The defaults are all wrong</title><link>https://pyvideo.org/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Two years ago, we began migrating from a proprietary service framework
+to a WSGI-compliant one. We chose uWSGI as our host because of its
+performance and feature set. But, while powerful, uWSGI's defaults are
+driven by backward compatibility and are not ideal for new deployments.
+Powerful features can be overlooked due to the sheer magnitude of its
+feature set and spotty documentation. As we've scaled up the number of
+services hosted by uWSGI over the last year, we've had to tweak our
+standard configuration.&lt;/p&gt;
+&lt;p&gt;In this talk, we'll present the base uWSGI configuration we use as a
+starting point for all services, as well as some tips to avoid known
+gotchas and provide a base level of defensiveness and high reliability.
+This base configuration makes use of several &amp;quot;no-cost&amp;quot; uWSGI features
+that help protect services from common, yet difficult to prevent issues
+-- some of which we discovered the hard way. We'll also talk about some
+programmatic uWSGI features which can be leveraged to improve
+reliability and improve outage response.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Some of the topics we'll cover include:&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating memory leaks&lt;/div&gt;
+&lt;div class="line"&gt;- Mitigating stuck, hung, or infinitely looping processes&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing misconfigurations&lt;/div&gt;
+&lt;div class="line"&gt;- Preventing wasted development effort&lt;/div&gt;
+&lt;div class="line"&gt;- Improving outage response&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Peter Sperl</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/configuring-uwsgi-for-production-the-defaults-are-all-wrong.html</guid><category>EuroPython 2019</category><category>Best Practice</category><category>Distributed Systems</category><category>Microservices</category><category>Web Servers and MicroFWs</category><category>failures/mistakes</category></item><item><title>From HTTP to Kafka-based microservices</title><link>https://pyvideo.org/europython-2019/from-http-to-kafka-based-microservices.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;HTTP or asynchronous communication in microservices? This question is
+frequently repeated and discussed. Obviously, HTTP-based communication
+is easier for developers and architects. Even if your developers have no
+prior experience with microservices, they will probably understand how
+to implement an HTTP service well. While asynchronous communication has
+a lot of advantages that allow to design and implement really robust
+microservices system, they also bring new challenges not so obvious for
+people who didn’t have a chance to work with such an environment before.&lt;/p&gt;
+&lt;p&gt;In FLYR we mostly have HTTP-based Inter Process Communication (IPC) in
+our infrastructure. At some point, we realized that to provide the
+functionality required by our product we needed something more flexible
+and more… asynchronous. We designed and implemented a Python library to
+facilitate switching to asynchronous IPC, supporting one- or two-way or
+even single- request – multi-response communication. An important thing
+in the design process was to provide developers having HTTP experience a
+tool that would ease the process of switching to asynchronous
+communication. Consequently, to switch an HTTP server-side endpoint to
+asynchronous IPC is a straightforward task.&lt;/p&gt;
+&lt;p&gt;We selected Kafka for our message broker, not surprisingly by comparing
+its performance reports with our very rough, but no less demanding
+performance requirements. But we also took care to hide the details of
+the broker logic from developers. Yes, we don’t use all Kafka
+capabilities, if you need e.g. Kafka Streams, you will have to use
+another solution. But we can decide what capabilities are used in our
+microservices and how we can make changes in the way our services
+communicate in a single place. There are also hooks, Kubernetes health
+checks and more with a lot of flexibility available out of the box.&lt;/p&gt;
+&lt;p&gt;We plan to opensource our library. At the moment of writing it
+‘opensourcing’ is still a work in progress and we didn’t have sufficient
+time to do it due to strict time constraints we have on delivering
+functionality to our customers, but we hope to be able to do it soon. In
+this talk I would like to describe how we solved particularly important
+problems, what solutions we developed, how we use them and what problems
+still need to be addressed by developers. In other words, I would like
+to describe you the journey we made from HTTP to Kafka-based
+microservices.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Wojciech Rząsa</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/from-http-to-kafka-based-microservices.html</guid><category>EuroPython 2019</category><category>ASYNC / Concurrency</category><category>Communication</category><category>Distributed Systems</category></item><item><title>Parallel computing in Python: Current state and recent advances</title><link>https://pyvideo.org/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Parallel computing in Python: Current state and recent advances&lt;/div&gt;
+&lt;div class="line"&gt;---------------------------------------------------------------&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;Modern hardware is multi-core. It is crucial for Python to provide&lt;/div&gt;
+&lt;div class="line"&gt;high-performance parallelism. This talk will expose to both
+data-scientists and&lt;/div&gt;
+&lt;div class="line"&gt;library developers the current state of affairs and the recent
+advances for&lt;/div&gt;
+&lt;div class="line"&gt;parallel computing with Python. The goal is to help practitioners and&lt;/div&gt;
+&lt;div class="line"&gt;developers to make better decisions on this matter.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;I will first cover how Python can interface with parallelism, from
+leveraging&lt;/div&gt;
+&lt;div class="line"&gt;external parallelism of C-extensions –especially the BLAS family– to
+Python's&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing and multithreading API. I will touch upon use cases,
+e.g single&lt;/div&gt;
+&lt;div class="line"&gt;vs multi machine, as well as and pros and cons of the various
+solutions for&lt;/div&gt;
+&lt;div class="line"&gt;each use case. Most of these considerations will be backed by
+benchmarks from&lt;/div&gt;
+&lt;div class="line"&gt;the scikit-learn machine&lt;/div&gt;
+&lt;div class="line"&gt;learning library.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;From these low-level interfaces emerged higher-level parallel
+processing&lt;/div&gt;
+&lt;div class="line"&gt;libraries, such as concurrent.futures, joblib and loky (used by dask
+and&lt;/div&gt;
+&lt;div class="line"&gt;scikit-learn) These libraries make it easy for Python programmers to
+use safe&lt;/div&gt;
+&lt;div class="line"&gt;and reliable parallelism in their code. They can even work in more
+exotic&lt;/div&gt;
+&lt;div class="line"&gt;situations, such as interactive sessions, in which Python’s native&lt;/div&gt;
+&lt;div class="line"&gt;multiprocessing support tends to fail. I will describe their purpose
+as well as&lt;/div&gt;
+&lt;div class="line"&gt;the canonical use-cases they address.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;The last part of this talk will focus on the most recent advances in
+the Python&lt;/div&gt;
+&lt;div class="line"&gt;standard library, addressing one of the principal performance
+bottlenecks of&lt;/div&gt;
+&lt;div class="line"&gt;multi-core/multi-machine processing, which is data communication. We
+will&lt;/div&gt;
+&lt;div class="line"&gt;present a new API for shared-memory management between different
+Python&lt;/div&gt;
+&lt;div class="line"&gt;processes, and performance improvements for the serialization of large
+Python&lt;/div&gt;
+&lt;div class="line"&gt;objects ( PEP 574, pickle extensions). These performance improvements
+will be&lt;/div&gt;
+&lt;div class="line"&gt;leveraged by distributed data science frameworks such as dask, ray and
+pyspark.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Pierre Glaser</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/parallel-computing-in-python-current-state-and-recent-advances.html</guid><category>EuroPython 2019</category><category>Distributed Systems</category><category>Multi-Processing</category><category>Multi-Threading</category><category>Performance</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category></item><item><title>Building Data Workflows with Luigi and Kubernetes</title><link>https://pyvideo.org/europython-2019/building-data-workflows-with-luigi-and-kubernetes.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will focus on how one can build complex data pipelines in
+Python. I will introduce Luigi and show how it solves problems while
+running multiple chain of batch jobs like dependency resolution,
+workflow management, visualisation, failure handling etc.&lt;/p&gt;
+&lt;p&gt;After that, I will present how to package Luigi pipelines as Docker
+image for easier testing and deployment. Finally, I will go through way
+to deploy them on Kubernetes cluster, thus making it possible to scale
+Big Data pipelines on- demand and reduce infrastructure costs. I will
+also give tips and tricks to make Luigi Scheduler play well with
+Kubernetes batch execution feature.&lt;/p&gt;
+&lt;p&gt;This talk will be accompanied by demo project. It will be very
+beneficial for audience who have some experience in running batch jobs
+(not necessarily in Python), typically people who work in Big Data
+sphere like data scientists, data engineers, BI devs and software
+developers. Familiarity with Python is helpful but not needed.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nar Kumar Chhantyal</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/building-data-workflows-with-luigi-and-kubernetes.html</guid><category>EuroPython 2019</category><category>Architecture</category><category>Big Data</category><category>Data</category><category>Distributed Systems</category><category>Scaling</category></item><item><title>How To Build a Python Microservice Without Losing a Job</title><link>https://pyvideo.org/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Sarcastic talk, sharing real-life experience on both technical and
+social aspects of doing an architecture migration to microservices
+without losing a job.&lt;/p&gt;
+&lt;p&gt;Any change in software architecture is a significant time investment.
+Writing microservices in Python is a joy, but when you decide on it,
+there is often no way back. Therefore it is always an advantage to know
+what to expect in advance, not just from inspiring blog posts but also
+from the harsh reality.&lt;/p&gt;
+&lt;p&gt;I would like to share typical pitfalls of choosing a framework stack,
+communication protocol, conventions, and deployment process — all
+covered by real projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Anton Caceres</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/how-to-build-a-python-microservice-without-losing-a-job.html</guid><category>EuroPython 2019</category><category>Architecture</category><category>Best Practice</category><category>Communication</category><category>Distributed Systems</category><category>Microservices</category></item><item><title>Testing Microservices: fast and with confidence</title><link>https://pyvideo.org/europython-2019/testing-microservices-fast-and-with-confidence.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;A main advantage of microservices is improved developer velocity. One
+roadblock to achieving it is giving developers the confidence that their
+changes are correct and safe, which is a challenging problem in such a
+distributed architecture. Typical approaches involve relying on
+automated end- to-end testing, which is costly to set up, develop tests
+for and run.&lt;/p&gt;
+&lt;p&gt;In this talk I will explore an approach to testing that does not require
+the presence of any external dependencies (not even &amp;quot;fake&amp;quot; or &amp;quot;test
+double&amp;quot; implementations of them), but provides many of the benefits of
+an end-to-end test. Come by to learn about how we can use a downstream
+service's API specification to make sure the system under test interacts
+with it in the correct way (&amp;quot;contract testing&amp;quot;) - a key ingredient
+missing from most unit or integration test setups. We'll then go even
+further to cover testing scenarios that previously could only be covered
+with end-to-end tests: how to maintain and validate state of your
+downstream dependencies.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Stephan Jaensch</dc:creator><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-11:/europython-2019/testing-microservices-fast-and-with-confidence.html</guid><category>EuroPython 2019</category><category>Distributed Systems</category><category>Microservices</category><category>Testing</category><category>python</category></item><item><title>Advanced Infrastructure Management in Kubernetes using Python</title><link>https://pyvideo.org/europython-2020/advanced-infrastructure-management-in-kubernetes-using-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Automate managing complex applications in a cloud native way using Operators written in Python&lt;/p&gt;
+&lt;p&gt;Many of us are using Kubernetes in production. A Kubernetes Operator is a way to automate packaging, deploying, and managing of a Kubernetes Application. It is a software alternative to a human operator who has deep knowledge of how to set up, deploy, and manage a particular piece of infrastructure and what to do if it isn’t behaving correctly. Let’s see how we can automate all of this while staying in the Python ecosystem.&lt;/p&gt;
+&lt;p&gt;It will be helpful to know some basic concepts of Kubernetes(Deployments, Services, Pods, Configmap etc.) and Celery(docs.celeryproject.org) to get the most out of this talk.&lt;/p&gt;
+&lt;p&gt;Talk is divided into four phases.&lt;/p&gt;
+&lt;p&gt;Phase I - Problems and Opportunities
+We're going to see some simple examples/problems where a lot of manual effort is involved so as to connect audience to the problem.
+We're going to discuss problems with configuration management, database cluster setup and introduce the focus problem of the talk which is around automating the setup of a Celery cluster.&lt;/p&gt;
+&lt;p&gt;Phase II - Incrementally Approaching the Solution
+We're going to incrementally approach the automation each of the manual steps involved in running a Celery cluster in Production. We're going to discuss the extension capabilities in Kubernetes using CRDs and Custom Controllers which are going to help us manage our Celery cluster automagically.&lt;/p&gt;
+&lt;p&gt;Phase III - Celery Operator in action
+We're going to see the code of custom controller and the whole operator in action. We create the newly defined celery resource and see how the operator works on bringing up the worker and flower deployments and handles autoscaling based on queue length.&lt;/p&gt;
+&lt;p&gt;Phase IV - Conclusion and Q&amp;amp;A
+We're going to talk about different use-cases and what is world doing with Operators. We'll discuss the next steps for the Celery operator and some resources to help build operators. We'll end the talk with a Q&amp;amp;A.&lt;/p&gt;
+&lt;p&gt;Slides for the talk are available on - &lt;a class="reference external" href="https://bit.ly/europython20-ppt"&gt;https://bit.ly/europython20-ppt&lt;/a&gt;
+Celery Operator POC I built for this talk is open source - &lt;a class="reference external" href="https://github.com/brainbreaker/Celery-Kubernetes-Operator"&gt;https://github.com/brainbreaker/Celery-Kubernetes-Operator&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gautam Prajapati</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/advanced-infrastructure-management-in-kubernetes-using-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>DevOps general</category><category>Distributed Systems</category><category>Infrastructure</category><category>Messaging and Job Queues (RabbitMQ/Redis/...)</category><category>python</category></item><item><title>Building reproducible distributed applications at scale</title><link>https://pyvideo.org/europython-2020/building-reproducible-distributed-applications-at-scale.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Packaging in Python is hard. Packaging is particularly hard when code needs to run in a distributed computing environment where it is difficult to know what runs where and which parts of the code are available to run there.&lt;/p&gt;
+&lt;p&gt;In this talk we will present different ways to ship Python code to a compute cluster, what Python's &amp;quot;pickling&amp;quot; feature has to do with this, what self contained executables are and the challenges we met when shipping Python code to a cluster with 1000s of nodes running 1000s of jobs like TensorFlow or Spark.&lt;/p&gt;
+&lt;p&gt;As an example, we will show how one can run a PySpark job on top of S3 storage using PEX as a self contained executable artifact. Finally we will explain how those ideas generalize for different Jobs (like Tensorflow, Dask), different virtual environments (like Anaconda or vanilla Python virtual envs) and different distributed storage's (like S3 or HDFS).&lt;/p&gt;
+&lt;p&gt;The auditor will get an overview of the challenges of Python packaging for distributed applications and see code samples that can be applied in his own project.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fabian Höring</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/building-reproducible-distributed-applications-at-scale.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Big Data</category><category>Distributed Systems</category><category>Packaging</category><category>Virtual Env</category></item><item><title>IoTPy: Python + Streams + Agents for Streaming Applications</title><link>https://pyvideo.org/europython-2020/iotpy-python-streams-agents-for-streaming-applications.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Ingest and analyze streams of data generated by sensors, social media an other sources.&lt;/p&gt;
+&lt;p&gt;Sensors, social media, news feeds, webcams and other sources generate streams of data which are analyzed to control actuators, generate alerts, and feed displays. These applications process streams on onboard computers, such as the Raspberry Pi, connected directly to sensors, and send summarized information to the cloud for further processing. These applications have two characteristics: (1) Concurrency: The applications are concurrent using multiple threads to connect to sensors and actuators, shared memory across multiple processes on multicore machines and message passing for distributed systems spanning multiple computers. (2) Data Analysis: The applications use programs from a variety of libraries including those for signal processing, machine learning and natural language processing.&lt;/p&gt;
+&lt;p&gt;Developers of streaming applications can use open-source software to deal with both characteristics. Concurrency: multiprocessing.Array can be used to construct shared-memory multiprocessing Python programs in multicore computers, and frameworks such as APMQ and Kafka can be used to build distributed applications. Data Analysis: A vast collection of open-source Python libraries can be used to analyze data in streams. Developers of streaming applications encounter an impedance mismatch between the software libraries that address these two characteristics. The next paragraph describes the mismatch and how IoTPy addresses it.&lt;/p&gt;
+&lt;p&gt;Programs in most software libraries apply a function to data, get results, and terminate execution. By contrast, streaming applications are perpetual processes that analyze endless streams of data. IoTPy helps developers: (1) build non-terminating streaming applications by harnessing conventional terminating programs from Python’s huge base of libraries and (2) create multithreaded, multicore and distributed Python applications by simply connecting streams to each other.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.AssembleSoftware.com"&gt;https://www.AssembleSoftware.com&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Kanianthra Chandy</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/iotpy-python-streams-agents-for-streaming-applications.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Distributed Systems</category><category>Internet of Things (IoT)</category><category>Messaging and Job Queues (RabbitMQ/Redis/...)</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category><category>Sensors</category></item><item><title>Ray: A System for High-performance, Distributed Python Applications</title><link>https://pyvideo.org/europython-2020/ray-a-system-for-high-performance-distributed-python-applications.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Scale your applications from a laptop to a cluster with ease&lt;/p&gt;
+&lt;p&gt;Ray (&lt;a class="reference external" href="http://ray.io"&gt;http://ray.io&lt;/a&gt;) is an open-source, distributed framework from U.C. Berkeley’s RISELab that easily scales Python applications from a laptop to a cluster. While broadly applicable, it was developed to solve the unique performance challenges of ML/AI systems, such as the heterogeneous task scheduling and state management required for hyperparameter tuning and model training, running simulations when training reinforcement learning (RL) models, and model serving. Ray is now used in many production deployments.&lt;/p&gt;
+&lt;p&gt;I'll explain the problems that Ray solves for cluster-wide scaling of general Python applications and for specific examples, like RL workloads. Ray’s features include rapid scheduling and execution of “tasks” and management of distributed state, such as model parameters during training. I'll compare Ray to other libraries for distributed Python.&lt;/p&gt;
+&lt;p&gt;This talk is for you if you need to scale your Python applications to a cluster and you want a robust, yet easy-to-use API to do it. You don't need to be a distributed systems expert to use Ray. You'll learn when to use Ray versus alternatives, how it’s used in several open source systems, and how to use it in your projects.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Dean Wampler</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/ray-a-system-for-high-performance-distributed-python-applications.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Architecture</category><category>Data</category><category>Deep Learning</category><category>Distributed Systems</category><category>Microservices</category></item><item><title>Real Time Stream Processing for Machine Learning at Massive Scale</title><link>https://pyvideo.org/europython-2020/real-time-stream-processing-for-machine-learning-at-massive-scale.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing Massively Parallel Stream of Data with Python (+ Kafka, SKlearn, SpaCy and Seldon)&lt;/p&gt;
+&lt;p&gt;This talk will provide a practical insight on how to build scalable data streaming machine learning pipelines to process large datasets in real time using Python and popular frameworks such as Kafka, SpaCy and Seldon.&lt;/p&gt;
+&lt;p&gt;We will be covering a case study performing automated content moderation on Reddit comments in real time. Our dataset will consist of 200k reddit comments from /r/science, 50,000 of which have been removed by moderators. We will be handling the stream data in a Kubernetes cluster, and the stream processing will be handled using the stream processing library Kafka. We will be running the end-to-end pipeline in Kubernetes with various components legeraging SKLearn, SpaCy and Seldon.&lt;/p&gt;
+&lt;p&gt;We will then dive into fundamental concepts on stream processing such as windows, watermarking and checkponting, and we will show how to use each of these frameworks to build complex data streaming pipelines that can perform real time processing at scale by building, deploying and monitoring a machine learning model which will process production incoming data..&lt;/p&gt;
+&lt;p&gt;Finally we will show best practices when using these frameworks, as well as a high level overview of tools that can be used for monitoring in-depth.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alejandro Saucedo</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/real-time-stream-processing-for-machine-learning-at-massive-scale.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>ASYNC / Concurreny</category><category>Best Practice</category><category>Big Data</category><category>Distributed Systems</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category></item><item><title>Serverless 2.0 with Cloudstate.io-stateful functions with Python</title><link>https://pyvideo.org/europython-2020/serverless-20-with-cloudstateio-stateful-functions-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Imagine billions of functions, with in-memory state, distributed across a Kubernetes cluster!&lt;/p&gt;
+&lt;p&gt;Serverless is revolutionary and will dominate the future of Cloud. Function-as-a-Service (FaaS) however—with its stateless and short-lived functions is only the first step.&lt;/p&gt;
+&lt;p&gt;What’s needed is a next-generation Serverless platform and programming model for general-purpose application development in the new world of real-time data and event-driven systems. What is missing is ways to manage distributed state in a scalable and available fashion, support for long-lived virtual stateful services, ways to physically co-locate data and processing, and options for choosing the right data consistency model for the job.&lt;/p&gt;
+&lt;p&gt;This talk will discuss the challenges, requirements, and introduce you to our proposed solution: Cloudstate—an Open Source project building the next generation Stateful Serverless, running on Kubernetes, Akka, gRPC, Knative, and GraalVM, with polyglot support for Python, Java, Go, JavaScript, Swift, Scala, Python, Kotlin, and more.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sean Walsh</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/serverless-20-with-cloudstateio-stateful-functions-with-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Cross-Platform-Development</category><category>Development</category><category>Distributed Systems</category><category>Public Cloud (AWS/Google/...)</category></item><item><title>The Painless Route in Python to Fast and Scalable Machine Learning</title><link>https://pyvideo.org/europython-2020/the-painless-route-in-python-to-fast-and-scalable-machine-learning.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is the lingua franca for data analytics and machine learning. Its superior productivity makes it the preferred tool for prototyping. However, traditional Python packages are not necessarily designed to provide high performance and scalability for large datasets.
+We start our tutorial with a short introduction on how to get close-to-native performance with Intel-optimized packages, such as numpy, scipy, and scikit-learn. The next part of the tutorial is focused on getting high performance and scalability from multi-cores on a single machine to large clusters of workstations. We will demonstrate that with Python it is possible to achieve the same performance and scalability as with hand-tuned C++/MPI code:
+-       Scalable Dataframe Compiler (SDC) is used to compile analytics code using pandas/Python and scale it to bare-metal cluster performance. It compiles a subset of Python code into efficient parallel binaries that use message passing to perform collective communications.
+-       A convenient Python API to data analytics and machine learning primitives (daal4py). While its interface is scikit-learn-like, its MPI-based engine allows to scale machine learning algorithms to bare-metal cluster performance.
+-       In the tutorial, we will use SDC and daal4py together to build an end-to-end analytics pipeline that scales to clusters, requiring only minimal code changes.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">David Liu</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/the-painless-route-in-python-to-fast-and-scalable-machine-learning.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Analytics</category><category>Big Data</category><category>Distributed Systems</category><category>Machine-Learning</category><category>Scientific Libraries (Numpy/Pandas/SciKit/...)</category></item><item><title>Autenticazione e autorizzazione in salsa microservice</title><link>https://pyvideo.org/pycon-italia-2022/autenticazione-e-autorizzazione-in-salsa-microservice.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Autenticazione e autorizzazione in salsa microservice - PyCon Italia
+2022&lt;/p&gt;
+&lt;p&gt;Se partiamo da un monolite è tutto facile: verifichiamo le credenziali
+sul database (e/o utilizziamo oauth) e il gioco è fatto. Ma cosa succede
+in un mondo distribuito? Chi verifica le credenziali? Come ogni servizio
+identifica in modo sicuro l’utente e gli assegna i giusti ruoli? Se
+partiamo da un monolite è tutto facile: verifichiamo le credenziali sul
+database (e/o utilizziamo oauth) e il gioco è fatto. I monoliti sono
+semplici e utili in tantissimi casi, ma non sempre. A volte abbiamo
+bisogno di una architettura a microservizi, magari con linguaggi e stack
+tecnologici differenti. Chi verifica le credenziali? Come ogni servizio
+è in grado di identificare in modo sicuro l’utente e assegnargli i
+giusti ruoli per poter esaudire le richieste? Queste sono alcune domande
+che un sistema distribuito ci impone di valutare. In questo talk
+analizzeremo tramite demo e un caso reale e complesso, i diversi modi e
+le tecniche per gestire l’autorizzazione e l’autenticazione in un mondo
+a microservizi, illustrando pregi e difetti di ogni soluzione. slides:&lt;/p&gt;
+&lt;p&gt;Speaker: Gianluca Carucci&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Gianluca Carucci</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/autenticazione-e-autorizzazione-in-salsa-microservice.html</guid><category>PyCon Italia 2022</category><category>apis</category><category>architecture</category><category>authentication</category><category>distributed systems</category><category>microservices</category></item><item><title>Data Engineering and Python</title><link>https://pyvideo.org/pycon-italia-2022/data-engineering-and-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Data Engineering and Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Data Engineering is the backbone of all analytics that happens in any
+organization. This marks data engineering as the central role in any
+data-driven organization. This talk aims to introduce the fundamentals
+of data engineering with python apps driving the core concepts. The aim
+of this talk is to introduce the audience to the world of big data
+analytics with pythonic tools and libraries at its core. One can expect
+the talk to cover the basics of Extract, Transform and Load(ETL)
+pipelines using python scripts and then Airflow with PySpark. These ETL
+pipelines are core to any data infrastructure. There will be a discourse
+on how we can use cloud providers and design an entire system that is
+responsible for analytics and ML in an organization. Finally a short
+outro into how one can start their journey to become a data engineer.&lt;/p&gt;
+&lt;p&gt;Speaker: Prakhar Srivastava&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Prakhar Srivastava</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/data-engineering-and-python.html</guid><category>PyCon Italia 2022</category><category>architecture</category><category>big data</category><category>databases</category><category>distributed systems</category></item><item><title>Processing and analysing streaming data with Python and Apache Flink</title><link>https://pyvideo.org/pycon-italia-2022/processing-and-analysing-streaming-data-with-python-and-apache-flink.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing and analysing streaming data with Python and Apache Flink -
+PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Data used to be a batch thing, but more and more we get unbounded
+streams of data, fast or slow, that we need to process and analyse in
+near real time.&lt;/p&gt;
+&lt;p&gt;In this talk I’ll show you how you can use Apache Flink and QuestDB to
+build reliable streaming data pipelines that can grow as much as you
+need. Data used to be a batch thing, but more and more we get unbounded
+streams of data, fast or slow, that we need to process and analyse in
+near real time.&lt;/p&gt;
+&lt;p&gt;In this talk I’ll show you how you can use Apache Flink and QuestDB to
+build reliable streaming data pipelines that can grow as much as your
+Python application needs.&lt;/p&gt;
+&lt;p&gt;Speaker: Javier Ramirez&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Javier Ramirez</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/processing-and-analysing-streaming-data-with-python-and-apache-flink.html</guid><category>PyCon Italia 2022</category><category>analytics</category><category>big data</category><category>databases</category><category>distributed systems</category><category>open source</category></item><item><title>When gRPC Met Python</title><link>https://pyvideo.org/pycon-italia-2022/when-grpc-met-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;When gRPC Met Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;What if we can have a tool that helps us to do intelligent load
+balancing or What if we can do selective compression of the data and
+extremely fast and light weight transfer of data? Then let me introduce
+gRPC, the technology that helps us to do all of this and how can we
+integrate gRPC with Python. gRPC is one of the most new breakthroughs in
+the world of client server interaction. Using gRPC our client can
+directly make a call to a server on a different machine as if it were a
+local object. gRPC has low latency, high scalability and supports
+multiple use cases for distributed system. We can even build mobile
+clients which can communicate to a cloud server. gRPC uses Protocol
+Buffers which is an open source mechanism for serialising structured
+data, which makes payloads faster, smaller and simpler. In this talk we
+will try to understand how can we get started with gRPC in Python.
+grpcio package of python will be used for the demonstration of the
+examples and we will cover basics of gRPC as well. We will build a basic
+gRPC service and define protocol buffers for it. Demonstration of how a
+client and a server can be made through gRPC and how can they
+communicate.&lt;/p&gt;
+&lt;p&gt;Speaker: Sanket Singh&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sanket Singh</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/when-grpc-met-python.html</guid><category>PyCon Italia 2022</category><category>distributed systems</category><category>scaling</category></item><item><title>Implementing distributed systems with Consul</title><link>https://pyvideo.org/pycon-sk-2018/implementing-distributed-systems-with-consul.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Developing distributed systems is hard. Implementing distributed system
+from scratch requires knowledge of specialized algorithms and
+programming techniques. Consul is distributed system which enables us to
+build distributed system only by using Consul HTTP API. In our
+presentation, we are going to show basic concepts of consul, building
+our own consul cluster and showing how consul can be used for
+implementing distributed system. Our discussion will include also
+showing how we can benefit from consul even when using already existing
+python distributed components.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Matúš Valo</dc:creator><pubDate>Sat, 10 Mar 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-03-10:/pycon-sk-2018/implementing-distributed-systems-with-consul.html</guid><category>PyCon SK 2018</category><category>Consul</category><category>Distributed systems</category><category>PyCon SK</category><category>Python</category></item></channel></rss>

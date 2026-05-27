@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - David Hewitt</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_david-hewitt.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2025-05-16T00:00:00+00:00</updated><subtitle></subtitle><entry><title>How Python Harnesses Rust through PyO3</title><link href="https://pyvideo.org/pycon-us-2024/how-python-harnesses-rust-through-pyo3.html" rel="alternate"></link><published>2024-05-18T00:00:00+00:00</published><updated>2024-05-18T00:00:00+00:00</updated><author><name>David Hewitt</name></author><id>tag:pyvideo.org,2024-05-18:/pycon-us-2024/how-python-harnesses-rust-through-pyo3.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The last few years have seen Rust burst onto the scene as a language for
+implementing much-loved software for the Python ecosystem. The most well
+known examples of these are &lt;tt class="docutils literal"&gt;pydantic&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;polars&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;cryptography&lt;/tt&gt;,
+and &lt;tt class="docutils literal"&gt;ruff&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;These Rust components are usually built on top of
+&lt;a class="reference external" href="https://pyo3.rs/"&gt;PyO3&lt;/a&gt;, a Rust library for …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;The last few years have seen Rust burst onto the scene as a language for
+implementing much-loved software for the Python ecosystem. The most well
+known examples of these are &lt;tt class="docutils literal"&gt;pydantic&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;polars&lt;/tt&gt;, &lt;tt class="docutils literal"&gt;cryptography&lt;/tt&gt;,
+and &lt;tt class="docutils literal"&gt;ruff&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;These Rust components are usually built on top of
+&lt;a class="reference external" href="https://pyo3.rs/"&gt;PyO3&lt;/a&gt;, a Rust library for binding the two
+languages together, and &lt;a class="reference external" href="https://www.maturin.rs/"&gt;maturin&lt;/a&gt;, a PEP517
+build backend for Rust software. There are a growing number of talks,
+blogs, and guides showing how to use these tools.&lt;/p&gt;
+&lt;p&gt;In this talk I'll lead you through the details of how a Python function
+call ends up executing Rust code via PyO3. We'll first spend some time
+introducing some key ideas as well as the benefits of adding Rust to
+your Python stack. I'll then break down step-by-step what happens inside
+the Python interpreter and PyO3's internals as a seemingly simple enough
+Python expression leads to execution of your Rust function.&lt;/p&gt;
+&lt;p&gt;You should walk away from this talk with an idea of how Rust/PyO3
+software works under the hood. These same stages of a &amp;quot;native&amp;quot; function
+call are similar for multiple other languages too, including Python
+standard library &amp;quot;builtins&amp;quot;, Cython code, and C++/pybind11 software, so
+this may bring you some useful insight even if Rust is not planned to be
+in your software stack soon.&lt;/p&gt;
+&lt;p&gt;While this talk will get technical, no knowledge of Rust will be
+assumed. An understanding of Python functions and types will be useful,
+as I'll use these to introduce the analogous Rust concepts. Expect to
+see Rust code (and maybe a little C), but only for illustration - all
+code will be broken down and stepped through.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry><entry><title>Using Rust in Free-Threaded vs Regular Python 3.13</title><link href="https://pyvideo.org/pycon-us-2025/using-rust-in-free-threaded-vs-regular-python-313.html" rel="alternate"></link><published>2025-05-16T00:00:00+00:00</published><updated>2025-05-16T00:00:00+00:00</updated><author><name>David Hewitt</name></author><id>tag:pyvideo.org,2025-05-16:/pycon-us-2025/using-rust-in-free-threaded-vs-regular-python-313.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.13's new free-threaded build [&lt;a class="reference external" href="https://peps.python.org/pep-0703/"&gt;https://peps.python.org/pep-0703/&lt;/a&gt;] brings the possibility of true parallel execution into Python code for the first time.&lt;/p&gt;
+&lt;p&gt;This brings promise of significant performance opportunity, but not without cost. Parallel execution is notorious for being challenging due to the additional complexity. This …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python 3.13's new free-threaded build [&lt;a class="reference external" href="https://peps.python.org/pep-0703/"&gt;https://peps.python.org/pep-0703/&lt;/a&gt;] brings the possibility of true parallel execution into Python code for the first time.&lt;/p&gt;
+&lt;p&gt;This brings promise of significant performance opportunity, but not without cost. Parallel execution is notorious for being challenging due to the additional complexity. This implies bugs, and the risk is particularly high for the compiled code powering Python - including the CPython interpreter itself (it's written in C). The main risk comes from data races, which can cause unpredictable and potentially dangerous crashes.&lt;/p&gt;
+&lt;p&gt;The Rust programming language is designed to prevent data races by construction; if your code runs, it should be data race free (unless you misuse unsafe Rust).&lt;/p&gt;
+&lt;p&gt;We'll explore the way that Rust does this, both from the rules of the language, and by the data structures it offers to complement those rules. We'll showcase this with examples of Rust (PyO3) code designed for &amp;quot;regular&amp;quot; Python 3.13 and how it changes to become compatible with the free-threaded build.&lt;/p&gt;
+&lt;p&gt;This will lead onto ideas which we can carry across languages to influence how we write Python (and maybe C/C++) to be correct in a free-threaded world, before closing with some tantalizing examples of software architectures made possible by free-threaded Python.&lt;/p&gt;
+&lt;p&gt;No prior Rust knowledge necessary.&lt;/p&gt;
+&lt;p&gt;What you should hope to take away from this talk: - a basic understanding of how the free-threaded build of Python is different to the regular one, - an appreciation for the complexity of free-threading for compiled code, - how Rust helps you reason about this complexity, and - excitement for the future of free-threaded Python!&lt;/p&gt;
+</content><category term="PyCon US 2025"></category></entry></feed>

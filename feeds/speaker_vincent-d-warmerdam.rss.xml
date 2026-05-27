@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Vincent D. Warmerdam</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate><item><title>PySpark and Warcraft Data</title><link>https://pyvideo.org/europython-2015/pyspark-and-warcraft-data.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vincent D. Warmerdam - PySpark and Warcraft Data
+[EuroPython 2015]
+[21 July 2015]
+[Bilbao, Euskadi, Spain]&lt;/p&gt;
+&lt;p&gt;In this talk I will describe how to use Apache Spark (PySpark) with
+some data from the World of Warcraft API from an iPython notebook.
+Spark is interesting because it speeds up iterative processes on your
+hadoop cluster as well as your local machine.&lt;/p&gt;
+&lt;p&gt;I will give basic benchmarks (comparing it to numpy/pandas/scikit),
+explain the architecture/performance behind the technology and will
+give a live demo on how I used Spark to analyse an interesting
+dataset. I'll explain why you might want to use Spark and I'll also go
+in and explain when you don't want to use it.&lt;/p&gt;
+&lt;p&gt;The dataset I will be using is a 22Gb json blob containing auction
+house data from all world of warcraft servers over a period of time.
+The goal of the analysis will be to determine when and if basic
+economics still applies in a massively online game.&lt;/p&gt;
+&lt;p&gt;I will assume that the everyone knows what the ipython notebook is and
+I will assume a basic knowledge of numpy/pandas but nothing fancy. The
+dataset has been chosen such that people who are less interested in
+Spark can still enjoy the analysis part of the talk. If you know very
+little about data science but if you love video games then you should
+like this talk.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sun, 02 Aug 2015 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2015-08-02:/europython-2015/pyspark-and-warcraft-data.html</guid><category>EuroPython 2015</category></item><item><title>The Joy of Simulation: for Fun and Profit</title><link>https://pyvideo.org/europython-2016/the-joy-of-simulation-for-fun-and-profit.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vincent D. Warmerdam - The Joy of Simulation: for Fun and Profit
+[EuroPython 2016]
+[19 July 2016]
+[Bilbao, Euskadi, Spain]
+(&lt;a class="reference external" href="https://ep2016.europython.eu//conference/talks/the-joy-of-simulation-for-fun-and-profit"&gt;https://ep2016.europython.eu//conference/talks/the-joy-of-simulation-for-fun-and-profit&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;In this talk discusses some joyful exercises in simulation. I'll
+demonstrate it's usefulness but moreover I'll discuss the sheer joy.
+I'll discuss how to generate song lyrics, I'll discuss how to get
+better at casino games, how to avoid math, how to play monopoly or
+even how to invest in lego minifigures. No maths required; just a
+random number generator.&lt;/p&gt;
+&lt;hr class="docutils" /&gt;
+&lt;p&gt;In this talk discusses some joyful exercises in simulation. I'll
+demonstrate it's usefulness but moreover I'll discuss the sheer joy
+you can experience.&lt;/p&gt;
+&lt;p&gt;I'll go over the following points (the short list):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;I'll show how you can avoid math by simulating; I'll calculate the probability that two people in the live room have the same birthday.&lt;/li&gt;
+&lt;li&gt;I'll show how simulation can help you get better at many games. I'll start with simple card games and with the game of roulette. Most prominently I'll discuss how to determine the value of buying an asset in the game of monopoly (See blogpost: &lt;a class="reference external" href="http://koaning.io/monopoly-simulations.html"&gt;http://koaning.io/monopoly-simulations.html&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;I'll demonstrate how you can simulate Red Hot Chilli Pepper lyrics. Or any other band. Or legalese.&lt;/li&gt;
+&lt;li&gt;I'll demonstrate the results of a scraping exercise which helped me to determine the value of investing in Lego Minifigures (See blogpost: &lt;a class="reference external" href="http://koaning.io/lego-minifigs-stochastics-profit.html"&gt;http://koaning.io/lego-minifigs-stochastics-profit.html&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depending on the level of the audience I might also discuss how biased
+simulation can help you solve optimisation problems or even introduce
+bayesian statistics via sampling. I'll gladly leave this decision to
+the EuroPython committee.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sun, 31 Jul 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-07-31:/europython-2016/the-joy-of-simulation-for-fun-and-profit.html</guid><category>EuroPython 2016</category></item><item><title>Winning card games with 1000+ CPUs</title><link>https://pyvideo.org/europython-2018/winning-card-games-with-1000-cpus.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Vincent was playing a card game against his girlfriend and he kept
+loosing. So he wanted to train a bot to play on his behalf. This is our
+story.&lt;/p&gt;
+&lt;p&gt;We’re using AWS Lambda to get better at a card game named SushiGO. We
+make a small genetic algorithm in Python that uses AWS Lambda as a
+backend. The talk consists of these parts:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Quick Explanation of the rules of the SushiGo Card Game&lt;/li&gt;
+&lt;li&gt;Translation of real life to an algorithm&lt;/li&gt;
+&lt;li&gt;Explain why this problem needs a lot of CPU&lt;/li&gt;
+&lt;li&gt;Explain why AWS Lambda fits the simulation use-case&lt;/li&gt;
+&lt;li&gt;How to quickly hack Concurrency in Python&lt;/li&gt;
+&lt;li&gt;How to deploy lambda very quickly with chalice&lt;/li&gt;
+&lt;li&gt;Experimentation Results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This talk will discuss an algorithm that we’ve tried to improve in three
+ways:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Applying simple maths to make the search algorithm better&lt;/li&gt;
+&lt;li&gt;Throwing lots (lots!) of CPU’s against the problem by leveraging AWS
+Lambda and python concurrency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will conclude by discussing whether or not AWS Lambda is suitable for
+a gridsearch/grid simulation (hint, it’s not meant for this task, but it
+actually kind of works very well).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-07-27:/europython-2018/winning-card-games-with-1000-cpus.html</guid><category>EuroPython 2018</category></item><item><title>Why Transformers Work</title><link>https://pyvideo.org/europython-2020/why-transformers-work.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;And RNNs Fall Short&lt;/p&gt;
+&lt;p&gt;This will be a technical talk where I'll explain the inner workings of the machine learning algorithms inside of Rasa. In particular I'll talk about why the transformer has become a part in many of our algorithms and has replaced RNNs. These include use-cases in natural language processing but also in dialogue handling.&lt;/p&gt;
+&lt;p&gt;You'll see a live demo of a typical error that an LSTM would make but a transformer wouldn't. The algorithms are explained with calm diagrams and very little maths.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/why-transformers-work.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Algorithms</category><category>Deep Learning</category><category>Natural Language Processing</category></item><item><title>The Duct Tape of Heroes: Bayes Rule</title><link>https://pyvideo.org/pydata-amsterdam-2016/the-duct-tape-of-heroes-bayes-rule.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData Amsterdam 2016&lt;/p&gt;
+&lt;p&gt;In this talk I will give many examples of when Bayes rule will help you in your day to day work. I'll quickly show many examples of bayesian statistical thinking in action; the pleasure of inference, probabilistic graphs, model selection, feature generation, even operations research! I'll finish with a dataset from Heroes of the Storm and I'll show why Bayesian models can outperform randomforests.&lt;/p&gt;
+&lt;p&gt;My talk is made up of the following examples;&lt;/p&gt;
+&lt;p&gt;basic disease example: what is the value of adding an extra test to a patient
+give an example of an inference task that is very hard to do properly without bayesian thinking
+creating simple probibalistic models with pandas and showing how they are robust against missing data. I will also demo pomegranate, a new probabilistic programming tool for python.
+show how you can use bayes rule to pick models
+demo a bayesian probablistic approach to finding overpowered characters in the Heroes of the Storm video game.&lt;/p&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://koaning.io/theme/notebooks/bayes.pdf"&gt;http://koaning.io/theme/notebooks/bayes.pdf&lt;/a&gt;.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 26 Mar 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-03-26:/pydata-amsterdam-2016/the-duct-tape-of-heroes-bayes-rule.html</guid><category>PyData Amsterdam 2016</category><category>pomegranate</category><category>bayes</category></item><item><title>The profession of solving (the wrong problem)</title><link>https://pyvideo.org/pydata-amsterdam-2019/the-profession-of-solving-the-wrong-problem.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-10:/pydata-amsterdam-2019/the-profession-of-solving-the-wrong-problem.html</guid><category>PyData Amsterdam 2019</category><category>pydata</category></item><item><title>Visualising Data through Pandas</title><link>https://pyvideo.org/pydata-berlin-2014/visualising-data-through-pandas.html</link><description>&lt;h3&gt;Summary&lt;/h3&gt;&lt;p&gt;pandas &amp;amp; ggplot: quick analysis with python and friends&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk is about&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;learning the basics of pandas&lt;/li&gt;
+&lt;li&gt;learning the basics of visualisation with ggplot&lt;/li&gt;
+&lt;li&gt;combining the two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Part of the talk will be slides, the other part will be done via an
+iPython-notebook.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 26 Jul 2014 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2014-07-26:/pydata-berlin-2014/visualising-data-through-pandas.html</guid><category>PyData Berlin 2014</category></item><item><title>TNaaS - Tech Names as a Service</title><link>https://pyvideo.org/pydata-berlin-2017/tnaas-tech-names-as-a-service.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In this talk I will explain how I built a service that generates Pokemon names. You'd be surprised how hard it is to do this properly and how easy it is to do it practically.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;TNaaS - Tech Names as a Service Deploying a Random Generator that's Phonetically Pokemon&lt;/p&gt;
+&lt;p&gt;There is a striking phonetic similarity between big data technology and pokemon names. This has caused some hilarious conversations with recruiters on linkedin: &lt;a class="reference external" href="https://www.linkedin.com/in/vincentwarmerdam/"&gt;https://www.linkedin.com/in/vincentwarmerdam/&lt;/a&gt; but it also made me wonder. Can I create a service that generates strings that sound like potential pokemon names and what might be the simplest possible way to make that into a service? Also, would it be possible to generate pokemon names that start with three random characters and end with 'base' (KREBASE, MONBASE would be appropriate but IEYBASE would not be).&lt;/p&gt;
+&lt;p&gt;Turns out that this is an interesting problem from a ML standpoint and that it is rediculously easy to build in the cloud. In my talk I will explain the ML behind it;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;markov chains&lt;/li&gt;
+&lt;li&gt;probibalistic graphs&lt;/li&gt;
+&lt;li&gt;rnn/lstm&lt;/li&gt;
+&lt;li&gt;bidirectional lstm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;During the talk I will also do a deep dive on the pros and cons of these methods.&lt;/p&gt;
+&lt;p&gt;I currently have a 101 version of the service live here: &lt;a class="reference external" href="https://dyccxmwpz9.execute-api.eu-west-1.amazonaws.com/pokemon/poke-names/v2"&gt;https://dyccxmwpz9.execute-api.eu-west-1.amazonaws.com/pokemon/poke-names/v2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By the time of the conference it will have a proper front end and I have already bought the domain name of tnaas.com.&lt;/p&gt;
+&lt;p&gt;I've talked about a similar topic in the past: &lt;a class="reference external" href="https://youtu.be/TkHT3sLwtkY?t=22m10s"&gt;https://youtu.be/TkHT3sLwtkY?t=22m10s&lt;/a&gt;. The goal of this talk is to spend more time explaining how I actually built the service; both from a coding perspective as well as a deployment perspective.&lt;/p&gt;
+&lt;p&gt;Let me know if there are any questions. I am submitting multiple talks that I think are interesting and relevant to the PyData crowd, I'll gladly leave it to the committee which (or if any) of them are relevant to the local community.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Fri, 30 Jun 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-06-30:/pydata-berlin-2017/tnaas-tech-names-as-a-service.html</guid><category>PyData Berlin 2017</category></item><item><title>Gaussian Progress</title><link>https://pyvideo.org/pydata-berlin-2019/gaussian-progress.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Speaker: Vincent D. Warmerdam&lt;/p&gt;
+&lt;p&gt;Track:PyData
+This talk is an attempt at explaining the power of the Gaussian[tm] by stepping up the ladder from Naive Bayes to Mixtures to Neural Mixtures to Gaussian Processes.&lt;/p&gt;
+&lt;p&gt;Recorded at the PyConDE &amp;amp; PyData Berlin 2019 conference.
+&lt;a class="reference external" href="https://pycon.de"&gt;https://pycon.de&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More details at the conference page: &lt;a class="reference external" href="https://de.pycon.org/program/WDAANU"&gt;https://de.pycon.org/program/WDAANU&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pydataberlin"&gt;https://twitter.com/pydataberlin&lt;/a&gt;
+Twitter:  &lt;a class="reference external" href="https://twitter.com/pyconde"&gt;https://twitter.com/pyconde&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-10-10:/pydata-berlin-2019/gaussian-progress.html</guid><category>PyData Berlin 2019</category></item><item><title>Untitled12.ipynb</title><link>https://pyvideo.org/pydata-eindhoven-2019/untitled12ipynb.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Notebooks are great but they're causing bad habits. This talk will be a
+live coding exercise where we clean up some pandas code such that it
+behaves like lego. The goal is to uncover a great pattern for pandas
+that will prevent loads of scrolling.&lt;/p&gt;
+&lt;p&gt;These are the main habits I'll address;&lt;/p&gt;
+&lt;p&gt;how to construct pandas pipelines how to construct stateless ETL how to
+create proper decorators how to make your system debugable how to write
+pandas such that it is immediately ready for prod&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 30 Nov 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-11-30:/pydata-eindhoven-2019/untitled12ipynb.html</guid><category>PyData Eindhoven 2019</category></item><item><title>The Duct Tape of Heroes Bayesian statistics</title><link>https://pyvideo.org/pydata-london-2016/vincent-d-warmerdam-the-duct-tape-of-heroes-bayesian-statistics.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData London 2016&lt;/p&gt;
+&lt;p&gt;In this talk I will give many examples of when Bayes rule will help you in your day to day work. I'll quickly show many examples of bayesian statistical thinking in action; the pleasure of inference, probabilistic graphs, model selection, feature generation, even operations research! I'll finish with a dataset from Heroes of the Storm and I'll show why Bayesian models can outperform randomforests.&lt;/p&gt;
+&lt;p&gt;My talk is made up of the following examples;&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;basic disease example: what is the value of adding an extra test to a patient&lt;/li&gt;
+&lt;li&gt;give an example of an inference task that is very hard to do properly without bayesian thinking&lt;/li&gt;
+&lt;li&gt;creating simple probibalistic models with pandas and showing how they are robust against missing data&lt;/li&gt;
+&lt;li&gt;demo the daft, corner and pomegrenate library&lt;/li&gt;
+&lt;li&gt;show how you can use bayes rule to pick models&lt;/li&gt;
+&lt;li&gt;demo a bayesian probablistic approach to finding overpowered characters in the Heroes of the Storm video game.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Slides available here: &lt;a class="reference external" href="http://koaning.io/theme/notebooks/bayes.pdf"&gt;http://koaning.io/theme/notebooks/bayes.pdf&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Wed, 11 May 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-05-11:/pydata-london-2016/vincent-d-warmerdam-the-duct-tape-of-heroes-bayesian-statistics.html</guid><category>PyData London 2016</category></item><item><title>SaaaS - Sampling as an Algorithm Service</title><link>https://pyvideo.org/pydata-london-2017/saaas-sampling-as-an-algorithm-service.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Description
+In this talk I will explain the idea of sampling to get to your model and I will demonstrate it with examples. The goal is to start with a for loop and to end with understanding how MCMC algorithms work.&lt;/p&gt;
+&lt;p&gt;Abstract
+A lot of people understand the scikit-learn models of todays world but feel uneasy about the whole MCMC method of training. Why are these algorithms different? How is it that you don't use a gradient method but a sampler instead? It can feel a bit misterious if you've not properly been introduced to this other way of thinking.&lt;/p&gt;
+&lt;p&gt;In this talk I will explain the idea of sampling to get to your model and I will demonstrate it with examples. The goal is to start with a for loop and to end with understanding how MCMC algorithms work. As a consequence the audience will also get a proper introduction to PyMC3. In particular I will discuss the following;&lt;/p&gt;
+&lt;p&gt;why markov chain sampling can be equivalent to direct sampling
+how to build your own MCMC sampler with a for loop
+how this for loop can be run faster by using PyMC3 instead
+the key idea of inference and how i was briefly able apply it in a santa kaggle competition
+how to analyse timeseries with MCMC in PyMC3
+Parts of this talk are readily available on my blog;&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://koaning.io/switching-to-sampli"&gt;http://koaning.io/switching-to-sampli&lt;/a&gt;...
+&lt;a class="reference external" href="http://koaning.io/elimination-via-inf"&gt;http://koaning.io/elimination-via-inf&lt;/a&gt;...&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 06 May 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-05-06:/pydata-london-2017/saaas-sampling-as-an-algorithm-service.html</guid><category>PyData London 2017</category></item><item><title>Winning with Simple, even Linear, Models</title><link>https://pyvideo.org/pydata-london-2018/winning-with-simple-even-linear-models.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Simple models work. Linear models work. No need for deep learning or
+complex ensembles, you can often keep it simple. In this talk I'll
+discuss and demonstrate some winning tricks that you can apply on
+simple, even linear models.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2018-04-28:/pydata-london-2018/winning-with-simple-even-linear-models.html</guid><category>PyData London 2018</category></item><item><title>How to Constrain Artificial Stupidity</title><link>https://pyvideo.org/pydata-london-2019/how-to-constrain-artificial-stupidity.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Freedom sounds like a good idea but there's a reason why you'd want a fence near a ravine and a speed limit on a car. One might even call it common sense. The problem is that machine learning models don't typically have that and the results can be disastrous. This talk is about celebrating constraints on models in order to improve their applications.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Sat, 13 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-13:/pydata-london-2019/how-to-constrain-artificial-stupidity.html</guid><category>PyData London 2019</category></item><item><title>Lightning Talk 5 - Vincent D. Warmerdam</title><link>https://pyvideo.org/pydata-warsaw-2017/lightning-talk-5-vincent-d-warmerdam.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Vincent D. Warmerdam</dc:creator><pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-19:/pydata-warsaw-2017/lightning-talk-5-vincent-d-warmerdam.html</guid><category>PyData Warsaw 2017</category></item><item><title>Playground of Evol Adventures - Rogier van der Geer, Vincent D. Warmerdam</title><link>https://pyvideo.org/pydata-warsaw-2017/playground-of-evol-adventures-rogier-van-der-geer-vincent-d-warmerdam.html</link><description></description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Rogier van der Geer</dc:creator><pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2017-10-19:/pydata-warsaw-2017/playground-of-evol-adventures-rogier-van-der-geer-vincent-d-warmerdam.html</guid><category>PyData Warsaw 2017</category></item></channel></rss>

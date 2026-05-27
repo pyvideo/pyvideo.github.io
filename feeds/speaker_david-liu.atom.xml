@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - David Liu</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_david-liu.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2020-07-23T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Infrastructure design patterns with Python, Buildbot, and Linux Containers</title><link href="https://pyvideo.org/europython-2017/infrastructure-design-patterns-with-python-buildbot-and-linux-containers.html" rel="alternate"></link><published>2017-07-12T00:00:00+00:00</published><updated>2017-07-12T00:00:00+00:00</updated><author><name>David Liu</name></author><id>tag:pyvideo.org,2017-07-12:/europython-2017/infrastructure-design-patterns-with-python-buildbot-and-linux-containers.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In today’s world of fast-paced development, infrastructure can get
+left behind quickly, leading to a potential increase in technical
+debt. Buildbot is normally known to be a continuous integration (CI)
+framework built in Python, but can be refashioned to solve
+infrastructure design patterns that arise in enterprise or …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;In today’s world of fast-paced development, infrastructure can get
+left behind quickly, leading to a potential increase in technical
+debt. Buildbot is normally known to be a continuous integration (CI)
+framework built in Python, but can be refashioned to solve
+infrastructure design patterns that arise in enterprise or production
+and deployment situations. Using Python and native Buildbot
+components paired with Linux Containers, patterns such as license
+management, resource allocation, load balancing, and enterprise
+application deployment can be architected quickly with room for
+expansion as one’s needs grow.&lt;/p&gt;
+&lt;p&gt;Learn how to move past the CI mindset and construct infrastructure
+needs with Buildbot and popular Linux Containers such as Docker and
+ClearContainers. Attendees will learn the best known methods of
+configuring Buildbot in non-CI implementations, and how to utilize
+the framework components for future needs.&lt;/p&gt;
+</content><category term="EuroPython 2017"></category></entry><entry><title>Addressing multithreading and multiprocessing in transparent and Pythonic ways</title><link href="https://pyvideo.org/europython-2018/addressing-multithreading-and-multiprocessing-in-transparent-and-pythonic-ways.html" rel="alternate"></link><published>2018-07-27T00:00:00+00:00</published><updated>2018-07-27T00:00:00+00:00</updated><author><name>David Liu</name></author><id>tag:pyvideo.org,2018-07-27:/europython-2018/addressing-multithreading-and-multiprocessing-in-transparent-and-pythonic-ways.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With the increase in computing power, harnessing and controlling one’s
+code out of the single-threaded realm becomes an ever-increasing
+problem, coupled with the desire to stay in the Python layer. With the
+recent tools and frameworks that have been published, escaping the GIL
+cleanly is much easier than …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With the increase in computing power, harnessing and controlling one’s
+code out of the single-threaded realm becomes an ever-increasing
+problem, coupled with the desire to stay in the Python layer. With the
+recent tools and frameworks that have been published, escaping the GIL
+cleanly is much easier than before, allow one’s Python code to
+effectively utilize multi-core and many core architectures in the most
+Pythonic ways possible. In this talk, learn about how to utilize static
+multiprocessing for process pinning, and effectively balancing thread
+pools with a monkey-patched import of threading modules.&lt;/p&gt;
+&lt;p&gt;Overview:&lt;/p&gt;
+&lt;p&gt;Introduction to multithreading and multiprocessing in Python&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;History of multithreading+multiprocessing in Python, classic
+frameworks&lt;/li&gt;
+&lt;li&gt;Problems that can occur (oversubscription, nested parallelism issues,
+process hopping, pool resource on shared machines)&lt;/li&gt;
+&lt;li&gt;Python accessing bigger hardware over the last few years (28+ cores,
+etc)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When to stay in the GIL, and when to escape it&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;The advantages and safety of the GIL&lt;/li&gt;
+&lt;li&gt;Python-level exiting of the GIL; analysis of when to return to
+single-threaded, and when threading is a deceivingly bad idea&lt;/li&gt;
+&lt;li&gt;Accountability of frameworks that natively exit the GIL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The new multithreading and multiprocessing libraries and techniques&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;static multiprocessing module (smp) (and monkey patching of
+multiprocessing)&lt;/li&gt;
+&lt;li&gt;thread pool control with command line calls of Python ( python -m tbb
+-p 8)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Putting it all together&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Examples of using static multiprocessing on a large machine to stop
+oversubscription&lt;/li&gt;
+&lt;li&gt;Example of pseudo-daemon process on 4-core machine by processor
+pinning&lt;/li&gt;
+&lt;li&gt;Thread pool control on a simple NumPy example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Summary - Best practices for using above methods to control
+multithreading+multiprocessing&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What needs to be done in the space (frameworks and things that need
+to be exposed)&lt;/li&gt;
+&lt;li&gt;Problems that still exist in the area&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Q&amp;amp;A&lt;/p&gt;
+</content><category term="EuroPython 2018"></category></entry><entry><title>The Painless Route in Python to Fast and Scalable Machine Learning</title><link href="https://pyvideo.org/europython-2020/the-painless-route-in-python-to-fast-and-scalable-machine-learning.html" rel="alternate"></link><published>2020-07-23T00:00:00+00:00</published><updated>2020-07-23T00:00:00+00:00</updated><author><name>David Liu</name></author><id>tag:pyvideo.org,2020-07-23:/europython-2020/the-painless-route-in-python-to-fast-and-scalable-machine-learning.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is the lingua franca for data analytics and machine learning. Its superior productivity makes it the preferred tool for prototyping. However, traditional Python packages are not necessarily designed to provide high performance and scalability for large datasets.
+We start our tutorial with a short introduction on how to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Python is the lingua franca for data analytics and machine learning. Its superior productivity makes it the preferred tool for prototyping. However, traditional Python packages are not necessarily designed to provide high performance and scalability for large datasets.
+We start our tutorial with a short introduction on how to get close-to-native performance with Intel-optimized packages, such as numpy, scipy, and scikit-learn. The next part of the tutorial is focused on getting high performance and scalability from multi-cores on a single machine to large clusters of workstations. We will demonstrate that with Python it is possible to achieve the same performance and scalability as with hand-tuned C++/MPI code:
+-       Scalable Dataframe Compiler (SDC) is used to compile analytics code using pandas/Python and scale it to bare-metal cluster performance. It compiles a subset of Python code into efficient parallel binaries that use message passing to perform collective communications.
+-       A convenient Python API to data analytics and machine learning primitives (daal4py). While its interface is scikit-learn-like, its MPI-based engine allows to scale machine learning algorithms to bare-metal cluster performance.
+-       In the tutorial, we will use SDC and daal4py together to build an end-to-end analytics pipeline that scales to clusters, requiring only minimal code changes.&lt;/p&gt;
+</content><category term="EuroPython 2020"></category><category term="europython"></category><category term="europython-2020"></category><category term="europython-online"></category><category term="Analytics"></category><category term="Big Data"></category><category term="Distributed Systems"></category><category term="Machine-Learning"></category><category term="Scientific Libraries (Numpy/Pandas/SciKit/...)"></category></entry><entry><title>HPC and Python: Intel’s work in enabling the scientific computing community</title><link href="https://pyvideo.org/euroscipy-2019/hpc-and-python-intels-work-in-enabling-the-scientific-computing-community.html" rel="alternate"></link><published>2019-09-05T00:00:00+00:00</published><updated>2019-09-05T00:00:00+00:00</updated><author><name>David Liu</name></author><id>tag:pyvideo.org,2019-09-05:/euroscipy-2019/hpc-and-python-intels-work-in-enabling-the-scientific-computing-community.html</id><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroSciPy 2019 Bilbao
+September 5, Thursday
+Mitxelena. Keynote Talk. 9.15&lt;/p&gt;
+&lt;p&gt;HPC and Python: Intel’s work in enabling the scientific computing community
+David Liu&lt;/p&gt;
+</content><category term="EuroSciPy 2019"></category><category term="keynote"></category></entry><entry><title>Addressing Multithreading and Multiprocessing in Transparent and Pythonic Methods</title><link href="https://pyvideo.org/scipy-2018/addressing-multithreading-and-multiprocessing-in-transparent-and-pythonic-methods.html" rel="alternate"></link><published>2018-07-12T00:00:00+00:00</published><updated>2018-07-12T00:00:00+00:00</updated><author><name>David Liu</name></author><id>tag:pyvideo.org,2018-07-12:/scipy-2018/addressing-multithreading-and-multiprocessing-in-transparent-and-pythonic-methods.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With the increase in computing power, harnessing and controlling one’s
+code out of the single threaded realm becomes an ever-increasing
+problem, coupled with the desire to stay in the Python layer. With the
+recent tools and frameworks that have been published, escaping the GIL
+cleanly is much easier …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;With the increase in computing power, harnessing and controlling one’s
+code out of the single threaded realm becomes an ever-increasing
+problem, coupled with the desire to stay in the Python layer. With the
+recent tools and frameworks that have been published, escaping the GIL
+cleanly is much easier than before, and can allow one’s Python code to
+effectively utilize multi-core and many core architectures in the most
+Pythonic ways possible. In this talk, learn about how to utilize static
+multiprocessing for process pinning, and effectively balancing thread
+pools with a monkey-patched import of threading modules.Presenter(s):
+Speaker: David Liu, Intel Speaker: Anton Malakhov, Intel Corporation&lt;/p&gt;
+</content><category term="SciPy 2018"></category></entry></feed>

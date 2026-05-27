@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Hood Chatham</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_hood-chatham.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2024-05-16T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Pyodide: A Python distribution for the browser</title><link href="https://pyvideo.org/pycon-us-2022/pyodide-a-python-distribution-for-the-browser.html" rel="alternate"></link><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><author><name>Roman Yurchak</name></author><id>tag:pyvideo.org,2022-04-27:/pycon-us-2022/pyodide-a-python-distribution-for-the-browser.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pyodide is a Python distribution for the browser and Node.js based on WebAssembly. It includes a port of CPython 3.9 to WebAssembly/Emscripten, and makes it possible to install and run Python packages in the browser. Pyodide comes with a robust Javascript ⟺ Python foreign function interface so …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Pyodide is a Python distribution for the browser and Node.js based on WebAssembly. It includes a port of CPython 3.9 to WebAssembly/Emscripten, and makes it possible to install and run Python packages in the browser. Pyodide comes with a robust Javascript ⟺ Python foreign function interface so that you can mix these two languages in your code with minimal friction.&lt;/p&gt;
+&lt;p&gt;We will walk through simple examples of how to run Python applications in the browser with Pyodide. We will also discuss the process of porting existing Python packages, including what makes a package suitable to port and what challenges are likely to arise.&lt;/p&gt;
+&lt;p&gt;Some Criteria that Determine Suitability of a Project for Porting:&lt;/p&gt;
+&lt;p&gt;Purely computational projects are simple to port to run in the browser. We are missing threading and multiprocessing, so you will need to be able to run single threaded. File system code mostly works unchanged. However, much of the UI and network access are very different inside the browser. Packages with a clean divide between doing computation and doing UI will be simpler to port, the UI parts may need to be rewritten or shimmed but the pure computation need not be.&lt;/p&gt;
+</content><category term="PyCon US 2022"></category><category term="talk"></category></entry><entry><title>Python in Cloudflare Workers – Running Pyodide on the Edge (Sponsor: Cloudflare)</title><link href="https://pyvideo.org/pycon-us-2024/python-in-cloudflare-workers-running-pyodide-on-the-edge-sponsor-cloudflare.html" rel="alternate"></link><published>2024-05-16T00:00:00+00:00</published><updated>2024-05-16T00:00:00+00:00</updated><author><name>Hood Chatham</name></author><id>tag:pyvideo.org,2024-05-16:/pycon-us-2024/python-in-cloudflare-workers-running-pyodide-on-the-edge-sponsor-cloudflare.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn how you can use Cloudflare Python Workers Beta to deploy your next
+Python app, free of charge, serverless, and infinitely scaling across
+the globe. We will demonstrate some apps you can start building today on
+Cloudflare’s full-featured developer platform, making use of robust
+batteries-included integrations with Cloudflare …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Learn how you can use Cloudflare Python Workers Beta to deploy your next
+Python app, free of charge, serverless, and infinitely scaling across
+the globe. We will demonstrate some apps you can start building today on
+Cloudflare’s full-featured developer platform, making use of robust
+batteries-included integrations with Cloudflare database, object
+storage, AI inference, and vector database solutions. Python Workers
+also support a variety of packages such as Pandas, Pydantic, and
+Fastapi.&lt;/p&gt;
+&lt;p&gt;After the demos, we will discuss some technical challenges we overcame
+to make Pyodide, a Python runtime built for WebAssembly, work in the
+Cloudflare Workers serverless runtime. Specifically, we will dive into
+memory snapshots, FFI bindings, and stack switching.&lt;/p&gt;
+</content><category term="PyCon US 2024"></category></entry></feed>

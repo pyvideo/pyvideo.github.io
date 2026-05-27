@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Fabian Schindler</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Sun, 02 Nov 2025 00:00:00 +0000</lastBuildDate><item><title>Refactoring at Scale: Making Analytics Type-Safe with Codemods and AI</title><link>https://pyvideo.org/pycon-fr-2025/refactoring-at-scale-making-analytics-type-safe-with-codemods-and-ai.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk presents a large-scale refactoring effort of Sentry’s backend analytics system, transforming a fragile, stringly typed event tracking API into a type-safe, maintainable solution. The original system lacked static validation, relied on manual event registration, and frequently caused subtle runtime bugs due to mismatched attributes and missing imports.&lt;/p&gt;
+&lt;p&gt;The team introduced a new approach using Python’s dataclasses, a custom &amp;#64;eventclass decorator, and a stricter analytics.record API, enabling full mypy support and simplifying inheritance. However, migrating hundreds of event classes, call sites, and heavily mocked tests posed significant challenges.&lt;/p&gt;
+&lt;p&gt;Initially, AI coding assistants like Copilot and Cursor were expected to automate the migration. In practice, they produced unreliable and inconsistent results. Instead, the team leveraged codemods built with libcst, with AI assisting in generating the migration tooling rather than performing the refactor directly. The migration was then split into smaller, team-owned pull requests to ensure reviewability.&lt;/p&gt;
+&lt;p&gt;Attendees will gain insights into:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;Designing type-safe replacements for legacy, stringly typed APIs&lt;/li&gt;
+&lt;li&gt;Building reliable Python codemods with libcst&lt;/li&gt;
+&lt;li&gt;Strategies for breaking down and managing large-scale migrations&lt;/li&gt;
+&lt;li&gt;Where AI can - and cannot - help in real-world refactoring efforts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This session provides practical lessons for anyone facing the daunting task of modernizing legacy Python systems.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Fabian Schindler</dc:creator><pubDate>Sun, 02 Nov 2025 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2025-11-02:/pycon-fr-2025/refactoring-at-scale-making-analytics-type-safe-with-codemods-and-ai.html</guid><category>PyCon FR 2025</category></item></channel></rss>

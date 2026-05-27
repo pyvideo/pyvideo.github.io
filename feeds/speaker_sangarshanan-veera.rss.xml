@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - Sangarshanan Veera</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Mon, 11 Jul 2022 00:00:00 +0000</lastBuildDate><item><title>Build-A-Database with Python</title><link>https://pyvideo.org/europython-2022/build-a-database-with-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;EuroPython 2022 - Build-A-Database with Python - presented by Sangarshanan&lt;/p&gt;
+&lt;p&gt;[Liffey A on 2022-07-14]&lt;/p&gt;
+&lt;p&gt;This talk will help unlock the internal workings of a Database by breaking down the abstractions that make it. We will use Python as our weapon of choice to slowly discuss how you would
+go about building the different components of a database.&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Talking to your Database: We start by building out an interface and a language that helps us communicate with our database. We will use the Prompt toolkit to build a REPL &amp;amp; use a simple SQL-based language with basic regular expressions that can parse it to instruction to execute.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;2) Working with Data: Now that we can communicate with our database using instructions. we start the actual work in building out the Datastore, We initially store all the data in a simple in-memory dictionary and then move to persist this data to disk. We now read the data from the disk to memory every time we query the data and write back the data to the disk but this makes things very slow :(
+This problem is our entry into the beautiful world of Indexes so by building a very basic Btree index to store references in memory to quickly access only what we require from the data on disk we can actually speed up our access times for basic row access queries from O(N) to O(1) where N is the number of rows in a table&lt;/p&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;Future: We can now proudly demo our new and polished database that can store data, persist it, and can run queries that are quite fast thanks to our Btree Indexes. We also discuss how this Database can be improved in the future by supporting full ACID Transactions, allowing concurrency, and handling locks&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Our Database journey now comes to an End and As they say, The best way to understand something is to build it yourself :)&lt;/p&gt;
+&lt;p&gt;This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"&gt;http://creativecommons.org/licenses/by-nc-sa/4.0/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sangarshanan Veera</dc:creator><pubDate>Mon, 11 Jul 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-07-11:/europython-2022/build-a-database-with-python.html</guid><category>EuroPython 2022</category></item></channel></rss>

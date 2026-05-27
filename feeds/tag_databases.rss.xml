@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"><channel><title>PyVideo.org - databases</title><link>https://pyvideo.org/</link><description></description><lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate><item><title>Evolving a helper script into a 180,000-lines-of-Python-code project</title><link>https://pyvideo.org/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;GRR Rapid Response (&lt;a class="reference external" href="https://github.com/google/grr"&gt;https://github.com/google/grr&lt;/a&gt;) is an incident
+response framework focused on remote live forensics.&lt;/p&gt;
+&lt;p&gt;It consists of a Python client (agent) that is installed on target
+systems, and Python server infrastructure that can manage and talk to
+clients. The goal of GRR is to support forensics and investigations in a
+fast, scalable manner to allow analysts to quickly triage attacks and
+perform analysis remotely.&lt;/p&gt;
+&lt;p&gt;GRR was started at Google in 2009 as a simple Python helper script used
+by Incident Response engineers. Eventually a little Python script got a
+little server component, was adapted to run on multiple systems (Mac,
+Linux, Windows), then a little UI was added and a few nice features were
+introduced (large-scale hunts, collection of predefined artifacts,
+memory analysis). A helper script has eventually evolved into a
+sophisticated framework with 180,000 lines of Python code.&lt;/p&gt;
+&lt;div class="line-block"&gt;
+&lt;div class="line"&gt;In the presentation we’ll talk about the process of evolving a small
+prototype-like Python project into a production-ready system, using
+GRR as an example. The topics that we’ll cover are:&lt;/div&gt;
+&lt;div class="line"&gt;* Taking shortcuts - both in terms of design and implementation.
+Reasons for taking them and their eventual costs.&lt;/div&gt;
+&lt;div class="line"&gt;* Relying on Python’s power features (i.e. meta-classes, mixins)?
+Long-term consequences on maintainability and readability.&lt;/div&gt;
+&lt;div class="line"&gt;* Organising the project into separate PyPI packages - benefits of
+doing that.&lt;/div&gt;
+&lt;div class="line"&gt;* Continuous integration, testing and automated builds for various
+platforms - implementation costs and maintainability effects.&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mikhail Bushkov</dc:creator><pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-07-12:/europython-2019/evolving-a-helper-script-into-a-180000-lines-of-python-code-project.html</guid><category>EuroPython 2019</category><category>Databases</category><category>Deployment/Continuous Integration and Delivery</category><category>Development</category><category>Open-Source</category><category>Security</category></item><item><title>A deep dive and comparison of Python drivers for Cassandra and Scylla</title><link>https://pyvideo.org/europython-2020/a-deep-dive-and-comparison-of-python-drivers-for-cassandra-and-scylla.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;This talk will explain the thread-per-core data architecture of Scylla and
+detail how we implemented &amp;quot;shard-awareness&amp;quot; in the Cassandra Python driver
+which allows to route queries down to the right CPU!&lt;/p&gt;
+&lt;p&gt;Cassandra's and Scylla's architecture and topology rely on the usage of
+a consistent token ring to distribute their data evenly on the cluster.&lt;/p&gt;
+&lt;p&gt;The cassandra-python driver is used widely to interact with those NoSQL
+databases. It implements connection pools and token awareness allowing the
+driver to route queries to the right node based on its knowledge of where the
+data is.&lt;/p&gt;
+&lt;p&gt;But Scylla goes one step further as it also dedicates CPUs to a smaller portion
+of the data on each node (called shards). This means that &lt;strong&gt;we can route CQL
+queries not only to the right node but to the right CPU&lt;/strong&gt;!&lt;/p&gt;
+&lt;p&gt;This talk will give implementation details on how we have done it.&lt;/p&gt;
+&lt;p&gt;Talk audience requirements: having a minimal knowledge of what Cassandra and
+a consistent hash ring are.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Alexys Jacob</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/a-deep-dive-and-comparison-of-python-drivers-for-cassandra-and-scylla.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Databases</category><category>NoSQL</category><category>Python 3</category><category>Scaling</category></item><item><title>Developing GraphQL API in Django using Graphene</title><link>https://pyvideo.org/europython-2020/developing-graphql-api-in-django-using-graphene.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Build GraphQL schema, queries, and mutations in Django using graphene library&lt;/p&gt;
+&lt;p&gt;GraphQL technology has become popular nowadays. While developing REST APIs, there are many things that developers need to take into consideration. There are multiple endpoints and over-fetching is the main problem of REST. GraphQL offers a unique approach and architecture for developing APIs. How is that efficient?&lt;/p&gt;
+&lt;p&gt;While using GraphQL, a client can request the data which is needed. It is an alternative for building APIs in place of REST. It’s a query language that can work as a medium between the frontend and backend.&lt;/p&gt;
+&lt;p&gt;The journey to develop GraphQL APIs in python needs some requirements and knowledge. We will be building APIs in the Django framework using a graphene library which includes many features of GraphQL such as ObjectTypes, Queries, Mutations, etc. We will start by understanding these concepts followed by some code. This includes detailed information about the Query class, what are resolvers, and where to write business logic, how pagination can be incorporated with queries would be included. Also, it will include the information about the Mutation class, arguments needed for mutation, and what type of response can be returned on successful operations.&lt;/p&gt;
+&lt;p&gt;Learning outcomes would be the understanding of code and building GraphQL APIs using graphene in a proper and structured way.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nisarg Shah</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/developing-graphql-api-in-django-using-graphene.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>APIs</category><category>Databases</category><category>Django</category><category>PostgreSQL</category><category>Python 3</category></item><item><title>Everything You Know About MongoDB is Wrong!</title><link>https://pyvideo.org/europython-2020/everything-you-know-about-mongodb-is-wrong.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;(Probably)&lt;/p&gt;
+&lt;p&gt;MongoDB is webscale, right? It's a JSON database, it's eventually consistent, and you use map-reduce to query it. Oh, and it's insecure.&lt;/p&gt;
+&lt;p&gt;Let me clear up some things: MongoDB is an ACID-compliant database with transactions, schemas &amp;amp; relationships. It includes a powerful aggregation query language; map-reduce has been deprecated for some time now. MongoDB doesn't speak or store JSON, and nowadays it comes with pretty good security defaults (we think).&lt;/p&gt;
+&lt;p&gt;There are many myths around about MongoDB - what it is, how it works, and what it does wrong. Like any database product, you need to know its capabilities and how to get the best out of it. On top of this, the product has changed a lot over the years, but lots of information out there hasn't caught up.&lt;/p&gt;
+&lt;p&gt;I'll cover 8 myths around MongoDB, explain how they're wrong, why the myth originated in the first place (some of them weren't originally myths).&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;What exactly is MongoDB?&lt;/li&gt;
+&lt;li&gt;What is the current release of MongoDB?&lt;/li&gt;
+&lt;li&gt;MongoDB is not a JSON database.&lt;/li&gt;
+&lt;li&gt;MongoDB has transactions.&lt;/li&gt;
+&lt;li&gt;MongoDB allows relationships.&lt;/li&gt;
+&lt;li&gt;You should only consider sharding if you must.&lt;/li&gt;
+&lt;li&gt;MongoDB is secure.&lt;/li&gt;
+&lt;li&gt;MongoDB stores your data reliably.&lt;/li&gt;
+&lt;li&gt;MongoDB is a big product, with lots to learn.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Along the way, I'll explain some of MongoDB's best-kept secrets, and provide practical tips and tricks for using it. The audience will leave with a good idea of what MongoDB is, what it isn't, and how to best develop with it.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Mark Smith</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/everything-you-know-about-mongodb-is-wrong.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Big Data</category><category>Data</category><category>Databases</category><category>Development</category><category>MongoDB</category></item><item><title>How to be Pythonic? Design a Query Language in Python</title><link>https://pyvideo.org/europython-2020/how-to-be-pythonic-design-a-query-language-in-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Query language is an important part of a database system, it is how people manage their data and how they can make the data useful to them. Starting from the 70s, the world is full of relational databases and SQL was the way to make queries. However, SQL is valuable to an injection attack. Lots of efforts are being used to stop those attacks and it made workflow become less efficient.&lt;/p&gt;
+&lt;p&gt;We don’t want to make the same mistake. That’s why using a Python query language is good. Having the Python community in our mind, we created WOQLpy, an open-source query language that lets users build queries in Python, instead of JSON-LD which is the native query language for our TerminusDB database. Now users can store data with a knowledge graph and make graph data visualization with Python.&lt;/p&gt;
+&lt;p&gt;In the first part of the talk, we will talk about what challenges we have when creating a query language in Python, the method we use, the idea and theory behind, and how WOQLpy work. This part will include a quick live demo of using WOQLpy so audiences can have an impression on how to make a query and get the task done, that is, getting a meaningful graph visualization form the source CSVs. The process of how to create a database and schema, loading the data form many CSVs, making a query and visualization, will be demonstrated using just one python script.&lt;/p&gt;
+&lt;p&gt;In the second part of the talk, we want to stimulate a discussion of what is a good design in Python and what is not. This part will be more interactive with the audiences, as we want to hear from you all, what would be the best for Pythonistas. By first suggesting some possible design, we will use a live voting system to gather opinions. This part of the talk will extend to the Q &amp;amp; A sessions to allow further discussions.&lt;/p&gt;
+&lt;p&gt;This talk is for Pythonista at all levels who are interested in starting to design a package in Python, no matter if the audience has published a python library or not. By attending this talk, audiences will learn about how to design a Python package that will be useful to Pythonistas and hopefully encourage more people to publish open-source packages online.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Cheuk Ho</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/how-to-be-pythonic-design-a-query-language-in-python.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>APIs</category><category>Databases</category><category>Graph Databases</category><category>Open-Source</category><category>Programming</category></item><item><title>Yet another package for multi-tenancy in Django</title><link>https://pyvideo.org/europython-2020/yet-another-package-for-multi-tenancy-in-django.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Exploring the challenges of having multi-tenancy in the Django web framework&lt;/p&gt;
+&lt;p&gt;Django is a popular, solid web framework for perfectionists with deadlines, with a wide ecosystem of packages that extend its powers in multiple directions. In the era of peaking popularity of Node/Deno, microservices, and heavyweight browser rendered webapps, Django still remains a triumphant monolith maker, very capable of major undertakings in the web arena.&lt;/p&gt;
+&lt;p&gt;For all you Django-lovers out there, it seems to me like a matter of time before you have to do some form of multi-tenancy in Django. Taking a solution that works well for one tenant and extending it to multiple tenants should still be a problem for perfectionists with deadlines. Interestingly, when it comes to covering all the many facets of multi-tenancy, Django can be not so batteries included, as one might end up working around or 'hacking' the framework in order to get things done.&lt;/p&gt;
+&lt;p&gt;In this talk I will walk you through the challenges of bringing multi-tenancy to a Django project. We'll cover the fundamental plumbing required to make it work reliably, securely, and elegantly. You will be expected to have a basic knowledge of Django (models, settings, users, URL reversing), and you will learn the working logic behind popular multi-tenancy packages like [django-tenant-schemas](&lt;a class="reference external" href="https://github.com/bernardopires/django-tenant-schemas"&gt;https://github.com/bernardopires/django-tenant-schemas&lt;/a&gt;) and [django-tenants](&lt;a class="reference external" href="https://github.com/tomturner/django-tenants"&gt;https://github.com/tomturner/django-tenants&lt;/a&gt;).&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Lorenzo Peña</dc:creator><pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2020-07-23:/europython-2020/yet-another-package-for-multi-tenancy-in-django.html</guid><category>EuroPython 2020</category><category>europython</category><category>europython-2020</category><category>europython-online</category><category>Abstractions</category><category>Architecture</category><category>Databases</category><category>Django</category><category>Django Projects</category></item><item><title>PyConAU 2010: Genropy - a framework for creating complex applications deployed on the web</title><link>https://pyvideo.org/pycon-au-2010/pyconau-2010--genropy---a-framework-for-creating-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Genropy - A framework for creating complex applications deployed on the
+web&lt;/p&gt;
+&lt;p&gt;Presented by Jeff B Edwards (Goodsoftware)&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://blog.genropy.org/"&gt;Genropy&lt;/a&gt; is the python implementation of
+Genro, and is an application framework quite different from the standard
+(django, cherrypy, turbogears), for building powerful database
+applications deployed from the browser. Many differences and advantages
+between this framework and traditional python application frameworks are
+explained. Genropy is a suitable for creating complex 'applications' as
+opposed to 'sites'. The differentiation is that an application is
+something an operator uses all day, has trained users, that have to
+'squeeze' all the power from it available. Conversely, a 'site' is
+basically public and not necessarily powerful as a user spends a
+relatively small amount of time on it. Genropy is the framework for
+creation applications. It is used for attendee registration and sales in
+pycon italy, the larger national conference in Europe (Florence, Italy).&lt;/p&gt;
+&lt;p&gt;This session will demonstrate how to create a simple application (3
+tables) and demonstrate the ease and power of using python for the model
+view and controller on the client. It demonstrates how one api- being
+the genro Bag - is used to create the model, to map the sql to objects,
+to create the GUI and communicate all data. So all of it can be done in
+python instead of having to use many different technologies and
+languages.&lt;/p&gt;
+&lt;p&gt;Jeff Edwards from Goodsoftware is strategic partner of Sofwell who is
+the author of Genropy.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jeff B Edwards</dc:creator><pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-06-26:/pycon-au-2010/pyconau-2010--genropy---a-framework-for-creating-.html</guid><category>PyCon AU 2010</category><category>databases</category><category>gui</category><category>pyconau</category><category>pyconau2010</category><category>web</category></item><item><title>PyConAU 2010: Multiple, Heterogeneous Models in Pylons</title><link>https://pyvideo.org/pycon-au-2010/pyconau-2010--multiple--heterogeneous-models-in-p.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Multiple, Heterogeneous Models in Pylons&lt;/p&gt;
+&lt;p&gt;Presented by Nick Seidenman (WEHI)&lt;/p&gt;
+&lt;p&gt;There is a fair amount of sparse, disjoint information available on how
+to use multiple, possibly diverse databases within a single Pylons app.
+This talk seeks to present a coherent guideline, derived from lessons
+learned, on how to use several different data stores (sqlite,
+postgresql, mysql, flat files) simultaneously within the same pylons
+project.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nick Seidenman</dc:creator><pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-06-26:/pycon-au-2010/pyconau-2010--multiple--heterogeneous-models-in-p.html</guid><category>PyCon AU 2010</category><category>databases</category><category>pyconau</category><category>pyconau2010</category><category>pylons</category></item><item><title>PyConAU 2010: Virtualisation Used in Development</title><link>https://pyvideo.org/pycon-au-2010/pyconau-2010--virtualisation-used-in-development.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Virtualisation Used in Development&lt;/p&gt;
+&lt;p&gt;Presented by Andrew Boag (Catalyst IT)&lt;/p&gt;
+&lt;p&gt;Some thoughts on why it makes sense to do your development inside some
+sort of virtual container. There are real pluses for the grass-level
+developement process, whether you have a large or small infrastructure.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Andrew Boag</dc:creator><pubDate>Sat, 26 Jun 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-06-26:/pycon-au-2010/pyconau-2010--virtualisation-used-in-development.html</guid><category>PyCon AU 2010</category><category>databases</category><category>pyconau</category><category>pyconau2010</category><category>virtualisation</category></item><item><title>Quando la tua applicazione Django non va abbastanza veloce</title><link>https://pyvideo.org/pycon-italia-2019/quando-la-tua-applicazione-django-non-va-abbastanza-veloce.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Django mette molta enfasi nel creare applicazioni velocemente. Questo è
+grandioso! Sviluppare applicazioni velocemente però non sempre significa
+sviluppare applicazioni veloci.&lt;/p&gt;
+&lt;p&gt;In questo talk mostrerò alcuni problemi di performance che ho incontrato
+(o introdotto) nella mia esperienza di sviluppatore. Vedremo esempi in
+diversi punti dell’applicazione: dai modelli, passando per le viste fino
+ai serializzatori. Alcuni di questi si sono rivelati facili da trovare e
+risolvere, altri subdoli o addirittura imbarazzanti. Tutti
+fortunatamente risolti.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1611"&gt;https://python.it/feedback-1611&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Saturday 4 May&lt;/strong&gt; at 10:45 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Riccardo Magliocchetti</dc:creator><pubDate>Sat, 04 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-04:/pycon-italia-2019/quando-la-tua-applicazione-django-non-va-abbastanza-veloce.html</guid><category>PyCon Italia 2019</category><category>performance</category><category>django</category><category>django-rest-framework</category><category>databases</category></item><item><title>Traversing the land of graph computing and databases</title><link>https://pyvideo.org/pycon-italia-2019/traversing-the-land-of-graph-computing-and-databases.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Graphs have long held a special place in the computer science’s history
+(and codebases). With the advent of a new wave of the information age
+characterized by a greater emphasis on linked data, graph computing and
+databases have risen to prominence. Be it enterprise knowledge graphs or
+graph-based analytics, there are a great number of potential
+applications.&lt;/p&gt;
+&lt;p&gt;To reap the benefits of graph databases and computing, one needs to
+understand the basics as well as current technical landscape and
+offerings. Also, it’s important to understand if a graph-based approach
+suits your problem. This talk will touch upon these points. Be prepared
+to learn some graph fundamentals and witness a live demo using Neo4j, a
+popular graph database.&lt;/p&gt;
+&lt;p&gt;Soft pre-requisites include familiarity with Python and experience
+working with a SQL or NoSQL database. There are no hard pre-requisites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feedback form:&lt;/strong&gt; &lt;a class="reference external" href="https://python.it/feedback-1682"&gt;https://python.it/feedback-1682&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;in __on &lt;strong&gt;Friday 3 May&lt;/strong&gt; at 12:00 &lt;a class="reference external" href="/en/sprints/schedule/pycon10/"&gt;**See
+schedule**&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Akash Tandon</dc:creator><pubDate>Fri, 03 May 2019 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2019-05-03:/pycon-italia-2019/traversing-the-land-of-graph-computing-and-databases.html</guid><category>PyCon Italia 2019</category><category>nosql</category><category>graph</category><category>analytics</category><category>databases</category><category>neo4j</category><category>datascience</category><category>graphdatabase</category></item><item><title>Data Engineering and Python</title><link>https://pyvideo.org/pycon-italia-2022/data-engineering-and-python.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Data Engineering and Python - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Data Engineering is the backbone of all analytics that happens in any
+organization. This marks data engineering as the central role in any
+data-driven organization. This talk aims to introduce the fundamentals
+of data engineering with python apps driving the core concepts. The aim
+of this talk is to introduce the audience to the world of big data
+analytics with pythonic tools and libraries at its core. One can expect
+the talk to cover the basics of Extract, Transform and Load(ETL)
+pipelines using python scripts and then Airflow with PySpark. These ETL
+pipelines are core to any data infrastructure. There will be a discourse
+on how we can use cloud providers and design an entire system that is
+responsible for analytics and ML in an organization. Finally a short
+outro into how one can start their journey to become a data engineer.&lt;/p&gt;
+&lt;p&gt;Speaker: Prakhar Srivastava&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Prakhar Srivastava</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/data-engineering-and-python.html</guid><category>PyCon Italia 2022</category><category>architecture</category><category>big data</category><category>databases</category><category>distributed systems</category></item><item><title>MongoDB and Python, a Perfect Match</title><link>https://pyvideo.org/pycon-italia-2022/mongodb-and-python-a-perfect-match.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;MongoDB and Python, a Perfect Match - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Any modern web application needs a database. Why hassle with an old
+database when you can easily use modern technology? MongoDB works
+perfectly well with Python. Learn how in this talk. Is your application
+looking for a database to hang out with? Search no more! MongoDB and
+Python are a perfect match. By leveraging the native Python driver,
+accessing a MongoDB database is easier than ever. In this presentation,
+the attendees will learn what a document database is and how to use it.&lt;/p&gt;
+&lt;p&gt;Speaker: Joel Lord&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Joel Lord</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/mongodb-and-python-a-perfect-match.html</guid><category>PyCon Italia 2022</category><category>apis</category><category>databases</category><category>mongodb</category></item><item><title>Processing and analysing streaming data with Python and Apache Flink</title><link>https://pyvideo.org/pycon-italia-2022/processing-and-analysing-streaming-data-with-python-and-apache-flink.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Processing and analysing streaming data with Python and Apache Flink -
+PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Data used to be a batch thing, but more and more we get unbounded
+streams of data, fast or slow, that we need to process and analyse in
+near real time.&lt;/p&gt;
+&lt;p&gt;In this talk I’ll show you how you can use Apache Flink and QuestDB to
+build reliable streaming data pipelines that can grow as much as you
+need. Data used to be a batch thing, but more and more we get unbounded
+streams of data, fast or slow, that we need to process and analyse in
+near real time.&lt;/p&gt;
+&lt;p&gt;In this talk I’ll show you how you can use Apache Flink and QuestDB to
+build reliable streaming data pipelines that can grow as much as your
+Python application needs.&lt;/p&gt;
+&lt;p&gt;Speaker: Javier Ramirez&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Javier Ramirez</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/processing-and-analysing-streaming-data-with-python-and-apache-flink.html</guid><category>PyCon Italia 2022</category><category>analytics</category><category>big data</category><category>databases</category><category>distributed systems</category><category>open source</category></item><item><title>Soo many ingredients in the webapp kitchen!</title><link>https://pyvideo.org/pycon-italia-2022/soo-many-ingredients-in-the-webapp-kitchen.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Soo many ingredients in the webapp kitchen! - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Flask or FastAPI? Sql or NoSql? Pydantic or Marshmallow? Docker or K8s?&lt;/p&gt;
+&lt;p&gt;Building a webapp is like coming up with a new recipe: you have many
+ingredients available, some add sweetness, some add sourness. Not all of
+them taste good together!&lt;/p&gt;
+&lt;p&gt;Above all, de gustibus non disputandum! Writing your first webapp, the
+paradox of choice can overwhelm you. You need to choose among several
+(micro)frameworks, choose how you persist data, how you deploy your app,
+etc.&lt;/p&gt;
+&lt;p&gt;Here are my personal gourmand views to those and other choices related
+to the development and deployment in production of small to mid-size web
+applications.&lt;/p&gt;
+&lt;p&gt;This talk wants to be somewhat of a tasting session for all the
+different ingredients I tasted over the past two years, a talk I wish I
+had received two years back to make more informed decisions myself. As
+such, the core of the talk will consist of comparing what I liked and
+disliked of two projects I worked on: one based on Flask + Postgres
+(Sqlalchemy) + Marshmallow-sqlalchemy + static files, the other based on
+FastAPI + Mongodb (Motor) + S3 (Boto3) + Pydantic. I will review the
+differences of these choices, both technical and related to
+documentation and community.&lt;/p&gt;
+&lt;p&gt;Of course, this talk does not aim to provide answers, but merely give
+the audience a very blurry map to an extremely diverse environment where
+each one can build his own personal taste.&lt;/p&gt;
+&lt;p&gt;EDIT 2022-06-10: You can find a summary and an edited versions of the
+slides used during the talk at the following link&lt;/p&gt;
+&lt;p&gt;Speaker: Jacopo Nespolo&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Jacopo Nespolo</dc:creator><pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2022-06-03:/pycon-italia-2022/soo-many-ingredients-in-the-webapp-kitchen.html</guid><category>PyCon Italia 2022</category><category>databases</category><category>microservices</category><category>rest</category></item><item><title>PyCon 2009: Data Storage in Python - An Overview of Options (Part 2 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview-.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are many possibilities in Python to store data. This tutorials
+explores some of them: flat file, Excel files, NetCDF and HDF5,
+serialization with pickle and friends, relational databases, bsddb and
+ZODB. The objective of this course is to give the participants an
+overview over available options as well as there advantages and
+disadvantages for different purposes. Participants are strongly
+recommended to bring laptops because all topics are introduced with
+examples and exercises.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview-.html</guid><category>PyCon US 2009</category><category>bsddb</category><category>databases</category><category>excel</category><category>flatfile</category><category>hdf5</category><category>netcdf</category><category>pickle</category><category>pycon</category><category>pycon2009</category><category>serialization</category><category>zodb</category></item><item><title>PyCon 2009: Data Storage in Python - An Overview of Options (Part 1 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview0.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are many possibilities in Python to store data. This tutorials
+explores some of them: flat file, Excel files, NetCDF and HDF5,
+serialization with pickle and friends, relational databases, bsddb and
+ZODB. The objective of this course is to give the participants an
+overview over available options as well as there advantages and
+disadvantages for different purposes. Participants are strongly
+recommended to bring laptops because all topics are introduced with
+examples and exercises.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview0.html</guid><category>PyCon US 2009</category><category>bsddb</category><category>databases</category><category>excel</category><category>flatfile</category><category>hdf5</category><category>netcdf</category><category>pickle</category><category>pycon</category><category>pycon2009</category><category>serialization</category><category>zodb</category></item><item><title>PyCon 2009: Data Storage in Python - An Overview of Options (Part 3 of 3)</title><link>https://pyvideo.org/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview1.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;There are many possibilities in Python to store data. This tutorials
+explores some of them: flat file, Excel files, NetCDF and HDF5,
+serialization with pickle and friends, relational databases, bsddb and
+ZODB. The objective of this course is to give the participants an
+overview over available options as well as there advantages and
+disadvantages for different purposes. Participants are strongly
+recommended to bring laptops because all topics are introduced with
+examples and exercises.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Unknown</dc:creator><pubDate>Tue, 17 Feb 2009 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2009-02-17:/pycon-us-2009/pycon-2009--data-storage-in-python---an-overview1.html</guid><category>PyCon US 2009</category><category>bsddb</category><category>databases</category><category>excel</category><category>flatfile</category><category>hdf5</category><category>netcdf</category><category>pickle</category><category>pycon</category><category>pycon2009</category><category>serialization</category><category>zodb</category></item><item><title>Dude, Where's My Database? (#133)</title><link>https://pyvideo.org/pycon-us-2010/dude-wheres-my-database-133.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Dude, Where's My Database?&lt;/p&gt;
+&lt;p&gt;Presented by Eric Florenzano (Django)&lt;/p&gt;
+&lt;p&gt;There are so many great open source databases out on the market right
+now-- we're really in the golden age of databases. Fortunately, Python
+can talk to virtually all of them. With so many databases at our
+disposal, how do we choose which one to use for our particular use case?&lt;/p&gt;
+&lt;p&gt;This talk will go over the many different classes of databases,
+introduce some of the particular implementations for each class of
+database, and describe the strengths and weaknesses of each. By weighing
+the pros and cons of each type of database, the speaker hopes to dispel
+the many rumors and misconceptions that people have about what's out
+there today.&lt;/p&gt;
+&lt;p&gt;[VIDEO HAS ISSUES: Audio cuts out at about 20 seconds in, then gets out
+of sync until around 3:10.]&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Eric Florenzano</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:/pycon-us-2010/dude-wheres-my-database-133.html</guid><category>PyCon US 2010</category><category>databases</category><category>pycon</category><category>pycon2010</category></item><item><title>Revisioned Databases for MultiUser Editing (#86)</title><link>https://pyvideo.org/pycon-us-2010/pycon-2010--revisioned-databases-for-multiuser-ed.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Revisioned Databases for MultiUser Editing&lt;/p&gt;
+&lt;p&gt;Presented by John Rittenhouse (CCP Games)&lt;/p&gt;
+&lt;p&gt;At CCP Games (www.ccpgames.com), we work on large MMO projects with tens
+of content editors editing the same data. To make this possible, we
+created a Revisioned Database framework that allows for us to create new
+multiuser editing systems without data synchronization between users
+having to be a major concern. In this talk, solutions we've tried are
+discussed, the basic layout of our revision database shown, the Python
+layer which handles it transparently for the programmer detailed, and
+how the Python layer is used in practice. All of this is focused on
+discussing what worked well and what pitfalls we ran into during
+development.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">John Rittenhouse</dc:creator><pubDate>Fri, 19 Feb 2010 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2010-02-19:/pycon-us-2010/pycon-2010--revisioned-databases-for-multiuser-ed.html</guid><category>PyCon US 2010</category><category>databases</category><category>pycon</category><category>pycon2010</category></item><item><title>GraphGen: Conducting Graph Analytics over Relational Databases</title><link>https://pyvideo.org/pydata-dc-2016/graphgen-conducting-graph-analytics-over-relational-databases.html</link><description>&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;PyData DC 2016&lt;/p&gt;
+&lt;p&gt;Slides: &lt;a class="reference external" href="http://www.slideshare.net/PyData/graphgen-conducting-graph-analytics-over-relational-databases-67649554"&gt;http://www.slideshare.net/PyData/graphgen-conducting-graph-analytics-over-relational-databases-67649554&lt;/a&gt;
+Download and learn about GraphGen at: konstantinosx.github.io/graphgen-project/
+DDL Blog Post and Tutorial at: blog.districtdatalabs.com/graph-analytics-over-relational-datasets
+Note: Currently GraphGenPy is built for Python 2.0.  Python 3.0 support coming soon!&lt;/p&gt;
+&lt;p&gt;Applying graph analytics on data stored in relational databases can provide tremendous value in many application domains. We discuss the importance of leveraging these analyses, and the challenges in enabling them. We present a tool, called GraphGen, that allows users to visually explore, and rapidly analyze (using NetworkX) different graph structures present in their databases.&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Konstantinos Xirogiannopoulos</dc:creator><pubDate>Sun, 09 Oct 2016 00:00:00 +0000</pubDate><guid isPermaLink="false">tag:pyvideo.org,2016-10-09:/pydata-dc-2016/graphgen-conducting-graph-analytics-over-relational-databases.html</guid><category>PyData DC 2016</category><category>databases</category></item></channel></rss>

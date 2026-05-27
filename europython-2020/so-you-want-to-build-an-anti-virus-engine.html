@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/2231f865fc.js"></script>
+    <link rel="shortcut icon" href="https://pyvideo.org/theme/images/favicon.png">
+    <meta name="google-site-verification" content="cHuieLjiIIDAHKKXSPPDsnbLEz9QgVNTi23qy_mOzDU" />
+
+    <title>PyVideo.org &middot; So, You Want to Build an Anti-Virus Engine?</title>
+
+    <link href="https://pyvideo.org/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Full Atom Feed" />
+    <link href="https://pyvideo.org/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Full RSS Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2020.atom.xml" type="application/atom+xml" rel="alternate" title="PyVideo.org Event Atom Feed" />
+    <link href="https://pyvideo.org/feeds/event_europython-2020.rss.xml" type="application/rss+xml" rel="alternate" title="PyVideo.org Event RSS Feed" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
+          crossorigin="anonymous">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="/theme/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/theme/css/base.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <meta property="og:site_name" content="PyVideo.org" />
+  <meta property="og:title" content="So, You Want to Build an Anti-Virus Engine?" />
+  <meta property="og:type" content="video" />
+  <meta property="og:url" content="https://pyvideo.org/europython-2020/so-you-want-to-build-an-anti-virus-engine.html" />
+    <meta property="og:image" content="https://i.ytimg.com/vi/OWeAumHkv7A/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBIARq5NYmmCC7hyeqvhVbYLQUZwg" />
+    <meta property="og:image:secure_url" content="https://i.ytimg.com/vi/OWeAumHkv7A/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLBIARq5NYmmCC7hyeqvhVbYLQUZwg" />
+
+
+    <meta name="tags" content="europython" />
+    <meta name="tags" content="europython-2020" />
+    <meta name="tags" content="europython-online" />
+    <meta name="tags" content="Mobile" />
+    <meta name="tags" content="Open-Source" />
+    <meta name="tags" content="Security" />
+    <meta name="tags" content="Static Analysis" />
+</head>
+
+<body>
+<a class="github" href="https://github.com/pyvideo/pyvideo/wiki/How-to-Contribute-Media">
+    <img style="position: absolute; top: 0; right: 0; border: 0; z-index: 2;" src="/images/contribute_to_me_right_red_aa0000.png" alt="Contribute Media" />
+</a>
+  <div class="header notice clearfix">
+    A thank you to everyone who makes this possible:
+    <a href="/pages/thank-you-contributors.html">Read More</a>
+  </div>
+  <header id="banner" class="header clearfix">
+    <nav class="header__nav"><div class="container">
+      <ul class="nav">
+        <li role="presentation">
+          <a href="https://pyvideo.org/index.html"><i class="fa fa-fw fa-home"></i> <span>Start</span></a>
+        </li>
+
+        <li role="presentation" class="active">
+          <a href="https://pyvideo.org/events.html"><i class="fa fa-fw fa-list-ul"></i> <span>Events</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/tags.html"><i class="fa fa-fw fa-tags"></i> <span>Tags</span></a>
+        </li>
+
+        <li role="presentation">
+          <a href="https://pyvideo.org/speakers.html"><i class="fa fa-fw fa-users"></i> <span>Speakers</span></a>
+        </li>
+
+          <li role="presentation"
+>
+            <a href="https://pyvideo.org/pages/about.html"><i class="fa fa-fw fa-info"></i> <span>About</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thank-you-contributors.html"><i class="fa fa-fw fa-info"></i> <span>Thank You</span></a>
+          </li>
+          <li role="presentation"
+style="display: none;">
+            <a href="https://pyvideo.org/pages/thanks-will-and-sheila.html"><i class="fa fa-fw fa-info"></i> <span></span></a>
+          </li>
+      </ul>
+    </div></nav>
+    <div class="container">
+      <h3 class="text-muted header__title">
+      <a href="https://pyvideo.org/"><img src="/theme/images/logo.png" alt="" style="height:50px"> <span><i>Py</i>Video</span> <strong></strong></a>
+      </h3>
+      <div class="header__searchbox">
+        <form method="GET" action="/search.html">
+          <input name="q" type="search" placeholder="Type / to search...">
+        </form>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+
+<section id="content" class="body">
+  <header>
+    <h2 class="entry-title">
+      <a href="https://pyvideo.org/europython-2020/so-you-want-to-build-an-anti-virus-engine.html" rel="bookmark"
+         title="Permalink to So, You Want to Build an Anti-Virus Engine?">So, You Want to Build an Anti-Virus Engine?
+      </a>
+    </h2>
+ Translations: 
+<a href="https://pyvideo.org/pycon-india-2020/so-you-want-to-build-an-anti-virus-engine.html">en</a>
+
+  </header>
+
+  <footer class="post-info">
+    <time class="published" datetime="2020-07-23T00:00:00+00:00">
+      <i class="fa fa-calendar"></i> Thu 23 July 2020
+    </time>
+    <address class="vcard author">
+      By
+        <a class="url fn" href="https://pyvideo.org/speaker/junwei-song.html">JunWei Song</a>
+        <a class="url fn" href="https://pyvideo.org/speaker/kunyu-chen.html">KunYu Chen</a>
+    </address>
+  </footer><!-- /.post-info -->
+
+  <div class="entry-content">
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active" role="presentation"><a href="#youtube" aria-controls="youtube" role="tab" data-toggle="tab">
+        <i class="fa fa-fw fa-youtube"></i> YouTube
+    </a></li>
+</ul>
+
+<div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="youtube">
+        <div class="embed-responsive embed-responsive-16by9 videocontainer">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OWeAumHkv7A" title="Video for " frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>    <h3>Description</h3><p><a class="reference external" href="https://github.com/quark-engine/quark-engine">https://github.com/quark-engine/quark-engine</a></p>
+<p>Android malware analysis engine is not a new story. Every antivirus company has their own secrets to build it. With python and curiosity, we develop a malware scoring system from the perspective of Taiwan Criminal Law in an easy but solid way.</p>
+<p>We have an order theory of criminal which explains stages of committing a crime. For example, crime of murder consists of five stages, they are determined, conspiracy, preparation, start and practice. The latter the stage the more we’re sure that the crime is practiced.</p>
+<p>According to the above principle, we developed our order theory of android malware. We develop five stages to see if the malicious activity is being practiced. They are</p>
+<ol class="arabic simple">
+<li>Permission requested.</li>
+<li>Native API call.</li>
+<li>Certain combination of native API.</li>
+<li>Calling sequence of native API.</li>
+<li>APIs that handle the same register.</li>
+</ol>
+<p>We not only define malicious activities and their stages but also develop weights and thresholds for calculating the threat level of a malware.</p>
+<p>Malware evolved with new techniques to gain difficulties for reverse engineering. Obfuscation is one of the most commonly used techniques. In this talk, we present a Dalvik bytecode loader with the order theory of android malware to neglect certain cases of obfuscation.</p>
+<p>Inspired by the design principles of the CPython interpreter, our Dalvik bytecode loader consists of functionalities such as 1. Finding cross-reference and calling sequence of the native API. 2. Tracing the bytecode register. The combination of these functionalities (yes, the order theory) not only can neglect obfuscation but also match perfectly to the design of our malware scoring system.</p>
+<p>Further, we will also show a case study of Android malware and demonstrate how the obfuscation technique is useless to our engine. Last but not least, we will be open-sourcing everything (Malware Scoring System, Dalvik Bytecode Loader) during our presentation.</p>
+<p>Audience
+1. Who is this talk for?
+- Anyone who's interested in cyber security or anyone that wants to know how to build an anti-virus engine with Python.</p>
+<p>2. What background knowledge or experience do you expect the audience to have?
+- A little of Android application development and malware analysis.</p>
+<p>3. What do you expect the audience to learn or do after watching the talk?
+- The Dalvik bytecode loader is written as a python module, the audiences can use this module to boost up their malware analysis.
+- The malware scoring system can be applied not only to Android malware but also can be applied for PE files or ELF files in other OS. The audience can copy our ideas to extend their work.
+- Everything’s open-sourced.</p>
+<p>Outline</p>
+<p>1. Introduction of Malware Scoring System.
+First, we will detail how we decode Criminal Law to simple principles. For example, principles to define crime, penalty and the order theory of criminal, etc. And then we will detail how do we develop the order theory of android malware and other developed theories that construct the malware scoring.</p>
+<p>2. Design Logic of the Dalvik Bytecode Loader.
+Once the malware scoring system were built, this will discuss the design logic of our Dalvik bytecode loader which includes our obfuscation-neglect module and bytecode register tracing module. We will also detail why the order theory of android malware succeeds at neglecting the obfuscation.</p>
+<p>3. Quark Engine Practice - Case Study of Android Malware
+Next, we will practice our engine and case study through an android malware. Moreover, we will also demonstrate our obfuscation-neglect technique against obfuscation malware.</p>
+<p>4. Future works
+Here, we will discuss the limitations of our engine. For example, the challenge of our Dalvik bytecode loader. Also, we will share our plans of implementing more detection techniques conquering the escape detection of malware.</p>
+
+  </div><!-- /.entry-content -->
+
+<div class="details-content">
+  <h3>Details</h3>
+  <ul>
+      <li>
+        Event:
+        <a href="https://pyvideo.org/events/europython-2020.html">EuroPython 2020</a>
+      </li>
+        <li>Language: English</li>
+        <li>
+            Media URL: <a href="https://www.youtube.com/watch?v=OWeAumHkv7A" rel="external">YouTube</a>        </li>
+        <li>
+          Tags:
+<a href="https://pyvideo.org/tag/europython/">europython</a>, <a href="https://pyvideo.org/tag/europython-2020/">europython-2020</a>, <a href="https://pyvideo.org/tag/europython-online/">europython-online</a>, <a href="https://pyvideo.org/tag/mobile/">Mobile</a>, <a href="https://pyvideo.org/tag/open-source/">Open-Source</a>, <a href="https://pyvideo.org/tag/security/">Security</a>, <a href="https://pyvideo.org/tag/static-analysis/">Static Analysis</a>        </li>
+        <li>
+          Related URLs:
+          <ul class="related-urls">
+<li><a href="https://ep2020.europython.eu/schedule/">
+Conference schedule                </a></li><li><a href="https://ep2020.europython.eu/">
+Conference Website                </a></li><li><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">
+https://creativecommons.org/licenses/by-nc-sa/3.0/                </a></li><li><a href="https://ep2020.europython.eu/events/speaker-release-agreement/">
+https://ep2020.europython.eu/events/speaker-release-agreement/                </a></li><li><a href="https://github.com/quark-engine/quark-engine">
+https://github.com/quark-engine/quark-engine                </a></li><li><a href="https://ep2020.europython.eu/schedule/23-july?selected=BDppVua-so-you-want-to-build-an-anti-virus-engine">
+Talk URL                </a></li><li><a href="/media/conference/slides/BDppVua-so-you-want-to-build-an-anti-virus-engine.pdf">
+Slides                </a></li>          </ul>
+        </li>
+
+  </ul>
+</div>
+    <a href="https://github.com/pyvideo/data/blob/main/europython-2020/videos/junwei-song-kunyu-chen-so-you-want-to-build-an-anti-virus-engine.json">
+      <i class="fa fa-pencil-square-o"></i> Improve this page
+    </a>
+
+</section>
+
+    <footer class="footer">
+      <p>
+        &copy;
+        <a href="https://github.com/pyvideo/pyvideo/blob/main/LICENSE">PyVideo.org</a> |
+        <a href="https://github.com/pyvideo/data/blob/main/LICENSE">pyvideo/data</a>
+      </p>
+    </footer>
+
+      <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+      <script src="/theme/js/ie10-viewport-bug-workaround.js"></script>
+      <script src="/theme/js/thumb.js"></script>
+      <script src="/theme/js/language.js"></script>
+      <script src="/theme/js/searchbar.js"></script>
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-72949800-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </div>
+</body>
+</html>

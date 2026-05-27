@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>PyVideo.org - Ingargiola</title><link href="https://pyvideo.org/" rel="alternate"></link><link href="https://pyvideo.org/feeds/speaker_ingargiola.atom.xml" rel="self"></link><id>https://pyvideo.org/</id><updated>2022-06-03T00:00:00+00:00</updated><subtitle></subtitle><entry><title>Efficient ML pipelines using Parquet and PyArrow</title><link href="https://pyvideo.org/pycon-italia-2022/efficient-ml-pipelines-using-parquet-and-pyarrow.html" rel="alternate"></link><published>2022-06-03T00:00:00+00:00</published><updated>2022-06-03T00:00:00+00:00</updated><author><name>Ingargiola</name></author><id>tag:pyvideo.org,2022-06-03:/pycon-italia-2022/efficient-ml-pipelines-using-parquet-and-pyarrow.html</id><summary type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Efficient ML pipelines using Parquet and PyArrow - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Parquet is an high-performance columnar data format that has become the
+de facto standard in the ML world. By leveraging the powerful PyArrow
+API, I’ll show how to manage parquet datasets, ranging from a single
+local file to …&lt;/p&gt;</summary><content type="html">&lt;h3&gt;Description&lt;/h3&gt;&lt;p&gt;Efficient ML pipelines using Parquet and PyArrow - PyCon Italia 2022&lt;/p&gt;
+&lt;p&gt;Parquet is an high-performance columnar data format that has become the
+de facto standard in the ML world. By leveraging the powerful PyArrow
+API, I’ll show how to manage parquet datasets, ranging from a single
+local file to a partitioned cloud-based dataset updated in real time.
+Advanced analytics and Machine Learning (ML) are increasingly used to
+drive business decisions or provide real-time services for end-users in
+virtually every industry. Tabular data is the most ubiquitous type of
+data. Therefore, efficient processing of handle tabular datasets is a
+critical requirement to deliver performant products or services.&lt;/p&gt;
+&lt;p&gt;In a proto-typical production ML workflow, an “ingestion pipeline” needs
+to store large datasets on the cloud and continuously update them as new
+data becomes available. An “analytics pipeline” usually needs to process
+the entire dataset by reading it in batches, because the full dataset
+would be too large to fit in RAM. An “inference pipeline” provides
+real-time results (i.e.&amp;nbsp;model predictions or other online statistics)
+and needs to process small batches of data in quasi-realtime. Finally,
+the presentation of analytics results requires not only to show the
+output from the models but also to provide context through “historical
+data” for an arbitrary set of features. Therefore, low-latency access to
+a small group of columns from a large dataset represents an additional
+requirement.&lt;/p&gt;
+&lt;p&gt;In the Python ecosystem, we can leverage tools such as Parquet and
+PyArrow to address such complex workflow.&lt;/p&gt;
+&lt;p&gt;Apache Parquet is a columnar storage format initially created to address
+similar storage challenges in the Hadoop ecosystem. It has since become
+a standard for efficient storage of large datasets in all the major
+languages, including Python.&lt;/p&gt;
+&lt;p&gt;The Apache Arrow project provides a cross-language in-memory
+representation and query engine for tabular datasets and has a
+performant IO interface for Parquet datasets. Its Python interface,
+PyArrow, allows to query and process large partitioned datasets
+distributed across multiple files and folders on local and cloud
+storage.&lt;/p&gt;
+&lt;p&gt;In this talk, combining PyArrow and Parquet datasets, we will explore
+several techniques to address the use-cases of the typical production ML
+workflows delineated above.&lt;/p&gt;
+&lt;p&gt;Speaker: Ingargiola&lt;/p&gt;
+</content><category term="PyCon Italia 2022"></category><category term="aws"></category><category term="best practice"></category><category term="infrastructure"></category><category term="machine learning"></category><category term="pandas"></category><category term="performance"></category><category term="scaling"></category></entry></feed>
